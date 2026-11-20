@@ -45,7 +45,7 @@ def cargar_env() -> None:
 def calcular_movimientos(tablas: dict) -> None:
     """Agrega a cada fila "mov": cuántos puestos subió (+) o bajó (-) respecto de la fecha anterior.
     VPN publica la posición anterior; para las otras ligas se guarda una foto de la tabla por
-    noche y se compara con la última foto distinta de la actual."""
+    noche de juego y se compara con la última noche distinta de la actual."""
     import re
     from datetime import datetime, timedelta, timezone
     hist = leer("historial_posiciones.json", {})
@@ -59,10 +59,8 @@ def calcular_movimientos(tablas: dict) -> None:
             continue
         fotos = hist.setdefault(t["id"], {})
         fotos[noche] = {clave(f["equipo"]): f["pos"] for f in filas}
-        # Se compara con la última foto distinta de la actual: así las flechas siguen hasta que
-        # la tabla vuelva a cambiar (y no desaparecen en las noches sin partidos).
-        anteriores = [fotos[n] for n in sorted(fotos) if n < noche and fotos[n] != fotos[noche]]
-        base = anteriores[-1] if anteriores else {}
+        anteriores = sorted(n for n in fotos if n < noche)
+        base = fotos[anteriores[-1]] if anteriores else {}
         for f in filas:
             ant = base.get(clave(f["equipo"]))
             f["mov"] = (ant - f["pos"]) if ant else None
