@@ -48,7 +48,7 @@ h1, h2, h3 { font-family: var(--display); line-height: 1; margin: 0; letter-spac
 }
 .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .marca span { font: 900 1.05rem/.9 var(--display); text-transform: uppercase; letter-spacing: .02em; }
-@media (max-width: 440px) { .marca span { display: none; } .barra nav a { padding: 10px 7px 8px; } }
+.marca img { flex: none; }
 .barra nav { display: flex; gap: 4px; }
 .barra nav a {
   font: 700 1.05rem/1 var(--display); text-decoration: none; padding: 10px 8px 8px;
@@ -525,3 +525,7 @@ a.rec:hover { border-top-color: var(--rojo); }
 .sync { color: var(--plata-osc); font-size: .8rem; padding-top: 20px; padding-bottom: 28px; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* Barra superior en el celular: escudo visible y menú de 5 secciones que entra en pantallas angostas.
+   Va al final para tener prioridad sobre los estilos generales de la barra. */
+@media (max-width: 440px) { .barra { gap: 6px; } .marca span { display: none; } .marca img { width: 32px; height: 32px; } .barra nav { gap: 0; } .barra nav a { padding: 10px clamp(3px, 1.2vw, 6px) 8px; font-size: clamp(.8rem, 3.85vw, 1rem); } }
