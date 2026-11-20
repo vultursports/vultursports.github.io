@@ -113,6 +113,8 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             try:
                 pg.select_option("select", tid)
                 pg.wait_for_timeout(2500)
+                # Las estadísticas llegan en varias tandas: se espera a que terminen todas
+                pg.wait_for_load_state("networkidle")
                 destacados += _tops(pg.inner_text("main"), _nombre_torneo(mios[tid][0]), nombre_club)
             except Exception as e:
                 print("  aviso LVA tops:", e)
@@ -124,6 +126,7 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                 for tid in fin_con_vultur:
                     pg.select_option("select", tid)
                     pg.wait_for_timeout(3000)
+                    pg.wait_for_load_state("networkidle")
             except Exception as e:
                 print("  aviso LVA estadísticas finalizados:", e)
         stats_por_partido: dict[str, list] = {}

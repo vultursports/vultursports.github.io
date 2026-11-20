@@ -341,7 +341,9 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
 .sel-temporada { display: grid; gap: 4px; font-size: .85rem; color: var(--plata); }
 .sel-temporada select {
   font: 600 1rem/1.2 var(--texto); color: var(--hueso); background: var(--asfalto); border: 1px solid var(--linea);
-  padding: 10px 12px; border-radius: 0;
+  padding: 0 12px; border-radius: 0;
+  /* Tamaño fijo: si no, cambia según los nombres de temporada de cada liga */
+  width: 100%; height: 44px; box-sizing: border-box; text-overflow: ellipsis;
 }
 
 /* El 11 más usado */
@@ -562,3 +564,8 @@ a.dest-jug:hover .dest-nombre { color: var(--dorado); }
 .dest-liga { font-size: .78rem; color: var(--plata); text-decoration: none; }
 .dest-liga:hover { text-decoration: underline; }
 .dest-nota { grid-column: 2; font-size: .72rem; color: var(--plata-osc); }
+.destacados-sec[hidden], .dest-fila[hidden], .dest-top[hidden] { display: none !important; }
+.noche-grupo[hidden] { display: none; }
+.ver-mas { display: block; width: 100%; margin: 18px 0 0; padding: 12px; font: 600 .95rem/1.2 var(--texto);
+  color: var(--hueso); background: var(--asfalto); border: 1px solid var(--linea); cursor: pointer; }
+.ver-mas:hover { background: var(--asfalto-2); }

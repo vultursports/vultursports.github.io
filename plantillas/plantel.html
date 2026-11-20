@@ -33,16 +33,15 @@
   <div class="lideres" id="lideres" aria-live="polite"></div>
 
   {% if destacados %}
-  <section class="destacados-sec" aria-labelledby="t-destacados">
+  <section class="destacados-sec" id="destacados" aria-labelledby="t-destacados">
     <div class="enc"><h2 id="t-destacados">Jugadores destacados</h2></div>
-    <p class="bajada">Los nuestros que están en el top 5 que publica cada liga.</p>
     <ul class="destacados">
       {% for f in destacados %}
-      <li class="destacado">
+      <li class="destacado dest-fila">
         {% if f.j.pagina %}<a class="dest-jug" href="{{ f.j.pagina }}">{% else %}<span class="dest-jug">{% endif %}{{ avatar(f.j, 40) }}<span class="dest-nombre">{{ f.j.alias }}</span>{% if f.j.pagina %}</a>{% else %}</span>{% endif %}
         <ul class="dest-tops">
           {% for t in f.tops %}
-          <li class="liga-{{ t.liga }}{% if t.pos == 1 %} primero{% endif %}">
+          <li class="dest-top liga-{{ t.liga }}{% if t.pos == 1 %} primero{% endif %}" data-liga="{{ t.liga }}" data-temp="{{ t.temp }}">
             <span class="dest-pos">{{ t.pos }}°</span>
             <span class="dest-que">{{ t.stat_txt }} <b>{{ t.valor }}</b></span>
             <a class="dest-liga" href="{{ t.url_origen }}" target="_blank" rel="noopener" title="{{ t.liga_ui.nombre }}: {{ t.competencia }}">{{ t.liga_ui.corto }} · {{ t.competencia }}</a>{% if t.liga == 'lva' %}<small class="dest-nota">En la página, elegí el torneo «{{ t.competencia }}»</small>{% endif %}

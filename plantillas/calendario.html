@@ -26,12 +26,26 @@
     {% else %}<p class="vacio">No hay partidos programados.</p>{% endfor %}
   </section>
   <section id="lista-jugados" role="tabpanel" aria-labelledby="tab-jugados" hidden>
+    {# De a 8 noches: el resto aparece con "Ver más" #}
     {% for g in cal_jugados %}
+      <div class="noche-grupo"{% if loop.index > 8 %} hidden{% endif %}>
       <h2 class="noche">{{ g.txt|capitalize }}</h2>
       <ul class="partidos">{% for p in g.partidos %}{{ fila_partido(p) }}{% endfor %}</ul>
+      </div>
     {% else %}<p class="vacio">Todavía no hay partidos jugados.</p>{% endfor %}
+    {% if cal_jugados|length > 8 %}<button type="button" class="ver-mas" id="ver-mas-jugados">Ver partidos anteriores</button>{% endif %}
   </section>
 
 </div>
 {% endblock %}
-{% block js %}{% endblock %}
+{% block js %}<script>
+(() => {
+  const b = document.getElementById("ver-mas-jugados");
+  if (!b) return;
+  b.addEventListener("click", () => {
+    const ocultos = [...document.querySelectorAll("#lista-jugados .noche-grupo[hidden]")];
+    ocultos.slice(0, 8).forEach((g) => (g.hidden = false));
+    if (ocultos.length <= 8) b.remove();
+  });
+})();
+</script>{% endblock %}

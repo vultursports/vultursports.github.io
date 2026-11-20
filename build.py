@@ -393,7 +393,12 @@ def main():
             if d["stat"] == "vallas" and k == "vpn":
                 d = {**d, "stat_txt": "Vallas invictas (arquero)"}
             fila = por_jugador.setdefault(jid, {"j": j or {"alias": d["alias"], "dorsal": None, "pagina": None}, "tops": []})
-            fila["tops"].append({**d, "liga_ui": ligas[k], "stat_txt": d.get("stat_txt") or NOMBRE_TOP.get(d["stat"], d["stat"])})
+            # Temporada a la que corresponde el top (la más reciente de esa liga y competencia),
+            # para mostrarlo solo cuando en el Plantel está elegida esa liga/temporada
+            temp = next((p["temporada"]["clave"] for p in reversed(partidos) if p["liga"] == k
+                         and p.get("temporada") and p.get("competencia") == d["competencia"]),
+                        next((p["temporada"]["clave"] for p in reversed(partidos) if p["liga"] == k and p.get("temporada")), ""))
+            fila["tops"].append({**d, "temp": temp, "liga_ui": ligas[k], "stat_txt": d.get("stat_txt") or NOMBRE_TOP.get(d["stat"], d["stat"])})
     destacados = sorted(por_jugador.values(), key=lambda f: (min(t["pos"] for t in f["tops"]), -len(f["tops"])))
     for f in destacados:
         f["tops"].sort(key=lambda t: t["pos"])

@@ -165,6 +165,18 @@
     }).join("") || `<li class="vacio">Sin suplentes con partidos.</li>`;
   }
 
+  // Destacados: solo los tops de la liga (y temporada) elegidas; si no queda ninguno, se oculta
+  const destSec = document.getElementById("destacados");
+  function dibujarDestacados() {
+    if (!destSec) return;
+    const t = selT.value.startsWith("t:") ? selT.value.slice(2) : null;
+    destSec.querySelectorAll(".dest-top").forEach((li) => {
+      li.hidden = !((liga === "todas" || li.dataset.liga === liga) && (!t || li.dataset.temp === t));
+    });
+    destSec.querySelectorAll(".dest-fila").forEach((f) => { f.hidden = !f.querySelector(".dest-top:not([hidden])"); });
+    destSec.hidden = !destSec.querySelector(".dest-fila:not([hidden])");
+  }
+
   function dibujar() {
     // Si se eligió una temporada puntual, la liga queda fija en la de esa temporada
     const opt = selT.selectedOptions[0];
@@ -175,6 +187,7 @@
 
     const filas = calcular();
     dibujarOnce(filas);
+    dibujarDestacados();
     lideres.innerHTML = [
       lider(filas, "g", "Goleador", "goles"), lider(filas, "a", "Asistidor", "asistencias"),
       lider(filas, "mvp", "Más veces MVP", "MVP"), lider(filas, "nota", "Mejor nota", "de promedio"),
