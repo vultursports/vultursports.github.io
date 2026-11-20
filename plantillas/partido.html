@@ -103,24 +103,6 @@
   </section>
   {% endif %}
 
-  {% if p.once|length >= 7 %}
-  <section class="once" aria-labelledby="t-alin">
-    <div class="enc"><h2 id="t-alin">Alineación</h2></div>
-    {% if p.formacion %}<p class="once-formacion">{{ p.formacion }}</p>{% endif %}
-    <div class="cancha" role="list" aria-label="Alineación de Vultur Sports">
-      <div class="lineas" aria-hidden="true"><i class="medio"></i><i class="circulo"></i><i class="area arriba"></i><i class="area abajo"></i></div>
-      {% for x in p.once %}
-      <{{ 'a' if x.pagina else 'span' }} role="listitem" class="ficha-cancha{% if x.mvp %} es-mvp{% endif %}" style="left:{{ x.x }}%;top:{{ x.y }}%"{% if x.pagina %} href="{{ x.pagina }}"{% endif %}>
-        {{ avatar(x, 34) }}{% if x.mvp %}<b class="fc-mvp">MVP</b>{% endif %}
-        <span class="fc-nombre">{{ x.alias }}</span>
-        <span class="fc-datos">{{ x.pos }}{% if x.nota is not none %} · <b>{{ '%.1f'|format(x.nota) }}</b>{% endif %}</span>
-        {% if x.goles or x.asist %}<span class="fc-datos">{% if x.goles %}{{ x.goles }} G{% endif %}{% if x.goles and x.asist %} · {% endif %}{% if x.asist %}{{ x.asist }} A{% endif %}</span>{% endif %}
-      </{{ 'a' if x.pagina else 'span' }}>
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
-
   {% if p.stats %}
   <section aria-labelledby="t-stats">
     <div class="enc"><h2 id="t-stats">Nuestros jugadores</h2></div>
