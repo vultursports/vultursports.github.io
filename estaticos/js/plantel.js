@@ -73,8 +73,8 @@
 
   function lider(filas, campo, titulo, unidad) {
     let cand = filas.filter((f) => (campo === "nota" ? f.nota != null && f.pj >= D.minimoNota : f[campo] > 0));
-    const k = campo === "nota" ? "aj" : campo;
-    cand.sort((x, y) => (y[k] - x[k]) || (x.pj - y.pj));
+    // Mejor nota: el promedio más alto con el mínimo de partidos; en empate, el que jugó más
+    cand.sort((x, y) => campo === "nota" ? (y.nota - x.nota) || (y.pj - x.pj) : (y[campo] - x[campo]) || (x.pj - y.pj));
     const f = cand[0];
     if (!f) return `<article class="lider"><h2>${titulo}</h2><p class="vacio">Sin datos.</p></article>`;
     const j = D.jugadores[f.id];
@@ -136,8 +136,8 @@
     o.slots.forEach((s) => (porPos[s.pos] ||= []).push(s));
     const html = [];
     // MVP del 11: el de mejor nota (ajustada por partidos, con el mínimo de partidos de "Mejor nota")
-    const candidatos = Object.values(o.asignado).filter((f) => f.aj != null && f.pj >= D.minimoNota);
-    const mvp = candidatos.sort((a, b) => b.aj - a.aj)[0];
+    const candidatos = Object.values(o.asignado).filter((f) => f.nota != null && f.pj >= D.minimoNota);
+    const mvp = candidatos.sort((a, b) => (b.nota - a.nota) || (b.pj - a.pj))[0];
     for (const [pos, lista] of Object.entries(porPos)) {
       const [bx, by] = LUGAR[pos] || [50, 50];
       const paso = lista.length === 2 ? 34 : 26;

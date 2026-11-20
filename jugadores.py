@@ -116,5 +116,5 @@ def rankings(jugadores: list, ambito: str) -> dict:
                        key=lambda j: (-(st(j)[campo] or 0), st(j)["pj"]))
         return orden[:1]
     nota = sorted((j for j in con_pj if st(j)["nota_ajustada"] and st(j)["pj"] >= MIN_PJ_NOTA),
-                  key=lambda j: -st(j)["nota_ajustada"])[:1]
+                  key=lambda j: (-st(j)["nota"], -st(j)["pj"]))[:1]
     return {"goles": top("goles"), "asistencias": top("asistencias"), "mvp": top("mvp"), "nota": nota}
