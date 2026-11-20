@@ -26,8 +26,8 @@ DEFENSIVAS = {"POR", "PO", "GK", "DFC", "LD", "LI", "LTD", "LTI", "CAD", "CAI"}
 
 
 def valla_invicta(p: dict, s: dict) -> bool:
-    """Partido sin goles en contra jugado de arquero o defensor."""
-    return p.get("gc") == 0 and (s.get("posicion") or "") in DEFENSIVAS
+    """Valla invicta tal como la publica la liga en el partido (solo VPN la publica por jugador)."""
+    return bool(s.get("valla_invicta"))
 
 
 ARQUERO = {"POR", "PO", "GK"}

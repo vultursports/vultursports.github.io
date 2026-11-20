@@ -561,3 +561,4 @@ a.dest-jug:hover .dest-nombre { color: var(--dorado); }
 .dest-que b { color: var(--blanco, #fff); }
 .dest-liga { font-size: .78rem; color: var(--plata); text-decoration: none; }
 .dest-liga:hover { text-decoration: underline; }
+.dest-nota { grid-column: 2; font-size: .72rem; color: var(--plata-osc); }

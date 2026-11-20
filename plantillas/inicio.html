@@ -74,7 +74,7 @@
           <li class="liga-{{ t.liga }}{% if t.pos == 1 %} primero{% endif %}">
             <span class="dest-pos">{{ t.pos }}°</span>
             <span class="dest-que">{{ t.stat_txt }} <b>{{ t.valor }}</b></span>
-            <a class="dest-liga" href="{{ t.url_origen }}" target="_blank" rel="noopener" title="{{ t.liga_ui.nombre }}: {{ t.competencia }}">{{ t.liga_ui.corto }} · {{ t.competencia }}</a>
+            <a class="dest-liga" href="{{ t.url_origen }}" target="_blank" rel="noopener" title="{{ t.liga_ui.nombre }}: {{ t.competencia }}">{{ t.liga_ui.corto }} · {{ t.competencia }}</a>{% if t.liga == 'lva' %}<small class="dest-nota">En la página, elegí el torneo «{{ t.competencia }}»</small>{% endif %}
           </li>
           {% endfor %}
         </ul>
