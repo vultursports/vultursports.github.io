@@ -17,7 +17,6 @@
       <label class="filtro liga-{{ l.clave }}"><input type="checkbox" value="{{ l.clave }}" checked><img src="estaticos/img/ligas/{{ l.clave }}.png" alt="{{ l.nombre }}" height="18"></label>
       {% endfor %}
     </fieldset>
-    <a class="boton-ics" href="calendario.ics">Agregar a mi calendario</a>
   </div>
 
   <section id="lista-proximos" role="tabpanel" aria-labelledby="tab-proximos">
@@ -33,11 +32,6 @@
     {% else %}<p class="vacio">Todavía no hay partidos jugados.</p>{% endfor %}
   </section>
 
-  <details class="ayuda-ics">
-    <summary>¿Cómo agregar el calendario al celular?</summary>
-    <p><b>Android / Google Calendar:</b> copia el enlace de “Agregar a mi calendario”, abre calendar.google.com desde una computadora, elige “Otros calendarios”, “Desde URL” y pega el enlace. Se actualiza automáticamente.</p>
-    <p><b>iPhone:</b> toca “Agregar a mi calendario” y acepta la suscripción.</p>
-  </details>
 </div>
 {% endblock %}
 {% block js %}{% endblock %}
