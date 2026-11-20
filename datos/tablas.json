@@ -334,13 +334,16 @@
     "mov": null
    }
   ],
-  "actualizado": "2026-11-20T04:32:33+00:00"
+  "actualizado": "2026-11-20T04:48:04+00:00"
  },
  {
   "id": "vpn-6449",
   "liga": "vpn",
   "competencia": "Liga Argentina 4ta División (Grupo A)",
   "temporada": "Temporada 11",
+  "nombres_zona": {
+   "ascenso": "Ascenso/Campeón"
+  },
   "logo": "https://media.virtualpronetwork.com/leagueslogos/cd41e6ba05310a3e4f0362c42d0adf43_original.png",
   "url_origen": "https://virtualpronetwork.com/uy/league/2183/liga-argentina-4ta-division/season/6449/standings",
   "filas": [
@@ -356,7 +359,7 @@
     "gc": 7,
     "dg": 16,
     "pts": 27,
-    "zona": "lider",
+    "zona": "ascenso",
     "pos_fuente": 1,
     "pos_ant_fuente": null,
     "es_vultur": false,
@@ -723,7 +726,7 @@
     "mov": null
    }
   ],
-  "actualizado": "2026-11-20T04:32:58+00:00"
+  "actualizado": "2026-11-20T04:48:28+00:00"
  },
  {
   "id": "lva-1d8d2b5c",
@@ -897,7 +900,7 @@
     "mov": null
    }
   ],
-  "actualizado": "2026-11-20T04:33:35+00:00"
+  "actualizado": "2026-11-20T04:49:03+00:00"
  },
  {
   "id": "lva-ecfa9127",
@@ -1232,6 +1235,6 @@
     "mov": null
    }
   ],
-  "actualizado": "2026-11-20T04:33:35+00:00"
+  "actualizado": "2026-11-20T04:49:03+00:00"
  }
 ]
