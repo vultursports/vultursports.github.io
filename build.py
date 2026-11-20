@@ -371,6 +371,26 @@ def main():
     sync_txt = a_local(estado["sync"]).strftime("%d/%m a las %H:%M") if estado.get("sync") else "nunca"
     # Avisos: suspendidos y choques de horario
     sanciones = [s for k in ligas for s in leer(f"sanciones_{k}.json", [])]
+
+    # Jugadores destacados: nuestros jugadores que aparecen en el top 5 que publica cada liga
+    # (puesto y valor tal cual los muestra la liga; acá no se calcula nada)
+    NOMBRE_TOP = {"goles": "Goleadores", "asistencias": "Asistencias", "nota": "Mejor valoración",
+                  "vallas": "Vallas invictas", "vallas_def": "Vallas invictas (defensa)", "mvp": "MVP"}
+    unir_alias = {jug_mod.clave(k): jug_mod.clave(v) for k, v in (ajustes.get("unir") or {}).items()}
+    por_jugador = {}
+    for k in ["vpn", "lva", "vpug"]:
+        if k not in ligas:
+            continue
+        for d in leer(f"destacados_{k}.json", []):
+            jid = unir_alias.get(jug_mod.clave(d["alias"]), jug_mod.clave(d["alias"]))
+            j = {x["id"]: x for x in js}.get(jid)
+            if d["stat"] == "vallas" and k == "vpn":
+                d = {**d, "stat_txt": "Vallas invictas (arquero)"}
+            fila = por_jugador.setdefault(jid, {"j": j or {"alias": d["alias"], "dorsal": None, "pagina": None}, "tops": []})
+            fila["tops"].append({**d, "liga_ui": ligas[k], "stat_txt": d.get("stat_txt") or NOMBRE_TOP.get(d["stat"], d["stat"])})
+    destacados = sorted(por_jugador.values(), key=lambda f: (min(t["pos"] for t in f["tops"]), -len(f["tops"])))
+    for f in destacados:
+        f["tops"].sort(key=lambda t: t["pos"])
     for s in sanciones:
         s["liga_ui"] = ligas[s["liga"]]
     avisos = [{"tipo": "sancion", "liga_ui": s["liga_ui"], "titulo": f"{s['jugador']} no puede jugar",
@@ -529,7 +549,7 @@ def main():
                              "ok_reciente": bool(ok) and (ahora - ok) < timedelta(hours=12),
                              "partidos": sum(1 for p in partidos if p["liga"] == k)})
 
-    ctx = dict(club=cfg["club"]["nombre"], v=og_version, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas,
+    ctx = dict(club=cfg["club"]["nombre"], v=og_version, destacados=destacados, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas,
                titulos=titulos, estantes=estantes,
                total_partidos=len(partidos), total_jugadores=len(js), total_rivales=len(rivales),
                total_escudos=len(list((DATOS / "escudos").glob("*.webp"))), plantel_datos=plantel_datos, temporadas_lista=temporadas_lista,

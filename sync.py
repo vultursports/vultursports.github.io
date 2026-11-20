@@ -102,6 +102,8 @@ def main() -> int:
                 escribir(f"titulos_{clave}.json", out["titulos"])
             if "sanciones" in out:
                 escribir(f"sanciones_{clave}.json", out["sanciones"])
+            if "destacados" in out:
+                escribir(f"destacados_{clave}.json", out["destacados"])
             if out.get("plantel"):
                 escribir(f"plantel_{clave}.json", out["plantel"])
             if out.get("rankings"):

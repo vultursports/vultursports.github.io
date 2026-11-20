@@ -104,7 +104,14 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
         return [{"alias": x["jugador"].strip(), "valor": x["valor"], "partidos": x["partidos"]}
                 for x in lista if x["club"]["id"] == club]
 
+    destacados = [
+        {"liga": "vpug", "competencia": nombre, "stat": stat, "pos": n + 1, "alias": x["jugador"].strip(),
+         "valor": x["valor"], "url_origen": f"{SITIO}/liga/estadisticas"}
+        for lista, stat in ((rank.get("goleadores", []), "goles"), (rank.get("asistidores", []), "asistencias"))
+        for n, x in enumerate(lista[:5]) if x["club"]["id"] == club
+    ]
     return {
+        "destacados": destacados,
         "partidos": partidos,
         "plantel": plantel,
         "tablas": [{

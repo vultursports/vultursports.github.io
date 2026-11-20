@@ -108,12 +108,14 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
         # 3) Estadísticas por jugador (la página carga las de todos los partidos del torneo)
         respuestas.clear()
         pg.goto(f"{SITIO}/estadisticas", wait_until="networkidle")
+        destacados = []
         for tid in [t for t in mios if t in activos]:
             try:
                 pg.select_option("select", tid)
                 pg.wait_for_timeout(2500)
-            except Exception:
-                pass
+                destacados += _tops(pg.inner_text("main"), _nombre_torneo(mios[tid][0]), nombre_club)
+            except Exception as e:
+                print("  aviso LVA tops:", e)
         fin_con_vultur = [t for t in mios if t not in activos]
         if fin_con_vultur:
             try:
@@ -201,7 +203,7 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
         "cumple": x.get("match_to_serve_stage"),
         "vigente": x.get("status") != "served",
     } for x in sanciones_raw.values() if x.get("team_id") == team_id]
-    return {"partidos": partidos, "tablas": tablas, "sanciones": sanciones, "titulos": titulos}
+    return {"partidos": partidos, "tablas": tablas, "sanciones": sanciones, "titulos": titulos, "destacados": destacados}
 
 
 def _nombre_torneo(n: str) -> str:
@@ -248,6 +250,28 @@ def _tabla(tid: str, nombre: str, filas: list, nombre_club: str, refs: list | No
         "nombres_zona": nombres,
         "filas": out,
     }
+
+
+TOPS_LVA = {"GOLEADORES": "goles", "ASISTENCIAS": "asistencias", "MEJOR VALORACIÓN": "nota",
+            "VALLAS INVICTAS": "vallas", "MVPS": "mvp"}
+
+
+def _tops(texto: str, competencia: str, nombre_club: str) -> list:
+    """Lee los tops tal como los muestra la página (puesto, bandera, jugador, club, valor, PJ)."""
+    lineas = [x.strip() for x in texto.split("\n") if x.strip()]
+    out, stat, i = [], None, 0
+    while i < len(lineas):
+        x = lineas[i]
+        if x.upper() in TOPS_LVA or x.upper() == "DISCIPLINA":
+            stat = TOPS_LVA.get(x.upper()); i += 1; continue
+        if stat and x.isdigit() and i + 4 < len(lineas) and lineas[i + 5:i + 6] and lineas[i + 5].endswith("PJ"):
+            pos, alias, club, valor = int(x), lineas[i + 2], lineas[i + 3], lineas[i + 4]
+            if pos <= 5 and nombre_club in club.lower():
+                out.append({"liga": "lva", "competencia": competencia, "stat": stat, "pos": pos, "alias": alias,
+                            "valor": valor, "url_origen": f"{SITIO}/estadisticas"})
+            i += 6; continue
+        i += 1
+    return out
 
 
 def _stat(s: dict) -> dict:

@@ -12,6 +12,9 @@ import re
 from .base import ErrorConector, cliente, guardar_raw, pedir
 
 BASE = "https://virtualpronetwork.com"
+# Tops de la liga que se muestran en "Jugadores destacados" (las tarjetas no)
+TOPS_VPN = {"goal": "goles", "assist": "asistencias", "clean%20sheet": "vallas", "Clean%20Sheet%20Def": "vallas_def",
+            "motm": "mvp"}
 EVENTOS = {"1": "goles", "2": "asistencias", "3": "vallas", "7": "vallas_def", "5": "amarillas", "6": "rojas"}
 
 
@@ -32,7 +35,7 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
     com = cfg["comunidad"]
     tid = cfg["team_id"]
     slug = cfg["team_slug"]
-    partidos, tablas, sanciones = [], [], []
+    partidos, tablas, sanciones, destacados = [], [], [], []
 
     with cliente() as c:
         bid = _build_id(c, com, slug)
@@ -56,6 +59,20 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             for z in liga.get("standingsZones") or []:
                 for n in range(z.get("position_from") or 0, (z.get("position_to") or 0) + 1):
                     zona_de[n] = zonas_liga.get(z.get("outcome"), z.get("outcome"))
+            # Tops que publica VPN (pestaña Estadísticas de la liga), en el orden en que los muestra
+            for top, stat in TOPS_VPN.items():
+                try:
+                    pagina = _data(c, bid, f"{com}/league/{comp['league_id']}/{comp['league_slug']}/season/{comp['season_id']}/stats/{top}",
+                                   f"{params.replace('tab=standings', 'tab=stats')}&stat={top}")
+                    for n, r in enumerate((pagina.get("initialStats") or {}).get("rows", [])[:5]):
+                        if (r.get("team") or {}).get("id") == tid:
+                            destacados.append({
+                                "liga": "vpn", "competencia": liga["name"], "stat": stat, "pos": n + 1,
+                                "alias": (r.get("user") or {}).get("username", "").strip(), "valor": r.get("total"),
+                                "url_origen": f"{BASE}/{com}/league/{comp['league_id']}/{comp['league_slug']}/season/{comp['season_id']}/stats/{top}",
+                            })
+                except ErrorConector as e:
+                    print("  aviso VPN tops:", e)
             orden_ant = sorted((r for r in filas if r.get("prevPos")), key=lambda r: r["prevPos"])
             pos_ant_grupo = {r["tid"]: i + 1 for i, r in enumerate(orden_ant)}
             nombre_comp = liga["name"] + (f" ({mi_grupo.title()})" if mi_grupo else "")
@@ -142,7 +159,8 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                     })
             except ErrorConector as e:
                 print("  aviso VPN habilitados:", e)
-    return {"partidos": partidos, "tablas": tablas, "sanciones": sanciones, "titulos": _titulos_vpn()}
+    return {"partidos": partidos, "tablas": tablas, "sanciones": sanciones, "titulos": _titulos_vpn(),
+            "destacados": destacados}
 
 
 def _corto(temporada: str) -> str:

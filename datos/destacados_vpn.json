@@ -1,0 +1,38 @@
+[
+ {
+  "liga": "vpn",
+  "competencia": "Liga Argentina 4ta División",
+  "stat": "vallas",
+  "pos": 1,
+  "alias": "MichaelGB1981",
+  "valor": "7",
+  "url_origen": "https://virtualpronetwork.com/uy/league/2183/liga-argentina-4ta-division/season/6449/stats/clean%20sheet"
+ },
+ {
+  "liga": "vpn",
+  "competencia": "Liga Argentina 4ta División",
+  "stat": "vallas_def",
+  "pos": 2,
+  "alias": "Tiro_loko12",
+  "valor": "7",
+  "url_origen": "https://virtualpronetwork.com/uy/league/2183/liga-argentina-4ta-division/season/6449/stats/Clean%20Sheet%20Def"
+ },
+ {
+  "liga": "vpn",
+  "competencia": "Liga Argentina 4ta División",
+  "stat": "vallas_def",
+  "pos": 3,
+  "alias": "Corona_ruso",
+  "valor": "7",
+  "url_origen": "https://virtualpronetwork.com/uy/league/2183/liga-argentina-4ta-division/season/6449/stats/Clean%20Sheet%20Def"
+ },
+ {
+  "liga": "vpn",
+  "competencia": "Liga Argentina 4ta División",
+  "stat": "vallas_def",
+  "pos": 4,
+  "alias": "Zk__godd",
+  "valor": "7",
+  "url_origen": "https://virtualpronetwork.com/uy/league/2183/liga-argentina-4ta-division/season/6449/stats/Clean%20Sheet%20Def"
+ }
+]
