@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-20T19:41:16+00:00"
+  "actualizado": "2026-11-20T21:55:29+00:00"
  },
  {
   "id": "vpn-6449",
@@ -726,7 +726,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-20T19:41:50+00:00"
+  "actualizado": "2026-11-20T21:56:03+00:00"
  },
  {
   "id": "lva-1d8d2b5c",
@@ -1030,14 +1030,14 @@
     "pos": 8,
     "equipo": "MARPLA FC",
     "escudo": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png",
-    "pj": 14,
+    "pj": 15,
     "g": 6,
-    "e": 4,
+    "e": 5,
     "p": 4,
     "gf": 17,
     "gc": 12,
     "dg": 5,
-    "pts": 22,
+    "pts": 23,
     "zona": null,
     "es_vultur": false,
     "mov": 0
@@ -1108,6 +1108,22 @@
    },
    {
     "pos": 13,
+    "equipo": "Vultur Sports",
+    "escudo": "https://i.ibb.co/ymxKzdx2/VULTUR.png",
+    "pj": 16,
+    "g": 4,
+    "e": 4,
+    "p": 8,
+    "gf": 12,
+    "gc": 22,
+    "dg": -10,
+    "pts": 16,
+    "zona": null,
+    "es_vultur": true,
+    "mov": 1
+   },
+   {
+    "pos": 14,
     "equipo": "Los Andes FC",
     "escudo": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg",
     "pj": 15,
@@ -1120,23 +1136,7 @@
     "pts": 15,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
-   },
-   {
-    "pos": 14,
-    "equipo": "Vultur Sports",
-    "escudo": "https://i.ibb.co/ymxKzdx2/VULTUR.png",
-    "pj": 15,
-    "g": 4,
-    "e": 3,
-    "p": 8,
-    "gf": 12,
-    "gc": 22,
-    "dg": -10,
-    "pts": 15,
-    "zona": null,
-    "es_vultur": true,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 15,
@@ -1235,6 +1235,6 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-20T19:42:23+00:00"
+  "actualizado": "2026-11-20T21:56:32+00:00"
  }
 ]

@@ -5745,21 +5745,21 @@
    }
   },
   {
-   "id": "51eb7dd6-c922-4f8f-9024-2a2b771d1150",
+   "id": "ec32995e-e15a-4c24-a441-c41be4836d66",
    "stage": "Fecha 14",
    "match_date": "2026-11-18T02:30:00+00:00",
    "status": "approved",
-   "home_goals": 1,
-   "away_goals": 1,
+   "home_goals": 3,
+   "away_goals": 2,
    "home_team": {
-    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
-    "name": "UNITED MITO FC",
-    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
+    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
+    "name": "CELTA DEL VINO",
+    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
    },
    "away_team": {
-    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
-    "name": "Attlas eSports",
-    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
+    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
    }
   },
   {
@@ -5853,21 +5853,21 @@
    }
   },
   {
-   "id": "ec32995e-e15a-4c24-a441-c41be4836d66",
+   "id": "51eb7dd6-c922-4f8f-9024-2a2b771d1150",
    "stage": "Fecha 14",
    "match_date": "2026-11-18T02:30:00+00:00",
    "status": "approved",
-   "home_goals": 3,
-   "away_goals": 2,
+   "home_goals": 1,
+   "away_goals": 1,
    "home_team": {
-    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
-    "name": "CELTA DEL VINO",
-    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
+    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
+    "name": "UNITED MITO FC",
+    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
    },
    "away_team": {
-    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
-    "name": "Acassuso eSports",
-    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
+    "name": "Attlas eSports",
+    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
    }
   },
   {
@@ -5943,21 +5943,21 @@
    }
   },
   {
-   "id": "996e3af2-99ee-47f5-928d-6d02bf81707f",
+   "id": "e4182c65-8346-4145-824d-70c276556102",
    "stage": "Fecha 15",
    "match_date": "2026-11-20T02:00:00+00:00",
-   "status": "pending_approval",
+   "status": "approved",
    "home_goals": 0,
-   "away_goals": 4,
+   "away_goals": 1,
    "home_team": {
-    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
-    "name": "Claypole eSports",
-    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
+    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
    },
    "away_team": {
-    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
-    "name": "Suda eSports ",
-    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
+    "id": "d4108b5c-6277-4a4f-89d6-c7a607ae786f",
+    "name": "Cerrito XXI",
+    "logo_url": "https://i.ibb.co/VdshDpD/1000250273.jpg"
    }
   },
   {
@@ -5997,21 +5997,21 @@
    }
   },
   {
-   "id": "6e238bce-a754-4967-b42e-c44834fd7af0",
+   "id": "996e3af2-99ee-47f5-928d-6d02bf81707f",
    "stage": "Fecha 15",
    "match_date": "2026-11-20T02:00:00+00:00",
    "status": "pending_approval",
    "home_goals": 0,
-   "away_goals": 0,
+   "away_goals": 4,
    "home_team": {
-    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
-    "name": "Vultur Sports",
-    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
+    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
+    "name": "Claypole eSports",
+    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
    },
    "away_team": {
-    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
-    "name": "MARPLA FC",
-    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
+    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
+    "name": "Suda eSports ",
+    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
    }
   },
   {
@@ -6030,24 +6030,6 @@
     "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
     "name": "Unión Cordillera",
     "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
-   }
-  },
-  {
-   "id": "e4182c65-8346-4145-824d-70c276556102",
-   "stage": "Fecha 15",
-   "match_date": "2026-11-20T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
-    "name": "Acassuso eSports",
-    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
-   },
-   "away_team": {
-    "id": "d4108b5c-6277-4a4f-89d6-c7a607ae786f",
-    "name": "Cerrito XXI",
-    "logo_url": "https://i.ibb.co/VdshDpD/1000250273.jpg"
    }
   },
   {
@@ -6087,6 +6069,24 @@
    }
   },
   {
+   "id": "6e238bce-a754-4967-b42e-c44834fd7af0",
+   "stage": "Fecha 15",
+   "match_date": "2026-11-20T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
+    "name": "Vultur Sports",
+    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
+   },
+   "away_team": {
+    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
+    "name": "MARPLA FC",
+    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
+   }
+  },
+  {
    "id": "30787c0d-b43d-403c-b58b-df58852efb87",
    "stage": "Fecha 15",
    "match_date": "2026-11-20T02:00:00+00:00",
@@ -6123,30 +6123,30 @@
    }
   },
   {
-   "id": "b6b0cf6e-86e1-48f2-8fbd-2a9202cb03d0",
+   "id": "c15f46d4-09f7-42a4-9fc8-236656e1d6cb",
    "stage": "Fecha 16",
    "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 0,
+   "status": "approved",
+   "home_goals": 2,
    "away_goals": 0,
    "home_team": {
-    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
-    "name": "CELTA DEL VINO",
-    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
+    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
+    "name": "UNITED MITO FC",
+    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
    },
    "away_team": {
-    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
-    "name": "Real Envido",
-    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
+    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
+    "name": "Inter Regional",
+    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
    }
   },
   {
    "id": "710c14de-95ad-436c-9541-f1d13172a60f",
    "stage": "Fecha 16",
    "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
-   "away_goals": 0,
+   "status": "pending_approval",
+   "home_goals": 1,
+   "away_goals": 1,
    "home_team": {
     "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
     "name": "BOCA JUNIORS",
@@ -6195,21 +6195,21 @@
    }
   },
   {
-   "id": "0865aa09-8886-4d98-a756-ba49a507fd9c",
+   "id": "b6b0cf6e-86e1-48f2-8fbd-2a9202cb03d0",
    "stage": "Fecha 16",
    "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "scheduled",
+   "status": "pending_approval",
    "home_goals": 0,
    "away_goals": 0,
    "home_team": {
-    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
-    "name": "Motor Psico",
-    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
+    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
+    "name": "CELTA DEL VINO",
+    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
    },
    "away_team": {
-    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
-    "name": "Vultur Sports",
-    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
+    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
+    "name": "Real Envido",
+    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
    }
   },
   {
@@ -6285,21 +6285,21 @@
    }
   },
   {
-   "id": "c15f46d4-09f7-42a4-9fc8-236656e1d6cb",
+   "id": "0865aa09-8886-4d98-a756-ba49a507fd9c",
    "stage": "Fecha 16",
    "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
+   "status": "pending_approval",
+   "home_goals": 1,
    "away_goals": 0,
    "home_team": {
-    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
-    "name": "UNITED MITO FC",
-    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
+    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
+    "name": "Motor Psico",
+    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
    },
    "away_team": {
-    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
-    "name": "Inter Regional",
-    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
+    "name": "Vultur Sports",
+    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
    }
   },
   {
