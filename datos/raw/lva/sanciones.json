@@ -384,6 +384,70 @@
   }
  },
  {
+  "id": "bfd53064-274c-47a1-bb52-2bc066877b47",
+  "tournament_id": "ecfa9127-9bb4-4ac5-8d73-8355b45a21b1",
+  "team_id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
+  "player_id": "96e90d08-93c3-49ce-984a-b3523f62460e",
+  "match_id": "0370f9ea-2700-4ba7-8427-05779191f0b6",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 16",
+  "match_to_serve_stage": "Fecha 17",
+  "status": "pending",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-20T03:25:34.549218+00:00",
+  "updated_at": "2026-11-20T03:25:34.549218+00:00",
+  "player": {
+   "id": "96e90d08-93c3-49ce-984a-b3523f62460e",
+   "name": "Jonathan",
+   "teams": {
+    "name": "Claypole eSports",
+    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
+   },
+   "game_user": "Vendemerca91",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Claypole eSports",
+   "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
+  }
+ },
+ {
+  "id": "0990a9e5-e558-46e3-96ed-5c0f89384841",
+  "tournament_id": "ecfa9127-9bb4-4ac5-8d73-8355b45a21b1",
+  "team_id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
+  "player_id": "817df45d-ae61-43a7-b89b-0b97f58e1ce7",
+  "match_id": "0370f9ea-2700-4ba7-8427-05779191f0b6",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 16",
+  "match_to_serve_stage": "Fecha 17",
+  "status": "pending",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-20T03:25:34.2254+00:00",
+  "updated_at": "2026-11-20T03:25:34.2254+00:00",
+  "player": {
+   "id": "817df45d-ae61-43a7-b89b-0b97f58e1ce7",
+   "name": "Ariel González",
+   "teams": {
+    "name": "Claypole eSports",
+    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
+   },
+   "game_user": "arieldelrojo86 ",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Claypole eSports",
+   "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
+  }
+ },
+ {
   "id": "b03716b3-bbc0-492e-92e4-ce8b1e44ced7",
   "tournament_id": "ecfa9127-9bb4-4ac5-8d73-8355b45a21b1",
   "team_id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",

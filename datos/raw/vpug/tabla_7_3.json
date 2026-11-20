@@ -12,7 +12,7 @@
   "nombre": "Tercera",
   "nivel": 3
  },
- "jornadasJugadas": 6,
+ "jornadasJugadas": 7,
  "jornadasTotales": 19,
  "formato": {
   "esPrimera": false,
@@ -47,6 +47,24 @@
   {
    "posicion": 2,
    "club": {
+    "id": 129,
+    "nombre": "AllBoysCantera",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp"
+   },
+   "pj": 6,
+   "g": 6,
+   "e": 0,
+   "p": 0,
+   "gf": 9,
+   "gc": 0,
+   "dg": 9,
+   "descuento": 0,
+   "pts": 18,
+   "zona": "ASCENSO"
+  },
+  {
+   "posicion": 3,
+   "club": {
     "id": 168,
     "nombre": "Pueblo Manya",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
@@ -60,24 +78,6 @@
    "dg": 11,
    "descuento": 0,
    "pts": 16,
-   "zona": "ASCENSO"
-  },
-  {
-   "posicion": 3,
-   "club": {
-    "id": 129,
-    "nombre": "AllBoysCantera",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp"
-   },
-   "pj": 6,
-   "g": 5,
-   "e": 0,
-   "p": 1,
-   "gf": 8,
-   "gc": 1,
-   "dg": 7,
-   "descuento": 0,
-   "pts": 15,
    "zona": "REDUCIDO"
   },
   {
@@ -155,41 +155,23 @@
   {
    "posicion": 8,
    "club": {
-    "id": 173,
-    "nombre": "Familia Torque",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-173-1793593039599.webp"
-   },
-   "pj": 6,
-   "g": 3,
-   "e": 1,
-   "p": 2,
-   "gf": 9,
-   "gc": 4,
-   "dg": 5,
-   "descuento": 0,
-   "pts": 10,
-   "zona": "REDUCIDO"
-  },
-  {
-   "posicion": 9,
-   "club": {
     "id": 153,
     "nombre": "NHP 20",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-153-1793999278932.webp"
    },
-   "pj": 6,
+   "pj": 7,
    "g": 3,
-   "e": 1,
+   "e": 2,
    "p": 2,
    "gf": 7,
    "gc": 4,
    "dg": 3,
    "descuento": 0,
-   "pts": 10,
+   "pts": 11,
    "zona": "REDUCIDO"
   },
   {
-   "posicion": 10,
+   "posicion": 9,
    "club": {
     "id": 126,
     "nombre": "Vidon Bar CBA",
@@ -207,7 +189,7 @@
    "zona": "REDUCIDO"
   },
   {
-   "posicion": 11,
+   "posicion": 10,
    "club": {
     "id": 155,
     "nombre": "La Blanca Fc",
@@ -222,6 +204,24 @@
    "dg": -2,
    "descuento": 0,
    "pts": 8,
+   "zona": "REDUCIDO"
+  },
+  {
+   "posicion": 11,
+   "club": {
+    "id": 173,
+    "nombre": "Familia Torque",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-173-1793593039599.webp"
+   },
+   "pj": 6,
+   "g": 2,
+   "e": 1,
+   "p": 3,
+   "gf": 8,
+   "gc": 5,
+   "dg": 3,
+   "descuento": 0,
+   "pts": 7,
    "zona": null
   },
   {
@@ -267,15 +267,15 @@
     "nombre": "Celestiales",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp"
    },
-   "pj": 6,
+   "pj": 7,
    "g": 1,
-   "e": 1,
+   "e": 2,
    "p": 4,
    "gf": 3,
    "gc": 9,
    "dg": -6,
    "descuento": 0,
-   "pts": 4,
+   "pts": 5,
    "zona": null
   },
   {
