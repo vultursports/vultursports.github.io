@@ -1,0 +1,5 @@
+httpx==0.28.1
+Jinja2==3.1.6
+PyYAML>=6.0
+pillow>=11
+playwright>=1.50

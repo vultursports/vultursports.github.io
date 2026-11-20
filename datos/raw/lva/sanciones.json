@@ -1,0 +1,450 @@
+[
+ {
+  "id": "0d705169-29d5-4f30-b44f-f57dcb001a83",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
+  "player_id": "750ed819-67cd-4b80-970e-ff319917f848",
+  "match_id": "d8302c1d-f21b-42d1-ac51-a56e3a6c134b",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Octavos de Final",
+  "match_to_serve_stage": "Cuartos de Final",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-10T16:44:33.290667+00:00",
+  "updated_at": "2026-11-10T20:14:05.673+00:00",
+  "player": {
+   "id": "750ed819-67cd-4b80-970e-ff319917f848",
+   "name": "Emiliano Gómez ",
+   "teams": {
+    "name": "BOCA JUNIORS",
+    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+   },
+   "game_user": "Emmig23 ",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "BOCA JUNIORS",
+   "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+  }
+ },
+ {
+  "id": "38455353-ab44-45c4-82ed-95cb29fd4527",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
+  "player_id": "1a595047-b762-41f8-b8d2-21b6c9a773e4",
+  "match_id": "a9050dfd-18d9-41be-83b5-724587df25ee",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 7 (Gr. D)",
+  "match_to_serve_stage": "Fecha 8",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-05T22:38:24.187082+00:00",
+  "updated_at": "2026-11-05T22:41:56.167+00:00",
+  "player": {
+   "id": "1a595047-b762-41f8-b8d2-21b6c9a773e4",
+   "name": "Karonte Anicama",
+   "teams": {
+    "name": "Los Andes FC",
+    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
+   },
+   "game_user": "KaronteAZL",
+   "photo_url": null,
+   "nationality": "PE"
+  },
+  "team": {
+   "name": "Los Andes FC",
+   "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
+  }
+ },
+ {
+  "id": "94f7c0d0-02f7-437b-ba13-7b68cd088a97",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+  "player_id": "9d5f388d-4fe3-4e38-b1a2-4c1537ceb209",
+  "match_id": "7e174dfc-110a-42bb-8758-d4c8acb73d8c",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 7 (Gr. B)",
+  "match_to_serve_stage": "Fecha 8",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-05T17:55:55.732213+00:00",
+  "updated_at": "2026-11-05T18:56:52.094+00:00",
+  "player": {
+   "id": "9d5f388d-4fe3-4e38-b1a2-4c1537ceb209",
+   "name": "Saantii003",
+   "teams": {
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+   },
+   "game_user": "Saantii003",
+   "photo_url": null,
+   "nationality": "UY"
+  },
+  "team": {
+   "name": "LNE eSports",
+   "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+  }
+ },
+ {
+  "id": "5bdccb3c-6db7-429c-98cb-30ad72f8e897",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+  "player_id": "2611ead6-d63e-4974-8779-c59c62125724",
+  "match_id": "98b39376-6768-45f1-954a-17e5747f0d1b",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 7 (Gr. D)",
+  "match_to_serve_stage": "Fecha 8",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-05T13:46:35.297329+00:00",
+  "updated_at": "2026-11-05T13:52:48.495+00:00",
+  "player": {
+   "id": "2611ead6-d63e-4974-8779-c59c62125724",
+   "name": "Maximo parodi",
+   "teams": {
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+   },
+   "game_user": "Lapeste_03",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Caja Fuerte FC",
+   "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+  }
+ },
+ {
+  "id": "ccf54b3e-7328-4815-854b-025ca1ce2233",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+  "player_id": "9cf0ec4b-e547-4dda-bbf3-da51ad69e1ae",
+  "match_id": "98b39376-6768-45f1-954a-17e5747f0d1b",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 7 (Gr. D)",
+  "match_to_serve_stage": "Fecha 8",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-05T13:46:34.884638+00:00",
+  "updated_at": "2026-11-05T13:52:47.915+00:00",
+  "player": {
+   "id": "9cf0ec4b-e547-4dda-bbf3-da51ad69e1ae",
+   "name": "Ian Escobar ",
+   "teams": {
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+   },
+   "game_user": "Elmalditochuki22",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Caja Fuerte FC",
+   "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+  }
+ },
+ {
+  "id": "e26fe402-84b0-4fb8-92f1-690948f5c38c",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+  "player_id": "bff03357-63f9-4604-8f3b-a1a2c6eedd3f",
+  "match_id": "98b39376-6768-45f1-954a-17e5747f0d1b",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 7 (Gr. D)",
+  "match_to_serve_stage": "Fecha 8",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-05T13:46:34.478882+00:00",
+  "updated_at": "2026-11-05T13:52:47.243+00:00",
+  "player": {
+   "id": "bff03357-63f9-4604-8f3b-a1a2c6eedd3f",
+   "name": "Nicolas Llopiz",
+   "teams": {
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+   },
+   "game_user": "Nicolasllz2",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Caja Fuerte FC",
+   "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+  }
+ },
+ {
+  "id": "794a9493-af3e-45d9-9bb4-50b20f2a361d",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+  "player_id": "71205c14-86f1-4daf-b605-b37e1b70c129",
+  "match_id": "98b39376-6768-45f1-954a-17e5747f0d1b",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 7 (Gr. D)",
+  "match_to_serve_stage": "Fecha 8",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-05T13:46:34.116996+00:00",
+  "updated_at": "2026-11-05T13:52:46.138+00:00",
+  "player": {
+   "id": "71205c14-86f1-4daf-b605-b37e1b70c129",
+   "name": "Valentin parodi",
+   "teams": {
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+   },
+   "game_user": "VC_Parodi",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Caja Fuerte FC",
+   "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+  }
+ },
+ {
+  "id": "42556e87-58cc-46d4-adaa-0bc9ba2c0512",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
+  "player_id": "c211bf54-944a-4631-b191-bc381c358519",
+  "match_id": "ca4a4cc1-4a60-40e4-8df8-ec811907d1a2",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 7 (Gr. C)",
+  "match_to_serve_stage": "Fecha 8",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-05T11:30:49.246428+00:00",
+  "updated_at": "2026-11-05T12:24:35.375+00:00",
+  "player": {
+   "id": "c211bf54-944a-4631-b191-bc381c358519",
+   "name": "Diego Benitez ",
+   "teams": {
+    "name": "NHP 20",
+    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+   },
+   "game_user": "Diegobar13pyo",
+   "photo_url": null,
+   "nationality": "PY"
+  },
+  "team": {
+   "name": "NHP 20",
+   "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+  }
+ },
+ {
+  "id": "97f3ed0f-65ae-4c57-800b-f24ac40d2a55",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
+  "player_id": "15506da5-277d-495f-8a34-335bc9892d66",
+  "match_id": "ca4a4cc1-4a60-40e4-8df8-ec811907d1a2",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 7 (Gr. C)",
+  "match_to_serve_stage": "Fecha 8",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-05T03:20:54.524292+00:00",
+  "updated_at": "2026-11-05T03:21:53.727+00:00",
+  "player": {
+   "id": "15506da5-277d-495f-8a34-335bc9892d66",
+   "name": "Cristian Maran",
+   "teams": {
+    "name": "Villa San Carlos",
+    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
+   },
+   "game_user": "CrisRamone",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Villa San Carlos",
+   "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
+  }
+ },
+ {
+  "id": "bf53db00-3b71-44cb-95e5-3a3220f693a0",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+  "player_id": "84f7aaf9-5c8e-441f-92cf-da7388dde2b7",
+  "match_id": "2dd29bae-3e9d-44f9-9bd0-f8433fa2fbf7",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 6 (Gr. C)",
+  "match_to_serve_stage": "Fecha 7",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-03T16:53:22.365406+00:00",
+  "updated_at": "2026-11-05T03:21:49.777+00:00",
+  "player": {
+   "id": "84f7aaf9-5c8e-441f-92cf-da7388dde2b7",
+   "name": "Matías Iglesias",
+   "teams": {
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+   },
+   "game_user": "maturiverplate",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Acassuso eSports",
+   "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+  }
+ },
+ {
+  "id": "f28aeb38-2396-45b0-aa1b-bb02f46744d1",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+  "player_id": "8ef7a4bf-5f57-440b-9dbf-c96c4d81fb02",
+  "match_id": "25e79fa6-b048-41ee-a038-cb691eff1cb5",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 4 (Gr. C)",
+  "match_to_serve_stage": "Fecha 5",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-10-29T21:06:22.804612+00:00",
+  "updated_at": "2026-11-03T12:41:58.738+00:00",
+  "player": {
+   "id": "8ef7a4bf-5f57-440b-9dbf-c96c4d81fb02",
+   "name": "Marcos basile",
+   "teams": {
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+   },
+   "game_user": "MarkiLokuras01",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Acassuso eSports",
+   "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+  }
+ },
+ {
+  "id": "9bf1e5d6-903f-4170-bd03-a0f3086e6540",
+  "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
+  "team_id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
+  "player_id": "9bccf098-b2a8-44a7-9450-51e5440f3643",
+  "match_id": "89cc2c8b-244d-4161-9a72-5afacee3a9ba",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa en partido oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 1 (Gr. C)",
+  "match_to_serve_stage": "Fecha 2",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Sanción histórica migrada de estadísticas oficiales",
+  "created_at": "2026-10-28T12:33:18.480267+00:00",
+  "updated_at": "2026-10-28T12:33:18.480267+00:00",
+  "player": {
+   "id": "9bccf098-b2a8-44a7-9450-51e5440f3643",
+   "name": "Axel Avalos",
+   "teams": {
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   },
+   "game_user": "ZukiiiARG",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Unión Cordillera",
+   "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
+  }
+ },
+ {
+  "id": "b03716b3-bbc0-492e-92e4-ce8b1e44ced7",
+  "tournament_id": "ecfa9127-9bb4-4ac5-8d73-8355b45a21b1",
+  "team_id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
+  "player_id": "de574950-b47b-46b6-97d6-05638d95422d",
+  "match_id": "981deb60-3931-434e-bab7-1c11b300dbbc",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 9",
+  "match_to_serve_stage": "Fecha 10",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-11T03:22:28.852792+00:00",
+  "updated_at": "2026-11-11T12:56:34.052+00:00",
+  "player": {
+   "id": "de574950-b47b-46b6-97d6-05638d95422d",
+   "name": "Matias aduco",
+   "teams": {
+    "name": "BOCA JUNIORS",
+    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+   },
+   "game_user": "SIEMPRE12MONO",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "BOCA JUNIORS",
+   "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+  }
+ },
+ {
+  "id": "7a85274f-3411-466b-8ee0-d6ada1eea764",
+  "tournament_id": "ecfa9127-9bb4-4ac5-8d73-8355b45a21b1",
+  "team_id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+  "player_id": "9002131b-e99a-418b-b615-8629c03298c4",
+  "match_id": "8fd0dea1-28f3-4657-8db7-8345a069712b",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 8",
+  "match_to_serve_stage": "Fecha 9",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-06T04:02:53.800483+00:00",
+  "updated_at": "2026-11-11T12:56:23.892+00:00",
+  "player": {
+   "id": "9002131b-e99a-418b-b615-8629c03298c4",
+   "name": "Lucas Pais ",
+   "teams": {
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+   },
+   "game_user": "lovenn24",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Acassuso eSports",
+   "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+  }
+ }
+]

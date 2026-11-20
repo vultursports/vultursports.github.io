@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% from "_macros.html" import forma, chip, fila_partido, tabla_pos %}
+{% block contenido %}
+
+{% if proximo %}
+<section class="proximo liga-{{ proximo.liga }}" aria-labelledby="t-proximo">
+  <div class="proximo-marco">
+    <h1 id="t-proximo" class="proximo-titulo">
+      {% if proximo.noche == hoy_noche %}Hoy jugamos{% else %}Próximo partido{% endif %}
+    </h1>
+    <p class="proximo-comp">{{ chip(proximo.liga_ui) }} {{ proximo.competencia }}, {{ proximo.jornada|lower }}</p>
+    <div class="duelo{% if not proximo.local %} visitante{% endif %}">
+      <div class="equipo nosotros">
+        <img src="estaticos/img/escudo.png" alt="" width="96" height="96">
+        <span>Vultur Sports</span>{% if proximo.pos_nos and not proximo.resultado %}<small class="pos-tabla">{{ proximo.pos_nos }}° en la tabla</small>{% endif %}
+      </div>
+      <div class="cuando">
+        <time datetime="{{ proximo.dt.isoformat() }}" data-cuenta="{{ proximo.dt.isoformat() }}">
+          <span class="hora">{{ proximo.hora }}</span>
+          <span class="dia">{{ proximo.noche_txt }}</span>
+        </time>
+        <span class="cuenta" aria-live="off"></span>
+      </div>
+      <a class="equipo equipo-link" href="{{ proximo.rival_pagina }}" title="Ver historial contra {{ proximo.rival.nombre }}">
+        {% if proximo.rival.escudo %}<img src="{{ proximo.rival.escudo|replace('_thumb', '') }}" alt="" width="96" height="96">{% else %}<span class="sin-escudo grande" aria-hidden="true"></span>{% endif %}
+        <span>{{ proximo.rival.nombre }}</span>{% if proximo.pos_rival and not proximo.resultado %}<small class="pos-tabla">{{ proximo.pos_rival }}° en la tabla</small>{% endif %}
+      </a>
+    </div>
+    <p class="proximo-pie">Somos {{ proximo.condicion|lower }}. <a href="{{ proximo.pagina }}">Detalles del partido</a></p>
+  </div>
+</section>
+{% else %}
+<section class="proximo vacio"><h1 class="proximo-titulo">Sin partidos programados</h1><p>Cuando las ligas publiquen el próximo fixture, aparecerá aquí.</p></section>
+{% endif %}
+
+{% if avisos %}
+<section class="avisos" aria-label="Avisos">
+  <ul>{% for a in avisos %}<li class="aviso aviso-{{ a.tipo }}{% if a.liga_ui %} liga-{{ a.liga_ui.clave }}{% endif %}">{% if a.liga_ui %}{{ chip(a.liga_ui) }} {% endif %}<b>{{ a.titulo }}.</b> {{ a.detalle }}</li>{% endfor %}</ul>
+</section>
+{% endif %}
+
+{% if transmisiones %}
+<section class="en-vivo" aria-labelledby="t-envivo" hidden data-canales='{{ transmisiones|tojson }}'>
+  <div class="enc"><h2 id="t-envivo"><span class="punto" aria-hidden="true"></span>En vivo</h2><a class="envivo-link" href="#" target="_blank" rel="noopener">Ver en Twitch</a></div>
+  <p class="envivo-quien"></p>
+  <div class="envivo-video"></div>
+</section>
+{% endif %}
+
+<div class="columnas">
+  <section aria-labelledby="t-semana">
+    <div class="enc"><h2 id="t-semana">Esta semana</h2><a href="calendario.html">Calendario completo</a></div>
+    {% for g in semana %}
+      <h3 class="noche">{{ g.txt|capitalize }}</h3>
+      <ul class="partidos">{% for p in g.partidos %}{{ fila_partido(p) }}{% endfor %}</ul>
+    {% else %}
+      <p class="vacio">No hay partidos en los próximos 7 días.</p>
+    {% endfor %}
+
+    <div class="enc"><h2 id="t-recientes">Últimos resultados</h2></div>
+    <ul class="partidos">{% for p in recientes %}{{ fila_partido(p) }}{% else %}<li class="vacio">Todavía no hay resultados.</li>{% endfor %}</ul>
+  </section>
+
+  <section aria-labelledby="t-comp">
+    <div class="enc"><h2 id="t-comp">Cómo vamos</h2><a href="tablas.html">Todas las tablas</a></div>
+    {% for t in tablas %}
+    <article class="comp liga-{{ t.liga }}">
+      <header>
+        <h3>{{ chip(t.liga_ui) }} {{ t.competencia }}</h3>
+        {% if t.vultur %}<p class="pos-badge"><b>{{ t.vultur.pos }}°</b> de {{ t.filas|length }}</p>{% endif %}
+      </header>
+      {% if t.forma %}<p class="forma-linea">Últimos partidos {{ forma(t.forma) }}</p>{% endif %}
+      {{ tabla_pos(t, t.mini) }}
+      <p class="fuente"><a class="ver-tabla" href="tablas.html#comp-{{ t.id }}">Ver tabla completa</a> · Fuente: <a href="{{ t.url_origen }}" target="_blank" rel="noopener">{{ t.liga_ui.nombre }}</a></p>
+    </article>
+    {% endfor %}
+  </section>
+</div>
+{% endblock %}
+
+{% block js %}{% endblock %}

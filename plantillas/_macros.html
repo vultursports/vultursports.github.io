@@ -1,0 +1,81 @@
+{% macro chip(l) -%}
+<img class="logo-liga liga-{{ l.clave }}" src="estaticos/img/ligas/{{ l.clave }}.png" alt="{{ l.nombre }}" title="{{ l.nombre }}" height="20">
+{%- endmacro %}
+
+{% macro forma(lista) -%}
+{% if lista %}<span class="forma" aria-label="Últimos {{ lista|length }} resultados">{% for p in lista %}<a class="f-{{ p.resultado }}" href="{{ p.pagina }}" title="{{ p.noche.strftime('%d/%m') }} vs {{ p.rival.nombre }}: {{ p.gf }}-{{ p.gc }}{% if p.wo %} (W.O.){% endif %}">{{ {'g':'G','e':'E','p':'P'}[p.resultado] }}</a>{% endfor %}</span>{% endif %}
+{%- endmacro %}
+
+{% macro avatar(j, tam) -%}
+<span class="avatar{% if not j.dorsal %} sin-dorsal{% endif %}" style="--t: {{ tam }}px" aria-hidden="true">{{ j.dorsal if j.dorsal else j.alias[:1]|upper }}</span>
+{%- endmacro %}
+
+{% macro fila_partido(p, fecha=False) -%}
+<li title="{{ p.liga_ui.nombre }}" class="partido liga-{{ p.liga }}{% if p.resultado %} r-{{ p.resultado }}{% endif %}" data-liga="{{ p.liga }}">
+  <time class="p-hora{% if fecha %} con-fecha{% endif %}" datetime="{{ p.dt.isoformat() }}">{% if fecha %}{{ p.noche.strftime('%d/%m') }}<small>{{ p.hora }}</small>{% else %}{{ p.hora }}{% endif %}</time>
+  <span class="p-rival">
+    {% if p.rival.escudo %}<img src="{{ p.rival.escudo }}" alt="" width="28" height="28" loading="lazy">{% else %}<span class="sin-escudo" aria-hidden="true"></span>{% endif %}
+    <span><b>{% if p.rival_pagina %}<a class="a-rival" href="{{ p.rival_pagina }}">{{ p.rival.nombre }}</a>{% else %}{{ p.rival.nombre }}{% endif %}</b><small><abbr class="sigla" title="{{ p.liga_ui.nombre }}">{{ p.liga_ui.corto }}</abbr> {{ p.condicion }}, {{ p.jornada|lower }}{% if p.wo %}, <abbr class="wo" title="Ganado sin jugar: el rival no se presentó o se dio de baja">por W.O.</abbr>{% endif %}{% if p.sancionados and not p.resultado %}<span class="marca-sancion"> · {{ p.sancionados|length }} {{ 'suspendido' if p.sancionados|length == 1 else 'suspendidos' }}</span>{% endif %}</small></span>
+  </span>
+  <span class="p-res">
+    {% if p.resultado %}
+      <a href="{{ p.pagina }}" aria-label="{{ {'g':'Ganamos','e':'Empatamos','p':'Perdimos'}[p.resultado] }} {{ p.gf }} a {{ p.gc }}, ver detalles">
+        <span class="marcador">{{ p.gf }}<i>–</i>{{ p.gc }}</span>
+        <small class="ver-det">Ver detalles</small>
+      </a>
+    {% else %}
+      <a class="ver" href="{{ p.pagina }}">Ver detalles</a>
+    {% endif %}
+  </span>
+  {% if p.goleadores or p.mvp %}
+  <p class="p-detalle">
+    {% if p.goleadores %}Goles: {% for n, g in p.goleadores %}{{ n }}{% if g > 1 %} ({{ g }}){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}.{% endif %}
+    {% if p.mvp %}<span class="mvp">MVP {{ p.mvp }}</span>{% endif %}
+  </p>
+  {% endif %}
+</li>
+{%- endmacro %}
+
+{% macro tabla_pos(t, filas, completa=False) -%}
+<table class="tabla{% if completa %} completa{% endif %}">
+  <caption class="sr">{{ t.competencia }}</caption>
+  <thead><tr>
+    <th scope="col" class="n"><abbr title="Posición">#</abbr></th>
+    <th scope="col" class="eq">Equipo</th>
+    <th scope="col"><abbr title="Partidos jugados">PJ</abbr></th>
+    {% if completa %}<th scope="col"><abbr title="Ganados">G</abbr></th><th scope="col"><abbr title="Empatados">E</abbr></th><th scope="col"><abbr title="Perdidos">P</abbr></th><th scope="col" class="opc"><abbr title="Goles a favor">GF</abbr></th><th scope="col" class="opc"><abbr title="Goles en contra">GC</abbr></th>{% endif %}
+    <th scope="col"><abbr title="Diferencia de gol">DG</abbr></th>
+    <th scope="col" class="pts"><abbr title="Puntos">Pts</abbr></th>
+  </tr></thead>
+  <tbody>
+  {% for f in filas %}
+    <tr class="{% if f.es_vultur %}nosotros{% endif %}{% if f.zona %} z-{{ f.zona }}{% endif %}">
+      <td class="n">{{ f.pos }}{% if f.mov %}<span class="mov {{ 'sube' if f.mov > 0 else 'baja' }}" title="{{ 'Subió' if f.mov > 0 else 'Bajó' }} {{ f.mov|abs }} {{ 'puesto' if f.mov|abs == 1 else 'puestos' }} desde la fecha anterior">{{ '▲' if f.mov > 0 else '▼' }}{{ f.mov|abs }}</span>{% endif %}</td>
+      <th scope="row" class="eq"><div class="eqi">{% if f.escudo %}<img src="{{ f.escudo }}" alt="" width="22" height="22" loading="lazy">{% else %}<span class="sin-escudo chico" aria-hidden="true"></span>{% endif %}{% if f.pagina %}<a class="a-rival" href="{{ f.pagina }}">{{ f.equipo }}</a>{% else %}<span>{{ f.equipo }}</span>{% endif %}</div></th>
+      <td>{{ f.pj }}</td>
+      {% if completa %}<td>{{ f.g }}</td><td>{{ f.e }}</td><td>{{ f.p }}</td><td class="opc">{{ f.gf }}</td><td class="opc">{{ f.gc }}</td>{% endif %}
+      <td>{{ '%+d'|format(f.dg) if f.dg else 0 }}</td>
+      <td class="pts">{{ f.pts }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{%- endmacro %}
+
+{% macro telarana(clase) -%}
+<svg class="telarana {{ clase }}" viewBox="0 0 120 120" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1">
+    <path d="M0 0L120 8M0 0L112 46M0 0L84 84M0 0L46 112M0 0L8 120"/>
+    <path d="M30 2Q26 12 28 22Q18 24 12 28Q10 18 2 30"/>
+    <path d="M58 4Q50 22 54 42Q36 46 22 54Q18 36 4 58"/>
+    <path d="M88 6Q76 34 80 62Q56 70 34 80Q28 56 6 88"/>
+    <path d="M114 8Q100 44 104 80Q72 92 44 104Q36 72 8 114"/>
+  </g>
+</svg>
+{%- endmacro %}
+
+{% macro copa(clase) -%}
+<svg class="{{ clase }}" viewBox="0 0 64 80" aria-hidden="true">
+  <path d="M16 6h32v14c0 12-7 21-16 21S16 32 16 20z M16 10H6c0 10 4 16 12 17 M48 10h10c0 10-4 16-12 17 M32 41v13 M22 62h20l-3-8H25z M18 62h28v8H18z"/>
+</svg>
+{%- endmacro %}

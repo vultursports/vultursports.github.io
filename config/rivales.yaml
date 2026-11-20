@@ -1,0 +1,13 @@
+# Unir rivales que aparecen con nombres distintos en cada liga pero son el mismo club.
+# Los nombres que solo difieren en mayúsculas, espacios o signos ya se unen solos
+# (por ejemplo "AllBoysCantera" y "All Boys Cantera").
+#
+#   nombre_en_una_liga: nombre_principal
+unir:
+  San Miguel eSp: San Miguel eSports      # mismo escudo (CASM), confirmado por el club
+  Almirante Brown eSport: Almirante Brown   # VPN / VPUG, confirmado por el club
+
+# Separar dos rivales que la web unió por error (mismo escudo, pero son clubes distintos):
+separar:
+  - [Tu Vieja Crew, Emporio Zamudio]   # mismo escudo, nombres distintos: sin confirmar, quedan separados
+#   - [Instituto Reserva, Instituto Senior]

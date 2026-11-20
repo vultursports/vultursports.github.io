@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% from "_macros.html" import chip %}
+{% block titulo %}Estado | {{ club }}{% endblock %}
+{% block contenido %}
+<div class="pagina">
+  <h1 class="titulo-pagina">Estado</h1>
+  <p class="bajada">Última actualización de cada liga.</p>
+
+  <div class="scroll-x">
+  <table class="tabla estado">
+    <thead><tr>
+      <th scope="col" class="eq">Liga</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Última actualización correcta</th>
+      <th scope="col" class="opc">Partidos</th>
+    </tr></thead>
+    <tbody>
+    {% for e in estado_ligas %}
+      <tr class="{{ 'est-ok' if e.ok_reciente else 'est-mal' }}">
+        <th scope="row" class="eq">{{ chip(e.liga_ui) }}</th>
+        <td>{% if e.error %}<b class="est-falla">Falló{% if e.fallos > 1 %} {{ e.fallos }} veces seguidas{% endif %}</b>{% elif e.ok_reciente %}<b class="est-bien">Al día</b>{% else %}<b class="est-falla">Atrasada</b>{% endif %}</td>
+        <td>{{ e.ok_txt or 'nunca' }}</td>
+        <td class="opc">{{ e.partidos }}</td>
+      </tr>
+      {% if e.error %}<tr class="est-detalle"><td colspan="4">Error: {{ e.error }}</td></tr>{% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+
+  <dl class="totales estado-totales">
+    <div><dt>Partidos guardados</dt><dd>{{ total_partidos }}</dd></div>
+    <div><dt>Jugadores</dt><dd>{{ total_jugadores }}</dd></div>
+    <div><dt>Rivales</dt><dd>{{ total_rivales }}</dd></div>
+    <div><dt>Escudos</dt><dd>{{ total_escudos }}</dd></div>
+  </dl>
+  <p class="fuente">"Atrasada" significa que la última actualización correcta tiene más de 12 horas. Si una liga falla, la web sigue mostrando los últimos datos que se pudieron leer.</p>
+</div>
+{% endblock %}

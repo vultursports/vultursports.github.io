@@ -1,0 +1,182 @@
+[
+ {
+  "idExterno": "VSP-Ch4cKaL",
+  "nombreCompleto": "ARIELORTEGA",
+  "dorsal": 9,
+  "posicion": "DC",
+  "esDt": true,
+  "esSubDt": false,
+  "pais": "argentina"
+ },
+ {
+  "idExterno": "xRagnar-_zZ",
+  "nombreCompleto": "Ivan Aguirrez",
+  "dorsal": 24,
+  "posicion": "DC",
+  "esDt": false,
+  "esSubDt": true,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "SuazoM10",
+  "nombreCompleto": "Elias Suazo",
+  "dorsal": 2,
+  "posicion": "MC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "Szoke_1",
+  "nombreCompleto": "Gabriel Wagner",
+  "dorsal": 4,
+  "posicion": "DFC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "ByCrisMor09",
+  "nombreCompleto": "Cris Moreira",
+  "dorsal": 6,
+  "posicion": "MC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Uruguay "
+ },
+ {
+  "idExterno": "Bsperanza93",
+  "nombreCompleto": "Brahian Ariel Alcaraz Speranza",
+  "dorsal": 7,
+  "posicion": "LD",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "VSP-Ch4cKaL",
+  "nombreCompleto": "ARIELORTEGA",
+  "dorsal": 9,
+  "posicion": "DC",
+  "esDt": true,
+  "esSubDt": false,
+  "pais": "argentina"
+ },
+ {
+  "idExterno": "-D1rty-Arg",
+  "nombreCompleto": "Jonathan Cruz",
+  "dorsal": 10,
+  "posicion": "MCO",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "Tiro_loko12",
+  "nombreCompleto": "Nicolas santana",
+  "dorsal": 12,
+  "posicion": "LI",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Chile"
+ },
+ {
+  "idExterno": "Txrooooo",
+  "nombreCompleto": "Txrooooo",
+  "dorsal": 18,
+  "posicion": "DC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "Chrisv710",
+  "nombreCompleto": "Christian Verdejo Muñoz",
+  "dorsal": 19,
+  "posicion": "MCO",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Chile"
+ },
+ {
+  "idExterno": "MateoAlvarezIACC",
+  "nombreCompleto": "Mateo Alvarez Viel",
+  "dorsal": 20,
+  "posicion": "MC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "SoldierJah22",
+  "nombreCompleto": "Lucas Gallo",
+  "dorsal": 22,
+  "posicion": "MC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "MichaelGB1981",
+  "nombreCompleto": "Michael Gonzalez Bagilvo",
+  "dorsal": 23,
+  "posicion": "POR",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Uruguay "
+ },
+ {
+  "idExterno": "xRagnar-_zZ",
+  "nombreCompleto": "Ivan Aguirrez",
+  "dorsal": 24,
+  "posicion": "DC",
+  "esDt": false,
+  "esSubDt": true,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "Corona_ruso ",
+  "nombreCompleto": "Matías Fernández ",
+  "dorsal": 27,
+  "posicion": "DFC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "canflecto12",
+  "nombreCompleto": "Matthew Etienne Chanquet Silveira",
+  "dorsal": 29,
+  "posicion": "MC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina "
+ },
+ {
+  "idExterno": "Zk__godd",
+  "nombreCompleto": "Zk__godd",
+  "dorsal": 32,
+  "posicion": "DFC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "MixaelYT",
+  "nombreCompleto": "Leonel dolce",
+  "dorsal": 33,
+  "posicion": "LD",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
+  "idExterno": "Edujotaeme ",
+  "nombreCompleto": "Eduardo Martinez",
+  "dorsal": 88,
+  "posicion": "LI",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Chile"
+ }
+]

@@ -1,0 +1,29 @@
+{
+ "ligas": {
+  "vpug": {
+   "intento": "2026-11-19T23:57:38+00:00",
+   "ok": "2026-11-19T23:57:46+00:00",
+   "error": null,
+   "fallos_seguidos": 0,
+   "partidos": 19,
+   "tablas": 1
+  },
+  "vpn": {
+   "intento": "2026-11-19T23:57:46+00:00",
+   "ok": "2026-11-19T23:58:22+00:00",
+   "error": null,
+   "fallos_seguidos": 0,
+   "partidos": 179,
+   "tablas": 1
+  },
+  "lva": {
+   "intento": "2026-11-19T23:58:22+00:00",
+   "ok": "2026-11-19T23:58:55+00:00",
+   "error": null,
+   "fallos_seguidos": 0,
+   "partidos": 170,
+   "tablas": 2
+  }
+ },
+ "sync": "2026-11-19T23:58:55+00:00"
+}

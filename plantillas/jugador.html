@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% from "_macros.html" import chip, avatar %}
+{% block titulo %}{{ j.alias }} | {{ club }}{% endblock %}
+{% block contenido %}
+<div class="pagina">
+  <p class="volver"><a href="plantel.html">Plantel</a></p>
+
+  <header class="ficha">
+    {{ avatar(j, 112) }}
+    <div>
+      <h1 class="titulo-pagina">{{ j.alias }}</h1>
+      <p class="ficha-datos">
+        {% if j.nombre_real %}{{ j.nombre_real }}{% endif %}
+        {% if j.posicion %}<span>{{ j.posicion }}</span>{% endif %}
+        {% if j.dorsal %}<span>Dorsal {{ j.dorsal }}</span>{% endif %}
+        {% if j.rol %}<span class="rol">{{ j.rol }}</span>{% endif %}
+        {% if j.twitch %}<a class="twitch" href="https://www.twitch.tv/{{ j.twitch }}" target="_blank" rel="noopener">Twitch: {{ j.twitch }}</a>{% endif %}
+      </p>
+    </div>
+  </header>
+
+  {% for s in j.sanciones if s.vigente %}
+  <p class="aviso aviso-sancion liga-{{ s.liga }}">{{ chip(s.liga_ui) }} Suspendido en {{ s.competencia }}{% if s.cumple %}: cumple {{ s.cumple }}{% endif %}. {{ s.motivo or '' }}</p>
+  {% endfor %}
+  <dl class="totales">
+    <div><dt>Partidos</dt><dd>{{ j.total.pj }}</dd></div>
+    <div><dt>Goles</dt><dd>{{ j.total.goles }}</dd></div>
+    <div><dt>Asistencias</dt><dd>{{ j.total.asistencias }}</dd></div>
+    <div><dt>MVP</dt><dd>{{ j.total.mvp }}</dd></div>
+    <div><dt>Nota promedio</dt><dd>{{ '%.1f'|format(j.total.nota) if j.total.nota else '–' }}</dd></div>
+  </dl>
+
+  {% if j.total.pj %}
+  <section aria-labelledby="t-porliga">
+    <div class="enc"><h2 id="t-porliga">Por liga</h2></div>
+    <div class="scroll-x">
+    <table class="tabla stats">
+      <thead><tr><th scope="col" class="eq">Liga</th><th scope="col">PJ</th><th scope="col">G</th><th scope="col">A</th><th scope="col">MVP</th><th scope="col">Nota</th><th scope="col" class="opc"><abbr title="Tarjetas amarillas / rojas">TA/TR</abbr></th></tr></thead>
+      <tbody>
+      {% for clave, l in ligas.items() if j.por_liga[clave].pj %}
+        {% set st = j.por_liga[clave] %}
+        <tr><th scope="row" class="eq">{{ chip(l) }}</th><td>{{ st.pj }}</td><td>{{ st.goles }}</td><td>{{ st.asistencias }}</td><td>{{ st.mvp }}</td><td>{{ '%.1f'|format(st.nota) if st.nota else '–' }}</td><td class="opc">{{ st.amarillas }}/{{ st.rojas }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-portemp">
+    <div class="enc"><h2 id="t-portemp">Por temporada</h2></div>
+    <div class="scroll-x">
+    <table class="tabla stats">
+      <thead><tr><th scope="col" class="eq">Temporada</th><th scope="col">PJ</th><th scope="col">G</th><th scope="col">A</th><th scope="col">MVP</th><th scope="col">Nota</th></tr></thead>
+      <tbody>
+      {% for t in j.por_temporada %}
+        <tr><th scope="row" class="eq"><span class="eqi">{{ chip(t.liga_ui) }}<span>{{ t.nombre }}</span></span></th><td>{{ t.pj }}</td><td>{{ t.goles or '' }}</td><td>{{ t.asistencias or '' }}</td><td>{{ t.mvp or '' }}</td><td>{{ '%.1f'|format(t.nota) if t.nota else '' }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-ultimos">
+    <div class="enc"><h2 id="t-ultimos">Partidos</h2></div>
+    <ul class="partidos">
+    {% for x in j.partidos %}
+      {% set p = x.p %}{% set s = x.s %}
+      <li class="partido liga-{{ p.liga }} r-{{ p.resultado }}">
+        <time class="p-hora" datetime="{{ p.dt.isoformat() }}">{{ p.dt.strftime('%d/%m') }}</time>
+        <span class="p-rival">
+          {% if p.rival.escudo %}<img src="{{ p.rival.escudo }}" alt="" width="28" height="28" loading="lazy">{% endif %}
+          <span><b>{{ p.rival.nombre }}</b><small><abbr class="sigla" title="{{ p.liga_ui.nombre }}">{{ p.liga_ui.corto }}</abbr> {{ s.posicion or '' }}{% if s.goles %} · {{ s.goles }} G{% endif %}{% if s.asistencias %} · {{ s.asistencias }} A{% endif %}{% if s.rating is not none and s.rating >= 0 %} · nota {{ '%.1f'|format(s.rating) }}{% endif %}{% if s.mvp %} · <span class="mvp">MVP</span>{% endif %}</small></span>
+        </span>
+        <span class="p-res"><a href="{{ p.pagina }}" aria-label="Ver partido"><span class="marcador">{{ p.gf }}<i>–</i>{{ p.gc }}</span></a></span>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% else %}
+  <p class="vacio">Todavía no tiene partidos con estadísticas publicadas por las ligas.</p>
+  {% endif %}
+
+  {% if j.en_plantel_vpug %}<p class="fuente">Dorsal y posición: plantel oficial de Vultur Sports en <a href="https://vpugvirtualprouruguaygaming.com/" target="_blank" rel="noopener">Virtual Pro Uruguay Gaming</a>.</p>{% endif %}
+</div>
+{% endblock %}

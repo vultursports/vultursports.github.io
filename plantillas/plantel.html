@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% from "_macros.html" import forma, chip, avatar %}
+{% block titulo %}Plantel | {{ club }}{% endblock %}
+{% block contenido %}
+<div class="pagina">
+  <h1 class="titulo-pagina">Plantel</h1>
+  <p class="bajada">Los números de cada jugador, por liga y temporada.</p>
+
+  <div class="filtros-plantel">
+    <div class="selector-comp selector-ambito" role="group" aria-label="Liga">
+      <button type="button" data-liga="todas" aria-pressed="true" class="todas"><span class="sc-nombre">Todas</span></button>
+      {% for l in ligas.values() %}
+      <button type="button" data-liga="{{ l.clave }}" aria-pressed="false" class="liga-{{ l.clave }}">{{ chip(l) }}</button>
+      {% endfor %}
+    </div>
+    <label class="sel-temporada">
+      <span>Temporada</span>
+      <select id="temporada">
+        <option value="actual" selected>Temporada actual</option>
+        <option value="todo">Todo el historial</option>
+        {% for l in ligas.values() %}
+          {% set ts = temporadas_lista|selectattr('liga', 'equalto', l.clave)|list %}
+          {% if ts %}
+          <optgroup label="{{ l.nombre }}">
+            {% for t in ts %}<option value="t:{{ t.clave }}" data-liga="{{ t.liga }}">{{ t.nombre }}</option>{% endfor %}
+          </optgroup>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </label>
+  </div>
+
+  <div class="lideres" id="lideres" aria-live="polite"></div>
+
+  <section class="once" aria-labelledby="t-once">
+    <div class="enc"><h2 id="t-once">El 11 más usado</h2></div>
+    <p class="once-formacion" id="once-formacion"></p>
+    <div class="cancha" id="cancha" role="list" aria-label="Once más usado"></div>
+    <h3 class="banco-titulo">Banco</h3>
+    <ul class="banco" id="banco"></ul>
+  </section>
+
+  <div class="scroll-x">
+  <table class="tabla stats ordenable" id="tabla-plantel">
+    <caption class="sr">Estadísticas del plantel</caption>
+    <thead><tr>
+      <th scope="col" class="eq">Jugador</th>
+      <th scope="col" data-campo="pj"><button type="button"><abbr title="Partidos jugados">PJ</abbr></button></th>
+      <th scope="col" data-campo="g"><button type="button"><abbr title="Goles">G</abbr></button></th>
+      <th scope="col" data-campo="a"><button type="button"><abbr title="Asistencias">A</abbr></button></th>
+      <th scope="col" data-campo="ga" class="opc"><button type="button"><abbr title="Goles + asistencias">G+A</abbr></button></th>
+      <th scope="col" data-campo="mvp"><button type="button">MVP</button></th>
+      <th scope="col" data-campo="nota" aria-sort="descending"><button type="button"><abbr title="Nota promedio">Nota</abbr></button></th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+  </div>
+  <p class="vacio" id="plantel-vacio" hidden>No hay partidos con estadísticas para esta combinación.</p>
+  <noscript><p class="aviso">Para ver el plantel hace falta tener JavaScript activado.</p></noscript>
+
+  {% set R = records %}
+  <section class="records" aria-labelledby="t-records">
+    <div class="enc"><h2 id="t-records">Récords del club</h2></div>
+    <p class="bajada">Todo el historial, desde {{ R.anio_desde }}.</p>
+    <dl class="totales">
+      <div><dt>Partidos</dt><dd>{{ R.pj }}</dd></div>
+      <div class="g"><dt>Ganados</dt><dd>{{ R.g }}</dd></div>
+      <div><dt>Empatados</dt><dd>{{ R.e }}</dd></div>
+      <div class="p"><dt>Perdidos</dt><dd>{{ R.p }}</dd></div>
+      <div><dt>Goles</dt><dd>{{ R.gf }}<small>–{{ R.gc }}</small></dd></div>
+    </dl>
+    <h3 class="rec-grupo">El club</h3>
+    <div class="rec-grid club">
+      {% if R.goleada %}{% set x = R.goleada %}<a class="rec" href="{{ x.pagina }}"><span class="rec-t">Mayor goleada</span><b>{{ x.gf }}–{{ x.gc }}</b><span>vs {{ x.rival.nombre }}, {{ x.noche.strftime('%d/%m/%Y') }}</span><small>{{ x.liga_ui.corto }} · {{ x.competencia }}</small></a>{% endif %}
+      {% if R.derrota %}{% set x = R.derrota %}<a class="rec" href="{{ x.pagina }}"><span class="rec-t">Peor derrota</span><b>{{ x.gf }}–{{ x.gc }}</b><span>vs {{ x.rival.nombre }}, {{ x.noche.strftime('%d/%m/%Y') }}</span><small>{{ x.liga_ui.corto }} · {{ x.competencia }}</small></a>{% endif %}
+      <div class="rec"><span class="rec-t">Más victorias seguidas</span><b>{{ R.rachas.victorias }}</b><span>partidos</span></div>
+      <div class="rec"><span class="rec-t">Más partidos sin perder</span><b>{{ R.rachas.invicto }}</b><span>partidos</span></div>
+      {% if R.rachas.actual %}{% set n = R.rachas.actual.n %}<div class="rec"><span class="rec-t">Racha actual</span><b>{{ n }}</b><span>{% if R.rachas.actual.tipo == 'g' %}{{ 'victoria' if n == 1 else 'victorias seguidas' }}{% elif R.rachas.actual.tipo == 'e' %}{{ 'empate' if n == 1 else 'empates seguidos' }}{% else %}{{ 'derrota' if n == 1 else 'derrotas seguidas' }}{% endif %}</span></div>{% endif %}
+    </div>
+    <h3 class="rec-grupo">Jugadores</h3>
+    <div class="rec-grid jug">
+      {% for titulo, j, campo, unidad in [('Goleador histórico', R.goleador, 'goles', 'goles'), ('Asistidor histórico', R.asistidor, 'asistencias', 'asistencias'), ('Más partidos', R.mas_pj, 'pj', 'partidos'), ('Más veces MVP', R.mas_mvp, 'mvp', 'MVP')] %}
+        {% if j %}<a class="rec" href="{{ j.pagina }}"><span class="rec-t">{{ titulo }}</span><b>{{ j.total[campo] }}</b><span>{{ unidad }}</span><small class="rec-j">{{ avatar(j, 22) }} {{ j.alias }}</small></a>{% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {% if sin_partidos %}
+  <section class="sin-pj" aria-labelledby="t-sinpj">
+    <h2 id="t-sinpj">En el plantel, todavía sin partidos con estadísticas</h2>
+    <ul>{% for j in sin_partidos %}<li><a href="{{ j.pagina }}">{{ avatar(j, 26) }}<span>{{ j.alias }}</span></a></li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+</div>
+<script id="datos-plantel" type="application/json">{{ plantel_datos|tojson }}</script>
+{% endblock %}
+{% block js %}<script src="estaticos/js/plantel.js?v={{ v }}" defer></script>{% endblock %}

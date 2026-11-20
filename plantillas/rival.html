@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "_macros.html" import chip, fila_partido %}
+{% block titulo %}Vultur Sports vs {{ r.nombre }} | {{ club }}{% endblock %}
+{% block contenido %}
+<div class="pagina">
+  <p class="volver"><a href="calendario.html">Calendario</a></p>
+
+  <header class="ficha">
+    {% if r.escudo %}<img class="escudo-rival" src="{{ r.escudo }}" alt="" width="112" height="112">{% else %}<span class="sin-escudo grande" aria-hidden="true"></span>{% endif %}
+    <div>
+      <h1 class="titulo-pagina">{{ r.nombre }}</h1>
+      <p class="ficha-datos"><span class="rival-en">Rival en {% for l in ligas.values() if l.clave in r.ligas %}{{ chip(l) }}{% endfor %}</span></p>
+      {% if r.nombres|length > 1 %}<p class="ficha-datos">También figura como {{ r.nombres.keys()|reject('equalto', r.nombre)|join(', ') }}{% if r.unido_por_escudo %} (mismo escudo){% endif %}.</p>{% endif %}
+    </div>
+  </header>
+
+  {% if r.pj %}
+  <dl class="totales h2h">
+    <div class="g"><dt>Ganados</dt><dd>{{ r.g }}</dd></div>
+    <div class="e"><dt>Empatados</dt><dd>{{ r.e }}</dd></div>
+    <div class="p"><dt>Perdidos</dt><dd>{{ r.p }}</dd></div>
+    <div><dt>Goles a favor</dt><dd>{{ r.gf }}</dd></div>
+    <div><dt>Goles en contra</dt><dd>{{ r.gc }}</dd></div>
+  </dl>
+  {% else %}
+  <p class="vacio">Todavía no jugamos contra {{ r.nombre }}.</p>
+  {% endif %}
+
+  {% if r.proximos %}
+  <section aria-labelledby="t-prox">
+    <div class="enc"><h2 id="t-prox">Próximos</h2></div>
+    <ul class="partidos">{% for p in r.proximos %}{{ fila_partido(p, fecha=True) }}{% endfor %}</ul>
+  </section>
+  {% endif %}
+
+  {% if r.jugados %}
+  <section aria-labelledby="t-jug">
+    <div class="enc"><h2 id="t-jug">Jugados</h2></div>
+    <ul class="partidos">{% for p in r.jugados %}{{ fila_partido(p, fecha=True) }}{% endfor %}</ul>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

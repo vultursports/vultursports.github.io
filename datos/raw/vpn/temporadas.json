@@ -1,0 +1,1389 @@
+{
+ "highlights": [
+  {
+   "key": "seasons",
+   "label": "Temporadas",
+   "value": "10",
+   "hint": null
+  },
+  {
+   "key": "titles",
+   "label": "Títulos",
+   "value": "0",
+   "hint": null
+  },
+  {
+   "key": "best",
+   "label": "Mejor posición",
+   "value": "5º",
+   "hint": "Liga Argentina 2da División · T2"
+  },
+  {
+   "key": "podiums",
+   "label": "Podios",
+   "value": "0",
+   "hint": null
+  }
+ ],
+ "seasons": [
+  {
+   "key": "6449",
+   "kind": "league",
+   "competitionName": "Liga Argentina 4ta División",
+   "competitionHref": "/uy/league/2183/liga-argentina-4ta-division/season/6449/standings",
+   "logoUrl": "https://media.virtualpronetwork.com/leagueslogos/cd41e6ba05310a3e4f0362c42d0adf43.png",
+   "seasonLabel": "Temporada 11",
+   "seasonNumber": 11,
+   "seasonShort": "T11",
+   "spanLabel": "nov 2026",
+   "year": "2026",
+   "active": true,
+   "champion": false,
+   "finish": {
+    "position": 3,
+    "teamsCount": 42,
+    "ofLabel": "de 42",
+    "detail": "24 pts"
+   },
+   "division": 4,
+   "divisionLabel": "División 4",
+   "movement": null,
+   "badges": [
+    {
+     "key": "active",
+     "label": "En curso",
+     "tone": "live"
+    }
+   ],
+   "stats": [
+    {
+     "label": "PJ",
+     "value": "9"
+    },
+    {
+     "label": "G-E-P",
+     "value": "8-0-1"
+    },
+    {
+     "label": "Goles",
+     "value": "17:3"
+    },
+    {
+     "label": "PTS",
+     "value": "24"
+    }
+   ],
+   "form": [
+    "W",
+    "W",
+    "L",
+    "W",
+    "W",
+    "W",
+    "W",
+    "W",
+    "W"
+   ],
+   "formLabel": "9 partidos: 8 ganados, 0 empatados, 1 perdidos",
+   "lastMatch": null,
+   "squadLabel": "15 jugadores utilizados",
+   "stars": [
+    {
+     "key": "goals",
+     "label": "Máximo goleador",
+     "value": "6",
+     "unit": "G",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "assists",
+     "label": "Máximo asistente",
+     "value": "4",
+     "unit": "A",
+     "player": {
+      "id": 283161,
+      "username": "xRagnar-_zZ",
+      "href": "/uy/users/xragnar-zz",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "motm",
+     "label": "Más MVP",
+     "value": "2",
+     "unit": "MVP",
+     "player": {
+      "id": 289333,
+      "username": "Zk__godd",
+      "href": "/uy/users/zk-godd",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "appearances",
+     "label": "Más partidos",
+     "value": "9",
+     "unit": "PJ",
+     "player": {
+      "id": 277620,
+      "username": "MichaelGB1981",
+      "href": "/uy/users/michaelgb1981",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Uruguay",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/uy.png"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "6412",
+   "kind": "league",
+   "competitionName": "Liga Argentina 4ta División",
+   "competitionHref": "/uy/league/2183/liga-argentina-4ta-division/season/6412/standings",
+   "logoUrl": "https://media.virtualpronetwork.com/leagueslogos/cd41e6ba05310a3e4f0362c42d0adf43.png",
+   "seasonLabel": "Temporada 10",
+   "seasonNumber": 10,
+   "seasonShort": "T10",
+   "spanLabel": "ago 2026",
+   "year": "2026",
+   "active": false,
+   "champion": false,
+   "finish": {
+    "position": 24,
+    "teamsCount": 41,
+    "ofLabel": "de 41",
+    "detail": "26 pts"
+   },
+   "division": 4,
+   "divisionLabel": "División 4",
+   "movement": null,
+   "badges": [],
+   "stats": [
+    {
+     "label": "PJ",
+     "value": "20"
+    },
+    {
+     "label": "G-E-P",
+     "value": "7-5-8"
+    },
+    {
+     "label": "Goles",
+     "value": "31:27"
+    },
+    {
+     "label": "PTS",
+     "value": "26"
+    }
+   ],
+   "form": [
+    "L",
+    "W",
+    "W",
+    "L",
+    "W",
+    "L",
+    "W",
+    "D",
+    "D",
+    "D",
+    "D",
+    "W",
+    "W",
+    "D",
+    "L",
+    "L",
+    "W",
+    "L",
+    "L",
+    "L"
+   ],
+   "formLabel": "20 partidos: 7 ganados, 5 empatados, 8 perdidos",
+   "lastMatch": null,
+   "squadLabel": "17 jugadores utilizados",
+   "stars": [
+    {
+     "key": "goals",
+     "label": "Máximo goleador",
+     "value": "20",
+     "unit": "G",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "assists",
+     "label": "Máximo asistente",
+     "value": "6",
+     "unit": "A",
+     "player": {
+      "id": 72361,
+      "username": "Mriffo29",
+      "href": "/uy/users/mriffo29",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Chile",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/cl.png"
+      }
+     }
+    },
+    {
+     "key": "motm",
+     "label": "Más MVP",
+     "value": "5",
+     "unit": "MVP",
+     "player": {
+      "id": 270808,
+      "username": "soldierjah22",
+      "href": "/uy/users/soldierjah22",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "appearances",
+     "label": "Más partidos",
+     "value": "19",
+     "unit": "PJ",
+     "player": {
+      "id": 72361,
+      "username": "Mriffo29",
+      "href": "/uy/users/mriffo29",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Chile",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/cl.png"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "6397",
+   "kind": "league",
+   "competitionName": "Liga Argentina 3ra División",
+   "competitionHref": "/uy/league/2146/liga-argentina-3ra-division/season/6397/standings",
+   "logoUrl": "https://media.virtualpronetwork.com/leagueslogos/49633c4c550c076424543c055e9e6b6b.png",
+   "seasonLabel": "Temporada 9",
+   "seasonNumber": 9,
+   "seasonShort": "T9",
+   "spanLabel": "may 2026 – jun 2026",
+   "year": "2026",
+   "active": false,
+   "champion": false,
+   "finish": {
+    "position": 18,
+    "teamsCount": 20,
+    "ofLabel": "de 20",
+    "detail": "16 pts"
+   },
+   "division": 2,
+   "divisionLabel": "División 2",
+   "movement": null,
+   "badges": [],
+   "stats": [
+    {
+     "label": "PJ",
+     "value": "19"
+    },
+    {
+     "label": "G-E-P",
+     "value": "4-4-11"
+    },
+    {
+     "label": "Goles",
+     "value": "18:31"
+    },
+    {
+     "label": "PTS",
+     "value": "16"
+    }
+   ],
+   "form": [
+    "W",
+    "W",
+    "L",
+    "D",
+    "L",
+    "D",
+    "L",
+    "W",
+    "L",
+    "W",
+    "L",
+    "L",
+    "L",
+    "L",
+    "D",
+    "L",
+    "L",
+    "L",
+    "D"
+   ],
+   "formLabel": "19 partidos: 4 ganados, 4 empatados, 11 perdidos",
+   "lastMatch": null,
+   "squadLabel": "17 jugadores utilizados",
+   "stars": [
+    {
+     "key": "goals",
+     "label": "Máximo goleador",
+     "value": "11",
+     "unit": "G",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "assists",
+     "label": "Máximo asistente",
+     "value": "7",
+     "unit": "A",
+     "player": {
+      "id": 72361,
+      "username": "Mriffo29",
+      "href": "/uy/users/mriffo29",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Chile",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/cl.png"
+      }
+     }
+    },
+    {
+     "key": "motm",
+     "label": "Más MVP",
+     "value": "5",
+     "unit": "MVP",
+     "player": {
+      "id": 72361,
+      "username": "Mriffo29",
+      "href": "/uy/users/mriffo29",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Chile",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/cl.png"
+      }
+     }
+    },
+    {
+     "key": "appearances",
+     "label": "Más partidos",
+     "value": "19",
+     "unit": "PJ",
+     "player": {
+      "id": 72361,
+      "username": "Mriffo29",
+      "href": "/uy/users/mriffo29",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Chile",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/cl.png"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "6352",
+   "kind": "league",
+   "competitionName": "Liga Argentina 3ra División",
+   "competitionHref": "/uy/league/2146/liga-argentina-3ra-division/season/6352/standings",
+   "logoUrl": "https://media.virtualpronetwork.com/leagueslogos/49633c4c550c076424543c055e9e6b6b.png",
+   "seasonLabel": "Temporada 8",
+   "seasonNumber": 8,
+   "seasonShort": "T8",
+   "spanLabel": "mar 2026 – abr 2026",
+   "year": "2026",
+   "active": false,
+   "champion": false,
+   "finish": {
+    "position": 5,
+    "teamsCount": 20,
+    "ofLabel": "de 20",
+    "detail": "37 pts"
+   },
+   "division": 2,
+   "divisionLabel": "División 2",
+   "movement": null,
+   "badges": [
+    {
+     "key": "playoffs",
+     "label": "Playoffs",
+     "tone": "info"
+    }
+   ],
+   "stats": [
+    {
+     "label": "PJ",
+     "value": "21"
+    },
+    {
+     "label": "G-E-P",
+     "value": "11-4-6"
+    },
+    {
+     "label": "Goles",
+     "value": "27:20"
+    },
+    {
+     "label": "PTS",
+     "value": "37"
+    }
+   ],
+   "form": [
+    "D",
+    "W",
+    "W",
+    "W",
+    "D",
+    "W",
+    "W",
+    "W",
+    "W",
+    "L",
+    "L",
+    "D",
+    "W",
+    "W",
+    "W",
+    "D",
+    "L",
+    "W",
+    "L",
+    "L",
+    "L"
+   ],
+   "formLabel": "21 partidos: 11 ganados, 4 empatados, 6 perdidos",
+   "lastMatch": null,
+   "squadLabel": "18 jugadores utilizados",
+   "stars": [
+    {
+     "key": "goals",
+     "label": "Máximo goleador",
+     "value": "13",
+     "unit": "G",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "assists",
+     "label": "Máximo asistente",
+     "value": "6",
+     "unit": "A",
+     "player": {
+      "id": 279177,
+      "username": "Thiago_Mulet",
+      "href": "/uy/users/thiago-mulet",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "motm",
+     "label": "Más MVP",
+     "value": "5",
+     "unit": "MVP",
+     "player": {
+      "id": 279383,
+      "username": "Corona_ruso",
+      "href": "/uy/users/corona-ruso",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "appearances",
+     "label": "Más partidos",
+     "value": "15",
+     "unit": "PJ",
+     "player": {
+      "id": 72361,
+      "username": "Mriffo29",
+      "href": "/uy/users/mriffo29",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Chile",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/cl.png"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "6286",
+   "kind": "league",
+   "competitionName": "Liga Argentina 3ra División",
+   "competitionHref": "/uy/league/2146/liga-argentina-3ra-division/season/6286/standings",
+   "logoUrl": "https://media.virtualpronetwork.com/leagueslogos/49633c4c550c076424543c055e9e6b6b.png",
+   "seasonLabel": "Temporada 4",
+   "seasonNumber": 4,
+   "seasonShort": "T4",
+   "spanLabel": "nov 2025 – dic 2025",
+   "year": "2025",
+   "active": false,
+   "champion": false,
+   "finish": {
+    "position": 11,
+    "teamsCount": 20,
+    "ofLabel": "de 20",
+    "detail": "26 pts"
+   },
+   "division": 2,
+   "divisionLabel": "División 2",
+   "movement": null,
+   "badges": [],
+   "stats": [
+    {
+     "label": "PJ",
+     "value": "19"
+    },
+    {
+     "label": "G-E-P",
+     "value": "7-5-7"
+    },
+    {
+     "label": "Goles",
+     "value": "27:31"
+    },
+    {
+     "label": "PTS",
+     "value": "26"
+    }
+   ],
+   "form": [
+    "L",
+    "L",
+    "W",
+    "L",
+    "D",
+    "D",
+    "D",
+    "L",
+    "W",
+    "L",
+    "L",
+    "W",
+    "W",
+    "W",
+    "D",
+    "W",
+    "W",
+    "D",
+    "L"
+   ],
+   "formLabel": "19 partidos: 7 ganados, 5 empatados, 7 perdidos",
+   "lastMatch": null,
+   "squadLabel": "17 jugadores utilizados",
+   "stars": [
+    {
+     "key": "goals",
+     "label": "Máximo goleador",
+     "value": "9",
+     "unit": "G",
+     "player": {
+      "id": 279177,
+      "username": "Thiago_Mulet",
+      "href": "/uy/users/thiago-mulet",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "assists",
+     "label": "Máximo asistente",
+     "value": "5",
+     "unit": "A",
+     "player": {
+      "id": 279378,
+      "username": "Tobiasratti",
+      "href": "/uy/users/tobiasratti",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "motm",
+     "label": "Más MVP",
+     "value": "4",
+     "unit": "MVP",
+     "player": {
+      "id": 279378,
+      "username": "Tobiasratti",
+      "href": "/uy/users/tobiasratti",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "appearances",
+     "label": "Más partidos",
+     "value": "18",
+     "unit": "PJ",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "6236",
+   "kind": "cup",
+   "competitionName": "Copa VPN Mercosur",
+   "competitionHref": "/uy/tournament/2235/copa-vpn-mercosur/season/6236/stats",
+   "logoUrl": "https://media.virtualpronetwork.com/leagueslogos/e0dabf8870619fc095b72e84677b2c71.png",
+   "seasonLabel": "Temporada 1",
+   "seasonNumber": 1,
+   "seasonShort": "T1",
+   "spanLabel": "ago 2025 – sept 2025",
+   "year": "2025",
+   "active": true,
+   "champion": false,
+   "finish": null,
+   "division": null,
+   "divisionLabel": null,
+   "movement": null,
+   "badges": [
+    {
+     "key": "active",
+     "label": "En curso",
+     "tone": "live"
+    }
+   ],
+   "stats": [
+    {
+     "label": "PJ",
+     "value": "8"
+    },
+    {
+     "label": "G-E-P",
+     "value": "0-0-8"
+    },
+    {
+     "label": "Goles",
+     "value": "1:14"
+    }
+   ],
+   "form": [
+    "L",
+    "L",
+    "L",
+    "L",
+    "L",
+    "L",
+    "L",
+    "L"
+   ],
+   "formLabel": "8 partidos: 0 ganados, 0 empatados, 8 perdidos",
+   "lastMatch": {
+    "label": "Último partido",
+    "href": "/uy/matches/740667",
+    "opponentName": "Racing eSports ",
+    "opponentLogoUrl": "https://media.virtualpronetwork.com/teamlogos/e85e7f6a7dd191b34dc88a5cda0a8f33.png",
+    "score": "0–1",
+    "outcome": "L"
+   },
+   "squadLabel": "10 jugadores utilizados",
+   "stars": [
+    {
+     "key": "goals",
+     "label": "Máximo goleador",
+     "value": "1",
+     "unit": "G",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "assists",
+     "label": "Máximo asistente",
+     "value": "1",
+     "unit": "A",
+     "player": {
+      "id": 280618,
+      "username": "Lucapi1",
+      "href": "/uy/users/lucapi1",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "motm",
+     "label": "Más MVP",
+     "value": "2",
+     "unit": "MVP",
+     "player": {
+      "id": 277758,
+      "username": "ianlxu2",
+      "href": "/uy/users/ianlxu2",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "appearances",
+     "label": "Más partidos",
+     "value": "2",
+     "unit": "PJ",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "6167",
+   "kind": "league",
+   "competitionName": "Liga Argentina 3ra División",
+   "competitionHref": "/uy/league/2146/liga-argentina-3ra-division/season/6167/standings",
+   "logoUrl": "https://media.virtualpronetwork.com/leagueslogos/49633c4c550c076424543c055e9e6b6b.png",
+   "seasonLabel": "Temporada 3",
+   "seasonNumber": 3,
+   "seasonShort": "T3",
+   "spanLabel": "jun 2025 – jul 2025",
+   "year": "2025",
+   "active": false,
+   "champion": false,
+   "finish": {
+    "position": 9,
+    "teamsCount": 18,
+    "ofLabel": "de 18",
+    "detail": "26 pts"
+   },
+   "division": 2,
+   "divisionLabel": "División 2",
+   "movement": null,
+   "badges": [],
+   "stats": [
+    {
+     "label": "PJ",
+     "value": "17"
+    },
+    {
+     "label": "G-E-P",
+     "value": "7-5-5"
+    },
+    {
+     "label": "Goles",
+     "value": "28:26"
+    },
+    {
+     "label": "PTS",
+     "value": "26"
+    }
+   ],
+   "form": [
+    "W",
+    "L",
+    "L",
+    "W",
+    "L",
+    "W",
+    "D",
+    "W",
+    "D",
+    "D",
+    "L",
+    "L",
+    "W",
+    "D",
+    "D",
+    "W",
+    "W"
+   ],
+   "formLabel": "17 partidos: 7 ganados, 5 empatados, 5 perdidos",
+   "lastMatch": null,
+   "squadLabel": "22 jugadores utilizados",
+   "stars": [
+    {
+     "key": "goals",
+     "label": "Máximo goleador",
+     "value": "7",
+     "unit": "G",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "assists",
+     "label": "Máximo asistente",
+     "value": "5",
+     "unit": "A",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "motm",
+     "label": "Más MVP",
+     "value": "3",
+     "unit": "MVP",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "appearances",
+     "label": "Más partidos",
+     "value": "15",
+     "unit": "PJ",
+     "player": {
+      "id": 72361,
+      "username": "Mriffo29",
+      "href": "/uy/users/mriffo29",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Chile",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/cl.png"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "6126",
+   "kind": "league",
+   "competitionName": "Liga Argentina 3ra División",
+   "competitionHref": "/uy/league/2146/liga-argentina-3ra-division/season/6126/standings",
+   "logoUrl": "https://media.virtualpronetwork.com/leagueslogos/49633c4c550c076424543c055e9e6b6b.png",
+   "seasonLabel": "Temporada 2",
+   "seasonNumber": 2,
+   "seasonShort": "T2",
+   "spanLabel": "mar 2025 – abr 2025",
+   "year": "2025",
+   "active": false,
+   "champion": false,
+   "finish": {
+    "position": 18,
+    "teamsCount": 22,
+    "ofLabel": "de 22",
+    "detail": "20 pts"
+   },
+   "division": 2,
+   "divisionLabel": "División 2",
+   "movement": null,
+   "badges": [],
+   "stats": [
+    {
+     "label": "PJ",
+     "value": "21"
+    },
+    {
+     "label": "G-E-P",
+     "value": "5-5-11"
+    },
+    {
+     "label": "Goles",
+     "value": "23:34"
+    },
+    {
+     "label": "PTS",
+     "value": "20"
+    }
+   ],
+   "form": [
+    "L",
+    "L",
+    "L",
+    "L",
+    "L",
+    "D",
+    "L",
+    "W",
+    "D",
+    "W",
+    "W",
+    "L",
+    "L",
+    "W",
+    "L",
+    "D",
+    "L",
+    "W",
+    "D",
+    "D",
+    "L"
+   ],
+   "formLabel": "21 partidos: 5 ganados, 5 empatados, 11 perdidos",
+   "lastMatch": null,
+   "squadLabel": "16 jugadores utilizados",
+   "stars": [
+    {
+     "key": "goals",
+     "label": "Máximo goleador",
+     "value": "12",
+     "unit": "G",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "assists",
+     "label": "Máximo asistente",
+     "value": "4",
+     "unit": "A",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "motm",
+     "label": "Más MVP",
+     "value": "5",
+     "unit": "MVP",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "appearances",
+     "label": "Más partidos",
+     "value": "20",
+     "unit": "PJ",
+     "player": {
+      "id": 72361,
+      "username": "Mriffo29",
+      "href": "/uy/users/mriffo29",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Chile",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/cl.png"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "6080",
+   "kind": "league",
+   "competitionName": "Liga Argentina 1ra División",
+   "competitionHref": "/uy/league/2119/liga-argentina-1ra-division/season/6080/standings",
+   "logoUrl": "https://media.virtualpronetwork.com/leagueslogos/a9fc50fcec429356f300a32738026fcf.png",
+   "seasonLabel": "Temporada 4",
+   "seasonNumber": 4,
+   "seasonShort": "T4",
+   "spanLabel": "oct 2024 – nov 2024",
+   "year": "2024",
+   "active": false,
+   "champion": false,
+   "finish": {
+    "position": 12,
+    "teamsCount": 18,
+    "ofLabel": "de 18",
+    "detail": "21 pts"
+   },
+   "division": 1,
+   "divisionLabel": "División 1",
+   "movement": null,
+   "badges": [],
+   "stats": [
+    {
+     "label": "PJ",
+     "value": "17"
+    },
+    {
+     "label": "G-E-P",
+     "value": "6-3-8"
+    },
+    {
+     "label": "Goles",
+     "value": "10:21"
+    },
+    {
+     "label": "PTS",
+     "value": "21"
+    }
+   ],
+   "form": [
+    "W",
+    "L",
+    "L",
+    "L",
+    "L",
+    "W",
+    "L",
+    "W",
+    "W",
+    "D",
+    "D",
+    "D",
+    "W",
+    "L",
+    "W",
+    "L",
+    "L"
+   ],
+   "formLabel": "17 partidos: 6 ganados, 3 empatados, 8 perdidos",
+   "lastMatch": null,
+   "squadLabel": "19 jugadores utilizados",
+   "stars": [
+    {
+     "key": "goals",
+     "label": "Máximo goleador",
+     "value": "2",
+     "unit": "G",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "assists",
+     "label": "Máximo asistente",
+     "value": "1",
+     "unit": "A",
+     "player": {
+      "id": 269588,
+      "username": "vander420",
+      "href": "/uy/users/vander420",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "motm",
+     "label": "Más MVP",
+     "value": "1",
+     "unit": "MVP",
+     "player": {
+      "id": 272945,
+      "username": "MixaelYT",
+      "href": "/uy/users/mixaelyt",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "appearances",
+     "label": "Más partidos",
+     "value": "12",
+     "unit": "PJ",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "6033",
+   "kind": "league",
+   "competitionName": "Liga Argentina 2da División",
+   "competitionHref": "/uy/league/2127/liga-argentina-2da-division/season/6033/standings",
+   "logoUrl": "https://media.virtualpronetwork.com/leagueslogos/836d6fd6a6ca396f884f2c7fa6d1074f.png",
+   "seasonLabel": "Temporada 2",
+   "seasonNumber": 2,
+   "seasonShort": "T2",
+   "spanLabel": "jul 2024 – ago 2024",
+   "year": "2024",
+   "active": false,
+   "champion": false,
+   "finish": {
+    "position": 5,
+    "teamsCount": 18,
+    "ofLabel": "de 18",
+    "detail": "35 pts"
+   },
+   "division": 1,
+   "divisionLabel": "División 1",
+   "movement": null,
+   "badges": [],
+   "stats": [
+    {
+     "label": "PJ",
+     "value": "17"
+    },
+    {
+     "label": "G-E-P",
+     "value": "11-2-4"
+    },
+    {
+     "label": "Goles",
+     "value": "31:20"
+    },
+    {
+     "label": "PTS",
+     "value": "35"
+    }
+   ],
+   "form": [
+    "W",
+    "L",
+    "W",
+    "W",
+    "W",
+    "W",
+    "W",
+    "D",
+    "W",
+    "D",
+    "W",
+    "L",
+    "W",
+    "L",
+    "W",
+    "L",
+    "W"
+   ],
+   "formLabel": "17 partidos: 11 ganados, 2 empatados, 4 perdidos",
+   "lastMatch": null,
+   "squadLabel": "16 jugadores utilizados",
+   "stars": [
+    {
+     "key": "goals",
+     "label": "Máximo goleador",
+     "value": "13",
+     "unit": "G",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "assists",
+     "label": "Máximo asistente",
+     "value": "7",
+     "unit": "A",
+     "player": {
+      "id": 72361,
+      "username": "Mriffo29",
+      "href": "/uy/users/mriffo29",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Chile",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/cl.png"
+      }
+     }
+    },
+    {
+     "key": "motm",
+     "label": "Más MVP",
+     "value": "6",
+     "unit": "MVP",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    },
+    {
+     "key": "appearances",
+     "label": "Más partidos",
+     "value": "13",
+     "unit": "PJ",
+     "player": {
+      "id": 272943,
+      "username": "VSP-CHACKAL",
+      "href": "/uy/users/vsp-chackal",
+      "avatarUrl": "https://media.virtualpronetwork.com/avatars/avatar.png",
+      "premium": false,
+      "country": {
+       "name": "Argentina",
+       "flagUrl": "https://media.virtualpronetwork.com/flags/ar.png"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "counts": {
+  "all": 10,
+  "league": 9,
+  "cup": 1
+ }
+}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% from "_macros.html" import forma, chip, tabla_pos %}
+{% block titulo %}Tablas | {{ club }}{% endblock %}
+{% block contenido %}
+<div class="pagina">
+  <h1 class="titulo-pagina">Tablas</h1>
+  <p class="bajada">Nuestra posición en cada competencia.</p>
+
+  <div class="selector-comp" role="tablist" aria-label="Elegir competencia">
+    {% for t in tablas %}
+    <button role="tab" id="tab-{{ t.id }}" aria-controls="comp-{{ t.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}" class="liga-{{ t.liga }}">
+      {{ chip(t.liga_ui) }}
+      <span class="sc-nombre">{{ t.corto }}</span>
+      {% if t.vultur %}<span class="sc-pos">{{ t.vultur.pos }}°</span>{% endif %}
+    </button>
+    {% endfor %}
+  </div>
+
+  {% for t in tablas %}
+  <section id="comp-{{ t.id }}" role="tabpanel" aria-labelledby="tab-{{ t.id }}" class="comp grande liga-{{ t.liga }}"{% if not loop.first %} hidden{% endif %}>
+    <header>
+      <h2>{{ chip(t.liga_ui) }} {{ t.competencia }}</h2>
+      <p class="meta">{{ t.liga_ui.nombre }}{% if t.temporada %}, {{ t.temporada }}{% endif %}{% if t.jornadas %}, fecha {{ t.jornadas }}{% endif %}</p>
+      {% if t.forma %}<p class="forma-linea">Nuestros últimos partidos {{ forma(t.forma) }}</p>{% endif %}
+    </header>
+    <div class="scroll-x">{{ tabla_pos(t, t.filas, completa=True) }}</div>
+    {% if t.liga == 'vpug' %}<p class="leyenda"><span class="z z-ascenso"></span>Ascenso <span class="z z-reducido"></span>Reducido <span class="z z-descenso"></span>Descenso</p>{% endif %}
+    <p class="fuente">Fuente: <a href="{{ t.url_origen }}" target="_blank" rel="noopener">tabla oficial de {{ t.liga_ui.nombre }}</a>. Actualizada el {{ t.actualizado_txt }}.</p>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}
+{% block js %}{% endblock %}

@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% from "_macros.html" import forma, chip, avatar %}
+{% block titulo %}{{ 'Vultur Sports vs ' ~ p.rival.nombre if p.local else p.rival.nombre ~ ' vs Vultur Sports' }} | {{ club }}{% endblock %}
+{% block contenido %}
+<div class="pagina">
+  <p class="volver"><a href="calendario.html">Calendario</a></p>
+
+  <section class="proximo liga-{{ p.liga }}" aria-labelledby="t-partido">
+    <div class="proximo-marco">
+      <h1 id="t-partido" class="proximo-titulo">
+        {% if p.wo %}{{ 'Victoria' if p.resultado == 'g' else 'Derrota' }} por W.O.{% elif p.resultado == 'g' %}Victoria{% elif p.resultado == 'e' %}Empate{% elif p.resultado == 'p' %}Derrota{% else %}Partido programado{% endif %}
+      </h1>
+      <p class="proximo-comp">{{ chip(p.liga_ui) }} {{ p.competencia }}, {{ p.jornada|lower }}</p>
+      <div class="duelo{% if not p.local %} visitante{% endif %}">
+        <div class="equipo nosotros">
+          <img src="estaticos/img/escudo.png" alt="" width="96" height="96">
+          <span>Vultur Sports</span>{% if p.pos_nos and not p.resultado %}<small class="pos-tabla">{{ p.pos_nos }}° en la tabla</small>{% endif %}
+        </div>
+        <div class="cuando">
+          {% if p.resultado %}
+            <div class="final"><span class="hora">{{ p.gf if p.local else p.gc }}<span class="guion">–</span>{{ p.gc if p.local else p.gf }}</span>
+            <span class="dia">{{ p.noche_txt }}<br>{{ p.hora }} h</span></div>
+          {% else %}
+            <time datetime="{{ p.dt.isoformat() }}"><span class="hora">{{ p.hora }}</span><span class="dia">{{ p.noche_txt }}</span></time>
+          {% endif %}
+        </div>
+        <a class="equipo equipo-link" href="{{ p.rival_pagina }}" title="Ver historial contra {{ p.rival.nombre }}">
+          {% if p.rival.escudo %}<img src="{{ p.rival.escudo|replace('_thumb', '') }}" alt="" width="96" height="96">{% else %}<span class="sin-escudo grande" aria-hidden="true"></span>{% endif %}
+          <span>{{ p.rival.nombre }}</span>{% if p.pos_rival and not p.resultado %}<small class="pos-tabla">{{ p.pos_rival }}° en la tabla</small>{% endif %}
+        </a>
+      </div>
+      <p class="proximo-pie">Somos {{ p.condicion|lower }}. Hora argentina.</p>
+      {% if p.rival_info %}{% set r = p.rival_info %}
+      <p class="proximo-pie h2h-linea">{% if r.pj %}Historial contra {{ r.nombre }}: <b>{{ r.g }}</b> {{ 'ganado' if r.g == 1 else 'ganados' }}, <b>{{ r.e }}</b> {{ 'empatado' if r.e == 1 else 'empatados' }}, <b>{{ r.p }}</b> {{ 'perdido' if r.p == 1 else 'perdidos' }}.{% else %}Primer partido contra {{ r.nombre }}.{% endif %} <a href="{{ r.pagina }}">Ver historial</a></p>
+      {% endif %}
+    </div>
+  </section>
+
+  {% if not p.resultado %}
+  <section class="previa" aria-labelledby="t-previa">
+    <div class="enc"><h2 id="t-previa">Previa</h2></div>
+    {% if p.forma_comp %}<p class="forma-linea">Nuestros últimos partidos en {{ p.competencia }} {{ forma(p.forma_comp) }}</p>{% endif %}
+    {% if p.rival_info and p.rival_info.jugados %}{% set r = p.rival_info %}
+    <h3 class="sub">Contra {{ r.nombre }}: {{ r.g }} {{ 'ganado' if r.g == 1 else 'ganados' }}, {{ r.e }} {{ 'empatado' if r.e == 1 else 'empatados' }}, {{ r.p }} {{ 'perdido' if r.p == 1 else 'perdidos' }}</h3>
+    <ul class="h2h-lista">
+      {% for x in r.jugados[:5] %}
+      <li class="r-{{ x.resultado }}"><a href="{{ x.pagina }}"><span class="marcador">{{ x.gf }}<i>–</i>{{ x.gc }}</span><span>{{ x.noche.strftime('%d/%m/%Y') }}{% if x.wo %} · W.O.{% endif %}</span><small><abbr class="sigla liga-{{ x.liga }}" title="{{ x.liga_ui.nombre }}">{{ x.liga_ui.corto }}</abbr> {{ x.competencia }}</small></a></li>
+      {% endfor %}
+    </ul>
+    {% if r.jugados|length > 5 %}<p class="fuente"><a href="{{ r.pagina }}">Ver los {{ r.jugados|length }} partidos contra {{ r.nombre }}</a></p>{% endif %}
+    {% elif p.rival_info %}<h3 class="sub">Primer partido contra {{ p.rival_info.nombre }}.</h3>{% endif %}
+
+    {% if p.previa_once and p.previa_once.jugadores|length >= 7 %}{% set o = p.previa_once %}
+    <h3 class="sub">Nuestro 11 más usado en {{ p.competencia }}</h3>
+    <p class="once-formacion">{% if o.formacion %}{{ o.formacion }} · {% endif %}usada en {{ o.veces }} de {{ o.total }} partidos</p>
+    <div class="cancha" role="list" aria-label="Once más usado en la competencia">
+      <div class="lineas" aria-hidden="true"><i class="medio"></i><i class="circulo"></i><i class="area arriba"></i><i class="area abajo"></i></div>
+      {% for x in o.jugadores %}
+      <{{ 'a' if x.pagina else 'span' }} role="listitem" class="ficha-cancha" style="left:{{ x.x }}%;top:{{ x.y }}%"{% if x.pagina %} href="{{ x.pagina }}"{% endif %}>
+        {{ avatar(x, 34) }}
+        <span class="fc-nombre">{{ x.alias }}</span>
+        <span class="fc-datos">{{ x.pos }}{% if x.nota is not none %} · <b>{{ '%.1f'|format(x.nota) }}</b>{% endif %}</span>
+        <span class="fc-datos">{{ x.pj }} PJ{% if x.goles %} · {{ x.goles }} G{% endif %}{% if x.asist %} · {{ x.asist }} A{% endif %}</span>
+      </{{ 'a' if x.pagina else 'span' }}>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if p.sancionados and not p.resultado %}
+  <section class="no-pueden" aria-labelledby="t-nopueden">
+    <div class="enc"><h2 id="t-nopueden">No pueden jugar</h2></div>
+    <ul>
+    {% for s in p.sancionados %}
+      <li class="aviso aviso-sancion"><b>{% if s.pagina %}<a href="{{ s.pagina }}">{{ s.jugador }}</a>{% else %}{{ s.jugador }}{% endif %}</b>{% if s.motivo %}: {{ s.motivo[0]|lower }}{{ s.motivo[1:] }}{% endif %}.{% if s.fechas and s.fechas > 1 %} Sanción de {{ s.fechas }} fechas.{% endif %}</li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if p.equipo_stats and p.equipo_stats.nosotros and p.equipo_stats.rival %}
+  {% set A = p.equipo_stats.nosotros %}{% set B = p.equipo_stats.rival %}
+  <section aria-labelledby="t-eqst">
+    <div class="enc"><h2 id="t-eqst">Estadísticas del partido</h2></div>
+    <div class="comparar">
+      <div class="cmp-cab"><span>Vultur Sports</span><span>{{ p.rival.nombre }}</span></div>
+      {% for titulo, ka, kb in [('Tiros', 'tiros', None), ('Pases completados', 'pases', 'pases_int'), ('Entradas ganadas', 'entradas', 'entradas_int'), ('Atajadas', 'atajadas', None), ('Nota del equipo', 'nota', None)] %}
+        {% set va = A[ka] %}{% set vb = B[ka] %}
+        {% if va is not none and vb is not none %}
+        {% set tot = (va + vb) or 1 %}
+        <div class="cmp-fila">
+          <span class="cmp-v">{{ '%.1f'|format(va) if ka == 'nota' else va }}{% if kb and A[kb] %}<small> {{ (100 * va / A[kb])|round|int }}%</small>{% endif %}</span>
+          <span class="cmp-t">{{ titulo }}</span>
+          <span class="cmp-v der">{% if kb and B[kb] %}<small>{{ (100 * vb / B[kb])|round|int }}% </small>{% endif %}{{ '%.1f'|format(vb) if ka == 'nota' else vb }}</span>
+          <span class="cmp-barra" aria-hidden="true"><i style="width: {{ (100 * va / tot)|round(1) }}%"></i><b style="width: {{ (100 * vb / tot)|round(1) }}%"></b></span>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <p class="fuente">Datos de EA publicados por {{ p.liga_ui.nombre }}. El porcentaje es la precisión (completados sobre intentados).</p>
+  </section>
+  {% endif %}
+
+  {% if p.once|length >= 7 %}
+  <section class="once" aria-labelledby="t-alin">
+    <div class="enc"><h2 id="t-alin">Alineación</h2></div>
+    {% if p.formacion %}<p class="once-formacion">{{ p.formacion }}</p>{% endif %}
+    <div class="cancha" role="list" aria-label="Alineación de Vultur Sports">
+      <div class="lineas" aria-hidden="true"><i class="medio"></i><i class="circulo"></i><i class="area arriba"></i><i class="area abajo"></i></div>
+      {% for x in p.once %}
+      <{{ 'a' if x.pagina else 'span' }} role="listitem" class="ficha-cancha{% if x.mvp %} es-mvp{% endif %}" style="left:{{ x.x }}%;top:{{ x.y }}%"{% if x.pagina %} href="{{ x.pagina }}"{% endif %}>
+        {{ avatar(x, 34) }}{% if x.mvp %}<b class="fc-mvp">MVP</b>{% endif %}
+        <span class="fc-nombre">{{ x.alias }}</span>
+        <span class="fc-datos">{{ x.pos }}{% if x.nota is not none %} · <b>{{ '%.1f'|format(x.nota) }}</b>{% endif %}</span>
+        {% if x.goles or x.asist %}<span class="fc-datos">{% if x.goles %}{{ x.goles }} G{% endif %}{% if x.goles and x.asist %} · {% endif %}{% if x.asist %}{{ x.asist }} A{% endif %}</span>{% endif %}
+      </{{ 'a' if x.pagina else 'span' }}>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if p.stats %}
+  <section aria-labelledby="t-stats">
+    <div class="enc"><h2 id="t-stats">Nuestros jugadores</h2></div>
+    <div class="scroll-x">
+    <table class="tabla stats">
+      <thead><tr>
+        <th scope="col" class="eq">Jugador</th>
+        <th scope="col"><abbr title="Posición">Pos</abbr></th>
+        <th scope="col"><abbr title="Goles">G</abbr></th>
+        <th scope="col"><abbr title="Asistencias">A</abbr></th>
+        <th scope="col"><abbr title="Calificación">Nota</abbr></th>
+      </tr></thead>
+      <tbody>
+      {% for s in p.stats|sort(attribute='rating', reverse=True) %}
+        <tr{% if s.mvp %} class="nosotros"{% endif %}>
+          <th scope="row" class="eq">{% if s.pagina %}<a class="eqi" href="{{ s.pagina }}">{% else %}<div class="eqi">{% endif %}<span>{{ s.alias }}</span>{% if s.mvp %}<b class="mvp">MVP</b>{% endif %}{% if s.pagina %}</a>{% else %}</div>{% endif %}</th>
+          <td>{{ s.posicion or '' }}</td>
+          <td>{{ s.goles or '' }}</td>
+          <td>{{ s.asistencias or '' }}</td>
+          <td>{{ '%.1f'|format(s.rating) if s.rating >= 0 else '' }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </section>
+  {% elif p.wo %}
+  <p class="vacio">Partido definido sin jugar (W.O.): {{ 'el rival se dio de baja o no se presentó' if p.resultado == 'g' else 'no nos presentamos' }}. La liga lo registra {{ p.gf }}-{{ p.gc }}.</p>
+  {% elif p.resultado %}
+  <p class="vacio">La liga todavía no publicó las estadísticas de este partido.</p>
+  {% endif %}
+
+  <p class="fuente grande">
+    Fuente: <a href="{{ p.url_origen }}" target="_blank" rel="noopener">{{ p.liga_ui.nombre }}</a>.
+    {% if p.liga == 'lva' %}En el fixture de la LVA, elige «{{ p.competencia }}» y busca la {{ p.jornada|lower }}.{% endif %}
+  </p>
+</div>
+{% endblock %}

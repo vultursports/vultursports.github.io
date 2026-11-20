@@ -1,0 +1,94 @@
+{
+ "1d7158fa-3467-4023-8d1d-352639913118": {
+  "nombre": "TORNEO PRETEMPORADA FC27",
+  "con_vultur": true
+ },
+ "44d53d5f-b9ca-456c-9e4c-92c466c6ff46": {
+  "nombre": "Cuadrangular de Prueba",
+  "con_vultur": false
+ },
+ "f7a346a8-8821-490f-a4a0-07baa2581b80": {
+  "nombre": "Legacy 3ra div (Liga Despedida FC26)",
+  "con_vultur": false
+ },
+ "0bd10406-557b-4156-af31-cc282698c85a": {
+  "nombre": "Legacy 2da div (Liga Despedida FC26)",
+  "con_vultur": false
+ },
+ "8f7370d5-876a-4fac-9b07-12661672caee": {
+  "nombre": "Legacy 1ra div (Liga Despedida FC26)",
+  "con_vultur": true
+ },
+ "541aeccc-a57a-4ea8-8e6c-bfa827c16869": {
+  "nombre": "LIGA MUNDIAL LVA",
+  "con_vultur": true
+ },
+ "c7d426eb-5788-4d8a-b109-5bbf51076a52": {
+  "nombre": "Reducido - Legacy 2da Div",
+  "con_vultur": false
+ },
+ "93215437-e836-458d-b814-ce6c413dac5f": {
+  "nombre": "Reducido - Legacy 3ra Div",
+  "con_vultur": false
+ },
+ "2730ae04-e3be-4559-a3c4-eaa6ce5394a5": {
+  "nombre": "COPA LIBERTADORES",
+  "con_vultur": false
+ },
+ "4b50448b-b5ce-45d6-b7bc-7a8ab5798068": {
+  "nombre": "LVA - Legacy 2da Div",
+  "con_vultur": false
+ },
+ "e0fb54e8-417a-4bd0-b2d1-570452b4d2f3": {
+  "nombre": "LVA - Legacy 1ra Div",
+  "con_vultur": true
+ },
+ "2af85712-2fb3-461f-afac-1e1f3aea3ccb": {
+  "nombre": "LVA - Legacy 3ra Div",
+  "con_vultur": false
+ },
+ "3ff4d913-3136-45df-b50b-53be18ff7ab8": {
+  "nombre": "COPA AMERICA",
+  "con_vultur": false
+ },
+ "3f43139d-5a30-4f65-ada4-5ca052bc5565": {
+  "nombre": "LVA CHALLENGER",
+  "con_vultur": true
+ },
+ "702507f3-7ca5-49c1-8cf8-f4c9313a1f8b": {
+  "nombre": "LVA PRESTIGE",
+  "con_vultur": false
+ },
+ "f56fe23a-9df1-4782-a4bf-7a5e6ccbb623": {
+  "nombre": "LVA LEGACY - 2da Division",
+  "con_vultur": false
+ },
+ "fa27199e-8e3c-4ade-974a-012d3f114708": {
+  "nombre": "LVA LEGACY - 1ra Division",
+  "con_vultur": true
+ },
+ "7840364b-4586-4532-a363-bc9c8c5511f1": {
+  "nombre": "SUPERCOPA",
+  "con_vultur": false
+ },
+ "0f4ede50-612b-4d18-b93a-4cbef2103da0": {
+  "nombre": "RECOPA",
+  "con_vultur": false
+ },
+ "466c8190-d655-4fe8-9df2-2287cb5adb7e": {
+  "nombre": "LIGA LVA (ZONA B)",
+  "con_vultur": false
+ },
+ "1b10e43b-7d11-46c1-b1cb-541eb8161e8e": {
+  "nombre": "LIGA LVA (ZONA A)",
+  "con_vultur": true
+ },
+ "6cd7cc55-13db-4f80-8265-802ed3e9e367": {
+  "nombre": "LIGA DE VERANO",
+  "con_vultur": true
+ },
+ "77531b2e-58fc-4997-a8df-e180453f76a7": {
+  "nombre": "COPA INTERCONTINENTAL",
+  "con_vultur": false
+ }
+}

@@ -1,0 +1,8 @@
+# Títulos que no salen de las ligas (copas relámpago, torneos de Discord, amistosos con copa...).
+# Los títulos de la LVA y de VPN se detectan solos; acá van los demás.
+#
+#   - nombre: Copa Relámpago Premier
+#     fecha: 2026-11-10
+#     organiza: Nombre de la liga o comunidad
+#     nota: Final 2-1 vs Rival FC        # opcional
+titulos: []

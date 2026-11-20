@@ -1,0 +1,74 @@
+# IDs de Vultur Sports en cada fuente (relevado 2026-11-19)
+club:
+  nombre: Vultur Sports
+  short: VSP
+  plataforma: pc
+  # Dirección pública del sitio (se usa para la vista previa al compartir en WhatsApp)
+  url_sitio: https://vultursports.github.io/
+  # Ediciones del juego (fecha de lanzamiento aproximada). Cada partido pertenece a la edición
+  # que estaba vigente en su fecha. Al salir un juego nuevo, se agrega una línea.
+  ediciones:
+    - {nombre: FC 24, desde: 2023-09-29}
+    - {nombre: FC 25, desde: 2024-09-27}
+    - {nombre: FC 26, desde: 2025-09-26}
+    - {nombre: FC 27, desde: 2026-09-25}
+  # Canales de Twitch de integrantes del club. Cuando alguno está en vivo, aparece en Inicio.
+  transmisiones:
+    - jugador: Corona_ruso
+      canal: coronaruso
+
+ligas:
+  vpug:
+    nombre: VPUG — Virtual Pro Uruguay Gaming
+    sitio: https://vpugvirtualprouruguaygaming.com/
+    conector: rest
+    api_base: https://vpug-liga-api.onrender.com/v1/
+    redes:
+      instagram: https://www.instagram.com/vpugvirtual_prouruguay_gaming/
+    club_id: 141
+    temporada_id: 7        # 2026 · Temporada 1 (EN_CURSO)
+    division_id: 3         # Tercera
+    zona_horaria: America/Montevideo
+    activa: true
+
+  vpn:
+    nombre: VPN — Virtual Pro Network
+    sitio: https://virtualpronetwork.com/
+    conector: nextjs_data   # requiere leer buildId de la home
+    redes:
+      instagram: https://www.instagram.com/virtualpronetwork/
+    comunidad: uy           # también responde en 'ar'
+    team_id: 26691
+    team_slug: vultur-sports
+    competencias:
+      - nombre: Liga Argentina 4ta División
+        league_id: 2183
+        league_slug: liga-argentina-4ta-division
+        season_id: 6449
+        temporada: Temporada 11
+    zona_horaria: America/Argentina/Buenos_Aires
+    activa: true
+
+  lva:
+    nombre: LVA — Liga Virtual Argentina
+    sitio: https://ligavirtualargentina.com/
+    conector: paginas_publicas     # Playwright sobre las páginas públicas (decisión 00)
+    redes:
+      instagram: https://www.instagram.com/liga_virtual_arg
+      facebook: https://www.facebook.com/profile.php?id=61572537727161
+      x: https://x.com/lva_pro_clubs
+      youtube: https://www.youtube.com/@lva_clubes_pro
+      twitch: https://www.twitch.tv/liga_virtual_arg
+      discord: https://discord.gg/AeNaTzVa8m
+    competencias:
+      - nombre: 1ra Div - Legacy
+    team_id: null           # completar (uuid de la tabla teams)
+    zona_horaria: America/Argentina/Buenos_Aires
+    activa: true
+
+  ea:
+    nombre: EA SPORTS FC 27 Clubs (no oficial)
+    api_base: https://proclubs.ea.com/api/fc/
+    plataforma: common-gen5   # verificar para FC27 / PC
+    club_id: null             # completar con clubs/search
+    activa: false             # descartado: no se usa la API de EA (decisión 00)

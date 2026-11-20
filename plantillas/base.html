@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block titulo %}{{ club }}{% endblock %}</title>
+<meta name="description" content="Partidos, tablas y estadísticas de {{ club }} en todas sus competencias de Clubes Pro.">
+<meta name="theme-color" content="#1a1a1a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ club }}">
+<meta property="og:title" content="{{ club }}">
+<meta property="og:description" content="{{ og_desc }}">
+<meta property="og:url" content="{{ url_sitio }}{{ pagina if pagina != 'index.html' else '' }}">
+<meta property="og:image" content="{{ og_imagen }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="estaticos/img/escudo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estaticos/css/estilo.css?v={{ v }}">
+</head>
+<body>
+<header class="barra">
+  <a class="marca" href="index.html" aria-label="{{ club }}, inicio">
+    <img src="estaticos/img/escudo.png" alt="" width="40" height="40">
+    <span>Vultur<br>Sports</span>
+  </a>
+  <nav aria-label="Secciones">
+    <a href="index.html" {% if pagina == 'index.html' %}aria-current="page"{% endif %}>Inicio</a>
+    <a href="calendario.html" {% if pagina == 'calendario.html' %}aria-current="page"{% endif %}>Calendario</a>
+    <a href="tablas.html" {% if pagina == 'tablas.html' %}aria-current="page"{% endif %}>Tablas</a>
+    <a href="plantel.html" {% if pagina == 'plantel.html' or pagina.startswith('jugador-') %}aria-current="page"{% endif %}>Plantel</a>
+    <a href="vitrina.html" {% if pagina == 'vitrina.html' %}aria-current="page"{% endif %}>Vitrina</a>
+  </nav>
+</header>
+
+<main id="contenido">
+{% block contenido %}{% endblock %}
+</main>
+
+<footer class="pie">
+  <section class="creditos" aria-labelledby="t-creditos">
+    <h2 id="t-creditos">Nuestras competencias</h2>
+    <p class="nota">Los partidos, tablas, escudos y estadísticas de esta página son de las ligas donde jugamos. Todo el crédito es de cada liga, con enlace a su sitio oficial y a sus redes.</p>
+    <ul>
+    {% for l in ligas.values() %}
+      <li class="liga-{{ l.clave }}">
+        <a class="liga-nombre" href="{{ l.sitio }}" rel="noopener" target="_blank"><img src="estaticos/img/ligas/{{ l.clave }}.png" alt="" height="44"><span>{{ l.nombre }}</span></a>
+        {% if l.redes %}<span class="redes">{% for r, u in l.redes %}<a href="{{ u }}" rel="noopener" target="_blank">{{ r }}</a>{% endfor %}</span>{% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+  <p class="sync">Datos actualizados el {{ sync_txt }} (hora argentina). Página del club, no oficial de ninguna liga. <a href="estado.html">Estado de la actualización</a></p>
+</footer>
+<script src="estaticos/js/sitio.js?v={{ v }}" defer></script>
+{% block js %}{% endblock %}
+</body>
+</html>

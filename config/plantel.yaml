@@ -1,0 +1,17 @@
+# Ajustes del plantel. Normalmente no hace falta tocar nada: los nombres de un mismo jugador
+# en distintas ligas se unen solos si coinciden ignorando mayúsculas, espacios y signos
+# (por ejemplo "VSP-Ch4cKaL" y "VSP-ch4cKaL").
+#
+# Usar este archivo solo para los casos que no se unen solos.
+
+# Unir dos nombres distintos que son la misma persona:  nombre_en_una_liga: nombre_principal
+unir: {}
+#   Juancito10: JuanPerez_10
+
+# Ocultar a alguien de la página (por ejemplo, un jugador que ya no está en el club):
+ocultar: []
+#   - JugadorQueSeFue
+
+# Mostrar otro nombre en lugar del gamertag:
+nombres: {}
+#   VSP-Ch4cKaL: Chackal
