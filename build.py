@@ -185,6 +185,31 @@ def edicion_de(d) -> str:
 CORRECCION_POS = {"4-1-2-1-2": {"MD": "MC", "MI": "MC"}}
 
 
+CENTRO_LINEA = {"def": "DFC", "med": "MC", "del": "DC"}
+
+
+def corregir_bandas_repetidas(partidos: list) -> None:
+    """La LVA a veces carga dos LI (o dos LD, MI...) cuando uno jugó de central. En ese caso queda en
+    la banda quien más veces la ocupó, y el otro pasa a su puesto habitual de esa línea (o al centro)."""
+    norm = lambda s: ALIAS_POS.get(s.get("posicion") or "", s.get("posicion") or "")
+    habitual: dict = {}
+    for p in partidos:
+        for s in p.get("stats", []):
+            habitual.setdefault(jug_mod.clave(s.get("alias") or ""), Counter())[norm(s)] += 1
+    for p in partidos:
+        stats = p.get("stats", [])
+        for banda in BANDAS:
+            dup = [s for s in stats if norm(s) == banda]
+            if len(dup) < 2:
+                continue
+            h = lambda s: habitual.get(jug_mod.clave(s.get("alias") or ""), Counter())
+            dup.sort(key=lambda s: h(s)[banda] / max(1, sum(h(s).values())), reverse=True)
+            linea = LINEA[banda]
+            for s in dup[1:]:
+                propios = [q for q, _ in h(s).most_common() if LINEA.get(q) == linea and q not in BANDAS]
+                s["posicion"] = propios[0] if propios else CENTRO_LINEA[linea]
+
+
 def preparar_partido(p: dict, ligas: dict) -> dict:
     corr = dict(CORRECCION_POS.get(p.get("formacion") or "", {}))
     # VPN llama DD/DI a los dos delanteros de una formación de dos puntas; la LVA los registra como
@@ -261,7 +286,9 @@ def main():
     ahora = datetime.now(AR)
     EDICIONES[:] = sorted((e["desde"], e["nombre"]) for e in cfg["club"].get("ediciones", []))
     edicion_actual = edicion_de(ahora.date())
-    partidos = [preparar_partido(p, ligas) for p in leer("partidos.json", [])]
+    crudos = leer("partidos.json", [])
+    corregir_bandas_repetidas(crudos)
+    partidos = [preparar_partido(p, ligas) for p in crudos]
     tablas = leer("tablas.json", [])
     estado = leer("estado.json", {})
     for t in tablas:
