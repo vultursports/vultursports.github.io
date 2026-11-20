@@ -444,6 +444,13 @@ a.rec:hover { border-top-color: var(--rojo); }
 .pedestal { position: relative; display: grid; justify-items: center; align-content: end; height: 100%; }
 .pedestal .base { display: block; width: 62%; height: 22px; background: linear-gradient(180deg, #6b6f74, #3e4145); clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%); }
 .pedestal .polvo { position: absolute; bottom: 22px; width: 50%; height: 4px; border-radius: 50%; background: rgba(210,200,180,.18); filter: blur(1px); }
+.tanga { display: grid; justify-items: center; margin-bottom: 4px; transform: rotate(-6deg); }
+.tanga svg { width: 54px; height: 38px; filter: drop-shadow(0 2px 2px rgba(0,0,0,.5)); }
+.tanga-tira { fill: none; stroke: #ff7eb6; stroke-width: 2.4; stroke-linecap: round; }
+.tanga-tela { fill: #ff5fa2; stroke: #e2448a; stroke-width: 1; }
+.tanga-moño { fill: #ffd1e6; }
+.tanga-placa { margin-top: 2px; padding: 1px 4px; font: 700 .6rem/1.2 var(--texto); color: #3a2a1e;
+  background: linear-gradient(180deg, #d8c08a, #a98d55); border-radius: 1px; white-space: nowrap; transform: rotate(6deg); }
 .copa-fantasma { width: 56px; height: 70px; margin-bottom: 4px; fill: none; stroke: rgba(241,238,232,.35); stroke-width: 2; stroke-dasharray: 4 4; }
 .placa {
   display: flex; align-items: center; gap: 8px; width: max-content; max-width: 100%; margin: 8px auto 0; padding: 5px 10px;

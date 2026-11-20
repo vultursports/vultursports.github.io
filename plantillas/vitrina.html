@@ -35,6 +35,16 @@
         {% for n in range(3) %}
         <div class="pedestal">
           {% if n == 1 and e.reservado %}{{ copa('copa-fantasma') }}{% endif %}
+          {% if n == 2 and e.reservado %}
+          <div class="tanga" title="Tanga del Chaka">
+            <svg viewBox="0 0 64 44" aria-hidden="true">
+              <path class="tanga-tira" d="M4 8C20 13 44 13 60 8"/>
+              <path class="tanga-tela" d="M14 11.5C22 13.5 42 13.5 50 11.5L36 34Q32 39 28 34Z"/>
+              <path class="tanga-moño" d="M29 15l3 2.4 3-2.4-1.2 3.6 1.2 3.6-3-2.4-3 2.4 1.2-3.6z"/>
+            </svg>
+            <span class="tanga-placa">Tanga del Chaka</span>
+          </div>
+          {% endif %}
           <span class="polvo" aria-hidden="true"></span>
           <i class="base"></i>
         </div>
