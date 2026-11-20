@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 {% from "_macros.html" import forma, chip, avatar %}
+{% macro historial(r, prefijo=True) %}
+    <h3 class="sub">{% if prefijo %}Historial: {% endif %}{{ r.g }} {{ 'victoria' if r.g == 1 else 'victorias' }}, {{ r.e }} {{ 'empate' if r.e == 1 else 'empates' }}, {{ r.p }} {{ 'derrota' if r.p == 1 else 'derrotas' }}</h3>
+    <ul class="h2h-lista">
+      {% for x in r.jugados[:5] %}
+      <li class="r-{{ x.resultado }}"><a href="{{ x.pagina }}"><span class="marcador">{{ x.gf }}<i>–</i>{{ x.gc }}</span><span>{{ x.noche.strftime('%d/%m/%Y') }}{% if x.wo %} · W.O.{% endif %}</span><small><abbr class="sigla liga-{{ x.liga }}" title="{{ x.liga_ui.nombre }}">{{ x.liga_ui.corto }}</abbr> {{ x.competencia }}</small></a></li>
+      {% endfor %}
+    </ul>
+    {% if r.jugados|length > 5 %}<p class="fuente"><a href="{{ r.pagina }}">Ver los {{ r.jugados|length }} partidos contra {{ r.nombre }}</a></p>{% endif %}
+{% endmacro %}
 {% block titulo %}{{ 'Vultur Sports vs ' ~ p.rival.nombre if p.local else p.rival.nombre ~ ' vs Vultur Sports' }} | {{ club }}{% endblock %}
 {% block contenido %}
 <div class="pagina">
@@ -30,25 +39,21 @@
         </a>
       </div>
       <p class="proximo-pie">{{ p.condicion }}. Hora argentina.</p>
-      {# Antes del partido el historial va en la Previa; acá solo en los ya jugados #}
-      {% if p.rival_info and p.resultado %}{% set r = p.rival_info %}
-      <p class="proximo-pie h2h-linea">Historial: {{ r.g }} {{ 'victoria' if r.g == 1 else 'victorias' }}, {{ r.e }} {{ 'empate' if r.e == 1 else 'empates' }}, {{ r.p }} {{ 'derrota' if r.p == 1 else 'derrotas' }}. <a href="{{ r.pagina }}">Ver historial</a></p>
-      {% endif %}
     </div>
   </section>
+
+  {% if p.resultado and p.rival_info and p.rival_info.jugados %}
+  <section class="previa" aria-labelledby="t-hist">
+    <div class="enc"><h2 id="t-hist">Historial</h2></div>
+    {{ historial(p.rival_info, false) }}
+  </section>
+  {% endif %}
 
   {% if not p.resultado %}
   <section class="previa" aria-labelledby="t-previa">
     <div class="enc"><h2 id="t-previa">Previa</h2></div>
     {% if p.forma_comp %}<p class="forma-linea">Nuestros últimos partidos en {{ p.competencia }} {{ forma(p.forma_comp) }}</p>{% endif %}
-    {% if p.rival_info and p.rival_info.jugados %}{% set r = p.rival_info %}
-    <h3 class="sub">Historial: {{ r.g }} {{ 'victoria' if r.g == 1 else 'victorias' }}, {{ r.e }} {{ 'empate' if r.e == 1 else 'empates' }}, {{ r.p }} {{ 'derrota' if r.p == 1 else 'derrotas' }}</h3>
-    <ul class="h2h-lista">
-      {% for x in r.jugados[:5] %}
-      <li class="r-{{ x.resultado }}"><a href="{{ x.pagina }}"><span class="marcador">{{ x.gf }}<i>–</i>{{ x.gc }}</span><span>{{ x.noche.strftime('%d/%m/%Y') }}{% if x.wo %} · W.O.{% endif %}</span><small><abbr class="sigla liga-{{ x.liga }}" title="{{ x.liga_ui.nombre }}">{{ x.liga_ui.corto }}</abbr> {{ x.competencia }}</small></a></li>
-      {% endfor %}
-    </ul>
-    {% if r.jugados|length > 5 %}<p class="fuente"><a href="{{ r.pagina }}">Ver los {{ r.jugados|length }} partidos contra {{ r.nombre }}</a></p>{% endif %}
+    {% if p.rival_info and p.rival_info.jugados %}{{ historial(p.rival_info) }}
     {% elif p.rival_info %}<h3 class="sub">Primer partido contra {{ p.rival_info.nombre }}.</h3>{% endif %}
 
     {% if p.previa_once and p.previa_once.jugadores|length >= 7 %}{% set o = p.previa_once %}

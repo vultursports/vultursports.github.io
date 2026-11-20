@@ -154,6 +154,9 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             local = m["home_team"]["id"] == team_id
             rival = m["away_team"] if local else m["home_team"]
             estado = ESTADOS.get(m["status"], "programado")
+            # Resultado cargado pero aún sin aprobar por la LVA: se muestra igual (si cambia, se actualiza)
+            if m["status"] == "pending_approval" and m.get("home_goals") is not None and m.get("away_goals") is not None:
+                estado = "finalizado"
             # La LVA aprueba por adelantado los partidos de un equipo dado de baja: W.O.
             fecha = datetime.fromisoformat(m["match_date"])
             previo = partidos_previos.get(f"lva-{m['id']}") or {}
