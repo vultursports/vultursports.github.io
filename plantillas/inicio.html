@@ -26,7 +26,7 @@
         <span>{{ proximo.rival.nombre }}</span>{% if proximo.pos_rival and not proximo.resultado %}<small class="pos-tabla">{{ proximo.pos_rival }}° en la tabla</small>{% endif %}
       </a>
     </div>
-    <p class="proximo-pie">Somos {{ proximo.condicion|lower }}. <a href="{{ proximo.pagina }}">Detalles del partido</a></p>
+    <p class="proximo-pie">{{ proximo.condicion }}. <a href="{{ proximo.pagina }}">Detalles del partido</a></p>
   </div>
 </section>
 {% endfor %}

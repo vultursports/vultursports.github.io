@@ -29,7 +29,7 @@
           <span>{{ p.rival.nombre }}</span>{% if p.pos_rival and not p.resultado %}<small class="pos-tabla">{{ p.pos_rival }}° en la tabla</small>{% endif %}
         </a>
       </div>
-      <p class="proximo-pie">Somos {{ p.condicion|lower }}. Hora argentina.</p>
+      <p class="proximo-pie">{{ p.condicion }}. Hora argentina.</p>
       {% if p.rival_info %}{% set r = p.rival_info %}
       <p class="proximo-pie h2h-linea">{% if r.pj %}Historial contra {{ r.nombre }}: <b>{{ r.g }}</b> {{ 'ganado' if r.g == 1 else 'ganados' }}, <b>{{ r.e }}</b> {{ 'empatado' if r.e == 1 else 'empatados' }}, <b>{{ r.p }}</b> {{ 'perdido' if r.p == 1 else 'perdidos' }}.{% else %}Primer partido contra {{ r.nombre }}.{% endif %} <a href="{{ r.pagina }}">Ver historial</a></p>
       {% endif %}
