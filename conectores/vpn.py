@@ -50,7 +50,8 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             filas = [r for r in st["table"] if not grupos or grupos.get(r["tid"]) == mi_grupo]
             filas.sort(key=lambda r: r["pos"])
             # VPN publica posiciones de la tabla general; el movimiento se calcula dentro del grupo
-            zonas_liga = {"leader": "lider", "playoffs": "playoff", "promotion": "ascenso", "relegation": "descenso"}
+            # El líder se muestra como "Ascenso/Campeón", igual que en la LVA (pedido del club)
+            zonas_liga = {"leader": "ascenso", "playoffs": "playoff", "promotion": "ascenso", "relegation": "descenso"}
             zona_de = {}
             for z in liga.get("standingsZones") or []:
                 for n in range(z.get("position_from") or 0, (z.get("position_to") or 0) + 1):
@@ -66,6 +67,7 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                 "liga": "vpn",
                 "competencia": nombre_comp,
                 "temporada": comp.get("temporada", ""),
+                "nombres_zona": {"ascenso": "Ascenso/Campeón"},
                 "logo": liga.get("logoBigUrl") or liga.get("logoUrl"),
                 "url_origen": url_tabla,
                 "filas": [{
