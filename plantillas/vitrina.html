@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import chip, telarana, copa %}
+{% from "_macros.html" import chip, copa %}
 {% block titulo %}Vitrina | {{ club }}{% endblock %}
 
 {% block contenido %}
@@ -22,8 +22,20 @@
   <p class="bajada">Espacio reservado para la primera copa.</p>
 
   <div class="vitrina-vacia">
-    {{ telarana('tl-izq') }}{{ telarana('tl-der') }}
-    <div class="arana" aria-hidden="true"><i class="hilo"></i><svg viewBox="0 0 40 30"><g stroke="currentColor" stroke-width="1.6" fill="none"><path d="M14 13L3 6M14 15L1 15M14 17L3 25M26 13L37 6M26 15L39 15M26 17L37 25"/></g><ellipse cx="20" cy="15" rx="7" ry="8" fill="currentColor"/><circle cx="20" cy="6" r="4" fill="currentColor"/></svg></div>
+    <img class="telarana tl-izq" src="estaticos/img/telarana.svg" alt="" aria-hidden="true">
+    <img class="telarana tl-der" src="estaticos/img/telarana.svg" alt="" aria-hidden="true">
+    <div class="arana" aria-hidden="true">
+      <i class="hilo"></i>
+      <svg viewBox="0 0 60 48">
+        <g fill="none" stroke="#6a615a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M26 20L16 12L6 16M25 23L13 21L3 27M25 26L14 30L6 39M27 29L20 37L16 46"/>
+          <path d="M34 20L44 12L54 16M35 23L47 21L57 27M35 26L46 30L54 39M33 29L40 37L44 46"/>
+        </g>
+        <ellipse cx="30" cy="31" rx="7.5" ry="9" fill="#4b4440"/><ellipse cx="28" cy="28" rx="2.6" ry="3.4" fill="#7a716a" opacity=".55"/>
+        <circle cx="30" cy="18" r="5" fill="#5a524d"/>
+        <circle cx="28.2" cy="16.6" r=".9" fill="#c9a24a"/><circle cx="31.8" cy="16.6" r=".9" fill="#c9a24a"/>
+      </svg>
+    </div>
 
     {% for e in estantes %}
     <section class="estante liga-{{ e.liga.clave }}" aria-label="{{ e.liga.nombre }}">
@@ -40,7 +52,7 @@
         {{ chip(e.liga) }}
         <span><b>Títulos: 0</b>{% if e.dato %} · {{ e.dato }}{% endif %}</span>
       </div>
-      {% if loop.first %}{{ telarana('tl-estante') }}{% endif %}
+      {% if loop.first %}<img class="telarana tl-estante" src="estaticos/img/telarana.svg" alt="" aria-hidden="true">{% endif %}
     </section>
     {% endfor %}
   </div>
