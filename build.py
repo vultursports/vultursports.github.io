@@ -279,6 +279,10 @@ def main():
     EN_JUEGO = timedelta(minutes=15)  # tiempo que la tarjeta muestra "Se está jugando" antes de pasar al siguiente
     proximos = [p for p in partidos if p["resultado"] is None and p["dt"] >= ahora - EN_JUEGO]
     jugados = [p for p in partidos if p["resultado"]][::-1]
+    # Ya se jugaron pero la liga todavía no cargó (o no aprobó) el resultado: siguen en el
+    # calendario, en "Jugados", con un "?" hasta que aparezca el marcador.
+    sin_resultado = [p for p in partidos if p["resultado"] is None and p["dt"] < ahora - EN_JUEGO]
+    cal_jugados = sorted(jugados + sin_resultado, key=lambda p: p["dt"], reverse=True)
     proximo = proximos[0] if proximos else None
 
     # Orden de las competencias: primero la que se juega antes; después las que no publican
@@ -292,8 +296,10 @@ def main():
         return (2, "")
     tablas.sort(key=orden_comp)
     hoy_noche = (ahora - timedelta(hours=6)).date()
-    # Esta semana: desde la noche de hoy (incluye los partidos ya jugados hoy, con o sin resultado)
-    semana = sorted((p for p in partidos if hoy_noche <= p["noche"] <= hoy_noche + timedelta(days=7)), key=lambda p: p["dt"])
+    # Los partidos de una noche quedan en "Esta semana" hasta las 12 del mediodía del día
+    # siguiente (tengan o no resultado); después solo están en el calendario.
+    desde_noche = (ahora - timedelta(hours=12)).date()
+    semana = sorted((p for p in partidos if desde_noche <= p["noche"] <= hoy_noche + timedelta(days=7)), key=lambda p: p["dt"])
     # Tarjetas del próximo partido: la página pasa sola de una a otra a medida que empiezan
     tarjetas = proximos[:6]
 
@@ -557,7 +563,7 @@ def main():
                lista_rivales=lista_rivales,
                og_imagen=f"{url_sitio}og.png?v={og_version}", og_desc=og_desc, url_sitio=url_sitio, ligas=ligas, tablas=tablas, proximo=proximo,
                semana=agrupar(semana), recientes=jugados[:5],
-               cal_proximos=agrupar(proximos), cal_jugados=agrupar(jugados),
+               cal_proximos=agrupar(proximos), cal_jugados=agrupar(cal_jugados),
                sync_txt=sync_txt, hoy_noche=hoy_noche,
                ambitos=ambitos, sin_partidos=sin_partidos,
                ligas_en_uso=[l for l in ligas.values() if any(p["liga"] == l["clave"] for p in partidos)])
