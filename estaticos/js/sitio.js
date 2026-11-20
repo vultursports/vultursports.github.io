@@ -19,9 +19,9 @@
         out.textContent = d > 0 ? `Faltan ${d} d ${h} h` : h > 0 ? `Faltan ${h} h ${String(m).padStart(2, "0")} min` : `Faltan ${m} min`;
       }
     }
-    document.querySelectorAll("li.partido[data-inicio]").forEach((li) => {
-      const empezo = new Date(li.dataset.inicio).getTime() <= ahora;
-      const antes = li.querySelector(".antes"), pend = li.querySelector(".pendiente");
+    document.querySelectorAll("li.partido[data-inicio], .proximo-titulo [data-inicio]").forEach((el) => {
+      const empezo = new Date(el.dataset.inicio).getTime() <= ahora;
+      const antes = el.querySelector(".antes"), pend = el.querySelector(".pendiente, .pendiente-txt");
       if (antes) antes.hidden = empezo;
       if (pend) pend.hidden = !empezo;
     });

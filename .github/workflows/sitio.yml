@@ -44,7 +44,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add datos
           git diff --cached --quiet || git commit -m "Datos actualizados $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push
+          for intento in 1 2 3; do
+            git pull --rebase -X theirs && git push && break
+            echo "No se pudo guardar (intento $intento), se reintenta..."; sleep 5
+          done
       - name: Generar sitio
         run: python build.py
       - name: Pruebas automáticas (si fallan, no se publica)
