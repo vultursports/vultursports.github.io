@@ -65,23 +65,44 @@ LUGAR = {"POR": (50, 91), "DFC": (50, 76), "LD": (86, 71), "LI": (14, 71), "MCD"
          "ED": (87, 17), "EI": (13, 17), "SD": (50, 22)}
 
 
+LINEA = {"LI": "def", "DFC": "def", "LD": "def", "MI": "med", "MC": "med", "MD": "med",
+         "EI": "del", "DI": "del", "DC": "del", "DD": "del", "ED": "del"}
+BANDAS = {"LI", "LD", "MI", "MD", "EI", "ED"}
+
+
+def posiciones_x(pos: list) -> list:
+    """x de cada jugador. Si en una línea hay un puesto repetido (p. ej. dos LI, como a veces carga
+    la LVA), toda la línea se reparte a lo ancho para que nadie quede fuera de la cancha ni encimado."""
+    xs = [LUGAR[p][0] for p in pos]
+    grupos: dict[str, list] = {}
+    for i, p in enumerate(pos):
+        grupos.setdefault(LINEA.get(p, p), []).append(i)
+    for idx in grupos.values():
+        if len(idx) == len({pos[i] for i in idx}):
+            continue  # sin repetidos: cada uno en su lugar
+        idx.sort(key=lambda i: LUGAR[pos[i]][0])
+        n = len(idx)
+        if any(pos[i] in BANDAS for i in idx):
+            nuevos = [14 + k * 72 / (n - 1) for k in range(n)]
+        else:
+            paso = min(34 if n == 2 else 26, 76 / (n - 1))
+            nuevos = [50 + (k - (n - 1) / 2) * paso for k in range(n)]
+        for i, x in zip(idx, nuevos):
+            xs[i] = x
+    return xs
+
+
 def alineacion(stats: list, ficha_de: dict) -> list:
     """Ubica en la cancha a los jugadores de un partido según la posición que ocuparon."""
-    por_pos: dict[str, list] = {}
-    for s in stats:
-        pos = ALIAS_POS.get(s.get("posicion") or "", s.get("posicion") or "")
-        if s.get("alias") and pos in LUGAR:
-            por_pos.setdefault(pos, []).append(s)
+    lista = [(ALIAS_POS.get(s.get("posicion") or "", s.get("posicion") or ""), s) for s in stats]
+    lista = [(pos, s) for pos, s in lista if s.get("alias") and pos in LUGAR]
     salida = []
-    for pos, lista in por_pos.items():
-        bx, by = LUGAR[pos]
-        paso = 34 if len(lista) == 2 else 26
-        for k, s in enumerate(lista):
-            j = ficha_de.get(jug_mod.clave(s["alias"])) or {}
-            salida.append({"x": round(bx + (k - (len(lista) - 1) / 2) * paso, 1), "y": by, "pos": pos,
-                           "alias": s["alias"], "dorsal": j.get("dorsal"), "pagina": j.get("pagina"),
-                           "nota": s.get("rating") if (s.get("rating") or -1) >= 0 else None,
-                           "goles": s.get("goles") or 0, "asist": s.get("asistencias") or 0, "mvp": s.get("mvp")})
+    for x, (pos, s) in zip(posiciones_x([p for p, _ in lista]), lista):
+        j = ficha_de.get(jug_mod.clave(s["alias"])) or {}
+        salida.append({"x": round(x, 1), "y": LUGAR[pos][1], "pos": pos,
+                       "alias": s["alias"], "dorsal": j.get("dorsal"), "pagina": j.get("pagina"),
+                       "nota": s.get("rating") if (s.get("rating") or -1) >= 0 else None,
+                       "goles": s.get("goles") or 0, "asist": s.get("asistencias") or 0, "mvp": s.get("mvp")})
     return salida
 
 

@@ -127,6 +127,28 @@
     return { slots, asignado, formacion, veces: top[1], total, banco };
   }
 
+  // x de cada jugador (misma regla que build.py): si una línea tiene un puesto repetido
+  // (p. ej. dos LI), toda la línea se reparte a lo ancho para que nadie quede fuera ni encimado.
+  const LINEA = { LI: "def", DFC: "def", LD: "def", MI: "med", MC: "med", MD: "med", EI: "del", DI: "del", DC: "del", DD: "del", ED: "del" };
+  const BANDAS = new Set(["LI", "LD", "MI", "MD", "EI", "ED"]);
+  function posicionesX(slots) {
+    const xs = new Map();
+    const grupos = {};
+    slots.forEach((s) => {
+      xs.set(s, (LUGAR[s.pos] || [50])[0]);
+      (grupos[LINEA[s.pos] || s.pos] ||= []).push(s);
+    });
+    for (const g of Object.values(grupos)) {
+      if (g.length === new Set(g.map((s) => s.pos)).size) continue;
+      g.sort((a, b) => (LUGAR[a.pos] || [50])[0] - (LUGAR[b.pos] || [50])[0]);
+      const n = g.length;
+      const lado = g.some((s) => BANDAS.has(s.pos));
+      const paso = Math.min(n === 2 ? 34 : 26, 76 / (n - 1));
+      g.forEach((s, k) => xs.set(s, lado ? 14 + (k * 72) / (n - 1) : 50 + (k - (n - 1) / 2) * paso));
+    }
+    return xs;
+  }
+
   function dibujarOnce(filas) {
     const cancha = document.getElementById("cancha");
     const bancoEl = document.getElementById("banco");
@@ -141,11 +163,11 @@
     // MVP del 11: el de mejor nota (ajustada por partidos, con el mínimo de partidos de "Mejor nota")
     const candidatos = Object.values(o.asignado).filter((f) => f.nota != null && f.pj >= D.minimoNota);
     const mvp = candidatos.sort((a, b) => (b.nota - a.nota) || (b.pj - a.pj))[0];
+    const xDe = posicionesX(o.slots);
     for (const [pos, lista] of Object.entries(porPos)) {
-      const [bx, by] = LUGAR[pos] || [50, 50];
-      const paso = lista.length === 2 ? 34 : 26;
-      lista.forEach((s, k) => {
-        const x = bx + (k - (lista.length - 1) / 2) * paso;
+      const [, by] = LUGAR[pos] || [50, 50];
+      lista.forEach((s) => {
+        const x = xDe.get(s);
         const f = o.asignado[s.i];
         if (!f) return;
         const j = D.jugadores[f.id];
