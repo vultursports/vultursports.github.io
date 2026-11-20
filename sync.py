@@ -75,6 +75,7 @@ def main() -> int:
     partidos = {p["id"]: p for p in leer("partidos.json", [])}
     tablas = {t["id"]: t for t in leer("tablas.json", [])}
     rankings = {r["id"]: r for r in leer("rankings.json", [])}
+    carga = leer("carga_resultados.json", [])
     estado = leer("estado.json", {"ligas": {}})
 
     for clave, lcfg in cfg["ligas"].items():
@@ -94,6 +95,11 @@ def main() -> int:
                                    "se conservan los datos anteriores")
             # Reemplaza lo de esta liga (los partidos que desaparecen de la fuente se conservan).
             for p in out["partidos"]:
+                previo = partidos.get(p["id"])
+                # Registro de cuándo carga la liga cada resultado (para ajustar el horario del robot)
+                if previo and previo.get("gf") is None and p.get("gf") is not None:
+                    carga.append({"liga": clave, "partido": p["id"], "rival": p["rival"]["nombre"],
+                                  "jugado": p["fecha_utc"], "detectado": ahora_iso()})
                 partidos[p["id"]] = p
             for t in out["tablas"]:
                 t["actualizado"] = ahora_iso()
@@ -127,6 +133,7 @@ def main() -> int:
     escribir("partidos.json", sorted(partidos.values(), key=lambda p: p["fecha_utc"]))
     escribir("tablas.json", list(tablas.values()))
     escribir("rankings.json", list(rankings.values()))
+    escribir("carga_resultados.json", carga)
     estado["sync"] = ahora_iso()
     escribir("estado.json", estado)
     return 0

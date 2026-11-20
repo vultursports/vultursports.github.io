@@ -2,9 +2,9 @@ name: Actualizar y publicar
 
 on:
   schedule:
-    # Partidos siempre desde las 22:00 hora argentina (UTC-3). Horarios en UTC.
-    - cron: "*/20 1-5 * * *"   # cada 20 min de 22:00 a 02:59 AR
-    - cron: "0 12,19 * * *"    # 09:00 y 16:00 AR
+    # Cada 30 minutos todo el día, mientras medimos a qué hora cargan los resultados las ligas
+    # (registro en datos/carga_resultados.json). Después se ajusta a ese rango.
+    - cron: "*/30 * * * *"
   push:
     branches: [main]
   workflow_dispatch: {}        # botón "Run workflow" para forzar
