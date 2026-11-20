@@ -21,8 +21,17 @@ def clave(alias: str) -> str:
     return re.sub(r"[^a-z0-9]", "", sin_acentos.lower())
 
 
+# Posiciones que suman valla invicta (arquero y defensores), con los códigos de las tres ligas
+DEFENSIVAS = {"POR", "PO", "GK", "DFC", "LD", "LI", "LTD", "LTI", "CAD", "CAI"}
+
+
+def valla_invicta(p: dict, s: dict) -> bool:
+    """Partido sin goles en contra jugado de arquero o defensor."""
+    return p.get("gc") == 0 and (s.get("posicion") or "") in DEFENSIVAS
+
+
 def _vacio():
-    return {"pj": 0, "goles": 0, "asistencias": 0, "mvp": 0, "amarillas": 0, "rojas": 0, "notas": []}
+    return {"pj": 0, "goles": 0, "asistencias": 0, "mvp": 0, "amarillas": 0, "rojas": 0, "vallas": 0, "notas": []}
 
 
 def _cerrar(s: dict) -> dict:
@@ -69,6 +78,7 @@ def armar(partidos: list, plantel_vpug: list, ajustes: dict) -> dict:
                 acc["mvp"] += 1 if s.get("mvp") else 0
                 acc["amarillas"] += s.get("amarillas") or 0
                 acc["rojas"] += s.get("rojas") or 0
+                acc["vallas"] += 1 if valla_invicta(p, s) else 0
                 if nota is not None and nota >= 0:
                     acc["notas"].append(nota)
             j["partidos"].append({"p": p, "s": s})
@@ -117,4 +127,5 @@ def rankings(jugadores: list, ambito: str) -> dict:
         return orden[:1]
     nota = sorted((j for j in con_pj if st(j)["nota_ajustada"] and st(j)["pj"] >= MIN_PJ_NOTA),
                   key=lambda j: (-st(j)["nota"], -st(j)["pj"]))[:1]
-    return {"goles": top("goles"), "asistencias": top("asistencias"), "mvp": top("mvp"), "nota": nota}
+    return {"goles": top("goles"), "asistencias": top("asistencias"), "mvp": top("mvp"), "nota": nota,
+            "vallas": top("vallas"), "pj": top("pj")}

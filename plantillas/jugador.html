@@ -27,6 +27,8 @@
     <div><dt>Goles</dt><dd>{{ j.total.goles }}</dd></div>
     <div><dt>Asistencias</dt><dd>{{ j.total.asistencias }}</dd></div>
     <div><dt>MVP</dt><dd>{{ j.total.mvp }}</dd></div>
+    <div><dt>Vallas invictas</dt><dd>{{ j.total.vallas }}</dd></div>
+    <div><dt>Tarjetas</dt><dd><span class="ta">{{ j.total.amarillas }}</span> <span class="tr">{{ j.total.rojas }}</span></dd></div>
     <div><dt>Nota promedio</dt><dd>{{ '%.1f'|format(j.total.nota) if j.total.nota else '–' }}</dd></div>
   </dl>
 
@@ -35,11 +37,11 @@
     <div class="enc"><h2 id="t-porliga">Por liga</h2></div>
     <div class="scroll-x">
     <table class="tabla stats">
-      <thead><tr><th scope="col" class="eq">Liga</th><th scope="col">PJ</th><th scope="col">G</th><th scope="col">A</th><th scope="col">MVP</th><th scope="col">Nota</th><th scope="col" class="opc"><abbr title="Tarjetas amarillas / rojas">TA/TR</abbr></th></tr></thead>
+      <thead><tr><th scope="col" class="eq">Liga</th><th scope="col">PJ</th><th scope="col">G</th><th scope="col">A</th><th scope="col">MVP</th><th scope="col"><abbr title="Vallas invictas">VI</abbr></th><th scope="col">Nota</th><th scope="col" class="opc"><abbr title="Tarjetas amarillas / rojas">TA/TR</abbr></th></tr></thead>
       <tbody>
       {% for clave, l in ligas.items() if j.por_liga[clave].pj %}
         {% set st = j.por_liga[clave] %}
-        <tr><th scope="row" class="eq">{{ chip(l) }}</th><td>{{ st.pj }}</td><td>{{ st.goles }}</td><td>{{ st.asistencias }}</td><td>{{ st.mvp }}</td><td>{{ '%.1f'|format(st.nota) if st.nota else '–' }}</td><td class="opc">{{ st.amarillas }}/{{ st.rojas }}</td></tr>
+        <tr><th scope="row" class="eq">{{ chip(l) }}</th><td>{{ st.pj }}</td><td>{{ st.goles }}</td><td>{{ st.asistencias }}</td><td>{{ st.mvp }}</td><td>{{ st.vallas }}</td><td>{{ '%.1f'|format(st.nota) if st.nota else '–' }}</td><td class="opc">{{ st.amarillas }}/{{ st.rojas }}</td></tr>
       {% endfor %}
       </tbody>
     </table>
@@ -50,10 +52,10 @@
     <div class="enc"><h2 id="t-portemp">Por temporada</h2></div>
     <div class="scroll-x">
     <table class="tabla stats">
-      <thead><tr><th scope="col" class="eq">Temporada</th><th scope="col">PJ</th><th scope="col">G</th><th scope="col">A</th><th scope="col">MVP</th><th scope="col">Nota</th></tr></thead>
+      <thead><tr><th scope="col" class="eq">Temporada</th><th scope="col">PJ</th><th scope="col">G</th><th scope="col">A</th><th scope="col">MVP</th><th scope="col"><abbr title="Vallas invictas">VI</abbr></th><th scope="col">Nota</th><th scope="col" class="opc"><abbr title="Tarjetas amarillas / rojas">TA/TR</abbr></th></tr></thead>
       <tbody>
       {% for t in j.por_temporada %}
-        <tr><th scope="row" class="eq"><span class="eqi">{{ chip(t.liga_ui) }}<span>{{ t.nombre }}</span></span></th><td>{{ t.pj }}</td><td>{{ t.goles or '' }}</td><td>{{ t.asistencias or '' }}</td><td>{{ t.mvp or '' }}</td><td>{{ '%.1f'|format(t.nota) if t.nota else '' }}</td></tr>
+        <tr><th scope="row" class="eq"><span class="eqi">{{ chip(t.liga_ui) }}<span>{{ t.nombre }}</span></span></th><td>{{ t.pj }}</td><td>{{ t.goles or '' }}</td><td>{{ t.asistencias or '' }}</td><td>{{ t.mvp or '' }}</td><td>{{ t.vallas or '' }}</td><td>{{ '%.1f'|format(t.nota) if t.nota else '' }}</td><td class="opc">{% if t.amarillas or t.rojas %}{{ t.amarillas }}/{{ t.rojas }}{% endif %}</td></tr>
       {% endfor %}
       </tbody>
     </table>

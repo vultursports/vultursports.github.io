@@ -337,16 +337,21 @@ def main():
             apariciones.append([j["id"], p["liga"], p["temporada"]["clave"], p["edicion"], s.get("goles") or 0,
                                 s.get("asistencias") or 0, 1 if s.get("mvp") else 0,
                                 nota if nota is not None and nota >= 0 else None,
-                                s.get("posicion") or "", p["id"]])
+                                s.get("posicion") or "", p["id"], 1 if jug_mod.valla_invicta(p, s) else 0,
+                                s.get("amarillas") or 0, s.get("rojas") or 0])
         # Por temporada (ficha)
         por_t = {}
         for x in j["partidos"]:
             p, s = x["p"], x["s"]
             k = p["temporada"]["clave"]
             a = por_t.setdefault(k, {"nombre": p["temporada"]["nombre"], "liga_ui": p["liga_ui"], "edicion": p["edicion"],
-                                     "desde": p["fecha_utc"], "pj": 0, "goles": 0, "asistencias": 0, "mvp": 0, "notas": []})
+                                     "desde": p["fecha_utc"], "pj": 0, "goles": 0, "asistencias": 0, "mvp": 0,
+                                     "vallas": 0, "amarillas": 0, "rojas": 0, "notas": []})
             a["pj"] += 1; a["goles"] += s.get("goles") or 0; a["asistencias"] += s.get("asistencias") or 0
             a["mvp"] += 1 if s.get("mvp") else 0
+            a["vallas"] += 1 if jug_mod.valla_invicta(p, s) else 0
+            a["amarillas"] += s.get("amarillas") or 0
+            a["rojas"] += s.get("rojas") or 0
             if s.get("rating") is not None and s["rating"] >= 0:
                 a["notas"].append(s["rating"])
             a["desde"] = min(a["desde"], p["fecha_utc"])
@@ -452,6 +457,8 @@ def main():
         "asistidor": max(con_pj, key=lambda j: (j["total"]["asistencias"], -j["total"]["pj"]), default=None),
         "mas_pj": max(con_pj, key=lambda j: j["total"]["pj"], default=None),
         "mas_mvp": max(con_pj, key=lambda j: (j["total"]["mvp"], -j["total"]["pj"]), default=None),
+        "mas_vallas": max(con_pj, key=lambda j: (j["total"]["vallas"], -j["total"]["pj"]), default=None),
+        "vallas": sum(1 for p in jugados_reales if p["gc"] == 0),
     }
 
     # Previa de los partidos por jugar: forma en esa competencia y nuestro 11 más usado en ella

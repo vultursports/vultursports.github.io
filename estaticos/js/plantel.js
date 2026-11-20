@@ -55,10 +55,10 @@
 
   function calcular() {
     const filas = {};
-    for (const [jid, lg, temp, ed, g, a, mvp, nota, pos] of D.ap) {
+    for (const [jid, lg, temp, ed, g, a, mvp, nota, pos, , vi, ta, tr] of D.ap) {
       if (!enAlcance(lg, temp)) continue;
-      const f = (filas[jid] ||= { id: jid, pj: 0, g: 0, a: 0, mvp: 0, notas: [], pos: {} });
-      f.pj++; f.g += g; f.a += a; f.mvp += mvp;
+      const f = (filas[jid] ||= { id: jid, pj: 0, g: 0, a: 0, mvp: 0, vi: 0, ta: 0, tr: 0, notas: [], pos: {} });
+      f.pj++; f.g += g; f.a += a; f.mvp += mvp; f.vi += vi || 0; f.ta += ta || 0; f.tr += tr || 0;
       if (nota != null) f.notas.push(nota);
       const p = normPos(pos);
       if (p) f.pos[p] = (f.pos[p] || 0) + 1;
@@ -80,7 +80,7 @@
     const j = D.jugadores[f.id];
     const valor = campo === "nota" ? n1(f.nota) : f[campo];
     return `<article class="lider"><h2>${titulo}</h2><a href="${j.pagina}">${avatar(j, 44)}<span class="lider-nombre">${esc(j.alias)}</span></a>
-      <p class="lider-valor"><b>${valor}</b> ${unidad} en ${f.pj} PJ</p></article>`;
+      <p class="lider-valor"><b>${valor}</b> ${unidad}${campo === "pj" ? "" : ` en ${f.pj} PJ`}</p></article>`;
   }
 
   // El 11 más usado: formación más repetida y, para cada puesto, quien más veces lo ocupó
@@ -175,6 +175,7 @@
     lideres.innerHTML = [
       lider(filas, "g", "Goleador", "goles"), lider(filas, "a", "Asistidor", "asistencias"),
       lider(filas, "mvp", "Más veces MVP", "MVP"), lider(filas, "nota", "Mejor nota", "de promedio"),
+      lider(filas, "vi", "Más vallas invictas", "vallas invictas"), lider(filas, "pj", "Más partidos", "partidos"),
     ].join("");
     const { campo, asc } = orden;
     filas.sort((x, y) => {
@@ -184,7 +185,7 @@
     tbody.innerHTML = filas.map((f) => {
       const j = D.jugadores[f.id];
       return `<tr><th scope="row" class="eq"><a class="eqi" href="${j.pagina}">${avatar(j, 26)}<span>${esc(j.alias)}</span>${j.pos ? `<small class="pos">${esc(j.pos)}</small>` : ""}</a></th>
-        <td>${f.pj}</td><td>${f.g || ""}</td><td>${f.a || ""}</td><td class="opc">${f.ga || ""}</td><td>${f.mvp || ""}</td><td>${n1(f.nota)}</td></tr>`;
+        <td>${f.pj}</td><td>${f.g || ""}</td><td>${f.a || ""}</td><td class="opc">${f.ga || ""}</td><td>${f.mvp || ""}</td><td>${f.vi || ""}</td><td class="opc">${f.ta || f.tr ? `${f.ta}/${f.tr}` : ""}</td><td>${n1(f.nota)}</td></tr>`;
     }).join("");
     vacio.hidden = filas.length > 0;
     ths.forEach((th) => (th.dataset.campo === campo ? th.setAttribute("aria-sort", asc ? "ascending" : "descending") : th.removeAttribute("aria-sort")));

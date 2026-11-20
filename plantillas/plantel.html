@@ -50,6 +50,8 @@
       <th scope="col" data-campo="a"><button type="button"><abbr title="Asistencias">A</abbr></button></th>
       <th scope="col" data-campo="ga" class="opc"><button type="button"><abbr title="Goles + asistencias">G+A</abbr></button></th>
       <th scope="col" data-campo="mvp"><button type="button">MVP</button></th>
+      <th scope="col" data-campo="vi"><button type="button"><abbr title="Vallas invictas (de arquero o defensor)">VI</abbr></button></th>
+      <th scope="col" data-campo="ta" class="opc"><button type="button"><abbr title="Tarjetas amarillas / rojas">TA/TR</abbr></button></th>
       <th scope="col" data-campo="nota" aria-sort="descending"><button type="button"><abbr title="Nota promedio">Nota</abbr></button></th>
     </tr></thead>
     <tbody></tbody>
@@ -68,6 +70,7 @@
       <div><dt>Empatados</dt><dd>{{ R.e }}</dd></div>
       <div class="p"><dt>Perdidos</dt><dd>{{ R.p }}</dd></div>
       <div><dt>Goles</dt><dd>{{ R.gf }}<small>–{{ R.gc }}</small></dd></div>
+      <div><dt>Vallas invictas</dt><dd>{{ R.vallas }}</dd></div>
     </dl>
     <h3 class="rec-grupo">El club</h3>
     <div class="rec-grid club">
@@ -79,7 +82,7 @@
     </div>
     <h3 class="rec-grupo">Jugadores</h3>
     <div class="rec-grid jug">
-      {% for titulo, j, campo, unidad in [('Goleador histórico', R.goleador, 'goles', 'goles'), ('Asistidor histórico', R.asistidor, 'asistencias', 'asistencias'), ('Más partidos', R.mas_pj, 'pj', 'partidos'), ('Más veces MVP', R.mas_mvp, 'mvp', 'MVP')] %}
+      {% for titulo, j, campo, unidad in [('Goleador histórico', R.goleador, 'goles', 'goles'), ('Asistidor histórico', R.asistidor, 'asistencias', 'asistencias'), ('Más partidos', R.mas_pj, 'pj', 'partidos'), ('Más veces MVP', R.mas_mvp, 'mvp', 'MVP'), ('Más vallas invictas', R.mas_vallas, 'vallas', 'vallas invictas')] %}
         {% if j %}<a class="rec" href="{{ j.pagina }}"><span class="rec-t">{{ titulo }}</span><b>{{ j.total[campo] }}</b><span>{{ unidad }}</span><small class="rec-j">{{ avatar(j, 22) }} {{ j.alias }}</small></a>{% endif %}
       {% endfor %}
     </div>
