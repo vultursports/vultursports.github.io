@@ -2,7 +2,7 @@ name: Actualizar y publicar
 
 on:
   schedule:
-    # Partidos siempre desde las 22:00 hora argentina (UTC-3).
+    # Partidos siempre desde las 22:00 hora argentina (UTC-3). Horarios en UTC.
     - cron: "*/20 1-5 * * *"   # cada 20 min de 22:00 a 02:59 AR
     - cron: "0 12,19 * * *"    # 09:00 y 16:00 AR
   push:
