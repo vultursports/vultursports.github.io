@@ -119,6 +119,15 @@ img[src$="ligas/vpug.png"] { height: calc(var(--h) * .92); }
 .hora { font: 900 clamp(3.2rem, 15vw, 6.5rem)/.85 var(--display); font-variant-numeric: tabular-nums; }
 .dia { margin-top: 6px; color: var(--plata); font-size: .9rem; max-width: 11rem; }
 .cuenta { display: block; margin-top: 8px; font: 700 1rem/1 var(--display); color: var(--hueso); letter-spacing: .03em; min-height: 1em; }
+.f-corta { display: none; }
+/* Celular: centro de la tarjeta más compacto para que los nombres de los equipos respiren */
+@media (max-width: 520px) {
+  .duelo .hora { font-size: clamp(2.4rem, 11.5vw, 3.2rem); }
+  .duelo .dia { font-size: .8rem; margin-top: 4px; }
+  .duelo .f-larga { display: none; }
+  .duelo .f-corta { display: inline; }
+  .duelo .cuenta { font-size: .82rem; margin-top: 6px; }
+}
 .proximo-pie { margin: 6px 0 0; font-size: .9rem; color: var(--plata); }
 .sin-escudo { width: 28px; height: 28px; background: var(--linea); clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%); }
 .sin-escudo.grande { width: 96px; height: 96px; }

@@ -8,7 +8,7 @@
     const ms = fin - Date.now();
     if (ms <= 0) { out.textContent = ms > -45 * 60e3 ? "Se está jugando" : ""; return; }
     const d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
-    out.textContent = d > 0 ? `Faltan ${d} d ${h} h` : `Faltan ${h} h ${String(m).padStart(2, "0")} min`;
+    out.textContent = d > 0 ? `Faltan ${d} d ${h} h` : h > 0 ? `Faltan ${h} h ${String(m).padStart(2, "0")} min` : `Faltan ${m} min`;
   };
   tick();
   setInterval(tick, 30e3);

@@ -17,7 +17,7 @@
       <div class="cuando">
         <time datetime="{{ proximo.dt.isoformat() }}" data-cuenta="{{ proximo.dt.isoformat() }}">
           <span class="hora">{{ proximo.hora }}</span>
-          <span class="dia">{{ proximo.noche_txt }}</span>
+          <span class="dia"><span class="f-larga">{{ proximo.noche_txt }}</span><span class="f-corta">{{ proximo.noche_corta }}</span></span>
         </time>
         <span class="cuenta" aria-live="off"></span>
       </div>

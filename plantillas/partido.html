@@ -19,9 +19,9 @@
         <div class="cuando">
           {% if p.resultado %}
             <div class="final"><span class="hora">{{ p.gf if p.local else p.gc }}<span class="guion">–</span>{{ p.gc if p.local else p.gf }}</span>
-            <span class="dia">{{ p.noche_txt }}<br>{{ p.hora }} h</span></div>
+            <span class="dia"><span class="f-larga">{{ p.noche_txt }}</span><span class="f-corta">{{ p.noche_corta }}</span><br>{{ p.hora }} h</span></div>
           {% else %}
-            <time datetime="{{ p.dt.isoformat() }}"><span class="hora">{{ p.hora }}</span><span class="dia">{{ p.noche_txt }}</span></time>
+            <time datetime="{{ p.dt.isoformat() }}"><span class="hora">{{ p.hora }}</span><span class="dia"><span class="f-larga">{{ p.noche_txt }}</span><span class="f-corta">{{ p.noche_corta }}</span></span></time>
           {% endif %}
         </div>
         <a class="equipo equipo-link" href="{{ p.rival_pagina }}" title="Ver historial contra {{ p.rival.nombre }}">

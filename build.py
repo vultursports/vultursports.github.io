@@ -181,6 +181,7 @@ def preparar_partido(p: dict, ligas: dict) -> dict:
     p["hora"] = loc.strftime("%H:%M")
     p["noche"] = noche
     p["noche_txt"] = fecha_larga(noche)
+    p["noche_corta"] = f"{DIAS[noche.weekday()][:3]} {noche.day} {MESES[noche.month - 1][:3]}"
     p["liga_ui"] = ligas[p["liga"]]
     p["condicion"] = "Local" if p["local"] else "Visitante"
     if p["gf"] is not None and p["gc"] is not None:
