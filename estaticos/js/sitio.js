@@ -1,14 +1,30 @@
-// Cuenta regresiva del próximo partido
+// Próximo partido: cada tarjeta muestra la cuenta regresiva; cuando un partido empieza, su tarjeta dice
+// "Se está jugando" durante 15 minutos y después la página pasa sola al siguiente partido.
+// En las listas, un partido que ya empezó y no tiene resultado muestra "?" con "Ver detalles".
 (() => {
-  const t = document.querySelector("[data-cuenta]");
-  const out = document.querySelector(".cuenta");
-  if (!t || !out) return;
-  const fin = new Date(t.dataset.cuenta).getTime();
+  const EN_JUEGO = 15 * 60e3;
+  const tarjetas = [...document.querySelectorAll(".tarjeta-proximo")];
+  const vacia = document.querySelector(".proximo.vacio");
   const tick = () => {
-    const ms = fin - Date.now();
-    if (ms <= 0) { out.textContent = ms > -45 * 60e3 ? "Se está jugando" : ""; return; }
-    const d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
-    out.textContent = d > 0 ? `Faltan ${d} d ${h} h` : h > 0 ? `Faltan ${h} h ${String(m).padStart(2, "0")} min` : `Faltan ${m} min`;
+    const ahora = Date.now();
+    const actual = tarjetas.find((t) => new Date(t.dataset.inicio).getTime() + EN_JUEGO > ahora);
+    tarjetas.forEach((t) => (t.hidden = t !== actual));
+    if (vacia) vacia.hidden = Boolean(actual);
+    if (actual) {
+      const out = actual.querySelector(".cuenta");
+      const ms = new Date(actual.dataset.inicio).getTime() - ahora;
+      if (ms <= 0) out.textContent = "Se está jugando";
+      else {
+        const d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
+        out.textContent = d > 0 ? `Faltan ${d} d ${h} h` : h > 0 ? `Faltan ${h} h ${String(m).padStart(2, "0")} min` : `Faltan ${m} min`;
+      }
+    }
+    document.querySelectorAll("li.partido[data-inicio]").forEach((li) => {
+      const empezo = new Date(li.dataset.inicio).getTime() <= ahora;
+      const antes = li.querySelector(".antes"), pend = li.querySelector(".pendiente");
+      if (antes) antes.hidden = empezo;
+      if (pend) pend.hidden = !empezo;
+    });
   };
   tick();
   setInterval(tick, 30e3);

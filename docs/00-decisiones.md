@@ -38,6 +38,9 @@ Este documento **manda sobre el resto**: si algo de otro doc contradice esto, va
 | W.O. | Cuentan como cualquier resultado ("victoria es victoria") en récords, rachas y forma; solo se marcan "por W.O." |
 | Vitrina | Sección propia. Títulos automáticos de la LVA (torneos con Vultur campeón) y de la vitrina oficial de VPN, más los cargados en `config/titulos.yaml`. Hoy: 0 títulos verificados en las tres ligas → vitrina vieja con telarañas (guiño cómico) con datos reales por liga |
 | Página de estado | `estado.html`, enlazada en el pie: última actualización por liga, fallas y totales |
+| Próximo partido en juego | La tarjeta muestra "Se está jugando" 15 minutos desde el inicio y después pasa sola al siguiente partido (lo hace el navegador con la hora real) |
+| Esta semana | Los partidos de la noche quedan en la lista hasta que termina el día; si ya empezó y no hay resultado, "?" en gris con "Ver detalles" |
+| Zonas de las tablas | Las que publica cada liga: VPN (líder, playoffs), LVA (Ascenso/Campeón, Clasifican, Descenso, con sus nombres) y VPUG (ascenso, reducido, descenso), con leyenda |
 | Redes del club | No van (el club no tiene) |
 | **Créditos a las ligas** | **Obligatorio.** Que no parezca que les sacamos la información: cada competencia aparece con su **nombre completo, logo, link a su web y sus redes**. En cada tabla, partido y estadística va "Fuente: LVA/VPN/VPUG →" con link a la página oficial. Habrá una sección "Nuestras competencias" en Inicio y en el pie de todas las páginas |
 | Imágenes | Escudos de rivales, logos de ligas y escudo propio **tomados de las páginas de las ligas**, siempre con crédito |

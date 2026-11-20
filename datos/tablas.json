@@ -334,7 +334,7 @@
     "mov": null
    }
   ],
-  "actualizado": "2026-11-20T00:27:19+00:00"
+  "actualizado": "2026-11-20T00:43:09+00:00"
  },
  {
   "id": "vpn-6449",
@@ -356,11 +356,11 @@
     "gc": 7,
     "dg": 16,
     "pts": 27,
-    "zona": null,
+    "zona": "lider",
     "pos_fuente": 1,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 1,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 2,
@@ -374,11 +374,11 @@
     "gc": 3,
     "dg": 14,
     "pts": 24,
-    "zona": null,
+    "zona": "playoff",
     "pos_fuente": 2,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 3,
     "es_vultur": true,
-    "mov": null
+    "mov": 1
    },
    {
     "pos": 3,
@@ -392,11 +392,11 @@
     "gc": 7,
     "dg": 11,
     "pts": 21,
-    "zona": null,
+    "zona": "playoff",
     "pos_fuente": 3,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 2,
     "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
     "pos": 4,
@@ -410,11 +410,11 @@
     "gc": 4,
     "dg": 10,
     "pts": 19,
-    "zona": null,
+    "zona": "playoff",
     "pos_fuente": 4,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 5,
     "es_vultur": false,
-    "mov": null
+    "mov": 1
    },
    {
     "pos": 5,
@@ -428,11 +428,11 @@
     "gc": 11,
     "dg": 7,
     "pts": 19,
-    "zona": null,
+    "zona": "playoff",
     "pos_fuente": 5,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 4,
     "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
     "pos": 6,
@@ -446,11 +446,11 @@
     "gc": 2,
     "dg": 6,
     "pts": 15,
-    "zona": null,
+    "zona": "playoff",
     "pos_fuente": 6,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 6,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 7,
@@ -464,11 +464,11 @@
     "gc": 5,
     "dg": 9,
     "pts": 14,
-    "zona": null,
+    "zona": "playoff",
     "pos_fuente": 7,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 7,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 8,
@@ -482,11 +482,11 @@
     "gc": 8,
     "dg": 5,
     "pts": 12,
-    "zona": null,
+    "zona": "playoff",
     "pos_fuente": 8,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 12,
     "es_vultur": false,
-    "mov": null
+    "mov": 4
    },
    {
     "pos": 9,
@@ -500,11 +500,11 @@
     "gc": 13,
     "dg": -4,
     "pts": 11,
-    "zona": null,
+    "zona": "playoff",
     "pos_fuente": 9,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 11,
     "es_vultur": false,
-    "mov": null
+    "mov": 2
    },
    {
     "pos": 10,
@@ -520,9 +520,9 @@
     "pts": 11,
     "zona": null,
     "pos_fuente": 10,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 8,
     "es_vultur": false,
-    "mov": null
+    "mov": -2
    },
    {
     "pos": 11,
@@ -538,9 +538,9 @@
     "pts": 10,
     "zona": null,
     "pos_fuente": 11,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 9,
     "es_vultur": false,
-    "mov": null
+    "mov": -2
    },
    {
     "pos": 12,
@@ -556,9 +556,9 @@
     "pts": 10,
     "zona": null,
     "pos_fuente": 12,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 10,
     "es_vultur": false,
-    "mov": null
+    "mov": -2
    },
    {
     "pos": 13,
@@ -574,9 +574,9 @@
     "pts": 9,
     "zona": null,
     "pos_fuente": 13,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 13,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 14,
@@ -592,9 +592,9 @@
     "pts": 9,
     "zona": null,
     "pos_fuente": 14,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 18,
     "es_vultur": false,
-    "mov": null
+    "mov": 4
    },
    {
     "pos": 15,
@@ -610,9 +610,9 @@
     "pts": 9,
     "zona": null,
     "pos_fuente": 15,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 14,
     "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
     "pos": 16,
@@ -628,9 +628,9 @@
     "pts": 8,
     "zona": null,
     "pos_fuente": 16,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 19,
     "es_vultur": false,
-    "mov": null
+    "mov": 3
    },
    {
     "pos": 17,
@@ -646,9 +646,9 @@
     "pts": 8,
     "zona": null,
     "pos_fuente": 17,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 15,
     "es_vultur": false,
-    "mov": null
+    "mov": -2
    },
    {
     "pos": 18,
@@ -664,9 +664,9 @@
     "pts": 7,
     "zona": null,
     "pos_fuente": 18,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 20,
     "es_vultur": false,
-    "mov": null
+    "mov": 2
    },
    {
     "pos": 19,
@@ -682,9 +682,9 @@
     "pts": 7,
     "zona": null,
     "pos_fuente": 19,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 16,
     "es_vultur": false,
-    "mov": null
+    "mov": -3
    },
    {
     "pos": 20,
@@ -700,9 +700,9 @@
     "pts": 6,
     "zona": null,
     "pos_fuente": 20,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 17,
     "es_vultur": false,
-    "mov": null
+    "mov": -3
    },
    {
     "pos": 21,
@@ -718,12 +718,12 @@
     "pts": 0,
     "zona": null,
     "pos_fuente": 21,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 21,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    }
   ],
-  "actualizado": "2026-11-20T00:27:43+00:00"
+  "actualizado": "2026-11-20T00:43:39+00:00"
  },
  {
   "id": "lva-1d8d2b5c",
@@ -732,6 +732,9 @@
   "temporada": "",
   "logo": null,
   "url_origen": "https://ligavirtualargentina.com/tabla-posiciones",
+  "nombres_zona": {
+   "clasifica": "Clasifican (4)"
+  },
   "filas": [
    {
     "pos": 1,
@@ -745,7 +748,7 @@
     "gc": 3,
     "dg": 9,
     "pts": 20,
-    "zona": null,
+    "zona": "clasifica",
     "es_vultur": false,
     "mov": null
    },
@@ -761,7 +764,7 @@
     "gc": 4,
     "dg": 7,
     "pts": 20,
-    "zona": null,
+    "zona": "clasifica",
     "es_vultur": false,
     "mov": null
    },
@@ -777,7 +780,7 @@
     "gc": 8,
     "dg": 4,
     "pts": 17,
-    "zona": null,
+    "zona": "clasifica",
     "es_vultur": false,
     "mov": null
    },
@@ -793,7 +796,7 @@
     "gc": 8,
     "dg": 5,
     "pts": 16,
-    "zona": null,
+    "zona": "clasifica",
     "es_vultur": false,
     "mov": null
    },
@@ -894,7 +897,7 @@
     "mov": null
    }
   ],
-  "actualizado": "2026-11-20T00:28:20+00:00"
+  "actualizado": "2026-11-20T00:44:12+00:00"
  },
  {
   "id": "lva-ecfa9127",
@@ -903,6 +906,10 @@
   "temporada": "",
   "logo": null,
   "url_origen": "https://ligavirtualargentina.com/tabla-posiciones",
+  "nombres_zona": {
+   "ascenso": "Ascenso/Campeón",
+   "descenso": "Descenso"
+  },
   "filas": [
    {
     "pos": 1,
@@ -916,7 +923,7 @@
     "gc": 10,
     "dg": 19,
     "pts": 35,
-    "zona": null,
+    "zona": "ascenso",
     "es_vultur": false,
     "mov": null
    },
@@ -1204,7 +1211,7 @@
     "gc": 28,
     "dg": -15,
     "pts": 8,
-    "zona": null,
+    "zona": "descenso",
     "es_vultur": false,
     "mov": null
    },
@@ -1220,11 +1227,11 @@
     "gc": 22,
     "dg": -18,
     "pts": 6,
-    "zona": null,
+    "zona": "descenso",
     "es_vultur": false,
     "mov": null
    }
   ],
-  "actualizado": "2026-11-20T00:28:20+00:00"
+  "actualizado": "2026-11-20T00:44:12+00:00"
  }
 ]

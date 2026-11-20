@@ -11,7 +11,7 @@
 {%- endmacro %}
 
 {% macro fila_partido(p, fecha=False) -%}
-<li title="{{ p.liga_ui.nombre }}" class="partido liga-{{ p.liga }}{% if p.resultado %} r-{{ p.resultado }}{% endif %}" data-liga="{{ p.liga }}">
+<li title="{{ p.liga_ui.nombre }}"{% if not p.resultado %} data-inicio="{{ p.dt.isoformat() }}"{% endif %} class="partido liga-{{ p.liga }}{% if p.resultado %} r-{{ p.resultado }}{% endif %}" data-liga="{{ p.liga }}">
   <time class="p-hora{% if fecha %} con-fecha{% endif %}" datetime="{{ p.dt.isoformat() }}">{% if fecha %}{{ p.noche.strftime('%d/%m') }}<small>{{ p.hora }}</small>{% else %}{{ p.hora }}{% endif %}</time>
   <span class="p-rival">
     {% if p.rival.escudo %}<img src="{{ p.rival.escudo }}" alt="" width="28" height="28" loading="lazy">{% else %}<span class="sin-escudo" aria-hidden="true"></span>{% endif %}
@@ -24,7 +24,9 @@
         <small class="ver-det">Ver detalles</small>
       </a>
     {% else %}
-      <a class="ver" href="{{ p.pagina }}">Ver detalles</a>
+      {% set empezo = p.empezo %}
+      <a class="ver antes"{% if empezo %} hidden{% endif %} href="{{ p.pagina }}">Ver detalles</a>
+      <a class="pendiente"{% if not empezo %} hidden{% endif %} href="{{ p.pagina }}" aria-label="Resultado todavía no cargado, ver detalles"><span class="marcador">?</span><small class="ver-det">Ver detalles</small></a>
     {% endif %}
   </span>
   {% if p.goleadores or p.mvp %}

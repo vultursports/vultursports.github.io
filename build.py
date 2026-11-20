@@ -246,6 +246,11 @@ def main():
     for t in tablas:
         t["liga_ui"] = ligas[t["liga"]]
         t["mini"] = ventana(t["filas"])
+        orden_z = ['lider', 'ascenso', 'playoff', 'reducido', 'clasifica', 'descenso']
+        nombres_z = {'lider': 'Líder', 'ascenso': 'Ascenso', 'playoff': 'Playoffs', 'reducido': 'Reducido', 'clasifica': 'Clasifica', 'descenso': 'Descenso'}
+        presentes = {f["zona"] for f in t["filas"] if f.get("zona")}
+        nombres_t = {**nombres_z, **(t.get("nombres_zona") or {})}
+        t["leyenda"] = [(z, nombres_t.get(z, z.title())) for z in sorted(presentes, key=lambda z: orden_z.index(z) if z in orden_z else 99)]
         t["corto"] = re.sub(r"\s*\(.*?\)", "", t["competencia"]).replace("Liga Argentina ", "").strip()
         t["vultur"] = next((f for f in t["filas"] if f["es_vultur"]), None)
         t["actualizado_txt"] = a_local(t["actualizado"]).strftime("%d/%m %H:%M") if t.get("actualizado") else ""
@@ -269,7 +274,10 @@ def main():
         p["pos_nos"] = next((f["pos"] for t in tablas if t["id"] == p.get("competencia_id") for f in t["filas"] if f["es_vultur"]), None)
         p["pos_rival"] = mapa.get(jug_mod.clave(p["rival"]["nombre"]))
 
-    proximos = [p for p in partidos if p["resultado"] is None and p["dt"] >= ahora - timedelta(minutes=45)]
+    for p in partidos:
+        p["empezo"] = p["dt"] <= ahora
+    EN_JUEGO = timedelta(minutes=15)  # tiempo que la tarjeta muestra "Se está jugando" antes de pasar al siguiente
+    proximos = [p for p in partidos if p["resultado"] is None and p["dt"] >= ahora - EN_JUEGO]
     jugados = [p for p in partidos if p["resultado"]][::-1]
     proximo = proximos[0] if proximos else None
 
@@ -284,7 +292,10 @@ def main():
         return (2, "")
     tablas.sort(key=orden_comp)
     hoy_noche = (ahora - timedelta(hours=6)).date()
-    semana = [p for p in proximos if p["noche"] <= hoy_noche + timedelta(days=7)]
+    # Esta semana: desde la noche de hoy (incluye los partidos ya jugados hoy, con o sin resultado)
+    semana = sorted((p for p in partidos if hoy_noche <= p["noche"] <= hoy_noche + timedelta(days=7)), key=lambda p: p["dt"])
+    # Tarjetas del próximo partido: la página pasa sola de una a otra a medida que empiezan
+    tarjetas = proximos[:6]
 
     def agrupar(lista):
         grupos = []
@@ -511,7 +522,7 @@ def main():
                              "ok_reciente": bool(ok) and (ahora - ok) < timedelta(hours=12),
                              "partidos": sum(1 for p in partidos if p["liga"] == k)})
 
-    ctx = dict(club=cfg["club"]["nombre"], v=og_version, records=records, estado_ligas=estado_ligas,
+    ctx = dict(club=cfg["club"]["nombre"], v=og_version, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas,
                titulos=titulos, estantes=estantes,
                total_partidos=len(partidos), total_jugadores=len(js), total_rivales=len(rivales),
                total_escudos=len(list((DATOS / "escudos").glob("*.webp"))), plantel_datos=plantel_datos, temporadas_lista=temporadas_lista,

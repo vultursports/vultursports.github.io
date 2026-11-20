@@ -24,7 +24,7 @@
       {% if t.forma %}<p class="forma-linea">Nuestros últimos partidos {{ forma(t.forma) }}</p>{% endif %}
     </header>
     <div class="scroll-x">{{ tabla_pos(t, t.filas, completa=True) }}</div>
-    {% if t.liga == 'vpug' %}<p class="leyenda"><span class="z z-ascenso"></span>Ascenso <span class="z z-reducido"></span>Reducido <span class="z z-descenso"></span>Descenso</p>{% endif %}
+    {% if t.leyenda %}<p class="leyenda">{% for z, nombre in t.leyenda %}<span class="z z-{{ z }}"></span>{{ nombre }} {% endfor %}</p>{% endif %}
     <p class="fuente">Fuente: <a href="{{ t.url_origen }}" target="_blank" rel="noopener">tabla oficial de {{ t.liga_ui.nombre }}</a>. Actualizada el {{ t.actualizado_txt }}.</p>
   </section>
   {% endfor %}

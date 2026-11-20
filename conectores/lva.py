@@ -95,11 +95,15 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             filas = pg.evaluate("""() => [...document.querySelectorAll('table')].map(t =>
                 [...t.querySelectorAll('tbody tr')].map(tr => ({
                     celdas: [...tr.querySelectorAll('td')].map(td => td.innerText.trim()),
-                    escudo: tr.querySelector('img') ? tr.querySelector('img').src : null
+                    escudo: tr.querySelector('img') ? tr.querySelector('img').src : null,
+                    clase: tr.querySelector('td') ? tr.querySelector('td').className : ''
                 })))""")
+            # Leyenda que publica la LVA debajo de la tabla ("REFERENCIAS: Ascenso/Campeón · Descenso")
+            texto = pg.inner_text("main")
+            refs = texto.split("REFERENCIAS:", 1)[1].strip().split("\n")[:4] if "REFERENCIAS:" in texto else []
             tabla = next((t for t in filas if any(nombre_club in " ".join(r["celdas"]).lower() for r in t)), None)
             if tabla:
-                tablas.append(_tabla(tid, nombre, tabla, nombre_club))
+                tablas.append(_tabla(tid, nombre, tabla, nombre_club, refs))
 
         # 3) Estadísticas por jugador (la página carga las de todos los partidos del torneo)
         respuestas.clear()
@@ -211,7 +215,14 @@ def _num(x: str) -> int:
         return 0
 
 
-def _tabla(tid: str, nombre: str, filas: list, nombre_club: str) -> dict:
+def _tabla(tid: str, nombre: str, filas: list, nombre_club: str, refs: list | None = None) -> dict:
+    # Zonas: la LVA pinta el número de puesto de verde (asciende / clasifica) o de rojo (desciende)
+    refs = [r.strip() for r in (refs or []) if r.strip()]
+    verde = next((r for r in refs if not r.lower().startswith("descen")), "")
+    zona_verde = "clasifica" if verde.lower().startswith("clasific") else "ascenso"
+    nombres = {zona_verde: verde or zona_verde.title()}
+    if any(r.lower().startswith("descen") for r in refs):
+        nombres["descenso"] = next(r for r in refs if r.lower().startswith("descen"))
     out = []
     for r in filas:
         c = r["celdas"]
@@ -224,7 +235,7 @@ def _tabla(tid: str, nombre: str, filas: list, nombre_club: str) -> dict:
             "escudo": r["escudo"],
             "pj": _num(c[2]), "g": _num(c[3]), "e": _num(c[4]), "p": _num(c[5]),
             "gf": _num(c[6]), "gc": _num(c[7]), "dg": _num(c[8]), "pts": _num(c[9]),
-            "zona": None,
+            "zona": zona_verde if "green" in (r.get("clase") or "") else ("descenso" if "red" in (r.get("clase") or "") else None),
             "es_vultur": nombre_club in c[1].lower(),
         })
     return {
@@ -234,6 +245,7 @@ def _tabla(tid: str, nombre: str, filas: list, nombre_club: str) -> dict:
         "temporada": "",
         "logo": None,
         "url_origen": f"{SITIO}/tabla-posiciones",
+        "nombres_zona": nombres,
         "filas": out,
     }
 

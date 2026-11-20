@@ -50,6 +50,11 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             filas = [r for r in st["table"] if not grupos or grupos.get(r["tid"]) == mi_grupo]
             filas.sort(key=lambda r: r["pos"])
             # VPN publica posiciones de la tabla general; el movimiento se calcula dentro del grupo
+            zonas_liga = {"leader": "lider", "playoffs": "playoff", "promotion": "ascenso", "relegation": "descenso"}
+            zona_de = {}
+            for z in liga.get("standingsZones") or []:
+                for n in range(z.get("position_from") or 0, (z.get("position_to") or 0) + 1):
+                    zona_de[n] = zonas_liga.get(z.get("outcome"), z.get("outcome"))
             orden_ant = sorted((r for r in filas if r.get("prevPos")), key=lambda r: r["prevPos"])
             pos_ant_grupo = {r["tid"]: i + 1 for i, r in enumerate(orden_ant)}
             nombre_comp = liga["name"] + (f" ({mi_grupo.title()})" if mi_grupo else "")
@@ -69,7 +74,7 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                     "escudo": r["team"].get("logoSmallUrl") or r["team"].get("logoUrl"),
                     "pj": r["gp"], "g": r["gw"], "e": r["gt"], "p": r["gl"],
                     "gf": r["gf"], "gc": r["gc"], "dg": r["gd"], "pts": r["pts"],
-                    "zona": None,
+                    "zona": zona_de.get(i + 1),
                     "pos_fuente": i + 1, "pos_ant_fuente": pos_ant_grupo.get(r["tid"]),
                     "es_vultur": r["tid"] == tid,
                 } for i, r in enumerate(filas)],

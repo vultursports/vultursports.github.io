@@ -2,10 +2,10 @@
 {% from "_macros.html" import forma, chip, fila_partido, tabla_pos %}
 {% block contenido %}
 
-{% if proximo %}
-<section class="proximo liga-{{ proximo.liga }}" aria-labelledby="t-proximo">
+{% for proximo in tarjetas %}
+<section class="proximo tarjeta-proximo liga-{{ proximo.liga }}" aria-labelledby="t-proximo-{{ loop.index }}" data-inicio="{{ proximo.dt.isoformat() }}"{% if not loop.first %} hidden{% endif %}>
   <div class="proximo-marco">
-    <h1 id="t-proximo" class="proximo-titulo">
+    <h1 id="t-proximo-{{ loop.index }}" class="proximo-titulo">
       {% if proximo.noche == hoy_noche %}Hoy jugamos{% else %}Próximo partido{% endif %}
     </h1>
     <p class="proximo-comp">{{ chip(proximo.liga_ui) }} {{ proximo.competencia }}, {{ proximo.jornada|lower }}</p>
@@ -15,7 +15,7 @@
         <span>Vultur Sports</span>{% if proximo.pos_nos and not proximo.resultado %}<small class="pos-tabla">{{ proximo.pos_nos }}° en la tabla</small>{% endif %}
       </div>
       <div class="cuando">
-        <time datetime="{{ proximo.dt.isoformat() }}" data-cuenta="{{ proximo.dt.isoformat() }}">
+        <time datetime="{{ proximo.dt.isoformat() }}">
           <span class="hora">{{ proximo.hora }}</span>
           <span class="dia"><span class="f-larga">{{ proximo.noche_txt }}</span><span class="f-corta">{{ proximo.noche_corta }}</span></span>
         </time>
@@ -29,9 +29,9 @@
     <p class="proximo-pie">Somos {{ proximo.condicion|lower }}. <a href="{{ proximo.pagina }}">Detalles del partido</a></p>
   </div>
 </section>
-{% else %}
-<section class="proximo vacio"><h1 class="proximo-titulo">Sin partidos programados</h1><p>Cuando las ligas publiquen el próximo fixture, aparecerá aquí.</p></section>
-{% endif %}
+{% endfor %}
+<section class="proximo vacio"{% if tarjetas %} hidden{% endif %}><h1 class="proximo-titulo">Sin partidos programados</h1><p>Cuando las ligas publiquen el próximo fixture, aparecerá aquí.</p></section>
+
 
 {% if avisos %}
 <section class="avisos" aria-label="Avisos">

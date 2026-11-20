@@ -194,6 +194,9 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
   background: var(--asfalto-2); color: var(--hueso);
 }
 .marcador i { font-style: normal; color: var(--plata-osc); margin: 0 2px; }
+.pendiente .marcador { color: var(--plata-osc); background: transparent; box-shadow: inset 0 0 0 1px var(--linea); }
+.p-res a.pendiente { text-decoration: none; }
+.ver[hidden], .pendiente[hidden] { display: none !important; }
 .r-g .marcador { background: var(--dorado); color: var(--carbon); }
 .r-g .marcador i { color: rgba(26,26,26,.55); }
 .r-p .marcador { background: transparent; box-shadow: inset 0 0 0 2px var(--rojo); }
@@ -238,13 +241,15 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
 .tabla tr.nosotros { background: linear-gradient(90deg, rgba(216,35,42,.22), rgba(216,35,42,.05)); }
 .tabla tr.nosotros td, .tabla tr.nosotros th { color: #fff; font-weight: 700; }
 .tabla tr.nosotros .n { box-shadow: inset 4px 0 0 var(--rojo); color: #fff; }
+.tabla tr.z-lider .n { box-shadow: inset 3px 0 0 #3ecf74; }
+.tabla tr.z-playoff .n, .tabla tr.z-clasifica .n { box-shadow: inset 3px 0 0 #2f86d6; }
 .tabla tr.z-ascenso .n { box-shadow: inset 3px 0 0 #47c58f; }
 .tabla tr.z-reducido .n { box-shadow: inset 3px 0 0 var(--plata); }
 .tabla tr.z-descenso .n { box-shadow: inset 3px 0 0 var(--rojo); }
 @media (max-width: 520px) { .tabla.completa .opc { display: none; } }
 .leyenda { font-size: .8rem; color: var(--plata); display: flex; gap: 6px 12px; flex-wrap: wrap; align-items: center; margin: 8px 0 0; }
 .z { display: inline-block; width: 10px; height: 10px; margin-right: -6px; }
-.z.z-ascenso { background: #47c58f; } .z.z-reducido { background: var(--plata); } .z.z-descenso { background: var(--rojo); }
+.z.z-lider { background: #3ecf74; } .z.z-playoff, .z.z-clasifica { background: #2f86d6; } .z.z-ascenso { background: #47c58f; } .z.z-reducido { background: var(--plata); } .z.z-descenso { background: var(--rojo); }
 
 /* Detalle de partido */
 .volver { margin: 0 0 12px; font-size: .9rem; color: var(--plata); }
