@@ -15,6 +15,22 @@
   "filas": [
    {
     "pos": 1,
+    "equipo": "Pueblo Manya",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp",
+    "pj": 7,
+    "g": 6,
+    "e": 1,
+    "p": 0,
+    "gf": 15,
+    "gc": 3,
+    "dg": 12,
+    "pts": 19,
+    "zona": "ascenso",
+    "es_vultur": false,
+    "mov": 2
+   },
+   {
+    "pos": 2,
     "equipo": "InfinitX",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-904-1793284842685.webp",
     "pj": 6,
@@ -27,10 +43,10 @@
     "pts": 18,
     "zona": "ascenso",
     "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
-    "pos": 2,
+    "pos": 3,
     "equipo": "AllBoysCantera",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp",
     "pj": 6,
@@ -41,28 +57,28 @@
     "gc": 0,
     "dg": 9,
     "pts": 18,
-    "zona": "ascenso",
-    "es_vultur": false,
-    "mov": null
-   },
-   {
-    "pos": 3,
-    "equipo": "Pueblo Manya",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp",
-    "pj": 6,
-    "g": 5,
-    "e": 1,
-    "p": 0,
-    "gf": 14,
-    "gc": 3,
-    "dg": 11,
-    "pts": 16,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
     "pos": 4,
+    "equipo": "AtorrantesFC",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-660-1793146525424.webp",
+    "pj": 7,
+    "g": 4,
+    "e": 2,
+    "p": 1,
+    "gf": 9,
+    "gc": 7,
+    "dg": 2,
+    "pts": 14,
+    "zona": "reducido",
+    "es_vultur": false,
+    "mov": 2
+   },
+   {
+    "pos": 5,
     "equipo": "ALMA CRIOLLA",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp",
     "pj": 6,
@@ -75,10 +91,10 @@
     "pts": 13,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
-    "pos": 5,
+    "pos": 6,
     "equipo": "DeportivoFumeta",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-793-1793215711655.webp",
     "pj": 6,
@@ -91,23 +107,7 @@
     "pts": 13,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": null
-   },
-   {
-    "pos": 6,
-    "equipo": "AtorrantesFC",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-660-1793146525424.webp",
-    "pj": 6,
-    "g": 4,
-    "e": 1,
-    "p": 1,
-    "gf": 9,
-    "gc": 7,
-    "dg": 2,
-    "pts": 13,
-    "zona": "reducido",
-    "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
     "pos": 7,
@@ -123,7 +123,7 @@
     "pts": 12,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 8,
@@ -139,23 +139,23 @@
     "pts": 11,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 9,
     "equipo": "Vidon Bar CBA",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-708-1793160433231.webp",
-    "pj": 6,
+    "pj": 7,
     "g": 3,
-    "e": 1,
+    "e": 2,
     "p": 2,
     "gf": 4,
     "gc": 3,
     "dg": 1,
-    "pts": 10,
+    "pts": 11,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 10,
@@ -171,7 +171,7 @@
     "pts": 8,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 11,
@@ -187,7 +187,7 @@
     "pts": 7,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 12,
@@ -203,7 +203,7 @@
     "pts": 7,
     "zona": null,
     "es_vultur": true,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 13,
@@ -219,10 +219,26 @@
     "pts": 6,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 14,
+    "equipo": "JOVATOS JUNIORS",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-137-1793991216536.webp",
+    "pj": 6,
+    "g": 1,
+    "e": 2,
+    "p": 3,
+    "gf": 4,
+    "gc": 10,
+    "dg": -6,
+    "pts": 5,
+    "zona": null,
+    "es_vultur": false,
+    "mov": 2
+   },
+   {
+    "pos": 15,
     "equipo": "Celestiales",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp",
     "pj": 7,
@@ -235,10 +251,10 @@
     "pts": 5,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
-    "pos": 15,
+    "pos": 16,
     "equipo": "Almirante Brown",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-1443-1793679154880.webp",
     "pj": 6,
@@ -251,39 +267,23 @@
     "pts": 3,
     "zona": null,
     "es_vultur": false,
-    "mov": null
-   },
-   {
-    "pos": 16,
-    "equipo": "JOVATOS JUNIORS",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-137-1793991216536.webp",
-    "pj": 5,
-    "g": 0,
-    "e": 2,
-    "p": 3,
-    "gf": 2,
-    "gc": 9,
-    "dg": -7,
-    "pts": 2,
-    "zona": null,
-    "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
     "pos": 17,
     "equipo": "Interior SAD",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-162-1793991899619.webp",
-    "pj": 5,
+    "pj": 6,
     "g": 0,
     "e": 1,
-    "p": 4,
-    "gf": 1,
-    "gc": 9,
-    "dg": -8,
+    "p": 5,
+    "gf": 2,
+    "gc": 11,
+    "dg": -9,
     "pts": 1,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 18,
@@ -299,7 +299,7 @@
     "pts": 0,
     "zona": "descenso",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 19,
@@ -315,26 +315,26 @@
     "pts": 0,
     "zona": "descenso",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 20,
     "equipo": "CA Colegiales",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-145-1793989174427.webp",
-    "pj": 5,
+    "pj": 6,
     "g": 0,
     "e": 0,
-    "p": 5,
+    "p": 6,
     "gf": 0,
-    "gc": 11,
-    "dg": -11,
+    "gc": 12,
+    "dg": -12,
     "pts": 0,
     "zona": "descenso",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    }
   ],
-  "actualizado": "2026-11-20T05:11:03+00:00"
+  "actualizado": "2026-11-20T14:15:38+00:00"
  },
  {
   "id": "vpn-6449",
@@ -363,7 +363,7 @@
     "pos_fuente": 1,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 2,
@@ -381,7 +381,7 @@
     "pos_fuente": 2,
     "pos_ant_fuente": null,
     "es_vultur": true,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 3,
@@ -399,7 +399,7 @@
     "pos_fuente": 3,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 4,
@@ -417,7 +417,7 @@
     "pos_fuente": 4,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 5,
@@ -435,7 +435,7 @@
     "pos_fuente": 5,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 6,
@@ -453,7 +453,7 @@
     "pos_fuente": 6,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 7,
@@ -471,7 +471,7 @@
     "pos_fuente": 7,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 8,
@@ -489,7 +489,7 @@
     "pos_fuente": 8,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 9,
@@ -507,7 +507,7 @@
     "pos_fuente": 9,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 10,
@@ -525,7 +525,7 @@
     "pos_fuente": 10,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 11,
@@ -543,7 +543,7 @@
     "pos_fuente": 11,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 12,
@@ -561,7 +561,7 @@
     "pos_fuente": 12,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 13,
@@ -579,7 +579,7 @@
     "pos_fuente": 13,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 14,
@@ -597,7 +597,7 @@
     "pos_fuente": 14,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 15,
@@ -615,7 +615,7 @@
     "pos_fuente": 15,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 16,
@@ -633,7 +633,7 @@
     "pos_fuente": 16,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 17,
@@ -651,7 +651,7 @@
     "pos_fuente": 17,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 18,
@@ -669,7 +669,7 @@
     "pos_fuente": 18,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 19,
@@ -687,7 +687,7 @@
     "pos_fuente": 19,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 20,
@@ -705,7 +705,7 @@
     "pos_fuente": 20,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 21,
@@ -723,10 +723,10 @@
     "pos_fuente": 21,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    }
   ],
-  "actualizado": "2026-11-20T05:11:38+00:00"
+  "actualizado": "2026-11-20T14:16:13+00:00"
  },
  {
   "id": "lva-1d8d2b5c",
@@ -753,7 +753,7 @@
     "pts": 20,
     "zona": "clasifica",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 2,
@@ -769,7 +769,7 @@
     "pts": 20,
     "zona": "clasifica",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 3,
@@ -785,7 +785,7 @@
     "pts": 17,
     "zona": "clasifica",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 4,
@@ -801,7 +801,7 @@
     "pts": 16,
     "zona": "clasifica",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 5,
@@ -817,7 +817,7 @@
     "pts": 11,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 6,
@@ -833,7 +833,7 @@
     "pts": 11,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 7,
@@ -849,7 +849,7 @@
     "pts": 10,
     "zona": null,
     "es_vultur": true,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 8,
@@ -865,7 +865,7 @@
     "pts": 9,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 9,
@@ -881,7 +881,7 @@
     "pts": 8,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 10,
@@ -897,7 +897,7 @@
     "pts": 4,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    }
   ],
   "actualizado": "2026-11-20T05:12:16+00:00"
@@ -918,65 +918,65 @@
     "pos": 1,
     "equipo": "Cerrito XXI",
     "escudo": "https://i.ibb.co/VdshDpD/1000250273.jpg",
-    "pj": 15,
-    "g": 12,
+    "pj": 16,
+    "g": 13,
     "e": 1,
     "p": 2,
-    "gf": 29,
+    "gf": 30,
     "gc": 10,
-    "dg": 19,
-    "pts": 37,
+    "dg": 20,
+    "pts": 40,
     "zona": "ascenso",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 2,
     "equipo": "Deportivo Centro",
     "escudo": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png",
-    "pj": 14,
-    "g": 11,
-    "e": 2,
+    "pj": 16,
+    "g": 12,
+    "e": 3,
     "p": 1,
-    "gf": 29,
-    "gc": 10,
-    "dg": 19,
-    "pts": 35,
+    "gf": 32,
+    "gc": 12,
+    "dg": 20,
+    "pts": 39,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 3,
     "equipo": "Villa San Carlos",
     "escudo": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png",
-    "pj": 14,
-    "g": 11,
+    "pj": 16,
+    "g": 12,
     "e": 2,
-    "p": 1,
-    "gf": 21,
-    "gc": 4,
-    "dg": 17,
-    "pts": 35,
+    "p": 2,
+    "gf": 26,
+    "gc": 8,
+    "dg": 18,
+    "pts": 38,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 4,
     "equipo": "RICURA FC",
     "escudo": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg",
-    "pj": 14,
-    "g": 10,
-    "e": 3,
+    "pj": 16,
+    "g": 11,
+    "e": 4,
     "p": 1,
-    "gf": 27,
+    "gf": 33,
     "gc": 6,
-    "dg": 21,
-    "pts": 33,
+    "dg": 27,
+    "pts": 37,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 5,
@@ -992,10 +992,26 @@
     "pts": 28,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 6,
+    "equipo": "UNITED MITO FC",
+    "escudo": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png",
+    "pj": 14,
+    "g": 7,
+    "e": 5,
+    "p": 2,
+    "gf": 21,
+    "gc": 7,
+    "dg": 14,
+    "pts": 26,
+    "zona": null,
+    "es_vultur": false,
+    "mov": 1
+   },
+   {
+    "pos": 7,
     "equipo": "Attlas eSports",
     "escudo": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png",
     "pj": 15,
@@ -1008,23 +1024,7 @@
     "pts": 25,
     "zona": null,
     "es_vultur": false,
-    "mov": null
-   },
-   {
-    "pos": 7,
-    "equipo": "UNITED MITO FC",
-    "escudo": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png",
-    "pj": 13,
-    "g": 6,
-    "e": 5,
-    "p": 2,
-    "gf": 20,
-    "gc": 7,
-    "dg": 13,
-    "pts": 23,
-    "zona": null,
-    "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
     "pos": 8,
@@ -1040,23 +1040,23 @@
     "pts": 22,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 9,
     "equipo": "Acassuso eSports",
     "escudo": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg",
-    "pj": 14,
+    "pj": 16,
     "g": 7,
     "e": 1,
-    "p": 6,
+    "p": 8,
     "gf": 22,
-    "gc": 20,
-    "dg": 2,
+    "gc": 22,
+    "dg": 0,
     "pts": 22,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 10,
@@ -1072,7 +1072,7 @@
     "pts": 22,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 11,
@@ -1088,7 +1088,7 @@
     "pts": 19,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 12,
@@ -1104,7 +1104,7 @@
     "pts": 17,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 13,
@@ -1120,7 +1120,7 @@
     "pts": 15,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 14,
@@ -1136,7 +1136,7 @@
     "pts": 15,
     "zona": null,
     "es_vultur": true,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 15,
@@ -1152,7 +1152,7 @@
     "pts": 14,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 16,
@@ -1168,7 +1168,7 @@
     "pts": 14,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 17,
@@ -1184,39 +1184,39 @@
     "pts": 10,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 18,
     "equipo": "Predators FC",
     "escudo": "https://i.ibb.co/g22TRfX/1000536894.png",
-    "pj": 15,
+    "pj": 16,
     "g": 3,
     "e": 1,
-    "p": 11,
-    "gf": 8,
-    "gc": 28,
-    "dg": -20,
+    "p": 12,
+    "gf": 9,
+    "gc": 31,
+    "dg": -22,
     "pts": 10,
     "zona": null,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 19,
     "equipo": "Claypole eSports",
     "escudo": "https://i.ibb.co/ch8g3fY3/1000647394.png",
-    "pj": 14,
+    "pj": 15,
     "g": 1,
     "e": 5,
-    "p": 8,
+    "p": 9,
     "gf": 13,
-    "gc": 28,
-    "dg": -15,
+    "gc": 34,
+    "dg": -21,
     "pts": 8,
     "zona": "descenso",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 20,
@@ -1232,9 +1232,9 @@
     "pts": 6,
     "zona": "descenso",
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    }
   ],
-  "actualizado": "2026-11-20T05:12:16+00:00"
+  "actualizado": "2026-11-20T14:16:57+00:00"
  }
 ]

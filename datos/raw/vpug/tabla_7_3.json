@@ -29,6 +29,24 @@
   {
    "posicion": 1,
    "club": {
+    "id": 168,
+    "nombre": "Pueblo Manya",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
+   },
+   "pj": 7,
+   "g": 6,
+   "e": 1,
+   "p": 0,
+   "gf": 15,
+   "gc": 3,
+   "dg": 12,
+   "descuento": 0,
+   "pts": 19,
+   "zona": "ASCENSO"
+  },
+  {
+   "posicion": 2,
+   "club": {
     "id": 148,
     "nombre": "InfinitX",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-904-1793284842685.webp"
@@ -45,7 +63,7 @@
    "zona": "ASCENSO"
   },
   {
-   "posicion": 2,
+   "posicion": 3,
    "club": {
     "id": 129,
     "nombre": "AllBoysCantera",
@@ -60,28 +78,28 @@
    "dg": 9,
    "descuento": 0,
    "pts": 18,
-   "zona": "ASCENSO"
-  },
-  {
-   "posicion": 3,
-   "club": {
-    "id": 168,
-    "nombre": "Pueblo Manya",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
-   },
-   "pj": 6,
-   "g": 5,
-   "e": 1,
-   "p": 0,
-   "gf": 14,
-   "gc": 3,
-   "dg": 11,
-   "descuento": 0,
-   "pts": 16,
    "zona": "REDUCIDO"
   },
   {
    "posicion": 4,
+   "club": {
+    "id": 115,
+    "nombre": "AtorrantesFC",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-660-1793146525424.webp"
+   },
+   "pj": 7,
+   "g": 4,
+   "e": 2,
+   "p": 1,
+   "gf": 9,
+   "gc": 7,
+   "dg": 2,
+   "descuento": 0,
+   "pts": 14,
+   "zona": "REDUCIDO"
+  },
+  {
+   "posicion": 5,
    "club": {
     "id": 124,
     "nombre": "ALMA CRIOLLA",
@@ -99,7 +117,7 @@
    "zona": "REDUCIDO"
   },
   {
-   "posicion": 5,
+   "posicion": 6,
    "club": {
     "id": 135,
     "nombre": "DeportivoFumeta",
@@ -112,24 +130,6 @@
    "gf": 9,
    "gc": 3,
    "dg": 6,
-   "descuento": 0,
-   "pts": 13,
-   "zona": "REDUCIDO"
-  },
-  {
-   "posicion": 6,
-   "club": {
-    "id": 115,
-    "nombre": "AtorrantesFC",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-660-1793146525424.webp"
-   },
-   "pj": 6,
-   "g": 4,
-   "e": 1,
-   "p": 1,
-   "gf": 9,
-   "gc": 7,
-   "dg": 2,
    "descuento": 0,
    "pts": 13,
    "zona": "REDUCIDO"
@@ -177,15 +177,15 @@
     "nombre": "Vidon Bar CBA",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-708-1793160433231.webp"
    },
-   "pj": 6,
+   "pj": 7,
    "g": 3,
-   "e": 1,
+   "e": 2,
    "p": 2,
    "gf": 4,
    "gc": 3,
    "dg": 1,
    "descuento": 0,
-   "pts": 10,
+   "pts": 11,
    "zona": "REDUCIDO"
   },
   {
@@ -263,6 +263,24 @@
   {
    "posicion": 14,
    "club": {
+    "id": 137,
+    "nombre": "JOVATOS JUNIORS",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-137-1793991216536.webp"
+   },
+   "pj": 6,
+   "g": 1,
+   "e": 2,
+   "p": 3,
+   "gf": 4,
+   "gc": 10,
+   "dg": -6,
+   "descuento": 0,
+   "pts": 5,
+   "zona": null
+  },
+  {
+   "posicion": 15,
+   "club": {
     "id": 139,
     "nombre": "Celestiales",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp"
@@ -279,7 +297,7 @@
    "zona": null
   },
   {
-   "posicion": 15,
+   "posicion": 16,
    "club": {
     "id": 179,
     "nombre": "Almirante Brown",
@@ -297,37 +315,19 @@
    "zona": null
   },
   {
-   "posicion": 16,
-   "club": {
-    "id": 137,
-    "nombre": "JOVATOS JUNIORS",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-137-1793991216536.webp"
-   },
-   "pj": 5,
-   "g": 0,
-   "e": 2,
-   "p": 3,
-   "gf": 2,
-   "gc": 9,
-   "dg": -7,
-   "descuento": 0,
-   "pts": 2,
-   "zona": null
-  },
-  {
    "posicion": 17,
    "club": {
     "id": 162,
     "nombre": "Interior SAD",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-162-1793991899619.webp"
    },
-   "pj": 5,
+   "pj": 6,
    "g": 0,
    "e": 1,
-   "p": 4,
-   "gf": 1,
-   "gc": 9,
-   "dg": -8,
+   "p": 5,
+   "gf": 2,
+   "gc": 11,
+   "dg": -9,
    "descuento": 0,
    "pts": 1,
    "zona": null
@@ -375,13 +375,13 @@
     "nombre": "CA Colegiales",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-145-1793989174427.webp"
    },
-   "pj": 5,
+   "pj": 6,
    "g": 0,
    "e": 0,
-   "p": 5,
+   "p": 6,
    "gf": 0,
-   "gc": 11,
-   "dg": -11,
+   "gc": 12,
+   "dg": -12,
    "descuento": 0,
    "pts": 0,
    "zona": "DESCENSO"

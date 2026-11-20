@@ -90,5 +90,9 @@
  "77531b2e-58fc-4997-a8df-e180453f76a7": {
   "nombre": "COPA INTERCONTINENTAL",
   "con_vultur": false
+ },
+ "1d8d2b5c-659a-402a-93d2-e345ef01ebf6": {
+  "nombre": "Copa Argentina",
+  "con_vultur": true
  }
 }

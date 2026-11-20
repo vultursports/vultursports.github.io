@@ -58,15 +58,15 @@
    "partidos": 4
   },
   {
-   "id": 991,
-   "jugador": "Cristian Rewerski",
+   "id": 1791,
+   "jugador": "Martin Perez",
    "club": {
-    "id": 153,
-    "nombre": "NHP 20",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-153-1793999278932.webp"
+    "id": 124,
+    "nombre": "ALMA CRIOLLA",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp"
    },
    "valor": 4,
-   "partidos": 6
+   "partidos": 4
   }
  ],
  "asistidores": [
@@ -101,7 +101,7 @@
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp"
    },
    "valor": 6,
-   "partidos": 5
+   "partidos": 6
   },
   {
    "id": 660,
@@ -112,7 +112,7 @@
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-660-1793146525424.webp"
    },
    "valor": 4,
-   "partidos": 4
+   "partidos": 5
   },
   {
    "id": 798,
