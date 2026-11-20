@@ -47,23 +47,23 @@
    "partidos": 5
   },
   {
+   "id": 1307,
+   "jugador": "RAKETA Rake",
+   "club": {
+    "id": 173,
+    "nombre": "Familia Torque",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-173-1793593039599.webp"
+   },
+   "valor": 5,
+   "partidos": 7
+  },
+  {
    "id": 1203,
    "jugador": "Juan cruz ferrari",
    "club": {
     "id": 168,
     "nombre": "Pueblo Manya",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
-   },
-   "valor": 4,
-   "partidos": 4
-  },
-  {
-   "id": 1791,
-   "jugador": "Martin Perez",
-   "club": {
-    "id": 124,
-    "nombre": "ALMA CRIOLLA",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp"
    },
    "valor": 4,
    "partidos": 4

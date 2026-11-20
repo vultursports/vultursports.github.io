@@ -4580,7 +4580,9 @@
   "my_vpn.leave_captains_only": "Solo los capitanes pueden sacar a un jugador de esta plantilla, así que no puedes salir por tu cuenta. Pídeselo a un capitán.",
   "my_vpn.leave_via_premium_captains_only": "Solo los capitanes pueden sacar a un jugador de esta plantilla. Puedes salir porque eres miembro Premium, y se avisará a los capitanes del equipo.",
   "my_vpn.leave_locked_captains": "Solo los capitanes pueden sacarte",
-  "my_vpn.leave_locked_virtual": "Plantilla del draft"
+  "my_vpn.leave_locked_virtual": "Plantilla del draft",
+  "report.images_upload_failed": "No se pudieron subir las capturas, así que el reporte no se guardó. Quítalas o inténtalo de nuevo.",
+  "report.images_preparing": "Preparando capturas…"
  },
  "league": {
   "url": "liga-argentina-4ta-division",
@@ -91875,7 +91877,7 @@
  ],
  "playoffs": null,
  "calendar": null,
- "now": 1795184141147,
+ "now": 1795203678761,
  "language": "es",
  "groups": [
   {
