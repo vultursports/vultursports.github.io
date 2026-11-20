@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-20T21:55:29+00:00"
+  "actualizado": "2026-11-20T23:18:48+00:00"
  },
  {
   "id": "vpn-6449",
@@ -363,7 +363,7 @@
     "pos_fuente": 1,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 2,
@@ -381,7 +381,7 @@
     "pos_fuente": 2,
     "pos_ant_fuente": null,
     "es_vultur": true,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 3,
@@ -399,7 +399,7 @@
     "pos_fuente": 3,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 4,
@@ -417,7 +417,7 @@
     "pos_fuente": 4,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 5,
@@ -435,7 +435,7 @@
     "pos_fuente": 5,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 6,
@@ -453,7 +453,7 @@
     "pos_fuente": 6,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 7,
@@ -471,7 +471,7 @@
     "pos_fuente": 7,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 8,
@@ -489,7 +489,7 @@
     "pos_fuente": 8,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 9,
@@ -507,7 +507,7 @@
     "pos_fuente": 9,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 10,
@@ -525,7 +525,7 @@
     "pos_fuente": 10,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 11,
@@ -543,7 +543,7 @@
     "pos_fuente": 11,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 12,
@@ -561,7 +561,7 @@
     "pos_fuente": 12,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 13,
@@ -579,7 +579,7 @@
     "pos_fuente": 13,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 14,
@@ -597,7 +597,7 @@
     "pos_fuente": 14,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 15,
@@ -615,7 +615,7 @@
     "pos_fuente": 15,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 16,
@@ -633,7 +633,7 @@
     "pos_fuente": 16,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 17,
@@ -651,7 +651,7 @@
     "pos_fuente": 17,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 18,
@@ -669,7 +669,7 @@
     "pos_fuente": 18,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 19,
@@ -687,7 +687,7 @@
     "pos_fuente": 19,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 20,
@@ -705,7 +705,7 @@
     "pos_fuente": 20,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 21,
@@ -723,10 +723,10 @@
     "pos_fuente": 21,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    }
   ],
-  "actualizado": "2026-11-20T21:56:03+00:00"
+  "actualizado": "2026-11-20T23:19:21+00:00"
  },
  {
   "id": "lva-1d8d2b5c",
@@ -753,7 +753,7 @@
     "pts": 20,
     "zona": "clasifica",
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 2,
@@ -769,7 +769,7 @@
     "pts": 20,
     "zona": "clasifica",
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 3,
@@ -785,7 +785,7 @@
     "pts": 17,
     "zona": "clasifica",
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 4,
@@ -801,7 +801,7 @@
     "pts": 16,
     "zona": "clasifica",
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 5,
@@ -817,7 +817,7 @@
     "pts": 11,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 6,
@@ -833,7 +833,7 @@
     "pts": 11,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 7,
@@ -849,7 +849,7 @@
     "pts": 10,
     "zona": null,
     "es_vultur": true,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 8,
@@ -865,7 +865,7 @@
     "pts": 9,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 9,
@@ -881,7 +881,7 @@
     "pts": 8,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 10,
@@ -897,7 +897,7 @@
     "pts": 4,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    }
   ],
   "actualizado": "2026-11-20T05:12:16+00:00"
@@ -1235,6 +1235,6 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-20T21:56:32+00:00"
+  "actualizado": "2026-11-20T23:19:54+00:00"
  }
 ]
