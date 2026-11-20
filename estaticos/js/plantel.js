@@ -74,7 +74,10 @@
   function lider(filas, campo, titulo, unidad) {
     let cand = filas.filter((f) => (campo === "nota" ? f.nota != null && f.pj >= D.minimoNota : f[campo] > 0));
     // Mejor nota: el promedio más alto con el mínimo de partidos; en empate, el que jugó más
-    cand.sort((x, y) => campo === "nota" ? (y.nota - x.nota) || (y.pj - x.pj) : (y[campo] - x[campo]) || (x.pj - y.pj));
+    // Vallas invictas: en empate va primero el que más jugó de arquero
+    const arq = (f) => f.pos.POR || 0;
+    cand.sort((x, y) => campo === "nota" ? (y.nota - x.nota) || (y.pj - x.pj)
+      : (y[campo] - x[campo]) || (campo === "vi" ? arq(y) - arq(x) : 0) || (x.pj - y.pj));
     const f = cand[0];
     if (!f) return `<article class="lider"><h2>${titulo}</h2><p class="vacio">Sin datos.</p></article>`;
     const j = D.jugadores[f.id];

@@ -457,7 +457,7 @@ def main():
         "asistidor": max(con_pj, key=lambda j: (j["total"]["asistencias"], -j["total"]["pj"]), default=None),
         "mas_pj": max(con_pj, key=lambda j: j["total"]["pj"], default=None),
         "mas_mvp": max(con_pj, key=lambda j: (j["total"]["mvp"], -j["total"]["pj"]), default=None),
-        "mas_vallas": max(con_pj, key=lambda j: (j["total"]["vallas"], -j["total"]["pj"]), default=None),
+        "mas_vallas": max(con_pj, key=lambda j: (j["total"]["vallas"], jug_mod.arquero(j), -j["total"]["pj"]), default=None),
         "vallas": sum(1 for p in jugados_reales if p["gc"] == 0),
     }
 

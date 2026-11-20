@@ -30,6 +30,14 @@ def valla_invicta(p: dict, s: dict) -> bool:
     return p.get("gc") == 0 and (s.get("posicion") or "") in DEFENSIVAS
 
 
+ARQUERO = {"POR", "PO", "GK"}
+
+
+def arquero(j: dict) -> int:
+    """Partidos jugados de arquero."""
+    return sum(1 for x in j["partidos"] if (x["s"].get("posicion") or "") in ARQUERO)
+
+
 def _vacio():
     return {"pj": 0, "goles": 0, "asistencias": 0, "mvp": 0, "amarillas": 0, "rojas": 0, "vallas": 0, "notas": []}
 
@@ -122,8 +130,9 @@ def rankings(jugadores: list, ambito: str) -> dict:
     con_pj = [j for j in jugadores if st(j)["pj"] > 0]
 
     def top(campo, minimo=1):
+        # Vallas invictas: en empate va primero el que más jugó de arquero
         orden = sorted((j for j in con_pj if (st(j)[campo] or 0) >= minimo),
-                       key=lambda j: (-(st(j)[campo] or 0), st(j)["pj"]))
+                       key=lambda j: (-(st(j)[campo] or 0), -(arquero(j) if campo == "vallas" else 0), st(j)["pj"]))
         return orden[:1]
     nota = sorted((j for j in con_pj if st(j)["nota_ajustada"] and st(j)["pj"] >= MIN_PJ_NOTA),
                   key=lambda j: (-st(j)["nota"], -st(j)["pj"]))[:1]
