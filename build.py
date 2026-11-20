@@ -206,8 +206,11 @@ def corregir_bandas_repetidas(partidos: list) -> None:
             dup.sort(key=lambda s: h(s)[banda] / max(1, sum(h(s).values())), reverse=True)
             linea = LINEA[banda]
             for s in dup[1:]:
-                propios = [q for q, _ in h(s).most_common() if LINEA.get(q) == linea and q not in BANDAS]
-                s["posicion"] = propios[0] if propios else CENTRO_LINEA[linea]
+                en_banda = sum(n for q, n in h(s).items() if LINEA.get(q) == linea and q in BANDAS)
+                centro = [(q, n) for q, n in h(s).most_common() if LINEA.get(q) == linea and q not in BANDAS]
+                # Solo se mueve al centro a quien juega más ahí que en las bandas (un lateral sigue lateral)
+                if centro and centro[0][1] > en_banda:
+                    s["posicion"] = centro[0][0]
 
 
 def preparar_partido(p: dict, ligas: dict) -> dict:
