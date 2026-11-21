@@ -88,6 +88,20 @@
 
   // El 11 más usado: formación más repetida y, para cada puesto, quien más veces lo ocupó
   function once(filas) {
+    // VPN: se usa la "Alineación habitual" oficial que el club carga en VPN (temporada en curso)
+    const t = selT.value;
+    if (D.oficial && liga === "vpn" && (t === "actual" || (t.startsWith("t:") && D.actuales.includes(t.slice(2))))) {
+      const porId = Object.fromEntries(filas.map((f) => [f.id, f]));
+      const slots = [], asignado = {}, usado = new Set();
+      D.oficial.jugadores.forEach((j, i) => {
+        if (!D.jugadores[j.id]) return;  // jugador sin ficha en la web
+        slots.push({ i, pos: j.pos });
+        asignado[i] = porId[j.id] || { id: j.id, pj: 0, g: 0, a: 0, nota: null, pos: {} };
+        usado.add(j.id);
+      });
+      const banco = filas.filter((f) => !usado.has(f.id)).sort((a, b) => b.pj - a.pj).slice(0, 9);
+      return { slots, asignado, formacion: D.oficial.formacion, oficial: true, banco };
+    }
     const porPartido = {};
     for (const [jid, lg, temp, , , , , , pos, pid] of D.ap) {
       if (!enAlcance(lg, temp) || !pos) continue;
@@ -155,7 +169,8 @@
     const etiqueta = document.getElementById("once-formacion");
     const o = once(filas);
     if (!o) { cancha.innerHTML = `<p class="vacio">Sin alineaciones para esta selección.</p>`; bancoEl.innerHTML = ""; etiqueta.textContent = ""; return; }
-    etiqueta.textContent = (o.formacion ? `${o.formacion} · ` : "") + `usada en ${o.veces} de ${o.total} partidos`;
+    etiqueta.textContent = o.oficial ? `${o.formacion} · alineación habitual que publica el club en VPN`
+      : (o.formacion ? `${o.formacion} · ` : "") + `usada en ${o.veces} de ${o.total} partidos`;
     // Repartir horizontalmente a los que comparten puesto (por ejemplo, dos DFC)
     const porPos = {};
     o.slots.forEach((s) => (porPos[s.pos] ||= []).push(s));

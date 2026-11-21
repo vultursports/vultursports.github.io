@@ -57,8 +57,13 @@
     {% elif p.rival_info %}<h3 class="sub">Primer partido contra {{ p.rival_info.nombre }}.</h3>{% endif %}
 
     {% if p.previa_once and p.previa_once.jugadores|length >= 7 %}{% set o = p.previa_once %}
+    {% if o.oficial %}
+    <h3 class="sub">Nuestra alineación habitual</h3>
+    <p class="once-formacion">{{ o.formacion }} · la que publica el club en VPN</p>
+    {% else %}
     <h3 class="sub">Nuestro 11 más usado en {{ p.competencia }}</h3>
     <p class="once-formacion">{% if o.formacion %}{{ o.formacion }} · {% endif %}usada en {{ o.veces }} de {{ o.total }} partidos</p>
+    {% endif %}
     <div class="cancha" role="list" aria-label="Once más usado en la competencia">
       <div class="lineas" aria-hidden="true"><i class="medio"></i><i class="circulo"></i><i class="area arriba"></i><i class="area abajo"></i></div>
       {% for x in o.jugadores %}

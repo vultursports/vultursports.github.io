@@ -126,6 +126,39 @@ def alineacion(stats: list, ficha_de: dict) -> list:
     return salida
 
 
+def oficial_vpn(unir: dict) -> dict | None:
+    """Alineación habitual oficial que el club carga en VPN, con los mismos códigos de puesto que el resto
+    de la web (correcciones del club: en la 4-1-2-1-2 MI/MD son MC; en dos puntas DD/DI son DC)."""
+    o = leer("alineacion_vpn.json", None)
+    if not o or len(o.get("jugadores") or []) < 11:
+        return None
+    corr = dict(CORRECCION_POS.get(o["formacion"], {}))
+    if not any(j["pos"] == "DC" for j in o["jugadores"]):
+        corr.update({"DD": "DC", "DI": "DC"})
+    jugadores = []
+    for j in o["jugadores"]:
+        pos = corr.get(j["pos"], j["pos"])
+        k = jug_mod.clave(j["alias"])
+        jugadores.append({"id": unir.get(k, k), "alias": j["alias"], "pos": ALIAS_POS.get(pos, pos)})
+    return {"formacion": o["formacion"], "jugadores": jugadores, "url_origen": o.get("url_origen")}
+
+
+def once_oficial(oficial: dict, lista: list, ficha_de: dict) -> dict:
+    """El 11 oficial de VPN ubicado en la cancha, con los números de cada jugador en esos partidos."""
+    stats = []
+    for j in oficial["jugadores"]:
+        jugados = [x for p in lista if p.get("resultado") and not p.get("wo") for x in p.get("stats", [])
+                   if x.get("alias") and jug_mod.clave(x["alias"]) == j["id"]]
+        notas = [x["rating"] for x in jugados if (x.get("rating") or -1) >= 0]
+        stats.append({"alias": (ficha_de.get(j["id"]) or {}).get("alias") or j["alias"], "posicion": j["pos"],
+                      "goles": sum(x.get("goles") or 0 for x in jugados), "asistencias": sum(x.get("asistencias") or 0 for x in jugados),
+                      "rating": round(sum(notas) / len(notas), 2) if notas else None, "mvp": False, "pj": len(jugados)})
+    placed = alineacion(stats, ficha_de)
+    for x, s in zip(placed, [s for s in stats if s["posicion"] in LUGAR]):
+        x["pj"] = s["pj"]
+    return {"jugadores": placed, "formacion": oficial["formacion"], "oficial": True}
+
+
 def once_mas_usado(lista: list, ficha_de: dict) -> dict | None:
     """Alineación más repetida en una lista de partidos y, por puesto, quien más veces lo ocupó."""
     conteo, partidos_de = Counter(), {}
@@ -412,6 +445,8 @@ def main():
         "form": {p["id"]: p["formacion"] for p in partidos if p.get("formacion")},
         "minimoNota": jug_mod.MIN_PJ_NOTA,
         "actuales": [t["id"] for t in tablas],  # temporada en curso de cada liga
+        # "Alineación habitual" que el club carga en VPN: se usa en lugar del 11 calculado para VPN
+        "oficial": oficial_vpn({jug_mod.clave(k): jug_mod.clave(v) for k, v in (ajustes.get("unir") or {}).items()}),
         "notaBase": jug_mod.NOTA_BASE, "pesoBase": jug_mod.PESO_BASE,
     }
 
@@ -527,7 +562,10 @@ def main():
         if p["resultado"] is None:
             cid = p.get("competencia_id")
             if cid not in once_por_comp:
-                once_por_comp[cid] = once_mas_usado([x for x in partidos if x.get("competencia_id") == cid], ficha_de)
+                de_comp = [x for x in partidos if x.get("competencia_id") == cid]
+                ofi = plantel_datos.get("oficial")
+                once_por_comp[cid] = (once_oficial(ofi, de_comp, ficha_de) if ofi and p["liga"] == "vpn"
+                                      else once_mas_usado(de_comp, ficha_de))
             p["previa_once"] = once_por_comp[cid]
             p["forma_comp"] = forma.get(cid, [])
 

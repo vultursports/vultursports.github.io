@@ -110,6 +110,8 @@ def main() -> int:
                 escribir(f"sanciones_{clave}.json", out["sanciones"])
             if "destacados" in out:
                 escribir(f"destacados_{clave}.json", out["destacados"])
+            if "alineacion" in out:
+                escribir(f"alineacion_{clave}.json", out["alineacion"])
             if out.get("plantel"):
                 escribir(f"plantel_{clave}.json", out["plantel"])
             if out.get("rankings"):

@@ -159,8 +159,24 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                     })
             except ErrorConector as e:
                 print("  aviso VPN habilitados:", e)
+        alineacion = _alineacion_oficial(c, bid, com, slug)
     return {"partidos": partidos, "tablas": tablas, "sanciones": sanciones, "titulos": _titulos_vpn(),
-            "destacados": destacados}
+            "destacados": destacados, "alineacion": alineacion}
+
+
+def _alineacion_oficial(c, bid: str, com: str, slug: str) -> dict | None:
+    """"Alineación habitual" que el club carga en VPN (pestaña Plantel): formación y jugador por puesto."""
+    try:
+        lin = _data(c, bid, f"{com}/teams/{slug}/roster", f"communitySlug={com}&id={slug}&tab=roster")["roster"]["active"]["lineup"]
+    except Exception as e:  # si VPN cambia la página, se sigue con el 11 calculado
+        print("  aviso VPN alineación oficial:", e)
+        return None
+    jugadores = [{"alias": (x["player"].get("name") or "").strip(), "pos": x.get("positionCode"), "x": x.get("x"), "y": x.get("y")}
+                 for x in lin.get("placed") or [] if x.get("player")]
+    if len(jugadores) < 11 or not lin.get("formationName"):
+        return None
+    return {"formacion": lin["formationName"], "jugadores": jugadores,
+            "url_origen": f"{BASE}/{com}/teams/{slug}?tab=squad"}
 
 
 def _corto(temporada: str) -> str:
