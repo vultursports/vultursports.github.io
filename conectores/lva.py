@@ -142,9 +142,12 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             except Exception as e:
                 print("  aviso LVA detalle:", m["home_team"]["name"], "-", m["away_team"]["name"], e)
         stats_por_partido: dict[str, list] = {}
+        nota_max: dict[str, float] = {}  # mejor nota del rival en cada partido
         for url, datos in respuestas:
             if "/player_match_stats?" in url and isinstance(datos, list):
                 for s in datos:
+                    if s.get("rating") is not None and s.get("team_id") != team_id:
+                        nota_max[s["match_id"]] = max(nota_max.get(s["match_id"], s["rating"]), s["rating"])
                     if s.get("team_id") == team_id:
                         stats_por_partido.setdefault(s["match_id"], []).append(s)
         # Sanciones publicadas por la LVA (páginas públicas de estadísticas y de sanciones)
@@ -179,6 +182,20 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             for n, s in enumerate(stats_por_partido.get(m["id"], [])):
                 # sin duplicados por jugador; los registros sin jugador asignado se conservan todos
                 vistos[s.get("player_id") or f"sin-jugador-{n}"] = _stat(s)
+            # MVP: el club lo define como la mejor nota del partido (la marca de la LVA no siempre coincide).
+            # Es de Vultur si nuestra mejor nota supera a la del rival; ante un empate se respeta lo que marcó la LVA.
+            con_nota = [x for x in vistos.values() if x.get("rating") is not None and x["rating"] >= 0]
+            if con_nota:
+                top = max(x["rating"] for x in con_nota)
+                empatados = [x for x in con_nota if x["rating"] == top]
+                nota_rival = nota_max.get(m["id"], -1)
+                elegido = None
+                if top > nota_rival:
+                    elegido = next((x for x in empatados if x["mvp"]), empatados[0])
+                elif top == nota_rival:
+                    elegido = next((x for x in empatados if x["mvp"]), None)
+                for x in vistos.values():
+                    x["mvp"] = x is elegido
             partidos.append({
                 "id": f"lva-{m['id']}",
                 "liga": "lva",
