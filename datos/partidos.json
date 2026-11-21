@@ -35543,7 +35543,140 @@
    "clave": "lva-ecfa9127",
    "nombre": "1ra Div - Legacy"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "VSP-ch4cKaL",
+    "alias_id": "03f07544-74ab-4c67-9ffa-fb5977b35141",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 3.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "canflecto12",
+    "alias_id": "6c950ed4-19e6-4ea3-b717-fefd24dc357b",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "27a72bd3-119e-4a52-baf5-c3117bc5ac63",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 3.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Mateoalvareziacc",
+    "alias_id": "bbb65a72-8c80-47a4-9fcb-459a6947f211",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.2,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "2b0047d7-0771-4393-bf74-b86b00985576",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Bsperanza93",
+    "alias_id": "bb76a5d3-e39a-44cf-b874-35c59485e582",
+    "posicion": "LD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "04b4f393-7130-4e6b-841d-75a9b52f88ef",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.8,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "alias_id": "4fb61dbe-5091-49b2-8d87-53200ef55736",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "45b983f5-96b2-4f18-8fbd-9fea2a59d812",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Zk__godd",
+    "alias_id": "e3818fb8-ba69-440c-baa4-22aacee643a4",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "",
+    "alias_id": "None",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ]
  },
  {
   "id": "lva-6baae386-fe64-452c-91ff-094cd4ddf62c",
@@ -35565,7 +35698,140 @@
    "clave": "lva-ecfa9127",
    "nombre": "1ra Div - Legacy"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "VSP-ch4cKaL",
+    "alias_id": "03f07544-74ab-4c67-9ffa-fb5977b35141",
+    "posicion": "DC",
+    "goles": 2,
+    "asistencias": 0,
+    "mvp": true,
+    "rating": 8.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "canflecto12",
+    "alias_id": "6c950ed4-19e6-4ea3-b717-fefd24dc357b",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.9,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "27a72bd3-119e-4a52-baf5-c3117bc5ac63",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Mateoalvareziacc",
+    "alias_id": "bbb65a72-8c80-47a4-9fcb-459a6947f211",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "2b0047d7-0771-4393-bf74-b86b00985576",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Bsperanza93",
+    "alias_id": "bb76a5d3-e39a-44cf-b874-35c59485e582",
+    "posicion": "LD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 8.2,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "04b4f393-7130-4e6b-841d-75a9b52f88ef",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 1,
+    "mvp": false,
+    "rating": 7.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "alias_id": "4fb61dbe-5091-49b2-8d87-53200ef55736",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 1,
+    "mvp": false,
+    "rating": 8.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "45b983f5-96b2-4f18-8fbd-9fea2a59d812",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.8,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Zk__godd",
+    "alias_id": "e3818fb8-ba69-440c-baa4-22aacee643a4",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "",
+    "alias_id": "None",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ]
  },
  {
   "id": "lva-db8015cf-1190-47ab-8057-3f868b032e5c",
@@ -35897,7 +36163,140 @@
    "clave": "lva-ecfa9127",
    "nombre": "1ra Div - Legacy"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "VSP-ch4cKaL",
+    "alias_id": "03f07544-74ab-4c67-9ffa-fb5977b35141",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "27a72bd3-119e-4a52-baf5-c3117bc5ac63",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Szoke_1",
+    "alias_id": "c07938c6-9bb5-406f-b2bf-ee04a6ba33ab",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": true,
+    "rating": 8.3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Mateoalvareziacc",
+    "alias_id": "bbb65a72-8c80-47a4-9fcb-459a6947f211",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "04b4f393-7130-4e6b-841d-75a9b52f88ef",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "alias_id": "4fb61dbe-5091-49b2-8d87-53200ef55736",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 3.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Edujotaeme",
+    "alias_id": "1a9442ea-b2c2-467c-8a0e-9f046efff167",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "ByCrisMor09",
+    "alias_id": "3ad152c8-bb7e-4ba5-b437-ca4ef25bd541",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "45b983f5-96b2-4f18-8fbd-9fea2a59d812",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.9,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MixaelYT",
+    "alias_id": "41bee006-9ba0-4f0f-8a7a-cc879cfc1291",
+    "posicion": "LD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "2b0047d7-0771-4393-bf74-b86b00985576",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 5.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ]
  },
  {
   "id": "lva-25f49fa6-64d1-4fb2-8284-22bb4132e886",
@@ -35919,7 +36318,140 @@
    "clave": "lva-ecfa9127",
    "nombre": "1ra Div - Legacy"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "VSP-ch4cKaL",
+    "alias_id": "03f07544-74ab-4c67-9ffa-fb5977b35141",
+    "posicion": "DC",
+    "goles": 1,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "27a72bd3-119e-4a52-baf5-c3117bc5ac63",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 8.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Szoke_1",
+    "alias_id": "c07938c6-9bb5-406f-b2bf-ee04a6ba33ab",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Mateoalvareziacc",
+    "alias_id": "bbb65a72-8c80-47a4-9fcb-459a6947f211",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 8.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Bsperanza93",
+    "alias_id": "bb76a5d3-e39a-44cf-b874-35c59485e582",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "04b4f393-7130-4e6b-841d-75a9b52f88ef",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "alias_id": "4fb61dbe-5091-49b2-8d87-53200ef55736",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "ByCrisMor09",
+    "alias_id": "3ad152c8-bb7e-4ba5-b437-ca4ef25bd541",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "45b983f5-96b2-4f18-8fbd-9fea2a59d812",
+    "posicion": "DFC",
+    "goles": 1,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.9,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MixaelYT",
+    "alias_id": "41bee006-9ba0-4f0f-8a7a-cc879cfc1291",
+    "posicion": "LD",
+    "goles": 0,
+    "asistencias": 1,
+    "mvp": false,
+    "rating": 7.8,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "2b0047d7-0771-4393-bf74-b86b00985576",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ]
  },
  {
   "id": "lva-139aa1da-54b4-4808-ad81-f3a8665f4515",
@@ -36118,7 +36650,140 @@
    "clave": "lva-ecfa9127",
    "nombre": "1ra Div - Legacy"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "VSP-ch4cKaL",
+    "alias_id": "03f07544-74ab-4c67-9ffa-fb5977b35141",
+    "posicion": "DC",
+    "goles": 1,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "canflecto12",
+    "alias_id": "6c950ed4-19e6-4ea3-b717-fefd24dc357b",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.8,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "27a72bd3-119e-4a52-baf5-c3117bc5ac63",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Szoke_1",
+    "alias_id": "c07938c6-9bb5-406f-b2bf-ee04a6ba33ab",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.2,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Mateoalvareziacc",
+    "alias_id": "bbb65a72-8c80-47a4-9fcb-459a6947f211",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.9,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Zk__godd",
+    "alias_id": "e3818fb8-ba69-440c-baa4-22aacee643a4",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "alias_id": "4fb61dbe-5091-49b2-8d87-53200ef55736",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "ByCrisMor09",
+    "alias_id": "3ad152c8-bb7e-4ba5-b437-ca4ef25bd541",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "45b983f5-96b2-4f18-8fbd-9fea2a59d812",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MixaelYT",
+    "alias_id": "41bee006-9ba0-4f0f-8a7a-cc879cfc1291",
+    "posicion": "LD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.9,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "2b0047d7-0771-4393-bf74-b86b00985576",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 4.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ]
  },
  {
   "id": "lva-e58bd60a-18a6-4d52-9b06-431f48eeab56",
@@ -36140,7 +36805,140 @@
    "clave": "lva-ecfa9127",
    "nombre": "1ra Div - Legacy"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "Mateoalvareziacc",
+    "alias_id": "bbb65a72-8c80-47a4-9fcb-459a6947f211",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.2,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "04b4f393-7130-4e6b-841d-75a9b52f88ef",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "alias_id": "4fb61dbe-5091-49b2-8d87-53200ef55736",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "ByCrisMor09",
+    "alias_id": "3ad152c8-bb7e-4ba5-b437-ca4ef25bd541",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.8,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "45b983f5-96b2-4f18-8fbd-9fea2a59d812",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 8.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MixaelYT",
+    "alias_id": "41bee006-9ba0-4f0f-8a7a-cc879cfc1291",
+    "posicion": "LD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 3.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "VSP-ch4cKaL",
+    "alias_id": "03f07544-74ab-4c67-9ffa-fb5977b35141",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 3.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "canflecto12",
+    "alias_id": "6c950ed4-19e6-4ea3-b717-fefd24dc357b",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "27a72bd3-119e-4a52-baf5-c3117bc5ac63",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": true,
+    "rating": 7.3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Szoke_1",
+    "alias_id": "c07938c6-9bb5-406f-b2bf-ee04a6ba33ab",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.9,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "2b0047d7-0771-4393-bf74-b86b00985576",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ]
  },
  {
   "id": "lva-19073de3-074b-4eaa-aed1-a58337e12889",
@@ -36494,7 +37292,140 @@
    "clave": "lva-ecfa9127",
    "nombre": "1ra Div - Legacy"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "VSP-ch4cKaL",
+    "alias_id": "03f07544-74ab-4c67-9ffa-fb5977b35141",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.2,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Chrisv710",
+    "alias_id": "1cd93761-7fc5-48fb-b493-5e2f674d4428",
+    "posicion": "MCO",
+    "goles": 1,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "27a72bd3-119e-4a52-baf5-c3117bc5ac63",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Szoke_1",
+    "alias_id": "c07938c6-9bb5-406f-b2bf-ee04a6ba33ab",
+    "posicion": "LD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Mateoalvareziacc",
+    "alias_id": "bbb65a72-8c80-47a4-9fcb-459a6947f211",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 1,
+    "mvp": false,
+    "rating": 7.6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Zk__godd",
+    "alias_id": "e3818fb8-ba69-440c-baa4-22aacee643a4",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "04b4f393-7130-4e6b-841d-75a9b52f88ef",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Edujotaeme",
+    "alias_id": "1a9442ea-b2c2-467c-8a0e-9f046efff167",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "45b983f5-96b2-4f18-8fbd-9fea2a59d812",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MixaelYT",
+    "alias_id": "41bee006-9ba0-4f0f-8a7a-cc879cfc1291",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "2b0047d7-0771-4393-bf74-b86b00985576",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 5.3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ]
  },
  {
   "id": "lva-9aa98846-9c46-4cef-8cb5-a3759056c1ce",
@@ -36516,7 +37447,140 @@
    "clave": "lva-ecfa9127",
    "nombre": "1ra Div - Legacy"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "VSP-ch4cKaL",
+    "alias_id": "03f07544-74ab-4c67-9ffa-fb5977b35141",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "27a72bd3-119e-4a52-baf5-c3117bc5ac63",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Szoke_1",
+    "alias_id": "c07938c6-9bb5-406f-b2bf-ee04a6ba33ab",
+    "posicion": "LD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Mateoalvareziacc",
+    "alias_id": "bbb65a72-8c80-47a4-9fcb-459a6947f211",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.2,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Zk__godd",
+    "alias_id": "e3818fb8-ba69-440c-baa4-22aacee643a4",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "04b4f393-7130-4e6b-841d-75a9b52f88ef",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "alias_id": "4fb61dbe-5091-49b2-8d87-53200ef55736",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.8,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Edujotaeme",
+    "alias_id": "1a9442ea-b2c2-467c-8a0e-9f046efff167",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": true,
+    "rating": 7.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "45b983f5-96b2-4f18-8fbd-9fea2a59d812",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MixaelYT",
+    "alias_id": "41bee006-9ba0-4f0f-8a7a-cc879cfc1291",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "2b0047d7-0771-4393-bf74-b86b00985576",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 4.8,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ]
  },
  {
   "id": "vpug-595",
@@ -36879,7 +37943,140 @@
    "clave": "lva-ecfa9127",
    "nombre": "1ra Div - Legacy"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "canflecto12",
+    "alias_id": "6c950ed4-19e6-4ea3-b717-fefd24dc357b",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.9,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Chrisv710",
+    "alias_id": "1cd93761-7fc5-48fb-b493-5e2f674d4428",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "27a72bd3-119e-4a52-baf5-c3117bc5ac63",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Szoke_1",
+    "alias_id": "c07938c6-9bb5-406f-b2bf-ee04a6ba33ab",
+    "posicion": "LD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Mateoalvareziacc",
+    "alias_id": "bbb65a72-8c80-47a4-9fcb-459a6947f211",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.2,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Zk__godd",
+    "alias_id": "e3818fb8-ba69-440c-baa4-22aacee643a4",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": true,
+    "rating": 7.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "04b4f393-7130-4e6b-841d-75a9b52f88ef",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "alias_id": "4fb61dbe-5091-49b2-8d87-53200ef55736",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "45b983f5-96b2-4f18-8fbd-9fea2a59d812",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "tiro_loko12",
+    "alias_id": "1ae815ef-43cf-49c0-a7f0-fe1b9a9d8ec5",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.2,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "2b0047d7-0771-4393-bf74-b86b00985576",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 5.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ]
  },
  {
   "id": "vpug-606",
@@ -37606,7 +38803,140 @@
    "clave": "lva-ecfa9127",
    "nombre": "1ra Div - Legacy"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "Chrisv710",
+    "alias_id": "1cd93761-7fc5-48fb-b493-5e2f674d4428",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "27a72bd3-119e-4a52-baf5-c3117bc5ac63",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": true,
+    "rating": 8.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Mateoalvareziacc",
+    "alias_id": "bbb65a72-8c80-47a4-9fcb-459a6947f211",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.9,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Zk__godd",
+    "alias_id": "e3818fb8-ba69-440c-baa4-22aacee643a4",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "04b4f393-7130-4e6b-841d-75a9b52f88ef",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "ByCrisMor09",
+    "alias_id": "3ad152c8-bb7e-4ba5-b437-ca4ef25bd541",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.2,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "45b983f5-96b2-4f18-8fbd-9fea2a59d812",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "tiro_loko12",
+    "alias_id": "1ae815ef-43cf-49c0-a7f0-fe1b9a9d8ec5",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "",
+    "alias_id": "None",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "",
+    "alias_id": "None",
+    "posicion": "LD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "",
+    "alias_id": "None",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ]
  },
  {
   "id": "lva-a0efba0c-1b69-4521-8228-73603ee8d7c4",
@@ -38515,7 +39845,140 @@
    "clave": "lva-ecfa9127",
    "nombre": "1ra Div - Legacy"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "VSP-ch4cKaL",
+    "alias_id": "03f07544-74ab-4c67-9ffa-fb5977b35141",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Chrisv710",
+    "alias_id": "1cd93761-7fc5-48fb-b493-5e2f674d4428",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "27a72bd3-119e-4a52-baf5-c3117bc5ac63",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.0,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Mateoalvareziacc",
+    "alias_id": "bbb65a72-8c80-47a4-9fcb-459a6947f211",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Zk__godd",
+    "alias_id": "e3818fb8-ba69-440c-baa4-22aacee643a4",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.9,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "04b4f393-7130-4e6b-841d-75a9b52f88ef",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "ByCrisMor09",
+    "alias_id": "3ad152c8-bb7e-4ba5-b437-ca4ef25bd541",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": true,
+    "rating": 7.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "45b983f5-96b2-4f18-8fbd-9fea2a59d812",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MixaelYT",
+    "alias_id": "41bee006-9ba0-4f0f-8a7a-cc879cfc1291",
+    "posicion": "LD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "tiro_loko12",
+    "alias_id": "1ae815ef-43cf-49c0-a7f0-fe1b9a9d8ec5",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "2b0047d7-0771-4393-bf74-b86b00985576",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.8,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ]
  },
  {
   "id": "lva-21f8447f-52db-4165-ac34-4c4c6a35c8f3",
