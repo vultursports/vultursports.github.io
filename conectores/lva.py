@@ -112,10 +112,8 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
         for tid in [t for t in mios if t in activos]:
             try:
                 pg.select_option("select", tid)
-                pg.wait_for_timeout(2500)
-                # Las estadísticas llegan en varias tandas: se espera a que terminen todas
-                pg.wait_for_load_state("networkidle")
-                destacados += _tops(pg.inner_text("main"), _nombre_torneo(mios[tid][0]), nombre_club)
+                texto = _esperar_estable(pg, respuestas)
+                destacados += _tops(texto, _nombre_torneo(mios[tid][0]), nombre_club)
             except Exception as e:
                 print("  aviso LVA tops:", e)
         fin_con_vultur = [t for t in mios if t not in activos]
@@ -125,8 +123,7 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                 pg.wait_for_timeout(2500)
                 for tid in fin_con_vultur:
                     pg.select_option("select", tid)
-                    pg.wait_for_timeout(3000)
-                    pg.wait_for_load_state("networkidle")
+                    _esperar_estable(pg, respuestas)
             except Exception as e:
                 print("  aviso LVA estadísticas finalizados:", e)
         stats_por_partido: dict[str, list] = {}
@@ -210,6 +207,22 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
         "vigente": x.get("status") != "served",
     } for x in sanciones_raw.values() if x.get("team_id") == team_id]
     return {"partidos": partidos, "tablas": tablas, "sanciones": sanciones, "titulos": titulos, "destacados": destacados}
+
+
+def _esperar_estable(pg, respuestas: list, maximo: int = 40) -> str:
+    """Después de elegir un torneo, la LVA manda las estadísticas y los tops en varias tandas (y en
+    los servidores de GitHub tardan más). Se espera a que el texto de la página y la cantidad de
+    respuestas no cambien durante 3 segundos seguidos (como máximo `maximo` segundos)."""
+    pg.wait_for_timeout(2500)
+    previo, quietos = None, 0
+    for _ in range(maximo):
+        actual = (pg.inner_text("main"), len(respuestas))
+        quietos = quietos + 1 if actual == previo else 0
+        if quietos >= 3 and "PJ" in actual[0]:
+            break
+        previo = actual
+        pg.wait_for_timeout(1000)
+    return pg.inner_text("main")
 
 
 def _nombre_torneo(n: str) -> str:

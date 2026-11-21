@@ -8,6 +8,7 @@ código: en la PC se leen de .env y en GitHub de los secretos del repo.
 from __future__ import annotations
 
 import os
+from datetime import datetime, timedelta, timezone
 
 from .base import ErrorConector, cliente, guardar_raw, pedir
 
@@ -69,7 +70,12 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                     "stats": [],
                 }
                 previo = partidos_previos.get(pid)
-                if jugado and previo and previo.get("stats") and previo.get("gf") == p["gf"] and "equipo_stats" in previo:
+                # VPUG a veces carga primero solo a la figura y después al resto: si el partido es de la
+                # última semana y tiene menos de 11 jugadores (o sin datos de EA), se vuelve a pedir.
+                reciente = datetime.now(timezone.utc) - datetime.fromisoformat(p["fecha_utc"].replace("Z", "+00:00")) < timedelta(days=7)
+                incompleto = previo and (len(previo.get("stats") or []) < 11 or not previo.get("equipo_stats"))
+                if jugado and previo and previo.get("stats") and previo.get("gf") == p["gf"] and "equipo_stats" in previo \
+                        and not (reciente and incompleto):
                     p["stats"], p["equipo_stats"] = previo["stats"], previo["equipo_stats"]
                 elif jugado:
                     try:
