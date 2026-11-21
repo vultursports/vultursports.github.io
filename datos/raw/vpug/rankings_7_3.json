@@ -33,7 +33,7 @@
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-793-1793215711655.webp"
    },
    "valor": 5,
-   "partidos": 3
+   "partidos": 4
   },
   {
    "id": 1788,
@@ -115,15 +115,15 @@
    "partidos": 5
   },
   {
-   "id": 798,
-   "jugador": "Bruno Lopez",
+   "id": 1992,
+   "jugador": "Alexis Roda",
    "club": {
-    "id": 135,
-    "nombre": "DeportivoFumeta",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-793-1793215711655.webp"
+    "id": 150,
+    "nombre": "LMJ eSports",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-150-1793806728684.webp"
    },
    "valor": 3,
-   "partidos": 2
+   "partidos": 3
   }
  ]
 }
