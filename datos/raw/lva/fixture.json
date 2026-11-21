@@ -5943,21 +5943,21 @@
    }
   },
   {
-   "id": "e4182c65-8346-4145-824d-70c276556102",
+   "id": "996e3af2-99ee-47f5-928d-6d02bf81707f",
    "stage": "Fecha 15",
    "match_date": "2026-11-20T02:00:00+00:00",
-   "status": "approved",
+   "status": "pending_approval",
    "home_goals": 0,
-   "away_goals": 1,
+   "away_goals": 4,
    "home_team": {
-    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
-    "name": "Acassuso eSports",
-    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
+    "name": "Claypole eSports",
+    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
    },
    "away_team": {
-    "id": "d4108b5c-6277-4a4f-89d6-c7a607ae786f",
-    "name": "Cerrito XXI",
-    "logo_url": "https://i.ibb.co/VdshDpD/1000250273.jpg"
+    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
+    "name": "Suda eSports ",
+    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
    }
   },
   {
@@ -5997,21 +5997,21 @@
    }
   },
   {
-   "id": "996e3af2-99ee-47f5-928d-6d02bf81707f",
+   "id": "b2f96e64-9e2b-474c-98fb-180be59f79b2",
    "stage": "Fecha 15",
    "match_date": "2026-11-20T02:00:00+00:00",
-   "status": "pending_approval",
+   "status": "scheduled",
    "home_goals": 0,
-   "away_goals": 4,
+   "away_goals": 0,
    "home_team": {
-    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
-    "name": "Claypole eSports",
-    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
+    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
+    "name": "Los Andes FC",
+    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
    },
    "away_team": {
-    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
-    "name": "Suda eSports ",
-    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
+    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
+    "name": "BOCA JUNIORS",
+    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
    }
   },
   {
@@ -6033,6 +6033,24 @@
    }
   },
   {
+   "id": "e4182c65-8346-4145-824d-70c276556102",
+   "stage": "Fecha 15",
+   "match_date": "2026-11-20T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+   },
+   "away_team": {
+    "id": "d4108b5c-6277-4a4f-89d6-c7a607ae786f",
+    "name": "Cerrito XXI",
+    "logo_url": "https://i.ibb.co/VdshDpD/1000250273.jpg"
+   }
+  },
+  {
    "id": "db7164d7-22cd-4d65-bab1-e1067f32a67e",
    "stage": "Fecha 15",
    "match_date": "2026-11-20T02:00:00+00:00",
@@ -6048,24 +6066,6 @@
     "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
     "name": "Villa San Carlos",
     "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
-   }
-  },
-  {
-   "id": "b2f96e64-9e2b-474c-98fb-180be59f79b2",
-   "stage": "Fecha 15",
-   "match_date": "2026-11-20T02:00:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
-    "name": "Los Andes FC",
-    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
-   },
-   "away_team": {
-    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
-    "name": "BOCA JUNIORS",
-    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
    }
   },
   {
