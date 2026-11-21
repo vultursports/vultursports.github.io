@@ -12,7 +12,7 @@
     <div class="duelo{% if not proximo.local %} visitante{% endif %}">
       <div class="equipo nosotros">
         <img src="estaticos/img/escudo.png" alt="" width="96" height="96">
-        <span>Vultur Sports</span>{% if proximo.pos_nos and not proximo.resultado %}<small class="pos-tabla">{{ proximo.pos_nos }}° en la tabla</small>{% endif %}
+        <span class="nombre-eq" style="--n: 7">Vultur Sports</span>{% if proximo.pos_nos and not proximo.resultado %}<small class="pos-tabla">{{ proximo.pos_nos }}° en la tabla</small>{% endif %}
       </div>
       <div class="cuando">
         <time datetime="{{ proximo.dt.isoformat() }}">
@@ -23,7 +23,7 @@
       </div>
       <a class="equipo equipo-link" href="{{ proximo.rival_pagina }}" title="Ver historial contra {{ proximo.rival.nombre }}">
         {% if proximo.rival.escudo %}<img src="{{ proximo.rival.escudo|replace('_thumb', '') }}" alt="" width="96" height="96">{% else %}<span class="sin-escudo grande" aria-hidden="true"></span>{% endif %}
-        <span>{{ proximo.rival.nombre }}</span>{% if proximo.pos_rival and not proximo.resultado %}<small class="pos-tabla">{{ proximo.pos_rival }}° en la tabla</small>{% endif %}
+        <span class="nombre-eq" style="--n: {{ (proximo.rival.nombre.split()|map('length')|max) if proximo.rival.nombre.split() else 1 }}">{{ proximo.rival.nombre }}</span>{% if proximo.pos_rival and not proximo.resultado %}<small class="pos-tabla">{{ proximo.pos_rival }}° en la tabla</small>{% endif %}
       </a>
     </div>
     <p class="proximo-pie">{{ proximo.condicion }}. <a href="{{ proximo.pagina }}">Detalles del partido</a></p>

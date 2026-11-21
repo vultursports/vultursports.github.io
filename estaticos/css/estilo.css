@@ -115,6 +115,8 @@ img[src$="ligas/vpug.png"] { height: calc(var(--h) * .92); }
 .equipo-link:hover span { text-decoration: underline; text-decoration-color: var(--rojo); }
 .equipo img { width: clamp(64px, 20vw, 120px); height: auto; aspect-ratio: 1; object-fit: contain; }
 .equipo span { font: 800 clamp(1rem, 3.6vw, 1.5rem)/1.05 var(--display); text-transform: uppercase; overflow-wrap: anywhere; }
+/* Nombres largos: la letra se achica según la palabra más larga (--n letras) para que entre entera */
+.equipo .nombre-eq { font-size: min(clamp(1rem, 3.6vw, 1.5rem), calc(24vw / (var(--n, 1) * .52)), calc(250px / (var(--n, 1) * .52))); }
 .cuando time, .cuando .final { display: grid; justify-items: center; }
 .hora { font: 900 clamp(3.2rem, 15vw, 6.5rem)/.85 var(--display); font-variant-numeric: tabular-nums; }
 .dia { margin-top: 6px; color: var(--plata); font-size: .9rem; max-width: 11rem; }
@@ -183,7 +185,7 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
 .p-rival { grid-area: rival; display: flex; align-items: center; gap: 10px; min-width: 0; }
 .p-rival img { width: 28px; height: 28px; object-fit: contain; flex: none; }
 .p-rival > span { display: grid; min-width: 0; }
-.p-rival b { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p-rival b { font-weight: 600; overflow-wrap: anywhere; font-size: min(1em, calc(30vw / (var(--n, 1) * .6)), calc(330px / (var(--n, 1) * .6))); line-height: 1.2; }
 .p-rival small { color: var(--plata); font-size: .8rem; }
 .p-res { grid-area: res; text-align: right; }
 .p-res a { text-decoration: none; }
