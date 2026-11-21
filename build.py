@@ -92,6 +92,26 @@ def posiciones_x(pos: list) -> list:
     return xs
 
 
+FILA_FORMACION = {"LI": 0, "DFC": 0, "LD": 0, "MCD": 1, "MI": 2, "MC": 2, "MD": 2, "MCO": 3, "SD": 3,
+                  "EI": 4, "DI": 4, "DC": 4, "DD": 4, "ED": 4}
+
+
+def formacion_por_lineas(stats: list) -> str | None:
+    """Nombre de la formación según las posiciones cargadas (por ejemplo 4-1-2-1-2). Solo si están
+    los 10 jugadores de campo con una posición conocida."""
+    filas = [0] * 5
+    campo = 0
+    for s in stats:
+        pos = ALIAS_POS.get(s.get("posicion") or "", s.get("posicion") or "")
+        if pos == "POR":
+            continue
+        if pos not in FILA_FORMACION:
+            return None
+        filas[FILA_FORMACION[pos]] += 1
+        campo += 1
+    return "-".join(str(n) for n in filas if n) if campo == 10 else None
+
+
 def alineacion(stats: list, ficha_de: dict) -> list:
     """Ubica en la cancha a los jugadores de un partido según la posición que ocuparon."""
     lista = [(ALIAS_POS.get(s.get("posicion") or "", s.get("posicion") or ""), s) for s in stats]
@@ -448,32 +468,12 @@ def main():
     pagina_jugador = {j["id"]: j["pagina"] for j in js}
     ficha_de = {j["id"]: j for j in js}
 
-    # Formación: solo VPN la publica. Para la LVA y VPUG se usa el nombre que VPN le dio a la misma
-    # alineación (nunca se inventa). Cada liga etiqueta distinto a algunos puestos (VPN: MD/MI y DD/DI;
-    # LVA: MC y DC), así que para comparar se agrupan volantes y delanteros. Si en VPN esa alineación
-    # tuvo más de un nombre, se toma el del partido de VPN más cercano en fecha. Si no hay, sin nombre.
-    EQUIV = {"DD": "DC", "DI": "DC", "MD": "MC", "MI": "MC"}
-    def firma(stats):
-        pos = [ALIAS_POS.get(x.get("posicion") or "", x.get("posicion") or "") for x in stats]
-        pos = [EQUIV.get(q, q) for q in pos]
-        return ",".join(sorted(pos)) if len(pos) >= 10 and all(pos) else None
-    nombres_vpn: dict = {}
-    for p in partidos:
-        if p["liga"] == "vpn" and p.get("formacion") and firma(p.get("stats", [])):
-            nombres_vpn.setdefault(firma(p["stats"]), []).append((p["dt"], p["formacion"]))
+    # Formación: VPN la publica en cada partido. La LVA y VPUG no la publican: se calcula con las
+    # posiciones que carga esa misma liga, contando jugadores por línea (defensa, MCD, medio, MCO,
+    # delanteros). Nunca se toma de otra liga. Si faltan posiciones, queda sin nombre.
     for p in partidos:
         if p["liga"] != "vpn" and not p.get("formacion"):
-            f = firma(p.get("stats", []))
-            if f in nombres_vpn:
-                p["formacion"] = min(nombres_vpn[f], key=lambda x: abs((x[0] - p["dt"]).total_seconds()))[1]
-    # VPUG no publica formación y sus alineaciones no coinciden con las de VPN: se usa la formación del
-    # partido de VPN más cercano en fecha (a 3 días o menos), que es el mismo equipo esa semana.
-    con_form_vpn = [p for p in partidos if p["liga"] == "vpn" and p.get("formacion")]
-    for p in partidos:
-        if p["liga"] == "vpug" and not p.get("formacion") and p.get("stats") and con_form_vpn:
-            cerca = min(con_form_vpn, key=lambda q: abs((q["dt"] - p["dt"]).total_seconds()))
-            if abs((cerca["dt"] - p["dt"]).total_seconds()) <= 3 * 86400:
-                p["formacion"] = cerca["formacion"]
+            p["formacion"] = formacion_por_lineas(p.get("stats", []))
     plantel_datos["form"] = {p["id"]: p["formacion"] for p in partidos if p.get("formacion")}
     for p in partidos:
         p["once"] = alineacion(p.get("stats", []), ficha_de) if p.get("resultado") else []
