@@ -466,6 +466,14 @@ def main():
             f = firma(p.get("stats", []))
             if f in nombres_vpn:
                 p["formacion"] = min(nombres_vpn[f], key=lambda x: abs((x[0] - p["dt"]).total_seconds()))[1]
+    # VPUG no publica formación y sus alineaciones no coinciden con las de VPN: se usa la formación del
+    # partido de VPN más cercano en fecha (a 3 días o menos), que es el mismo equipo esa semana.
+    con_form_vpn = [p for p in partidos if p["liga"] == "vpn" and p.get("formacion")]
+    for p in partidos:
+        if p["liga"] == "vpug" and not p.get("formacion") and p.get("stats") and con_form_vpn:
+            cerca = min(con_form_vpn, key=lambda q: abs((q["dt"] - p["dt"]).total_seconds()))
+            if abs((cerca["dt"] - p["dt"]).total_seconds()) <= 3 * 86400:
+                p["formacion"] = cerca["formacion"]
     plantel_datos["form"] = {p["id"]: p["formacion"] for p in partidos if p.get("formacion")}
     for p in partidos:
         p["once"] = alineacion(p.get("stats", []), ficha_de) if p.get("resultado") else []
