@@ -188,29 +188,37 @@ CORRECCION_POS = {"4-1-2-1-2": {"MD": "MC", "MI": "MC"}}
 CENTRO_LINEA = {"def": "DFC", "med": "MC", "del": "DC"}
 
 
+# Puestos que en una alineación solo puede ocupar un jugador
+UNICAS = {"POR", "LI", "LD", "MI", "MD", "EI", "ED", "DI", "DD"}
+
+
 def corregir_bandas_repetidas(partidos: list) -> None:
-    """La LVA a veces carga dos LI (o dos LD, MI...) cuando uno jugó de central. En ese caso queda en
-    la banda quien más veces la ocupó, y el otro pasa a su puesto habitual de esa línea (o al centro)."""
+    """Regla para alineaciones imposibles (por ejemplo, dos LI o dos POR, como a veces carga la LVA):
+    en el puesto repetido queda el jugador que más porcentaje de partidos lo jugó, y el otro pasa a su
+    siguiente posición más jugada (salteando los puestos únicos que ya estén ocupados en ese partido)."""
     norm = lambda s: ALIAS_POS.get(s.get("posicion") or "", s.get("posicion") or "")
     habitual: dict = {}
     for p in partidos:
         for s in p.get("stats", []):
-            habitual.setdefault(jug_mod.clave(s.get("alias") or ""), Counter())[norm(s)] += 1
+            if s.get("alias") and norm(s):
+                habitual.setdefault(jug_mod.clave(s["alias"]), Counter())[norm(s)] += 1
+    h = lambda s: habitual.get(jug_mod.clave(s.get("alias") or ""), Counter())
     for p in partidos:
-        stats = p.get("stats", [])
-        for banda in BANDAS:
-            dup = [s for s in stats if norm(s) == banda]
-            if len(dup) < 2:
-                continue
-            h = lambda s: habitual.get(jug_mod.clave(s.get("alias") or ""), Counter())
-            dup.sort(key=lambda s: h(s)[banda] / max(1, sum(h(s).values())), reverse=True)
-            linea = LINEA[banda]
+        stats = [s for s in p.get("stats", []) if s.get("alias")]
+        for _ in range(len(stats)):  # se repite por si un cambio genera otro choque
+            choque = next((q for q in UNICAS if sum(norm(s) == q for s in stats) > 1), None)
+            if not choque:
+                break
+            dup = sorted((s for s in stats if norm(s) == choque),
+                         key=lambda s: h(s)[choque] / max(1, sum(h(s).values())), reverse=True)
+            movido = False
             for s in dup[1:]:
-                en_banda = sum(n for q, n in h(s).items() if LINEA.get(q) == linea and q in BANDAS)
-                centro = [(q, n) for q, n in h(s).most_common() if LINEA.get(q) == linea and q not in BANDAS]
-                # Solo se mueve al centro a quien juega más ahí que en las bandas (un lateral sigue lateral)
-                if centro and centro[0][1] > en_banda:
-                    s["posicion"] = centro[0][0]
+                ocupadas = {norm(x) for x in stats if x is not s} & UNICAS
+                otra = next((q for q, _ in h(s).most_common() if q != choque and q in LUGAR and q not in ocupadas), None)
+                if otra:
+                    s["posicion"], movido = otra, True
+            if not movido:
+                break
 
 
 def preparar_partido(p: dict, ligas: dict) -> dict:
