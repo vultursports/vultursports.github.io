@@ -185,7 +185,7 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
 .p-rival { grid-area: rival; display: flex; align-items: center; gap: 10px; min-width: 0; }
 .p-rival img { width: 28px; height: 28px; object-fit: contain; flex: none; }
 .p-rival > span { display: grid; min-width: 0; }
-.p-rival b { font-weight: 600; overflow-wrap: anywhere; font-size: min(1em, calc(30vw / (var(--n, 1) * .6)), calc(330px / (var(--n, 1) * .6))); line-height: 1.2; }
+.p-rival b { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .p-rival small { color: var(--plata); font-size: .8rem; }
 .p-res { grid-area: res; text-align: right; }
 .p-res a { text-decoration: none; }
