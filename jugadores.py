@@ -108,6 +108,7 @@ def armar(partidos: list, plantel_vpug: list, ajustes: dict) -> dict:
             "dorsal": f.get("dorsal"),
             # Posición: la que más jugó en sus últimos 20 partidos; si no tiene, la del plantel de VPUG
             "posicion": _posicion_reciente(j["partidos"]) or f.get("posicion"),
+            "posiciones": _posiciones(j["partidos"]),
             "rol": "DT" if f.get("esDt") else ("Sub DT" if f.get("esSubDt") else None),
             "en_plantel_vpug": bool(f),
             "total": _cerrar(j["total"]),
@@ -116,6 +117,22 @@ def armar(partidos: list, plantel_vpug: list, ajustes: dict) -> dict:
             "pagina": f"jugador-{k}.html",
         })
     return {"jugadores": salida}
+
+
+# Códigos unificados entre ligas (VPN usa PO/LTD/LTI) y su nombre para mostrar
+ALIAS_POS = {"PO": "POR", "GK": "POR", "LTD": "LD", "LTI": "LI", "CAD": "LD", "CAI": "LI"}
+NOMBRE_POS = {"POR": "Arquero", "DFC": "Defensor central", "LD": "Lateral derecho", "LI": "Lateral izquierdo",
+              "MCD": "Mediocampista defensivo", "MC": "Mediocampista central", "MD": "Volante derecho",
+              "MI": "Volante izquierdo", "MCO": "Mediocampista ofensivo", "DC": "Delantero centro",
+              "DD": "Delantero derecho", "DI": "Delantero izquierdo", "ED": "Extremo derecho",
+              "EI": "Extremo izquierdo", "SD": "Segundo delantero"}
+
+
+def _posiciones(partidos: list) -> list:
+    """Puestos jugados y cuántas veces, de más a menos."""
+    c = Counter(ALIAS_POS.get(x["s"]["posicion"], x["s"]["posicion"]) for x in partidos if x["s"].get("posicion"))
+    total = sum(c.values())
+    return [{"pos": p, "nombre": NOMBRE_POS.get(p, p), "pj": n, "pct": round(100 * n / total)} for p, n in c.most_common()]
 
 
 def _posicion_reciente(partidos: list, n: int = 20) -> str | None:

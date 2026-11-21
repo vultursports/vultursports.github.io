@@ -48,6 +48,22 @@
     </div>
   </section>
 
+  {% if j.posiciones %}
+  <section aria-labelledby="t-pos">
+    <div class="enc"><h2 id="t-pos">Posiciones</h2></div>
+    <div class="scroll-x">
+    <table class="tabla stats">
+      <thead><tr><th scope="col" class="eq">Posición</th><th scope="col">PJ</th><th scope="col">%</th></tr></thead>
+      <tbody>
+      {% for x in j.posiciones %}
+        <tr><th scope="row" class="eq"><b>{{ x.pos }}</b> · {{ x.nombre }}</th><td>{{ x.pj }}</td><td>{{ x.pct }}%</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </section>
+  {% endif %}
+
   <section aria-labelledby="t-portemp">
     <div class="enc"><h2 id="t-portemp">Por temporada</h2></div>
     <div class="scroll-x">

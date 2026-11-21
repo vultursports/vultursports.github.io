@@ -6,7 +6,7 @@ estadísticas por jugador. No usa claves ni accesos propios.
 """
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from urllib.parse import parse_qs, urlparse
 
 import json
@@ -126,6 +126,21 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                     _esperar_estable(pg, respuestas)
             except Exception as e:
                 print("  aviso LVA estadísticas finalizados:", e)
+        # Partidos recientes con resultado pero sin estadísticas en /estadisticas (por ejemplo, "en disputa"
+        # porque el rival no cargó las suyas): se abre su "Ver detalles" en el fixture, que ya muestra las nuestras.
+        con_stats = {s.get("match_id") for url, datos in respuestas
+                     if "/player_match_stats?" in url and isinstance(datos, list) for s in datos if s.get("team_id") == team_id}
+        hace_2_semanas = datetime.now(timezone.utc) - timedelta(days=14)
+        faltan = [(tid, m) for tid, (_, ms) in mios.items() if tid in activos for m in ms
+                  if m["status"] in ("approved", "pending_approval") and m.get("home_goals") is not None
+                  and m["id"] not in con_stats
+                  and hace_2_semanas < datetime.fromisoformat(m["match_date"]) < datetime.now(timezone.utc)]
+        for tid, m in faltan:
+            try:
+                _abrir_detalle(pg, tid, m)
+                _esperar_estable(pg, respuestas, maximo=15)
+            except Exception as e:
+                print("  aviso LVA detalle:", m["home_team"]["name"], "-", m["away_team"]["name"], e)
         stats_por_partido: dict[str, list] = {}
         for url, datos in respuestas:
             if "/player_match_stats?" in url and isinstance(datos, list):
@@ -207,6 +222,31 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
         "vigente": x.get("status") != "served",
     } for x in sanciones_raw.values() if x.get("team_id") == team_id]
     return {"partidos": partidos, "tablas": tablas, "sanciones": sanciones, "titulos": titulos, "destacados": destacados}
+
+
+def _abrir_detalle(pg, tid: str, m: dict) -> None:
+    """Abre en el fixture el "Ver detalles" de un partido: va a su fecha con las flechas y toca el botón
+    de la tarjeta que tiene a los dos equipos."""
+    import re
+    pg.goto(f"{SITIO}/fixture", wait_until="networkidle")
+    pg.select_option("select", tid)
+    pg.wait_for_timeout(2500)
+    meta = int(re.search(r"\d+", m.get("stage") or "").group())
+    for _ in range(40):
+        actual = int(re.search(r"\d+", pg.locator("main h2").first.inner_text()).group())
+        if actual == meta:
+            break
+        flecha = "chevron-right" if actual < meta else "chevron-left"
+        pg.locator(f"main button:has(svg.lucide-{flecha})").first.click()
+        pg.wait_for_timeout(1200)
+    local, visita = m["home_team"]["name"].strip(), m["away_team"]["name"].strip()
+    botones = pg.locator("text=Ver detalles")
+    for k in range(botones.count()):
+        tarjeta = botones.nth(k).locator(f"xpath=ancestor::*[contains(., \"{local}\") and contains(., \"{visita}\")][1]")
+        if tarjeta.count() and len(tarjeta.first.inner_text()) < 200:
+            botones.nth(k).click()
+            return
+    raise RuntimeError("no se encontró la tarjeta del partido")
 
 
 def _esperar_estable(pg, respuestas: list, maximo: int = 40) -> str:
