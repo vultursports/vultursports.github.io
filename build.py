@@ -223,16 +223,6 @@ def preparar_partido(p: dict, ligas: dict) -> dict:
         for s in p.get("stats", []):
             if s.get("posicion") in corr:
                 s["posicion"] = corr[s["posicion"]]
-    # LVA: el MVP es siempre la mejor nota. En partidos guardados de torneos terminados (que ya no se
-    # vuelven a leer) puede quedar la marca original de la LVA: si es nuestra, pasa a nuestra mejor nota.
-    if p.get("liga") == "lva" and any(x.get("mvp") for x in p.get("stats", [])):
-        con_nota = [x for x in p["stats"] if x.get("rating") is not None and x["rating"] >= 0]
-        if con_nota:
-            top = max(x["rating"] for x in con_nota)
-            if not any(x.get("mvp") and x.get("rating") == top for x in p["stats"]):
-                mejor = next(x for x in con_nota if x["rating"] == top)
-                for x in p["stats"]:
-                    x["mvp"] = x is mejor
     loc = a_local(p["fecha_utc"])
     noche = (loc - timedelta(hours=6)).date()
     p = dict(p)
