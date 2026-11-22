@@ -351,12 +351,18 @@ def main():
 
     for p in partidos:
         p["empezo"] = p["dt"] <= ahora
-    EN_JUEGO = timedelta(minutes=15)  # tiempo que la tarjeta muestra "Se está jugando" antes de pasar al siguiente
-    proximos = [p for p in partidos if p["resultado"] is None and p["dt"] >= ahora - EN_JUEGO]
+    # La tarjeta principal muestra "Se está jugando" hasta que empieza el siguiente partido de la misma
+    # noche; si es el último de la noche, durante 30 minutos. Después pasa sola al siguiente.
+    EN_JUEGO = timedelta(minutes=30)
+    orden = sorted(partidos, key=lambda p: p["dt"])
+    for p, sig in zip(orden, orden[1:] + [None]):
+        mismo_dia = sig is not None and sig["noche"] == p["noche"] and sig["dt"] > p["dt"]
+        p["fin_tarjeta"] = sig["dt"] if mismo_dia else p["dt"] + EN_JUEGO
+    proximos = [p for p in partidos if p["resultado"] is None and p["fin_tarjeta"] > ahora]
     jugados = [p for p in partidos if p["resultado"]][::-1]
     # Ya se jugaron pero la liga todavía no cargó (o no aprobó) el resultado: siguen en el
     # calendario, en "Jugados", con un "?" hasta que aparezca el marcador.
-    sin_resultado = [p for p in partidos if p["resultado"] is None and p["dt"] < ahora - EN_JUEGO]
+    sin_resultado = [p for p in partidos if p["resultado"] is None and p["fin_tarjeta"] <= ahora]
     cal_jugados = sorted(jugados + sin_resultado, key=lambda p: p["dt"], reverse=True)
     proximo = proximos[0] if proximos else None
 

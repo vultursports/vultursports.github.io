@@ -4,15 +4,17 @@ VS.alCargar = (fn) => { VS.inits.push(fn); fn(); };
 VS.cadaTanto = (fn, ms) => VS.timers.push(setInterval(fn, ms));
 
 // Próximo partido: cada tarjeta muestra la cuenta regresiva; cuando un partido empieza, su tarjeta dice
-// "Se está jugando" durante 15 minutos y después la página pasa sola al siguiente partido.
+// "Se está jugando" hasta que empieza el siguiente de esa noche (o 30 minutos si es el último, data-fin)
+// y después la página pasa sola al siguiente partido.
 // En las listas, un partido que ya empezó y no tiene resultado muestra "?" con "Ver detalles".
 VS.alCargar(() => {
-  const EN_JUEGO = 15 * 60e3;
+  const EN_JUEGO = 30 * 60e3; // por si falta data-fin
   const tarjetas = [...document.querySelectorAll(".tarjeta-proximo")];
   const vacia = document.querySelector(".proximo.vacio");
   const tick = () => {
     const ahora = Date.now();
-    const actual = tarjetas.find((t) => new Date(t.dataset.inicio).getTime() + EN_JUEGO > ahora);
+    const fin = (t) => (t.dataset.fin ? new Date(t.dataset.fin).getTime() : new Date(t.dataset.inicio).getTime() + EN_JUEGO);
+    const actual = tarjetas.find((t) => fin(t) > ahora);
     tarjetas.forEach((t) => (t.hidden = t !== actual));
     if (vacia) vacia.hidden = Boolean(actual);
     if (actual) {

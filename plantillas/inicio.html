@@ -3,7 +3,7 @@
 {% block contenido %}
 
 {% for proximo in tarjetas %}
-<section class="proximo tarjeta-proximo liga-{{ proximo.liga }}" aria-labelledby="t-proximo-{{ loop.index }}" data-inicio="{{ proximo.dt.isoformat() }}"{% if not loop.first %} hidden{% endif %}>
+<section class="proximo tarjeta-proximo liga-{{ proximo.liga }}" aria-labelledby="t-proximo-{{ loop.index }}" data-inicio="{{ proximo.dt.isoformat() }}" data-fin="{{ proximo.fin_tarjeta.isoformat() }}"{% if not loop.first %} hidden{% endif %}>
   <div class="proximo-marco">
     <h1 id="t-proximo-{{ loop.index }}" class="proximo-titulo">
       {% if proximo.noche == hoy_noche %}Hoy jugamos{% else %}Próximo partido{% endif %}
