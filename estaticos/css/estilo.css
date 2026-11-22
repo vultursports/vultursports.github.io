@@ -750,3 +750,6 @@ a.dest-jug:hover .dest-nombre { color: var(--dorado); }
 .dm-r { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
 .dm-p.r-g .dm-h { color: var(--dorado); } .dm-p.r-p .dm-h { color: #ff6b70; } .dm-p.r-e .dm-h { color: var(--plata); }
 .buscador-caja input::-webkit-search-cancel-button { display: none; }
+
+/* Sin el recuadro de resaltado al tocar (Android) */
+a, button, label, summary { -webkit-tap-highlight-color: transparent; }

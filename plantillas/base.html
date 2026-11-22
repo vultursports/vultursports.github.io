@@ -8,6 +8,11 @@
 {% set desc = self.descripcion()|trim %}
 <meta name="description" content="{{ desc or ('Partidos, tablas y estadísticas de ' ~ club ~ ' en todas sus competencias de Clubes Pro.') }}">
 <meta name="theme-color" content="#1a1a1a">
+<meta name="color-scheme" content="dark">
+{# Fondo oscuro desde el primer instante, para que al cambiar de sección no se vea un destello claro #}
+<style>html{background:#1a1a1a;color-scheme:dark}</style>
+{# Cambiar de sección más rápido: la página se prepara apenas se toca el enlace (Chrome/Android) #}
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ club }}">
 <meta property="og:title" content="{{ self.titulo()|trim }}">
