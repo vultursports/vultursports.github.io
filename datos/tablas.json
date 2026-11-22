@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-22T10:39:47+00:00"
+  "actualizado": "2026-11-22T18:12:22+00:00"
  },
  {
   "id": "vpn-6449",
@@ -726,7 +726,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-22T10:40:24+00:00"
+  "actualizado": "2026-11-22T18:13:02+00:00"
  },
  {
   "id": "lva-ecfa9127",
@@ -818,7 +818,7 @@
     "pts": 32,
     "zona": null,
     "es_vultur": false,
-    "mov": 2
+    "mov": 0
    },
    {
     "pos": 6,
@@ -834,7 +834,7 @@
     "pts": 31,
     "zona": null,
     "es_vultur": false,
-    "mov": -1
+    "mov": 0
    },
    {
     "pos": 7,
@@ -850,7 +850,7 @@
     "pts": 25,
     "zona": null,
     "es_vultur": false,
-    "mov": -1
+    "mov": 0
    },
    {
     "pos": 8,
@@ -870,6 +870,22 @@
    },
    {
     "pos": 9,
+    "equipo": "Motor Psico",
+    "escudo": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png",
+    "pj": 16,
+    "g": 6,
+    "e": 5,
+    "p": 5,
+    "gf": 14,
+    "gc": 12,
+    "dg": 2,
+    "pts": 23,
+    "zona": null,
+    "es_vultur": false,
+    "mov": 4
+   },
+   {
+    "pos": 10,
     "equipo": "Acassuso eSports",
     "escudo": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg",
     "pj": 16,
@@ -882,10 +898,10 @@
     "pts": 22,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
-    "pos": 10,
+    "pos": 11,
     "equipo": "CELTA DEL VINO",
     "escudo": "https://i.ibb.co/Jh1GmLg/1001525369.png",
     "pj": 14,
@@ -898,10 +914,10 @@
     "pts": 22,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
-    "pos": 11,
+    "pos": 12,
     "equipo": "Inter Regional",
     "escudo": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png",
     "pj": 16,
@@ -914,10 +930,10 @@
     "pts": 19,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
-    "pos": 12,
+    "pos": 13,
     "equipo": "BOCA JUNIORS",
     "escudo": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png",
     "pj": 16,
@@ -928,22 +944,6 @@
     "gc": 19,
     "dg": -9,
     "pts": 18,
-    "zona": null,
-    "es_vultur": false,
-    "mov": 3
-   },
-   {
-    "pos": 13,
-    "equipo": "Motor Psico",
-    "escudo": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png",
-    "pj": 14,
-    "g": 4,
-    "e": 5,
-    "p": 5,
-    "gf": 9,
-    "gc": 12,
-    "dg": -3,
-    "pts": 17,
     "zona": null,
     "es_vultur": false,
     "mov": -1
@@ -962,35 +962,35 @@
     "pts": 16,
     "zona": null,
     "es_vultur": false,
-    "mov": -1
+    "mov": 0
    },
    {
     "pos": 15,
     "equipo": "Vultur Sports",
     "escudo": "https://i.ibb.co/ymxKzdx2/VULTUR.png",
-    "pj": 16,
+    "pj": 17,
     "g": 4,
     "e": 4,
-    "p": 8,
+    "p": 9,
     "gf": 12,
-    "gc": 22,
-    "dg": -10,
+    "gc": 23,
+    "dg": -11,
     "pts": 16,
     "zona": null,
     "es_vultur": true,
-    "mov": -1
+    "mov": 0
    },
    {
     "pos": 16,
     "equipo": "CLUB ATLÉTICO PELULGA",
     "escudo": "https://i.ibb.co/5WGX3vvS/1000277359.png",
-    "pj": 15,
+    "pj": 16,
     "g": 4,
     "e": 2,
-    "p": 9,
+    "p": 10,
     "gf": 13,
-    "gc": 27,
-    "dg": -14,
+    "gc": 31,
+    "dg": -18,
     "pts": 14,
     "zona": null,
     "es_vultur": false,
@@ -1061,6 +1061,6 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-22T10:41:25+00:00"
+  "actualizado": "2026-11-22T18:13:37+00:00"
  }
 ]
