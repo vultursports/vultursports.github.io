@@ -572,8 +572,4 @@ a.dest-jug:hover .dest-nombre { color: var(--dorado); }
   color: var(--hueso); background: var(--asfalto); border: 1px solid var(--linea); cursor: pointer; }
 .ver-mas:hover { background: var(--asfalto-2); }
 
-/* Navegación fluida: transición suave al cambiar de sección */
-@view-transition { navigation: auto; }
-::view-transition-old(root), ::view-transition-new(root) { animation-duration: .18s; }
-@media (prefers-reduced-motion: reduce) { ::view-transition-old(root), ::view-transition-new(root) { animation: none; } }
 #contenido:focus { outline: none; }

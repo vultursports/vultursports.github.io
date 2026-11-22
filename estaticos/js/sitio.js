@@ -167,8 +167,7 @@ VS.alCargar(() => {
         document.body.appendChild(n);
       });
     };
-    if (document.startViewTransition && !matchMedia("(prefers-reduced-motion: reduce)").matches) document.startViewTransition(cambiar);
-    else cambiar();
+    cambiar();
   }
 
   history.scrollRestoration = "manual";
