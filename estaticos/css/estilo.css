@@ -761,3 +761,14 @@ a.dest-jug:hover .dest-nombre { color: var(--dorado); }
 
 /* Sin el recuadro de resaltado al tocar (Android) */
 a, button, label, summary { -webkit-tap-highlight-color: transparent; }
+
+/* Página de partido: el marco y el título cambian de color según el resultado */
+.proximo.estado-g { background: var(--dorado); }
+.proximo.estado-g .proximo-titulo { color: var(--dorado); }
+.proximo.estado-e { background: var(--plata); }
+.proximo.estado-e .proximo-titulo { color: var(--plata); }
+.proximo.estado-p { background: var(--rojo); }
+.proximo.estado-p .proximo-titulo { color: #ff4d55; }
+.proximo.estado-prog .proximo-titulo { color: var(--hueso); }
+.proximo.estado-prog:has(.pendiente-txt:not([hidden])) { background: var(--plata-osc); }
+.proximo-titulo .pendiente-txt { color: var(--plata); }

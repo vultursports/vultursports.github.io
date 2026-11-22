@@ -15,7 +15,7 @@
 <div class="pagina">
   <p class="volver"><a href="/calendario/">Calendario</a><button type="button" class="compartir" hidden>Compartir</button></p>
 
-  <section class="proximo liga-{{ p.liga }}" aria-labelledby="t-partido">
+  <section class="proximo liga-{{ p.liga }} estado-{{ p.resultado or 'prog' }}" aria-labelledby="t-partido">
     <div class="proximo-marco">
       <h1 id="t-partido" class="proximo-titulo">
         {% if p.wo %}{{ 'Victoria' if p.resultado == 'g' else 'Derrota' }} por W.O.{% elif p.resultado == 'g' %}Victoria{% elif p.resultado == 'e' %}Empate{% elif p.resultado == 'p' %}Derrota{% else %}<span data-inicio="{{ p.dt.isoformat() }}"><span class="antes"{% if p.empezo %} hidden{% endif %}>Partido programado</span><span class="pendiente-txt"{% if not p.empezo %} hidden{% endif %}>Esperando resultado</span></span>{% endif %}
