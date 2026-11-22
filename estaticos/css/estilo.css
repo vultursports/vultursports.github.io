@@ -572,4 +572,3 @@ a.dest-jug:hover .dest-nombre { color: var(--dorado); }
   color: var(--hueso); background: var(--asfalto); border: 1px solid var(--linea); cursor: pointer; }
 .ver-mas:hover { background: var(--asfalto-2); }
 
-#contenido:focus { outline: none; }
