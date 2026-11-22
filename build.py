@@ -225,6 +225,18 @@ def rachas(lista: list) -> dict:
     return {"victorias": mejor_g, "invicto": mejor_inv, "actual": actual}
 
 
+def ediciones(config: list) -> list:
+    """Ediciones del juego (FC 27, FC 28...). Las que todavía no están en la configuración se suponen
+    un año después de la última, con el número siguiente (EA saca una por año, a fines de septiembre)."""
+    ed = sorted((e["desde"], e["nombre"]) for e in config)
+    if ed and re.search(r"\d+$", ed[-1][1]):
+        desde, nombre = ed[-1]
+        n = int(re.search(r"\d+$", nombre)[0])
+        for k in range(1, 6):
+            ed.append((desde.replace(year=desde.year + k), re.sub(r"\d+$", str(n + k), nombre)))
+    return ed
+
+
 def edicion_de(d) -> str:
     nombre = ""
     for desde, n in EDICIONES:
@@ -314,7 +326,7 @@ def main():
                     "activa": l.get("activa", False)}
 
     ahora = datetime.now(AR)
-    EDICIONES[:] = sorted((e["desde"], e["nombre"]) for e in cfg["club"].get("ediciones", []))
+    EDICIONES[:] = ediciones(cfg["club"].get("ediciones", []))
     edicion_actual = edicion_de(ahora.date())
     partidos = [preparar_partido(p, ligas) for p in leer("partidos.json", [])]
     tablas = leer("tablas.json", [])

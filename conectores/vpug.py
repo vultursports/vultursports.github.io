@@ -26,13 +26,29 @@ def _login(c, api: str) -> str | None:
     return r.json()["token"]
 
 
+def temporada_y_division(c, api: str, club: int, t_cfg: int, d_cfg: int):
+    """Temporada en curso y división donde juega el club, según la API de VPUG. Así una temporada
+    nueva o un ascenso/descenso se toman solos. Si no se encuentra, se usa la de config/ligas.yaml."""
+    try:
+        temps = sorted(pedir(c, f"{api}/temporadas"), key=lambda x: (x.get("estado") == "EN_CURSO", x["id"]), reverse=True)
+        divs = sorted((x["id"] for x in pedir(c, f"{api}/divisiones")), key=lambda i: i != d_cfg)
+        for temp in temps[:2]:
+            for div in divs:
+                tabla = pedir(c, f"{api}/tabla?temporadaId={temp['id']}&divisionId={div}")
+                if any((r.get("club") or {}).get("id") == club for r in tabla.get("filas") or []):
+                    return temp["id"], div, tabla
+    except (ErrorConector, KeyError, TypeError) as e:
+        print("  aviso VPUG temporada:", e)
+    return t_cfg, d_cfg, pedir(c, f"{api}/tabla?temporadaId={t_cfg}&divisionId={d_cfg}")
+
+
 def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
     api = cfg["api_base"].rstrip("/")
-    t, d, club = cfg["temporada_id"], cfg["division_id"], cfg["club_id"]
-    comp_id = f"vpug-{t}-{d}"
+    club = cfg["club_id"]
     partidos, plantel = [], []
     with cliente() as c:
-        tabla = pedir(c, f"{api}/tabla?temporadaId={t}&divisionId={d}")
+        t, d, tabla = temporada_y_division(c, api, club, cfg["temporada_id"], cfg["division_id"])
+        comp_id = f"vpug-{t}-{d}"
         guardar_raw("vpug", f"tabla_{t}_{d}", tabla)
         rank = pedir(c, f"{api}/estadisticas/rankings?temporadaId={t}&divisionId={d}")
         guardar_raw("vpug", f"rankings_{t}_{d}", rank)
@@ -116,6 +132,9 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
         for lista, stat in ((rank.get("goleadores", []), "goles"), (rank.get("asistidores", []), "asistencias"))
         for n, x in enumerate(lista[:5]) if x["club"]["id"] == club
     ]
+    # Partidos de temporadas anteriores: la API solo devuelve los de la temporada actual; se conservan
+    if partidos:
+        partidos += [p for p in partidos_previos.values() if p.get("competencia_id") != comp_id]
     return {
         "destacados": destacados,
         "partidos": partidos,

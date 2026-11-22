@@ -39,8 +39,15 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
 
     with cliente() as c:
         bid = _build_id(c, com, slug)
+        try:
+            hist = _data(c, bid, f"{com}/teams/{slug}/seasons", f"communitySlug={com}&id={slug}&tab=seasons")["history"]
+            guardar_raw("vpn", "temporadas", hist)
+        except (ErrorConector, KeyError) as e:
+            print("  aviso VPN temporadas:", e)
+            hist = None
+        competencias = competencias_actuales(cfg["competencias"], hist)
 
-        for comp in cfg["competencias"]:
+        for comp in competencias:
             ruta = f"{com}/league/{comp['league_id']}/{comp['league_slug']}/season/{comp['season_id']}/standings"
             params = (f"communitySlug={com}&id={comp['league_id']}&url={comp['league_slug']}"
                       f"&seasonId={comp['season_id']}&tab=standings")
@@ -141,8 +148,11 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
 
         # Temporadas anteriores (todo el historial disponible en VPN). Las cerradas se bajan una
         # sola vez: si ya tenemos partidos guardados de esa temporada, no se vuelven a pedir.
-        actuales = {f"vpn-{x['season_id']}" for x in cfg["competencias"]}
-        partidos += _historial(c, bid, com, slug, tid, partidos_previos, actuales)
+        actuales = {f"vpn-{x['season_id']}" for x in competencias}
+        if hist:
+            partidos += _historial(c, bid, com, slug, tid, partidos_previos, actuales, hist)
+        else:  # sin historial: se conservan los partidos guardados de otras temporadas
+            partidos += [p for p in partidos_previos.values() if p.get("competencia_id") not in actuales]
 
         # Jugadores no habilitados para los próximos partidos (lo publica VPN en cada partido)
         for p in [x for x in partidos if x["estado"] == "programado"][:3]:
@@ -185,9 +195,20 @@ def _corto(temporada: str) -> str:
     return f"T{n}" if n else temporada
 
 
-def _historial(c, bid: str, com: str, slug: str, tid: int, previos: dict, actuales: set) -> list:
-    hist = _data(c, bid, f"{com}/teams/{slug}/seasons", f"communitySlug={com}&id={slug}&tab=seasons")["history"]
-    guardar_raw("vpn", "temporadas", hist)
+def competencias_actuales(config: list, hist: dict | None) -> list:
+    """Temporadas de liga en curso según el historial del equipo en VPN. Así una temporada nueva o un
+    ascenso/descenso se toman solos, sin cambiar la configuración. Si VPN no marca ninguna en curso
+    (entre temporadas) o no se pudo leer, se usa la de config/ligas.yaml."""
+    activas = []
+    for s in (hist or {}).get("seasons", []):
+        m = re.search(r"/league/(\d+)/([^/]+)/season/(\d+)", s.get("competitionHref") or "")
+        if s.get("active") and s.get("kind") == "league" and m:
+            activas.append({"nombre": s.get("competitionName"), "league_id": int(m[1]), "league_slug": m[2],
+                            "season_id": int(m[3]), "temporada": s.get("seasonLabel") or ""})
+    return activas or config
+
+
+def _historial(c, bid: str, com: str, slug: str, tid: int, previos: dict, actuales: set, hist: dict) -> list:
     try:
         vitrina = _data(c, bid, f"{com}/teams/{slug}/trophies", f"communitySlug={com}&id={slug}&tab=trophies")["cabinet"]
         guardar_raw("vpn", "vitrina", vitrina)
