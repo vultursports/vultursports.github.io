@@ -637,13 +637,13 @@ a.dest-jug:hover .dest-nombre { color: var(--dorado); }
 }
 
 /* Volver arriba */
-.arriba {
+.volver-arriba {
   position: fixed; right: 16px; bottom: 20px; z-index: 19; width: 46px; height: 46px; display: grid; place-items: center;
   border: 1px solid var(--linea); background: var(--asfalto-2); color: var(--hueso); cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,.4);
 }
-.arriba[hidden] { display: none; }
-.arriba:hover { background: var(--rojo); }
-@media (max-width: 760px) { .arriba { bottom: calc(76px + env(safe-area-inset-bottom)); right: 12px; } }
+.volver-arriba[hidden] { display: none; }
+.volver-arriba:hover { background: var(--rojo); }
+@media (max-width: 760px) { .volver-arriba { bottom: calc(76px + env(safe-area-inset-bottom)); right: 12px; } }
 
 /* Buscador */
 .buscador {
