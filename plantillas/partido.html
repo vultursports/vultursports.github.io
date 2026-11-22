@@ -9,6 +9,12 @@
     </ul>
     {% if r.jugados|length > 5 %}<p class="fuente"><a href="{{ r.pagina }}">Ver los {{ r.jugados|length }} partidos contra {{ r.nombre }}</a></p>{% endif %}
 {% endmacro %}
+{% macro cab_ea() %}<th scope="col" class="ea-col"><abbr title="Tiros">Tiros</abbr></th><th scope="col"><abbr title="Pases completados sobre intentados">Pases</abbr></th><th scope="col"><abbr title="Entradas ganadas sobre intentadas">Entr.</abbr></th>{% endmacro %}
+{% macro celdas_ea(e) %}{% if e %}<td class="ea-col">{{ e.tiros or '' }}</td><td class="ea-pases">{% if e.pases_int %}{{ e.pases }}/{{ e.pases_int }}<small>{{ (100 * e.pases / e.pases_int)|round|int }}%</small>{% endif %}</td><td>{% if e.entradas_int %}{{ e.entradas }}/{{ e.entradas_int }}{% endif %}</td>{% else %}<td class="ea-col"></td><td></td><td></td>{% endif %}{% endmacro %}
+{% macro pie_ea(p) %}
+    {% if p.ea_arquero %}{% set a = p.ea_arquero %}<p class="ea-arquero"><b>{{ a.alias }}</b>: {{ a.atajadas }} {{ 'atajada' if a.atajadas == 1 else 'atajadas' }}{% if a.tipos %} ({% for n, t in a.tipos %}{{ n }} {{ t }}{{ ', ' if not loop.last }}{% endfor %}){% endif %}.</p>{% endif %}
+    <p class="fuente">Tiros, pases y entradas: datos de EA SPORTS FC. Goles, asistencias y nota: {{ p.liga_ui.nombre if p.stats else 'EA SPORTS FC' }}.</p>
+{% endmacro %}
 {% block titulo %}{{ club }} | Partido vs {{ p.rival.nombre }}{% endblock %}
 {% block descripcion %}{% if p.resultado %}{{ club }} {{ p.gf }}–{{ p.gc }} {{ p.rival.nombre }}{% if p.wo %} (W.O.){% endif %}{% else %}{{ p.noche.strftime('%d/%m') }} a las {{ p.hora }} (hora argentina): {{ club }} vs {{ p.rival.nombre }}{% endif %} · {{ p.liga_ui.corto }} {{ p.competencia }}, {{ p.jornada|lower }}{% if p.resultado %} · {{ p.noche.strftime('%d/%m/%Y') }}{% endif %}.{% endblock %}
 {% block og_img %}{{ p.og_img or og_imagen }}{% endblock %}
@@ -19,7 +25,7 @@
   <section class="proximo liga-{{ p.liga }} estado-{{ p.resultado or 'prog' }}" aria-labelledby="t-partido">
     <div class="proximo-marco">
       <h1 id="t-partido" class="proximo-titulo">
-        {% if p.wo %}{{ 'Victoria' if p.resultado == 'g' else 'Derrota' }} por W.O.{% elif p.resultado == 'g' %}Victoria{% elif p.resultado == 'e' %}Empate{% elif p.resultado == 'p' %}Derrota{% else %}<span data-inicio="{{ p.dt.isoformat() }}"><span class="antes"{% if p.empezo %} hidden{% endif %}>Partido programado</span><span class="pendiente-txt"{% if not p.empezo %} hidden{% endif %}>Esperando resultado</span></span>{% endif %}
+        {% if p.wo %}{{ 'Victoria' if p.resultado == 'g' else 'Derrota' }} por W.O.{% elif p.resultado == 'g' %}Victoria{% elif p.resultado == 'e' %}Empate{% elif p.resultado == 'p' %}Derrota{% elif p.provisorio %}Resultado provisorio{% else %}<span data-inicio="{{ p.dt.isoformat() }}"><span class="antes"{% if p.empezo %} hidden{% endif %}>Partido programado</span><span class="pendiente-txt"{% if not p.empezo %} hidden{% endif %}>Esperando resultado</span></span>{% endif %}
       </h1>
       <p class="proximo-comp">{{ chip(p.liga_ui) }} {{ p.competencia }}, {{ p.jornada|lower }}</p>
       <div class="duelo{% if not p.local %} visitante{% endif %}">
@@ -29,13 +35,16 @@
           {% if p.resultado and (p.goleadores or p.asistidores) %}
           <ul class="goles-eq" aria-label="Goles y asistencias">
             {% for n, g in p.goleadores %}<li><span class="ico-gol" aria-hidden="true"></span>{{ n }}{% if g > 1 %} <b>×{{ g }}</b>{% endif %}<span class="sr"> ({{ g }} {{ 'gol' if g == 1 else 'goles' }})</span></li>{% endfor %}
-            {% for n, a in p.asistidores %}<li class="asist"><span class="ico-asist" aria-hidden="true">A</span>{{ n }}{% if a > 1 %} <b>×{{ a }}</b>{% endif %}<span class="sr"> ({{ a }} {{ 'asistencia' if a == 1 else 'asistencias' }})</span></li>{% endfor %}
+            {% for n, a in p.asistidores %}<li class="asist"><span class="ico-asist" aria-hidden="true"></span>{{ n }}{% if a > 1 %} <b>×{{ a }}</b>{% endif %}<span class="sr"> ({{ a }} {{ 'asistencia' if a == 1 else 'asistencias' }})</span></li>{% endfor %}
           </ul>
           {% endif %}
         </div>
         <div class="cuando">
           {% if p.resultado %}
             <div class="final"><span class="hora">{{ p.gf if p.local else p.gc }}<span class="guion">–</span>{{ p.gc if p.local else p.gf }}</span>
+            <span class="dia"><span class="f-larga">{{ p.noche_txt }}</span><span class="f-corta">{{ p.noche_corta }}</span><br>{{ p.hora }} h</span></div>
+          {% elif p.provisorio %}{% set q = p.provisorio %}
+            <div class="final"><span class="hora">{{ q.gf if p.local else q.gc }}<span class="guion">–</span>{{ q.gc if p.local else q.gf }}</span>
             <span class="dia"><span class="f-larga">{{ p.noche_txt }}</span><span class="f-corta">{{ p.noche_corta }}</span><br>{{ p.hora }} h</span></div>
           {% else %}
             <time datetime="{{ p.dt.isoformat() }}"><span class="hora">{{ p.hora }}</span><span class="dia"><span class="f-larga">{{ p.noche_txt }}</span><span class="f-corta">{{ p.noche_corta }}</span></span></time>
@@ -46,7 +55,7 @@
           <span class="nombre-eq">{{ p.rival.nombre }}</span>{% if p.pos_rival and not p.resultado %}<small class="pos-tabla">{{ p.pos_rival }}° en la tabla</small>{% endif %}
         </a>
       </div>
-      <p class="proximo-pie">{{ p.condicion }}. Hora argentina.</p>
+      <p class="proximo-pie">{{ p.condicion }}. Hora argentina.{% if p.provisorio %} Provisorio (EA). Falta que lo cargue la liga.{% endif %}</p>
     </div>
   </section>
 
@@ -117,7 +126,7 @@
         {% endif %}
       {% endfor %}
     </div>
-    <p class="fuente">Datos de EA publicados por {{ p.liga_ui.nombre }}. El porcentaje es la precisión (completados sobre intentados).</p>
+    <p class="fuente">{% if p.equipo_stats_ea %}Datos de EA SPORTS FC (la liga no los publica){% else %}Datos de EA publicados por {{ p.liga_ui.nombre }}{% endif %}. El porcentaje es la precisión (completados sobre intentados).</p>
   </section>
   {% endif %}
 
@@ -132,6 +141,7 @@
         <th scope="col"><abbr title="Goles">G</abbr></th>
         <th scope="col"><abbr title="Asistencias">A</abbr></th>
         <th scope="col"><abbr title="Calificación">Nota</abbr></th>
+        {% if p.ea %}{{ cab_ea() }}{% endif %}
       </tr></thead>
       <tbody>
       {% for s in p.stats|sort(attribute='rating', reverse=True) %}
@@ -141,11 +151,41 @@
           <td>{{ s.goles or '' }}</td>
           <td>{{ s.asistencias or '' }}</td>
           <td>{{ '%.1f'|format(s.rating) if s.rating >= 0 else '' }}</td>
+          {% if p.ea %}{{ celdas_ea(s.ea) }}{% endif %}
         </tr>
       {% endfor %}
       </tbody>
     </table>
     </div>
+    {{ pie_ea(p) }}
+  </section>
+  {% elif p.ea_jugadores %}
+  <section aria-labelledby="t-stats">
+    <div class="enc"><h2 id="t-stats">Nuestros jugadores</h2></div>
+    <p class="bajada">Estadísticas de EA: la liga todavía no publicó las suyas.</p>
+    <div class="scroll-x">
+    <table class="tabla stats">
+      <thead><tr>
+        <th scope="col" class="eq">Jugador</th>
+        <th scope="col"><abbr title="Goles">G</abbr></th>
+        <th scope="col"><abbr title="Asistencias">A</abbr></th>
+        <th scope="col"><abbr title="Calificación de EA">Nota</abbr></th>
+        {{ cab_ea() }}
+      </tr></thead>
+      <tbody>
+      {% for s in p.ea_jugadores %}
+        <tr{% if s.mom %} class="nosotros"{% endif %}>
+          <th scope="row" class="eq"><div class="eqi"><span>{{ s.alias }}</span>{% if s.mom %}<b class="mvp" title="Figura según EA">Figura</b>{% endif %}</div></th>
+          <td>{{ s.goles or '' }}</td>
+          <td>{{ s.asistencias or '' }}</td>
+          <td>{{ '%.1f'|format(s.nota) if s.nota is not none else '' }}</td>
+          {{ celdas_ea(s) }}
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+    {{ pie_ea(p) }}
   </section>
   {% elif p.wo %}
   <p class="vacio">Partido definido sin jugar (W.O.): {{ 'el rival se dio de baja o no se presentó' if p.resultado == 'g' else 'no nos presentamos' }}. La liga lo registra {{ p.gf }}-{{ p.gc }}.</p>

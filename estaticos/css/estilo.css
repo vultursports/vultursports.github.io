@@ -300,14 +300,25 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
 .selector-ambito .logo-liga { --h: 20px; }
 .selector-ambito .sc-nombre { flex: none; text-align: center; white-space: normal; }
 /* Dorsal en lugar de foto, con el octógono biselado del escudo */
+/* Ícono de jugador: camiseta de Vultur (cuerpo negro, mangas y ruedo rojos) con el dorsal.
+   La forma va en ::before (recortada); el contorno claro, con drop-shadow en el elemento, la sigue. */
 .avatar {
+  --manga: var(--rojo); --cuerpo: var(--carbon);
+  position: relative; isolation: isolate;
   display: inline-grid; place-items: center; flex: none; width: var(--t); height: var(--t);
-  font: 900 calc(var(--t) * .52)/1 var(--display); font-variant-numeric: tabular-nums;
-  color: var(--hueso); background: var(--asfalto-2);
-  box-shadow: inset 0 0 0 max(2px, calc(var(--t) * .05)) var(--rojo);
-  clip-path: polygon(28% 0, 72% 0, 100% 28%, 100% 72%, 72% 100%, 28% 100%, 0 72%, 0 28%);
+  padding-top: calc(var(--t) * .1); box-sizing: border-box;
+  font: 900 calc(var(--t) * .4)/1 var(--display); font-variant-numeric: tabular-nums; color: var(--hueso);
+  filter: drop-shadow(0 0 .6px rgba(241,238,232,.75));
 }
-.avatar.sin-dorsal { color: var(--plata); box-shadow: inset 0 0 0 max(2px, calc(var(--t) * .05)) var(--linea); }
+.avatar::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; background-color: var(--cuerpo);
+  background-image:
+    linear-gradient(90deg, var(--manga) 0 23%, transparent 23% 77%, var(--manga) 77%),
+    linear-gradient(0deg, var(--manga) 0 7%, transparent 7%),
+    radial-gradient(ellipse 17% 11% at 50% 3%, var(--hueso) 0 70%, transparent 72%);
+  clip-path: polygon(31% 3%, 41% 3%, 50% 11%, 59% 3%, 69% 3%, 89% 12%, 100% 36%, 84% 45%, 78% 38%, 78% 97%, 22% 97%, 22% 38%, 16% 45%, 0 36%, 11% 12%);
+}
+.avatar.sin-dorsal { --manga: var(--linea); color: var(--plata); }
 .lideres { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 4px 0 20px; }
 @media (min-width: 760px) { .lideres { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .lider { background: var(--asfalto); padding: 12px; border-top: 3px solid var(--dorado); min-width: 0; }
@@ -384,7 +395,6 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
   position: absolute; transform: translate(-50%, -50%); width: 25%; max-width: 120px;
   display: grid; justify-items: center; gap: 1px; text-align: center; text-decoration: none; color: var(--hueso);
 }
-.ficha-cancha .avatar { background: var(--carbon); }
 .fc-nombre {
   max-width: 100%; margin-top: 3px; padding: 1px 4px; background: rgba(26,26,26,.82);
   font: 700 .74rem/1.2 var(--texto); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -398,7 +408,7 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
   padding: 2px 4px 1px; font: 900 .62rem/1 var(--display); letter-spacing: .05em;
   background: var(--dorado); color: var(--carbon);
 }
-.es-mvp .avatar { box-shadow: inset 0 0 0 3px var(--dorado); }
+.es-mvp .avatar { --manga: var(--dorado); }
 .es-mvp .fc-nombre { background: var(--dorado); color: var(--carbon); }
 .banco-titulo { font: 800 1.2rem/1 var(--display); color: var(--plata); margin: 16px 0 8px; }
 .banco { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; }
@@ -778,8 +788,8 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
 .goles-eq li { display: flex; align-items: center; gap: 5px; line-height: 1.2; }
 .goles-eq li.asist { color: var(--plata); }
 .goles-eq b { font-weight: 700; color: var(--dorado); }
-.ico-gol { width: 11px; height: 11px; border-radius: 50%; flex: none; background: var(--hueso); box-shadow: inset 0 0 0 2px var(--carbon), 0 0 0 1px var(--hueso); }
-.ico-asist { font: 800 .7rem/1 var(--display); flex: none; width: 13px; height: 13px; display: grid; place-items: center; border: 1px solid var(--plata); color: var(--plata); }
+.ico-gol, .rg-g { display: inline-block; width: 13px; height: 13px; flex: none; background: var(--hueso); -webkit-mask: url(/estaticos/img/gol.svg) center / contain no-repeat; mask: url(/estaticos/img/gol.svg) center / contain no-repeat; vertical-align: -2px; }
+.ico-asist, .rg-a { display: inline-block; width: 17px; height: 17px; flex: none; background: var(--plata); -webkit-mask: url(/estaticos/img/asistencia.svg) center / contain no-repeat; mask: url(/estaticos/img/asistencia.svg) center / contain no-repeat; vertical-align: -3px; }
 @media (max-width: 520px) { .goles-eq { font-size: .74rem; } }
 
 /* Jugador: gráfico de notas y mejores partidos */
@@ -839,3 +849,73 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
 .rt-lideres span { font-size: .75rem; color: var(--plata); text-transform: uppercase; letter-spacing: .04em; }
 .rt-lideres a { font-weight: 700; text-decoration: none; overflow-wrap: anywhere; }
 .rt-lideres b { font: 900 1.4rem/1 var(--display); color: var(--dorado); }
+
+/* Datos de EA SPORTS FC: precisión, racha de goles y columnas extra del partido */
+.totales small { display: block; margin-top: 4px; color: var(--plata); font-size: .75rem; }
+.racha-ga { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px; max-width: 560px; }
+.racha-ga a { display: grid; grid-template-rows: 1fr auto; height: 112px; text-decoration: none; background: var(--asfalto); border-bottom: 3px solid var(--linea); }
+.racha-ga .r-g a { border-bottom-color: var(--dorado); } .racha-ga .r-p a { border-bottom-color: var(--rojo); } .racha-ga .r-e a { border-bottom-color: var(--plata); }
+.racha-ga a:hover, .racha-ga a:focus-visible { background: var(--linea); }
+.rg-marcas { display: flex; flex-direction: column-reverse; align-items: center; justify-content: flex-start; gap: 3px; padding: 6px 0; overflow: hidden; }
+.rg-pie { font-size: .68rem; color: var(--plata); text-align: center; padding: 2px 0 4px; }
+.stats .ea-col { border-left: 1px solid var(--linea); }
+.ea-pases { white-space: nowrap; }
+.ea-pases small { color: var(--plata); margin-left: 4px; }
+.ea-arquero { color: var(--plata); margin: 10px 0 0; }
+.ea-arquero b { color: var(--hueso); }
+
+/* Jugador de la noche e hitos de la semana (inicio) */
+.figura-fila { display: grid; gap: 12px; margin: 0 0 28px; }
+@media (min-width: 820px) { .figura-fila { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); } }
+.figura { background: var(--asfalto); padding: 14px 16px; border-left: 3px solid var(--dorado); }
+.figura h2 { font: 800 1.1rem/1 var(--display); text-transform: uppercase; letter-spacing: .03em; margin: 0 0 12px; color: var(--dorado); }
+.figura-jug { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; text-decoration: none; }
+.figura-jug b { font-size: 1.15rem; overflow-wrap: anywhere; }
+.figura-jug small { display: block; color: var(--plata); font-size: .8rem; margin-top: 2px; }
+.figura-nota { font: 900 2.4rem/1 var(--display); color: var(--dorado); display: grid; justify-items: end; }
+.figura-nota small { font: 600 .65rem/1.3 var(--texto); color: var(--plata); text-transform: uppercase; letter-spacing: .06em; }
+.figura-datos { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 10px 0 0; align-items: center; }
+.figura-datos span { display: inline-flex; align-items: center; gap: 6px; }
+.figura .fuente { margin: 8px 0 0; }
+
+/* Hitos (ficha) */
+.hitos { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.hitos a { display: grid; gap: 2px; padding: 8px 12px; background: var(--asfalto); border-left: 3px solid var(--plata-osc); text-decoration: none; }
+.hitos .hito-goles a { border-left-color: var(--hueso); } .hitos .hito-mvp a { border-left-color: var(--dorado); } .hitos .hito-pj a { border-left-color: var(--rojo); }
+.hitos b { font: 800 1.15rem/1.1 var(--display); }
+.hitos span { color: var(--plata); font-size: .78rem; }
+
+/* Quién juega en cada puesto */
+.cancha-mapa { aspect-ratio: auto; height: 760px; max-width: 560px; }
+.mapa-pos-item { position: absolute; transform: translate(-50%, -50%); display: grid; justify-items: center; gap: 1px; width: 26%; max-width: 140px;
+  background: rgba(20,20,20,.82); padding: 4px 6px 5px; font-size: .72rem; line-height: 1.25; text-align: center; }
+.mapa-pos-item .mp-pos { font: 800 .85rem/1 var(--display); color: var(--dorado); letter-spacing: .04em; margin-bottom: 2px; }
+.mapa-pos-item a { display: flex; gap: 4px; justify-content: center; max-width: 100%; text-decoration: none; }
+.mapa-pos-item a span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mapa-pos-item a small { color: var(--plata); }
+.mapa-pos-item .mp-mas { color: var(--plata-osc); font-size: .65rem; }
+
+/* Récords en un partido, comparar y resultado provisorio */
+.rec-ea { color: var(--plata); text-decoration: none; }
+.cmp-tabla th small { display: block; color: var(--plata-osc); font-size: .68rem; font-weight: 400; }
+.provisorio { text-decoration: none; display: grid; justify-items: end; }
+.provisorio .marcador { background: transparent; color: var(--hueso); outline: 1px dashed var(--plata); outline-offset: -1px; }
+.provisorio .ver-det { color: var(--plata); }
+.control-ea ul { margin: 0 0 24px; padding-left: 18px; color: var(--plata); }
+.control-ea b { color: var(--hueso); }
+
+/* Líderes del plantel: 6 a la vista y el resto con "Ver más" */
+.lideres-mas { grid-column: 1 / -1; display: grid; grid-template-columns: inherit; gap: inherit; }
+.lideres-mas[hidden] { display: none; }
+.lideres .lideres-btn { grid-column: 1 / -1; margin: 0; padding: 8px; }
+
+/* Cabeceras de la tabla del plantel en una sola línea (p. ej. "Pases %") */
+#tabla-plantel th, #tabla-plantel th button { white-space: nowrap; }
+
+/* Plantel en celular: como las tablas de posiciones, solo lo esencial (Jugador, PJ, G, A y Nota).
+   Columnas: 1 Jugador, 2 PJ, 3 G, 4 A, 5 G+A, 6 MVP, 7 VI, 8 TA/TR, 9 Nota, 10-12 datos de EA */
+@media (max-width: 520px) {
+  #tabla-plantel :is(th, td):nth-child(n+5):not(:nth-child(9)) { display: none; }
+  #tabla-plantel .eqi span { max-width: 11rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #nota-ea { display: none; }
+}

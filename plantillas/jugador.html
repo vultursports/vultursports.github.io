@@ -33,6 +33,22 @@
     <div><dt>Nota promedio</dt><dd>{{ '%.1f'|format(j.total.nota) if j.total.nota else '–' }}</dd></div>
   </dl>
 
+  {% if j.posiciones %}
+  <section aria-labelledby="t-pos">
+    <div class="enc"><h2 id="t-pos">Posiciones</h2></div>
+    <div class="scroll-x">
+    <table class="tabla stats">
+      <thead><tr><th scope="col" class="eq">Posición</th><th scope="col">PJ</th><th scope="col">%</th></tr></thead>
+      <tbody>
+      {% for x in j.posiciones %}
+        <tr><th scope="row" class="eq"><b>{{ x.pos }}</b> · {{ x.nombre }}</th><td>{{ x.pj }}</td><td>{{ x.pct }}%</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </section>
+  {% endif %}
+
   {% if j.grafico %}{% set G = j.grafico %}
   <section class="notas" aria-labelledby="t-notas">
     <div class="enc"><h2 id="t-notas">Sus notas</h2></div>
@@ -53,6 +69,43 @@
   </section>
   {% endif %}
 
+  {% if j.racha_ga %}
+  <section aria-labelledby="t-racha">
+    <div class="enc"><h2 id="t-racha">Últimos 10</h2></div>
+    <ol class="racha-ga">
+      {% for x in j.racha_ga %}
+      <li class="r-{{ x.res }}"><a href="{{ x.pagina }}" title="{{ x.txt }}: {{ x.g }} G, {{ x.a }} A">
+        <span class="rg-marcas">{% for _ in range(x.a) %}<i class="rg-a"></i>{% endfor %}{% for _ in range(x.g) %}<i class="rg-g"></i>{% endfor %}</span>
+        <span class="rg-pie">{{ x.txt.split(' ')[0] }}</span>
+        <span class="sr">{{ x.txt }}: {{ x.g }} {{ 'gol' if x.g == 1 else 'goles' }}, {{ x.a }} {{ 'asistencia' if x.a == 1 else 'asistencias' }}</span>
+      </a></li>
+      {% endfor %}
+    </ol>
+    <p class="fuente"><i class="rg-g" aria-hidden="true"></i> gol · <i class="rg-a" aria-hidden="true"></i> asistencia</p>
+  </section>
+  {% endif %}
+
+  {% if j.precision %}{% set q = j.precision %}
+  <section aria-labelledby="t-precision">
+    <div class="enc"><h2 id="t-precision">Precisión</h2></div>
+    <p class="bajada">Últimos 20 partidos · EA</p>
+    <dl class="totales">
+      <div><dt>Tiros</dt><dd>{{ q.tiros }}</dd><small>{{ q.tiros_pj }} por partido</small></div>
+      {% if q.conversion is not none %}<div><dt>Goles por tiro</dt><dd>{{ q.conversion }}%</dd></div>{% endif %}
+      {% if q.pases_pct is not none %}<div><dt>Pases completados</dt><dd>{{ q.pases_pct }}%</dd><small>{{ q.pases }} pases</small></div>{% endif %}
+      {% if q.entradas_pct is not none %}<div><dt>Entradas ganadas</dt><dd>{{ q.entradas_pct }}%</dd><small>{{ q.entradas }} entradas</small></div>{% endif %}
+      {% if q.atajadas %}<div><dt>Atajadas</dt><dd>{{ q.atajadas }}</dd></div>{% endif %}
+    </dl>
+  </section>
+  {% endif %}
+
+  {% if j.hitos %}
+  <section aria-labelledby="t-hitos">
+    <div class="enc"><h2 id="t-hitos">Hitos</h2></div>
+    <ul class="hitos">{% for h in j.hitos %}<li class="hito-{{ h.tipo }}"><a href="{{ h.p.pagina }}"><b>{{ h.txt }}</b><span>{{ h.p.noche.strftime('%d/%m/%Y') }} vs {{ h.p.rival.nombre }} · {{ h.p.liga_ui.corto }}</span></a></li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+
   {% if j.total.pj %}
   <section aria-labelledby="t-porliga">
     <div class="enc"><h2 id="t-porliga">Por liga</h2></div>
@@ -68,22 +121,6 @@
     </table>
     </div>
   </section>
-
-  {% if j.posiciones %}
-  <section aria-labelledby="t-pos">
-    <div class="enc"><h2 id="t-pos">Posiciones</h2></div>
-    <div class="scroll-x">
-    <table class="tabla stats">
-      <thead><tr><th scope="col" class="eq">Posición</th><th scope="col">PJ</th><th scope="col">%</th></tr></thead>
-      <tbody>
-      {% for x in j.posiciones %}
-        <tr><th scope="row" class="eq"><b>{{ x.pos }}</b> · {{ x.nombre }}</th><td>{{ x.pj }}</td><td>{{ x.pct }}%</td></tr>
-      {% endfor %}
-      </tbody>
-    </table>
-    </div>
-  </section>
-  {% endif %}
 
   <section aria-labelledby="t-portemp">
     <div class="enc"><h2 id="t-portemp">Por temporada</h2></div>

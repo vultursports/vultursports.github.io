@@ -17,7 +17,9 @@ from pathlib import Path
 
 import yaml
 
+import extras
 import jugadores as jug_mod
+from conectores import ea as ea_mod
 import escudos as esc_mod
 import og
 import rivales as riv_mod
@@ -288,6 +290,71 @@ def preparar_partido(p: dict, ligas: dict) -> dict:
     return p
 
 
+ATAJADAS_TXT = {"reflejo": "de reflejo", "estirada": "en estirada", "punos": "con los puños", "desvio": "desviadas",
+                "centros": "en centros", "ubicacion": "por ubicación"}
+
+
+def completar_con_ea(partidos: list, ajustes: dict, ahora: datetime | None = None) -> None:
+    """Suma a cada partido de nuestras competencias lo que EA registra y la liga no publica.
+    Lo de la liga manda: el resultado, las notas y el MVP no se tocan."""
+    ea_partidos = leer("ea_partidos.json", {})
+    if not ea_partidos:
+        return
+    unir = {jug_mod.clave(k): jug_mod.clave(v) for k, v in (ajustes.get("unir") or {}).items()}
+    k = lambda alias: unir.get(jug_mod.clave(alias), jug_mod.clave(alias))
+    por_id = {p["id"]: p for p in partidos}
+    for pid, m in ea_mod.unir(partidos, ea_partidos, ahora).items():
+        p = por_id[pid]
+        if not ea_mod.datos_completos(m):
+            continue  # EA no guardó bien nuestras estadísticas (pasa cuando alguien abandona)
+        jug = {k(j["alias"]): j for j in m["jugadores"]}
+        p["ea"] = m
+        if p.get("resultado") is None:
+            # La liga todavía no cargó el resultado: se muestra el de EA como provisorio (no suma en nada)
+            gf, gc = ea_mod.marcador_seguro(m)
+            p["provisorio"] = {"gf": gf, "gc": gc}
+        for s in p.get("stats") or []:
+            if s.get("alias") and k(s["alias"]) in jug:
+                s["ea"] = jug[k(s["alias"])]
+        if not p.get("stats") and p.get("resultado"):
+            # La liga no publicó sus estadísticas: se muestran las de EA (solo en el partido)
+            p["ea_jugadores"] = sorted(m["jugadores"], key=lambda j: -(j["nota"] or 0))
+        eq = p.get("equipo_stats") or {}
+        if not (eq.get("nosotros") and eq.get("rival")) and m.get("equipo"):
+            p["equipo_stats"], p["equipo_stats_ea"] = m["equipo"], True
+        arq = [j for j in m["jugadores"] if j["pos"] == "goalkeeper" and j["atajadas"]]
+        if arq:
+            a = arq[0]
+            p["ea_arquero"] = {"alias": a["alias"], "atajadas": a["atajadas"],
+                               "tipos": [(n, ATAJADAS_TXT[t]) for t, n in a["atajadas_tipo"].items() if t in ATAJADAS_TXT]}
+
+
+PRECISION_TRAMO, PRECISION_RECIENTES, PRECISION_MINIMO = 20, 5, 3
+
+
+def ficha_ea(j: dict) -> None:
+    """Precisión del jugador en los partidos de nuestras competencias con datos de EA.
+
+    Se apaga sola si EA deja de dar datos (API vencida o edición nueva sin detectar): solo cuenta
+    sus últimos 20 partidos y exige que alguno de los últimos 5 tenga datos de EA."""
+    jugados = [x for x in j["partidos"] if x["p"].get("resultado") and not x["p"].get("wo")]  # más reciente primero
+    if not any(x["s"].get("ea") for x in jugados[:PRECISION_RECIENTES]):
+        return
+    tramo = [x for x in jugados[:PRECISION_TRAMO] if x["s"].get("ea")]
+    if len(tramo) < PRECISION_MINIMO:
+        return
+    con = [x["s"]["ea"] for x in tramo]
+    s = lambda c: sum(e[c] for e in con)
+    pct = lambda a, b: round(100 * a / b) if b else None
+    goles = sum(x["s"].get("goles") or 0 for x in tramo)  # los goles, los de la liga
+    j["precision"] = {
+        "pj": len(con), "tiros": s("tiros"), "tiros_pj": round(s("tiros") / len(con), 1),
+        "conversion": pct(goles, s("tiros")), "pases": s("pases"), "pases_pct": pct(s("pases"), s("pases_int")),
+        "entradas": s("entradas"), "entradas_pct": pct(s("entradas"), s("entradas_int")),
+        "atajadas": s("atajadas"),
+    }
+
+
 def ventana(filas, alrededor=2):
     i = next((k for k, f in enumerate(filas) if f["es_vultur"]), 0)
     ini = max(0, min(i - alrededor, len(filas) - (2 * alrededor + 1)))
@@ -407,6 +474,7 @@ def main():
 
     # Jugadores
     ajustes = yaml.safe_load((RAIZ / "config" / "plantel.yaml").read_text(encoding="utf-8")) or {}
+    completar_con_ea(partidos, ajustes, ahora)
     js = jug_mod.armar(partidos, leer("plantel_vpug.json", []), ajustes)["jugadores"]
     con_pj = [j for j in js if j["total"]["pj"]]
     ambitos = [{"clave": "todas", "titulo": "Todas", "liga": None}] + [
@@ -438,7 +506,10 @@ def main():
                                 s.get("asistencias") or 0, 1 if s.get("mvp") else 0,
                                 nota if nota is not None and nota >= 0 else None,
                                 s.get("posicion") or "", p["id"], 1 if jug_mod.valla_invicta(p, s) else 0,
-                                s.get("amarillas") or 0, s.get("rojas") or 0])
+                                s.get("amarillas") or 0, s.get("rojas") or 0,
+                                # Datos de EA del partido (tiros, pases, pases intentados, entradas, intentadas, atajadas) o 0
+                                [s["ea"][k] for k in ("tiros", "pases", "pases_int", "entradas", "entradas_int", "atajadas")]
+                                if s.get("ea") else 0])
         # Por temporada (ficha)
         por_t = {}
         for x in j["partidos"]:
@@ -468,6 +539,9 @@ def main():
         # "Alineación habitual" que el club carga en VPN: se usa en lugar del 11 calculado para VPN
         "oficial": oficial_vpn({jug_mod.clave(k): jug_mod.clave(v) for k, v in (ajustes.get("unir") or {}).items()}),
         "notaBase": jug_mod.NOTA_BASE, "pesoBase": jug_mod.PESO_BASE,
+        # Datos de EA "vigentes": alguno de los últimos partidos del club los tiene. Si no, en la
+        # temporada actual no se muestran (lo histórico sí)
+        "eaVigente": extras.ea_vigente(partidos), "eaMinimo": 3,
     }
 
     sync_txt = a_local(estado["sync"]).strftime("%d/%m a las %H:%M") if estado.get("sync") else "nunca"
@@ -576,6 +650,19 @@ def main():
         "vallas": sum(1 for p in jugados_reales if p["gc"] == 0),
     }
 
+    # Extras: jugador de la noche, hitos, récords en un partido, control con EA
+    unir_cl = {jug_mod.clave(k): jug_mod.clave(v) for k, v in (ajustes.get("unir") or {}).items()}
+    id_de = lambda alias: unir_cl.get(jug_mod.clave(alias), jug_mod.clave(alias))
+    jug_por_id = {j["id"]: j for j in js}
+    figura = extras.jugador_de_la_noche(partidos, id_de, hoy_noche)
+    if figura:
+        figura["j"] = jug_por_id.get(figura["id"])
+        figura = figura if figura["j"] else None
+    for j in js:
+        j["hitos"] = extras.hitos(j)
+    records["partido"] = [{**r, "j": jug_por_id.get(r["id"])} for r in extras.records_partido(partidos, id_de)]
+    control_ea = extras.control_cruzado(partidos, hoy_noche)
+
     # Previa de los partidos por jugar: forma en esa competencia y nuestro 11 más usado en ella
     once_por_comp = {}
     for p in partidos:
@@ -647,6 +734,16 @@ def main():
                              "ok_reciente": bool(ok) and (ahora - ok) < timedelta(hours=12),
                              "partidos": sum(1 for p in partidos if p["liga"] == k)})
 
+    e = (estado.get("fuentes") or {}).get("ea")
+    if e:
+        ok = a_local(e["ok"]) if e.get("ok") else None
+        estado_ea = {"error": e.get("error"), "fallos": e.get("fallos_seguidos", 0),
+                     "ok_txt": ok.strftime("%d/%m/%Y %H:%M") if ok else None,
+                     "ok_reciente": bool(ok) and (ahora - ok) < timedelta(hours=12),
+                     "partidos": sum(1 for p in partidos if p.get("ea"))}
+    else:
+        estado_ea = None
+
     # Imagen propia para compartir los partidos jugados más recientes (resultado y escudos)
     og_partidos = [p for p in jugados[:12] if p.get("gf") is not None]
     for p in og_partidos:
@@ -676,10 +773,17 @@ def main():
             }
             mejores = sorted(serie, key=lambda x: -x["s"]["rating"])[:3]
             j["mejores"] = [{"p": x["p"], "nota": x["s"]["rating"]} for x in mejores]
+        # Goles y asistencias en sus últimos 10 partidos (datos de las ligas)
+        ult = [x for x in reversed(j["partidos"]) if x["p"].get("resultado")][-10:]
+        if len(ult) >= 3 and any((x["s"].get("goles") or 0) + (x["s"].get("asistencias") or 0) for x in ult):
+            j["racha_ga"] = [{"g": x["s"].get("goles") or 0, "a": x["s"].get("asistencias") or 0,
+                              "res": x["p"]["resultado"], "pagina": x["p"]["pagina"],
+                              "txt": f"{x['p']['noche'].strftime('%d/%m')} vs {x['p']['rival']['nombre']}"} for x in ult]
+        ficha_ea(j)
 
     # Comparar jugadores: totales y por liga de cada uno
     comparar_datos = [{"id": j["id"], "alias": j["alias"], "pagina": j["pagina"], "dorsal": j.get("dorsal"), "pos": j.get("posicion"),
-                       "ligas": {"todas": j["total"], **j["por_liga"]}} for j in sorted(con_pj, key=lambda j: j["alias"].lower())]
+                       "ligas": {"todas": j["total"], **j["por_liga"]}, "prec": j.get("precision")} for j in sorted(con_pj, key=lambda j: j["alias"].lower())]
 
     # Sin partidos programados: resumen de la última temporada (edición del juego del último partido jugado)
     resumen_temp = None
@@ -723,7 +827,7 @@ def main():
                   "corto": p["liga_ui"]["corto"], "pagina": p["pagina"], "escudo": p["rival"].get("escudo"),
                   "res": p["resultado"], "gf": p.get("gf"), "gc": p.get("gc"), "inicio": p["dt"].isoformat()}
                  for p in sorted(partidos, key=lambda p: p["dt"])]
-    ctx = dict(club=cfg["club"]["nombre"], hoy_datos=hoy_datos, cal_datos=cal_datos, comparar_datos=comparar_datos, resumen_temp=resumen_temp, redes_club=[(REDES_TXT.get(k, k), k, u) for k, u in (cfg["club"].get("redes") or {}).items()], v=og_version, destacados=destacados, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas,
+    ctx = dict(club=cfg["club"]["nombre"], hoy_datos=hoy_datos, cal_datos=cal_datos, comparar_datos=comparar_datos, resumen_temp=resumen_temp, redes_club=[(REDES_TXT.get(k, k), k, u) for k, u in (cfg["club"].get("redes") or {}).items()], v=og_version, destacados=destacados, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas, estado_ea=estado_ea, figura=figura, control_ea=control_ea,
                titulos=titulos, estantes=estantes,
                total_partidos=len(partidos), total_jugadores=len(js), total_rivales=len(rivales),
                total_escudos=len(list((DATOS / "escudos").glob("*.webp"))), plantel_datos=plantel_datos, temporadas_lista=temporadas_lista,

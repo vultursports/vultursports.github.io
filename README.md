@@ -14,11 +14,11 @@ lugar todo lo de las competencias donde juega: **VPN, LVA y VPUG**. Se actualiza
 | **Inicio** | Próximo partido (o "Hoy jugamos") con la posición de cada equipo y cuenta regresiva; avisos de sancionados y choques de horario; "En vivo" cuando un integrante transmite en Twitch; partidos de la semana; últimos resultados; "Cómo vamos" en cada competencia con forma reciente |
 | **Calendario** | Todos los partidos (próximos y jugados), filtro por liga y suscripción al calendario del celular (`calendario.ics`) |
 | **Tablas** | Una tabla por competencia (selector), con nuestra fila resaltada, flechas de subida/bajada y forma reciente |
-| **Plantel** | Líderes, "El 11 más usado" (cancha + banco, MVP), tabla de jugadores ordenable, filtro por liga y temporada (todo el historial) y Récords del club |
+| **Plantel** | Filtro por liga y temporada (todo el historial), líderes (6 y "Ver más"), tabla de jugadores ordenable, "El 11 más usado" (cancha + banco, MVP), quién juega en cada puesto y jugadores destacados por las ligas |
 | **Detalle de partido** | Resultado, estadísticas de los dos equipos, alineación con notas y MVP, nuestros jugadores; en los partidos por jugar, la previa (forma, historial contra el rival, nuestro 11 más usado en esa competencia) y los sancionados |
 | **Jugador** | Dorsal, posición, totales, por liga, por temporada y sus partidos |
 | **Rival** | Historial contra ese equipo en todas las ligas |
-| **Vitrina** | Títulos del club (los de la LVA y VPN se detectan solos; los demás se cargan en `config/titulos.yaml`). Mientras no haya, una vitrina vieja con telarañas y datos reales de cada liga |
+| **Vitrina** | Récords del club (todo el historial) y títulos (los de la LVA y VPN se detectan solos; los demás se cargan en `config/titulos.yaml`). Mientras no haya, una vitrina vieja con telarañas y datos reales de cada liga |
 | **Estado** | Cuándo se actualizó cada liga y si falló (enlace en el pie) |
 
 Todas las páginas dan el crédito a cada liga (logo, enlace oficial y redes) en "Nuestras competencias".
@@ -30,6 +30,7 @@ Todas las páginas dan el crédito a cada liga (logo, enlace oficial y redes) en
 | **VPN** (virtualpronetwork.com) | Los datos públicos que carga su web | Fixture, tabla del grupo (con posición anterior), detalle de cada partido (goles, asistencias, MVP, nota, estadísticas por equipo, formación publicada), no habilitados e historial desde jul. 2024 |
 | **LVA** (ligavirtualargentina.com) | Sus páginas públicas, con un navegador automático (Playwright) | Torneos activos y terminados ("Ver Finalizados"), tabla, estadísticas por jugador, sanciones |
 | **VPUG** (vpugvirtualprouruguaygaming.com) | API pública + cuenta de jugador del club (secretos `VPUG_EMAIL` y `VPUG_PASSWORD`) | Tabla, rankings, fixture, detalle de partidos (goles, asistencias, nota, figura) y plantel (dorsal y posición) |
+| **EA SPORTS FC** (proclubs.ea.com) | API pública no oficial, con un navegador visible (en GitHub, pantalla virtual xvfb) | Solo los partidos que coinciden con uno de nuestras competencias: tiros, pases, entradas y atajadas por jugador, estadísticas del equipo si la liga no las da, resultado provisorio. Guarda los últimos 10 partidos: cada pasada suma los nuevos |
 | **Twitch** | decapi.me (gratis) | Si el canal de un integrante está en vivo |
 
 Reglas importantes (detalle en `docs/00-decisiones.md`): nunca se inventa información; los nombres de
@@ -78,7 +79,7 @@ cd site && ../.venv/Scripts/python.exe -m http.server 8077   # abrir http://127.
 ## Estructura
 
 ```
-conectores/   vpn.py, lva.py, vpug.py (lectura de cada liga) y base.py
+conectores/   vpn.py, lva.py, vpug.py (lectura de cada liga), ea.py (datos extra de EA) y base.py
 sync.py       actualiza datos/            build.py    genera site/
 jugadores.py  estadísticas por jugador    rivales.py  historial por rival (une por nombre y escudo)
 escudos.py    recorta y guarda escudos    og.py       imagen para compartir en WhatsApp

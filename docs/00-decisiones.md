@@ -14,7 +14,8 @@ Este documento **manda sobre el resto**: si algo de otro doc contradice esto, va
 | VPUG / VPN | Se usan los datos que sus propias páginas cargan públicamente, despacio y solo lo de Vultur y nuestras tablas |
 | VPUG con cuenta | Excepción aprobada por el usuario: el fixture y los partidos de VPUG solo se ven con cuenta de jugador (cualquier jugador, no hace falta admin). El robot inicia sesión con una cuenta del club. Las credenciales van en `.env` (local, no se sube) y en los **secretos de GitHub** `VPUG_EMAIL` / `VPUG_PASSWORD`, nunca en el código. Recomendado cambiar la contraseña porque se escribió en el chat |
 | Competencias | **Solo LVA, VPN y VPUG.** Copas y torneos sueltos quedan para más adelante |
-| API de EA FC | **No se usa.** Alcanza con los datos de las ligas |
+| API de EA FC | **Solo para completar** (cambio del 22/11/2026): de EA se toman únicamente los partidos que coinciden con uno de nuestras competencias (misma hora y marcador; si hubo varios intentos seguidos contra el mismo rival porque se reinició el partido, vale el último completo). El resultado oficial es SIEMPRE el de la competencia, aunque EA diga otro (resultado técnico, sanción). Suma tiros, pases, entradas y atajadas por jugador, estadísticas del equipo cuando la liga no las publica, resultado provisorio hasta que la liga lo carga. Lo de la liga manda siempre y lo de EA no suma en los totales del plantel |
+| Datos actuales | **Nunca información vieja donde va lo actual** (22/11/2026): todo lo que muestra un estado actual (por ejemplo, la Precisión del jugador) se calcula con datos recientes y desaparece solo si la fuente deja de responder. Lo de partidos terminados se guarda y se muestra siempre |
 | Historial | Temporada actual y de acá en adelante (se acumula solo) |
 | Plantel | **Automático**: el robot junta los nombres de cada liga, sugiere quién es quién y el mánager confirma o corrige en `config/plantel.yaml` |
 | Escudo y colores | Se toman del perfil de **VPN** (alta calidad) |
@@ -55,5 +56,5 @@ Este documento **manda sobre el resto**: si algo de otro doc contradice esto, va
 4. **Estadísticas de jugadores** por liga y en total (ranking con rating ajustado).
 
 ## Queda afuera por ahora
-Discord y avisos, API de EA, copas sueltas, palmarés histórico, redes, placas para Instagram,
+Discord y avisos, copas sueltas, palmarés histórico, redes, placas para Instagram,
 multi-club.

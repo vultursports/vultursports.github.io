@@ -23,6 +23,11 @@
         <span class="marcador">{{ p.gf }}<i>–</i>{{ p.gc }}</span>
         <small class="ver-det">Ver detalles</small>
       </a>
+    {% elif p.provisorio %}
+      <a class="provisorio" href="{{ p.pagina }}" title="Resultado según EA SPORTS FC: la liga todavía no lo cargó" aria-label="Resultado provisorio {{ p.provisorio.gf }} a {{ p.provisorio.gc }} según EA, ver detalles">
+        <span class="marcador">{{ p.provisorio.gf }}<i>–</i>{{ p.provisorio.gc }}</span>
+        <small class="ver-det">Provisorio</small>
+      </a>
     {% else %}
       {% set empezo = p.empezo %}
       <a class="ver antes"{% if empezo %} hidden{% endif %} href="{{ p.pagina }}">Ver detalles</a>

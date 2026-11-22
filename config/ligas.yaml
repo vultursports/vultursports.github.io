@@ -76,6 +76,6 @@ ligas:
   ea:
     nombre: EA SPORTS FC 27 Clubs (no oficial)
     api_base: https://proclubs.ea.com/api/fc/
-    plataforma: common-gen5   # verificar para FC27 / PC
-    club_id: null             # completar con clubs/search
-    activa: false             # descartado: no se usa la API de EA (decisión 00)
+    plataforma: common-gen5   # verificado en FC 27 / PC (2026-11-22)
+    club_id: 225542           # allTimeLeaderboard/search?clubName=Vultur Sports
+    activa: true              # solo completa los partidos de nuestras competencias (decisión 00)

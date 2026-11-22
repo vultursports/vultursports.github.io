@@ -24,9 +24,26 @@
       </tr>
       {% if e.error %}<tr class="est-detalle"><td colspan="4">Error: {{ e.error }}</td></tr>{% endif %}
     {% endfor %}
+    {% if estado_ea %}{% set e = estado_ea %}
+      <tr class="{{ 'est-ok' if e.ok_reciente else 'est-mal' }}">
+        <th scope="row" class="eq">EA SPORTS FC <small>(datos extra)</small></th>
+        <td>{% if e.error %}<b class="est-falla">Falló{% if e.fallos > 1 %} {{ e.fallos }} veces seguidas{% endif %}</b>{% elif e.ok_reciente %}<b class="est-bien">Al día</b>{% else %}<b class="est-falla">Atrasada</b>{% endif %}</td>
+        <td>{{ e.ok_txt or 'nunca' }}</td>
+        <td class="opc">{{ e.partidos }}</td>
+      </tr>
+      {% if e.error %}<tr class="est-detalle"><td colspan="4">Error: {{ e.error }}</td></tr>{% endif %}
+    {% endif %}
     </tbody>
   </table>
   </div>
+
+  {% if control_ea %}
+  <section class="control-ea" aria-labelledby="t-control">
+    <h2 id="t-control" class="sub">Liga vs. EA</h2>
+    <p class="bajada">En la web vale lo de la liga.</p>
+    <ul>{% for c in control_ea %}<li><a href="{{ c.p.pagina }}">{{ c.p.noche.strftime('%d/%m') }} vs {{ c.p.rival.nombre }} ({{ c.p.liga_ui.corto }})</a>: <b>{{ c.alias }}</b>, {{ c.dif }}.</li>{% endfor %}</ul>
+  </section>
+  {% endif %}
 
   <dl class="totales estado-totales">
     <div><dt>Partidos guardados</dt><dd>{{ total_partidos }}</dd></div>
@@ -34,6 +51,6 @@
     <div><dt>Rivales</dt><dd>{{ total_rivales }}</dd></div>
     <div><dt>Escudos</dt><dd>{{ total_escudos }}</dd></div>
   </dl>
-  <p class="fuente">"Atrasada" significa que la última actualización correcta tiene más de 12 horas. Si una liga falla, la web sigue mostrando los últimos datos que se pudieron leer.</p>
+  <p class="fuente">"Atrasada" significa que la última actualización correcta tiene más de 12 horas. Si una liga falla, la web sigue mostrando los últimos datos que se pudieron leer.{% if estado_ea %} EA SPORTS FC solo completa los partidos de nuestras competencias (tiros, pases, entradas); en "Partidos" se cuentan los que tienen esos datos.{% endif %}</p>
 </div>
 {% endblock %}

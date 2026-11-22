@@ -54,6 +54,18 @@ VS.alCargar(() => {
         `<th scope="row">${nombre}</th>` +
         `<td class="cmp-v${gana === "b" ? " gana" : ""}">${fmt(vb, dec)}<span class="cmp-barra b" style="--p:${pb}%"></span></td></tr>`;
     }
+    // Precisión (datos de EA de sus últimos 20 partidos): solo en "Todas" y si alguno la tiene
+    const pa_ = a.prec, pb_ = b.prec;
+    if (liga === "todas" && (pa_ || pb_)) {
+      for (const [nombre, k, suf] of [["Tiros por partido", "tiros_pj", ""], ["Pases completados", "pases_pct", "%"], ["Entradas ganadas", "entradas_pct", "%"]]) {
+        const va = pa_ ? pa_[k] : null, vb = pb_ ? pb_[k] : null;
+        const max = Math.max(va || 0, vb || 0);
+        const gana = va != null && vb != null && va !== vb ? (va > vb ? "a" : "b") : "";
+        html += `<tr class="cmp-ea"><td class="cmp-v${gana === "a" ? " gana" : ""}">${va == null ? "–" : va + suf}<span class="cmp-barra a" style="--p:${max ? (100 * (va || 0)) / max : 0}%"></span></td>` +
+          `<th scope="row">${nombre}<small>EA, últimos 20 partidos</small></th>` +
+          `<td class="cmp-v${gana === "b" ? " gana" : ""}">${vb == null ? "–" : vb + suf}<span class="cmp-barra b" style="--p:${max ? (100 * (vb || 0)) / max : 0}%"></span></td></tr>`;
+      }
+    }
     html += `</tbody></table>`;
     if (liga !== "todas" && (!sa || !sb)) html += `<p class="nota-cmp">${esc((!sa ? a : b).alias)} no jugó en esta liga.</p>`;
     cont.innerHTML = html;

@@ -521,5 +521,157 @@ class EscenariosRobot(unittest.TestCase):
             self.assertIsNone(t["filas"][0]["mov"])
 
 
+
+# ---------------------------------------------------------------------------------------------
+# Sale un FC nuevo: temporada nueva, jugadores y posiciones nuevas, y EA deja de dar datos (club
+# nuevo en el juego) o los vuelve a dar con otro club. La web tiene que seguir sola, sin romperse
+# y sin mostrar como "actual" información vieja.
+# ---------------------------------------------------------------------------------------------
+
+ONCE_FC28 = [("ByCrisMor09", "MCD"), ("Nuevo28_Arquero", "POR"), ("Nuevo28_Central", "DFC"), ("Zk__godd", "DFC"),
+             ("Nuevo28_Lateral", "LI"), ("MixaelYT", "LD"), ("Nuevo28_Volante", "MC"), ("SoldierJah22", "MC"),
+             ("Nuevo28_Enganche", "MCO"), ("Nuevo28_Nueve", "DC"), ("VSP-Ch4cKaL", "ED")]  # ED: posición nueva
+
+
+def armar_fc28(e, ahora, con_ea=False):
+    """Arma la temporada nueva (FC 28) sobre una copia de los datos de hoy: 8 partidos en las últimas
+    4 noches (el último, anoche), uno por jugar, la tabla nueva y, si con_ea, los datos de EA del club nuevo."""
+    ps = e.leer("partidos.json")
+    comp = {"competencia_id": "vpn-fc28", "competencia": "Liga Argentina FC 28",
+            "temporada": {"clave": "vpn-fc28", "nombre": "Temporada 1 FC 28"}}
+    nuevos, ea_nuevos = [], {}
+    noche = (ahora - timedelta(hours=6)).replace(hour=22, minute=0, second=0, microsecond=0)
+    for i in range(8):
+        cuando = noche - timedelta(days=4 - i // 2) + timedelta(minutes=30 * (i % 2))
+        stats = [stat(a, pos, goles=1 if (a == "Nuevo28_Nueve" and i % 2) else 0,
+                      asist=1 if (a == "Nuevo28_Enganche" and i % 3 == 0) else 0,
+                      rating=9.0 if (a == "Nuevo28_Volante" and i >= 6) else 6.8,
+                      mvp=(a == "Nuevo28_Volante" and i >= 6))
+                 for a, pos in ONCE_FC28]
+        gf = sum(s["goles"] for s in stats)
+        nuevos.append({**partido(f"vpn-fc28-{i}", cuando, gf=gf, gc=0, rival=f"Rival FC28 {i}", stats=stats), **comp})
+        if con_ea:
+            jug = [{"alias": a, "pos": "midfielder", "goles": s["goles"], "asistencias": s["asistencias"], "tiros": 2,
+                    "pases": 20, "pases_int": 25, "entradas": 2, "entradas_int": 4, "atajadas": 3 if pos == "POR" else 0,
+                    "rojas": 0, "mom": False, "nota": 7.0, "segundos": 5500, "atajadas_tipo": {}, "eventos": ["", "", "", ""]}
+                   for (a, pos), s in zip(ONCE_FC28, stats)]
+            eq = {"tiros": 22, "pases": 220, "pases_int": 275, "entradas": 22, "entradas_int": 44, "atajadas": 3, "nota": 7.0}
+            ea_nuevos[f"fc28-{i}"] = {"id": f"fc28-{i}", "fecha_utc": iso(cuando + timedelta(minutes=20)), "gf": gf, "gc": 0,
+                                      "abandono": False, "rival": {"nombre": f"Rival FC28 {i}", "ea_id": f"9{i}"},
+                                      "jugadores": jug, "equipo": {"nosotros": eq, "rival": eq},
+                                      "goles_jugadores": [gf, 0], "minutos": 92}
+    nuevos.append({**partido("vpn-fc28-prox", ahora + timedelta(days=1), rival="Rival FC28 Próximo"), **comp})
+    e.guardar("partidos.json", ps + nuevos)
+    # La tabla nueva reemplaza a las de FC 27 (esos torneos terminaron)
+    t = json.loads(json.dumps(next(x for x in e.leer("tablas.json") if x["liga"] == "vpn")))
+    t.update(id="vpn-fc28", competencia="Liga Argentina FC 28")
+    e.guardar("tablas.json", [t])
+    # EA: lo de FC 27 queda guardado; lo nuevo solo si EA sigue dando datos
+    e.guardar("ea_partidos.json", {**e.leer("ea_partidos.json", {}), **ea_nuevos})
+
+
+def datos_plantel(html):
+    return json.loads(re.search(r'<script id="datos-plantel" type="application/json">(.*?)</script>', html, re.S).group(1))
+
+
+@unittest.skipUnless(HAY_DATOS, "todavía no hay datos")
+class SaleUnFCNuevo(unittest.TestCase):
+    AHORA = datetime.now(AR) + timedelta(days=330)  # ya salió el FC siguiente
+
+    def test_sin_datos_nuevos_de_ea_no_muestra_nada_viejo_como_actual(self):
+        with Escenario(ahora=self.AHORA) as e:
+            armar_fc28(e, self.AHORA, con_ea=False)
+            e.generar()
+            self.assertEqual(enlaces_rotos(e.site), [])
+            # Lo nuevo aparece solo: jugadores nuevos, posición nueva y jugador de la noche
+            self.assertIn("Nuevo28_Nueve", e.html("/plantel/"))
+            self.assertIn("Nuevo28_Nueve", e.html("/jugador/nuevo28nueve/"))
+            inicio = e.html("/")
+            self.assertIn("Figura de la noche", inicio)
+            self.assertIn("Nuevo28_Volante", inicio)
+            # EA ya no da datos: nada de EA como "actual"
+            self.assertFalse(datos_plantel(e.html("/plantel/"))["eaVigente"])
+            for j in ("bycrismor09", "vspch4ckal", "zkgodd"):
+                self.assertNotIn('id="t-precision"', e.html(f"/jugador/{j}/"), j)
+            # Los partidos nuevos no tienen datos de EA inventados
+            self.assertNotIn("ea-col", e.html("/partido/vpn-fc28-7/"))
+            # Lo histórico se conserva: los partidos de FC 27 con datos de EA siguen teniéndolos
+            if (e.site / "partido" / "vpn-785556").exists() and e.leer("ea_partidos.json"):
+                self.assertIn("ea-col", e.html("/partido/vpn-785556/"))
+        # El jugador de la noche dura poco: tres días después ya no está
+        with Escenario(ahora=self.AHORA + timedelta(days=3)) as e:
+            armar_fc28(e, self.AHORA, con_ea=False)
+            e.generar()
+            self.assertNotIn("Figura de la noche", e.html("/"))
+
+    def test_ea_vuelve_con_el_club_nuevo(self):
+        with Escenario(ahora=self.AHORA) as e:
+            armar_fc28(e, self.AHORA, con_ea=True)
+            e.generar()
+            self.assertTrue(datos_plantel(e.html("/plantel/"))["eaVigente"])
+            self.assertIn('id="t-precision"', e.html("/jugador/nuevo28nueve/"))
+            self.assertIn("ea-col", e.html("/partido/vpn-fc28-7/"))
+
+    def test_ea_caida_al_bajar_no_frena_al_robot(self):
+        from conectores import ea
+        with Escenario(ahora=self.AHORA) as e:
+            antes = e.leer("ea_partidos.json", {})
+            estado = {}
+            with mock.patch.object(ea, "bajar", side_effect=ea.ErrorConector("EA HTTP 403")):
+                sync.sincronizar_ea({"activa": True, "club_id": 1}, e.leer("partidos.json"), estado)
+            self.assertIn("403", estado["fuentes"]["ea"]["error"])
+            self.assertEqual(e.leer("ea_partidos.json", {}), antes)  # lo guardado no se toca
+            e.guardar("estado.json", {**e.leer("estado.json", {}), **estado})
+            e.generar()
+            self.assertIn("EA SPORTS FC", e.html("/estado/"))
+
+    def test_navegador_sin_errores_en_el_fc_nuevo(self):
+        try:
+            from playwright.sync_api import sync_playwright
+        except ImportError:
+            self.skipTest("Playwright no está instalado")
+        import functools
+        import http.server
+        import threading
+        for con_ea in (False, True):
+            with Escenario(ahora=self.AHORA) as e:
+                armar_fc28(e, self.AHORA, con_ea=con_ea)
+                e.generar()
+                manejador = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(e.site))
+                manejador.log_message = lambda *a: None
+                srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), manejador)
+                threading.Thread(target=srv.serve_forever, daemon=True).start()
+                base = f"http://127.0.0.1:{srv.server_address[1]}"
+                errores = []
+                try:
+                    with sync_playwright() as pw:
+                        try:
+                            b = pw.chromium.launch()
+                        except Exception:
+                            self.skipTest("falta el navegador de Playwright")
+                        for ancho in (390, 1366):
+                            pg = b.new_page(viewport={"width": ancho, "height": 900})
+                            pg.on("pageerror", lambda ex, pg=pg: errores.append(f"{pg.url}: {ex}"))
+                            for r in ("/", "/calendario/", "/tablas/", "/vitrina/", "/estado/", "/partido/vpn-fc28-7/",
+                                      "/jugador/nuevo28nueve/", "/jugador/bycrismor09/", "/comparar/?a=nuevo28nueve&b=bycrismor09"):
+                                pg.goto(base + r)
+                                pg.wait_for_timeout(100)
+                            # Plantel: cada temporada, "Ver más" y ordenar por cada columna visible
+                            pg.goto(base + "/plantel/")
+                            for v in [o.get_attribute("value") for o in pg.locator("#temporada option").all()][:6]:
+                                pg.select_option("#temporada", v)
+                                # Se pulsan directo: en celular el menú de abajo puede tapar los botones
+                                if pg.locator(".lideres-btn").count():
+                                    pg.locator(".lideres-btn").evaluate("b => b.click()")
+                                for th in pg.locator("#tabla-plantel th[data-campo]:visible button").all():
+                                    th.evaluate("b => b.click()")
+                            for bt in pg.locator("button[data-liga]").all():
+                                if bt.is_visible():
+                                    bt.click()
+                        b.close()
+                finally:
+                    srv.shutdown()
+                self.assertEqual(errores, [], f"con datos de EA: {con_ea}")
+
 if __name__ == "__main__":
     unittest.main()

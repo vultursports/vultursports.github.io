@@ -13,7 +13,7 @@ from pathlib import Path
 
 import yaml
 
-from conectores import lva, vpn, vpug
+from conectores import ea, lva, vpn, vpug
 from conectores.base import ahora_iso
 
 RAIZ = Path(__file__).resolve().parent
@@ -80,6 +80,29 @@ def calcular_movimientos(tablas: dict) -> None:
             if n != base_n:
                 del fotos[n]
     escribir("historial_posiciones.json", hist)
+
+
+def sincronizar_ea(ecfg: dict, partidos: list, estado: dict) -> None:
+    """Datos extra de EA. Solo se guardan los partidos que coinciden con uno de nuestras competencias
+    (y los de los últimos 3 días, por si la liga todavía no cargó el resultado)."""
+    from datetime import datetime, timedelta, timezone
+    if not ecfg.get("activa") or not ecfg.get("club_id"):
+        return
+    print("→ ea")
+    e = estado.setdefault("fuentes", {}).setdefault("ea", {})
+    e["intento"] = ahora_iso()
+    try:
+        previos = leer("ea_partidos.json", {})
+        todos = ea.sincronizar(ecfg, previos)
+        unidos = {m["id"] for m in ea.unir(partidos, todos).values()}
+        limite = (datetime.now(timezone.utc) - timedelta(days=3)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        guardar = {k: m for k, m in todos.items() if k in unidos or m["fecha_utc"] >= limite}
+        escribir("ea_partidos.json", dict(sorted(guardar.items(), key=lambda kv: kv[1]["fecha_utc"])))
+        e.update(ok=ahora_iso(), error=None, fallos_seguidos=0, partidos=len(unidos))
+        print(f"  ok: {len(unidos)} partidos de EA unidos a nuestras competencias")
+    except Exception as ex:  # si EA falla, la web sigue igual (sin los datos extra)
+        traceback.print_exc()
+        e.update(error=str(ex)[:300], fallos_seguidos=e.get("fallos_seguidos", 0) + 1)
 
 
 def main() -> int:
@@ -152,6 +175,7 @@ def main() -> int:
             p["manual"] = True
             partidos[p["id"]] = p
 
+    sincronizar_ea(cfg["ligas"].get("ea") or {}, list(partidos.values()), estado)
     calcular_movimientos(tablas)
     escribir("partidos.json", sorted(partidos.values(), key=lambda p: p["fecha_utc"]))
     escribir("tablas.json", list(tablas.values()))

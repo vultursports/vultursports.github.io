@@ -36,7 +36,8 @@ jobs:
         env:
           VPUG_EMAIL: ${{ secrets.VPUG_EMAIL }}
           VPUG_PASSWORD: ${{ secrets.VPUG_PASSWORD }}
-        run: python sync.py
+        # Pantalla virtual: EA solo responde a un navegador visible
+        run: xvfb-run -a python sync.py
       - name: Guardar datos
         if: github.event_name != 'push'
         run: |

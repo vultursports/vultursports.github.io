@@ -124,6 +124,123 @@ class Movimientos(unittest.TestCase):
         self.assertEqual([f["mov"] for f in tablas["t"]["filas"]], [1, -1])
 
 
+class DatosEA(unittest.TestCase):
+    """EA solo completa partidos de nuestras competencias: misma hora, mismo marcador, rival parecido."""
+
+    def ea(self, mid, fecha, rival, gf, gc):
+        return {"id": mid, "fecha_utc": fecha, "gf": gf, "gc": gc, "rival": {"nombre": rival}, "jugadores": []}
+
+    def liga(self, pid, fecha, rival, gf, gc, **extra):
+        return {"id": pid, "fecha_utc": fecha, "rival": {"nombre": rival}, "gf": gf, "gc": gc, **extra}
+
+    def test_reinicio_y_resultado_tecnico(self):
+        """Se salen todos para reiniciar: EA registra el intento cortado y el partido real con 3-0 técnico."""
+        from conectores import ea
+        p = [self.liga("m", "2026-11-20T02:00:00Z", "MARPLA FC", 0, 0)]
+        corto = {**self.ea("1", "2026-11-20T02:06:17Z", "Marpla FC", 0, 3), "goles_jugadores": [0, 0], "minutos": 2}
+        real = {**self.ea("2", "2026-11-20T02:27:10Z", "Marpla FC", 0, 3), "goles_jugadores": [0, 0], "minutos": 92}
+        u = ea.unir(p, {"1": corto, "2": real})
+        self.assertEqual(u["m"]["id"], "2")
+        # Reinicio después de 30 minutos y la liga con otro resultado: vale el último intento completo
+        r1 = {**self.ea("3", "2026-11-21T02:35:00Z", "Rival", 1, 0), "goles_jugadores": [1, 0], "minutos": 35}
+        r2 = {**self.ea("4", "2026-11-21T02:58:00Z", "Rival", 2, 2), "goles_jugadores": [2, 2], "minutos": 92}
+        p3 = [self.liga("r", "2026-11-21T02:00:00Z", "Rival", 0, 3)]  # la liga sancionó
+        self.assertEqual(ea.unir(p3, {"3": r1, "4": r2})["r"]["id"], "4")
+        # Un solo partido con otro marcador (sanción, como Villa San Carlos): no se une
+        self.assertEqual(ea.unir(p3, {"4": r2}), {})
+        # EA no guardó nuestras estadísticas (todos con 0 pases en 90 minutos): datos descartados
+        jug = lambda pases: [{"pases_int": pases, "segundos": 5500}]
+        self.assertFalse(ea.datos_completos({"jugadores": jug(10) + jug(0) * 10}))
+        self.assertTrue(ea.datos_completos({"jugadores": jug(10) * 10 + jug(0)}))
+        # Sin resultado de la liga y con marcador dudoso: no hay resultado provisorio
+        p2 = [self.liga("n", "2026-11-20T02:00:00Z", "MARPLA FC", None, None)]
+        self.assertEqual(ea.unir(p2, {"2": real}), {})
+
+    def test_nombres_parecidos(self):
+        from conectores import ea
+        self.assertEqual(ea.parecido("BOCA   JUNIORS", "BOCA JUNIORS"), 1.0)
+        self.assertGreaterEqual(ea.parecido("ESPANYOL FC", "Espanyol Barcelona fc"), 0.9)
+        self.assertLess(ea.parecido("Marpla FC", "Motor Psico"), 0.6)
+
+    def test_union(self):
+        from conectores import ea
+        partidos = [self.liga("a", "2026-11-19T02:00:00Z", "Real Envido", 2, 0),
+                    self.liga("b", "2026-11-19T02:30:00Z", "Espanyol Barcelona fc", 1, 0),
+                    self.liga("c", "2026-11-20T02:00:00Z", "MARPLA FC", 0, 0),        # EA dice 0-3: no se une
+                    self.liga("d", "2026-11-21T02:00:00Z", "LMJ eSports", None, None),  # sin resultado: provisorio
+                    self.liga("e", "2026-11-22T02:00:00Z", "Otro", 3, 0, estado="wo")]  # W.O.: no se jugó
+        eas = {m["id"]: m for m in [
+            self.ea("1", "2026-11-19T02:23:13Z", "Real Envido", 2, 0),
+            self.ea("2", "2026-11-19T02:50:54Z", "ESPANYOL FC", 1, 0),
+            self.ea("3", "2026-11-20T02:06:17Z", "Marpla FC", 0, 3),
+            self.ea("4", "2026-11-21T02:20:00Z", "LMJ eSports", 4, 1),
+            self.ea("5", "2026-11-22T02:20:00Z", "Otro", 3, 0),
+            self.ea("6", "2026-11-19T05:00:00Z", "Real Envido", 2, 0)]}  # fuera de horario
+        u = ea.unir(partidos, eas)
+        self.assertEqual({k: m["id"] for k, m in u.items()}, {"a": "1", "b": "2", "d": "4"})
+
+
+
+class PrecisionSeApaga(unittest.TestCase):
+    """Si EA deja de dar datos, la sección Precisión desaparece sola (no queda congelada)."""
+
+    def jugador(self, con_ea):  # con_ea: índices (0 = más reciente) de los partidos con datos de EA
+        ea = {"tiros": 2, "pases": 10, "pases_int": 12, "entradas": 1, "entradas_int": 3, "atajadas": 0}
+        return {"partidos": [{"p": {"resultado": "g"}, "s": {"goles": 1, **({"ea": ea} if i in con_ea else {})}}
+                             for i in range(30)]}
+
+    def test_con_datos_recientes(self):
+        j = self.jugador({0, 1, 2, 3})
+        build.ficha_ea(j)
+        self.assertEqual(j["precision"]["pj"], 4)
+
+    def test_api_vencida(self):
+        j = self.jugador(set(range(10, 30)))  # los últimos 10 partidos ya no tienen datos de EA
+        build.ficha_ea(j)
+        self.assertNotIn("precision", j)
+
+    def test_pocos_datos(self):
+        j = self.jugador({0, 1})
+        build.ficha_ea(j)
+        self.assertNotIn("precision", j)
+
+
+class Extras(unittest.TestCase):
+    """Jugador de la noche, hitos y récords: lo actual se apaga solo, lo histórico queda."""
+
+    def partido(self, pid, noche, stats, gf=1, gc=0):
+        from datetime import date
+        n = date.fromisoformat(noche)
+        return {"id": pid, "fecha_utc": f"{noche}T02:00:00Z", "noche": n, "noche_txt": noche, "resultado": "g" if gf > gc else "p",
+                "gf": gf, "gc": gc, "rival": {"nombre": "X"}, "stats": stats}
+
+    def stats(self, notas, goles=None):
+        base = [{"alias": f"j{i}", "rating": 6.0, "goles": 0} for i in range(7)]
+        for i, n in enumerate(notas):
+            base[i]["rating"] = n
+        for i, g in (goles or {}).items():
+            base[i]["goles"] = g
+        return base
+
+    def test_jugador_de_la_noche(self):
+        import extras
+        from datetime import date
+        ps = [self.partido("a", "2026-11-20", self.stats([8.0, 7.0])), self.partido("b", "2026-11-20", self.stats([6.0, 9.5]))]
+        f = extras.jugador_de_la_noche(ps, lambda a: a, date(2026, 11, 21))
+        self.assertEqual(f["id"], "j1")  # promedio 8.25 contra 7.0
+        # Tres días después ya no se muestra (no es información actual)
+        self.assertIsNone(extras.jugador_de_la_noche(ps, lambda a: a, date(2026, 11, 23)))
+
+
+    def test_hitos_y_records(self):
+        import extras
+        j = {"partidos": [{"p": self.partido(str(i), "2026-11-20", []), "s": {"goles": 1}} for i in range(10)]}
+        self.assertEqual([h["txt"] for h in extras.hitos(j)], ["10 goles"])
+        ps = [self.partido("a", "2026-11-20", self.stats([], {0: 3})), self.partido("b", "2026-11-21", self.stats([], {1: 3}))]
+        r = {x["titulo"]: x for x in extras.records_partido(ps, lambda a: a)}
+        self.assertEqual(r["Más goles en un partido"]["id"], "j0")  # en empate, el primero que lo logró
+
+
 class GenerarWeb(unittest.TestCase):
     def test_la_web_se_genera_completa(self):
         if not (RAIZ / "datos" / "partidos.json").exists():

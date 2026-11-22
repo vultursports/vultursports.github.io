@@ -32,6 +32,44 @@
 
   <div class="lideres" id="lideres" aria-live="polite"></div>
 
+
+  <div class="scroll-x">
+  <table class="tabla stats ordenable" id="tabla-plantel">
+    <caption class="sr">Estadísticas del plantel</caption>
+    <thead><tr>
+      <th scope="col" class="eq" data-campo="pos" aria-sort="ascending"><button type="button" title="Ordenar por posición">Jugador</button></th>
+      <th scope="col" data-campo="pj"><button type="button"><abbr title="Partidos jugados">PJ</abbr></button></th>
+      <th scope="col" data-campo="g"><button type="button"><abbr title="Goles">G</abbr></button></th>
+      <th scope="col" data-campo="a"><button type="button"><abbr title="Asistencias">A</abbr></button></th>
+      <th scope="col" data-campo="ga" class="opc"><button type="button"><abbr title="Goles + asistencias">G+A</abbr></button></th>
+      <th scope="col" data-campo="mvp"><button type="button">MVP</button></th>
+      <th scope="col" data-campo="vi"><button type="button"><abbr title="Vallas invictas que publica VPN (la LVA y VPUG no las publican por partido)">VI</abbr></button></th>
+      <th scope="col" data-campo="ta" class="opc"><button type="button"><abbr title="Tarjetas amarillas / rojas">TA/TR</abbr></button></th>
+      <th scope="col" data-campo="nota"><button type="button"><abbr title="Nota promedio">Nota</abbr></button></th>
+      <th scope="col" data-campo="tiros" class="col-ea" hidden><button type="button"><abbr title="Tiros (datos de EA SPORTS FC)">Tiros</abbr></button></th>
+      <th scope="col" data-campo="pp" class="col-ea" hidden><button type="button"><abbr title="Pases completados (datos de EA SPORTS FC)">Pases %</abbr></button></th>
+      <th scope="col" data-campo="ent" class="col-ea" hidden><button type="button"><abbr title="Entradas ganadas (datos de EA SPORTS FC)">Entr.</abbr></button></th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+  </div>
+  <p class="vacio" id="plantel-vacio" hidden>No hay partidos con estadísticas para esta combinación.</p>
+  <p class="fuente" id="nota-ea" hidden>Tiros, pases y entradas: EA SPORTS FC.</p>
+  <noscript><p class="aviso">Para ver el plantel hace falta tener JavaScript activado.</p></noscript>
+
+  <section class="once" aria-labelledby="t-once">
+    <div class="enc"><h2 id="t-once">El 11 más usado</h2></div>
+    <p class="once-formacion" id="once-formacion"></p>
+    <div class="cancha" id="cancha" role="list" aria-label="Once más usado"></div>
+    <h3 class="banco-titulo">Banco</h3>
+    <ul class="banco" id="banco"></ul>
+  </section>
+
+  <section class="mapa-pos" aria-labelledby="t-mapa">
+    <div class="enc"><h2 id="t-mapa">Puesto a puesto</h2></div>
+    <div class="cancha cancha-mapa" id="mapa" role="list" aria-label="Jugadores por posición"></div>
+  </section>
+
   {% if destacados %}
   <section class="destacados-sec" id="destacados" aria-labelledby="t-destacados">
     <div class="enc"><h2 id="t-destacados">Jugadores destacados</h2></div>
@@ -53,62 +91,6 @@
     </ul>
   </section>
   {% endif %}
-
-  <section class="once" aria-labelledby="t-once">
-    <div class="enc"><h2 id="t-once">El 11 más usado</h2></div>
-    <p class="once-formacion" id="once-formacion"></p>
-    <div class="cancha" id="cancha" role="list" aria-label="Once más usado"></div>
-    <h3 class="banco-titulo">Banco</h3>
-    <ul class="banco" id="banco"></ul>
-  </section>
-
-  <div class="scroll-x">
-  <table class="tabla stats ordenable" id="tabla-plantel">
-    <caption class="sr">Estadísticas del plantel</caption>
-    <thead><tr>
-      <th scope="col" class="eq">Jugador</th>
-      <th scope="col" data-campo="pj"><button type="button"><abbr title="Partidos jugados">PJ</abbr></button></th>
-      <th scope="col" data-campo="g"><button type="button"><abbr title="Goles">G</abbr></button></th>
-      <th scope="col" data-campo="a"><button type="button"><abbr title="Asistencias">A</abbr></button></th>
-      <th scope="col" data-campo="ga" class="opc"><button type="button"><abbr title="Goles + asistencias">G+A</abbr></button></th>
-      <th scope="col" data-campo="mvp"><button type="button">MVP</button></th>
-      <th scope="col" data-campo="vi"><button type="button"><abbr title="Vallas invictas que publica VPN (la LVA y VPUG no las publican por partido)">VI</abbr></button></th>
-      <th scope="col" data-campo="ta" class="opc"><button type="button"><abbr title="Tarjetas amarillas / rojas">TA/TR</abbr></button></th>
-      <th scope="col" data-campo="nota" aria-sort="descending"><button type="button"><abbr title="Nota promedio">Nota</abbr></button></th>
-    </tr></thead>
-    <tbody></tbody>
-  </table>
-  </div>
-  <p class="vacio" id="plantel-vacio" hidden>No hay partidos con estadísticas para esta combinación.</p>
-  <noscript><p class="aviso">Para ver el plantel hace falta tener JavaScript activado.</p></noscript>
-
-  {% set R = records %}
-  <section class="records" aria-labelledby="t-records">
-    <div class="enc"><h2 id="t-records">Récords del club</h2></div>
-    <p class="bajada">Todo el historial, desde {{ R.anio_desde }}.</p>
-    <dl class="totales">
-      <div><dt>Partidos</dt><dd>{{ R.pj }}</dd></div>
-      <div class="g"><dt>Ganados</dt><dd>{{ R.g }}</dd></div>
-      <div><dt>Empatados</dt><dd>{{ R.e }}</dd></div>
-      <div class="p"><dt>Perdidos</dt><dd>{{ R.p }}</dd></div>
-      <div><dt>Goles</dt><dd>{{ R.gf }}<small>–{{ R.gc }}</small></dd></div>
-      <div><dt>Vallas invictas</dt><dd>{{ R.vallas }}</dd></div>
-    </dl>
-    <h3 class="rec-grupo">El club</h3>
-    <div class="rec-grid club">
-      {% if R.goleada %}{% set x = R.goleada %}<a class="rec" href="{{ x.pagina }}"><span class="rec-t">Mayor goleada</span><b>{{ x.gf }}–{{ x.gc }}</b><span>vs {{ x.rival.nombre }}, {{ x.noche.strftime('%d/%m/%Y') }}</span><small>{{ x.liga_ui.corto }} · {{ x.competencia }}</small></a>{% endif %}
-      {% if R.derrota %}{% set x = R.derrota %}<a class="rec" href="{{ x.pagina }}"><span class="rec-t">Peor derrota</span><b>{{ x.gf }}–{{ x.gc }}</b><span>vs {{ x.rival.nombre }}, {{ x.noche.strftime('%d/%m/%Y') }}</span><small>{{ x.liga_ui.corto }} · {{ x.competencia }}</small></a>{% endif %}
-      <div class="rec"><span class="rec-t">Más victorias seguidas</span><b>{{ R.rachas.victorias }}</b><span>partidos</span></div>
-      <div class="rec"><span class="rec-t">Más partidos sin perder</span><b>{{ R.rachas.invicto }}</b><span>partidos</span></div>
-      {% if R.rachas.actual %}{% set n = R.rachas.actual.n %}<div class="rec"><span class="rec-t">Racha actual</span><b>{{ n }}</b><span>{% if R.rachas.actual.tipo == 'g' %}{{ 'victoria' if n == 1 else 'victorias seguidas' }}{% elif R.rachas.actual.tipo == 'e' %}{{ 'empate' if n == 1 else 'empates seguidos' }}{% else %}{{ 'derrota' if n == 1 else 'derrotas seguidas' }}{% endif %}</span></div>{% endif %}
-    </div>
-    <h3 class="rec-grupo">Jugadores</h3>
-    <div class="rec-grid jug">
-      {% for titulo, j, campo, unidad in [('Goleador histórico', R.goleador, 'goles', 'goles'), ('Asistidor histórico', R.asistidor, 'asistencias', 'asistencias'), ('Más partidos', R.mas_pj, 'pj', 'partidos'), ('Más veces MVP', R.mas_mvp, 'mvp', 'MVP'), ('Más vallas invictas', R.mas_vallas, 'vallas', 'vallas invictas')] %}
-        {% if j %}<a class="rec" href="{{ j.pagina }}"><span class="rec-t">{{ titulo }}</span><b>{{ j.total[campo] }}</b><span>{{ unidad }}</span><small class="rec-j">{{ avatar(j, 22) }} {{ j.alias }}</small></a>{% endif %}
-      {% endfor %}
-    </div>
-  </section>
 
   {% if sin_partidos %}
   <section class="sin-pj" aria-labelledby="t-sinpj">

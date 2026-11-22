@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import forma, chip, fila_partido, tabla_pos %}
+{% from "_macros.html" import forma, chip, fila_partido, tabla_pos, avatar %}
 {% block contenido %}
 
 {% for proximo in tarjetas %}
@@ -62,6 +62,23 @@
   <p class="envivo-quien"></p>
   <div class="envivo-video"></div>
 </section>
+{% endif %}
+
+{% if figura %}
+<div class="figura-fila">
+  {% if figura %}{% set F = figura %}
+  <section class="figura" aria-labelledby="t-figura">
+    <h2 id="t-figura">Figura de la noche</h2>
+    <a class="figura-jug" href="{{ F.j.pagina }}">
+      {{ avatar(F.j, 56) }}
+      <span><b>{{ F.j.alias }}</b>
+      <small>{{ F.noche_txt|capitalize }} · {{ F.pj }} {{ 'partido' if F.pj == 1 else 'partidos' }}</small></span>
+      <span class="figura-nota">{{ '%.1f'|format(F.nota) }}<small>nota</small></span>
+    </a>
+    <p class="figura-datos">{% if F.goles %}<span><i class="ico-gol" aria-hidden="true"></i> {{ F.goles }} {{ 'gol' if F.goles == 1 else 'goles' }}</span>{% endif %}{% if F.asistencias %}<span><i class="ico-asist" aria-hidden="true"></i> {{ F.asistencias }} {{ 'asistencia' if F.asistencias == 1 else 'asistencias' }}</span>{% endif %}{% if F.mvp %}<span class="mvp">MVP {% if F.mvp > 1 %}×{{ F.mvp }}{% endif %}</span>{% endif %}</p>
+  </section>
+  {% endif %}
+</div>
 {% endif %}
 
 <div class="columnas">

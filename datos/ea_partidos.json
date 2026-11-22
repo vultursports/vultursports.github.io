@@ -1,0 +1,2601 @@
+{
+ "200120298590233": {
+  "id": "200120298590233",
+  "fecha_utc": "2026-11-18T02:56:00Z",
+  "gf": 0,
+  "gc": 1,
+  "goles_jugadores": [
+   0,
+   1
+  ],
+  "minutos": 92,
+  "abandono": false,
+  "rival": {
+   "nombre": "BOCA   JUNIORS",
+   "ea_id": "51168"
+  },
+  "jugadores": [
+   {
+    "alias": "VSP-Ch4cKaL",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 6,
+    "pases": 15,
+    "pases_int": 17,
+    "entradas": 2,
+    "entradas_int": 3,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.5,
+    "segundos": 5544,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "canflecto12",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 32,
+    "pases_int": 36,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.6,
+    "segundos": 5544,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "SoldierJah22",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 26,
+    "pases_int": 29,
+    "entradas": 1,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.4,
+    "segundos": 5544,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "RiquiRicon_1",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 17,
+    "pases_int": 21,
+    "entradas": 2,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.7,
+    "segundos": 5544,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Zk__godd",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 7,
+    "pases_int": 10,
+    "entradas": 1,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.8,
+    "segundos": 5544,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 24,
+    "pases_int": 31,
+    "entradas": 0,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.5,
+    "segundos": 5544,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 26,
+    "pases_int": 32,
+    "entradas": 1,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.2,
+    "segundos": 5544,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ByCrisMor09",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 16,
+    "pases_int": 20,
+    "entradas": 1,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.4,
+    "segundos": 5544,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Corona_ruso",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 7,
+    "pases_int": 11,
+    "entradas": 1,
+    "entradas_int": 3,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.5,
+    "segundos": 5544,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MixaelYT",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 30,
+    "pases_int": 37,
+    "entradas": 2,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": true,
+    "nota": 8.1,
+    "segundos": 5544,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MichaelGB1981",
+    "pos": "goalkeeper",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 4,
+    "pases_int": 5,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 1,
+    "rojas": 0,
+    "mom": false,
+    "nota": 5.5,
+    "segundos": 5544,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  ],
+  "equipo": {
+   "nosotros": {
+    "tiros": 9,
+    "pases": 204,
+    "pases_int": 249,
+    "entradas": 11,
+    "entradas_int": 25,
+    "atajadas": 1,
+    "nota": 7.11
+   },
+   "rival": {
+    "tiros": 5,
+    "pases": 57,
+    "pases_int": 94,
+    "entradas": 7,
+    "entradas_int": 35,
+    "atajadas": 5,
+    "nota": 6.39
+   }
+  }
+ },
+ "202592074610044": {
+  "id": "202592074610044",
+  "fecha_utc": "2026-11-19T01:56:30Z",
+  "gf": 0,
+  "gc": 1,
+  "goles_jugadores": [
+   0,
+   1
+  ],
+  "minutos": 92,
+  "abandono": false,
+  "rival": {
+   "nombre": "NHP  20",
+   "ea_id": "53516"
+  },
+  "jugadores": [
+   {
+    "alias": "VSP-Ch4cKaL",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 2,
+    "pases": 11,
+    "pases_int": 14,
+    "entradas": 1,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.3,
+    "segundos": 5495,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "canflecto12",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 19,
+    "pases_int": 24,
+    "entradas": 4,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": true,
+    "nota": 8.7,
+    "segundos": 5495,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ChrisV710",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 21,
+    "pases_int": 29,
+    "entradas": 1,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.0,
+    "segundos": 5495,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MateoAlvarezIACC",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 21,
+    "pases_int": 24,
+    "entradas": 1,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.1,
+    "segundos": 5495,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 18,
+    "pases_int": 21,
+    "entradas": 2,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.4,
+    "segundos": 5495,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 23,
+    "pases_int": 25,
+    "entradas": 3,
+    "entradas_int": 6,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.6,
+    "segundos": 5495,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ByCrisMor09",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 9,
+    "pases_int": 9,
+    "entradas": 1,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.3,
+    "segundos": 5495,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Corona_ruso",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 10,
+    "pases_int": 16,
+    "entradas": 0,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.0,
+    "segundos": 5495,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "tiro_loko12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 15,
+    "pases_int": 15,
+    "entradas": 1,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.8,
+    "segundos": 5495,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MichaelGB1981",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 10,
+    "pases_int": 13,
+    "entradas": 3,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.9,
+    "segundos": 5495,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  ],
+  "equipo": {
+   "nosotros": {
+    "tiros": 4,
+    "pases": 157,
+    "pases_int": 190,
+    "entradas": 17,
+    "entradas_int": 37,
+    "atajadas": 0,
+    "nota": 7.11
+   },
+   "rival": {
+    "tiros": 2,
+    "pases": 101,
+    "pases_int": 138,
+    "entradas": 7,
+    "entradas_int": 23,
+    "atajadas": 0,
+    "nota": 6.99
+   }
+  }
+ },
+ "202558167700044": {
+  "id": "202558167700044",
+  "fecha_utc": "2026-11-19T02:23:13Z",
+  "gf": 2,
+  "gc": 0,
+  "goles_jugadores": [
+   2,
+   0
+  ],
+  "minutos": 91,
+  "abandono": false,
+  "rival": {
+   "nombre": "Real Envido",
+   "ea_id": "204209"
+  },
+  "jugadores": [
+   {
+    "alias": "VSP-Ch4cKaL",
+    "pos": "forward",
+    "goles": 1,
+    "asistencias": 1,
+    "tiros": 4,
+    "pases": 10,
+    "pases_int": 13,
+    "entradas": 2,
+    "entradas_int": 3,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": true,
+    "nota": 7.9,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "canflecto12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 16,
+    "pases_int": 22,
+    "entradas": 0,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.6,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ChrisV710",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 11,
+    "pases_int": 11,
+    "entradas": 2,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.5,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MateoAlvarezIACC",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 23,
+    "pases_int": 27,
+    "entradas": 0,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.6,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Zk__godd",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 7,
+    "pases_int": 10,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.7,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "pos": "forward",
+    "goles": 1,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 12,
+    "pases_int": 21,
+    "entradas": 1,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.5,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 3.0,
+    "segundos": 0,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ByCrisMor09",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 7,
+    "pases_int": 7,
+    "entradas": 0,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.6,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Corona_ruso",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 10,
+    "pases_int": 13,
+    "entradas": 1,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.9,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "tiro_loko12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 11,
+    "pases_int": 15,
+    "entradas": 0,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.1,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MichaelGB1981",
+    "pos": "goalkeeper",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 8,
+    "pases_int": 8,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.2,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  ],
+  "equipo": {
+   "nosotros": {
+    "tiros": 8,
+    "pases": 115,
+    "pases_int": 147,
+    "entradas": 6,
+    "entradas_int": 25,
+    "atajadas": 0,
+    "nota": 6.69
+   },
+   "rival": {
+    "tiros": 2,
+    "pases": 115,
+    "pases_int": 149,
+    "entradas": 12,
+    "entradas_int": 38,
+    "atajadas": 2,
+    "nota": 6.56
+   }
+  }
+ },
+ "202154881940054": {
+  "id": "202154881940054",
+  "fecha_utc": "2026-11-19T02:50:54Z",
+  "gf": 1,
+  "gc": 0,
+  "goles_jugadores": [
+   1,
+   0
+  ],
+  "minutos": 92,
+  "abandono": false,
+  "rival": {
+   "nombre": "ESPANYOL FC",
+   "ea_id": "53163"
+  },
+  "jugadores": [
+   {
+    "alias": "VSP-Ch4cKaL",
+    "pos": "forward",
+    "goles": 1,
+    "asistencias": 0,
+    "tiros": 10,
+    "pases": 13,
+    "pases_int": 13,
+    "entradas": 1,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.8,
+    "segundos": 5528,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "canflecto12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 12,
+    "pases_int": 14,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.5,
+    "segundos": 5528,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ChrisV710",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 18,
+    "pases_int": 26,
+    "entradas": 0,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.0,
+    "segundos": 5528,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MateoAlvarezIACC",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 26,
+    "pases_int": 31,
+    "entradas": 3,
+    "entradas_int": 7,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.8,
+    "segundos": 5528,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Zk__godd",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 5,
+    "pases_int": 6,
+    "entradas": 0,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.6,
+    "segundos": 5528,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 2,
+    "pases": 15,
+    "pases_int": 21,
+    "entradas": 1,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.4,
+    "segundos": 5528,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 30,
+    "pases_int": 31,
+    "entradas": 4,
+    "entradas_int": 7,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": true,
+    "nota": 8.3,
+    "segundos": 5528,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ByCrisMor09",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 19,
+    "pases_int": 19,
+    "entradas": 0,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.5,
+    "segundos": 5528,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Corona_ruso",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 8,
+    "pases_int": 9,
+    "entradas": 1,
+    "entradas_int": 3,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.2,
+    "segundos": 5528,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "tiro_loko12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 14,
+    "pases_int": 16,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.4,
+    "segundos": 5528,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MichaelGB1981",
+    "pos": "goalkeeper",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 4,
+    "pases_int": 5,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 2,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.0,
+    "segundos": 5528,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  ],
+  "equipo": {
+   "nosotros": {
+    "tiros": 12,
+    "pases": 164,
+    "pases_int": 191,
+    "entradas": 10,
+    "entradas_int": 27,
+    "atajadas": 2,
+    "nota": 7.05
+   },
+   "rival": {
+    "tiros": 5,
+    "pases": 99,
+    "pases_int": 132,
+    "entradas": 14,
+    "entradas_int": 94,
+    "atajadas": 4,
+    "nota": 6.88
+   }
+  }
+ },
+ "202384530700281": {
+  "id": "202384530700281",
+  "fecha_utc": "2026-11-19T03:17:54Z",
+  "gf": 3,
+  "gc": 0,
+  "goles_jugadores": [
+   3,
+   0
+  ],
+  "minutos": 91,
+  "abandono": false,
+  "rival": {
+   "nombre": "Dardoneta FC",
+   "ea_id": "2066356"
+  },
+  "jugadores": [
+   {
+    "alias": "VSP-Ch4cKaL",
+    "pos": "forward",
+    "goles": 2,
+    "asistencias": 0,
+    "tiros": 6,
+    "pases": 5,
+    "pases_int": 5,
+    "entradas": 1,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 8.1,
+    "segundos": 5468,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "canflecto12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 9,
+    "pases_int": 12,
+    "entradas": 0,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.5,
+    "segundos": 5468,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ChrisV710",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 1,
+    "tiros": 0,
+    "pases": 13,
+    "pases_int": 16,
+    "entradas": 3,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.1,
+    "segundos": 5468,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MateoAlvarezIACC",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 11,
+    "pases_int": 12,
+    "entradas": 0,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.8,
+    "segundos": 5468,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Zk__godd",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 5,
+    "pases_int": 13,
+    "entradas": 1,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": true,
+    "nota": 8.3,
+    "segundos": 5468,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 1,
+    "tiros": 0,
+    "pases": 13,
+    "pases_int": 16,
+    "entradas": 0,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.1,
+    "segundos": 5468,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "pos": "midfielder",
+    "goles": 1,
+    "asistencias": 1,
+    "tiros": 1,
+    "pases": 12,
+    "pases_int": 12,
+    "entradas": 1,
+    "entradas_int": 7,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 8.2,
+    "segundos": 5468,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ByCrisMor09",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 12,
+    "pases_int": 14,
+    "entradas": 2,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.9,
+    "segundos": 5468,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Corona_ruso",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 4,
+    "pases_int": 13,
+    "entradas": 1,
+    "entradas_int": 9,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.6,
+    "segundos": 5468,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "tiro_loko12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 8,
+    "pases_int": 17,
+    "entradas": 4,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.6,
+    "segundos": 5468,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MichaelGB1981",
+    "pos": "goalkeeper",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 5,
+    "pases_int": 6,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 4,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.7,
+    "segundos": 5468,
+    "atajadas_tipo": {
+     "estirada": 1,
+     "centros": 1
+    },
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  ],
+  "equipo": {
+   "nosotros": {
+    "tiros": 7,
+    "pases": 97,
+    "pases_int": 136,
+    "entradas": 13,
+    "entradas_int": 44,
+    "atajadas": 4,
+    "nota": 7.45
+   },
+   "rival": {
+    "tiros": 4,
+    "pases": 153,
+    "pases_int": 200,
+    "entradas": 11,
+    "entradas_int": 54,
+    "atajadas": 3,
+    "nota": 6.76
+   }
+  }
+ },
+ "203996467640332": {
+  "id": "203996467640332",
+  "fecha_utc": "2026-11-20T01:50:12Z",
+  "gf": 4,
+  "gc": 1,
+  "goles_jugadores": [
+   4,
+   1
+  ],
+  "minutos": 92,
+  "abandono": false,
+  "rival": {
+   "nombre": "LMJ eSports",
+   "ea_id": "37011"
+  },
+  "jugadores": [
+   {
+    "alias": "VSP-Ch4cKaL",
+    "pos": "forward",
+    "goles": 2,
+    "asistencias": 0,
+    "tiros": 2,
+    "pases": 11,
+    "pases_int": 14,
+    "entradas": 0,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 8.4,
+    "segundos": 5501,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ChrisV710",
+    "pos": "midfielder",
+    "goles": 1,
+    "asistencias": 1,
+    "tiros": 2,
+    "pases": 20,
+    "pases_int": 20,
+    "entradas": 0,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 8.1,
+    "segundos": 5501,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MateoAlvarezIACC",
+    "pos": "midfielder",
+    "goles": 1,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 24,
+    "pases_int": 30,
+    "entradas": 4,
+    "entradas_int": 6,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": true,
+    "nota": 8.7,
+    "segundos": 5501,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Zk__godd",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 4,
+    "pases_int": 5,
+    "entradas": 0,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.6,
+    "segundos": 5501,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 2,
+    "tiros": 1,
+    "pases": 22,
+    "pases_int": 27,
+    "entradas": 1,
+    "entradas_int": 8,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.7,
+    "segundos": 5501,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 24,
+    "pases_int": 29,
+    "entradas": 1,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.1,
+    "segundos": 5501,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ByCrisMor09",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 19,
+    "pases_int": 21,
+    "entradas": 1,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 8.5,
+    "segundos": 5501,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Corona_ruso",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 11,
+    "pases_int": 15,
+    "entradas": 2,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.7,
+    "segundos": 5501,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MixaelYT",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 23,
+    "pases_int": 28,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.2,
+    "segundos": 5501,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "tiro_loko12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 1,
+    "tiros": 0,
+    "pases": 17,
+    "pases_int": 18,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.6,
+    "segundos": 5501,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MichaelGB1981",
+    "pos": "goalkeeper",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 4,
+    "pases_int": 5,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 1,
+    "rojas": 0,
+    "mom": false,
+    "nota": 5.2,
+    "segundos": 5501,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  ],
+  "equipo": {
+   "nosotros": {
+    "tiros": 9,
+    "pases": 179,
+    "pases_int": 212,
+    "entradas": 9,
+    "entradas_int": 28,
+    "atajadas": 1,
+    "nota": 7.53
+   },
+   "rival": {
+    "tiros": 2,
+    "pases": 83,
+    "pases_int": 124,
+    "entradas": 14,
+    "entradas_int": 41,
+    "atajadas": 0,
+    "nota": 6.64
+   }
+  }
+ },
+ "203976536080030": {
+  "id": "203976536080030",
+  "fecha_utc": "2026-11-20T02:06:17Z",
+  "gf": 0,
+  "gc": 3,
+  "goles_jugadores": [
+   0,
+   0
+  ],
+  "minutos": 2,
+  "abandono": false,
+  "rival": {
+   "nombre": "Marpla FC",
+   "ea_id": "49798"
+  },
+  "jugadores": [
+   {
+    "alias": "VSP-Ch4cKaL",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 132,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ChrisV710",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 95,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "SoldierJah22",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 84,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MateoAlvarezIACC",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 87,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Zk__godd",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 82,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 83,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ByCrisMor09",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 85,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Corona_ruso",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 87,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MixaelYT",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 75,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "tiro_loko12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 91,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MichaelGB1981",
+    "pos": "goalkeeper",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 88,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  ],
+  "equipo": {
+   "nosotros": {
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "nota": 6.0
+   },
+   "rival": {
+    "tiros": 1,
+    "pases": 8,
+    "pases_int": 8,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "nota": 6.05
+   }
+  }
+ },
+ "203924594780069": {
+  "id": "203924594780069",
+  "fecha_utc": "2026-11-20T02:27:10Z",
+  "gf": 0,
+  "gc": 3,
+  "goles_jugadores": [
+   0,
+   0
+  ],
+  "minutos": 93,
+  "abandono": false,
+  "rival": {
+   "nombre": "Marpla FC",
+   "ea_id": "49798"
+  },
+  "jugadores": [
+   {
+    "alias": "VSP-Ch4cKaL",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 6,
+    "pases_int": 10,
+    "entradas": 0,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.0,
+    "segundos": 5492,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ChrisV710",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.7,
+    "segundos": 5442,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "SoldierJah22",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 8.0,
+    "segundos": 5444,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MateoAlvarezIACC",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.9,
+    "segundos": 5454,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Zk__godd",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.5,
+    "segundos": 5487,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.3,
+    "segundos": 5556,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ByCrisMor09",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.9,
+    "segundos": 5556,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Corona_ruso",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.4,
+    "segundos": 5556,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MixaelYT",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 8.2,
+    "segundos": 5556,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "tiro_loko12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.1,
+    "segundos": 5415,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MichaelGB1981",
+    "pos": "goalkeeper",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 0,
+    "pases_int": 0,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.2,
+    "segundos": 5556,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  ],
+  "equipo": {
+   "nosotros": {
+    "tiros": 1,
+    "pases": 6,
+    "pases_int": 10,
+    "entradas": 0,
+    "entradas_int": 1,
+    "atajadas": 0,
+    "nota": 7.11
+   },
+   "rival": {
+    "tiros": 3,
+    "pases": 42,
+    "pases_int": 53,
+    "entradas": 2,
+    "entradas_int": 17,
+    "atajadas": 0,
+    "nota": 6.31
+   }
+  }
+ },
+ "204228061810088": {
+  "id": "204228061810088",
+  "fecha_utc": "2026-11-20T02:48:48Z",
+  "gf": 0,
+  "gc": 1,
+  "goles_jugadores": [
+   0,
+   1
+  ],
+  "minutos": 91,
+  "abandono": false,
+  "rival": {
+   "nombre": "Motor Psico",
+   "ea_id": "183231"
+  },
+  "jugadores": [
+   {
+    "alias": "VSP-Ch4cKaL",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 2,
+    "pases": 14,
+    "pases_int": 15,
+    "entradas": 1,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.2,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "SoldierJah22",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 13,
+    "pases_int": 14,
+    "entradas": 0,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.7,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MateoAlvarezIACC",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 17,
+    "pases_int": 22,
+    "entradas": 1,
+    "entradas_int": 8,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.0,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Zk__godd",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 2,
+    "pases_int": 6,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.1,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 18,
+    "pases_int": 18,
+    "entradas": 0,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.3,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 18,
+    "pases_int": 19,
+    "entradas": 2,
+    "entradas_int": 10,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.0,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "ByCrisMor09",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 14,
+    "pases_int": 17,
+    "entradas": 0,
+    "entradas_int": 3,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.2,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Corona_ruso",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 1,
+    "pases_int": 6,
+    "entradas": 1,
+    "entradas_int": 8,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.7,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MixaelYT",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 13,
+    "pases_int": 24,
+    "entradas": 3,
+    "entradas_int": 8,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 8.0,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "tiro_loko12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 13,
+    "pases_int": 15,
+    "entradas": 2,
+    "entradas_int": 3,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.2,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MichaelGB1981",
+    "pos": "goalkeeper",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 1,
+    "pases_int": 2,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 1,
+    "rojas": 0,
+    "mom": false,
+    "nota": 5.2,
+    "segundos": 5469,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  ],
+  "equipo": {
+   "nosotros": {
+    "tiros": 5,
+    "pases": 124,
+    "pases_int": 158,
+    "entradas": 10,
+    "entradas_int": 51,
+    "atajadas": 1,
+    "nota": 6.78
+   },
+   "rival": {
+    "tiros": 5,
+    "pases": 152,
+    "pases_int": 187,
+    "entradas": 13,
+    "entradas_int": 35,
+    "atajadas": 2,
+    "nota": 7.04
+   }
+  }
+ }
+}
