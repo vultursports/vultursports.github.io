@@ -214,11 +214,11 @@
     "attlasesports": 7,
     "marplafc": 8,
     "motorpsico": 9,
-    "acassusoesports": 10,
-    "celtadelvino": 11,
+    "celtadelvino": 10,
+    "acassusoesports": 11,
     "interregional": 12,
-    "bocajuniors": 13,
-    "losandesfc": 14,
+    "losandesfc": 13,
+    "bocajuniors": 14,
     "vultursports": 15,
     "clubatlticopelulga": 16,
     "realenvido": 17,
@@ -275,6 +275,32 @@
    "complicadossa": 19,
    "huracanesports": 20,
    "estudiantesriocuarto": 21
+  },
+  "2026-11-22": {
+   "pos": {
+    "arabiateam": 1,
+    "vultursports": 2,
+    "csydlamochila": 3,
+    "dreamteamuy": 4,
+    "dardoneta": 5,
+    "allboyscantera": 6,
+    "flandria": 7,
+    "villadie": 8,
+    "torquecity": 9,
+    "realenvido": 10,
+    "villasancarlos": 11,
+    "almagroesports": 12,
+    "caeu": 13,
+    "almirantebrownesport": 14,
+    "vidonbaresportscba": 15,
+    "pocofutbolfc": 16,
+    "interregional": 17,
+    "espanyolbarcelonafc": 18,
+    "complicadossa": 19,
+    "huracanesports": 20,
+    "estudiantesriocuarto": 21
+   },
+   "pj_max": 9
   }
  }
 }

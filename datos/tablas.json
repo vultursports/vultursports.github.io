@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-22T18:12:22+00:00"
+  "actualizado": "2026-11-22T22:16:06+00:00"
  },
  {
   "id": "vpn-6449",
@@ -361,9 +361,9 @@
     "pts": 27,
     "zona": "ascenso",
     "pos_fuente": 1,
-    "pos_ant_fuente": 1,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 2,
@@ -379,9 +379,9 @@
     "pts": 24,
     "zona": "playoff",
     "pos_fuente": 2,
-    "pos_ant_fuente": 3,
+    "pos_ant_fuente": null,
     "es_vultur": true,
-    "mov": 1
+    "mov": null
    },
    {
     "pos": 3,
@@ -397,9 +397,9 @@
     "pts": 21,
     "zona": "playoff",
     "pos_fuente": 3,
-    "pos_ant_fuente": 2,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -1
+    "mov": null
    },
    {
     "pos": 4,
@@ -415,9 +415,9 @@
     "pts": 19,
     "zona": "playoff",
     "pos_fuente": 4,
-    "pos_ant_fuente": 5,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 1
+    "mov": null
    },
    {
     "pos": 5,
@@ -433,9 +433,9 @@
     "pts": 19,
     "zona": "playoff",
     "pos_fuente": 5,
-    "pos_ant_fuente": 4,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -1
+    "mov": null
    },
    {
     "pos": 6,
@@ -451,9 +451,9 @@
     "pts": 15,
     "zona": "playoff",
     "pos_fuente": 6,
-    "pos_ant_fuente": 6,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 7,
@@ -469,9 +469,9 @@
     "pts": 14,
     "zona": "playoff",
     "pos_fuente": 7,
-    "pos_ant_fuente": 7,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 8,
@@ -487,9 +487,9 @@
     "pts": 12,
     "zona": "playoff",
     "pos_fuente": 8,
-    "pos_ant_fuente": 12,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 4
+    "mov": null
    },
    {
     "pos": 9,
@@ -505,9 +505,9 @@
     "pts": 11,
     "zona": "playoff",
     "pos_fuente": 9,
-    "pos_ant_fuente": 11,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 2
+    "mov": null
    },
    {
     "pos": 10,
@@ -523,9 +523,9 @@
     "pts": 11,
     "zona": null,
     "pos_fuente": 10,
-    "pos_ant_fuente": 8,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -2
+    "mov": null
    },
    {
     "pos": 11,
@@ -541,9 +541,9 @@
     "pts": 10,
     "zona": null,
     "pos_fuente": 11,
-    "pos_ant_fuente": 9,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -2
+    "mov": null
    },
    {
     "pos": 12,
@@ -559,9 +559,9 @@
     "pts": 10,
     "zona": null,
     "pos_fuente": 12,
-    "pos_ant_fuente": 10,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -2
+    "mov": null
    },
    {
     "pos": 13,
@@ -577,9 +577,9 @@
     "pts": 9,
     "zona": null,
     "pos_fuente": 13,
-    "pos_ant_fuente": 13,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    },
    {
     "pos": 14,
@@ -595,9 +595,9 @@
     "pts": 9,
     "zona": null,
     "pos_fuente": 14,
-    "pos_ant_fuente": 18,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 4
+    "mov": null
    },
    {
     "pos": 15,
@@ -613,9 +613,9 @@
     "pts": 9,
     "zona": null,
     "pos_fuente": 15,
-    "pos_ant_fuente": 14,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -1
+    "mov": null
    },
    {
     "pos": 16,
@@ -631,9 +631,9 @@
     "pts": 8,
     "zona": null,
     "pos_fuente": 16,
-    "pos_ant_fuente": 19,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 3
+    "mov": null
    },
    {
     "pos": 17,
@@ -649,9 +649,9 @@
     "pts": 8,
     "zona": null,
     "pos_fuente": 17,
-    "pos_ant_fuente": 15,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -2
+    "mov": null
    },
    {
     "pos": 18,
@@ -667,9 +667,9 @@
     "pts": 7,
     "zona": null,
     "pos_fuente": 18,
-    "pos_ant_fuente": 20,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 2
+    "mov": null
    },
    {
     "pos": 19,
@@ -685,9 +685,9 @@
     "pts": 7,
     "zona": null,
     "pos_fuente": 19,
-    "pos_ant_fuente": 16,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -3
+    "mov": null
    },
    {
     "pos": 20,
@@ -703,9 +703,9 @@
     "pts": 6,
     "zona": null,
     "pos_fuente": 20,
-    "pos_ant_fuente": 17,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -3
+    "mov": null
    },
    {
     "pos": 21,
@@ -721,12 +721,12 @@
     "pts": 0,
     "zona": null,
     "pos_fuente": 21,
-    "pos_ant_fuente": 21,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": null
    }
   ],
-  "actualizado": "2026-11-22T18:13:02+00:00"
+  "actualizado": "2026-11-22T22:16:41+00:00"
  },
  {
   "id": "lva-ecfa9127",
@@ -840,14 +840,14 @@
     "pos": 7,
     "equipo": "Attlas eSports",
     "escudo": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png",
-    "pj": 15,
-    "g": 7,
+    "pj": 16,
+    "g": 8,
     "e": 4,
     "p": 4,
-    "gf": 27,
+    "gf": 29,
     "gc": 17,
-    "dg": 10,
-    "pts": 25,
+    "dg": 12,
+    "pts": 28,
     "zona": null,
     "es_vultur": false,
     "mov": 0
@@ -856,13 +856,13 @@
     "pos": 8,
     "equipo": "MARPLA FC",
     "escudo": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png",
-    "pj": 15,
+    "pj": 16,
     "g": 6,
     "e": 5,
-    "p": 4,
+    "p": 5,
     "gf": 17,
-    "gc": 12,
-    "dg": 5,
+    "gc": 15,
+    "dg": 2,
     "pts": 23,
     "zona": null,
     "es_vultur": false,
@@ -886,6 +886,22 @@
    },
    {
     "pos": 10,
+    "equipo": "CELTA DEL VINO",
+    "escudo": "https://i.ibb.co/Jh1GmLg/1001525369.png",
+    "pj": 16,
+    "g": 7,
+    "e": 2,
+    "p": 7,
+    "gf": 18,
+    "gc": 23,
+    "dg": -5,
+    "pts": 23,
+    "zona": null,
+    "es_vultur": false,
+    "mov": 0
+   },
+   {
+    "pos": 11,
     "equipo": "Acassuso eSports",
     "escudo": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg",
     "pj": 16,
@@ -898,23 +914,7 @@
     "pts": 22,
     "zona": null,
     "es_vultur": false,
-    "mov": -1
-   },
-   {
-    "pos": 11,
-    "equipo": "CELTA DEL VINO",
-    "escudo": "https://i.ibb.co/Jh1GmLg/1001525369.png",
-    "pj": 14,
-    "g": 7,
-    "e": 1,
-    "p": 6,
-    "gf": 18,
-    "gc": 21,
-    "dg": -3,
-    "pts": 22,
-    "zona": null,
-    "es_vultur": false,
-    "mov": -1
+    "mov": -2
    },
    {
     "pos": 12,
@@ -934,6 +934,22 @@
    },
    {
     "pos": 13,
+    "equipo": "Los Andes FC",
+    "escudo": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg",
+    "pj": 17,
+    "g": 5,
+    "e": 4,
+    "p": 8,
+    "gf": 19,
+    "gc": 26,
+    "dg": -7,
+    "pts": 19,
+    "zona": null,
+    "es_vultur": false,
+    "mov": 1
+   },
+   {
+    "pos": 14,
     "equipo": "BOCA JUNIORS",
     "escudo": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png",
     "pj": 16,
@@ -946,23 +962,7 @@
     "pts": 18,
     "zona": null,
     "es_vultur": false,
-    "mov": -1
-   },
-   {
-    "pos": 14,
-    "equipo": "Los Andes FC",
-    "escudo": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg",
-    "pj": 16,
-    "g": 4,
-    "e": 4,
-    "p": 8,
-    "gf": 16,
-    "gc": 26,
-    "dg": -10,
-    "pts": 16,
-    "zona": null,
-    "es_vultur": false,
-    "mov": 0
+    "mov": -2
    },
    {
     "pos": 15,
@@ -1000,14 +1000,14 @@
     "pos": 17,
     "equipo": "Real Envido",
     "escudo": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png",
-    "pj": 15,
+    "pj": 16,
     "g": 3,
-    "e": 1,
+    "e": 2,
     "p": 11,
     "gf": 12,
     "gc": 26,
     "dg": -14,
-    "pts": 10,
+    "pts": 11,
     "zona": null,
     "es_vultur": false,
     "mov": 0
@@ -1061,6 +1061,6 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-22T18:13:37+00:00"
+  "actualizado": "2026-11-22T22:17:16+00:00"
  }
 ]

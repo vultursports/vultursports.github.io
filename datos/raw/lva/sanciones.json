@@ -1,5 +1,101 @@
 [
  {
+  "id": "b6fc5636-9e36-4b41-8d4d-7648ae9c745e",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+  "player_id": "42a0ed0c-ffc3-4224-8f24-149470891aaf",
+  "match_id": "2e24948d-5606-4c53-a1d0-82ad1183bc72",
+  "sanction_type": "omision_reporte",
+  "reason": "Omisión en el reporte obligatorio de partido (> 19:00 hs) - Fecha 16",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 16",
+  "match_to_serve_stage": null,
+  "status": "pending",
+  "is_locked": true,
+  "notes": "Sanción aplicada formalmente por omisión de reporte para el club Potrero eSport.",
+  "created_at": "2026-11-22T18:17:55.958145+00:00",
+  "updated_at": "2026-11-22T18:17:55.958145+00:00",
+  "player": {
+   "id": "42a0ed0c-ffc3-4224-8f24-149470891aaf",
+   "name": "Lucas Colman ",
+   "teams": {
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+   },
+   "game_user": "Colman39_",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Potrero eSport",
+   "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+  }
+ },
+ {
+  "id": "b37ac974-1839-4f9f-bca6-b2da6757927b",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+  "player_id": "42a0ed0c-ffc3-4224-8f24-149470891aaf",
+  "match_id": "d44ef01f-0cb8-418f-bfc7-3c0856ab4852",
+  "sanction_type": "omision_reporte",
+  "reason": "Omisión en el reporte obligatorio de partido (> 19:00 hs) - Fecha 15",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 15",
+  "match_to_serve_stage": null,
+  "status": "pending",
+  "is_locked": true,
+  "notes": "Sanción aplicada formalmente por omisión de reporte para el club Potrero eSport.",
+  "created_at": "2026-11-22T18:17:43.9258+00:00",
+  "updated_at": "2026-11-22T18:17:43.9258+00:00",
+  "player": {
+   "id": "42a0ed0c-ffc3-4224-8f24-149470891aaf",
+   "name": "Lucas Colman ",
+   "teams": {
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+   },
+   "game_user": "Colman39_",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Potrero eSport",
+   "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+  }
+ },
+ {
+  "id": "9a784299-db0e-4163-96c3-083fa0715f72",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
+  "player_id": "bb040a39-7363-4b36-95b1-c507d319a3d9",
+  "match_id": "fb7ce87f-cb8b-4716-82a8-62c8b2f4a95c",
+  "sanction_type": "omision_reporte",
+  "reason": "Omisión en el reporte obligatorio de partido (> 19:00 hs) - Fecha 15",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 15",
+  "match_to_serve_stage": null,
+  "status": "pending",
+  "is_locked": true,
+  "notes": "Sanción aplicada formalmente por omisión de reporte para el club Celestiales .",
+  "created_at": "2026-11-22T18:17:40.039784+00:00",
+  "updated_at": "2026-11-22T18:17:40.039784+00:00",
+  "player": {
+   "id": "bb040a39-7363-4b36-95b1-c507d319a3d9",
+   "name": "Leonardo Castrillon",
+   "teams": {
+    "name": "Celestiales ",
+    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
+   },
+   "game_user": "Pela1982",
+   "photo_url": null,
+   "nationality": "UY"
+  },
+  "team": {
+   "name": "Celestiales ",
+   "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
+  }
+ },
+ {
   "id": "6747ef06-ace8-48d7-aa0c-86b4f32f03f0",
   "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
   "team_id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
@@ -282,6 +378,38 @@
   "team": {
    "name": "RealKsporT",
    "logo_url": "https://i.ibb.co/5WpTrrD1/5102781702022565359.jpg"
+  }
+ },
+ {
+  "id": "c4908b65-07fd-4351-91f1-a2d1521681e8",
+  "tournament_id": "ecfa9127-9bb4-4ac5-8d73-8355b45a21b1",
+  "team_id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
+  "player_id": "7e076bca-a116-4441-9a38-23eb7e0b3b08",
+  "match_id": "f6b09284-caa0-499d-bdbc-a2df594a7fbb",
+  "sanction_type": "omision_reporte",
+  "reason": "Omisión en el reporte obligatorio de partido (> 19:00 hs) - Fecha 16",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 16",
+  "match_to_serve_stage": null,
+  "status": "pending",
+  "is_locked": true,
+  "notes": "Sanción aplicada formalmente por omisión de reporte para el club Los Andes FC.",
+  "created_at": "2026-11-22T18:17:52.275422+00:00",
+  "updated_at": "2026-11-22T18:17:52.275422+00:00",
+  "player": {
+   "id": "7e076bca-a116-4441-9a38-23eb7e0b3b08",
+   "name": "augusto cubillas",
+   "teams": {
+    "name": "Los Andes FC",
+    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
+   },
+   "game_user": "wolfghost1991",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Los Andes FC",
+   "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
   }
  },
  {
