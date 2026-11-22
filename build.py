@@ -11,6 +11,7 @@ import json
 from collections import Counter
 import re
 import shutil
+from xml.sax.saxutils import escape
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -672,6 +673,14 @@ def main():
     og.generar(noche_prox, bool(noche_prox) and noche_prox[0]["noche"] == hoy_noche,
                {k: str(RAIZ / "estaticos" / "img" / "ligas" / f"{k}.png") for k in ligas}, SITE / "og.png")
     (SITE / ".nojekyll").write_text("")
+    # Mapa del sitio para buscadores (Google)
+    rutas = (["/", "/calendario/", "/tablas/", "/plantel/", "/vitrina/"] + [p["pagina"] for p in partidos]
+             + [r["pagina"] for r in rivales.values()] + [j["pagina"] for j in js])
+    base = url_sitio.rstrip("/")
+    (SITE / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(f"<url><loc>{base}{escape(r)}</loc></url>\n" for r in rutas) + "</urlset>\n", encoding="utf-8")
+    (SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n", encoding="utf-8")
     print(f"site/ generado: {len(partidos)} partidos, {len(tablas)} tablas, {len(con_pj)} jugadores con partidos")
 
 

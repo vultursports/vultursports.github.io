@@ -572,3 +572,5 @@ a.dest-jug:hover .dest-nombre { color: var(--dorado); }
   color: var(--hueso); background: var(--asfalto); border: 1px solid var(--linea); cursor: pointer; }
 .ver-mas:hover { background: var(--asfalto-2); }
 
+/* Barra: escudo y nombre más grandes en pantallas anchas */
+@media (min-width: 900px) { .marca img { width: 54px; height: 54px; } .marca span { font-size: 1.3rem; } }

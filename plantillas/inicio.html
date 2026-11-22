@@ -58,7 +58,7 @@
     {% endfor %}
 
     <div class="enc"><h2 id="t-recientes">Últimos resultados</h2></div>
-    <ul class="partidos">{% for p in recientes %}{{ fila_partido(p) }}{% else %}<li class="vacio">Todavía no hay resultados.</li>{% endfor %}</ul>
+    <ul class="partidos">{% for p in recientes %}{{ fila_partido(p, fecha=True) }}{% else %}<li class="vacio">Todavía no hay resultados.</li>{% endfor %}</ul>
   </section>
 
   <section aria-labelledby="t-comp">

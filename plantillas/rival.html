@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% from "_macros.html" import chip, fila_partido %}
 {% block titulo %}{{ club }} | Historial vs {{ r.nombre }}{% endblock %}
+{% block descripcion %}Historial de {{ club }} contra {{ r.nombre }}{% if r.pj %}: {{ r.pj }} {{ 'partido' if r.pj == 1 else 'partidos' }}, ganados: {{ r.g }}, empatados: {{ r.e }}, perdidos: {{ r.p }}{% endif %}.{% endblock %}
 {% block contenido %}
 <div class="pagina">
   <p class="volver"><a href="/calendario/">Calendario</a></p>
