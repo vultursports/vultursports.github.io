@@ -27,7 +27,7 @@
     "pts": 19,
     "zona": "ascenso",
     "es_vultur": false,
-    "mov": 0
+    "mov": 2
    },
    {
     "pos": 2,
@@ -43,7 +43,7 @@
     "pts": 18,
     "zona": "ascenso",
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 3,
@@ -59,7 +59,7 @@
     "pts": 18,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 4,
@@ -75,7 +75,7 @@
     "pts": 14,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": 0
+    "mov": 2
    },
    {
     "pos": 5,
@@ -91,7 +91,7 @@
     "pts": 13,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 6,
@@ -107,7 +107,7 @@
     "pts": 13,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 7,
@@ -219,7 +219,7 @@
     "pts": 8,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": 3
    },
    {
     "pos": 14,
@@ -235,7 +235,7 @@
     "pts": 6,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 15,
@@ -267,7 +267,7 @@
     "pts": 5,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -2
    },
    {
     "pos": 17,
@@ -726,7 +726,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-21T22:43:36+00:00"
+  "actualizado": "2026-11-22T02:48:56+00:00"
  },
  {
   "id": "lva-ecfa9127",
@@ -818,23 +818,23 @@
     "pts": 32,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": 2
    },
    {
     "pos": 6,
     "equipo": "Suda eSports",
     "escudo": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png",
-    "pj": 15,
-    "g": 8,
+    "pj": 16,
+    "g": 9,
     "e": 4,
     "p": 3,
-    "gf": 24,
+    "gf": 28,
     "gc": 14,
-    "dg": 10,
-    "pts": 28,
+    "dg": 14,
+    "pts": 31,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 7,
@@ -850,7 +850,7 @@
     "pts": 25,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 8,
@@ -930,7 +930,7 @@
     "pts": 18,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": 3
    },
    {
     "pos": 13,
@@ -946,7 +946,7 @@
     "pts": 17,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 14,
@@ -962,7 +962,7 @@
     "pts": 16,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 15,
@@ -978,7 +978,7 @@
     "pts": 16,
     "zona": null,
     "es_vultur": true,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 16,
@@ -1032,13 +1032,13 @@
     "pos": 19,
     "equipo": "Claypole eSports",
     "escudo": "https://i.ibb.co/ch8g3fY3/1000647394.png",
-    "pj": 15,
+    "pj": 16,
     "g": 1,
     "e": 5,
-    "p": 9,
+    "p": 10,
     "gf": 13,
-    "gc": 34,
-    "dg": -21,
+    "gc": 38,
+    "dg": -25,
     "pts": 8,
     "zona": "descenso",
     "es_vultur": false,
@@ -1061,6 +1061,6 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-21T22:44:35+00:00"
+  "actualizado": "2026-11-22T02:49:51+00:00"
  }
 ]
