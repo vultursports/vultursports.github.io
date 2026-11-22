@@ -815,18 +815,18 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
 .comparar-controles select { width: 100%; padding: 10px; font: 600 1rem var(--texto); background: var(--asfalto); color: var(--hueso); border: 1px solid var(--linea); }
 .cmp-vs { font: 900 1.4rem/1 var(--display); color: var(--plata); padding-bottom: 10px; }
 .cmp-ligas { margin: 0 0 16px; }
-.cmp-cab { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
-.cmp-jug { display: grid; justify-items: center; gap: 6px; padding: 12px 8px; background: var(--asfalto); text-decoration: none; text-align: center; }
-.cmp-jug.cmp-a { border-top: 3px solid var(--rojo); } .cmp-jug.cmp-b { border-top: 3px solid var(--plata); }
-.cmp-jug b { font: 800 1.2rem/1.1 var(--display); overflow-wrap: anywhere; }
-.cmp-jug small { color: var(--plata); }
-.cmp-tabla thead { display: none; }
-.cmp-tabla th[scope="row"] { font: 600 .85rem/1.2 var(--texto); color: var(--plata); width: 34%; }
-.cmp-v { position: relative; width: 33%; font: 800 1.15rem/1 var(--display); padding-bottom: 12px !important; }
-.cmp-v.gana { color: #fff; }
-.cmp-barra { position: absolute; bottom: 4px; height: 4px; width: calc(var(--p) * .9); border-radius: 2px; }
-.cmp-barra.a { right: 5%; background: var(--rojo); }
-.cmp-barra.b { left: 5%; background: var(--plata); }
+.comparacion .cmp-cab { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+.comparacion .cmp-jug { display: grid; justify-items: center; gap: 6px; padding: 12px 8px; background: var(--asfalto); text-decoration: none; text-align: center; }
+.comparacion .cmp-jug.cmp-a { border-top: 3px solid var(--rojo); } .comparacion .cmp-jug.cmp-b { border-top: 3px solid var(--plata); }
+.comparacion .cmp-jug b { font: 800 1.2rem/1.1 var(--display); overflow-wrap: anywhere; }
+.comparacion .cmp-jug small { color: var(--plata); }
+.comparacion .cmp-tabla thead { display: none; }
+.comparacion .cmp-tabla th[scope="row"] { font: 600 .85rem/1.2 var(--texto); color: var(--plata); width: 34%; }
+.comparacion .cmp-v { position: relative; width: 33%; font: 800 1.15rem/1 var(--display); padding-bottom: 12px !important; }
+.comparacion .cmp-v.gana { color: #fff; }
+.comparacion .cmp-barra { position: absolute; bottom: 4px; height: 4px; width: calc(var(--p) * .9); border-radius: 2px; }
+.comparacion .cmp-barra.a { right: 5%; background: var(--rojo); }
+.comparacion .cmp-barra.b { left: 5%; background: var(--plata); }
 .nota-cmp { color: var(--plata); font-size: .85rem; }
 
 /* Inicio sin partidos: resumen de la última temporada */
