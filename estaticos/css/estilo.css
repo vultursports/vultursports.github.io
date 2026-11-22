@@ -796,13 +796,14 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
 .gn-pt:hover .gn-dot, .gn-pt:focus .gn-dot, .gn-pt.activo .gn-dot { r: 8; fill: var(--rojo); }
 .gn-pt:focus { outline: none; }
 .gn-info { margin: 6px 4px 0; font-size: .85rem; color: var(--plata); min-height: 1.3em; }
-.mejores { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.mejores { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 @media (min-width: 760px) { .mejores { grid-template-columns: repeat(3, 1fr); } }
 .mejores a { display: flex; align-items: center; gap: 12px; padding: 10px 12px; background: var(--asfalto); text-decoration: none; border-left: 3px solid var(--dorado); }
 .mejores a:hover { background: var(--asfalto-2); }
 .mj-nota { font: 900 1.8rem/1 var(--display); color: var(--dorado); }
 .mejores span { display: grid; font-weight: 600; }
 .mejores small { font-weight: 400; color: var(--plata); font-size: .8rem; }
+.notas .sub { font: 800 1.2rem/1.1 var(--display); margin: 28px 0 12px; }
 .volver-acc { display: flex; gap: 8px; align-items: center; }
 .btn-chico {
   font: 700 .95rem/1 var(--display); text-transform: uppercase; letter-spacing: .03em; text-decoration: none;
