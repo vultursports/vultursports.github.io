@@ -13,7 +13,7 @@
 {% block descripcion %}{% if p.resultado %}{{ club }} {{ p.gf }}–{{ p.gc }} {{ p.rival.nombre }}{% if p.wo %} (W.O.){% endif %}{% else %}{{ p.noche.strftime('%d/%m') }} a las {{ p.hora }} (hora argentina): {{ club }} vs {{ p.rival.nombre }}{% endif %} · {{ p.liga_ui.corto }} {{ p.competencia }}, {{ p.jornada|lower }}{% if p.resultado %} · {{ p.noche.strftime('%d/%m/%Y') }}{% endif %}.{% endblock %}
 {% block contenido %}
 <div class="pagina">
-  <p class="volver"><a href="/calendario/">Calendario</a></p>
+  <p class="volver"><a href="/calendario/">Calendario</a><button type="button" class="compartir" hidden>Compartir</button></p>
 
   <section class="proximo liga-{{ p.liga }}" aria-labelledby="t-partido">
     <div class="proximo-marco">

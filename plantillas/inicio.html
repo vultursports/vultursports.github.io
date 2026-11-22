@@ -51,7 +51,7 @@
   <section aria-labelledby="t-semana">
     <div class="enc"><h2 id="t-semana">Esta semana</h2><a href="/calendario/">Calendario completo</a></div>
     {% for g in semana %}
-      <h3 class="noche">{{ g.txt|capitalize }}</h3>
+      <h3 class="noche" data-noche="{{ g.noche.isoformat() }}">{{ g.txt|capitalize }}</h3>
       <ul class="partidos">{% for p in g.partidos %}{{ fila_partido(p) }}{% endfor %}</ul>
     {% else %}
       <p class="vacio">No hay partidos en los próximos 7 días.</p>

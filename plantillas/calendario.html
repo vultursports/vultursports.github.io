@@ -7,7 +7,11 @@
   <p class="bajada">Todos nuestros partidos, en hora argentina.</p>
 
   <div class="controles">
-    <div class="segmento" role="tablist" aria-label="Qué partidos ver">
+    <div class="segmento vista-cal" role="group" aria-label="Vista">
+      <button type="button" data-vista="lista" aria-pressed="true">Lista</button>
+      <button type="button" data-vista="mes" aria-pressed="false">Mes</button>
+    </div>
+    <div class="segmento" role="tablist" aria-label="Qué partidos ver" id="seg-lista">
       <button role="tab" aria-selected="true" aria-controls="lista-proximos" id="tab-proximos">Próximos</button>
       <button role="tab" aria-selected="false" aria-controls="lista-jugados" id="tab-jugados">Jugados</button>
     </div>
@@ -19,9 +23,12 @@
     </fieldset>
   </div>
 
+  <section id="vista-mes" class="vista-mes" hidden aria-live="polite"></section>
+  <script type="application/json" id="datos-cal">{{ cal_datos|tojson }}</script>
+
   <section id="lista-proximos" role="tabpanel" aria-labelledby="tab-proximos">
     {% for g in cal_proximos %}
-      <h2 class="noche">{{ g.txt|capitalize }}</h2>
+      <h2 class="noche" data-noche="{{ g.noche.isoformat() }}">{{ g.txt|capitalize }}</h2>
       <ul class="partidos">{% for p in g.partidos %}{{ fila_partido(p) }}{% endfor %}</ul>
     {% else %}<p class="vacio">No hay partidos programados.</p>{% endfor %}
   </section>
@@ -29,7 +36,7 @@
     {# De a 8 noches: el resto aparece con "Ver más" #}
     {% for g in cal_jugados %}
       <div class="noche-grupo"{% if loop.index > 8 %} hidden{% endif %}>
-      <h2 class="noche">{{ g.txt|capitalize }}</h2>
+      <h2 class="noche" data-noche="{{ g.noche.isoformat() }}">{{ g.txt|capitalize }}</h2>
       <ul class="partidos">{% for p in g.partidos %}{{ fila_partido(p) }}{% endfor %}</ul>
       </div>
     {% else %}<p class="vacio">Todavía no hay partidos jugados.</p>{% endfor %}

@@ -4,7 +4,7 @@
 {% block descripcion %}{{ j.alias }}{% if j.posicion %} ({{ j.posicion }}){% endif %} en {{ club }}: {{ j.total.pj }} {{ 'partido' if j.total.pj == 1 else 'partidos' }}, goles: {{ j.total.goles }}, asistencias: {{ j.total.asistencias }}{% if j.total.mvp %}, MVP: {{ j.total.mvp }}{% endif %}{% if j.total.nota %}, nota promedio: {{ '%.2f'|format(j.total.nota) }}{% endif %}.{% endblock %}
 {% block contenido %}
 <div class="pagina">
-  <p class="volver"><a href="/plantel/">Plantel</a></p>
+  <p class="volver"><a href="/plantel/">Plantel</a><button type="button" class="compartir" hidden>Compartir</button></p>
 
   <header class="ficha">
     {{ avatar(j, 112) }}

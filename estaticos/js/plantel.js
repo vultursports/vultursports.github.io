@@ -221,6 +221,7 @@ VS.alCargar(() => {
       liga = opt.dataset.liga;
     }
     botones.forEach((b) => b.setAttribute("aria-pressed", b.dataset.liga === liga));
+    VS.guardar("plantel", { liga, temporada: selT.value });
 
     const filas = calcular();
     dibujarOnce(filas);
@@ -254,5 +255,12 @@ VS.alCargar(() => {
     orden = { campo: th.dataset.campo, asc: orden.campo === th.dataset.campo ? !orden.asc : false };
     dibujar();
   }));
+  // Volver a la liga y temporada que el visitante eligió la última vez
+  const previo = VS.recordar("plantel");
+  if (previo && botones.some((b) => b.dataset.liga === previo.liga)) {
+    liga = previo.liga;
+    rearmarTemporadas();
+    if ([...selT.options].some((o) => o.value === previo.temporada)) selT.value = previo.temporada;
+  }
   dibujar();
 });

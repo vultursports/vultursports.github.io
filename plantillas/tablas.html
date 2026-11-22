@@ -4,7 +4,10 @@
 {% block contenido %}
 <div class="pagina">
   <h1 class="titulo-pagina">Tablas</h1>
-  <p class="bajada">Nuestra posición en cada competencia.</p>
+  <div class="tablas-enc">
+    <p class="bajada">Nuestra posición en cada competencia.</p>
+    <button type="button" class="ver-todas" id="ver-todas" aria-pressed="false">Ver todas juntas</button>
+  </div>
 
   <div class="selector-comp" role="tablist" aria-label="Elegir competencia">
     {% for t in tablas %}
