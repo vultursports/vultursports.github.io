@@ -253,8 +253,8 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
   .eqi span { max-width: 7.5rem; }
 }
 .tabla .pts { font-weight: 700; }
-.tabla .n { white-space: nowrap; }
-.mov { display: inline-block; width: 2.1em; text-align: left; margin-left: 3px; font: 700 .68rem/1 var(--texto); vertical-align: 1px; }
+.tabla .n { white-space: nowrap; padding-right: 0; } .tabla .n + td { padding-left: 2px; }
+.mov { display: inline-block; width: 1.75em; text-align: left; margin-left: 2px; font: 700 .68rem/1 var(--texto); vertical-align: 1px; }
 .mov.sube { color: #3ecf74; } .mov.baja { color: #ff5a5f; } .mov.igual { color: var(--plata); }
 .tabla tr.nosotros { background: linear-gradient(90deg, rgba(216,35,42,.22), rgba(216,35,42,.05)); }
 .tabla tr.nosotros td, .tabla tr.nosotros th { color: #fff; font-weight: 700; }
