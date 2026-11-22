@@ -65,12 +65,12 @@ def recortar(d, texto: str, f, ancho: int) -> str:
     return texto.rstrip() + "…"
 
 
-def base() -> tuple[Image.Image, ImageDraw.ImageDraw]:
+def base(marco=ROJO) -> tuple[Image.Image, ImageDraw.ImageDraw]:
     im = Image.new("RGBA", (W, H), CARBON)
     d = ImageDraw.Draw(im)
     b = 34  # bisel del octógono del escudo
     octo = [(b, 0), (W - b, 0), (W, b), (W, H - b), (W - b, H), (b, H), (0, H - b), (0, b)]
-    d.polygon(octo, fill=ROJO)
+    d.polygon(octo, fill=marco)
     i = 6
     interior = [(b + i * .4, i), (W - b - i * .4, i), (W - i, b + i * .4), (W - i, H - b - i * .4),
                 (W - b - i * .4, H - i), (b + i * .4, H - i), (i, H - b - i * .4), (i, b + i * .4)]
@@ -139,3 +139,52 @@ def generar(partidos: list, hoy: bool, logos_ligas: dict, destino: Path) -> None
             y += alto
 
     im.convert("RGB").save(destino, "PNG", optimize=True)
+
+
+DORADO = (201, 162, 74)
+COLOR_RES = {"g": (DORADO, "VICTORIA"), "e": (PLATA, "EMPATE"), "p": ((255, 77, 85), "DERROTA")}
+
+
+def generar_resultado(p: dict, logos_ligas: dict, destino: Path) -> None:
+    """Imagen para compartir un partido jugado: resultado grande, escudos, goleadores y MVP."""
+    color, txt = COLOR_RES[p["resultado"]]
+    im, d = base(ROJO if p["resultado"] == "p" else color)
+    escudo = RAIZ / "estaticos" / "img" / "escudo.png"
+    centrado(d, W // 2, 48, txt + (" POR W.O." if p.get("wo") else ""), fuente("BigShouldersDisplay.ttf", 50, "Black"), color)
+    comp = f"{p['competencia']}, {p['jornada'].lower()}"
+    fc = fuente("Archivo.ttf", 28, "Medium")
+    comp = recortar(d, comp, fc, 900)
+    logo = imagen(logos_ligas.get(p["liga"]))
+    lw = 0
+    if logo:
+        l2 = logo.copy(); l2.thumbnail((90, 34), Image.LANCZOS); lw = l2.width + 12
+    tw = d.textlength(comp, font=fc)
+    x0 = W / 2 - (tw + lw) / 2
+    if logo:
+        im.alpha_composite(l2, (int(x0), 112 + (34 - l2.height) // 2))
+    d.text((x0 + lw, 113), comp, font=fc, fill=PLATA)
+    izq, der = escudo, p["rival"].get("escudo_grande") or p["rival"].get("escudo")
+    nombres = ["VULTUR SPORTS", p["rival"]["nombre"].upper()]
+    goles = [p["gf"], p["gc"]]
+    if not p["local"]:
+        izq, der = der, izq
+        nombres.reverse(); goles.reverse()
+    pegar(im, imagen(str(izq) if izq else None), (90, 180, 250, 250))
+    pegar(im, imagen(str(der) if der else None), (860, 180, 250, 250))
+    fn = fuente("BigShouldersDisplay.ttf", 40, "Black")
+    centrado(d, 215, 455, recortar(d, nombres[0], fn, 330), fn, HUESO)
+    centrado(d, 985, 455, recortar(d, nombres[1], fn, 330), fn, HUESO)
+    centrado(d, W // 2, 190, f"{goles[0]}–{goles[1]}", fuente("BigShouldersDisplay.ttf", 200, "Black"), HUESO)
+    centrado(d, W // 2, 420, p["noche_txt"].capitalize(), fuente("Archivo.ttf", 30, "Medium"), PLATA)
+    lineas = []
+    if p.get("goleadores"):
+        lineas.append("Goles: " + ", ".join(n + (f" ({g})" if g > 1 else "") for n, g in p["goleadores"]))
+    if p.get("mvp"):
+        lineas.append("MVP: " + p["mvp"])
+    fl = fuente("Archivo.ttf", 26, "Medium")
+    y = 530 if len(lineas) == 2 else 548
+    for l in lineas:
+        centrado(d, W // 2, y, recortar(d, l, fl, 1040), fl, HUESO if l.startswith("Goles") else DORADO)
+        y += 36
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    im.convert("RGB").save(destino, optimize=True)

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% from "_macros.html" import chip %}
+{% block titulo %}{{ club }} | Comparar jugadores{% endblock %}
+{% block descripcion %}Compara los números de dos jugadores de {{ club }}: partidos, goles, asistencias, MVP y nota.{% endblock %}
+{% block contenido %}
+<div class="pagina">
+  <p class="volver"><a href="/plantel/">Plantel</a></p>
+  <h1 class="titulo-pagina">Comparar jugadores</h1>
+  <p class="bajada">Elige dos jugadores y la liga. Todo el historial.</p>
+
+  <div class="comparar-controles">
+    <label><span>Jugador 1</span><select id="cmp-a">{% for j in comparar_datos %}<option value="{{ j.id }}">{{ j.alias }}</option>{% endfor %}</select></label>
+    <span class="cmp-vs" aria-hidden="true">vs</span>
+    <label><span>Jugador 2</span><select id="cmp-b">{% for j in comparar_datos %}<option value="{{ j.id }}">{{ j.alias }}</option>{% endfor %}</select></label>
+  </div>
+  <div class="selector-comp selector-ambito cmp-ligas" role="group" aria-label="Liga">
+    <button type="button" data-liga="todas" aria-pressed="true" class="todas"><span class="sc-nombre">Todas</span></button>
+    {% for l in ligas.values() %}<button type="button" data-liga="{{ l.clave }}" aria-pressed="false" class="liga-{{ l.clave }}">{{ chip(l) }}</button>{% endfor %}
+  </div>
+
+  <div id="comparacion" class="comparacion" aria-live="polite"></div>
+  <noscript><p class="aviso">Para comparar hace falta tener JavaScript activado.</p></noscript>
+  <script type="application/json" id="datos-comparar">{{ comparar_datos|tojson }}</script>
+</div>
+{% endblock %}
+{% block js %}<script src="/estaticos/js/comparar.js?v={{ v }}" defer></script>{% endblock %}

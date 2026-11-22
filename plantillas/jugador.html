@@ -4,7 +4,7 @@
 {% block descripcion %}{{ j.alias }}{% if j.posicion %} ({{ j.posicion }}){% endif %} en {{ club }}: {{ j.total.pj }} {{ 'partido' if j.total.pj == 1 else 'partidos' }}, goles: {{ j.total.goles }}, asistencias: {{ j.total.asistencias }}{% if j.total.mvp %}, MVP: {{ j.total.mvp }}{% endif %}{% if j.total.nota %}, nota promedio: {{ '%.2f'|format(j.total.nota) }}{% endif %}.{% endblock %}
 {% block contenido %}
 <div class="pagina">
-  <p class="volver"><a href="/plantel/">Plantel</a><button type="button" class="compartir" hidden>Compartir</button></p>
+  <p class="volver"><a href="/plantel/">Plantel</a><span class="volver-acc">{% if j.total.pj %}<a class="btn-chico" href="/comparar/?a={{ j.id }}">Comparar</a>{% endif %}<button type="button" class="compartir" hidden>Compartir</button></span></p>
 
   <header class="ficha">
     {{ avatar(j, 112) }}
@@ -32,6 +32,26 @@
     <div><dt>Tarjetas</dt><dd><span class="ta">{{ j.total.amarillas }}</span> <span class="tr">{{ j.total.rojas }}</span></dd></div>
     <div><dt>Nota promedio</dt><dd>{{ '%.1f'|format(j.total.nota) if j.total.nota else '–' }}</dd></div>
   </dl>
+
+  {% if j.grafico %}{% set G = j.grafico %}
+  <section class="notas" aria-labelledby="t-notas">
+    <div class="enc"><h2 id="t-notas">Sus notas</h2></div>
+    <p class="bajada">Últimos {{ G.puntos|length }} partidos ({{ G.desde }} al {{ G.hasta }}). La línea punteada es su promedio en ese tramo: {{ '%.1f'|format(G.prom.v) }}.</p>
+    <figure class="grafico-notas">
+      <svg viewBox="0 0 {{ G.W }} {{ G.H }}" role="img" aria-label="Nota de {{ j.alias }} en sus últimos {{ G.puntos|length }} partidos">
+        {% for g in G.guias %}<line class="gn-guia" x1="{{ G.I }}" x2="{{ G.W - G.D }}" y1="{{ g.y }}" y2="{{ g.y }}"/><text class="gn-eje" x="{{ G.I - 8 }}" y="{{ g.y + 4 }}" text-anchor="end">{{ g.v }}</text>{% endfor %}
+        <line class="gn-prom" x1="{{ G.I }}" x2="{{ G.W - G.D }}" y1="{{ G.prom.y }}" y2="{{ G.prom.y }}"/>
+        <polyline class="gn-linea" points="{{ G.linea }}"/>
+        {% for q in G.puntos %}<a href="{{ q.pagina }}" class="gn-pt" data-txt="{{ q.txt }}"><title>{{ q.txt }}</title><circle class="gn-hit" cx="{{ q.x }}" cy="{{ q.y }}" r="14"/><circle class="gn-dot r-{{ q.res }}" cx="{{ q.x }}" cy="{{ q.y }}" r="5"/></a>{% endfor %}
+      </svg>
+      <figcaption class="gn-info" aria-live="polite">Toca o pasa el mouse por un punto para ver el partido.</figcaption>
+    </figure>
+    {% if j.mejores %}
+    <h3 class="sub">Sus mejores partidos</h3>
+    <ul class="mejores">{% for m in j.mejores %}<li><a href="{{ m.p.pagina }}"><b class="mj-nota">{{ '%.1f'|format(m.nota) }}</b><span>vs {{ m.p.rival.nombre }}<small>{{ m.p.noche.strftime('%d/%m/%Y') }} · {{ m.p.liga_ui.corto }} · {{ m.p.gf }}–{{ m.p.gc }}</small></span></a></li>{% endfor %}</ul>
+    {% endif %}
+  </section>
+  {% endif %}
 
   {% if j.total.pj %}
   <section aria-labelledby="t-porliga">

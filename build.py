@@ -266,6 +266,7 @@ def preparar_partido(p: dict, ligas: dict) -> dict:
     p["wo"] = p.get("estado") == "wo"
     p["mvp"] = next((s["alias"] for s in p.get("stats", []) if s.get("mvp")), None)
     p["goleadores"] = [(s["alias"], s["goles"]) for s in p.get("stats", []) if s.get("goles")]
+    p["asistidores"] = [(s["alias"], s["asistencias"]) for s in p.get("stats", []) if s.get("asistencias")]
     for s in p.get("stats", []):
         if s.get("rating") is None:
             s["rating"] = -1  # para ordenar; se muestra vacío
@@ -634,6 +635,73 @@ def main():
                              "ok_reciente": bool(ok) and (ahora - ok) < timedelta(hours=12),
                              "partidos": sum(1 for p in partidos if p["liga"] == k)})
 
+    # Imagen propia para compartir los partidos jugados más recientes (resultado y escudos)
+    og_partidos = [p for p in jugados[:12] if p.get("gf") is not None]
+    for p in og_partidos:
+        p["og_img"] = f"{url_sitio}{p['pagina'][1:]}og.png?v={og_version}"
+
+    # Jugador: notas de sus últimos 20 partidos (gráfico)
+    for j in js:
+        serie = [x for x in reversed(j["partidos"]) if x["p"].get("resultado") and (x["s"].get("rating") or -1) >= 0][-20:]
+        if len(serie) >= 3:
+            notas = [x["s"]["rating"] for x in serie]
+            lo, hi = min(4.0, min(notas)), 10.0
+            W, H, I, D, A, B2 = 420, 200, 28, 8, 12, 14   # ancho, alto, márgenes izq/der/arriba/abajo
+            X = lambda i: I + (W - I - D) * (i / (len(serie) - 1))
+            Y = lambda n: A + (H - A - B2) * (1 - (n - lo) / (hi - lo))
+            prom = sum(notas) / len(notas)
+            j["grafico"] = {
+                "W": W, "H": H, "I": I, "D": D,
+                "linea": " ".join(f"{X(i):.1f},{Y(n):.1f}" for i, n in enumerate(notas)),
+                "puntos": [{"x": round(X(i), 1), "y": round(Y(x["s"]["rating"]), 1), "nota": x["s"]["rating"],
+                            "res": x["p"]["resultado"], "pagina": x["p"]["pagina"],
+                            "txt": f"{x['p']['noche'].strftime('%d/%m')} vs {x['p']['rival']['nombre']}"
+                                   f" ({x['p']['gf']}–{x['p']['gc']}): nota {x['s']['rating']:.1f}"}
+                           for i, x in enumerate(serie)],
+                "guias": [{"y": round(Y(v), 1), "v": v} for v in range(int(lo) + (int(lo) % 2), 11, 2)],
+                "prom": {"y": round(Y(prom), 1), "v": prom},
+                "desde": serie[0]["p"]["noche"].strftime("%d/%m/%Y"), "hasta": serie[-1]["p"]["noche"].strftime("%d/%m/%Y"),
+            }
+            mejores = sorted(serie, key=lambda x: -x["s"]["rating"])[:3]
+            j["mejores"] = [{"p": x["p"], "nota": x["s"]["rating"]} for x in mejores]
+
+    # Comparar jugadores: totales y por liga de cada uno
+    comparar_datos = [{"id": j["id"], "alias": j["alias"], "pagina": j["pagina"], "dorsal": j.get("dorsal"), "pos": j.get("posicion"),
+                       "ligas": {"todas": j["total"], **j["por_liga"]}} for j in sorted(con_pj, key=lambda j: j["alias"].lower())]
+
+    # Sin partidos programados: resumen de la última temporada (edición del juego del último partido jugado)
+    resumen_temp = None
+    if jugados:
+        ed = jugados[0]["edicion"]
+        de_ed = [p for p in jugados if p["edicion"] == ed]
+        comps = {}
+        for p in de_ed:
+            c = comps.setdefault((p["liga"], p["competencia"]), {"liga_ui": p["liga_ui"], "nombre": p["competencia"], "pj": 0, "g": 0, "e": 0, "p": 0})
+            c["pj"] += 1
+            c[p["resultado"]] += 1
+        def lider(campo, minimo=1):
+            filas = []
+            for j in js:
+                xs = [x for x in j["partidos"] if x["p"].get("edicion") == ed and x["p"].get("resultado")]
+                if not xs:
+                    continue
+                if campo == "nota":
+                    ns = [x["s"]["rating"] for x in xs if (x["s"].get("rating") or -1) >= 0]
+                    if len(ns) >= 5:
+                        filas.append((round(sum(ns) / len(ns), 2), j))
+                else:
+                    v = sum((x["s"].get(campo) or 0) if campo != "mvp" else (1 if x["s"].get("mvp") else 0) for x in xs)
+                    if v >= minimo:
+                        filas.append((v, j))
+            return max(filas, key=lambda f: f[0]) if filas else None
+        resumen_temp = {
+            "edicion": ed, "pj": len(de_ed), "g": sum(p["resultado"] == "g" for p in de_ed),
+            "e": sum(p["resultado"] == "e" for p in de_ed), "p": sum(p["resultado"] == "p" for p in de_ed),
+            "gf": sum(p.get("gf") or 0 for p in de_ed), "gc": sum(p.get("gc") or 0 for p in de_ed),
+            "comps": list(comps.values()),
+            "lideres": [(t, lider(c)) for t, c in [("Goleador", "goles"), ("Asistidor", "asistencias"), ("Más MVP", "mvp"), ("Mejor nota", "nota")]],
+        }
+
     # Franja "Hoy jugamos" (todas las páginas): próximos partidos; el navegador muestra los de hoy
     hoy_datos = [{"inicio": p["dt"].isoformat(), "fin": p["fin_tarjeta"].isoformat(), "noche": p["noche"].isoformat(),
                   "hora": p["hora"], "rival": p["rival"]["nombre"], "liga": p["liga_ui"]["corto"], "pagina": p["pagina"]}
@@ -643,7 +711,7 @@ def main():
                   "corto": p["liga_ui"]["corto"], "pagina": p["pagina"], "escudo": p["rival"].get("escudo"),
                   "res": p["resultado"], "gf": p.get("gf"), "gc": p.get("gc"), "inicio": p["dt"].isoformat()}
                  for p in sorted(partidos, key=lambda p: p["dt"])]
-    ctx = dict(club=cfg["club"]["nombre"], hoy_datos=hoy_datos, cal_datos=cal_datos, redes_club=[(REDES_TXT.get(k, k), k, u) for k, u in (cfg["club"].get("redes") or {}).items()], v=og_version, destacados=destacados, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas,
+    ctx = dict(club=cfg["club"]["nombre"], hoy_datos=hoy_datos, cal_datos=cal_datos, comparar_datos=comparar_datos, resumen_temp=resumen_temp, redes_club=[(REDES_TXT.get(k, k), k, u) for k, u in (cfg["club"].get("redes") or {}).items()], v=og_version, destacados=destacados, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas,
                titulos=titulos, estantes=estantes,
                total_partidos=len(partidos), total_jugadores=len(js), total_rivales=len(rivales),
                total_escudos=len(list((DATOS / "escudos").glob("*.webp"))), plantel_datos=plantel_datos, temporadas_lista=temporadas_lista,
@@ -669,7 +737,7 @@ def main():
         destino.write_text(html, encoding="utf-8")
     for ruta, pagina in [("/", "inicio.html"), ("/calendario/", "calendario.html"),
                          ("/tablas/", "tablas.html"), ("/plantel/", "plantel.html"),
-                         ("/estado/", "estado.html"), ("/vitrina/", "vitrina.html")]:
+                         ("/estado/", "estado.html"), ("/vitrina/", "vitrina.html"), ("/comparar/", "comparar.html")]:
         escribir(ruta, env.get_template(pagina).render(pagina=ruta, **ctx))
     tpl = env.get_template("partido.html")
     for p in partidos:
@@ -685,8 +753,11 @@ def main():
     (SITE / "calendario.ics").write_text(generar_ics(partidos, ctx["club"]), encoding="utf-8", newline="")
     for p in noche_prox:
         p["rival"]["escudo_grande"] = p["rival"].get("escudo_archivo") or p["rival"].get("escudo_url")
-    og.generar(noche_prox, bool(noche_prox) and noche_prox[0]["noche"] == hoy_noche,
-               {k: str(RAIZ / "estaticos" / "img" / "ligas" / f"{k}.png") for k in ligas}, SITE / "og.png")
+    logos = {k: str(RAIZ / "estaticos" / "img" / "ligas" / f"{k}.png") for k in ligas}
+    og.generar(noche_prox, bool(noche_prox) and noche_prox[0]["noche"] == hoy_noche, logos, SITE / "og.png")
+    for p in og_partidos:
+        p["rival"]["escudo_grande"] = p["rival"].get("escudo_archivo") or p["rival"].get("escudo_url")
+        og.generar_resultado(p, logos, SITE / p["pagina"].strip("/") / "og.png")
     (SITE / ".nojekyll").write_text("")
     # Buscador: jugadores y rivales (se descarga solo al abrir la búsqueda)
     (SITE / "buscar.json").write_text(json.dumps(
@@ -694,7 +765,7 @@ def main():
         + [{"n": r["nombre"], "t": "Rival", "u": r["pagina"], "o": [x for x in r.get("nombres", {}) if x != r["nombre"]]}
            for r in rivales.values()], ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     # Mapa del sitio para buscadores (Google)
-    rutas = (["/", "/calendario/", "/tablas/", "/plantel/", "/vitrina/"] + [p["pagina"] for p in partidos]
+    rutas = (["/", "/calendario/", "/tablas/", "/plantel/", "/vitrina/", "/comparar/"] + [p["pagina"] for p in partidos]
              + [r["pagina"] for r in rivales.values()] + [j["pagina"] for j in js])
     base = url_sitio.rstrip("/")
     (SITE / "sitemap.xml").write_text(

@@ -30,7 +30,24 @@
   </div>
 </section>
 {% endfor %}
-<section class="proximo vacio"{% if tarjetas %} hidden{% endif %}><h1 class="proximo-titulo">Sin partidos programados</h1><p>Cuando las ligas publiquen el próximo fixture, aparecerá aquí.</p></section>
+<section class="proximo vacio"{% if tarjetas %} hidden{% endif %}>
+  <h1 class="proximo-titulo">Sin partidos programados</h1>
+  <p>Cuando las ligas publiquen el próximo fixture, aparecerá aquí.</p>
+  {% if resumen_temp %}{% set R = resumen_temp %}
+  <div class="resumen-temp">
+    <h2>Así nos fue en {{ R.edicion }}</h2>
+    <dl class="totales">
+      <div><dt>Partidos</dt><dd>{{ R.pj }}</dd></div>
+      <div class="g"><dt>Ganados</dt><dd>{{ R.g }}</dd></div>
+      <div><dt>Empatados</dt><dd>{{ R.e }}</dd></div>
+      <div class="p"><dt>Perdidos</dt><dd>{{ R.p }}</dd></div>
+      <div><dt>Goles</dt><dd>{{ R.gf }}<small>–{{ R.gc }}</small></dd></div>
+    </dl>
+    <ul class="rt-comps">{% for c in R.comps %}<li>{{ chip(c.liga_ui) }} {{ c.nombre }}: {{ c.pj }} PJ, {{ c.g }} G, {{ c.e }} E, {{ c.p }} P</li>{% endfor %}</ul>
+    <ul class="rt-lideres">{% for t, l in R.lideres if l %}<li><span>{{ t }}</span><a href="{{ l[1].pagina }}">{{ l[1].alias }}</a><b>{{ '%.2f'|format(l[0]) if t == 'Mejor nota' else l[0] }}</b></li>{% endfor %}</ul>
+  </div>
+  {% endif %}
+</section>
 
 
 {% if avisos %}

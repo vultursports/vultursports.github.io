@@ -11,6 +11,7 @@
 {% endmacro %}
 {% block titulo %}{{ club }} | Partido vs {{ p.rival.nombre }}{% endblock %}
 {% block descripcion %}{% if p.resultado %}{{ club }} {{ p.gf }}–{{ p.gc }} {{ p.rival.nombre }}{% if p.wo %} (W.O.){% endif %}{% else %}{{ p.noche.strftime('%d/%m') }} a las {{ p.hora }} (hora argentina): {{ club }} vs {{ p.rival.nombre }}{% endif %} · {{ p.liga_ui.corto }} {{ p.competencia }}, {{ p.jornada|lower }}{% if p.resultado %} · {{ p.noche.strftime('%d/%m/%Y') }}{% endif %}.{% endblock %}
+{% block og_img %}{{ p.og_img or og_imagen }}{% endblock %}
 {% block contenido %}
 <div class="pagina">
   <p class="volver"><a href="/calendario/">Calendario</a><button type="button" class="compartir" hidden>Compartir</button></p>
@@ -25,6 +26,12 @@
         <div class="equipo nosotros">
           <img src="/estaticos/img/escudo.png" alt="" width="96" height="96">
           <span class="nombre-eq">Vultur Sports</span>{% if p.pos_nos and not p.resultado %}<small class="pos-tabla">{{ p.pos_nos }}° en la tabla</small>{% endif %}
+          {% if p.resultado and (p.goleadores or p.asistidores) %}
+          <ul class="goles-eq" aria-label="Goles y asistencias">
+            {% for n, g in p.goleadores %}<li><span class="ico-gol" aria-hidden="true"></span>{{ n }}{% if g > 1 %} <b>×{{ g }}</b>{% endif %}<span class="sr"> ({{ g }} {{ 'gol' if g == 1 else 'goles' }})</span></li>{% endfor %}
+            {% for n, a in p.asistidores %}<li class="asist"><span class="ico-asist" aria-hidden="true">A</span>{{ n }}{% if a > 1 %} <b>×{{ a }}</b>{% endif %}<span class="sr"> ({{ a }} {{ 'asistencia' if a == 1 else 'asistencias' }})</span></li>{% endfor %}
+          </ul>
+          {% endif %}
         </div>
         <div class="cuando">
           {% if p.resultado %}

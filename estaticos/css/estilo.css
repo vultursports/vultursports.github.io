@@ -772,3 +772,69 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
 .proximo.estado-prog .proximo-titulo { color: var(--hueso); }
 .proximo.estado-prog:has(.pendiente-txt:not([hidden])) { background: var(--plata-osc); }
 .proximo-titulo .pendiente-txt { color: var(--plata); }
+
+/* Partido: goles y asistencias debajo de nuestro escudo */
+.goles-eq { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 3px; justify-items: center; font-size: .82rem; color: var(--hueso); }
+.goles-eq li { display: flex; align-items: center; gap: 5px; line-height: 1.2; }
+.goles-eq li.asist { color: var(--plata); }
+.goles-eq b { font-weight: 700; color: var(--dorado); }
+.ico-gol { width: 11px; height: 11px; border-radius: 50%; flex: none; background: var(--hueso); box-shadow: inset 0 0 0 2px var(--carbon), 0 0 0 1px var(--hueso); }
+.ico-asist { font: 800 .7rem/1 var(--display); flex: none; width: 13px; height: 13px; display: grid; place-items: center; border: 1px solid var(--plata); color: var(--plata); }
+@media (max-width: 520px) { .goles-eq { font-size: .74rem; } }
+
+/* Jugador: gráfico de notas y mejores partidos */
+.notas { margin-bottom: 28px; }
+.grafico-notas { margin: 8px 0 0; background: var(--asfalto); padding: 10px 8px 8px; max-width: 600px; }
+.gn-guia, .gn-prom, .gn-linea { vector-effect: non-scaling-stroke; }
+.grafico-notas svg { display: block; width: 100%; height: auto; overflow: visible; }
+.gn-guia { stroke: var(--linea); stroke-width: 1; }
+.gn-eje { fill: var(--plata-osc); font: 600 14px var(--texto); }
+.gn-prom { stroke: var(--plata); stroke-width: 1.5; stroke-dasharray: 5 5; opacity: .8; }
+.gn-linea { fill: none; stroke: var(--hueso); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.gn-hit { fill: transparent; }
+.gn-dot { fill: var(--hueso); stroke: var(--asfalto); stroke-width: 2; }
+.gn-pt:hover .gn-dot, .gn-pt:focus .gn-dot, .gn-pt.activo .gn-dot { r: 8; fill: var(--rojo); }
+.gn-pt:focus { outline: none; }
+.gn-info { margin: 6px 4px 0; font-size: .85rem; color: var(--plata); min-height: 1.3em; }
+.mejores { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+@media (min-width: 760px) { .mejores { grid-template-columns: repeat(3, 1fr); } }
+.mejores a { display: flex; align-items: center; gap: 12px; padding: 10px 12px; background: var(--asfalto); text-decoration: none; border-left: 3px solid var(--dorado); }
+.mejores a:hover { background: var(--asfalto-2); }
+.mj-nota { font: 900 1.8rem/1 var(--display); color: var(--dorado); }
+.mejores span { display: grid; font-weight: 600; }
+.mejores small { font-weight: 400; color: var(--plata); font-size: .8rem; }
+.volver-acc { display: flex; gap: 8px; align-items: center; }
+.btn-chico {
+  font: 700 .95rem/1 var(--display); text-transform: uppercase; letter-spacing: .03em; text-decoration: none;
+  padding: 8px 12px 6px; background: var(--asfalto-2); color: var(--hueso); border-left: 3px solid var(--plata);
+}
+
+/* Comparar jugadores */
+.comparar-controles { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: end; margin: 16px 0 10px; }
+.comparar-controles label { display: grid; gap: 4px; font-size: .8rem; color: var(--plata); min-width: 0; }
+.comparar-controles select { width: 100%; padding: 10px; font: 600 1rem var(--texto); background: var(--asfalto); color: var(--hueso); border: 1px solid var(--linea); }
+.cmp-vs { font: 900 1.4rem/1 var(--display); color: var(--plata); padding-bottom: 10px; }
+.cmp-ligas { margin: 0 0 16px; }
+.cmp-cab { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+.cmp-jug { display: grid; justify-items: center; gap: 6px; padding: 12px 8px; background: var(--asfalto); text-decoration: none; text-align: center; }
+.cmp-jug.cmp-a { border-top: 3px solid var(--rojo); } .cmp-jug.cmp-b { border-top: 3px solid var(--plata); }
+.cmp-jug b { font: 800 1.2rem/1.1 var(--display); overflow-wrap: anywhere; }
+.cmp-jug small { color: var(--plata); }
+.cmp-tabla thead { display: none; }
+.cmp-tabla th[scope="row"] { font: 600 .85rem/1.2 var(--texto); color: var(--plata); width: 34%; }
+.cmp-v { position: relative; width: 33%; font: 800 1.15rem/1 var(--display); padding-bottom: 12px !important; }
+.cmp-v.gana { color: #fff; }
+.cmp-barra { position: absolute; bottom: 4px; height: 4px; width: calc(var(--p) * .9); border-radius: 2px; }
+.cmp-barra.a { right: 5%; background: var(--rojo); }
+.cmp-barra.b { left: 5%; background: var(--plata); }
+.nota-cmp { color: var(--plata); font-size: .85rem; }
+
+/* Inicio sin partidos: resumen de la última temporada */
+.resumen-temp { margin-top: 18px; text-align: left; }
+.resumen-temp h2 { font-size: 1.4rem; text-transform: uppercase; margin-bottom: 10px; }
+.rt-comps { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 4px; font-size: .9rem; color: var(--plata); }
+.rt-lideres { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.rt-lideres li { display: grid; gap: 2px; padding: 8px 10px; background: var(--asfalto-2); border-left: 3px solid var(--dorado); }
+.rt-lideres span { font-size: .75rem; color: var(--plata); text-transform: uppercase; letter-spacing: .04em; }
+.rt-lideres a { font-weight: 700; text-decoration: none; overflow-wrap: anywhere; }
+.rt-lideres b { font: 900 1.4rem/1 var(--display); color: var(--dorado); }

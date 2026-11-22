@@ -316,3 +316,26 @@ VS.alCargar(() => {
   botones.forEach((b) => b.addEventListener("click", () => { poner(b.dataset.vista); VS.guardar("cal-vista", b.dataset.vista); }));
   if (VS.recordar("cal-vista") === "mes" && matchMedia("(min-width: 760px)").matches) poner("mes");
 });
+
+// Gráfico de notas del jugador: al pasar el mouse (o tocar una vez) muestra el partido; segundo toque lo abre
+VS.alCargar(() => {
+  const fig = document.querySelector(".grafico-notas");
+  if (!fig) return;
+  const info = fig.querySelector(".gn-info"), base = info.textContent;
+  let activo = null;
+  const mostrar = (a, toque) => {
+    fig.querySelectorAll(".gn-pt.activo").forEach((x) => x.classList.remove("activo"));
+    activo = a;
+    if (!a) { info.textContent = base; return; }
+    a.classList.add("activo");
+    info.textContent = a.dataset.txt + (toque ? ". Toca de nuevo para abrir el partido." : ".");
+  };
+  fig.querySelectorAll(".gn-pt").forEach((a) => {
+    a.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse") mostrar(a, false); });
+    a.addEventListener("focus", () => mostrar(a, false));
+    a.addEventListener("click", (e) => {
+      if (e.pointerType && e.pointerType !== "mouse" && activo !== a) { e.preventDefault(); mostrar(a, true); }
+    });
+  });
+  fig.querySelector("svg").addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") mostrar(null); });
+});
