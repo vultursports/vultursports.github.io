@@ -106,7 +106,7 @@ def armar(partidos: list, ajustes: dict, cache_escudos: Path | None = None) -> d
         k = clave(p["rival"]["nombre"])
         k = unir.get(k, k)
         r = rivales.setdefault(k, {"id": k, "nombres": Counter(), "escudos": [], "partidos": [],
-                                   "ligas": set(), "pagina": f"rival-{k}.html"})
+                                   "ligas": set(), "pagina": f"/rival/{k}/"})
         r["nombres"][p["rival"]["nombre"].strip()] += 1
         if p["rival"].get("escudo"):
             r["escudos"].append(p["rival"]["escudo"])

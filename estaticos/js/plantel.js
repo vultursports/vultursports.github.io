@@ -1,5 +1,5 @@
 // Plantel: estadísticas filtradas por liga y temporada, calculadas en el navegador.
-(() => {
+VS.alCargar(() => {
   const nodo = document.getElementById("datos-plantel");
   if (!nodo) return;
   const D = JSON.parse(nodo.textContent);
@@ -255,4 +255,4 @@
     dibujar();
   }));
   dibujar();
-})();
+});

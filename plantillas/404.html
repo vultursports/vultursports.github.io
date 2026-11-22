@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block titulo %}Página no encontrada · {{ club }}{% endblock %}
+{% block contenido %}
+<script>
+// Direcciones viejas (calendario.html, jugador-x.html, ...) -> direcciones nuevas (/calendario/, /jugador/x/)
+(() => {
+  const r = location.pathname, h = location.hash;
+  let m, nuevo = null;
+  if (r === "/index.html") nuevo = "/";
+  else if (r === "/jugadores.html") nuevo = "/plantel/";
+  else if ((m = r.match(/^\/(calendario|tablas|plantel|vitrina|estado)\.html$/))) nuevo = `/${m[1]}/`;
+  else if ((m = r.match(/^\/(jugador|partido|rival)-(.+)\.html$/))) nuevo = `/${m[1]}/${m[2]}/`;
+  if (nuevo) location.replace(nuevo + location.search + h);
+})();
+</script>
+<section class="bloque">
+  <h1>No encontramos esta página</h1>
+  <p>Puede que la dirección esté mal escrita o que la página ya no exista.</p>
+  <p><a href="/">Volver al inicio</a> · <a href="/calendario/">Ver el calendario</a></p>
+</section>
+{% endblock %}

@@ -1,7 +1,13 @@
+// Base común: cada parte del sitio se registra con VS.alCargar(fn). La función corre al abrir la página
+// y otra vez cada vez que la navegación fluida cambia de sección sin recargar.
+const VS = (window.VS = window.VS || { inits: [], timers: [] });
+VS.alCargar = (fn) => { VS.inits.push(fn); fn(); };
+VS.cadaTanto = (fn, ms) => VS.timers.push(setInterval(fn, ms));
+
 // Próximo partido: cada tarjeta muestra la cuenta regresiva; cuando un partido empieza, su tarjeta dice
 // "Se está jugando" durante 15 minutos y después la página pasa sola al siguiente partido.
 // En las listas, un partido que ya empezó y no tiene resultado muestra "?" con "Ver detalles".
-(() => {
+VS.alCargar(() => {
   const EN_JUEGO = 15 * 60e3;
   const tarjetas = [...document.querySelectorAll(".tarjeta-proximo")];
   const vacia = document.querySelector(".proximo.vacio");
@@ -27,12 +33,12 @@
     });
   };
   tick();
-  setInterval(tick, 30e3);
-})();
+  VS.cadaTanto(tick, 30e3);
+});
 
 // En vivo en Twitch: se consulta si algún canal del club está transmitiendo y, solo en ese caso,
 // se muestra el reproductor oficial de Twitch. (Prueba: agregar ?vivo=nombre_de_canal a la URL.)
-(() => {
+VS.alCargar(() => {
   const caja = document.querySelector(".en-vivo");
   if (!caja) return;
   const prueba = new URLSearchParams(location.search).get("vivo");
@@ -61,11 +67,11 @@
     if (mostrando) { caja.hidden = true; caja.querySelector(".envivo-video").innerHTML = ""; mostrando = null; }
   };
   revisar();
-  setInterval(revisar, 120e3);
-})();
+  VS.cadaTanto(revisar, 120e3);
+});
 
 // Calendario: pestañas Próximos/Jugados y filtro por liga
-(() => {
+VS.alCargar(() => {
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   const elegir = (tab, recordar) => {
     tabs.forEach((t) => {
@@ -110,4 +116,79 @@
     });
   };
   checks.forEach((c) => c.addEventListener("change", aplicar));
+});
+
+// Navegación fluida: los enlaces internos traen la página nueva en segundo plano y solo cambian el
+// contenido (sin recargar todo). Al pasar el mouse o tocar un enlace ya se empieza a traer.
+// Si algo falla, se abre la página de la forma normal.
+(() => {
+  if (!window.fetch || !window.DOMParser || !history.pushState) return;
+  const cache = new Map();
+  setInterval(() => cache.clear(), 10 * 60e3); // no mostrar datos viejos si la pestaña queda abierta
+  const sinHash = (u) => u.split("#")[0];
+  const traer = (url) => {
+    url = sinHash(url);
+    if (!cache.has(url)) {
+      cache.set(url, fetch(url).then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .catch((e) => { cache.delete(url); throw e; }));
+    }
+    return cache.get(url);
+  };
+  const interno = (a) => a && a.href && a.origin === location.origin && !a.target && !a.hasAttribute("download")
+    && !/\.(ics|png|webp|jpe?g|svg|json|xml|txt)$/i.test(a.pathname);
+  const cargados = () => new Set([...document.scripts].filter((s) => s.src).map((s) => new URL(s.src).pathname));
+
+  async function ir(url, nueva, y) {
+    let doc;
+    try { doc = new DOMParser().parseFromString(await traer(url), "text/html"); } catch (e) { location.href = url; return; }
+    const contenido = doc.getElementById("contenido");
+    if (!contenido) { location.href = url; return; }
+    const cambiar = () => {
+      document.title = doc.title;
+      document.getElementById("contenido").replaceWith(document.adoptNode(contenido));
+      const nav = document.querySelector(".barra nav"), navNueva = doc.querySelector(".barra nav");
+      if (nav && navNueva) nav.replaceWith(document.adoptNode(navNueva));
+      if (nueva) history.pushState({ y: 0 }, "", url);
+      const hash = new URL(url).hash, ancla = hash && document.getElementById(decodeURIComponent(hash.slice(1)));
+      if (nueva && ancla) ancla.scrollIntoView(); else window.scrollTo(0, y || 0);
+      const main = document.getElementById("contenido");
+      main.setAttribute("tabindex", "-1");
+      main.focus({ preventScroll: true });
+      VS.timers.forEach(clearInterval);
+      VS.timers = [];
+      VS.inits.forEach((fn) => fn());
+      // Scripts propios de la sección nueva (p. ej. el del Plantel) que todavía no se cargaron
+      const ya = cargados();
+      doc.querySelectorAll("script[src]").forEach((s) => {
+        const src = new URL(s.getAttribute("src"), location.href);
+        if (src.origin !== location.origin || ya.has(src.pathname)) return;
+        const n = document.createElement("script");
+        n.src = src.href;
+        document.body.appendChild(n);
+      });
+    };
+    if (document.startViewTransition && !matchMedia("(prefers-reduced-motion: reduce)").matches) document.startViewTransition(cambiar);
+    else cambiar();
+  }
+
+  history.scrollRestoration = "manual";
+  history.replaceState({ y: scrollY }, "");
+  addEventListener("scroll", () => {
+    clearTimeout(VS.guardarScroll);
+    VS.guardarScroll = setTimeout(() => history.replaceState({ ...(history.state || {}), y: scrollY }, ""), 150);
+  }, { passive: true });
+
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || !interno(a)) return;
+    if (a.hash && sinHash(a.href) === sinHash(location.href)) return; // ancla dentro de la misma página
+    e.preventDefault();
+    history.replaceState({ ...(history.state || {}), y: scrollY }, "");
+    ir(a.href, true);
+  });
+  addEventListener("popstate", (e) => ir(location.href, false, e.state && e.state.y));
+  const anticipar = (e) => { const a = e.target.closest && e.target.closest("a"); if (interno(a)) traer(a.href).catch(() => {}); };
+  document.addEventListener("pointerover", anticipar, { passive: true });
+  document.addEventListener("touchstart", anticipar, { passive: true });
+  document.addEventListener("focusin", anticipar);
 })();

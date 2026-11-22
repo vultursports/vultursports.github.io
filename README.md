@@ -64,7 +64,7 @@ cd site && ../.venv/Scripts/python.exe -m http.server 8077   # abrir http://127.
 
 - Pruebas: `.venv/Scripts/python.exe -m unittest discover -s tests -v`
 - Prueba visual con sancionados inventados (no toca la web real): `python demo_sanciones.py` → `site-demo/`
-- Probar el recuadro de Twitch: abrir `index.html?vivo=un_canal_que_este_en_vivo`
+- Probar el recuadro de Twitch: abrir `/?vivo=un_canal_que_este_en_vivo`
 
 ## Ajustes a mano (archivos YAML)
 

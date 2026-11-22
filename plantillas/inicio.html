@@ -11,7 +11,7 @@
     <p class="proximo-comp">{{ chip(proximo.liga_ui) }} {{ proximo.competencia }}, {{ proximo.jornada|lower }}</p>
     <div class="duelo{% if not proximo.local %} visitante{% endif %}">
       <div class="equipo nosotros">
-        <img src="estaticos/img/escudo.png" alt="" width="96" height="96">
+        <img src="/estaticos/img/escudo.png" alt="" width="96" height="96">
         <span class="nombre-eq" style="--n: 7">Vultur Sports</span>{% if proximo.pos_nos and not proximo.resultado %}<small class="pos-tabla">{{ proximo.pos_nos }}° en la tabla</small>{% endif %}
       </div>
       <div class="cuando">
@@ -49,7 +49,7 @@
 
 <div class="columnas">
   <section aria-labelledby="t-semana">
-    <div class="enc"><h2 id="t-semana">Esta semana</h2><a href="calendario.html">Calendario completo</a></div>
+    <div class="enc"><h2 id="t-semana">Esta semana</h2><a href="/calendario/">Calendario completo</a></div>
     {% for g in semana %}
       <h3 class="noche">{{ g.txt|capitalize }}</h3>
       <ul class="partidos">{% for p in g.partidos %}{{ fila_partido(p) }}{% endfor %}</ul>
@@ -62,7 +62,7 @@
   </section>
 
   <section aria-labelledby="t-comp">
-    <div class="enc"><h2 id="t-comp">Cómo vamos</h2><a href="tablas.html">Todas las tablas</a></div>
+    <div class="enc"><h2 id="t-comp">Cómo vamos</h2><a href="/tablas/">Todas las tablas</a></div>
     {% for t in tablas %}
     <article class="comp liga-{{ t.liga }}">
       <header>
@@ -71,7 +71,7 @@
       </header>
       {% if t.forma %}<p class="forma-linea">Últimos partidos {{ forma(t.forma) }}</p>{% endif %}
       {{ tabla_pos(t, t.mini) }}
-      <p class="fuente"><a class="ver-tabla" href="tablas.html#comp-{{ t.id }}">Ver tabla completa</a> · Fuente: <a href="{{ t.url_origen }}" target="_blank" rel="noopener">{{ t.liga_ui.nombre }}</a></p>
+      <p class="fuente"><a class="ver-tabla" href="/tablas/#comp-{{ t.id }}">Ver tabla completa</a> · Fuente: <a href="{{ t.url_origen }}" target="_blank" rel="noopener">{{ t.liga_ui.nombre }}</a></p>
     </article>
     {% endfor %}
   </section>

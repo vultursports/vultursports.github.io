@@ -268,7 +268,7 @@ def preparar_partido(p: dict, ligas: dict) -> dict:
     for s in p.get("stats", []):
         if s.get("rating") is None:
             s["rating"] = -1  # para ordenar; se muestra vacío
-    p["pagina"] = f"partido-{p['id']}.html"
+    p["pagina"] = f"/partido/{p['id']}/"
     p["temporada"] = p.get("temporada") or {"clave": p.get("competencia_id", p["liga"]), "nombre": p["competencia"]}
     p["edicion"] = edicion_de(noche)
     return p
@@ -333,7 +333,7 @@ def main():
     esc = esc_mod.Escudos(DATOS / "escudos")
     def escudo_local(url):
         n = esc.local(url)
-        return (f"escudos/{n}", str(DATOS / "escudos" / n)) if n else (url, None)
+        return (f"/escudos/{n}", str(DATOS / "escudos" / n)) if n else (url, None)
     for p in partidos:
         p["rival"]["escudo_url"] = p["rival"].get("escudo")
         p["rival"]["escudo"], p["rival"]["escudo_archivo"] = escudo_local(p["rival"]["escudo_url"])
@@ -647,30 +647,31 @@ def main():
     shutil.copytree(RAIZ / "estaticos", SITE / "estaticos")
     if (DATOS / "escudos").exists():
         shutil.copytree(DATOS / "escudos", SITE / "escudos", ignore=shutil.ignore_patterns("*.json"))
-    for nombre, pagina in [("index.html", "inicio.html"), ("calendario.html", "calendario.html"),
-                           ("tablas.html", "tablas.html"), ("plantel.html", "plantel.html"),
-                           ("estado.html", "estado.html"), ("vitrina.html", "vitrina.html")]:
-        (SITE / nombre).write_text(env.get_template(pagina).render(pagina=nombre, **ctx), encoding="utf-8")
+    def escribir(ruta, html):  # direcciones limpias: /plantel/ -> plantel/index.html
+        destino = SITE / ruta.strip("/") / "index.html"
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        destino.write_text(html, encoding="utf-8")
+    for ruta, pagina in [("/", "inicio.html"), ("/calendario/", "calendario.html"),
+                         ("/tablas/", "tablas.html"), ("/plantel/", "plantel.html"),
+                         ("/estado/", "estado.html"), ("/vitrina/", "vitrina.html")]:
+        escribir(ruta, env.get_template(pagina).render(pagina=ruta, **ctx))
     tpl = env.get_template("partido.html")
     for p in partidos:
-        (SITE / p["pagina"]).write_text(tpl.render(pagina=p["pagina"], p=p, **ctx), encoding="utf-8")
+        escribir(p["pagina"], tpl.render(pagina=p["pagina"], p=p, **ctx))
     tpl = env.get_template("rival.html")
     for r in rivales.values():
-        (SITE / r["pagina"]).write_text(tpl.render(pagina=r["pagina"], r=r, **ctx), encoding="utf-8")
+        escribir(r["pagina"], tpl.render(pagina=r["pagina"], r=r, **ctx))
     tpl = env.get_template("jugador.html")
     for j in js:
-        (SITE / j["pagina"]).write_text(tpl.render(pagina=j["pagina"], j=j, **ctx), encoding="utf-8")
+        escribir(j["pagina"], tpl.render(pagina=j["pagina"], j=j, **ctx))
+    # Página de error; además lleva las direcciones viejas (calendario.html, jugador-x.html...) a las nuevas
+    (SITE / "404.html").write_text(env.get_template("404.html").render(pagina="/404", **ctx), encoding="utf-8")
     (SITE / "calendario.ics").write_text(generar_ics(partidos, ctx["club"]), encoding="utf-8", newline="")
     for p in noche_prox:
         p["rival"]["escudo_grande"] = p["rival"].get("escudo_archivo") or p["rival"].get("escudo_url")
     og.generar(noche_prox, bool(noche_prox) and noche_prox[0]["noche"] == hoy_noche,
                {k: str(RAIZ / "estaticos" / "img" / "ligas" / f"{k}.png") for k in ligas}, SITE / "og.png")
     (SITE / ".nojekyll").write_text("")
-    # Direcciones viejas que redirigen a la nueva
-    for viejo, nuevo in [("jugadores.html", "plantel.html")]:
-        (SITE / viejo).write_text(
-            f'<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url={nuevo}">'
-            f'<link rel="canonical" href="{nuevo}"><a href="{nuevo}">Ir a {nuevo}</a>', encoding="utf-8")
     print(f"site/ generado: {len(partidos)} partidos, {len(tablas)} tablas, {len(con_pj)} jugadores con partidos")
 
 

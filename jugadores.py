@@ -114,7 +114,7 @@ def armar(partidos: list, plantel_vpug: list, ajustes: dict) -> dict:
             "total": _cerrar(j["total"]),
             "por_liga": {l: _cerrar(v) for l, v in j["por_liga"].items()},
             "partidos": sorted(j["partidos"], key=lambda x: x["p"]["fecha_utc"], reverse=True),
-            "pagina": f"jugador-{k}.html",
+            "pagina": f"/jugador/{k}/",
         })
     return {"jugadores": salida}
 

@@ -117,9 +117,10 @@ class GenerarWeb(unittest.TestCase):
         try:
             build.SITE = destino
             build.main()
-            for pagina in ("index.html", "calendario.html", "tablas.html", "plantel.html", "vitrina.html", "estado.html", "og.png"):
+            for pagina in ("index.html", "calendario/index.html", "tablas/index.html", "plantel/index.html", "vitrina/index.html",
+                           "estado/index.html", "404.html", "og.png"):
                 self.assertTrue((destino / pagina).exists(), pagina)
-            datos = (destino / "plantel.html").read_text(encoding="utf-8")
+            datos = (destino / "plantel" / "index.html").read_text(encoding="utf-8")
             self.assertIn('id="datos-plantel"', datos)
         finally:
             build.SITE = original

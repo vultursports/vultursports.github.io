@@ -22,8 +22,8 @@
   <p class="bajada">Espacio reservado para la primera copa.</p>
 
   <div class="vitrina-vacia">
-    <img class="telarana tl-izq" src="estaticos/img/telarana.svg" alt="" aria-hidden="true">
-    <img class="telarana tl-der" src="estaticos/img/telarana.svg" alt="" aria-hidden="true">
+    <img class="telarana tl-izq" src="/estaticos/img/telarana.svg" alt="" aria-hidden="true">
+    <img class="telarana tl-der" src="/estaticos/img/telarana.svg" alt="" aria-hidden="true">
     <div class="arana" aria-hidden="true">
       <i class="hilo"></i>
       <svg viewBox="0 0 30 24"><g stroke="#6a615a" stroke-width="1.6" stroke-linecap="round"><path d="M11 9L3 4M11 12L2 12M11 15L3 20M19 9L27 4M19 12L28 12M19 15L27 20"/></g><ellipse cx="15" cy="13" rx="5" ry="6" fill="#4b4440"/></svg>
@@ -54,7 +54,7 @@
         {{ chip(e.liga) }}
         <span><b>Títulos: 0</b>{% if e.dato %} · {{ e.dato }}{% endif %}</span>
       </div>
-      {% if loop.first %}<img class="telarana tl-estante" src="estaticos/img/telarana.svg" alt="" aria-hidden="true">{% endif %}
+      {% if loop.first %}<img class="telarana tl-estante" src="/estaticos/img/telarana.svg" alt="" aria-hidden="true">{% endif %}
     </section>
     {% endfor %}
   </div>

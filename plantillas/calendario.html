@@ -14,7 +14,7 @@
     <fieldset class="filtros">
       <legend class="sr">Filtrar por liga</legend>
       {% for l in ligas_en_uso %}
-      <label class="filtro liga-{{ l.clave }}"><input type="checkbox" value="{{ l.clave }}" checked><img src="estaticos/img/ligas/{{ l.clave }}.png" alt="{{ l.nombre }}" height="18"></label>
+      <label class="filtro liga-{{ l.clave }}"><input type="checkbox" value="{{ l.clave }}" checked><img src="/estaticos/img/ligas/{{ l.clave }}.png" alt="{{ l.nombre }}" height="18"></label>
       {% endfor %}
     </fieldset>
   </div>

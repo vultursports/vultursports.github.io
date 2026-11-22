@@ -12,7 +12,7 @@
 {% block titulo %}{{ 'Vultur Sports vs ' ~ p.rival.nombre if p.local else p.rival.nombre ~ ' vs Vultur Sports' }} | {{ club }}{% endblock %}
 {% block contenido %}
 <div class="pagina">
-  <p class="volver"><a href="calendario.html">Calendario</a></p>
+  <p class="volver"><a href="/calendario/">Calendario</a></p>
 
   <section class="proximo liga-{{ p.liga }}" aria-labelledby="t-partido">
     <div class="proximo-marco">
@@ -22,7 +22,7 @@
       <p class="proximo-comp">{{ chip(p.liga_ui) }} {{ p.competencia }}, {{ p.jornada|lower }}</p>
       <div class="duelo{% if not p.local %} visitante{% endif %}">
         <div class="equipo nosotros">
-          <img src="estaticos/img/escudo.png" alt="" width="96" height="96">
+          <img src="/estaticos/img/escudo.png" alt="" width="96" height="96">
           <span class="nombre-eq" style="--n: 7">Vultur Sports</span>{% if p.pos_nos and not p.resultado %}<small class="pos-tabla">{{ p.pos_nos }}° en la tabla</small>{% endif %}
         </div>
         <div class="cuando">
