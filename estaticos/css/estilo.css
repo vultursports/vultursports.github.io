@@ -254,7 +254,8 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
 .tabla tr.z-ascenso .n { box-shadow: inset 3px 0 0 #47c58f; }
 .tabla tr.z-reducido .n { box-shadow: inset 3px 0 0 var(--plata); }
 .tabla tr.z-descenso .n { box-shadow: inset 3px 0 0 var(--rojo); }
-@media (max-width: 520px) { .tabla.completa .opc { display: none; } }
+/* Celular: como en VPN, solo PJ, DG y Pts; así el nombre del equipo entra en una línea */
+@media (max-width: 520px) { .tabla.completa .opc { display: none; } .tabla.completa .eqi span { max-width: 13rem; } }
 .leyenda { font-size: .8rem; color: var(--plata); display: flex; gap: 6px 12px; flex-wrap: wrap; align-items: center; margin: 8px 0 0; }
 .z { display: inline-block; width: 10px; height: 10px; margin-right: -6px; }
 .z.z-lider { background: #3ecf74; } .z.z-playoff, .z.z-clasifica { background: #2f86d6; } .z.z-ascenso { background: #47c58f; } .z.z-reducido { background: var(--plata); } .z.z-descenso { background: var(--rojo); }

@@ -45,7 +45,7 @@
     <th scope="col" class="n"><abbr title="Posición">#</abbr></th>
     <th scope="col" class="eq">Equipo</th>
     <th scope="col"><abbr title="Partidos jugados">PJ</abbr></th>
-    {% if completa %}<th scope="col"><abbr title="Ganados">G</abbr></th><th scope="col"><abbr title="Empatados">E</abbr></th><th scope="col"><abbr title="Perdidos">P</abbr></th><th scope="col" class="opc"><abbr title="Goles a favor">GF</abbr></th><th scope="col" class="opc"><abbr title="Goles en contra">GC</abbr></th>{% endif %}
+    {% if completa %}<th scope="col" class="opc"><abbr title="Ganados">G</abbr></th><th scope="col" class="opc"><abbr title="Empatados">E</abbr></th><th scope="col" class="opc"><abbr title="Perdidos">P</abbr></th><th scope="col" class="opc"><abbr title="Goles a favor">GF</abbr></th><th scope="col" class="opc"><abbr title="Goles en contra">GC</abbr></th>{% endif %}
     <th scope="col"><abbr title="Diferencia de gol">DG</abbr></th>
     <th scope="col" class="pts"><abbr title="Puntos">Pts</abbr></th>
   </tr></thead>
@@ -55,7 +55,7 @@
       <td class="n">{{ f.pos }}{% if f.mov %}<span class="mov {{ 'sube' if f.mov > 0 else 'baja' }}" title="{{ 'Subió' if f.mov > 0 else 'Bajó' }} {{ f.mov|abs }} {{ 'puesto' if f.mov|abs == 1 else 'puestos' }} desde la fecha anterior">{{ '▲' if f.mov > 0 else '▼' }}{{ f.mov|abs }}</span>{% endif %}</td>
       <th scope="row" class="eq"><div class="eqi">{% if f.escudo %}<img src="{{ f.escudo }}" alt="" width="22" height="22" loading="lazy">{% else %}<span class="sin-escudo chico" aria-hidden="true"></span>{% endif %}{% if f.pagina %}<a class="a-rival" href="{{ f.pagina }}">{{ f.equipo }}</a>{% else %}<span>{{ f.equipo }}</span>{% endif %}</div></th>
       <td>{{ f.pj }}</td>
-      {% if completa %}<td>{{ f.g }}</td><td>{{ f.e }}</td><td>{{ f.p }}</td><td class="opc">{{ f.gf }}</td><td class="opc">{{ f.gc }}</td>{% endif %}
+      {% if completa %}<td class="opc">{{ f.g }}</td><td class="opc">{{ f.e }}</td><td class="opc">{{ f.p }}</td><td class="opc">{{ f.gf }}</td><td class="opc">{{ f.gc }}</td>{% endif %}
       <td>{{ '%+d'|format(f.dg) if f.dg else 0 }}</td>
       <td class="pts">{{ f.pts }}</td>
     </tr>

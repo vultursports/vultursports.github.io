@@ -107,6 +107,22 @@ class Movimientos(unittest.TestCase):
                 hist.write_text(antes, encoding="utf-8")
         self.assertEqual([f["mov"] for f in tablas["t"]["filas"]], [1, -1])
 
+    def test_flechas_quedan_hasta_la_fecha_siguiente(self):
+        hist = sync.DATOS / "historial_posiciones.json"
+        antes = hist.read_text(encoding="utf-8") if hist.exists() else None
+        fila = lambda e, pos, pj: {"equipo": e, "pos": pos, "pj": pj}
+        try:
+            sync.escribir("historial_posiciones.json", {"t": {
+                "2000-01-01": {"pos": {"a": 2, "b": 1}, "pj_max": 3},   # antes de la fecha 4
+                "2000-01-02": {"pos": {"a": 1, "b": 2}, "pj_max": 4},   # se jugó la fecha 4
+            }})
+            tablas = {"t": {"id": "t", "filas": [fila("A", 1, 4), fila("B", 2, 4)]}}  # hoy no se jugó nada
+            sync.calcular_movimientos(tablas)
+        finally:
+            if antes is not None:
+                hist.write_text(antes, encoding="utf-8")
+        self.assertEqual([f["mov"] for f in tablas["t"]["filas"]], [1, -1])
+
 
 class GenerarWeb(unittest.TestCase):
     def test_la_web_se_genera_completa(self):

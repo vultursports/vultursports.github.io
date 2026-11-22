@@ -43,9 +43,11 @@ def cargar_env() -> None:
 
 
 def calcular_movimientos(tablas: dict) -> None:
-    """Agrega a cada fila "mov": cuántos puestos subió (+) o bajó (-) respecto de la fecha anterior.
-    VPN publica la posición anterior; para las otras ligas se guarda una foto de la tabla por
-    noche de juego y se compara con la última noche distinta de la actual."""
+    """Agrega a cada fila "mov": cuántos puestos subió (+) o bajó (-) con la última fecha jugada.
+    Las flechas quedan hasta que se juega la fecha siguiente (como en VPN).
+    VPN publica la posición anterior; para las otras ligas se guarda una foto de la tabla por noche
+    (posiciones y partidos jugados) y se compara con la última foto de antes de la fecha actual,
+    es decir, la última en la que el máximo de partidos jugados era menor que ahora."""
     import re
     from datetime import datetime, timedelta, timezone
     hist = leer("historial_posiciones.json", {})
@@ -58,14 +60,25 @@ def calcular_movimientos(tablas: dict) -> None:
                 f["mov"] = f["pos_ant_fuente"] - f["pos_fuente"]
             continue
         fotos = hist.setdefault(t["id"], {})
-        fotos[noche] = {clave(f["equipo"]): f["pos"] for f in filas}
-        anteriores = sorted(n for n in fotos if n < noche)
-        base = fotos[anteriores[-1]] if anteriores else {}
+        actual = {clave(f["equipo"]): f["pos"] for f in filas}
+        pj_max = max((f.get("pj") or 0 for f in filas), default=0)
+        fotos[noche] = {"pos": actual, "pj_max": pj_max}
+        anteriores = [n for n in sorted(fotos) if n < noche]
+        # Foto de antes de la fecha actual; las fotos viejas (sin pj_max) sirven si la tabla era distinta
+        base, base_n = {}, None
+        for n in reversed(anteriores):
+            foto = fotos[n]
+            pos = foto.get("pos", foto) if isinstance(foto, dict) else {}
+            if ("pj_max" in foto and foto["pj_max"] < pj_max) or ("pj_max" not in foto and pos != actual):
+                base, base_n = pos, n
+                break
         for f in filas:
             ant = base.get(clave(f["equipo"]))
             f["mov"] = (ant - f["pos"]) if ant else None
-        for n in sorted(fotos)[:-15]:  # guardar las últimas 15 noches
-            del fotos[n]
+        # Guardar las últimas 30 noches, sin borrar nunca la foto que se está usando como base
+        for n in sorted(fotos)[:-30]:
+            if n != base_n:
+                del fotos[n]
     escribir("historial_posiciones.json", hist)
 
 
