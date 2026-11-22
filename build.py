@@ -634,7 +634,7 @@ def main():
                              "ok_reciente": bool(ok) and (ahora - ok) < timedelta(hours=12),
                              "partidos": sum(1 for p in partidos if p["liga"] == k)})
 
-    ctx = dict(club=cfg["club"]["nombre"], v=og_version, destacados=destacados, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas,
+    ctx = dict(club=cfg["club"]["nombre"], redes_club=[(REDES_TXT.get(k, k), k, u) for k, u in (cfg["club"].get("redes") or {}).items()], v=og_version, destacados=destacados, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas,
                titulos=titulos, estantes=estantes,
                total_partidos=len(partidos), total_jugadores=len(js), total_rivales=len(rivales),
                total_escudos=len(list((DATOS / "escudos").glob("*.webp"))), plantel_datos=plantel_datos, temporadas_lista=temporadas_lista,

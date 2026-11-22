@@ -20,6 +20,7 @@ VS.alCargar(() => {
     if (actual) {
       const out = actual.querySelector(".cuenta");
       const ms = new Date(actual.dataset.inicio).getTime() - ahora;
+      out.classList.toggle("jugando", ms <= 0);
       if (ms <= 0) out.textContent = "Se está jugando";
       else {
         const d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;

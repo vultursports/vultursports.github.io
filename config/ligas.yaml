@@ -14,8 +14,15 @@ club:
     - {nombre: FC 27, desde: 2026-09-25}
   # Canales de Twitch de integrantes del club. Cuando alguno está en vivo, aparece en Inicio.
   transmisiones:
+    - jugador: Vultur Sports
+      canal: vultur_sports
     - jugador: Corona_ruso
       canal: coronaruso
+  # Redes oficiales del club (aparecen al pie de todas las páginas)
+  redes:
+    twitch: https://www.twitch.tv/vultur_sports
+    instagram: https://www.instagram.com/vultur.sports/
+    youtube: https://www.youtube.com/@VulturSports-e4j
 
 ligas:
   vpug:

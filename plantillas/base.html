@@ -43,6 +43,12 @@
 </main>
 
 <footer class="pie">
+  {% if redes_club %}
+  <section class="redes-club" aria-labelledby="t-redes">
+    <h2 id="t-redes">Nuestras redes</h2>
+    <ul>{% for nombre, clave, url in redes_club %}<li><a class="red red-{{ clave }}" href="{{ url }}" target="_blank" rel="noopener">{{ nombre }}</a></li>{% endfor %}</ul>
+  </section>
+  {% endif %}
   <section class="creditos" aria-labelledby="t-creditos">
     <h2 id="t-creditos">Nuestras competencias</h2>
     <p class="nota">Los partidos, tablas, escudos y estadísticas de esta página son de las ligas donde jugamos. Todo el crédito es de cada liga, con enlace a su sitio oficial y a sus redes.</p>
