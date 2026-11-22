@@ -187,8 +187,8 @@ VS.alCargar(() => {
     const etiqueta = document.getElementById("once-formacion");
     const o = once(filas);
     if (!o) { cancha.innerHTML = `<p class="vacio">Sin alineaciones para esta selección.</p>`; bancoEl.innerHTML = ""; etiqueta.textContent = ""; return; }
-    etiqueta.textContent = o.oficial ? `${o.formacion} · alineación habitual que publica el club en VPN`
-      : (o.formacion ? `${o.formacion} · ` : "") + `usada en ${o.veces} de ${o.total} partidos`;
+    etiqueta.textContent = o.oficial ? `${o.formacion}, alineación habitual que publica el club en VPN`
+      : (o.formacion ? `${o.formacion}, ` : "") + `usada en ${o.veces} de ${o.total} partidos`;
     // Repartir horizontalmente a los que comparten puesto (por ejemplo, dos DFC)
     const porPos = {};
     o.slots.forEach((s) => (porPos[s.pos] ||= []).push(s));
@@ -207,8 +207,8 @@ VS.alCargar(() => {
         const esMvp = mvp && f.id === mvp.id;
         html.push(`<a role="listitem" class="ficha-cancha${esMvp ? " es-mvp" : ""}" style="left:${x}%;top:${by}%" href="${j.pagina}"${esMvp ? ' title="Mejor nota del 11"' : ""}>
           ${avatar(j, 34)}${esMvp ? '<b class="fc-mvp">MVP</b>' : ""}<span class="fc-nombre">${esc(j.alias)}</span>
-          <span class="fc-datos">${pos}${f.nota != null ? ` · <b>${n1(f.nota)}</b>` : ""}</span>
-          <span class="fc-datos">${f.pj} PJ${f.g ? ` · ${f.g} G` : ""}${f.a ? ` · ${f.a} A` : ""}</span></a>`);
+          <span class="fc-datos">${pos}${f.nota != null ? ` <b>${n1(f.nota)}</b>` : ""}</span>
+          <span class="fc-datos">${f.pj} PJ${f.g ? `, ${f.g} G` : ""}${f.a ? `, ${f.a} A` : ""}</span></a>`);
       });
     }
     cancha.innerHTML = `<div class="lineas" aria-hidden="true"><i class="medio"></i><i class="circulo"></i><i class="area arriba"></i><i class="area abajo"></i></div>` + html.join("");
@@ -216,7 +216,7 @@ VS.alCargar(() => {
       const j = D.jugadores[f.id];
       const pos = Object.entries(f.pos).sort((a, b) => b[1] - a[1])[0];
       return `<li><a href="${j.pagina}">${avatar(j, 28)}<span class="bn-nombre">${esc(j.alias)}</span>
-        <span class="bn-datos">${pos ? pos[0] + " · " : ""}${f.pj} PJ${f.nota != null ? ` · ${n1(f.nota)}` : ""}</span></a></li>`;
+        <span class="bn-datos">${pos ? pos[0] + ", " : ""}${f.pj} PJ${f.nota != null ? `, nota ${n1(f.nota)}` : ""}</span></a></li>`;
     }).join("") || `<li class="vacio">Sin suplentes con partidos.</li>`;
   }
 

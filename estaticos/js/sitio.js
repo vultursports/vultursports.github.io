@@ -288,7 +288,7 @@ VS.alCargar(() => {
     for (let d = 1; d <= dias; d++) {
       const iso = `${a}-${pad(m + 1)}-${pad(d)}`, lista = porDia[iso] || [];
       celdas += `<div class="dia-mes${iso === hoy ? " hoy" : ""}"><span class="dm-num">${d}</span>` + lista.map((p) =>
-        `<a class="dm-p liga-${p.liga}${p.res ? " r-" + p.res : ""}" href="${p.pagina}" title="${VS.esc(p.corto)} · ${p.hora} vs ${VS.esc(p.rival)}">` +
+        `<a class="dm-p liga-${p.liga}${p.res ? " r-" + p.res : ""}" href="${p.pagina}" title="${VS.esc(p.corto)}, ${p.hora} vs ${VS.esc(p.rival)}">` +
         `<span class="dm-h">${p.res ? `${p.gf}–${p.gc}` : p.hora}</span><span class="dm-r">${VS.esc(p.rival)}</span></a>`).join("") + `</div>`;
     }
     cont.innerHTML = `<div class="mes-enc"><button type="button" data-d="-1" aria-label="Mes anterior">‹</button>` +

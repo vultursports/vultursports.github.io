@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% from "_macros.html" import forma, chip, avatar %}
-{% macro historial(r, prefijo=True) %}
-    <h3 class="sub">{% if prefijo %}Historial: {% endif %}{{ r.g }} {{ 'victoria' if r.g == 1 else 'victorias' }}, {{ r.e }} {{ 'empate' if r.e == 1 else 'empates' }}, {{ r.p }} {{ 'derrota' if r.p == 1 else 'derrotas' }}</h3>
+{% macro historial(r, prefijo=True, excluir=None) %}
+    {% set lista = r.jugados|rejectattr('id', 'equalto', excluir)|list %}
+    {% set g = lista|selectattr('resultado', 'equalto', 'g')|list|length %}{% set e = lista|selectattr('resultado', 'equalto', 'e')|list|length %}{% set d = lista|selectattr('resultado', 'equalto', 'p')|list|length %}
+    <h3 class="sub">{% if prefijo %}Historial: {% endif %}{{ g }} {{ 'victoria' if g == 1 else 'victorias' }}, {{ e }} {{ 'empate' if e == 1 else 'empates' }}, {{ d }} {{ 'derrota' if d == 1 else 'derrotas' }}</h3>
     <ul class="h2h-lista">
-      {% for x in r.jugados[:5] %}
-      <li class="r-{{ x.resultado }}"><a href="{{ x.pagina }}"><span class="marcador">{{ x.gf }}<i>–</i>{{ x.gc }}</span><span>{{ x.noche.strftime('%d/%m/%Y') }}{% if x.wo %} · W.O.{% endif %}</span><small><abbr class="sigla liga-{{ x.liga }}" title="{{ x.liga_ui.nombre }}">{{ x.liga_ui.corto }}</abbr> {{ x.competencia }}</small></a></li>
+      {% for x in lista[:5] %}
+      <li class="r-{{ x.resultado }}"><a href="{{ x.pagina }}"><span class="marcador">{{ x.gf }}<i>–</i>{{ x.gc }}</span><span>{{ x.noche.strftime('%d/%m/%Y') }}{% if x.wo %} (W.O.){% endif %}</span><small><abbr class="sigla liga-{{ x.liga }}" title="{{ x.liga_ui.nombre }}">{{ x.liga_ui.corto }}</abbr> {{ x.competencia }}</small></a></li>
       {% endfor %}
     </ul>
     {% if r.jugados|length > 5 %}<p class="fuente"><a href="{{ r.pagina }}">Ver los {{ r.jugados|length }} partidos contra {{ r.nombre }}</a></p>{% endif %}
@@ -13,10 +15,10 @@
 {% macro celdas_ea(e) %}{% if e %}<td class="ea-col">{{ e.tiros or '' }}</td><td class="ea-pases">{% if e.pases_int %}{{ e.pases }}/{{ e.pases_int }}<small>{{ (100 * e.pases / e.pases_int)|round|int }}%</small>{% endif %}</td><td>{% if e.entradas_int %}{{ e.entradas }}/{{ e.entradas_int }}{% endif %}</td>{% else %}<td class="ea-col"></td><td></td><td></td>{% endif %}{% endmacro %}
 {% macro pie_ea(p) %}
     {% if p.ea_arquero %}{% set a = p.ea_arquero %}<p class="ea-arquero"><b>{{ a.alias }}</b>: {{ a.atajadas }} {{ 'atajada' if a.atajadas == 1 else 'atajadas' }}{% if a.tipos %} ({% for n, t in a.tipos %}{{ n }} {{ t }}{{ ', ' if not loop.last }}{% endfor %}){% endif %}.</p>{% endif %}
-    <p class="fuente">Tiros, pases y entradas: datos de EA SPORTS FC. Goles, asistencias y nota: {{ p.liga_ui.nombre if p.stats else 'EA SPORTS FC' }}.</p>
+    {% if p.ea %}<p class="fuente">Tiros, pases y entradas: datos de EA SPORTS FC. Goles, asistencias y nota: {{ p.liga_ui.nombre if p.stats else 'EA SPORTS FC' }}.</p>{% endif %}
 {% endmacro %}
 {% block titulo %}{{ club }} | Partido vs {{ p.rival.nombre }}{% endblock %}
-{% block descripcion %}{% if p.resultado %}{{ club }} {{ p.gf }}–{{ p.gc }} {{ p.rival.nombre }}{% if p.wo %} (W.O.){% endif %}{% else %}{{ p.noche.strftime('%d/%m') }} a las {{ p.hora }} (hora argentina): {{ club }} vs {{ p.rival.nombre }}{% endif %} · {{ p.liga_ui.corto }} {{ p.competencia }}, {{ p.jornada|lower }}{% if p.resultado %} · {{ p.noche.strftime('%d/%m/%Y') }}{% endif %}.{% endblock %}
+{% block descripcion %}{% if p.resultado %}{{ club }} {{ p.gf }}–{{ p.gc }} {{ p.rival.nombre }}{% if p.wo %} (W.O.){% endif %}{% else %}{{ p.noche.strftime('%d/%m') }} a las {{ p.hora }} (hora argentina): {{ club }} vs {{ p.rival.nombre }}{% endif %}. {{ p.liga_ui.corto }} {{ p.competencia }}, {{ p.jornada|lower }}{% if p.resultado %}, {{ p.noche.strftime('%d/%m/%Y') }}{% endif %}.{% endblock %}
 {% block og_img %}{{ p.og_img or og_imagen }}{% endblock %}
 {% block contenido %}
 <div class="pagina">
@@ -59,10 +61,14 @@
     </div>
   </section>
 
-  {% if p.resultado and p.rival_info and p.rival_info.jugados %}
-  <section class="previa" aria-labelledby="t-hist">
-    <div class="enc"><h2 id="t-hist">Historial</h2></div>
-    {{ historial(p.rival_info, false) }}
+  {% if p.sancionados and not p.resultado %}
+  <section class="no-pueden" aria-labelledby="t-nopueden">
+    <div class="enc"><h2 id="t-nopueden">No pueden jugar</h2></div>
+    <ul>
+    {% for s in p.sancionados %}
+      <li class="aviso aviso-sancion"><b>{% if s.pagina %}<a href="{{ s.pagina }}">{{ s.jugador }}</a>{% else %}{{ s.jugador }}{% endif %}</b>{% if s.motivo %}: {{ s.motivo[0]|lower }}{{ s.motivo[1:] }}{% endif %}.{% if s.fechas and s.fechas > 1 %} Sanción de {{ s.fechas }} fechas.{% endif %}</li>
+    {% endfor %}
+    </ul>
   </section>
   {% endif %}
 
@@ -76,10 +82,10 @@
     {% if p.previa_once and p.previa_once.jugadores|length >= 7 %}{% set o = p.previa_once %}
     {% if o.oficial %}
     <h3 class="sub">Nuestra alineación habitual</h3>
-    <p class="once-formacion">{{ o.formacion }} · la que publica el club en VPN</p>
+    <p class="once-formacion">{{ o.formacion }}, la que publica el club en VPN</p>
     {% else %}
     <h3 class="sub">Nuestro 11 más usado en {{ p.competencia }}</h3>
-    <p class="once-formacion">{% if o.formacion %}{{ o.formacion }} · {% endif %}usada en {{ o.veces }} de {{ o.total }} partidos</p>
+    <p class="once-formacion">{% if o.formacion %}{{ o.formacion }}, {% endif %}usada en {{ o.veces }} de {{ o.total }} partidos</p>
     {% endif %}
     <div class="cancha" role="list" aria-label="Once más usado en la competencia">
       <div class="lineas" aria-hidden="true"><i class="medio"></i><i class="circulo"></i><i class="area arriba"></i><i class="area abajo"></i></div>
@@ -87,23 +93,12 @@
       <{{ 'a' if x.pagina else 'span' }} role="listitem" class="ficha-cancha" style="left:{{ x.x }}%;top:{{ x.y }}%"{% if x.pagina %} href="{{ x.pagina }}"{% endif %}>
         {{ avatar(x, 34) }}
         <span class="fc-nombre">{{ x.alias }}</span>
-        <span class="fc-datos">{{ x.pos }}{% if x.nota is not none %} · <b>{{ '%.1f'|format(x.nota) }}</b>{% endif %}</span>
-        <span class="fc-datos">{{ x.pj }} PJ{% if x.goles %} · {{ x.goles }} G{% endif %}{% if x.asist %} · {{ x.asist }} A{% endif %}</span>
+        <span class="fc-datos">{{ x.pos }}{% if x.nota is not none %} <b>{{ '%.1f'|format(x.nota) }}</b>{% endif %}</span>
+        <span class="fc-datos">{{ x.pj }} PJ{% if x.goles %}, {{ x.goles }} G{% endif %}{% if x.asist %}, {{ x.asist }} A{% endif %}</span>
       </{{ 'a' if x.pagina else 'span' }}>
       {% endfor %}
     </div>
     {% endif %}
-  </section>
-  {% endif %}
-
-  {% if p.sancionados and not p.resultado %}
-  <section class="no-pueden" aria-labelledby="t-nopueden">
-    <div class="enc"><h2 id="t-nopueden">No pueden jugar</h2></div>
-    <ul>
-    {% for s in p.sancionados %}
-      <li class="aviso aviso-sancion"><b>{% if s.pagina %}<a href="{{ s.pagina }}">{{ s.jugador }}</a>{% else %}{{ s.jugador }}{% endif %}</b>{% if s.motivo %}: {{ s.motivo[0]|lower }}{{ s.motivo[1:] }}{% endif %}.{% if s.fechas and s.fechas > 1 %} Sanción de {{ s.fechas }} fechas.{% endif %}</li>
-    {% endfor %}
-    </ul>
   </section>
   {% endif %}
 
@@ -191,6 +186,13 @@
   <p class="vacio">Partido definido sin jugar (W.O.): {{ 'el rival se dio de baja o no se presentó' if p.resultado == 'g' else 'no nos presentamos' }}. La liga lo registra {{ p.gf }}-{{ p.gc }}.</p>
   {% elif p.resultado %}
   <p class="vacio">La liga todavía no publicó las estadísticas de este partido.</p>
+  {% endif %}
+
+  {% if p.resultado and p.rival_info and p.rival_info.jugados|rejectattr('id', 'equalto', p.id)|list %}
+  <section class="previa" aria-labelledby="t-hist">
+    <div class="enc"><h2 id="t-hist">Historial</h2></div>
+    {{ historial(p.rival_info, false, p.id) }}
+  </section>
   {% endif %}
 
   <p class="fuente grande">

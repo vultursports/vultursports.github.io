@@ -13,7 +13,7 @@
     <li class="copa-item">
       {{ copa('copa-oro') }}
       <b>{{ t.nombre }}</b>
-      <span>{% if t.liga_ui %}{{ chip(t.liga_ui) }} {% endif %}{{ t.organiza or '' }}{% if t.fecha %} · {{ t.fecha }}{% endif %}</span>
+      <span>{% if t.liga_ui %}{{ chip(t.liga_ui) }} {% endif %}{{ t.organiza or '' }}{% if t.fecha %}, {{ t.fecha }}{% endif %}</span>
       {% if t.nota %}<small>{{ t.nota }}</small>{% endif %}
     </li>
     {% endfor %}
@@ -52,7 +52,7 @@
       </div>
       <div class="placa">
         {{ chip(e.liga) }}
-        <span><b>Títulos: 0</b>{% if e.dato %} · {{ e.dato }}{% endif %}</span>
+        <span><b>Títulos: 0</b>{% if e.dato %}. {{ e.dato }}{% endif %}</span>
       </div>
       {% if loop.first %}<img class="telarana tl-estante" src="/estaticos/img/telarana.svg" alt="" aria-hidden="true">{% endif %}
     </section>
@@ -74,8 +74,8 @@
     </dl>
     <h3 class="rec-grupo">El club</h3>
     <div class="rec-grid club">
-      {% if R.goleada %}{% set x = R.goleada %}<a class="rec" href="{{ x.pagina }}"><span class="rec-t">Mayor goleada</span><b>{{ x.gf }}–{{ x.gc }}</b><span>vs {{ x.rival.nombre }}, {{ x.noche.strftime('%d/%m/%Y') }}</span><small>{{ x.liga_ui.corto }} · {{ x.competencia }}</small></a>{% endif %}
-      {% if R.derrota %}{% set x = R.derrota %}<a class="rec" href="{{ x.pagina }}"><span class="rec-t">Peor derrota</span><b>{{ x.gf }}–{{ x.gc }}</b><span>vs {{ x.rival.nombre }}, {{ x.noche.strftime('%d/%m/%Y') }}</span><small>{{ x.liga_ui.corto }} · {{ x.competencia }}</small></a>{% endif %}
+      {% if R.goleada %}{% set x = R.goleada %}<a class="rec" href="{{ x.pagina }}"><span class="rec-t">Mayor goleada</span><b>{{ x.gf }}–{{ x.gc }}</b><span>vs {{ x.rival.nombre }}, {{ x.noche.strftime('%d/%m/%Y') }}</span><small>{{ x.liga_ui.corto }}: {{ x.competencia }}</small></a>{% endif %}
+      {% if R.derrota %}{% set x = R.derrota %}<a class="rec" href="{{ x.pagina }}"><span class="rec-t">Peor derrota</span><b>{{ x.gf }}–{{ x.gc }}</b><span>vs {{ x.rival.nombre }}, {{ x.noche.strftime('%d/%m/%Y') }}</span><small>{{ x.liga_ui.corto }}: {{ x.competencia }}</small></a>{% endif %}
       <div class="rec"><span class="rec-t">Más victorias seguidas</span><b>{{ R.rachas.victorias }}</b><span>partidos</span></div>
       <div class="rec"><span class="rec-t">Más partidos sin perder</span><b>{{ R.rachas.invicto }}</b><span>partidos</span></div>
       {% if R.rachas.actual %}{% set n = R.rachas.actual.n %}<div class="rec"><span class="rec-t">Racha actual</span><b>{{ n }}</b><span>{% if R.rachas.actual.tipo == 'g' %}{{ 'victoria' if n == 1 else 'victorias seguidas' }}{% elif R.rachas.actual.tipo == 'e' %}{{ 'empate' if n == 1 else 'empates seguidos' }}{% else %}{{ 'derrota' if n == 1 else 'derrotas seguidas' }}{% endif %}</span></div>{% endif %}
@@ -90,7 +90,7 @@
     <h3 class="rec-grupo">En un partido</h3>
     <div class="rec-grid jug">
       {% for r in R.partido %}{% set x = r.p %}
-      <a class="rec" href="{{ x.pagina }}"><span class="rec-t">{{ r.titulo }}</span><b>{{ '%.1f'|format(r.valor) if r.unidad == 'de nota' else r.valor }}</b><span>{{ r.unidad }}{% if r.fuente == 'ea' %}<abbr class="rec-ea" title="Dato de EA SPORTS FC"> · EA</abbr>{% endif %}</span><small class="rec-j">{% if r.j %}{{ avatar(r.j, 22) }} {{ r.j.alias }}{% else %}{{ r.alias }}{% endif %} · vs {{ x.rival.nombre }}, {{ x.noche.strftime('%d/%m/%Y') }}</small></a>
+      <a class="rec" href="{{ x.pagina }}"><span class="rec-t">{{ r.titulo }}</span><b>{{ '%.1f'|format(r.valor) if r.unidad == 'de nota' else r.valor }}</b><span>{{ r.unidad }}{% if r.fuente == 'ea' %}<abbr class="rec-ea" title="Dato de EA SPORTS FC"> (EA)</abbr>{% endif %}</span><small class="rec-j">{% if r.j %}{{ avatar(r.j, 22) }} {{ r.j.alias }}{% else %}{{ r.alias }}{% endif %}, vs {{ x.rival.nombre }}, {{ x.noche.strftime('%d/%m/%Y') }}</small></a>
       {% endfor %}
     </div>
     {% endif %}

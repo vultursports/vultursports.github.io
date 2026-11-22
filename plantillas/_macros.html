@@ -15,7 +15,7 @@
   <time class="p-hora{% if fecha %} con-fecha{% endif %}" datetime="{{ p.dt.isoformat() }}">{% if fecha %}{{ p.noche.strftime('%d/%m') }}<small>{{ p.hora }}</small>{% else %}{{ p.hora }}{% endif %}</time>
   <span class="p-rival">
     {% if p.rival.escudo %}<img src="{{ p.rival.escudo }}" alt="" width="28" height="28" loading="lazy">{% else %}<span class="sin-escudo" aria-hidden="true"></span>{% endif %}
-    <span><b>{% if p.rival_pagina %}<a class="a-rival" href="{{ p.rival_pagina }}">{{ p.rival.nombre }}</a>{% else %}{{ p.rival.nombre }}{% endif %}</b><small><abbr class="sigla" title="{{ p.liga_ui.nombre }}">{{ p.liga_ui.corto }}</abbr> {{ p.condicion }}, {{ p.jornada|lower }}{% if p.wo %}, <abbr class="wo" title="Ganado sin jugar: el rival no se presentó o se dio de baja">por W.O.</abbr>{% endif %}{% if p.sancionados and not p.resultado %}<span class="marca-sancion"> · {{ p.sancionados|length }} {{ 'suspendido' if p.sancionados|length == 1 else 'suspendidos' }}</span>{% endif %}</small></span>
+    <span><b>{% if p.rival_pagina %}<a class="a-rival" href="{{ p.rival_pagina }}">{{ p.rival.nombre }}</a>{% else %}{{ p.rival.nombre }}{% endif %}</b><small><abbr class="sigla" title="{{ p.liga_ui.nombre }}">{{ p.liga_ui.corto }}</abbr> {{ p.condicion }}, {{ p.jornada|lower }}{% if p.wo %}, <abbr class="wo" title="Ganado sin jugar: el rival no se presentó o se dio de baja">por W.O.</abbr>{% endif %}{% if p.sancionados and not p.resultado %}<span class="marca-sancion">, {{ p.sancionados|length }} {{ 'suspendido' if p.sancionados|length == 1 else 'suspendidos' }}</span>{% endif %}</small></span>
   </span>
   <span class="p-res">
     {% if p.resultado %}
