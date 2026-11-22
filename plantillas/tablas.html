@@ -31,6 +31,17 @@
     <p class="fuente">Fuente: <a href="{{ t.url_origen }}" target="_blank" rel="noopener">tabla oficial de {{ t.liga_ui.nombre }}</a>. Actualizada el {{ t.actualizado_txt }}.</p>
   </section>
   {% endfor %}
+  {# Mostrar la competencia guardada (o la del enlace) antes de dibujar la página, para que no salte #}
+  <script>
+  (() => {
+    let id = location.hash.slice(1);
+    if (!id) { try { id = JSON.parse(localStorage.getItem("vs:tabla")) || ""; } catch (e) { id = ""; } }
+    const panel = id && document.getElementById(id);
+    if (!panel || panel.getAttribute("role") !== "tabpanel") return;
+    document.querySelectorAll('.comp[role="tabpanel"]').forEach((p) => (p.hidden = p !== panel));
+    document.querySelectorAll('.selector-comp [role="tab"]').forEach((b) => b.setAttribute("aria-selected", b.getAttribute("aria-controls") === id));
+  })();
+  </script>
 </div>
 {% endblock %}
 {% block js %}{% endblock %}
