@@ -255,7 +255,7 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
 .tabla .pts { font-weight: 700; }
 .tabla .n { white-space: nowrap; }
 .mov { display: inline-block; margin-left: 3px; font: 700 .68rem/1 var(--texto); vertical-align: 1px; }
-.mov.sube { color: #3ecf74; } .mov.baja { color: #ff5a5f; }
+.mov.sube { color: #3ecf74; } .mov.baja { color: #ff5a5f; } .mov.igual { color: var(--plata); }
 .tabla tr.nosotros { background: linear-gradient(90deg, rgba(216,35,42,.22), rgba(216,35,42,.05)); }
 .tabla tr.nosotros td, .tabla tr.nosotros th { color: #fff; font-weight: 700; }
 .tabla tr.nosotros .n { box-shadow: inset 4px 0 0 var(--rojo); color: #fff; }

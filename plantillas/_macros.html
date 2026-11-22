@@ -52,7 +52,7 @@
   <tbody>
   {% for f in filas %}
     <tr class="{% if f.es_vultur %}nosotros{% endif %}{% if f.zona %} z-{{ f.zona }}{% endif %}">
-      <td class="n">{{ f.pos }}{% if f.mov %}<span class="mov {{ 'sube' if f.mov > 0 else 'baja' }}" title="{{ 'Subió' if f.mov > 0 else 'Bajó' }} {{ f.mov|abs }} {{ 'puesto' if f.mov|abs == 1 else 'puestos' }} desde la fecha anterior">{{ '▲' if f.mov > 0 else '▼' }}{{ f.mov|abs }}</span>{% endif %}</td>
+      <td class="n">{{ f.pos }}{% if f.mov %}<span class="mov {{ 'sube' if f.mov > 0 else 'baja' }}" title="{{ 'Subió' if f.mov > 0 else 'Bajó' }} {{ f.mov|abs }} {{ 'puesto' if f.mov|abs == 1 else 'puestos' }} desde la fecha anterior">{{ '▲' if f.mov > 0 else '▼' }}{{ f.mov|abs }}</span>{% elif f.mov == 0 %}<span class="mov igual" title="Se mantiene en el mismo puesto">–</span>{% endif %}</td>
       <th scope="row" class="eq"><div class="eqi">{% if f.escudo %}<img src="{{ f.escudo }}" alt="" width="22" height="22" loading="lazy">{% else %}<span class="sin-escudo chico" aria-hidden="true"></span>{% endif %}{% if f.pagina %}<a class="a-rival" href="{{ f.pagina }}">{{ f.equipo }}</a>{% else %}<span>{{ f.equipo }}</span>{% endif %}</div></th>
       <td>{{ f.pj }}</td>
       {% if completa %}<td class="opc">{{ f.g }}</td><td class="opc">{{ f.e }}</td><td class="opc">{{ f.p }}</td><td class="opc">{{ f.gf }}</td><td class="opc">{{ f.gc }}</td>{% endif %}
