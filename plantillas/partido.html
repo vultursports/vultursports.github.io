@@ -24,7 +24,7 @@
       <div class="duelo{% if not p.local %} visitante{% endif %}">
         <div class="equipo nosotros">
           <img src="/estaticos/img/escudo.png" alt="" width="96" height="96">
-          <span class="nombre-eq" style="--n: 7">Vultur Sports</span>{% if p.pos_nos and not p.resultado %}<small class="pos-tabla">{{ p.pos_nos }}° en la tabla</small>{% endif %}
+          <span class="nombre-eq">Vultur Sports</span>{% if p.pos_nos and not p.resultado %}<small class="pos-tabla">{{ p.pos_nos }}° en la tabla</small>{% endif %}
         </div>
         <div class="cuando">
           {% if p.resultado %}
@@ -36,7 +36,7 @@
         </div>
         <a class="equipo equipo-link" href="{{ p.rival_pagina }}" title="Ver historial contra {{ p.rival.nombre }}">
           {% if p.rival.escudo %}<img src="{{ p.rival.escudo|replace('_thumb', '') }}" alt="" width="96" height="96">{% else %}<span class="sin-escudo grande" aria-hidden="true"></span>{% endif %}
-          <span class="nombre-eq" style="--n: {{ (p.rival.nombre.split()|map('length')|max) if p.rival.nombre.split() else 1 }}">{{ p.rival.nombre }}</span>{% if p.pos_rival and not p.resultado %}<small class="pos-tabla">{{ p.pos_rival }}° en la tabla</small>{% endif %}
+          <span class="nombre-eq">{{ p.rival.nombre }}</span>{% if p.pos_rival and not p.resultado %}<small class="pos-tabla">{{ p.pos_rival }}° en la tabla</small>{% endif %}
         </a>
       </div>
       <p class="proximo-pie">{{ p.condicion }}. Hora argentina.</p>

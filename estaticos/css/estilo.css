@@ -104,6 +104,7 @@ img[src$="ligas/vpug.png"] { height: calc(var(--h) * .92); }
 .duelo {
   display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 8px;
   margin: 18px 0 12px;
+  align-items: start; /* escudos siempre a la misma altura; un nombre largo crece hacia abajo */
 }
 .equipo { display: grid; justify-items: center; gap: 8px; min-width: 0; }
 /* Local a la izquierda, visitante a la derecha */
@@ -115,8 +116,6 @@ img[src$="ligas/vpug.png"] { height: calc(var(--h) * .92); }
 .equipo-link:hover span { text-decoration: underline; text-decoration-color: var(--rojo); }
 .equipo img { width: clamp(64px, 20vw, 120px); height: auto; aspect-ratio: 1; object-fit: contain; }
 .equipo span { font: 800 clamp(1rem, 3.6vw, 1.5rem)/1.05 var(--display); text-transform: uppercase; overflow-wrap: anywhere; }
-/* Nombres largos: la letra se achica según la palabra más larga (--n letras) para que entre entera */
-.equipo .nombre-eq { font-size: min(clamp(1rem, 3.6vw, 1.5rem), calc(24vw / (var(--n, 1) * .52)), calc(250px / (var(--n, 1) * .52))); }
 .cuando time, .cuando .final { display: grid; justify-items: center; }
 .hora { font: 900 clamp(3.2rem, 15vw, 6.5rem)/.85 var(--display); font-variant-numeric: tabular-nums; }
 .dia { margin-top: 6px; color: var(--plata); font-size: .9rem; max-width: 11rem; }
@@ -129,6 +128,12 @@ img[src$="ligas/vpug.png"] { height: calc(var(--h) * .92); }
   .duelo .f-larga { display: none; }
   .duelo .f-corta { display: inline; }
   .duelo .cuenta { font-size: .82rem; margin-top: 6px; }
+  .duelo .pos-tabla { display: none; }
+}
+/* Celulares angostos: un poco más de lugar para los nombres sin achicar la letra */
+@media (max-width: 380px) {
+  .duelo { gap: 4px; }
+  .duelo .hora { font-size: 2.25rem; }
 }
 .proximo-pie { margin: 6px 0 0; font-size: .9rem; color: var(--plata); }
 .sin-escudo { width: 28px; height: 28px; background: var(--linea); clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%); }
