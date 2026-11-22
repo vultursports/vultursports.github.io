@@ -672,13 +672,11 @@ a.dest-jug:hover .dest-nombre { color: var(--dorado); }
 }
 .compartir[hidden] { display: none; }
 
-/* Selector de competencias (Tablas) en el celular: una fila que se desliza */
+/* Selector de competencias (Tablas) en el celular: todas a la vista, en 2 columnas más bajas */
 @media (max-width: 759px) {
-  .selector-comp[role="tablist"] {
-    display: flex; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none;
-    margin-left: -16px; margin-right: -16px; padding: 0 16px;
-  }
-  .selector-comp[role="tablist"] button { flex: none; min-height: 44px; scroll-snap-align: start; max-width: 70vw; }
+  .selector-comp[role="tablist"] { gap: 4px; margin: 12px 0 10px; }
+  .selector-comp[role="tablist"] button { min-height: 40px; padding: 6px 8px; font-size: .95rem; gap: 6px; }
+  .selector-comp[role="tablist"] .logo-liga { --h: 15px; }
 }
 
 /* Botones de forma (G/E/P) más fáciles de tocar en el celular */
