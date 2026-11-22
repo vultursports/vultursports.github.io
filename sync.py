@@ -117,6 +117,14 @@ def main() -> int:
             for t in out["tablas"]:
                 t["actualizado"] = ahora_iso()
                 tablas[t["id"]] = t
+            # Torneos terminados: si la liga dejó de publicar una tabla y no nos quedan partidos por
+            # jugar en ese torneo, la tabla se quita (los partidos y estadísticas quedan en el historial).
+            publicadas = {t["id"] for t in out["tablas"]}
+            pendientes = {p.get("competencia_id") for p in partidos.values()
+                          if p["liga"] == clave and p.get("gf") is None and p.get("competencia_id")}
+            for tid in [k for k, t in tablas.items() if t.get("liga") == clave and k not in publicadas and k not in pendientes]:
+                print(f"  tabla terminada, se quita: {tablas[tid].get('competencia')}")
+                del tablas[tid]
             if "titulos" in out:
                 escribir(f"titulos_{clave}.json", out["titulos"])
             if "sanciones" in out:
