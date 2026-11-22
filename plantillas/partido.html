@@ -9,7 +9,7 @@
     </ul>
     {% if r.jugados|length > 5 %}<p class="fuente"><a href="{{ r.pagina }}">Ver los {{ r.jugados|length }} partidos contra {{ r.nombre }}</a></p>{% endif %}
 {% endmacro %}
-{% block titulo %}{{ 'Vultur Sports vs ' ~ p.rival.nombre if p.local else p.rival.nombre ~ ' vs Vultur Sports' }} | {{ club }}{% endblock %}
+{% block titulo %}{{ club }} | Partido vs {{ p.rival.nombre }}{% endblock %}
 {% block contenido %}
 <div class="pagina">
   <p class="volver"><a href="/calendario/">Calendario</a></p>
