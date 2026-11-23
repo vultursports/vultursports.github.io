@@ -18,6 +18,15 @@
   "pais": "Argentina"
  },
  {
+  "idExterno": "MARCHMELLOYT ",
+  "nombreCompleto": "MANUEL CAÑETE",
+  "dorsal": 1,
+  "posicion": "MC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
   "idExterno": "SuazoM10",
   "nombreCompleto": "Elias Suazo",
   "dorsal": 2,
