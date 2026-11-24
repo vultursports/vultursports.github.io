@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-23T16:25:37+00:00"
+  "actualizado": "2026-11-24T02:53:20+00:00"
  },
  {
   "id": "vpn-6449",
@@ -361,9 +361,9 @@
     "pts": 27,
     "zona": "ascenso",
     "pos_fuente": 1,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 1,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 2,
@@ -379,9 +379,9 @@
     "pts": 24,
     "zona": "playoff",
     "pos_fuente": 2,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 3,
     "es_vultur": true,
-    "mov": null
+    "mov": 1
    },
    {
     "pos": 3,
@@ -397,9 +397,9 @@
     "pts": 21,
     "zona": "playoff",
     "pos_fuente": 3,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 2,
     "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
     "pos": 4,
@@ -415,9 +415,9 @@
     "pts": 19,
     "zona": "playoff",
     "pos_fuente": 4,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 5,
     "es_vultur": false,
-    "mov": null
+    "mov": 1
    },
    {
     "pos": 5,
@@ -433,9 +433,9 @@
     "pts": 19,
     "zona": "playoff",
     "pos_fuente": 5,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 4,
     "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
     "pos": 6,
@@ -451,9 +451,9 @@
     "pts": 15,
     "zona": "playoff",
     "pos_fuente": 6,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 6,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 7,
@@ -469,9 +469,9 @@
     "pts": 14,
     "zona": "playoff",
     "pos_fuente": 7,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 7,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 8,
@@ -487,9 +487,9 @@
     "pts": 12,
     "zona": "playoff",
     "pos_fuente": 8,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 12,
     "es_vultur": false,
-    "mov": null
+    "mov": 4
    },
    {
     "pos": 9,
@@ -505,9 +505,9 @@
     "pts": 11,
     "zona": "playoff",
     "pos_fuente": 9,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 11,
     "es_vultur": false,
-    "mov": null
+    "mov": 2
    },
    {
     "pos": 10,
@@ -523,9 +523,9 @@
     "pts": 11,
     "zona": null,
     "pos_fuente": 10,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 8,
     "es_vultur": false,
-    "mov": null
+    "mov": -2
    },
    {
     "pos": 11,
@@ -541,9 +541,9 @@
     "pts": 10,
     "zona": null,
     "pos_fuente": 11,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 9,
     "es_vultur": false,
-    "mov": null
+    "mov": -2
    },
    {
     "pos": 12,
@@ -559,9 +559,9 @@
     "pts": 10,
     "zona": null,
     "pos_fuente": 12,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 10,
     "es_vultur": false,
-    "mov": null
+    "mov": -2
    },
    {
     "pos": 13,
@@ -577,9 +577,9 @@
     "pts": 9,
     "zona": null,
     "pos_fuente": 13,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 13,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    },
    {
     "pos": 14,
@@ -595,9 +595,9 @@
     "pts": 9,
     "zona": null,
     "pos_fuente": 14,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 18,
     "es_vultur": false,
-    "mov": null
+    "mov": 4
    },
    {
     "pos": 15,
@@ -613,9 +613,9 @@
     "pts": 9,
     "zona": null,
     "pos_fuente": 15,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 14,
     "es_vultur": false,
-    "mov": null
+    "mov": -1
    },
    {
     "pos": 16,
@@ -631,9 +631,9 @@
     "pts": 8,
     "zona": null,
     "pos_fuente": 16,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 19,
     "es_vultur": false,
-    "mov": null
+    "mov": 3
    },
    {
     "pos": 17,
@@ -649,9 +649,9 @@
     "pts": 8,
     "zona": null,
     "pos_fuente": 17,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 15,
     "es_vultur": false,
-    "mov": null
+    "mov": -2
    },
    {
     "pos": 18,
@@ -667,9 +667,9 @@
     "pts": 7,
     "zona": null,
     "pos_fuente": 18,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 20,
     "es_vultur": false,
-    "mov": null
+    "mov": 2
    },
    {
     "pos": 19,
@@ -685,9 +685,9 @@
     "pts": 7,
     "zona": null,
     "pos_fuente": 19,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 16,
     "es_vultur": false,
-    "mov": null
+    "mov": -3
    },
    {
     "pos": 20,
@@ -703,9 +703,9 @@
     "pts": 6,
     "zona": null,
     "pos_fuente": 20,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 17,
     "es_vultur": false,
-    "mov": null
+    "mov": -3
    },
    {
     "pos": 21,
@@ -721,12 +721,12 @@
     "pts": 0,
     "zona": null,
     "pos_fuente": 21,
-    "pos_ant_fuente": null,
+    "pos_ant_fuente": 21,
     "es_vultur": false,
-    "mov": null
+    "mov": 0
    }
   ],
-  "actualizado": "2026-11-23T16:26:14+00:00"
+  "actualizado": "2026-11-24T02:53:56+00:00"
  },
  {
   "id": "lva-ecfa9127",
@@ -1061,6 +1061,6 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-23T16:26:58+00:00"
+  "actualizado": "2026-11-24T02:54:31+00:00"
  }
 ]
