@@ -6,7 +6,7 @@
   "temporada": "2026 · Temporada 1",
   "logo": null,
   "url_origen": "https://vpugvirtualprouruguaygaming.com/liga/tabla",
-  "jornadas": "7/19",
+  "jornadas": "8/19",
   "formato": {
    "ascensosDirectos": 2,
    "ascensos": 3,
@@ -27,10 +27,26 @@
     "pts": 19,
     "zona": "ascenso",
     "es_vultur": false,
-    "mov": 2
+    "mov": 0
    },
    {
     "pos": 2,
+    "equipo": "AllBoysCantera",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp",
+    "pj": 7,
+    "g": 6,
+    "e": 1,
+    "p": 0,
+    "gf": 9,
+    "gc": 0,
+    "dg": 9,
+    "pts": 19,
+    "zona": "ascenso",
+    "es_vultur": false,
+    "mov": 1
+   },
+   {
+    "pos": 3,
     "equipo": "InfinitX",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-904-1793284842685.webp",
     "pj": 6,
@@ -41,28 +57,28 @@
     "gc": 1,
     "dg": 12,
     "pts": 18,
-    "zona": "ascenso",
-    "es_vultur": false,
-    "mov": -1
-   },
-   {
-    "pos": 3,
-    "equipo": "AllBoysCantera",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp",
-    "pj": 6,
-    "g": 6,
-    "e": 0,
-    "p": 0,
-    "gf": 9,
-    "gc": 0,
-    "dg": 9,
-    "pts": 18,
     "zona": "reducido",
     "es_vultur": false,
     "mov": -1
    },
    {
     "pos": 4,
+    "equipo": "ALMA CRIOLLA",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp",
+    "pj": 7,
+    "g": 4,
+    "e": 2,
+    "p": 1,
+    "gf": 15,
+    "gc": 4,
+    "dg": 11,
+    "pts": 14,
+    "zona": "reducido",
+    "es_vultur": false,
+    "mov": 1
+   },
+   {
+    "pos": 5,
     "equipo": "AtorrantesFC",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-660-1793146525424.webp",
     "pj": 7,
@@ -73,22 +89,6 @@
     "gc": 7,
     "dg": 2,
     "pts": 14,
-    "zona": "reducido",
-    "es_vultur": false,
-    "mov": 2
-   },
-   {
-    "pos": 5,
-    "equipo": "ALMA CRIOLLA",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp",
-    "pj": 6,
-    "g": 4,
-    "e": 1,
-    "p": 1,
-    "gf": 15,
-    "gc": 4,
-    "dg": 11,
-    "pts": 13,
     "zona": "reducido",
     "es_vultur": false,
     "mov": -1
@@ -107,7 +107,7 @@
     "pts": 13,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": -1
+    "mov": 0
    },
    {
     "pos": 7,
@@ -219,26 +219,42 @@
     "pts": 8,
     "zona": null,
     "es_vultur": false,
-    "mov": 3
+    "mov": 0
    },
    {
     "pos": 14,
+    "equipo": "Celestiales",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp",
+    "pj": 8,
+    "g": 2,
+    "e": 2,
+    "p": 4,
+    "gf": 4,
+    "gc": 9,
+    "dg": -5,
+    "pts": 8,
+    "zona": null,
+    "es_vultur": false,
+    "mov": 2
+   },
+   {
+    "pos": 15,
     "equipo": "LMJ eSports",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-150-1793806728684.webp",
-    "pj": 7,
+    "pj": 8,
     "g": 1,
     "e": 3,
-    "p": 3,
+    "p": 4,
     "gf": 7,
-    "gc": 11,
-    "dg": -4,
+    "gc": 12,
+    "dg": -5,
     "pts": 6,
     "zona": null,
     "es_vultur": false,
     "mov": -1
    },
    {
-    "pos": 15,
+    "pos": 16,
     "equipo": "Almirante Brown",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-1443-1793679154880.webp",
     "pj": 7,
@@ -251,23 +267,7 @@
     "pts": 6,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
-   },
-   {
-    "pos": 16,
-    "equipo": "Celestiales",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp",
-    "pj": 7,
-    "g": 1,
-    "e": 2,
-    "p": 4,
-    "gf": 3,
-    "gc": 9,
-    "dg": -6,
-    "pts": 5,
-    "zona": null,
-    "es_vultur": false,
-    "mov": -2
+    "mov": -1
    },
    {
     "pos": 17,
@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-24T03:18:43+00:00"
+  "actualizado": "2026-11-24T13:27:52+00:00"
  },
  {
   "id": "vpn-6449",
@@ -726,7 +726,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-24T03:19:19+00:00"
+  "actualizado": "2026-11-24T13:28:28+00:00"
  },
  {
   "id": "lva-ecfa9127",
@@ -1061,6 +1061,6 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-24T03:19:52+00:00"
+  "actualizado": "2026-11-24T13:29:02+00:00"
  }
 ]

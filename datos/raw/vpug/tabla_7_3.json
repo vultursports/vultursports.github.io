@@ -12,7 +12,7 @@
   "nombre": "Tercera",
   "nivel": 3
  },
- "jornadasJugadas": 7,
+ "jornadasJugadas": 8,
  "jornadasTotales": 19,
  "formato": {
   "esPrimera": false,
@@ -47,6 +47,24 @@
   {
    "posicion": 2,
    "club": {
+    "id": 129,
+    "nombre": "AllBoysCantera",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp"
+   },
+   "pj": 7,
+   "g": 6,
+   "e": 1,
+   "p": 0,
+   "gf": 9,
+   "gc": 0,
+   "dg": 9,
+   "descuento": 0,
+   "pts": 19,
+   "zona": "ASCENSO"
+  },
+  {
+   "posicion": 3,
+   "club": {
     "id": 148,
     "nombre": "InfinitX",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-904-1793284842685.webp"
@@ -60,28 +78,28 @@
    "dg": 12,
    "descuento": 0,
    "pts": 18,
-   "zona": "ASCENSO"
-  },
-  {
-   "posicion": 3,
-   "club": {
-    "id": 129,
-    "nombre": "AllBoysCantera",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp"
-   },
-   "pj": 6,
-   "g": 6,
-   "e": 0,
-   "p": 0,
-   "gf": 9,
-   "gc": 0,
-   "dg": 9,
-   "descuento": 0,
-   "pts": 18,
    "zona": "REDUCIDO"
   },
   {
    "posicion": 4,
+   "club": {
+    "id": 124,
+    "nombre": "ALMA CRIOLLA",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp"
+   },
+   "pj": 7,
+   "g": 4,
+   "e": 2,
+   "p": 1,
+   "gf": 15,
+   "gc": 4,
+   "dg": 11,
+   "descuento": 0,
+   "pts": 14,
+   "zona": "REDUCIDO"
+  },
+  {
+   "posicion": 5,
    "club": {
     "id": 115,
     "nombre": "AtorrantesFC",
@@ -96,24 +114,6 @@
    "dg": 2,
    "descuento": 0,
    "pts": 14,
-   "zona": "REDUCIDO"
-  },
-  {
-   "posicion": 5,
-   "club": {
-    "id": 124,
-    "nombre": "ALMA CRIOLLA",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp"
-   },
-   "pj": 6,
-   "g": 4,
-   "e": 1,
-   "p": 1,
-   "gf": 15,
-   "gc": 4,
-   "dg": 11,
-   "descuento": 0,
-   "pts": 13,
    "zona": "REDUCIDO"
   },
   {
@@ -263,23 +263,41 @@
   {
    "posicion": 14,
    "club": {
+    "id": 139,
+    "nombre": "Celestiales",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp"
+   },
+   "pj": 8,
+   "g": 2,
+   "e": 2,
+   "p": 4,
+   "gf": 4,
+   "gc": 9,
+   "dg": -5,
+   "descuento": 0,
+   "pts": 8,
+   "zona": null
+  },
+  {
+   "posicion": 15,
+   "club": {
     "id": 150,
     "nombre": "LMJ eSports",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-150-1793806728684.webp"
    },
-   "pj": 7,
+   "pj": 8,
    "g": 1,
    "e": 3,
-   "p": 3,
+   "p": 4,
    "gf": 7,
-   "gc": 11,
-   "dg": -4,
+   "gc": 12,
+   "dg": -5,
    "descuento": 0,
    "pts": 6,
    "zona": null
   },
   {
-   "posicion": 15,
+   "posicion": 16,
    "club": {
     "id": 179,
     "nombre": "Almirante Brown",
@@ -294,24 +312,6 @@
    "dg": -8,
    "descuento": 0,
    "pts": 6,
-   "zona": null
-  },
-  {
-   "posicion": 16,
-   "club": {
-    "id": 139,
-    "nombre": "Celestiales",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp"
-   },
-   "pj": 7,
-   "g": 1,
-   "e": 2,
-   "p": 4,
-   "gf": 3,
-   "gc": 9,
-   "dg": -6,
-   "descuento": 0,
-   "pts": 5,
    "zona": null
   },
   {
