@@ -133,6 +133,7 @@ img[src$="ligas/vpug.png"] { height: calc(var(--h) * .92); }
 .f-corta { display: none; }
 /* Celular: centro de la tarjeta más compacto para que los nombres de los equipos respiren */
 @media (max-width: 520px) {
+  .proximo-marco { padding-inline: 10px; } /* un poco menos de margen a los costados: nombres largos en una sola línea */
   .duelo .hora { font-size: clamp(2.4rem, 11.5vw, 3.2rem); }
   .duelo .dia { font-size: .8rem; margin-top: 4px; }
   .duelo .f-larga { display: none; }
