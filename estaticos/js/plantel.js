@@ -125,21 +125,26 @@ VS.alCargar(() => {
       if (!enAlcance(lg, temp) || !pos) continue;
       (porPartido[pid] ||= []).push(normPos(pos));
     }
-    const conteo = {}, partidosDe = {};
+    // Misma regla que once_mas_usado() en build.py (la previa de los partidos): si se cambia una, cambiar la otra
+    const conteo = {}, partidosDe = {}, ultima = {};
     for (const [pid, ps] of Object.entries(porPartido)) {
       if (ps.length < 10) continue;  // partidos con datos incompletos no cuentan
       const k = ps.slice().sort().join(",");
       conteo[k] = (conteo[k] || 0) + 1;
       (partidosDe[k] ||= []).push(pid);
+      const f = D.fecha[pid] || "";
+      if (!ultima[k] || f > ultima[k]) ultima[k] = f;
     }
-    const top = Object.entries(conteo).sort((a, b) => b[1] - a[1])[0];
+    // Empate en cantidad de partidos: gana la formación usada más recientemente
+    const top = Object.entries(conteo).sort((a, b) => b[1] - a[1] || (ultima[b[0]] > ultima[a[0]] ? 1 : ultima[b[0]] < ultima[a[0]] ? -1 : 0))[0];
     if (!top) return null;
     const slots = top[0].split(",").map((p, i) => ({ i, pos: p }));
     const total = Object.values(conteo).reduce((a, b) => a + b, 0);
     // Asignación: primero los pares (jugador, puesto) con más partidos; cada jugador y puesto una sola vez
     const pares = [];
     for (const f of filas) for (const s of slots) if (f.pos[s.pos]) pares.push([f.pos[s.pos], f, s]);
-    pares.sort((a, b) => b[0] - a[0] || b[1].pj - a[1].pj);
+    const cmpId = (x, y) => (x.id < y.id ? -1 : x.id > y.id ? 1 : 0);
+    pares.sort((a, b) => b[0] - a[0] || b[1].pj - a[1].pj || cmpId(a[1], b[1]) || a[2].i - b[2].i);
     const usado = new Set(), asignado = {};
     for (const [, f, s] of pares) {
       if (usado.has(f.id) || asignado[s.i]) continue;
@@ -148,7 +153,7 @@ VS.alCargar(() => {
     // Puestos sin dueño: el jugador libre con más partidos
     for (const s of slots) {
       if (asignado[s.i]) continue;
-      const libre = filas.filter((f) => !usado.has(f.id)).sort((a, b) => b.pj - a.pj)[0];
+      const libre = filas.filter((f) => !usado.has(f.id)).sort((a, b) => b.pj - a.pj || cmpId(a, b))[0];
       if (libre) { usado.add(libre.id); asignado[s.i] = libre; }
     }
     // Nombre de la formación: el que publicó la liga en esos partidos (no se calcula). Si la liga no lo publica, no hay nombre.

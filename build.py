@@ -162,47 +162,54 @@ def once_oficial(oficial: dict, lista: list, ficha_de: dict) -> dict:
     return {"jugadores": placed, "formacion": oficial["formacion"], "oficial": True}
 
 
-def once_mas_usado(lista: list, ficha_de: dict) -> dict | None:
-    """Alineación más repetida en una lista de partidos y, por puesto, quien más veces lo ocupó."""
-    conteo, partidos_de = Counter(), {}
+def once_mas_usado(lista: list, ficha_de: dict, id_de) -> dict | None:
+    """Alineación más repetida en una lista de partidos y, por puesto, quien más veces lo ocupó.
+    Misma regla que "El 11 más usado" de estaticos/js/plantel.js (si se cambia una, cambiar la otra):
+    solo jugadores con ficha (alias unidos), partidos con al menos 10 posiciones cargadas, en empate
+    la formación usada más recientemente, y en la asignación más veces en el puesto, más PJ, id."""
+    conteo, ultima, partidos_de = Counter(), {}, {}
     jug: dict[str, dict] = {}
     for p in lista:
-        if not p.get("resultado") or p.get("wo"):
+        if not p.get("resultado"):
             continue
-        pos = [ALIAS_POS.get(x.get("posicion") or "", x.get("posicion") or "") for x in p.get("stats", [])]
-        if len(pos) >= 10 and all(pos):
-            k = ",".join(sorted(pos)); conteo[k] += 1; partidos_de.setdefault(k, []).append(p)
+        pos = []
         for x in p.get("stats", []):
-            if not x.get("alias"):
+            k = id_de(x["alias"]) if x.get("alias") else None
+            if k not in ficha_de:
                 continue
-            j = jug.setdefault(jug_mod.clave(x["alias"]), {"alias": x["alias"], "pj": 0, "pos": Counter(), "notas": [], "goles": 0, "asist": 0})
+            j = jug.setdefault(k, {"pj": 0, "pos": Counter(), "notas": [], "goles": 0, "asist": 0})
             j["pj"] += 1; j["goles"] += x.get("goles") or 0; j["asist"] += x.get("asistencias") or 0
             q = ALIAS_POS.get(x.get("posicion") or "", x.get("posicion") or "")
-            if q: j["pos"][q] += 1
+            if q: j["pos"][q] += 1; pos.append(q)
             if (x.get("rating") or -1) >= 0: j["notas"].append(x["rating"])
+        if len(pos) >= 10:
+            f = ",".join(sorted(pos)); conteo[f] += 1; partidos_de.setdefault(f, []).append(p)
+            ultima[f] = max(ultima.get(f, ""), p["fecha_utc"])
     if not conteo:
         return None
-    firma, veces = conteo.most_common(1)[0]
+    firma = max(conteo, key=lambda f: (conteo[f], ultima[f]))
+    veces = conteo[firma]
     slots = firma.split(",")
     pares = sorted(((j["pos"][q], k, i) for k, j in jug.items() for i, q in enumerate(slots) if j["pos"][q]),
-                   key=lambda t: (-t[0], -jug[t[1]]["pj"]))
+                   key=lambda t: (-t[0], -jug[t[1]]["pj"], t[1], t[2]))
     usado, asignado = set(), {}
     for _, k, i in pares:
         if k not in usado and i not in asignado:
             usado.add(k); asignado[i] = k
     for i in range(len(slots)):
         if i not in asignado:
-            libre = max((k for k in jug if k not in usado), key=lambda k: jug[k]["pj"], default=None)
+            libre = min((k for k in jug if k not in usado), key=lambda k: (-jug[k]["pj"], k), default=None)
             if libre: usado.add(libre); asignado[i] = libre
-    stats = []
+    stats, ids = [], []
     for i, q in enumerate(slots):
         if i in asignado:
             j = jug[asignado[i]]
-            stats.append({"alias": j["alias"], "posicion": q, "goles": j["goles"], "asistencias": j["asist"],
+            stats.append({"alias": ficha_de[asignado[i]]["alias"], "posicion": q, "goles": j["goles"], "asistencias": j["asist"],
                           "rating": round(sum(j["notas"]) / len(j["notas"]), 2) if j["notas"] else None, "mvp": False})
+            if q in LUGAR: ids.append(asignado[i])
     placed = alineacion(stats, ficha_de)
-    for x in placed:
-        x["pj"] = jug[jug_mod.clave(x["alias"])]["pj"]
+    for x, k in zip(placed, ids):
+        x["pj"] = jug[k]["pj"]
     nombres = Counter(p["formacion"] for p in partidos_de[firma] if p.get("formacion"))
     return {"jugadores": placed, "formacion": nombres.most_common(1)[0][0] if nombres else None,
             "veces": veces, "total": sum(conteo.values())}
@@ -534,6 +541,8 @@ def main():
         "ap": apariciones,
         # Formación publicada por la liga en cada partido (solo VPN la publica; no se calcula)
         "form": {p["id"]: p["formacion"] for p in partidos if p.get("formacion")},
+        # Fecha de cada partido jugado: en "El 11 más usado", si dos formaciones empatan gana la más reciente
+        "fecha": {p["id"]: p["fecha_utc"] for p in partidos if p.get("resultado") and p.get("stats")},
         "minimoNota": jug_mod.MIN_PJ_NOTA,
         "actuales": [t["id"] for t in tablas],  # temporada en curso de cada liga
         # "Alineación habitual" que el club carga en VPN: se usa en lugar del 11 calculado para VPN
@@ -672,7 +681,7 @@ def main():
                 de_comp = [x for x in partidos if x.get("competencia_id") == cid]
                 ofi = plantel_datos.get("oficial")
                 once_por_comp[cid] = (once_oficial(ofi, de_comp, ficha_de) if ofi and p["liga"] == "vpn"
-                                      else once_mas_usado(de_comp, ficha_de))
+                                      else once_mas_usado(de_comp, ficha_de, id_de))
             p["previa_once"] = once_por_comp[cid]
             p["forma_comp"] = forma.get(cid, [])
 
