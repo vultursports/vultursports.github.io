@@ -41501,15 +41501,16 @@
    "nombre": "AllBoysCantera",
    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp"
   },
-  "gf": null,
-  "gc": null,
-  "estado": "programado",
+  "gf": 0,
+  "gc": 0,
+  "estado": "finalizado",
   "url_origen": "https://vpugvirtualprouruguaygaming.com/partidos/672",
   "temporada": {
    "clave": "vpug-7-3",
    "nombre": "Tercera División 2026 T1"
   },
-  "stats": []
+  "stats": [],
+  "equipo_stats": null
  },
  {
   "id": "vpug-683",
