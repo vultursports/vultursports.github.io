@@ -152,10 +152,10 @@ VS.alCargar(() => {
   });
 });
 
-// Franja "Hoy jugamos" en todas las páginas (menos Inicio, que ya tiene la tarjeta del partido)
+// Franja "Hoy jugamos" en todas las páginas (menos Inicio, que ya tiene la tarjeta del partido, y las páginas de partido)
 VS.alCargar(() => {
   const caja = document.getElementById("hoy-jugamos");
-  if (!caja || caja.dataset.inicio === "si") return;
+  if (!caja || caja.dataset.ocultar === "si") return;
   const ps = JSON.parse(caja.dataset.partidos || "[]");
   const pintar = () => {
     const ahora = Date.now(), hoy = VS.nocheHoy();
