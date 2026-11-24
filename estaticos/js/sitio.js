@@ -8,6 +8,8 @@ VS.recordar = (k) => { try { return JSON.parse(localStorage.getItem("vs:" + k));
 VS.esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 // "Noche" de juego en hora argentina: lo jugado hasta las 6 de la mañana cuenta para la noche anterior.
 VS.nocheHoy = () => new Date(Date.now() - 9 * 36e5).toISOString().slice(0, 10);
+// Día del calendario en hora argentina: para lo que se le muestra a la gente como "hoy"
+VS.diaHoy = () => new Date(Date.now() - 3 * 36e5).toISOString().slice(0, 10);
 
 // Próximo partido: cada tarjeta muestra la cuenta regresiva; cuando un partido empieza, su tarjeta dice
 // "Se está jugando" hasta que empieza el siguiente de esa noche (o 30 minutos si es el último, data-fin)
@@ -137,9 +139,11 @@ VS.alCargar(() => {
   }
 });
 
-// "Hoy", "Mañana" y "Ayer" en los títulos de cada noche (se calcula en el navegador para que esté al día)
+// "Hoy", "Mañana" y "Ayer" en los títulos de cada noche (se calcula en el navegador para que esté al día).
+// Va por el día del calendario en hora argentina, no por la "noche" de juego: a las 00:30 del martes,
+// la noche del martes es "Hoy" (no "Mañana") y la del lunes, "Ayer".
 VS.alCargar(() => {
-  const hoy = Date.parse(VS.nocheHoy());
+  const hoy = Date.parse(VS.diaHoy());
   document.querySelectorAll(".noche[data-noche]").forEach((h) => {
     if (!h.dataset.txt) h.dataset.txt = h.textContent.trim();
     const rel = { 0: "Hoy", 1: "Mañana", "-1": "Ayer" }[Math.round((Date.parse(h.dataset.noche) - hoy) / 864e5)];
@@ -275,11 +279,11 @@ VS.alCargar(() => {
   const MESES = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
   const DIAS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
   const pad = (n) => String(n).padStart(2, "0");
-  const hoy0 = VS.nocheHoy();
+  const hoy0 = VS.diaHoy();
   let mes = [+hoy0.slice(0, 4), +hoy0.slice(5, 7) - 1];
   const dibujar = () => {
     if (cont.hidden) return;
-    const [a, m] = mes, hoy = VS.nocheHoy();
+    const [a, m] = mes, hoy = VS.diaHoy();
     const on = new Set([...document.querySelectorAll(".filtros input")].filter((c) => c.checked).map((c) => c.value));
     const porDia = {};
     ps.forEach((p) => { if (on.has(p.liga)) (porDia[p.noche] = porDia[p.noche] || []).push(p); });

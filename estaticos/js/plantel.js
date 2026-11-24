@@ -240,7 +240,7 @@ VS.alCargar(() => {
       const [x, y] = MAPA[pos];
       lista.sort((a, b) => b[0] - a[0] || b[1].pj - a[1].pj);
       const total = lista.reduce((s, [n]) => s + n, 0);
-      html.push(`<div role="listitem" class="mapa-pos-item" style="left:${x}%;top:${y}%"><b class="mp-pos">${pos}</b>` +
+      html.push(`<div role="listitem" class="mapa-pos-item" style="left:${x}%;top:${y}%;grid-area:${pos.toLowerCase()}"><b class="mp-pos">${pos}</b>` +
         lista.slice(0, 3).map(([n, f]) => { const j = D.jugadores[f.id];
           return `<a href="${j.pagina}"><span>${esc(j.alias)}</span><small>${n}</small></a>`; }).join("") +
         (lista.length > 3 ? `<small class="mp-mas">+${lista.length - 3} más</small>` : "") +

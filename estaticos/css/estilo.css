@@ -891,9 +891,19 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
   background: rgba(20,20,20,.82); padding: 4px 6px 5px; font-size: .72rem; line-height: 1.25; text-align: center; }
 .mapa-pos-item .mp-pos { font: 800 .85rem/1 var(--display); color: var(--dorado); letter-spacing: .04em; margin-bottom: 2px; }
 .mapa-pos-item a { display: flex; gap: 4px; justify-content: center; max-width: 100%; text-decoration: none; }
-.mapa-pos-item a span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.mapa-pos-item a small { color: var(--plata); }
+.mapa-pos-item a span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.mapa-pos-item a small { color: var(--plata); flex: none; }
 .mapa-pos-item .mp-mas { color: var(--plata-osc); font-size: .65rem; }
+/* Celular: en lugar de ubicar cada puesto con coordenadas (se pisaban en el medio y los nombres
+   largos no entraban), una grilla por líneas de abajo hacia arriba: arquero, defensa, medios, delanteros */
+@media (max-width: 600px) {
+  .cancha-mapa { height: auto; display: grid; padding: 14px 6px; column-gap: 6px; align-items: center; justify-items: stretch;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr) minmax(0, 1fr);
+    grid-template-areas: "di dc dd" "ei sd ed" "mi mco md" "mi mc md" "li mcd ld" "li dfc ld" ". por ."; }
+  .cancha-mapa .lineas { position: absolute; inset: 0; }
+  .cancha-mapa .mapa-pos-item { position: relative; left: auto !important; top: auto !important; transform: none;
+    width: auto; max-width: none; margin: 8px 0; padding: 5px 6px 6px; }
+}
 
 /* Récords en un partido, comparar y resultado provisorio */
 .rec-ea { color: var(--plata); text-decoration: none; }
