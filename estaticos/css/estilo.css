@@ -624,19 +624,6 @@ a.dest-jug:hover .dest-nombre { color: var(--dorado); }
 }
 .btn-buscar:hover { color: var(--hueso); }
 
-/* Franja "Hoy jugamos" */
-.hoy-jugamos { background: var(--rojo); color: #fff; }
-.hj-in {
-  max-width: var(--ancho); margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; gap: 6px 16px;
-  overflow-x: auto; white-space: nowrap; font-size: .92rem; scrollbar-width: none;
-}
-.hj-in b { font: 900 1.05rem/1 var(--display); text-transform: uppercase; letter-spacing: .04em; }
-.hj-in a { color: #fff; text-decoration: none; }
-.hj-in a:hover { text-decoration: underline; }
-.hj-hora { font: 800 1.05rem/1 var(--display); }
-.hj-in small { opacity: .8; }
-.hj-in .en-juego .hj-hora { background: #fff; color: var(--rojo); padding: 2px 6px 1px; }
-
 /* Menú fijo abajo (celular) */
 .menu-abajo { display: none; }
 @media (max-width: 760px) {

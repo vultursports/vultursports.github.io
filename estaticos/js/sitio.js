@@ -152,25 +152,6 @@ VS.alCargar(() => {
   });
 });
 
-// Franja "Hoy jugamos" en todas las páginas (menos Inicio, que ya tiene la tarjeta del partido, y las páginas de partido)
-VS.alCargar(() => {
-  const caja = document.getElementById("hoy-jugamos");
-  if (!caja || caja.dataset.ocultar === "si") return;
-  const ps = JSON.parse(caja.dataset.partidos || "[]");
-  const pintar = () => {
-    const ahora = Date.now(), hoy = VS.nocheHoy();
-    const lista = ps.filter((p) => p.noche === hoy && Date.parse(p.fin) > ahora);
-    caja.hidden = !lista.length;
-    if (!lista.length) return;
-    caja.innerHTML = `<div class="hj-in"><b>Hoy jugamos</b>` + lista.map((p) => {
-      const ya = Date.parse(p.inicio) <= ahora;
-      return `<a href="${p.pagina}"${ya ? ' class="en-juego"' : ""}><span class="hj-hora">${ya ? "Se está jugando" : p.hora}</span> vs ${VS.esc(p.rival)} <small>${VS.esc(p.liga)}</small></a>`;
-    }).join("") + `</div>`;
-  };
-  pintar();
-  VS.cadaTanto(pintar, 60e3);
-});
-
 // Barra superior: se esconde al bajar y vuelve al subir. Botón para volver arriba en páginas largas.
 (() => {
   const cab = document.getElementById("cabecera"), arriba = document.getElementById("arriba");

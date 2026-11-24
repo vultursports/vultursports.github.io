@@ -827,16 +827,12 @@ def main():
             "lideres": [(t, lider(c)) for t, c in [("Goleador", "goles"), ("Asistidor", "asistencias"), ("Más MVP", "mvp"), ("Mejor nota", "nota")]],
         }
 
-    # Franja "Hoy jugamos" (todas las páginas): próximos partidos; el navegador muestra los de hoy
-    hoy_datos = [{"inicio": p["dt"].isoformat(), "fin": p["fin_tarjeta"].isoformat(), "noche": p["noche"].isoformat(),
-                  "hora": p["hora"], "rival": p["rival"]["nombre"], "liga": p["liga_ui"]["corto"], "pagina": p["pagina"]}
-                 for p in proximos[:10]]
     # Calendario en vista de mes (computadora)
     cal_datos = [{"noche": p["noche"].isoformat(), "hora": p["hora"], "rival": p["rival"]["nombre"], "liga": p["liga"],
                   "corto": p["liga_ui"]["corto"], "pagina": p["pagina"], "escudo": p["rival"].get("escudo"),
                   "res": p["resultado"], "gf": p.get("gf"), "gc": p.get("gc"), "inicio": p["dt"].isoformat()}
                  for p in sorted(partidos, key=lambda p: p["dt"])]
-    ctx = dict(club=cfg["club"]["nombre"], hoy_datos=hoy_datos, cal_datos=cal_datos, comparar_datos=comparar_datos, resumen_temp=resumen_temp, redes_club=[(REDES_TXT.get(k, k), k, u) for k, u in (cfg["club"].get("redes") or {}).items()], v=og_version, destacados=destacados, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas, estado_ea=estado_ea, figura=figura, control_ea=control_ea,
+    ctx = dict(club=cfg["club"]["nombre"], cal_datos=cal_datos, comparar_datos=comparar_datos, resumen_temp=resumen_temp, redes_club=[(REDES_TXT.get(k, k), k, u) for k, u in (cfg["club"].get("redes") or {}).items()], v=og_version, destacados=destacados, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas, estado_ea=estado_ea, figura=figura, control_ea=control_ea,
                titulos=titulos, estantes=estantes,
                total_partidos=len(partidos), total_jugadores=len(js), total_rivales=len(rivales),
                total_escudos=len(list((DATOS / "escudos").glob("*.webp"))), plantel_datos=plantel_datos, temporadas_lista=temporadas_lista,
