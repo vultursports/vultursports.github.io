@@ -51,14 +51,23 @@ VS.alCargar(() => {
 // Nombres de los equipos en la tarjeta del partido: si un nombre de una sola palabra no entra en su
 // columna (DEPORTIVOFUMETA en un celular, o la letra de reserva más ancha si la del sitio no llegó a
 // cargar), se achica la letra hasta que entre, en vez de cortar la palabra al medio. Mínimo 11 px.
+// Los dos nombres de la tarjeta quedan siempre del mismo tamaño: el del que más necesita achicarse.
 VS.ajustarNombres = () => {
-  document.querySelectorAll(".duelo .nombre-eq").forEach((el) => {
-    if (!el.offsetWidth) return;  // tarjeta oculta: se ajusta cuando se muestra
-    const col = el.parentElement.clientWidth;  // el nombre se estira con su texto: se compara con la columna
-    el.style.fontSize = ""; el.style.overflowWrap = "normal";
-    let px = parseFloat(getComputedStyle(el).fontSize);
-    while (el.scrollWidth > col + 1 && px > 11) { px -= 0.5; el.style.fontSize = px + "px"; }
-    if (el.scrollWidth > col + 1) el.style.overflowWrap = "";  // ni así entra: se parte como antes
+  document.querySelectorAll(".duelo").forEach((duelo) => {
+    const nombres = [...duelo.querySelectorAll(".nombre-eq")];
+    if (!nombres.length || !duelo.offsetWidth) return;  // tarjeta oculta: se ajusta cuando se muestra
+    nombres.forEach((el) => { el.style.fontSize = ""; el.style.overflowWrap = "normal"; });
+    const base = parseFloat(getComputedStyle(nombres[0]).fontSize);
+    // el nombre se estira con su texto: se compara con el ancho de su columna
+    const sobra = (el) => el.scrollWidth > el.parentElement.clientWidth + 1;
+    let px = base;
+    for (const el of nombres) {
+      while (sobra(el) && px > 11) { px -= 0.5; el.style.fontSize = px + "px"; }
+    }
+    nombres.forEach((el) => {
+      el.style.fontSize = px < base ? px + "px" : "";
+      if (sobra(el)) el.style.overflowWrap = "";  // ni así entra: se parte como antes
+    });
   });
 };
 VS.alCargar(() => {
