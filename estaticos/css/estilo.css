@@ -2,10 +2,10 @@
 
 /* Letras (Google Fonts, licencia OFL), guardadas en el sitio. "optional": si la letra no está lista
    al dibujar la página, se usa la de reemplazo hasta la próxima carga, sin saltos de texto. */
-@font-face { font-family: "Big Shoulders Display"; font-style: normal; font-weight: 600 900; font-display: optional;
+@font-face { font-family: "Big Shoulders Display"; font-style: normal; font-weight: 600 900; font-display: swap;
   src: url(../fuentes/big-shoulders.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: "Archivo"; font-style: normal; font-weight: 400 700; font-display: optional;
+@font-face { font-family: "Archivo"; font-style: normal; font-weight: 400 700; font-display: swap;
   src: url(../fuentes/archivo.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
@@ -125,9 +125,8 @@ img[src$="ligas/vpug.png"] { height: calc(var(--h) * .92); }
 .equipo-link .ver-club { font-size: .78rem; color: var(--plata); text-decoration: underline; text-decoration-color: var(--rojo); text-underline-offset: 3px; }
 .equipo-link:hover span { text-decoration: underline; text-decoration-color: var(--rojo); }
 .equipo img { width: clamp(64px, 20vw, 120px); height: auto; aspect-ratio: 1; object-fit: contain; }
-.equipo span { font: 800 clamp(1rem, 3.6vw, 1.5rem)/1.05 var(--display); text-transform: uppercase; overflow-wrap: anywhere; }
+.equipo .nombre-eq { font: 800 clamp(1rem, 3.6vw, 1.5rem)/1.05 var(--display); text-transform: uppercase; overflow-wrap: anywhere; }
 .cuando time, .cuando .final { display: grid; justify-items: center; }
-.cond-hora { display: block; margin-top: 6px; text-align: center; font-size: .8rem; color: var(--plata); }
 .hora { font: 900 clamp(3.2rem, 15vw, 6.5rem)/.85 var(--display); font-variant-numeric: tabular-nums; }
 .dia { margin-top: 6px; color: var(--plata); font-size: .9rem; max-width: 11rem; }
 .cuenta { display: block; margin-top: 8px; font: 700 1rem/1 var(--display); color: var(--hueso); letter-spacing: .03em; min-height: 1em; }
@@ -428,7 +427,7 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
 .forma { display: inline-flex; gap: 3px; }
 .forma a {
   display: inline-grid; place-items: center; width: 20px; height: 20px; text-decoration: none;
-  font: 800 .72rem/1 var(--display); border-radius: 50%; color: var(--carbon);
+  font: 800 .72rem/1 var(--display); border-radius: 2px; color: var(--carbon);
 }
 .forma .f-g { background: var(--dorado); } .forma .f-e { background: var(--plata-osc); } .forma .f-p { background: var(--rojo); color: #fff; }
 .previa { margin-bottom: 28px; }
@@ -777,7 +776,9 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
 
 /* Partido: goles y asistencias debajo de nuestro escudo */
 .goles-eq { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 3px; justify-items: center; font-size: .82rem; color: var(--hueso); }
-.goles-eq li { display: flex; align-items: center; gap: 5px; line-height: 1.2; }
+.goles-eq { max-width: 100%; }
+.goles-eq li { display: flex; align-items: center; gap: 5px; line-height: 1.2; white-space: nowrap; max-width: 100%; }
+.goles-eq .nom { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .goles-eq li.asist { color: var(--plata); }
 .goles-eq b { font-weight: 700; color: var(--dorado); }
 .ico-gol, .rg-g { display: inline-block; width: 13px; height: 13px; flex: none; background: var(--hueso); -webkit-mask: url(/estaticos/img/gol.svg) center / contain no-repeat; mask: url(/estaticos/img/gol.svg) center / contain no-repeat; vertical-align: -2px; }
@@ -853,6 +854,16 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
 .stats .ea-col { border-left: 1px solid var(--linea); }
 .ea-pases { white-space: nowrap; }
 .ea-pases small { color: var(--plata); margin-left: 4px; }
+/* Celular: la tabla de nuestros jugadores entra sin deslizar aunque tenga la columna Pos y el MVP:
+   el porcentaje de pases se achica (en celulares angostos va debajo), la etiqueta MVP se achica y el nombre se corta con "…" */
+@media (max-width: 520px) {
+  .tabla.stats th, .tabla.stats td { padding-inline: 3px; }
+  .tabla.stats .ea-pases small { margin-left: 2px; font-size: .66rem; }
+  .tabla.stats .mvp { font-size: .62rem; padding: 2px 3px 1px; }
+  .tabla.stats .eqi { gap: 5px; }
+  .tabla.stats .eqi span { max-width: 6.2rem; }
+}
+@media (max-width: 400px) { .tabla.stats .ea-pases small { display: block; margin: 1px 0 0; } .tabla.stats th, .tabla.stats td { padding-inline: 2px; } }
 .ea-arquero { color: var(--plata); margin: 10px 0 0; }
 .ea-arquero b { color: var(--hueso); }
 

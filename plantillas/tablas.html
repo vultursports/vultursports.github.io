@@ -24,7 +24,7 @@
     <header>
       <h2>{{ chip(t.liga_ui) }} {{ t.competencia }}</h2>
       <p class="meta">{{ t.liga_ui.nombre }}{% if t.temporada %}, {{ t.temporada }}{% endif %}{% if t.jornadas %}, fecha {{ t.jornadas }}{% endif %}</p>
-      {% if t.forma %}<p class="forma-linea">Nuestros últimos partidos {{ forma(t.forma) }}</p>{% endif %}
+      {% if t.forma %}<p class="forma-linea">Forma {{ forma(t.forma) }}</p>{% endif %}
     </header>
     <div class="scroll-x">{{ tabla_pos(t, t.filas, completa=True) }}</div>
     {% if t.leyenda %}<p class="leyenda">{% for z, nombre in t.leyenda %}<span class="z z-{{ z }}"></span>{{ nombre }} {% endfor %}</p>{% endif %}

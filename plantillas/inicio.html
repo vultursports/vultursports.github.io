@@ -86,7 +86,7 @@
         <h3>{{ chip(t.liga_ui) }} {{ t.competencia }}</h3>
         {% if t.vultur %}<p class="pos-badge"><b>{{ t.vultur.pos }}°</b> de {{ t.filas|length }}</p>{% endif %}
       </header>
-      {% if t.forma %}<p class="forma-linea">Últimos partidos {{ forma(t.forma) }}</p>{% endif %}
+      {% if t.forma %}<p class="forma-linea">Forma {{ forma(t.forma) }}</p>{% endif %}
       {{ tabla_pos(t, t.mini) }}
       <p class="fuente"><a class="ver-tabla" href="/tablas/#comp-{{ t.id }}">Ver tabla completa</a>. Fuente: <a href="{{ t.url_origen }}" target="_blank" rel="noopener">{{ t.liga_ui.nombre }}</a></p>
     </article>
