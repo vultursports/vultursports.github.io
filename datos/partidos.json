@@ -41734,9 +41734,9 @@
    "nombre": "Inter Regional",
    "escudo": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
   },
-  "gf": null,
-  "gc": null,
-  "estado": "programado",
+  "gf": 2,
+  "gc": 0,
+  "estado": "finalizado",
   "url_origen": "https://ligavirtualargentina.com/fixture",
   "temporada": {
    "clave": "lva-ecfa9127",

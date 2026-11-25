@@ -33,5 +33,12 @@
   "rival": "CLUB ATLÉTICO PELULGA",
   "jugado": "2026-11-25T02:30:00Z",
   "detectado": "2026-11-25T08:03:31+00:00"
+ },
+ {
+  "liga": "lva",
+  "partido": "lva-e314a1ff-8034-40e0-ae6c-72dda09a6415",
+  "rival": "Inter Regional",
+  "jugado": "2026-11-25T02:59:00Z",
+  "detectado": "2026-11-25T19:03:14+00:00"
  }
 ]
