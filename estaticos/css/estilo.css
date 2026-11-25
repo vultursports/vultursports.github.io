@@ -314,6 +314,35 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
 .comp.grande[hidden] { display: none; }
 .ver-tabla { color: var(--hueso); }
 
+/* Torneo terminado: tarjeta de cierre con nuestro puesto y números finales */
+.sc-final { flex: none; font: 700 .7rem/1 var(--texto); text-transform: uppercase; letter-spacing: .06em; color: var(--plata); border: 1px solid var(--linea); padding: 3px 5px 2px; }
+.sello-final { margin: 0; flex: none; font: 700 .72rem/1 var(--texto); text-transform: uppercase; letter-spacing: .08em; color: var(--carbon); background: var(--liga); padding: 5px 7px 4px; }
+.comp.grande .sello-final { display: inline-block; margin-bottom: 8px; }
+.cierre { display: grid; grid-template-columns: auto 1fr; gap: 14px 20px; align-items: center; margin: 4px 0 10px;
+  padding: 14px; background: linear-gradient(120deg, rgba(216,35,42,.18), rgba(216,35,42,.03) 60%), var(--asfalto-2); border-left: 4px solid var(--rojo); }
+.cierre.campeon { background: linear-gradient(120deg, rgba(201,162,74,.28), rgba(201,162,74,.04) 60%), var(--asfalto-2); border-left-color: var(--dorado); }
+.ci-puesto { display: grid; justify-items: start; min-width: 6.5rem; }
+.ci-puesto > span { font: 700 .78rem/1 var(--texto); text-transform: uppercase; letter-spacing: .08em; color: var(--plata); }
+.cierre.campeon .ci-puesto > span { color: var(--dorado); }
+.ci-puesto b { font: 900 clamp(3.4rem, 12vw, 4.6rem)/.9 var(--display); color: var(--hueso); margin: 4px 0 2px; }
+.ci-puesto small { color: var(--plata); font-size: .85rem; }
+.ci-zona::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 4px; background: var(--plata); }
+.ci-zona.z-ascenso::before { background: #47c58f; } .ci-zona.z-descenso::before { background: var(--rojo); } .ci-zona.z-lider::before { background: #3ecf74; }
+.ci-zona.z-playoff::before, .ci-zona.z-clasifica::before { background: #2f86d6; }
+.ci-nums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 12px; margin: 0; }
+.ci-nums div { display: flex; flex-direction: column-reverse; gap: 3px; min-width: 0; }
+.ci-nums dt { font-size: .74rem; color: var(--plata); }
+.ci-nums dt abbr { text-decoration: none; }
+.ci-nums dd { margin: 0; font: 800 1.5rem/1 var(--display); font-variant-numeric: tabular-nums; }
+.ci-nums dd i { font-style: normal; color: var(--plata-osc); margin: 0 .06em; }
+.ci-nums .ci-pts dd { color: #fff; }
+.ci-primero { grid-column: 1 / -1; margin: 0; padding-top: 10px; border-top: 1px solid var(--linea); font-size: .88rem; color: var(--plata); }
+.ci-primero b { color: var(--hueso); }
+.comp.grande .cierre { margin: 12px 0 18px; }
+@media (min-width: 760px) { .comp.grande .ci-nums { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+@media (max-width: 400px) { .cierre { grid-template-columns: 1fr; } .ci-nums { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.ci-titulo { font: 800 1.1rem/1 var(--display); margin: 0 0 8px; color: var(--plata); text-transform: uppercase; letter-spacing: .04em; }
+
 /* Jugadores */
 .selector-ambito { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .selector-ambito button { justify-content: center; }

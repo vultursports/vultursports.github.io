@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import forma, chip, tabla_pos %}
+{% from "_macros.html" import forma, chip, tabla_pos, cierre %}
 {% block titulo %}{{ club }} | Tablas{% endblock %}
 {% block contenido %}
 <div class="pagina">
@@ -14,21 +14,24 @@
     <button role="tab" id="tab-{{ t.id }}" aria-controls="comp-{{ t.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}" class="liga-{{ t.liga }}">
       {{ chip(t.liga_ui) }}
       <span class="sc-nombre">{{ t.corto }}</span>
+      {% if t.final %}<span class="sc-final">Final</span>{% endif %}
       {% if t.vultur %}<span class="sc-pos">{{ t.vultur.pos }}°</span>{% endif %}
     </button>
     {% endfor %}
   </div>
 
   {% for t in tablas %}
-  <section id="comp-{{ t.id }}" role="tabpanel" aria-labelledby="tab-{{ t.id }}" class="comp grande liga-{{ t.liga }}"{% if not loop.first %} hidden{% endif %}>
+  <section id="comp-{{ t.id }}" role="tabpanel" aria-labelledby="tab-{{ t.id }}" class="comp grande{% if t.final %} final{% endif %} liga-{{ t.liga }}"{% if not loop.first %} hidden{% endif %}>
     <header>
+      {% if t.final %}<p class="sello-final">Torneo finalizado</p>{% endif %}
       <h2>{{ chip(t.liga_ui) }} {{ t.competencia }}</h2>
       <p class="meta">{{ t.liga_ui.nombre }}{% if t.temporada %}, {{ t.temporada }}{% endif %}{% if t.jornadas %}, fecha {{ t.jornadas }}{% endif %}</p>
-      {% if t.forma %}<p class="forma-linea">Forma {{ forma(t.forma) }}</p>{% endif %}
+      {% if t.forma %}<p class="forma-linea">{{ 'Cierre' if t.final else 'Forma' }} {{ forma(t.forma) }}</p>{% endif %}
     </header>
+    {% if t.final %}{{ cierre(t) }}<h3 class="ci-titulo">Tabla final</h3>{% endif %}
     <div class="scroll-x">{{ tabla_pos(t, t.filas, completa=True) }}</div>
     {% if t.leyenda %}<p class="leyenda">{% for z, nombre in t.leyenda %}<span class="z z-{{ z }}"></span>{{ nombre }} {% endfor %}</p>{% endif %}
-    <p class="fuente">Fuente: <a href="{{ t.url_origen }}" target="_blank" rel="noopener">tabla oficial de {{ t.liga_ui.nombre }}</a>. Actualizada el {{ t.actualizado_txt }}.</p>
+    <p class="fuente">Fuente: <a href="{{ t.url_origen }}" target="_blank" rel="noopener">tabla oficial de {{ t.liga_ui.nombre }}</a>. {% if t.final %}Tabla final al {{ t.cierre.fecha }}; queda hasta que empiece el próximo torneo.{% else %}Actualizada el {{ t.actualizado_txt }}.{% endif %}</p>
   </section>
   {% endfor %}
   {# Mostrar la competencia guardada (o la del enlace) antes de dibujar la página, para que no salte #}

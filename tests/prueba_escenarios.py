@@ -473,9 +473,24 @@ class EscenariosRobot(unittest.TestCase):
             ps = [p for p in e.leer("partidos.json") if p["liga"] == "vpn"]
             self.assertEqual(len(ps), len(previos_vpn))
             self.assertFalse([p for p in ps if p.get("gf") is None])
-            if tablas_vpn:
-                self.assertFalse([t for t in e.leer("tablas.json") if t["liga"] == "vpn"])
+            if not tablas_vpn:
+                return
+            # La tabla queda como final (con nuestro cierre) hasta que empiece el torneo siguiente
+            finales = [t for t in e.leer("tablas.json") if t["liga"] == "vpn"]
+            self.assertTrue(finales and all(t.get("finalizada") for t in finales))
             e.generar()
+            self.assertIn("comp final liga-vpn", e.html("/"))
+            self.assertIn("Puesto final", e.html("/tablas/"))
+            # Otra pasada sin torneo nuevo: sigue
+            self.correr(e, {"vpn": FalsoConector(salida)})
+            self.assertTrue([t for t in e.leer("tablas.json") if t["liga"] == "vpn"])
+            # Empieza el torneo siguiente: la tabla final se quita y queda la nueva
+            nueva = json.loads(json.dumps(tablas_vpn[0]))
+            nueva["id"] = "vpn-test-nuevo"
+            self.correr(e, {"vpn": FalsoConector(lambda previos: {"partidos": list(previos.values()), "tablas": [nueva]})})
+            self.assertEqual([t["id"] for t in e.leer("tablas.json") if t["liga"] == "vpn"], ["vpn-test-nuevo"])
+            e.generar()
+            self.assertNotIn("comp final liga-vpn", e.html("/"))
 
     def test_tabla_no_publicada_con_partidos_pendientes_se_conserva(self):
         with Escenario() as e:
@@ -514,6 +529,7 @@ class EscenariosRobot(unittest.TestCase):
             t = next((t for t in ts if t["liga"] == "lva"), None)
             if not t:
                 self.skipTest("sin tabla de LVA")
+            t.pop("finalizada", None)  # como tabla en curso (las finales no recalculan flechas)
             t["filas"].insert(0, {**t["filas"][0], "equipo": "Equipo Recién Llegado", "es_vultur": False})
             for i, f in enumerate(t["filas"]):
                 f["pos"] = i + 1

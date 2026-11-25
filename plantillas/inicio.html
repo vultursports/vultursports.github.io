@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import forma, chip, fila_partido, tabla_pos, avatar %}
+{% from "_macros.html" import forma, chip, fila_partido, tabla_pos, avatar, cierre %}
 {% block contenido %}
 
 {% for proximo in tarjetas %}
@@ -81,6 +81,17 @@
   <section aria-labelledby="t-comp">
     <div class="enc"><h2 id="t-comp">Cómo vamos</h2><a href="/tablas/">Todas las tablas</a></div>
     {% for t in tablas %}
+    {% if t.final %}
+    <article class="comp final liga-{{ t.liga }}">
+      <header>
+        <h3>{{ chip(t.liga_ui) }} {{ t.competencia }}</h3>
+        <p class="sello-final">Torneo finalizado</p>
+      </header>
+      {{ cierre(t) }}
+      {% if t.forma %}<p class="forma-linea">Cierre {{ forma(t.forma) }}</p>{% endif %}
+      <p class="fuente"><a class="ver-tabla" href="/tablas/#comp-{{ t.id }}">Ver tabla final</a>. Fuente: <a href="{{ t.url_origen }}" target="_blank" rel="noopener">{{ t.liga_ui.nombre }}</a></p>
+    </article>
+    {% else %}
     <article class="comp liga-{{ t.liga }}">
       <header>
         <h3>{{ chip(t.liga_ui) }} {{ t.competencia }}</h3>
@@ -90,6 +101,7 @@
       {{ tabla_pos(t, t.mini) }}
       <p class="fuente"><a class="ver-tabla" href="/tablas/#comp-{{ t.id }}">Ver tabla completa</a>. Fuente: <a href="{{ t.url_origen }}" target="_blank" rel="noopener">{{ t.liga_ui.nombre }}</a></p>
     </article>
+    {% endif %}
     {% endfor %}
   </section>
 </div>

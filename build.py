@@ -421,6 +421,18 @@ def main():
         t["corto"] = re.sub(r"\s*\(.*?\)", "", t["competencia"]).replace("Liga Argentina ", "").strip()
         t["vultur"] = next((f for f in t["filas"] if f["es_vultur"]), None)
         t["actualizado_txt"] = a_local(t["actualizado"]).strftime("%d/%m %H:%M") if t.get("actualizado") else ""
+        # Torneo terminado: la tabla queda como final (hasta que la liga publique la del torneo
+        # siguiente) y se muestra nuestro cierre: puesto, números finales y quién terminó primero.
+        t["final"] = bool(t.get("finalizada"))
+        if t["final"]:
+            v = t["vultur"]
+            pj = (v or {}).get("pj") or 0
+            t["cierre"] = {
+                "fecha": a_local(t.get("actualizado") or t["finalizada"]).strftime("%d/%m"),
+                "efectividad": round(v["pts"] * 100 / (pj * 3)) if v and pj and v.get("pts") is not None else None,
+                "zona": nombres_t.get(v["zona"], v["zona"].title()) if v and v.get("zona") else None,
+                "primero": t["filas"][0] if t["filas"] and not t["filas"][0]["es_vultur"] else None,
+            }
 
     # Escudos: copias locales recortadas y del mismo tamaño
     esc = esc_mod.Escudos(DATOS / "escudos")
@@ -459,8 +471,10 @@ def main():
     proximo = proximos[0] if proximos else None
 
     # Orden de las competencias: primero la que se juega antes; después las que no publican
-    # fixture (VPUG); al final las que ya no tienen partidos por jugar.
+    # fixture (VPUG); al final las que ya no tienen partidos por jugar, y después las tablas finales.
     def orden_comp(t):
+        if t["final"]:
+            return (3, "")
         prox = [p["dt"] for p in proximos if p.get("competencia_id") == t["id"]]
         if prox:
             return (0, min(prox).isoformat())

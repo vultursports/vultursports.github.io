@@ -63,7 +63,28 @@
 </table>
 {%- endmacro %}
 
-
+{# Cierre de un torneo terminado: nuestro puesto y números finales #}
+{% macro cierre(t) -%}
+{% set v = t.vultur %}{% set c = t.cierre %}
+<div class="cierre{% if v and v.pos == 1 %} campeon{% endif %}">
+  {% if v %}
+  <div class="ci-puesto">
+    <span>{{ '¡Campeones!' if v.pos == 1 else 'Puesto final' }}</span>
+    <b>{{ v.pos }}°</b>
+    <small>de {{ t.filas|length }}{% if c.zona and v.pos != 1 %}, <span class="ci-zona z-{{ v.zona }}">{{ c.zona }}</span>{% endif %}</small>
+  </div>
+  <dl class="ci-nums">
+    <div class="ci-pts"><dt>Puntos</dt><dd>{{ v.pts }}</dd></div>
+    <div><dt>Jugados</dt><dd>{{ v.pj }}</dd></div>
+    <div><dt><abbr title="Ganados, empatados y perdidos">G-E-P</abbr></dt><dd>{{ v.g }}-{{ v.e }}-{{ v.p }}</dd></div>
+    <div><dt>Goles</dt><dd>{{ v.gf }}<i>:</i>{{ v.gc }}</dd></div>
+    <div><dt><abbr title="Diferencia de gol">DG</abbr></dt><dd>{{ '%+d'|format(v.dg) if v.dg else 0 }}</dd></div>
+    {% if c.efectividad is not none %}<div><dt><abbr title="Puntos obtenidos sobre los posibles">Efectividad</abbr></dt><dd>{{ c.efectividad }}%</dd></div>{% endif %}
+  </dl>
+  {% endif %}
+  {% if c.primero %}<p class="ci-primero">Terminó primero <b>{% if c.primero.pagina %}<a class="a-rival" href="{{ c.primero.pagina }}">{{ c.primero.equipo }}</a>{% else %}{{ c.primero.equipo }}{% endif %}</b>, con {{ c.primero.pts }} puntos.</p>{% endif %}
+</div>
+{%- endmacro %}
 
 {% macro copa(clase) -%}
 <svg class="{{ clase }}" viewBox="0 0 64 80" aria-hidden="true">
