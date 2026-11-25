@@ -32,8 +32,8 @@
     "nombre": "DeportivoFumeta",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-793-1793215711655.webp"
    },
-   "valor": 5,
-   "partidos": 4
+   "valor": 6,
+   "partidos": 5
   },
   {
    "id": 1788,
@@ -104,6 +104,17 @@
    "partidos": 6
   },
   {
+   "id": 798,
+   "jugador": "Bruno Lopez",
+   "club": {
+    "id": 135,
+    "nombre": "DeportivoFumeta",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-793-1793215711655.webp"
+   },
+   "valor": 4,
+   "partidos": 4
+  },
+  {
    "id": 660,
    "jugador": "Enzo Acosta",
    "club": {
@@ -113,17 +124,6 @@
    },
    "valor": 4,
    "partidos": 6
-  },
-  {
-   "id": 1992,
-   "jugador": "Alexis Roda",
-   "club": {
-    "id": 150,
-    "nombre": "LMJ eSports",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-150-1793806728684.webp"
-   },
-   "valor": 3,
-   "partidos": 3
   }
  ]
 }

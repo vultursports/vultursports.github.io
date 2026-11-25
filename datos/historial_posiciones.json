@@ -121,11 +121,11 @@
   },
   "2026-11-24": {
    "pos": {
-    "pueblomanya": 1,
-    "infinitx": 2,
-    "allboyscantera": 3,
-    "attlasesports": 4,
-    "almacriolla": 5,
+    "allboyscantera": 1,
+    "pueblomanya": 2,
+    "infinitx": 3,
+    "almacriolla": 4,
+    "attlasesports": 5,
     "nhp20": 6,
     "vidonbarcba": 7,
     "atorrantesfc": 8,
@@ -142,7 +142,7 @@
     "cacolegiales": 19,
     "familiadefensor": 20
    },
-   "pj_max": 8
+   "pj_max": 9
   }
  },
  "lva-1d8d2b5c": {
@@ -305,10 +305,10 @@
   },
   "2026-11-24": {
    "pos": {
-    "cerritoxxi": 1,
-    "deportivocentro": 2,
-    "villasancarlos": 3,
-    "ricurafc": 4,
+    "deportivocentro": 1,
+    "villasancarlos": 2,
+    "ricurafc": 3,
+    "cerritoxxi": 4,
     "unitedmitofc": 5,
     "sudaesports": 6,
     "attlasesports": 7,

@@ -12,7 +12,7 @@
   "nombre": "Tercera",
   "nivel": 3
  },
- "jornadasJugadas": 8,
+ "jornadasJugadas": 9,
  "jornadasTotales": 19,
  "formato": {
   "esPrimera": false,
@@ -28,6 +28,24 @@
  "filas": [
   {
    "posicion": 1,
+   "club": {
+    "id": 129,
+    "nombre": "AllBoysCantera",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp"
+   },
+   "pj": 9,
+   "g": 7,
+   "e": 2,
+   "p": 0,
+   "gf": 12,
+   "gc": 0,
+   "dg": 12,
+   "descuento": 0,
+   "pts": 23,
+   "zona": "ASCENSO"
+  },
+  {
+   "posicion": 2,
    "club": {
     "id": 168,
     "nombre": "Pueblo Manya",
@@ -45,7 +63,7 @@
    "zona": "ASCENSO"
   },
   {
-   "posicion": 2,
+   "posicion": 3,
    "club": {
     "id": 148,
     "nombre": "InfinitX",
@@ -60,60 +78,42 @@
    "dg": 13,
    "descuento": 0,
    "pts": 21,
-   "zona": "ASCENSO"
-  },
-  {
-   "posicion": 3,
-   "club": {
-    "id": 129,
-    "nombre": "AllBoysCantera",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp"
-   },
-   "pj": 8,
-   "g": 6,
-   "e": 2,
-   "p": 0,
-   "gf": 9,
-   "gc": 0,
-   "dg": 9,
-   "descuento": 0,
-   "pts": 20,
    "zona": "REDUCIDO"
   },
   {
    "posicion": 4,
    "club": {
-    "id": 116,
-    "nombre": "Attlas eSports",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-661-1793146787035.webp"
+    "id": 124,
+    "nombre": "ALMA CRIOLLA",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp"
    },
-   "pj": 7,
+   "pj": 8,
    "g": 5,
-   "e": 0,
-   "p": 2,
-   "gf": 10,
-   "gc": 4,
-   "dg": 6,
+   "e": 2,
+   "p": 1,
+   "gf": 18,
+   "gc": 5,
+   "dg": 13,
    "descuento": 0,
-   "pts": 15,
+   "pts": 17,
    "zona": "REDUCIDO"
   },
   {
    "posicion": 5,
    "club": {
-    "id": 124,
-    "nombre": "ALMA CRIOLLA",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp"
+    "id": 116,
+    "nombre": "Attlas eSports",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-661-1793146787035.webp"
    },
-   "pj": 7,
-   "g": 4,
-   "e": 2,
-   "p": 1,
-   "gf": 15,
-   "gc": 4,
-   "dg": 11,
+   "pj": 8,
+   "g": 5,
+   "e": 1,
+   "p": 2,
+   "gf": 11,
+   "gc": 5,
+   "dg": 6,
    "descuento": 0,
-   "pts": 14,
+   "pts": 16,
    "zona": "REDUCIDO"
   },
   {
@@ -123,15 +123,15 @@
     "nombre": "NHP 20",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-153-1793999278932.webp"
    },
-   "pj": 8,
+   "pj": 9,
    "g": 4,
-   "e": 2,
+   "e": 3,
    "p": 2,
-   "gf": 12,
-   "gc": 5,
+   "gf": 13,
+   "gc": 6,
    "dg": 7,
    "descuento": 0,
-   "pts": 14,
+   "pts": 15,
    "zona": "REDUCIDO"
   },
   {
@@ -177,13 +177,13 @@
     "nombre": "DeportivoFumeta",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-793-1793215711655.webp"
    },
-   "pj": 7,
+   "pj": 8,
    "g": 4,
    "e": 1,
-   "p": 2,
-   "gf": 9,
-   "gc": 5,
-   "dg": 4,
+   "p": 3,
+   "gf": 10,
+   "gc": 8,
+   "dg": 2,
    "descuento": 0,
    "pts": 13,
    "zona": "REDUCIDO"
@@ -249,13 +249,13 @@
     "nombre": "Celestiales",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp"
    },
-   "pj": 8,
+   "pj": 9,
    "g": 2,
    "e": 2,
-   "p": 4,
+   "p": 5,
    "gf": 4,
-   "gc": 9,
-   "dg": -5,
+   "gc": 12,
+   "dg": -8,
    "descuento": 0,
    "pts": 8,
    "zona": null
