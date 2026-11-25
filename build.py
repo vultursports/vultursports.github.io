@@ -438,7 +438,7 @@ def main():
 
     for p in partidos:
         p["empezo"] = p["dt"] <= ahora
-    # La tarjeta principal muestra "Se está jugando" hasta que empieza el siguiente partido de la misma
+    # La tarjeta principal muestra "En juego" hasta que empieza el siguiente partido de la misma
     # noche; si es el último de la noche, durante 30 minutos. Después pasa sola al siguiente.
     EN_JUEGO = timedelta(minutes=30)
     orden = sorted(partidos, key=lambda p: p["dt"])

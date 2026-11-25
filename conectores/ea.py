@@ -50,6 +50,10 @@ def _equipo(jug: list) -> dict:
             "nota": round(sum(notas) / len(notas), 2) if notas else None}
 
 
+def _max_recibidos(m: dict, cid: str) -> int:
+    return max((_i(x.get("goalsconceded")) for x in ((m.get("players") or {}).get(cid) or {}).values()), default=0)
+
+
 def normalizar(m: dict, club_id: str) -> dict | None:
     clubs = m.get("clubs") or {}
     if club_id not in clubs or len(clubs) != 2:
@@ -65,6 +69,9 @@ def normalizar(m: dict, club_id: str) -> dict | None:
         # Goles que hicieron los jugadores: EA pone 3-0 técnico si alguien abandona, aunque nadie haya
         # hecho goles; esto muestra lo que pasó en la cancha (sin contar goles en contra)
         "goles_jugadores": [sum(j["goles"] for j in jn), sum(j["goles"] for j in jr)],
+        # Goles según lo que recibió cada equipo (el máximo de "goalsconceded" de sus jugadores): cuenta
+        # también los goles de un jugador al que sacaron antes del final (EA vacía su registro) y los en contra
+        "goles_recibidos": [_max_recibidos(m, rid), _max_recibidos(m, club_id)],
         "minutos": round(max((j["segundos"] for j in jn + jr), default=0) / 60),
         "abandono": nos.get("winnerByDnf") == "1" or riv.get("winnerByDnf") == "1",
         "rival": {"nombre": ((riv.get("details") or {}).get("name") or "").strip(), "ea_id": rid},
@@ -157,9 +164,20 @@ def marcadores(m: dict) -> set:
 
 
 def marcador_seguro(m: dict) -> tuple | None:
-    """El marcador solo es confiable si EA y los goles de los jugadores dicen lo mismo."""
+    """El marcador solo es confiable si EA y los goles de los jugadores dicen lo mismo, o si lo
+    confirman los goles que recibió cada equipo.
+
+    Lo segundo cubre los goles que no quedan en ningún jugador: los de uno al que sacaron del lobby
+    antes de que cierre el partido (EA deja su registro vacío) y los goles en contra. Contra
+    DeportivoFumeta (2026-11-25) EA dio 3-0 con 0 goles de jugadores porque expulsaron al autor de
+    los 3 al final, pero los rivales tenían 3 recibidos. Los 3-0 técnicos falsos (AllBoysCantera,
+    Marpla FC) tienen 0 recibidos de los dos lados y se descartan."""
     s = marcadores(m)
-    return next(iter(s)) if len(s) == 1 else None
+    if len(s) == 1:
+        return next(iter(s))
+    if m.get("goles_recibidos") and tuple(m["goles_recibidos"]) == (m["gf"], m["gc"]):
+        return m["gf"], m["gc"]
+    return None
 MIN_PARECIDO_SIN_RESULTADO = 0.6
 
 

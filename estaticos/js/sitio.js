@@ -12,7 +12,7 @@ VS.nocheHoy = () => new Date(Date.now() - 9 * 36e5).toISOString().slice(0, 10);
 VS.diaHoy = () => new Date(Date.now() - 3 * 36e5).toISOString().slice(0, 10);
 
 // Próximo partido: cada tarjeta muestra la cuenta regresiva; cuando un partido empieza, su tarjeta dice
-// "Se está jugando" hasta que empieza el siguiente de esa noche (o 30 minutos si es el último, data-fin)
+// "En juego" hasta que empieza el siguiente de esa noche (o 30 minutos si es el último, data-fin)
 // y después la página pasa sola al siguiente partido.
 // En las listas, un partido que ya empezó y no tiene resultado muestra "?" con "Ver detalles".
 VS.alCargar(() => {
@@ -29,7 +29,7 @@ VS.alCargar(() => {
       const out = actual.querySelector(".cuenta");
       const ms = new Date(actual.dataset.inicio).getTime() - ahora;
       out.classList.toggle("jugando", ms <= 0);
-      if (ms <= 0) out.textContent = "Se está jugando";
+      if (ms <= 0) out.textContent = "En juego";
       else {
         const d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
         out.textContent = d > 0 ? `Faltan ${d} d ${h} h` : h > 0 ? `Faltan ${h} h ${String(m).padStart(2, "0")} min` : `Faltan ${m} min`;

@@ -156,6 +156,34 @@ class DatosEA(unittest.TestCase):
         p2 = [self.liga("n", "2026-11-20T02:00:00Z", "MARPLA FC", None, None)]
         self.assertEqual(ea.unir(p2, {"2": real}), {})
 
+    def test_goles_perdidos_de_un_expulsado(self):
+        """Al goleador lo sacaron del lobby al final: EA dejó su registro vacío y perdió sus goles,
+        pero los rivales tienen los goles recibidos."""
+        from conectores import ea
+        fumeta = {**self.ea("1", "2026-11-25T01:59:30Z", "DeportivoFumeta", 3, 0), "goles_jugadores": [0, 0],
+                  "goles_recibidos": [3, 0]}
+        self.assertEqual(ea.marcador_seguro(fumeta), (3, 0))
+        p = [self.liga("f", "2026-11-25T01:30:00Z", "DeportivoFumeta", None, None)]
+        self.assertEqual(ea.unir(p, {"1": fumeta})["f"]["id"], "1")  # resultado provisorio
+        # 3-0 técnico falso (fue 0-0, AllBoysCantera): nadie recibió goles, no se acepta
+        allboys = {**self.ea("2", "2026-11-24T01:53:56Z", "AllBoysCantera", 3, 0), "goles_jugadores": [0, 0],
+                   "goles_recibidos": [0, 0]}
+        self.assertIsNone(ea.marcador_seguro(allboys))
+        # Partido guardado antes de existir el dato: se sigue exigiendo que coincidan los goles de los jugadores
+        self.assertIsNone(ea.marcador_seguro({**fumeta, "goles_recibidos": None}))
+
+    def test_goles_recibidos_desde_ea(self):
+        from conectores import ea
+        jug = lambda n, recib, seg=5600: {f"p{n}{k}": {"playername": f"j{k}", "goalsconceded": str(recib), "goals": "0",
+                                                       "secondsPlayed": str(seg), "rating": "7"} for k in range(3)}
+        crudo = {"matchId": 9, "timestamp": 1795571970,
+                 "clubs": {"1": {"goals": "3"}, "2": {"goals": "0", "details": {"name": "Rival"}}},
+                 "players": {"1": {**jug("a", 0), "vacio": {"playername": "x", "goalsconceded": "0", "secondsPlayed": "0", "rating": "3.00"}},
+                             "2": {**jug("b", 3), "suplente": {"playername": "s", "goalsconceded": "1", "secondsPlayed": "900", "rating": "6"}}}}
+        n = ea.normalizar(crudo, "1")
+        self.assertEqual(n["goles_recibidos"], [3, 0])  # el máximo: un suplente que entró tarde recibió menos
+        self.assertEqual(ea.marcador_seguro(n), (3, 0))
+
     def test_nombres_parecidos(self):
         from conectores import ea
         self.assertEqual(ea.parecido("BOCA   JUNIORS", "BOCA JUNIORS"), 1.0)
