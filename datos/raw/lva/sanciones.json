@@ -1,5 +1,386 @@
 [
  {
+  "id": "b6fc5636-9e36-4b41-8d4d-7648ae9c745e",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+  "player_id": "42a0ed0c-ffc3-4224-8f24-149470891aaf",
+  "match_id": "2e24948d-5606-4c53-a1d0-82ad1183bc72",
+  "sanction_type": "omision_reporte",
+  "reason": "Omisión en el reporte obligatorio de partido (> 19:00 hs) - Fecha 16",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 16",
+  "match_to_serve_stage": null,
+  "status": "served",
+  "is_locked": true,
+  "notes": "Sanción aplicada formalmente por omisión de reporte para el club Potrero eSport.",
+  "created_at": "2026-11-22T18:17:55.958145+00:00",
+  "updated_at": "2026-11-25T03:00:29.855+00:00",
+  "player": {
+   "id": "42a0ed0c-ffc3-4224-8f24-149470891aaf",
+   "name": "Lucas Colman ",
+   "teams": {
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+   },
+   "game_user": "Colman39_",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Potrero eSport",
+   "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+  }
+ },
+ {
+  "id": "b37ac974-1839-4f9f-bca6-b2da6757927b",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+  "player_id": "42a0ed0c-ffc3-4224-8f24-149470891aaf",
+  "match_id": "d44ef01f-0cb8-418f-bfc7-3c0856ab4852",
+  "sanction_type": "omision_reporte",
+  "reason": "Omisión en el reporte obligatorio de partido (> 19:00 hs) - Fecha 15",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 15",
+  "match_to_serve_stage": null,
+  "status": "served",
+  "is_locked": true,
+  "notes": "Sanción aplicada formalmente por omisión de reporte para el club Potrero eSport.",
+  "created_at": "2026-11-22T18:17:43.9258+00:00",
+  "updated_at": "2026-11-25T03:00:28.775+00:00",
+  "player": {
+   "id": "42a0ed0c-ffc3-4224-8f24-149470891aaf",
+   "name": "Lucas Colman ",
+   "teams": {
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+   },
+   "game_user": "Colman39_",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Potrero eSport",
+   "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+  }
+ },
+ {
+  "id": "9a784299-db0e-4163-96c3-083fa0715f72",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
+  "player_id": "bb040a39-7363-4b36-95b1-c507d319a3d9",
+  "match_id": "fb7ce87f-cb8b-4716-82a8-62c8b2f4a95c",
+  "sanction_type": "omision_reporte",
+  "reason": "Omisión en el reporte obligatorio de partido (> 19:00 hs) - Fecha 15",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 15",
+  "match_to_serve_stage": null,
+  "status": "served",
+  "is_locked": true,
+  "notes": "Sanción aplicada formalmente por omisión de reporte para el club Celestiales .",
+  "created_at": "2026-11-22T18:17:40.039784+00:00",
+  "updated_at": "2026-11-25T03:00:28.248+00:00",
+  "player": {
+   "id": "bb040a39-7363-4b36-95b1-c507d319a3d9",
+   "name": "Leonardo Castrillon",
+   "teams": {
+    "name": "Celestiales ",
+    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
+   },
+   "game_user": "Pela1982",
+   "photo_url": null,
+   "nationality": "UY"
+  },
+  "team": {
+   "name": "Celestiales ",
+   "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
+  }
+ },
+ {
+  "id": "6747ef06-ace8-48d7-aa0c-86b4f32f03f0",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+  "player_id": "fc0de4c4-25d9-434d-8e76-7889e685a17a",
+  "match_id": "336c2ffc-ce0d-41ce-b268-bac6c3c35d0a",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 13",
+  "match_to_serve_stage": "Fecha 14",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-18T02:51:23.826449+00:00",
+  "updated_at": "2026-11-18T11:44:15.572+00:00",
+  "player": {
+   "id": "fc0de4c4-25d9-434d-8e76-7889e685a17a",
+   "name": "Agustín Díaz ",
+   "teams": {
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
+   },
+   "game_user": "Patas-sinonumo8",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "MQ SAVIO FC",
+   "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
+  }
+ },
+ {
+  "id": "9450bfc9-2d46-455e-9462-c6482af208ef",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+  "player_id": "05d83265-c2f0-4f70-9d8b-daaea39a978a",
+  "match_id": "736850c5-2c30-4158-9515-5894bf6bf182",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 12",
+  "match_to_serve_stage": "Fecha 13",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-13T14:51:23.504932+00:00",
+  "updated_at": "2026-11-18T11:33:19.469+00:00",
+  "player": {
+   "id": "05d83265-c2f0-4f70-9d8b-daaea39a978a",
+   "name": "thiago amen",
+   "teams": {
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+   },
+   "game_user": "thiagoamen_5",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Potrero eSport",
+   "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+  }
+ },
+ {
+  "id": "4a770760-d535-495d-9d19-7625dcabd2f8",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
+  "player_id": "32d87815-0f60-4687-a4fe-d6518a171d4c",
+  "match_id": "40268f00-b8e6-4461-85b3-fcbe9272d976",
+  "sanction_type": "omision_reporte",
+  "reason": "Omisión en el reporte obligatorio de partido (> 19:00 hs) - Fecha 10",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 10",
+  "match_to_serve_stage": null,
+  "status": "served",
+  "is_locked": true,
+  "notes": "Sanción aplicada formalmente por omisión de reporte para el club MICROCORTE FC.",
+  "created_at": "2026-11-12T00:29:29.834067+00:00",
+  "updated_at": "2026-11-13T04:12:47.802+00:00",
+  "player": {
+   "id": "32d87815-0f60-4687-a4fe-d6518a171d4c",
+   "name": "PampaXeneize12",
+   "teams": {
+    "name": "MICROCORTE FC",
+    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+   },
+   "game_user": "PampaXeneize12",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "MICROCORTE FC",
+   "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+  }
+ },
+ {
+  "id": "7391faf8-7459-4aab-83fd-c3d742980b5b",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
+  "player_id": "32d87815-0f60-4687-a4fe-d6518a171d4c",
+  "match_id": "7102d8d1-c57c-4df9-893e-77cd733de3eb",
+  "sanction_type": "omision_reporte",
+  "reason": "Omisión en el reporte obligatorio de partido (> 19:00 hs) - Fecha 9",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 9",
+  "match_to_serve_stage": null,
+  "status": "served",
+  "is_locked": true,
+  "notes": "Sanción aplicada formalmente por omisión de reporte para el club MICROCORTE FC.",
+  "created_at": "2026-11-12T00:28:35.317456+00:00",
+  "updated_at": "2026-11-12T00:30:08.409+00:00",
+  "player": {
+   "id": "32d87815-0f60-4687-a4fe-d6518a171d4c",
+   "name": "PampaXeneize12",
+   "teams": {
+    "name": "MICROCORTE FC",
+    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+   },
+   "game_user": "PampaXeneize12",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "MICROCORTE FC",
+   "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+  }
+ },
+ {
+  "id": "ee7589c6-4abd-4b6c-adb0-bccadf6bd0c8",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
+  "player_id": "9f00ec26-351a-49ac-9e91-390532d3787c",
+  "match_id": "c4af8536-be86-45ea-9631-c86771b7957f",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 6",
+  "match_to_serve_stage": "Fecha 7",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-04T04:02:33.726837+00:00",
+  "updated_at": "2026-11-06T12:41:10.498+00:00",
+  "player": {
+   "id": "9f00ec26-351a-49ac-9e91-390532d3787c",
+   "name": "MOPA",
+   "teams": {
+    "name": "Sequence FC",
+    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   },
+   "game_user": "SchneiderTota",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Sequence FC",
+   "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+  }
+ },
+ {
+  "id": "14d1a342-2aa3-44e6-8872-32d746943cf5",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+  "player_id": "c5997adf-7826-4207-b548-293d30708a89",
+  "match_id": "7bd458e0-6348-455e-a5ac-a9b9b80ae130",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 6",
+  "match_to_serve_stage": "Fecha 7",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-11-04T03:05:16.084261+00:00",
+  "updated_at": "2026-11-06T12:41:11.558+00:00",
+  "player": {
+   "id": "c5997adf-7826-4207-b548-293d30708a89",
+   "name": "Matias rojas",
+   "teams": {
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+   },
+   "game_user": "Elmoraditoo ",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Nacional de uy",
+   "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+  }
+ },
+ {
+  "id": "66b9eb57-d7e0-48de-bb73-814912b80fc3",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
+  "player_id": "2ebfdde0-9100-4348-8899-dc811eb28607",
+  "match_id": "3ba3e7e0-bfcc-4a3c-8875-393fc5ebfd91",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 3",
+  "match_to_serve_stage": "Fecha 4",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-10-30T20:52:29.724264+00:00",
+  "updated_at": "2026-11-03T12:42:08.855+00:00",
+  "player": {
+   "id": "2ebfdde0-9100-4348-8899-dc811eb28607",
+   "name": "Nicolas alberto celis rey ",
+   "teams": {
+    "name": "Fc Echeverria ",
+    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+   },
+   "game_user": "Uru16-nicocelis ",
+   "photo_url": null,
+   "nationality": "UY"
+  },
+  "team": {
+   "name": "Fc Echeverria ",
+   "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+  }
+ },
+ {
+  "id": "05f7699d-a6d6-4457-9d4e-4628f64c5d4b",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "7c547535-04ac-45a6-9713-5077073d1d54",
+  "player_id": "792c60ed-bd7f-472a-b8fc-6c0f04d64cbd",
+  "match_id": "822acdea-86e4-4fd3-97ab-d1afb6aba180",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 4",
+  "match_to_serve_stage": "Fecha 5",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-10-30T20:18:26.208542+00:00",
+  "updated_at": "2026-11-04T11:54:43.601+00:00",
+  "player": {
+   "id": "792c60ed-bd7f-472a-b8fc-6c0f04d64cbd",
+   "name": "Federico blanco",
+   "teams": null,
+   "game_user": "n3mathialber",
+   "photo_url": null,
+   "nationality": "AR"
+  },
+  "team": {
+   "name": "Zenthor FC",
+   "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+  }
+ },
+ {
+  "id": "11c7bc98-71fc-4428-9570-4e201472abce",
+  "tournament_id": "ae5fc8e3-dff2-4744-9c51-57a06fce5752",
+  "team_id": "43f34c4b-a172-41b8-af2d-7b3ecb6e06e0",
+  "player_id": "d766256b-2fb1-42ef-98b9-c9d84e6fef7f",
+  "match_id": "d700b820-4323-47ff-b912-f2d05c052a3e",
+  "sanction_type": "tarjeta_roja",
+  "reason": "Expulsión directa (Tarjeta Roja) reportada en acta oficial",
+  "matches_count": 1,
+  "match_applied_stage": "Fecha 1",
+  "match_to_serve_stage": "Fecha 2",
+  "status": "served",
+  "is_locked": true,
+  "notes": "Asentada automáticamente desde el reporte del partido",
+  "created_at": "2026-10-29T12:47:04.165318+00:00",
+  "updated_at": "2026-10-29T13:07:08.43+00:00",
+  "player": {
+   "id": "d766256b-2fb1-42ef-98b9-c9d84e6fef7f",
+   "name": "RAPANDA",
+   "teams": {
+    "name": "RealKsporT",
+    "logo_url": "https://i.ibb.co/5WpTrrD1/5102781702022565359.jpg"
+   },
+   "game_user": "RAPANDA_youtube",
+   "photo_url": null,
+   "nationality": "PE"
+  },
+  "team": {
+   "name": "RealKsporT",
+   "logo_url": "https://i.ibb.co/5WpTrrD1/5102781702022565359.jpg"
+  }
+ },
+ {
   "id": "0d705169-29d5-4f30-b44f-f57dcb001a83",
   "tournament_id": "1d8d2b5c-659a-402a-93d2-e345ef01ebf6",
   "team_id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
