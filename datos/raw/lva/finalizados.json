@@ -94,5 +94,13 @@
  "1d8d2b5c-659a-402a-93d2-e345ef01ebf6": {
   "nombre": "Copa Argentina",
   "con_vultur": true
+ },
+ "ae5fc8e3-dff2-4744-9c51-57a06fce5752": {
+  "nombre": "2da DiV - Legacy",
+  "con_vultur": false
+ },
+ "ecfa9127-9bb4-4ac5-8d73-8355b45a21b1": {
+  "nombre": "1ra DiV - Legacy",
+  "con_vultur": true
  }
 }

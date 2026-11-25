@@ -29,6 +29,24 @@
   {
    "posicion": 1,
    "club": {
+    "id": 148,
+    "nombre": "InfinitX",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-904-1793284842685.webp"
+   },
+   "pj": 8,
+   "g": 8,
+   "e": 0,
+   "p": 0,
+   "gf": 15,
+   "gc": 1,
+   "dg": 14,
+   "descuento": 0,
+   "pts": 24,
+   "zona": "ASCENSO"
+  },
+  {
+   "posicion": 2,
+   "club": {
     "id": 168,
     "nombre": "Pueblo Manya",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
@@ -45,7 +63,7 @@
    "zona": "ASCENSO"
   },
   {
-   "posicion": 2,
+   "posicion": 3,
    "club": {
     "id": 129,
     "nombre": "AllBoysCantera",
@@ -60,24 +78,6 @@
    "dg": 12,
    "descuento": 0,
    "pts": 23,
-   "zona": "ASCENSO"
-  },
-  {
-   "posicion": 3,
-   "club": {
-    "id": 148,
-    "nombre": "InfinitX",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-904-1793284842685.webp"
-   },
-   "pj": 7,
-   "g": 7,
-   "e": 0,
-   "p": 0,
-   "gf": 14,
-   "gc": 1,
-   "dg": 13,
-   "descuento": 0,
-   "pts": 21,
    "zona": "REDUCIDO"
   },
   {
@@ -375,13 +375,13 @@
     "nombre": "Familia Defensor",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-184-1794324693636.webp"
    },
-   "pj": 7,
+   "pj": 8,
    "g": 0,
    "e": 0,
-   "p": 7,
+   "p": 8,
    "gf": 2,
-   "gc": 15,
-   "dg": -13,
+   "gc": 16,
+   "dg": -14,
    "descuento": 0,
    "pts": 0,
    "zona": "DESCENSO"
