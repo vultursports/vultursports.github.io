@@ -325,7 +325,7 @@ def completar_con_ea(partidos: list, ajustes: dict, ahora: datetime | None = Non
                 s["ea"] = jug[k(s["alias"])]
         if not p.get("stats") and p.get("resultado"):
             # La liga no publicó sus estadísticas: se muestran las de EA (solo en el partido)
-            p["ea_jugadores"] = sorted(m["jugadores"], key=lambda j: -(j["nota"] or 0))
+            p["ea_jugadores"] = sorted((dict(j) for j in m["jugadores"]), key=lambda j: -(j["nota"] or 0))
         eq = p.get("equipo_stats") or {}
         if not (eq.get("nosotros") and eq.get("rival")) and m.get("equipo"):
             p["equipo_stats"], p["equipo_stats_ea"] = m["equipo"], True
@@ -615,7 +615,7 @@ def main():
     plantel_datos["form"] = {p["id"]: p["formacion"] for p in partidos if p.get("formacion")}
     for p in partidos:
         p["once"] = alineacion(p.get("stats", []), ficha_de) if p.get("resultado") else []
-        for s in p.get("stats", []):
+        for s in p.get("stats", []) + (p.get("ea_jugadores") or []):
             s["pagina"] = (ficha_de.get(jug_mod.clave(s.get("alias", ""))) or {}).get("pagina")
     for p in partidos:
         p["sancionados"] = []

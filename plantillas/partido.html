@@ -171,7 +171,7 @@
       <tbody>
       {% for s in p.ea_jugadores %}
         <tr{% if s.mom %} class="nosotros"{% endif %}>
-          <th scope="row" class="eq"><div class="eqi"><span>{{ s.alias }}</span>{% if s.mom %}<b class="mvp" title="Figura según EA">Figura</b>{% endif %}</div></th>
+          <th scope="row" class="eq">{% if s.pagina %}<a class="eqi" href="{{ s.pagina }}">{% else %}<div class="eqi">{% endif %}<span>{{ s.alias }}</span>{% if s.mom %}<b class="mvp" title="MVP según EA SPORTS FC (la liga todavía no publicó el suyo)">MVP</b>{% endif %}{% if s.pagina %}</a>{% else %}</div>{% endif %}</th>
           <td>{{ s.goles or '' }}</td>
           <td>{{ s.asistencias or '' }}</td>
           <td>{{ '%.1f'|format(s.nota) if s.nota is not none else '' }}</td>
