@@ -15,6 +15,22 @@
   "filas": [
    {
     "pos": 1,
+    "equipo": "Pueblo Manya",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp",
+    "pj": 9,
+    "g": 7,
+    "e": 2,
+    "p": 0,
+    "gf": 16,
+    "gc": 3,
+    "dg": 13,
+    "pts": 23,
+    "zona": "ascenso",
+    "es_vultur": false,
+    "mov": 0
+   },
+   {
+    "pos": 2,
     "equipo": "AllBoysCantera",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp",
     "pj": 9,
@@ -27,23 +43,7 @@
     "pts": 23,
     "zona": "ascenso",
     "es_vultur": false,
-    "mov": 2
-   },
-   {
-    "pos": 2,
-    "equipo": "Pueblo Manya",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp",
-    "pj": 8,
-    "g": 7,
-    "e": 1,
-    "p": 0,
-    "gf": 16,
-    "gc": 3,
-    "dg": 13,
-    "pts": 22,
-    "zona": "ascenso",
-    "es_vultur": false,
-    "mov": -1
+    "mov": 1
    },
    {
     "pos": 3,
@@ -65,14 +65,14 @@
     "pos": 4,
     "equipo": "ALMA CRIOLLA",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp",
-    "pj": 8,
+    "pj": 9,
     "g": 5,
-    "e": 2,
+    "e": 3,
     "p": 1,
     "gf": 18,
     "gc": 5,
     "dg": 13,
-    "pts": 17,
+    "pts": 18,
     "zona": "reducido",
     "es_vultur": false,
     "mov": 1
@@ -111,38 +111,54 @@
    },
    {
     "pos": 7,
-    "equipo": "Vidon Bar CBA",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-708-1793160433231.webp",
-    "pj": 8,
-    "g": 4,
-    "e": 2,
-    "p": 2,
-    "gf": 8,
-    "gc": 3,
-    "dg": 5,
-    "pts": 14,
-    "zona": "reducido",
-    "es_vultur": false,
-    "mov": 2
-   },
-   {
-    "pos": 8,
     "equipo": "AtorrantesFC",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-660-1793146525424.webp",
-    "pj": 8,
+    "pj": 9,
     "g": 4,
-    "e": 2,
+    "e": 3,
     "p": 2,
     "gf": 9,
     "gc": 8,
     "dg": 1,
+    "pts": 15,
+    "zona": "reducido",
+    "es_vultur": false,
+    "mov": -3
+   },
+   {
+    "pos": 8,
+    "equipo": "Vidon Bar CBA",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-708-1793160433231.webp",
+    "pj": 9,
+    "g": 4,
+    "e": 2,
+    "p": 3,
+    "gf": 8,
+    "gc": 6,
+    "dg": 2,
     "pts": 14,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": -4
+    "mov": 1
    },
    {
     "pos": 9,
+    "equipo": "La Blanca Fc",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-155-1793989269922.webp",
+    "pj": 9,
+    "g": 4,
+    "e": 2,
+    "p": 3,
+    "gf": 10,
+    "gc": 9,
+    "dg": 1,
+    "pts": 14,
+    "zona": "reducido",
+    "es_vultur": false,
+    "mov": 1
+   },
+   {
+    "pos": 10,
     "equipo": "DeportivoFumeta",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-793-1793215711655.webp",
     "pj": 8,
@@ -155,10 +171,10 @@
     "pts": 13,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": -3
+    "mov": -4
    },
    {
-    "pos": 10,
+    "pos": 11,
     "equipo": "Vultur Sports",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-141-1793989433023.webp",
     "pj": 8,
@@ -169,25 +185,9 @@
     "gc": 8,
     "dg": 0,
     "pts": 11,
-    "zona": "reducido",
-    "es_vultur": true,
-    "mov": 2
-   },
-   {
-    "pos": 11,
-    "equipo": "La Blanca Fc",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-155-1793989269922.webp",
-    "pj": 8,
-    "g": 3,
-    "e": 2,
-    "p": 3,
-    "gf": 7,
-    "gc": 9,
-    "dg": -2,
-    "pts": 11,
     "zona": null,
-    "es_vultur": false,
-    "mov": -1
+    "es_vultur": true,
+    "mov": 1
    },
    {
     "pos": 12,
@@ -207,6 +207,22 @@
    },
    {
     "pos": 13,
+    "equipo": "JOVATOS JUNIORS",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-137-1793991216536.webp",
+    "pj": 9,
+    "g": 2,
+    "e": 3,
+    "p": 4,
+    "gf": 5,
+    "gc": 14,
+    "dg": -9,
+    "pts": 9,
+    "zona": null,
+    "es_vultur": false,
+    "mov": 0
+   },
+   {
+    "pos": 14,
     "equipo": "Celestiales",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp",
     "pj": 9,
@@ -219,23 +235,7 @@
     "pts": 8,
     "zona": null,
     "es_vultur": false,
-    "mov": 3
-   },
-   {
-    "pos": 14,
-    "equipo": "JOVATOS JUNIORS",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-137-1793991216536.webp",
-    "pj": 8,
-    "g": 2,
-    "e": 2,
-    "p": 4,
-    "gf": 5,
-    "gc": 14,
-    "dg": -9,
-    "pts": 8,
-    "zona": null,
-    "es_vultur": false,
-    "mov": -1
+    "mov": 2
    },
    {
     "pos": 15,
@@ -334,7 +334,7 @@
     "mov": -1
    }
   ],
-  "actualizado": "2026-11-25T13:01:01+00:00"
+  "actualizado": "2026-11-25T14:01:09+00:00"
  },
  {
   "id": "vpn-6449",
@@ -726,7 +726,7 @@
     "mov": null
    }
   ],
-  "actualizado": "2026-11-25T13:01:38+00:00"
+  "actualizado": "2026-11-25T14:01:44+00:00"
  },
  {
   "id": "lva-ecfa9127",
@@ -1061,6 +1061,6 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-25T13:02:58+00:00"
+  "actualizado": "2026-11-25T14:03:03+00:00"
  }
 ]
