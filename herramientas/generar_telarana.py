@@ -4,7 +4,7 @@ Dibuja una telaraña de rincón: hilos que salen del rincón en abanico y vuelta
 cuelgan un poco entre hilo e hilo (como las de verdad), con algunos tramos cortados y un par de
 hilos sueltos. Usa azar con semilla fija para que salga siempre igual.
 
-Uso:  python recursos/generar_telarana.py
+Uso:  python herramientas/generar_telarana.py
 """
 import math
 import random

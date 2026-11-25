@@ -106,7 +106,7 @@ def generar(partidos: list, hoy: bool, logos_ligas: dict, destino: Path) -> None
         if logo:
             im.alpha_composite(l2, (int(x0), 112 + (34 - l2.height) // 2))
         d.text((x0 + lw, 113), comp, font=fc, fill=PLATA)
-        izq, der = (escudo, p["rival"].get("escudo_grande") or p["rival"].get("escudo")), None
+        izq = (escudo, p["rival"].get("escudo_grande") or p["rival"].get("escudo"))
         nombres = ("VULTUR SPORTS", p["rival"]["nombre"].upper())
         if not p["local"]:
             izq = (izq[1], izq[0]); nombres = nombres[::-1]

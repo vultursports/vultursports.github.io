@@ -21,10 +21,6 @@ def clave(alias: str) -> str:
     return re.sub(r"[^a-z0-9]", "", sin_acentos.lower())
 
 
-# Posiciones que suman valla invicta (arquero y defensores), con los códigos de las tres ligas
-DEFENSIVAS = {"POR", "PO", "GK", "DFC", "LD", "LI", "LTD", "LTI", "CAD", "CAI"}
-
-
 def valla_invicta(p: dict, s: dict) -> bool:
     """Valla invicta tal como la publica la liga en el partido (solo VPN la publica por jugador)."""
     return bool(s.get("valla_invicta"))

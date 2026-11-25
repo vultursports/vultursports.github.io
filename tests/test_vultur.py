@@ -3,7 +3,6 @@
 Cubren lo que más fácil se rompe: la lectura de los datos de cada liga, la unión de jugadores y
 rivales, las correcciones de posiciones y que la web completa se genere sin errores.
 """
-import json
 import shutil
 import sys
 import tempfile

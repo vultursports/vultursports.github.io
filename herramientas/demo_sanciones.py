@@ -1,16 +1,18 @@
 """Genera una versión de PRUEBA del sitio en site-demo/ con sanciones y un choque de horarios
 inventados, para ver cómo se ven los avisos. No toca datos/ ni site/.
 
-Uso:  python demo_sanciones.py   y abrir site-demo/index.html con un servidor local.
+Uso:  python herramientas/demo_sanciones.py   y abrir site-demo/index.html con un servidor local.
 """
 import json
 import shutil
+import sys
 import tempfile
 from pathlib import Path
 
-import build
+RAIZ = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(RAIZ))
+import build  # noqa: E402
 
-RAIZ = Path(__file__).resolve().parent
 tmp = Path(tempfile.mkdtemp(prefix="vultur-demo-"))
 shutil.copytree(RAIZ / "datos", tmp / "datos")
 d = tmp / "datos"

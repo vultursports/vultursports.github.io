@@ -25,6 +25,7 @@ import og
 import rivales as riv_mod
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+VERSION = "1.0"  # versión de la web (ver CHANGELOG.md)
 RAIZ = Path(__file__).resolve().parent
 DATOS = RAIZ / "datos"
 SITE = RAIZ / "site"
@@ -863,6 +864,7 @@ def main():
                ligas_en_uso=[l for l in ligas.values() if any(p["liga"] == l["clave"] for p in partidos)])
 
     env = Environment(loader=FileSystemLoader(RAIZ / "plantillas"), autoescape=select_autoescape())
+    env.globals["version"] = VERSION
     SITE.mkdir(exist_ok=True)
     for viejo in SITE.iterdir():  # vaciar sin borrar la carpeta (en Windows puede estar en uso)
         shutil.rmtree(viejo) if viejo.is_dir() else viejo.unlink()

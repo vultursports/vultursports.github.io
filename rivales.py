@@ -20,7 +20,6 @@ from PIL import Image
 
 from jugadores import clave
 
-UMBRAL_ESCUDO = 50        # escudos prácticamente idénticos (de 256)
 UMBRAL_MISMO_NOMBRE = 160  # escudos parecidos (rediseñados, con relieve) cuando el nombre base coincide
 SEGUNDOS_EQUIPOS = re.compile(r"\b(reserva|cantera|academia|juvenil|sub ?\d+|b|ii|2)\b", re.I)
 SUFIJOS = re.compile(r"\b(e-?sports?|esp|esport|fc|cf|club|team)\b", re.I)

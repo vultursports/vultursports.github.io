@@ -555,7 +555,6 @@ class EscenariosRobot(unittest.TestCase):
 
     def test_vpug_temporada_nueva_no_cuenta_como_falla(self):
         # Empieza una temporada nueva de VPUG con pocos partidos: los de la anterior se conservan
-        from conectores import vpug
         with Escenario() as e:
             antes = [p for p in e.leer("partidos.json") if p["liga"] == "vpug"]
             if len(antes) < 11:
