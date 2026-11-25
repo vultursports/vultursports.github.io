@@ -54,8 +54,6 @@ def calcular_movimientos(tablas: dict) -> None:
     noche = (datetime.now(timezone(timedelta(hours=-3))) - timedelta(hours=6)).date().isoformat()
     clave = lambda s: re.sub(r"[^a-z0-9]", "", s.lower())
     for t in tablas.values():
-        if t.get("finalizada"):  # tabla final: quedan las flechas de la última fecha
-            continue
         filas = t.get("filas", [])
         if filas and all(f.get("pos_ant_fuente") for f in filas):
             for f in filas:
@@ -140,16 +138,27 @@ def main() -> int:
                                   "jugado": p["fecha_utc"], "detectado": ahora_iso()})
                 partidos[p["id"]] = p
             ahora = ahora_iso()
+            publicadas = set()  # tablas de torneos en juego
             for t in out["tablas"]:
+                # "terminado": tabla de un torneo que la liga ya dio por finalizado (se sigue leyendo
+                # por si carga resultados atrasados). Solo actualiza la tabla final que se está
+                # mostrando; si ya se quitó porque empezó otro torneo, no vuelve.
+                terminado = t.pop("terminado", False)
+                previa = tablas.get(t["id"])
+                if terminado and not previa:
+                    continue
                 t["actualizado"] = ahora
                 # Desde cuándo se publica (para saber qué torneo empezó después de que otro terminó)
-                t["desde"] = (tablas.get(t["id"]) or {}).get("desde") or ahora
+                t["desde"] = (previa or {}).get("desde") or ahora
+                if terminado:
+                    t["finalizada"] = previa.get("finalizada") or ahora
+                else:
+                    publicadas.add(t["id"])
                 tablas[t["id"]] = t
             # Torneos terminados: si la liga dejó de publicar una tabla y no nos quedan partidos por
             # jugar en ese torneo, queda como tabla final (con nuestro puesto y números de cierre)
             # hasta que la liga empiece a publicar la de un torneo nuevo; ahí se quita (los partidos
             # y estadísticas quedan en el historial).
-            publicadas = {t["id"] for t in out["tablas"]}
             pendientes = {p.get("competencia_id") for p in partidos.values()
                           if p["liga"] == clave and p.get("gf") is None and p.get("competencia_id")}
             for tid in [k for k, t in tablas.items() if t.get("liga") == clave and k not in publicadas and k not in pendientes]:

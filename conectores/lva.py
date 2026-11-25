@@ -15,6 +15,14 @@ from .base import RAW, guardar_raw
 
 SITIO = "https://ligavirtualargentina.com"
 ESTADOS = {"approved": "finalizado", "live": "en_vivo", "scheduled": "programado"}
+# Días desde nuestro último partido en que un torneo terminado se sigue leyendo (resultados atrasados)
+DIAS_RELEER_FIN = 14
+LEER_TABLAS = """() => [...document.querySelectorAll('table')].map(t =>
+    [...t.querySelectorAll('tbody tr')].map(tr => ({
+        celdas: [...tr.querySelectorAll('td')].map(td => td.innerText.trim()),
+        escudo: tr.querySelector('img') ? tr.querySelector('img').src : null,
+        clase: tr.querySelector('td') ? tr.querySelector('td').className : ''
+    })))"""
 
 
 def _torneo_de(url: str) -> str | None:
@@ -53,16 +61,22 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             if "/matches?" in url and t and isinstance(datos, list):
                 fixture[t] = datos
 
-        # Torneos terminados ("Ver Finalizados"): cada uno se revisa una sola vez y queda anotado
+        # Torneos terminados ("Ver Finalizados"): cada uno se revisa una vez y queda anotado. Los
+        # nuestros que terminaron hace poco se siguen leyendo (partidos y tabla) por si la LVA carga
+        # resultados atrasados: así la tabla final llega a los números definitivos.
         archivo_fin = RAW / "lva" / "finalizados.json"
         revisados = json.loads(archivo_fin.read_text(encoding="utf-8")) if archivo_fin.exists() else {}
         activos = {t for t, _ in torneos}
+        limite_fin = (datetime.now(timezone.utc) - timedelta(days=DIAS_RELEER_FIN)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        releer = {t for t, v in revisados.items() if v.get("con_vultur") and t not in activos
+                  and any(p.get("competencia_id") == f"lva-{t[:8]}" and p["fecha_utc"] >= limite_fin
+                          for p in partidos_previos.values())}
         nuevos_fin = []
         try:
             pg.click("text=Ver Finalizados")
             pg.wait_for_timeout(2500)
             for val, nom in pg.eval_on_selector_all("select option", "os => os.map(o => [o.value, o.text.trim()])"):
-                if val not in activos and val not in revisados:
+                if val not in activos and (val not in revisados or val in releer):
                     pg.select_option("select", val)
                     pg.wait_for_timeout(2000)
                     nuevos_fin.append((val, nom))
@@ -81,8 +95,10 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                 mios[tid] = (nombre, ms)
         guardar_raw("lva", "fixture", {t: fixture.get(t) for t, _ in torneos})
         if not mios:
+            # Sin torneos nuestros en juego (entre torneos): se conservan los partidos ya guardados
             nav.close()
-            return {"partidos": [], "tablas": []}
+            _anotar_finalizados(archivo_fin, revisados, nuevos_fin, mios)
+            return {"partidos": list(partidos_previos.values()), "tablas": []}
 
         team_id = next(m["home_team"]["id"] if nombre_club in m["home_team"]["name"].lower() else m["away_team"]["id"]
                        for _, ms in mios.values() for m in ms)
@@ -92,18 +108,31 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
         for tid, (nombre, _) in [(t, v) for t, v in mios.items() if t in activos]:
             pg.select_option("select", tid)
             pg.wait_for_timeout(2500)
-            filas = pg.evaluate("""() => [...document.querySelectorAll('table')].map(t =>
-                [...t.querySelectorAll('tbody tr')].map(tr => ({
-                    celdas: [...tr.querySelectorAll('td')].map(td => td.innerText.trim()),
-                    escudo: tr.querySelector('img') ? tr.querySelector('img').src : null,
-                    clase: tr.querySelector('td') ? tr.querySelector('td').className : ''
-                })))""")
+            filas = pg.evaluate(LEER_TABLAS)
             # Leyenda que publica la LVA debajo de la tabla ("REFERENCIAS: Ascenso/Campeón · Descenso")
             texto = pg.inner_text("main")
             refs = texto.split("REFERENCIAS:", 1)[1].strip().split("\n")[:4] if "REFERENCIAS:" in texto else []
             tabla = next((t for t in filas if any(nombre_club in " ".join(r["celdas"]).lower() for r in t)), None)
             if tabla:
                 tablas.append(_tabla(tid, nombre, tabla, nombre_club, refs))
+        # Tablas de los torneos nuestros que terminaron hace poco (se marcan como terminadas: solo
+        # actualizan una tabla final que todavía se muestra, nunca vuelven a aparecer solas)
+        fin_tabla = [t for t in mios if t not in activos]
+        if fin_tabla:
+            try:
+                pg.click("text=Ver Finalizados")
+                pg.wait_for_timeout(2500)
+                for tid in fin_tabla:
+                    pg.select_option("select", tid)
+                    pg.wait_for_timeout(2500)
+                    filas = pg.evaluate(LEER_TABLAS)
+                    texto = pg.inner_text("main")
+                    refs = texto.split("REFERENCIAS:", 1)[1].strip().split("\n")[:4] if "REFERENCIAS:" in texto else []
+                    tabla = next((t for t in filas if any(nombre_club in " ".join(r["celdas"]).lower() for r in t)), None)
+                    if tabla:
+                        tablas.append({**_tabla(tid, mios[tid][0], tabla, nombre_club, refs), "terminado": True})
+            except Exception as e:
+                print("  aviso LVA tablas finalizadas:", e)
 
         # 3) Estadísticas por jugador (la página carga las de todos los partidos del torneo)
         respuestas.clear()
@@ -195,10 +224,7 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                 "temporada": {"clave": comp_id, "nombre": _nombre_torneo(nombre)},
                 "stats": list(vistos.values()),
             })
-    for tid, nom in nuevos_fin:
-        revisados[tid] = {"nombre": nom, "con_vultur": tid in mios}
-    archivo_fin.parent.mkdir(parents=True, exist_ok=True)
-    archivo_fin.write_text(json.dumps(revisados, ensure_ascii=False, indent=1), encoding="utf-8")
+    _anotar_finalizados(archivo_fin, revisados, nuevos_fin, mios)
     ya = {p["id"] for p in partidos}
     claves_fin = {f"lva-{t[:8]}" for t, v in revisados.items() if v.get("con_vultur")}
     partidos += [p for p in partidos_previos.values() if p.get("competencia_id") in claves_fin and p["id"] not in ya]
@@ -274,6 +300,14 @@ def _num(x: str) -> int:
         return int(x.replace("+", "").strip())
     except ValueError:
         return 0
+
+
+def _anotar_finalizados(archivo, revisados: dict, nuevos_fin: list, mios: dict) -> None:
+    # Un torneo nuestro que se vuelve a leer sigue siendo nuestro aunque esta vez su fixture no cargue
+    for tid, nom in nuevos_fin:
+        revisados[tid] = {"nombre": nom, "con_vultur": tid in mios or bool((revisados.get(tid) or {}).get("con_vultur"))}
+    archivo.parent.mkdir(parents=True, exist_ok=True)
+    archivo.write_text(json.dumps(revisados, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 def _tabla(tid: str, nombre: str, filas: list, nombre_club: str, refs: list | None = None) -> dict:

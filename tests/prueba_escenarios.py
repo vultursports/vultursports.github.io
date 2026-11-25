@@ -484,6 +484,18 @@ class EscenariosRobot(unittest.TestCase):
             # Otra pasada sin torneo nuevo: sigue
             self.correr(e, {"vpn": FalsoConector(salida)})
             self.assertTrue([t for t in e.leer("tablas.json") if t["liga"] == "vpn"])
+            # La liga carga resultados atrasados del torneo terminado: la tabla final se actualiza
+            # y sigue siendo final
+            tid = tablas_vpn[0]["id"]
+            atrasada = json.loads(json.dumps(tablas_vpn[0]))
+            nos = next(f for f in atrasada["filas"] if f["es_vultur"])
+            nos["pts"] += 3
+            self.correr(e, {"vpn": FalsoConector(lambda previos: {"partidos": list(previos.values()),
+                                                                   "tablas": [{**atrasada, "terminado": True}]})})
+            t = next(t for t in e.leer("tablas.json") if t["id"] == tid)
+            self.assertTrue(t.get("finalizada"))
+            self.assertNotIn("terminado", t)
+            self.assertEqual(next(f for f in t["filas"] if f["es_vultur"])["pts"], nos["pts"])
             # Empieza el torneo siguiente: la tabla final se quita y queda la nueva
             nueva = json.loads(json.dumps(tablas_vpn[0]))
             nueva["id"] = "vpn-test-nuevo"
@@ -491,6 +503,10 @@ class EscenariosRobot(unittest.TestCase):
             self.assertEqual([t["id"] for t in e.leer("tablas.json") if t["liga"] == "vpn"], ["vpn-test-nuevo"])
             e.generar()
             self.assertNotIn("comp final liga-vpn", e.html("/"))
+            # Aunque la liga siga mostrando la del torneo terminado, ya no vuelve
+            self.correr(e, {"vpn": FalsoConector(lambda previos: {"partidos": list(previos.values()),
+                                                                   "tablas": [nueva, {**atrasada, "terminado": True}]})})
+            self.assertEqual([t["id"] for t in e.leer("tablas.json") if t["liga"] == "vpn"], ["vpn-test-nuevo"])
 
     def test_tabla_no_publicada_con_partidos_pendientes_se_conserva(self):
         with Escenario() as e:
@@ -529,7 +545,6 @@ class EscenariosRobot(unittest.TestCase):
             t = next((t for t in ts if t["liga"] == "lva"), None)
             if not t:
                 self.skipTest("sin tabla de LVA")
-            t.pop("finalizada", None)  # como tabla en curso (las finales no recalculan flechas)
             t["filas"].insert(0, {**t["filas"][0], "equipo": "Equipo Recién Llegado", "es_vultur": False})
             for i, f in enumerate(t["filas"]):
                 f["pos"] = i + 1
