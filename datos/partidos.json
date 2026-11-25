@@ -41712,9 +41712,9 @@
    "nombre": "CLUB ATLÉTICO PELULGA",
    "escudo": "https://i.ibb.co/5WGX3vvS/1000277359.png"
   },
-  "gf": null,
-  "gc": null,
-  "estado": "programado",
+  "gf": 1,
+  "gc": 0,
+  "estado": "finalizado",
   "url_origen": "https://ligavirtualargentina.com/fixture",
   "temporada": {
    "clave": "lva-ecfa9127",
