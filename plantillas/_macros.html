@@ -15,13 +15,13 @@
   <time class="p-hora{% if fecha %} con-fecha{% endif %}" datetime="{{ p.dt.isoformat() }}">{% if fecha %}{{ p.noche.strftime('%d/%m') }}<small>{{ p.hora }}</small>{% else %}{{ p.hora }}{% endif %}</time>
   <span class="p-rival">
     {% if p.rival.escudo %}<img src="{{ p.rival.escudo }}" alt="" width="28" height="28" loading="lazy">{% else %}<span class="sin-escudo" aria-hidden="true"></span>{% endif %}
-    <span><b>{% if p.rival_pagina %}<a class="a-rival" href="{{ p.rival_pagina }}">{{ p.rival.nombre }}</a>{% else %}{{ p.rival.nombre }}{% endif %}</b><small><abbr class="sigla" title="{{ p.liga_ui.nombre }}">{{ p.liga_ui.corto }}</abbr> {{ p.condicion }}, {{ p.jornada|lower }}{% if p.wo %}, <abbr class="wo" title="Ganado sin jugar: el rival no se presentó o se dio de baja">por W.O.</abbr>{% endif %}{% if p.sancionados and not p.resultado %}<span class="marca-sancion">, {{ p.sancionados|length }} {{ 'suspendido' if p.sancionados|length == 1 else 'suspendidos' }}</span>{% endif %}</small></span>
+    <span><b>{% if p.rival_pagina %}<a class="a-rival" href="{{ p.rival_pagina }}">{{ p.rival.nombre }}</a>{% else %}{{ p.rival.nombre }}{% endif %}</b><small><abbr class="sigla" title="{{ p.liga_ui.nombre }}">{{ p.liga_ui.corto }}</abbr> {{ p.condicion }}, {{ p.jornada|lower }}{% if p.sancionados and not p.resultado %}<span class="marca-sancion">, {{ p.sancionados|length }} {{ 'suspendido' if p.sancionados|length == 1 else 'suspendidos' }}</span>{% endif %}</small></span>
   </span>
   <span class="p-res">
     {% if p.resultado %}
       <a href="{{ p.pagina }}" aria-label="{{ {'g':'Ganamos','e':'Empatamos','p':'Perdimos'}[p.resultado] }} {{ p.gf }} a {{ p.gc }}, ver detalles">
         <span class="marcador">{{ p.gf }}<i>–</i>{{ p.gc }}</span>
-        <small class="ver-det">Ver detalles</small>
+        {% if p.wo %}<small class="ver-det wo-det" title="Definido sin jugar: {{ 'el rival no se presentó o se dio de baja' if p.resultado == 'g' else 'no nos presentamos' }}">Por W.O.</small>{% else %}<small class="ver-det">Ver detalles</small>{% endif %}
       </a>
     {% elif p.provisorio %}
       <a class="provisorio" href="{{ p.pagina }}" title="Resultado según EA SPORTS FC, en espera de que {{ p.liga_ui.corto }} cargue el resultado oficial" aria-label="Resultado provisorio {{ p.provisorio.gf }} a {{ p.provisorio.gc }} según EA, ver detalles">
@@ -34,12 +34,6 @@
       <a class="pendiente"{% if not empezo %} hidden{% endif %} href="{{ p.pagina }}" aria-label="Resultado todavía no cargado, ver detalles"><span class="marcador">?</span><small class="ver-det">Ver detalles</small></a>
     {% endif %}
   </span>
-  {% if p.goleadores or p.mvp %}
-  <p class="p-detalle">
-    {% if p.goleadores %}Goles: {% for n, g in p.goleadores %}{{ n }}{% if g > 1 %} ({{ g }}){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}.{% endif %}
-    {% if p.mvp %}<span class="mvp">MVP {{ p.mvp }}</span>{% endif %}
-  </p>
-  {% endif %}
 </li>
 {%- endmacro %}
 

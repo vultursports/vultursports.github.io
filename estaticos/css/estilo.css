@@ -228,6 +228,21 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
 @media (max-width: 420px) {
   .partido { grid-template-columns: 3rem 1fr auto; }
 }
+/* Todas las tarjetas de partido miden lo mismo: el nombre del rival ocupa hasta dos líneas
+   (se parte entre palabras, no se corta), la línea de liga/condición/fecha va siempre en una sola,
+   sin goles ni MVP (están en la página del partido) y el W.O. va debajo del marcador */
+.partido { grid-template-areas: "hora rival res"; height: 4.75rem; padding-block: 0; overflow: hidden; }
+.p-rival b { white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2;
+  overflow: hidden; overflow-wrap: break-word; line-height: 1.12; font-size: clamp(.9rem, 3.9vw, 1rem); }
+.p-rival small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+.wo-det { color: var(--dorado); text-decoration: none; font-weight: 600; }
+/* Celular: un poco menos de separación y letra de la línea de abajo según el ancho, para que entre entera */
+@media (max-width: 420px) {
+  .partido { column-gap: 8px; padding-right: 8px; }
+  .p-rival { gap: 7px; }
+  .p-rival small { font-size: clamp(.7rem, 3.25vw, .8rem); }
+  .p-res .ver { font-size: .72rem; }
+}
 
 /* Competencias / tablas */
 .comp { background: var(--asfalto); padding: 14px 14px 10px; margin-bottom: 16px; border-top: 3px solid var(--liga); }
