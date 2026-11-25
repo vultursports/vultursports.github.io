@@ -233,8 +233,9 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
    sin goles ni MVP (están en la página del partido) y el W.O. va debajo del marcador */
 .partido { grid-template-areas: "hora rival res"; height: 4.75rem; padding-block: 0; overflow: hidden; }
 .p-rival b { white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2;
-  overflow: hidden; overflow-wrap: break-word; line-height: 1.12; font-size: clamp(.9rem, 3.9vw, 1rem); }
-.p-rival small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+  overflow: hidden; overflow-wrap: break-word; line-height: 1.12; font-size: clamp(.9rem, 3.9vw, 1rem);
+  padding-bottom: 3px; } /* lugar para el subrayado rojo al pasar el mouse (si no, se recortaba) */
+.p-rival small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: -1px; }
 .wo-det { color: var(--dorado); text-decoration: none; font-weight: 600; }
 /* Celular: un poco menos de separación y letra de la línea de abajo según el ancho, para que entre entera */
 @media (max-width: 420px) {
