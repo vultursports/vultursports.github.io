@@ -877,6 +877,7 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
   .tabla.stats .mvp { font-size: .62rem; padding: 2px 3px 1px; }
   .tabla.stats .eqi { gap: 5px; }
   .tabla.stats .eqi span { max-width: 6.2rem; }
+  .tabla.stats .eqi:has(.mvp) span { width: 6.2rem; } /* la etiqueta MVP siempre en el mismo lugar */
 }
 @media (max-width: 400px) { .tabla.stats .ea-pases small { display: block; margin: 1px 0 0; } .tabla.stats th, .tabla.stats td { padding-inline: 2px; } }
 .ea-arquero { color: var(--plata); margin: 10px 0 0; }
