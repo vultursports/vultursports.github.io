@@ -122,7 +122,7 @@
         {% endif %}
       {% endfor %}
     </div>
-    <p class="fuente">{% if p.equipo_stats_ea %}Datos de EA SPORTS FC (la liga no los publica){% else %}Datos de EA publicados por {{ p.liga_ui.nombre }}{% endif %}. El porcentaje es la precisión (completados sobre intentados).</p>
+    <p class="fuente">{% if p.equipo_stats_ea and p.provisorio and not p.resultado %}Datos de EA SPORTS FC ({{ p.liga_ui.corto }} todavía no cargó el partido){% elif p.equipo_stats_ea %}Datos de EA SPORTS FC (la liga no los publica){% else %}Datos de EA publicados por {{ p.liga_ui.nombre }}{% endif %}. El porcentaje es la precisión (completados sobre intentados).</p>
   </section>
   {% endif %}
 
