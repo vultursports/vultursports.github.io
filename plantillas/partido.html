@@ -11,11 +11,11 @@
     </ul>
     {% if r.jugados|length > 5 %}<p class="fuente"><a href="{{ r.pagina }}">Ver los {{ r.jugados|length }} partidos contra {{ r.nombre }}</a></p>{% endif %}
 {% endmacro %}
-{% macro cab_ea() %}<th scope="col" class="ea-col"><abbr title="Tiros">Tiros</abbr></th><th scope="col"><abbr title="Pases completados sobre intentados">Pases</abbr></th><th scope="col"><abbr title="Entradas ganadas sobre intentadas">Entr.</abbr></th>{% endmacro %}
-{% macro celdas_ea(e) %}{% if e %}<td class="ea-col">{{ e.tiros or '' }}</td><td class="ea-pases">{% if e.pases_int %}{{ e.pases }}/{{ e.pases_int }}<small>{{ (100 * e.pases / e.pases_int)|round|int }}%</small>{% endif %}</td><td>{% if e.entradas_int %}{{ e.entradas }}/{{ e.entradas_int }}{% endif %}</td>{% else %}<td class="ea-col"></td><td></td><td></td>{% endif %}{% endmacro %}
+{% macro cab_ea() %}<th scope="col" class="ea ea-col"><abbr title="Pases completados sobre intentados">Pases</abbr></th><th scope="col" class="ea"><abbr title="Entradas ganadas sobre intentadas">Entr.</abbr></th>{% endmacro %}
+{% macro celdas_ea(e) %}{% if e %}<td class="ea ea-col ea-pases">{% if e.pases_int %}{{ e.pases }}/{{ e.pases_int }}<small>{{ (100 * e.pases / e.pases_int)|round|int }}%</small>{% endif %}</td><td class="ea">{% if e.entradas_int %}{{ e.entradas }}/{{ e.entradas_int }}{% endif %}</td>{% else %}<td class="ea ea-col"></td><td class="ea"></td>{% endif %}{% endmacro %}
 {% macro pie_ea(p) %}
     {% if p.ea_arquero %}{% set a = p.ea_arquero %}<p class="ea-arquero"><b>{{ a.alias }}</b>: {{ a.atajadas }} {{ 'atajada' if a.atajadas == 1 else 'atajadas' }}{% if a.tipos %} ({% for n, t in a.tipos %}{{ n }} {{ t }}{{ ', ' if not loop.last }}{% endfor %}){% endif %}.</p>{% endif %}
-    {% if p.ea %}<p class="fuente">Tiros, pases y entradas: datos de EA SPORTS FC. Goles, asistencias y nota: {{ p.liga_ui.nombre if p.stats else 'EA SPORTS FC' }}.</p>{% endif %}
+    {% if p.ea %}<p class="fuente">Pases y entradas: datos de EA SPORTS FC. Goles, asistencias y nota: {{ p.liga_ui.nombre if p.stats else 'EA SPORTS FC' }}.</p>{% endif %}
 {% endmacro %}
 {% block titulo %}{{ club }} | Partido vs {{ p.rival.nombre }}{% endblock %}
 {% block descripcion %}{% if p.resultado %}{{ club }} {{ p.gf }}–{{ p.gc }} {{ p.rival.nombre }}{% if p.wo %} (W.O.){% endif %}{% else %}{{ p.noche.strftime('%d/%m') }} a las {{ p.hora }} (hora argentina): {{ club }} vs {{ p.rival.nombre }}{% endif %}. {{ p.liga_ui.corto }} {{ p.competencia }}, {{ p.jornada|lower }}{% if p.resultado %}, {{ p.noche.strftime('%d/%m/%Y') }}{% endif %}.{% endblock %}

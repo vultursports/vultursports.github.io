@@ -869,17 +869,22 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
 .stats .ea-col { border-left: 1px solid var(--linea); }
 .ea-pases { white-space: nowrap; }
 .ea-pases small { color: var(--plata); margin-left: 4px; }
-/* Celular: la tabla de nuestros jugadores entra sin deslizar aunque tenga la columna Pos y el MVP:
-   el porcentaje de pases se achica (en celulares angostos va debajo), la etiqueta MVP se achica y el nombre se corta con "…" */
+/* Celular: la tabla de nuestros jugadores con anchos fijos para Pos, G, A, Nota, Pases y Entradas (sin
+   quedar pegadas); el porcentaje de pases va debajo y la etiqueta MVP siempre en el mismo lugar */
 @media (max-width: 520px) {
-  .tabla.stats th, .tabla.stats td { padding-inline: 3px; }
-  .tabla.stats .ea-pases small { margin-left: 2px; font-size: .66rem; }
+  .tabla.stats th, .tabla.stats td { padding-inline: 2px; }
+  .tabla.stats th.eq { width: auto; padding-left: 0; }
+  .tabla.stats thead th:nth-child(2) { width: 2.7rem; }                      /* Pos */
+  .tabla.stats thead th:is(:nth-child(3), :nth-child(4)) { width: 1.7rem; }  /* G y A */
+  .tabla.stats thead th:nth-child(5) { width: 2.5rem; }                      /* Nota */
+  .tabla.stats thead th:nth-child(6) { width: 3rem; }                        /* Pases */
+  .tabla.stats thead th:nth-child(7) { width: 2.4rem; }                      /* Entradas */
+  .tabla.stats .ea-pases small { display: block; margin: 1px 0 0; font-size: .66rem; }
   .tabla.stats .mvp { font-size: .62rem; padding: 2px 3px 1px; }
   .tabla.stats .eqi { gap: 5px; }
-  .tabla.stats .eqi span { max-width: 6.2rem; }
-  .tabla.stats .eqi:has(.mvp) span { width: 6.2rem; } /* la etiqueta MVP siempre en el mismo lugar */
+  .tabla.stats .eqi span { max-width: 6.4rem; }
+  .tabla.stats .eqi:has(.mvp) span { width: 6.4rem; }
 }
-@media (max-width: 400px) { .tabla.stats .ea-pases small { display: block; margin: 1px 0 0; } .tabla.stats th, .tabla.stats td { padding-inline: 2px; } }
 .ea-arquero { color: var(--plata); margin: 10px 0 0; }
 .ea-arquero b { color: var(--hueso); }
 
