@@ -51,17 +51,18 @@
           {% else %}
             <time datetime="{{ p.dt.isoformat() }}"><span class="hora">{{ p.hora }}</span><span class="dia"><span class="f-larga">{{ p.noche_txt }}</span><span class="f-corta">{{ p.noche_corta }}</span></span></time>
           {% endif %}
+          <small class="cond-hora">{{ p.condicion }}, hora argentina</small>
         </div>
         <a class="equipo equipo-link" href="{{ p.rival_pagina }}" title="Ver historial contra {{ p.rival.nombre }}">
           {% if p.rival.escudo %}<img src="{{ p.rival.escudo|replace('_thumb', '') }}" alt="" width="96" height="96">{% else %}<span class="sin-escudo grande" aria-hidden="true"></span>{% endif %}
           <span class="nombre-eq">{{ p.rival.nombre }}</span>{% if p.pos_rival and not p.resultado %}<small class="pos-tabla">{{ p.pos_rival }}° en la tabla</small>{% endif %}
         </a>
       </div>
-      <p class="proximo-pie">{{ p.condicion }}. Hora argentina.{% if p.provisorio %} Provisorio (EA). En espera de que {{ p.liga_ui.corto }} cargue el resultado oficial.{% endif %}</p>
+      {% if p.provisorio %}<p class="proximo-pie">Resultado provisorio (EA). En espera de que {{ p.liga_ui.corto }} cargue el resultado oficial.</p>{% endif %}
     </div>
   </section>
 
-  {% if p.sancionados and not p.resultado %}
+  {% if p.sancionados and not p.resultado and not p.provisorio %}
   <section class="no-pueden" aria-labelledby="t-nopueden">
     <div class="enc"><h2 id="t-nopueden">No pueden jugar</h2></div>
     <ul>
@@ -72,7 +73,7 @@
   </section>
   {% endif %}
 
-  {% if not p.resultado %}
+  {% if not p.resultado and not p.provisorio %}
   <section class="previa" aria-labelledby="t-previa">
     <div class="enc"><h2 id="t-previa">Previa</h2></div>
     {% if p.forma_comp %}<p class="forma-linea">Nuestros últimos partidos en {{ p.competencia }} {{ forma(p.forma_comp) }}</p>{% endif %}

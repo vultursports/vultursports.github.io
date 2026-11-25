@@ -583,12 +583,9 @@ class SaleUnFCNuevo(unittest.TestCase):
             armar_fc28(e, self.AHORA, con_ea=False)
             e.generar()
             self.assertEqual(enlaces_rotos(e.site), [])
-            # Lo nuevo aparece solo: jugadores nuevos, posición nueva y jugador de la noche
+            # Lo nuevo aparece solo: jugadores nuevos y posición nueva
             self.assertIn("Nuevo28_Nueve", e.html("/plantel/"))
             self.assertIn("Nuevo28_Nueve", e.html("/jugador/nuevo28nueve/"))
-            inicio = e.html("/")
-            self.assertIn("Figura de la noche", inicio)
-            self.assertIn("Nuevo28_Volante", inicio)
             # EA ya no da datos: nada de EA como "actual"
             self.assertFalse(datos_plantel(e.html("/plantel/"))["eaVigente"])
             for j in ("bycrismor09", "vspch4ckal", "zkgodd"):
@@ -598,11 +595,6 @@ class SaleUnFCNuevo(unittest.TestCase):
             # Lo histórico se conserva: los partidos de FC 27 con datos de EA siguen teniéndolos
             if (e.site / "partido" / "vpn-785556").exists() and e.leer("ea_partidos.json"):
                 self.assertIn("ea-col", e.html("/partido/vpn-785556/"))
-        # El jugador de la noche dura poco: tres días después ya no está
-        with Escenario(ahora=self.AHORA + timedelta(days=3)) as e:
-            armar_fc28(e, self.AHORA, con_ea=False)
-            e.generar()
-            self.assertNotIn("Figura de la noche", e.html("/"))
 
     def test_ea_vuelve_con_el_club_nuevo(self):
         with Escenario(ahora=self.AHORA) as e:

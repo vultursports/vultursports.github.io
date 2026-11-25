@@ -250,16 +250,6 @@ class Extras(unittest.TestCase):
             base[i]["goles"] = g
         return base
 
-    def test_jugador_de_la_noche(self):
-        import extras
-        from datetime import date
-        ps = [self.partido("a", "2026-11-20", self.stats([8.0, 7.0])), self.partido("b", "2026-11-20", self.stats([6.0, 9.5]))]
-        f = extras.jugador_de_la_noche(ps, lambda a: a, date(2026, 11, 21))
-        self.assertEqual(f["id"], "j1")  # promedio 8.25 contra 7.0
-        # Tres días después ya no se muestra (no es información actual)
-        self.assertIsNone(extras.jugador_de_la_noche(ps, lambda a: a, date(2026, 11, 23)))
-
-
     def test_hitos_y_records(self):
         import extras
         j = {"partidos": [{"p": self.partido(str(i), "2026-11-20", []), "s": {"goles": 1}} for i in range(10)]}

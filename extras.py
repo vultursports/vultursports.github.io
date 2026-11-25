@@ -8,8 +8,6 @@ from __future__ import annotations
 
 from datetime import timedelta
 
-MIN_JUGADORES_NOCHE = 7   # un partido con menos jugadores cargados se considera incompleto
-DIAS_NOCHE = 2            # el jugador de la noche se muestra hasta 2 días después
 DIAS_CONTROL = 30
 EA_RECIENTES = 5          # EA está "vigente" si alguno de los últimos 5 partidos tiene sus datos
 
@@ -28,45 +26,6 @@ def jugados(partidos: list) -> list:
 
 def ea_vigente(partidos: list) -> bool:
     return any(p.get("ea") for p in jugados(partidos)[:EA_RECIENTES])
-
-
-def _completo(p: dict) -> bool:
-    return len([s for s in p.get("stats") or [] if s.get("alias")]) >= MIN_JUGADORES_NOCHE
-
-
-def jugador_de_la_noche(partidos: list, id_de, hoy_noche) -> dict | None:
-    """El de mejor nota promedio de la última noche jugada (la nota de cada liga, sin inventar nada).
-    Desempate: goles + asistencias y después MVP. Si la noche tuvo 2 o más partidos, hay que haber
-    jugado al menos 2."""
-    con = [p for p in jugados(partidos) if _completo(p)]
-    if not con:
-        return None
-    noche = con[0]["noche"]
-    if (hoy_noche - noche).days > DIAS_NOCHE:
-        return None
-    de_noche = [p for p in con if p["noche"] == noche]
-    acc = {}
-    for p in de_noche:
-        for s in p["stats"]:
-            if not s.get("alias"):
-                continue
-            a = acc.setdefault(id_de(s["alias"]), {"id": id_de(s["alias"]), "pj": 0, "notas": [], "goles": 0, "asistencias": 0, "mvp": 0})
-            a["pj"] += 1
-            a["goles"] += s.get("goles") or 0
-            a["asistencias"] += s.get("asistencias") or 0
-            a["mvp"] += 1 if s.get("mvp") else 0
-            if (s.get("rating") or -1) >= 0:
-                a["notas"].append(s["rating"])
-    minimo = min(2, len(de_noche))
-    cand = [a for a in acc.values() if a["pj"] >= minimo and a["notas"]]
-    if not cand:
-        return None
-    for a in cand:
-        a["nota"] = sum(a["notas"]) / len(a["notas"])
-    mejor = max(cand, key=lambda a: (round(a["nota"], 2), a["goles"] + a["asistencias"], a["mvp"]))
-    return {**mejor, "noche": noche, "noche_txt": de_noche[0]["noche_txt"], "partidos": len(de_noche),
-            "resultados": sorted(de_noche, key=lambda p: p["fecha_utc"])}
-
 
 
 def hitos(j: dict) -> list:

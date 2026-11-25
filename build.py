@@ -659,14 +659,10 @@ def main():
         "vallas": sum(1 for p in jugados_reales if p["gc"] == 0),
     }
 
-    # Extras: jugador de la noche, hitos, récords en un partido, control con EA
+    # Extras: hitos, récords en un partido, control con EA
     unir_cl = {jug_mod.clave(k): jug_mod.clave(v) for k, v in (ajustes.get("unir") or {}).items()}
     id_de = lambda alias: unir_cl.get(jug_mod.clave(alias), jug_mod.clave(alias))
     jug_por_id = {j["id"]: j for j in js}
-    figura = extras.jugador_de_la_noche(partidos, id_de, hoy_noche)
-    if figura:
-        figura["j"] = jug_por_id.get(figura["id"])
-        figura = figura if figura["j"] else None
     for j in js:
         j["hitos"] = extras.hitos(j)
     records["partido"] = [{**r, "j": jug_por_id.get(r["id"])} for r in extras.records_partido(partidos, id_de)]
@@ -832,7 +828,7 @@ def main():
                   "corto": p["liga_ui"]["corto"], "pagina": p["pagina"], "escudo": p["rival"].get("escudo"),
                   "res": p["resultado"], "gf": p.get("gf"), "gc": p.get("gc"), "inicio": p["dt"].isoformat()}
                  for p in sorted(partidos, key=lambda p: p["dt"])]
-    ctx = dict(club=cfg["club"]["nombre"], cal_datos=cal_datos, comparar_datos=comparar_datos, resumen_temp=resumen_temp, redes_club=[(REDES_TXT.get(k, k), k, u) for k, u in (cfg["club"].get("redes") or {}).items()], v=og_version, destacados=destacados, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas, estado_ea=estado_ea, figura=figura, control_ea=control_ea,
+    ctx = dict(club=cfg["club"]["nombre"], cal_datos=cal_datos, comparar_datos=comparar_datos, resumen_temp=resumen_temp, redes_club=[(REDES_TXT.get(k, k), k, u) for k, u in (cfg["club"].get("redes") or {}).items()], v=og_version, destacados=destacados, tarjetas=tarjetas, ahora=ahora, records=records, estado_ligas=estado_ligas, estado_ea=estado_ea, control_ea=control_ea,
                titulos=titulos, estantes=estantes,
                total_partidos=len(partidos), total_jugadores=len(js), total_rivales=len(rivales),
                total_escudos=len(list((DATOS / "escudos").glob("*.webp"))), plantel_datos=plantel_datos, temporadas_lista=temporadas_lista,
