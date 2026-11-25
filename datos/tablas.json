@@ -50,13 +50,13 @@
     "equipo": "AllBoysCantera",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp",
     "pj": 8,
-    "g": 5,
+    "g": 6,
     "e": 2,
-    "p": 1,
-    "gf": 8,
-    "gc": 1,
-    "dg": 7,
-    "pts": 17,
+    "p": 0,
+    "gf": 9,
+    "gc": 0,
+    "dg": 9,
+    "pts": 20,
     "zona": "reducido",
     "es_vultur": false,
     "mov": 0
@@ -143,22 +143,6 @@
    },
    {
     "pos": 9,
-    "equipo": "Familia Torque",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-173-1793593039599.webp",
-    "pj": 8,
-    "g": 4,
-    "e": 1,
-    "p": 3,
-    "gf": 11,
-    "gc": 5,
-    "dg": 6,
-    "pts": 13,
-    "zona": "reducido",
-    "es_vultur": false,
-    "mov": 2
-   },
-   {
-    "pos": 10,
     "equipo": "DeportivoFumeta",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-793-1793215711655.webp",
     "pj": 7,
@@ -171,10 +155,10 @@
     "pts": 13,
     "zona": "reducido",
     "es_vultur": false,
-    "mov": -4
+    "mov": -3
    },
    {
-    "pos": 11,
+    "pos": 10,
     "equipo": "Vultur Sports",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-141-1793989433023.webp",
     "pj": 8,
@@ -185,12 +169,12 @@
     "gc": 8,
     "dg": 0,
     "pts": 11,
-    "zona": null,
+    "zona": "reducido",
     "es_vultur": true,
-    "mov": 1
+    "mov": 2
    },
    {
-    "pos": 12,
+    "pos": 11,
     "equipo": "La Blanca Fc",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-155-1793989269922.webp",
     "pj": 8,
@@ -203,7 +187,23 @@
     "pts": 11,
     "zona": null,
     "es_vultur": false,
-    "mov": -2
+    "mov": -1
+   },
+   {
+    "pos": 12,
+    "equipo": "Familia Torque",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-173-1793593039599.webp",
+    "pj": 8,
+    "g": 3,
+    "e": 1,
+    "p": 4,
+    "gf": 10,
+    "gc": 6,
+    "dg": 4,
+    "pts": 10,
+    "zona": null,
+    "es_vultur": false,
+    "mov": -1
    },
    {
     "pos": 13,
@@ -334,7 +334,7 @@
     "mov": -1
    }
   ],
-  "actualizado": "2026-11-24T23:12:57+00:00"
+  "actualizado": "2026-11-25T02:20:08+00:00"
  },
  {
   "id": "vpn-6449",
@@ -726,7 +726,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-24T23:13:36+00:00"
+  "actualizado": "2026-11-25T02:20:45+00:00"
  },
  {
   "id": "lva-ecfa9127",
@@ -1061,6 +1061,6 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-24T23:14:09+00:00"
+  "actualizado": "2026-11-25T02:21:55+00:00"
  }
 ]
