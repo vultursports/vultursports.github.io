@@ -57,7 +57,7 @@
           <span class="nombre-eq">{{ p.rival.nombre }}</span>{% if p.pos_rival and not p.resultado %}<small class="pos-tabla">{{ p.pos_rival }}° en la tabla</small>{% endif %}
         </a>
       </div>
-      <p class="proximo-pie">{{ p.condicion }}. Hora argentina.{% if p.provisorio %} Provisorio (EA). Falta que lo cargue la liga.{% endif %}</p>
+      <p class="proximo-pie">{{ p.condicion }}. Hora argentina.{% if p.provisorio %} Provisorio (EA). En espera de que {{ p.liga_ui.corto }} cargue el resultado oficial.{% endif %}</p>
     </div>
   </section>
 

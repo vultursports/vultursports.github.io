@@ -24,7 +24,7 @@
         <small class="ver-det">Ver detalles</small>
       </a>
     {% elif p.provisorio %}
-      <a class="provisorio" href="{{ p.pagina }}" title="Resultado según EA SPORTS FC: la liga todavía no lo cargó" aria-label="Resultado provisorio {{ p.provisorio.gf }} a {{ p.provisorio.gc }} según EA, ver detalles">
+      <a class="provisorio" href="{{ p.pagina }}" title="Resultado según EA SPORTS FC, en espera de que {{ p.liga_ui.corto }} cargue el resultado oficial" aria-label="Resultado provisorio {{ p.provisorio.gf }} a {{ p.provisorio.gc }} según EA, ver detalles">
         <span class="marcador">{{ p.provisorio.gf }}<i>–</i>{{ p.provisorio.gc }}</span>
         <small class="ver-det">Provisorio</small>
       </a>

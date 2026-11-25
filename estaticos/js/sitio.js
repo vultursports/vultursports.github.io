@@ -23,7 +23,9 @@ VS.alCargar(() => {
     const ahora = Date.now();
     const fin = (t) => (t.dataset.fin ? new Date(t.dataset.fin).getTime() : new Date(t.dataset.inicio).getTime() + EN_JUEGO);
     const actual = tarjetas.find((t) => fin(t) > ahora);
+    const cambio = actual && actual.hidden;
     tarjetas.forEach((t) => (t.hidden = t !== actual));
+    if (cambio && VS.ajustarNombres) VS.ajustarNombres();
     if (vacia) vacia.hidden = Boolean(actual);
     if (actual) {
       const out = actual.querySelector(".cuenta");
@@ -45,6 +47,26 @@ VS.alCargar(() => {
   tick();
   VS.cadaTanto(tick, 30e3);
 });
+
+// Nombres de los equipos en la tarjeta del partido: si un nombre de una sola palabra no entra en su
+// columna (DEPORTIVOFUMETA en un celular, o la letra de reserva más ancha si la del sitio no llegó a
+// cargar), se achica la letra hasta que entre, en vez de cortar la palabra al medio. Mínimo 11 px.
+VS.ajustarNombres = () => {
+  document.querySelectorAll(".duelo .nombre-eq").forEach((el) => {
+    if (!el.offsetWidth) return;  // tarjeta oculta: se ajusta cuando se muestra
+    const col = el.parentElement.clientWidth;  // el nombre se estira con su texto: se compara con la columna
+    el.style.fontSize = ""; el.style.overflowWrap = "normal";
+    let px = parseFloat(getComputedStyle(el).fontSize);
+    while (el.scrollWidth > col + 1 && px > 11) { px -= 0.5; el.style.fontSize = px + "px"; }
+    if (el.scrollWidth > col + 1) el.style.overflowWrap = "";  // ni así entra: se parte como antes
+  });
+};
+VS.alCargar(() => {
+  VS.ajustarNombres();
+  if (document.fonts) document.fonts.ready.then(VS.ajustarNombres);
+});
+let vsAncho = window.innerWidth;
+window.addEventListener("resize", () => { if (window.innerWidth !== vsAncho) { vsAncho = window.innerWidth; VS.ajustarNombres(); } });
 
 // En vivo en Twitch: se consulta si algún canal del club está transmitiendo y, solo en ese caso,
 // se muestra el reproductor oficial de Twitch. (Prueba: agregar ?vivo=nombre_de_canal a la URL.)
