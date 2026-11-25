@@ -870,7 +870,7 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
 .ea-pases { white-space: nowrap; }
 .ea-pases small { color: var(--plata); margin-left: 4px; }
 /* Celular: la tabla de nuestros jugadores con anchos fijos para Pos, G, A, Nota, Pases y Entradas (sin
-   quedar pegadas); el porcentaje de pases va debajo y la etiqueta MVP siempre en el mismo lugar */
+   quedar pegadas); el porcentaje de pases va debajo y la etiqueta MVP pegada al nombre */
 @media (max-width: 520px) {
   .tabla.stats th, .tabla.stats td { padding-inline: 2px; }
   .tabla.stats th.eq { width: auto; padding-left: 0; }
@@ -883,7 +883,6 @@ a, button, label, summary { -webkit-tap-highlight-color: transparent; }
   .tabla.stats .mvp { font-size: .62rem; padding: 2px 3px 1px; }
   .tabla.stats .eqi { gap: 5px; }
   .tabla.stats .eqi span { max-width: 6.4rem; }
-  .tabla.stats .eqi:has(.mvp) span { width: 6.4rem; }
 }
 .ea-arquero { color: var(--plata); margin: 10px 0 0; }
 .ea-arquero b { color: var(--hueso); }
