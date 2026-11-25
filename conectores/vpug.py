@@ -28,7 +28,9 @@ def _login(c, api: str) -> str | None:
 
 def temporada_y_division(c, api: str, club: int, t_cfg: int, d_cfg: int):
     """Temporada en curso y división donde juega el club, según la API de VPUG. Así una temporada
-    nueva o un ascenso/descenso se toman solos. Si no se encuentra, se usa la de config/ligas.yaml."""
+    nueva o un ascenso/descenso se toman solos. Si no se encuentra, se usa la de config/ligas.yaml.
+    Si la temporada encontrada ya no está en curso, la tabla se marca "_terminada": queda como tabla
+    final hasta que empiece la siguiente."""
     try:
         temps = sorted(pedir(c, f"{api}/temporadas"), key=lambda x: (x.get("estado") == "EN_CURSO", x["id"]), reverse=True)
         divs = sorted((x["id"] for x in pedir(c, f"{api}/divisiones")), key=lambda i: i != d_cfg)
@@ -36,6 +38,7 @@ def temporada_y_division(c, api: str, club: int, t_cfg: int, d_cfg: int):
             for div in divs:
                 tabla = pedir(c, f"{api}/tabla?temporadaId={temp['id']}&divisionId={div}")
                 if any((r.get("club") or {}).get("id") == club for r in tabla.get("filas") or []):
+                    tabla["_terminada"] = bool(temp.get("estado")) and temp.get("estado") != "EN_CURSO"
                     return temp["id"], div, tabla
     except (ErrorConector, KeyError, TypeError) as e:
         print("  aviso VPUG temporada:", e)
@@ -140,6 +143,7 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
         "partidos": partidos,
         "plantel": plantel,
         "tablas": [{
+            **({"terminado": True} if tabla.get("_terminada") else {}),
             "id": comp_id,
             "liga": "vpug",
             "competencia": nombre,

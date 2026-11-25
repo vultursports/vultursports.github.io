@@ -87,6 +87,7 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             url_tabla = f"{BASE}/{com}/league/{comp['league_id']}/{comp['league_slug']}/season/{comp['season_id']}/standings"
 
             tablas.append({
+                **({"terminado": True} if comp.get("terminado") else {}),
                 "id": comp_id,
                 "liga": "vpn",
                 "competencia": nombre_comp,
@@ -198,14 +199,23 @@ def _corto(temporada: str) -> str:
 def competencias_actuales(config: list, hist: dict | None) -> list:
     """Temporadas de liga en curso según el historial del equipo en VPN. Así una temporada nueva o un
     ascenso/descenso se toman solos, sin cambiar la configuración. Si VPN no marca ninguna en curso
-    (entre temporadas) o no se pudo leer, se usa la de config/ligas.yaml."""
-    activas = []
+    (entre temporadas), se sigue leyendo la última que jugamos, marcada como terminada: su tabla queda
+    como final (y se actualiza si VPN carga resultados atrasados) hasta que empiece la siguiente. Si el
+    historial no se pudo leer, se usa la de config/ligas.yaml."""
+    activas, ligas = [], []
     for s in (hist or {}).get("seasons", []):
         m = re.search(r"/league/(\d+)/([^/]+)/season/(\d+)", s.get("competitionHref") or "")
-        if s.get("active") and s.get("kind") == "league" and m:
-            activas.append({"nombre": s.get("competitionName"), "league_id": int(m[1]), "league_slug": m[2],
-                            "season_id": int(m[3]), "temporada": s.get("seasonLabel") or ""})
-    return activas or config
+        if s.get("kind") == "league" and m:
+            c = {"nombre": s.get("competitionName"), "league_id": int(m[1]), "league_slug": m[2],
+                 "season_id": int(m[3]), "temporada": s.get("seasonLabel") or ""}
+            ligas.append(c)
+            if s.get("active"):
+                activas.append(c)
+    if activas:
+        return activas
+    if ligas:
+        return [{**max(ligas, key=lambda c: c["season_id"]), "terminado": True}]
+    return config
 
 
 def _historial(c, bid: str, com: str, slug: str, tid: int, previos: dict, actuales: set, hist: dict) -> list:

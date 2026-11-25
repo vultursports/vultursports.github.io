@@ -380,7 +380,12 @@ class TemporadasNuevas(unittest.TestCase):
             {"key": "6449", "kind": "league", "active": False, "competitionHref": "/uy/league/2183/liga-argentina-4ta-division/season/6449/standings"}]}
         c = vpn.competencias_actuales(config, hist)
         self.assertEqual([(x["league_id"], x["season_id"], x["temporada"]) for x in c], [(2146, 7001, "Temporada 12")])
-        # Entre temporadas (ninguna en curso) o sin historial: la de la configuración
+        self.assertFalse(c[0].get("terminado"))
+        # Entre temporadas (ninguna en curso): la última que jugamos, como terminada (tabla final)
+        hist["seasons"][0]["active"] = False
+        c = vpn.competencias_actuales(config, hist)
+        self.assertEqual([(x["season_id"], x.get("terminado")) for x in c], [(7001, True)])
+        # Sin historial: la de la configuración
         self.assertEqual(vpn.competencias_actuales(config, {"seasons": []}), config)
         self.assertEqual(vpn.competencias_actuales(config, None), config)
 
@@ -395,8 +400,21 @@ class TemporadasNuevas(unittest.TestCase):
             nos = "temporadaId=8&divisionId=2" in url  # ascendimos a Segunda
             return {"filas": [{"club": {"id": 141 if nos else 5}}]}
         with mock.patch.object(vpug, "pedir", pedir):
-            t, d, _ = vpug.temporada_y_division(None, "api", 141, 7, 3)
+            t, d, tabla = vpug.temporada_y_division(None, "api", 141, 7, 3)
         self.assertEqual((t, d), (8, 2))
+        self.assertFalse(tabla["_terminada"])
+
+        # Terminó la temporada y todavía no estamos en la nueva: la anterior, como tabla final
+        def entre(c, url):
+            if url.endswith("/temporadas"):
+                return [{"id": 7, "estado": "FINALIZADA"}, {"id": 8, "estado": "EN_CURSO"}]
+            if url.endswith("/divisiones"):
+                return [{"id": i} for i in (1, 2, 3, 4)]
+            nos = "temporadaId=7&divisionId=3" in url
+            return {"filas": [{"club": {"id": 141 if nos else 5}}]}
+        with mock.patch.object(vpug, "pedir", entre):
+            t, d, tabla = vpug.temporada_y_division(None, "api", 141, 7, 3)
+        self.assertEqual((t, d, tabla["_terminada"]), (7, 3, True))
 
         def caida(c, url):
             if url.endswith("/temporadas"):
