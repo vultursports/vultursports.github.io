@@ -6303,42 +6303,6 @@
    }
   },
   {
-   "id": "206be77a-28ab-4e76-b4f0-f5d12bcae442",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 1,
-   "home_team": {
-    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
-    "name": "Inter Regional",
-    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
-   },
-   "away_team": {
-    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
-    "name": "CLUB ATLÉTICO PELULGA",
-    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
-   }
-  },
-  {
-   "id": "a2edd419-f5de-47f8-a7d6-e6b59706ec6e",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 2,
-   "home_team": {
-    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
-    "name": "Acassuso eSports",
-    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
-   },
-   "away_team": {
-    "id": "c7f32ef5-5a3c-4ae9-bb41-fd7bb20401e7",
-    "name": "RICURA FC",
-    "logo_url": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg"
-   }
-  },
-  {
    "id": "745358a5-30bd-4cb1-a429-4c9c715a2777",
    "stage": "Fecha 17",
    "match_date": "2026-11-25T02:00:00+00:00",
@@ -6411,6 +6375,24 @@
    }
   },
   {
+   "id": "206be77a-28ab-4e76-b4f0-f5d12bcae442",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 1,
+   "home_team": {
+    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
+    "name": "Inter Regional",
+    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+   },
+   "away_team": {
+    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
+    "name": "CLUB ATLÉTICO PELULGA",
+    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
+   }
+  },
+  {
    "id": "41ba15f9-cd23-4f6a-9eb0-2cf54f7e642c",
    "stage": "Fecha 17",
    "match_date": "2026-11-25T02:00:00+00:00",
@@ -6447,24 +6429,6 @@
    }
   },
   {
-   "id": "531584ad-3803-4a77-a81c-1353796f64d2",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
-    "name": "Los Andes FC",
-    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
-   },
-   "away_team": {
-    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
-    "name": "Motor Psico",
-    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
-   }
-  },
-  {
    "id": "5fc97ad1-cc65-43da-8f2c-bc9c859a5614",
    "stage": "Fecha 17",
    "match_date": "2026-11-25T02:00:00+00:00",
@@ -6483,21 +6447,93 @@
    }
   },
   {
-   "id": "c5140fc4-f2be-4401-9b83-d3203a4a804a",
+   "id": "a2edd419-f5de-47f8-a7d6-e6b59706ec6e",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 2,
+   "home_team": {
+    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+   },
+   "away_team": {
+    "id": "c7f32ef5-5a3c-4ae9-bb41-fd7bb20401e7",
+    "name": "RICURA FC",
+    "logo_url": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg"
+   }
+  },
+  {
+   "id": "531584ad-3803-4a77-a81c-1353796f64d2",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
+    "name": "Los Andes FC",
+    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
+   },
+   "away_team": {
+    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
+    "name": "Motor Psico",
+    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
+   }
+  },
+  {
+   "id": "7703089d-9834-46b4-8642-434840f8473a",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 1,
+   "away_goals": 3,
+   "home_team": {
+    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
+    "name": "Suda eSports ",
+    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
+   },
+   "away_team": {
+    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
+    "name": "Real Envido",
+    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
+   }
+  },
+  {
+   "id": "372e6343-520c-4142-9c7c-400419063da1",
    "stage": "Fecha 18",
    "match_date": "2026-11-25T02:30:00+00:00",
    "status": "approved",
-   "home_goals": 0,
+   "home_goals": 4,
    "away_goals": 2,
    "home_team": {
-    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
-    "name": "CELTA DEL VINO",
-    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
+    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
+    "name": "Villa San Carlos",
+    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
    },
    "away_team": {
-    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
-    "name": "Inter Regional",
-    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+   }
+  },
+  {
+   "id": "ad743413-b2d0-487a-8b8c-b8a7132b98ab",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 2,
+   "home_team": {
+    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
+    "name": "MARPLA FC",
+    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
+   },
+   "away_team": {
+    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
+    "name": "Deportivo Centro",
+    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
    }
   },
   {
@@ -6537,21 +6573,39 @@
    }
   },
   {
-   "id": "372e6343-520c-4142-9c7c-400419063da1",
+   "id": "63867226-2365-4d41-8fac-39f5f678d1a7",
    "stage": "Fecha 18",
    "match_date": "2026-11-25T02:30:00+00:00",
    "status": "approved",
-   "home_goals": 4,
-   "away_goals": 2,
+   "home_goals": 0,
+   "away_goals": 1,
    "home_team": {
-    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
-    "name": "Villa San Carlos",
-    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
+    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
+    "name": "Unión Cordillera",
+    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
    },
    "away_team": {
-    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
-    "name": "Acassuso eSports",
-    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
+    "name": "Los Andes FC",
+    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
+   }
+  },
+  {
+   "id": "c5140fc4-f2be-4401-9b83-d3203a4a804a",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 2,
+   "home_team": {
+    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
+    "name": "CELTA DEL VINO",
+    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
+   },
+   "away_team": {
+    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
+    "name": "Inter Regional",
+    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
    }
   },
   {
@@ -6591,29 +6645,11 @@
    }
   },
   {
-   "id": "63867226-2365-4d41-8fac-39f5f678d1a7",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
-    "name": "Unión Cordillera",
-    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
-   },
-   "away_team": {
-    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
-    "name": "Los Andes FC",
-    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
-   }
-  },
-  {
    "id": "2efa3b57-4262-4426-b02e-6570403b13bf",
    "stage": "Fecha 18",
    "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 3,
+   "status": "approved",
+   "home_goals": 2,
    "away_goals": 2,
    "home_team": {
     "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
@@ -6627,111 +6663,21 @@
    }
   },
   {
-   "id": "7703089d-9834-46b4-8642-434840f8473a",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 1,
-   "away_goals": 3,
-   "home_team": {
-    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
-    "name": "Suda eSports ",
-    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
-   },
-   "away_team": {
-    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
-    "name": "Real Envido",
-    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
-   }
-  },
-  {
-   "id": "ad743413-b2d0-487a-8b8c-b8a7132b98ab",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 2,
-   "home_team": {
-    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
-    "name": "MARPLA FC",
-    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
-   },
-   "away_team": {
-    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
-    "name": "Deportivo Centro",
-    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
-   }
-  },
-  {
-   "id": "09077f69-6635-4cc3-9e9d-37fddd7015f2",
-   "stage": "Fecha 19",
-   "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 0,
-   "away_goals": 3,
-   "home_team": {
-    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
-    "name": "Los Andes FC",
-    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
-   },
-   "away_team": {
-    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
-    "name": "CLUB ATLÉTICO PELULGA",
-    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
-   }
-  },
-  {
-   "id": "4022a8d5-67e0-4828-b4ae-19b9871f05ba",
+   "id": "52210eae-b2d0-4eee-b77d-f38a3aa2551c",
    "stage": "Fecha 19",
    "match_date": "2026-11-25T02:59:00+00:00",
    "status": "approved",
-   "home_goals": 2,
-   "away_goals": 3,
+   "home_goals": 3,
+   "away_goals": 1,
    "home_team": {
-    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
-    "name": "Deportivo Centro",
-    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
+    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
+    "name": "Attlas eSports",
+    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
    },
    "away_team": {
-    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
-    "name": "Motor Psico",
-    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
-   }
-  },
-  {
-   "id": "0e7a4349-1187-42b1-ab03-62b68fb68e02",
-   "stage": "Fecha 19",
-   "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
-    "name": "UNITED MITO FC",
-    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
-   },
-   "away_team": {
-    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
-    "name": "Suda eSports ",
-    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
-   }
-  },
-  {
-   "id": "078c09b3-e5d9-487a-bba5-17ff97e84b9f",
-   "stage": "Fecha 19",
-   "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 4,
-   "away_goals": 2,
-   "home_team": {
-    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
-    "name": "Acassuso eSports",
-    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
-   },
-   "away_team": {
-    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
-    "name": "BOCA JUNIORS",
-    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
+    "name": "Villa San Carlos",
+    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
    }
   },
   {
@@ -6789,21 +6735,21 @@
    }
   },
   {
-   "id": "53aa4b84-44ff-4842-bfdd-fcc4f4f92f5f",
+   "id": "09077f69-6635-4cc3-9e9d-37fddd7015f2",
    "stage": "Fecha 19",
    "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
+   "status": "pending_approval",
+   "home_goals": 0,
+   "away_goals": 3,
    "home_team": {
-    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
-    "name": "Predators  FC",
-    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
+    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
+    "name": "Los Andes FC",
+    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
    },
    "away_team": {
-    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
-    "name": "Unión Cordillera",
-    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
+    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
+    "name": "CLUB ATLÉTICO PELULGA",
+    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
    }
   },
   {
@@ -6825,21 +6771,75 @@
    }
   },
   {
-   "id": "52210eae-b2d0-4eee-b77d-f38a3aa2551c",
+   "id": "53aa4b84-44ff-4842-bfdd-fcc4f4f92f5f",
    "stage": "Fecha 19",
    "match_date": "2026-11-25T02:59:00+00:00",
    "status": "approved",
-   "home_goals": 3,
-   "away_goals": 1,
+   "home_goals": 1,
+   "away_goals": 0,
    "home_team": {
-    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
-    "name": "Attlas eSports",
-    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
+    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
+    "name": "Predators  FC",
+    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
    },
    "away_team": {
-    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
-    "name": "Villa San Carlos",
-    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
+    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
+    "name": "Unión Cordillera",
+    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
+   }
+  },
+  {
+   "id": "0e7a4349-1187-42b1-ab03-62b68fb68e02",
+   "stage": "Fecha 19",
+   "match_date": "2026-11-25T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
+    "name": "UNITED MITO FC",
+    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
+   },
+   "away_team": {
+    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
+    "name": "Suda eSports ",
+    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
+   }
+  },
+  {
+   "id": "078c09b3-e5d9-487a-bba5-17ff97e84b9f",
+   "stage": "Fecha 19",
+   "match_date": "2026-11-25T02:59:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 4,
+   "away_goals": 2,
+   "home_team": {
+    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+   },
+   "away_team": {
+    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
+    "name": "BOCA JUNIORS",
+    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+   }
+  },
+  {
+   "id": "4022a8d5-67e0-4828-b4ae-19b9871f05ba",
+   "stage": "Fecha 19",
+   "match_date": "2026-11-25T02:59:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 3,
+   "home_team": {
+    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
+    "name": "Deportivo Centro",
+    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
+   },
+   "away_team": {
+    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
+    "name": "Motor Psico",
+    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
    }
   }
  ]

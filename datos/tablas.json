@@ -334,7 +334,7 @@
     "mov": -1
    }
   ],
-  "actualizado": "2026-11-25T17:00:56+00:00"
+  "actualizado": "2026-11-25T18:01:42+00:00"
  },
  {
   "id": "vpn-6449",
@@ -726,7 +726,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-25T17:01:40+00:00"
+  "actualizado": "2026-11-25T18:02:18+00:00"
  },
  {
   "id": "lva-ecfa9127",
@@ -872,14 +872,14 @@
     "pos": 9,
     "equipo": "Motor Psico",
     "escudo": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png",
-    "pj": 17,
+    "pj": 18,
     "g": 7,
-    "e": 5,
+    "e": 6,
     "p": 5,
-    "gf": 17,
-    "gc": 14,
+    "gf": 19,
+    "gc": 16,
     "dg": 3,
-    "pts": 26,
+    "pts": 27,
     "zona": null,
     "es_vultur": false,
     "mov": 4
@@ -982,6 +982,22 @@
    },
    {
     "pos": 16,
+    "equipo": "Predators FC",
+    "escudo": "https://i.ibb.co/g22TRfX/1000536894.png",
+    "pj": 19,
+    "g": 4,
+    "e": 3,
+    "p": 12,
+    "gf": 13,
+    "gc": 34,
+    "dg": -21,
+    "pts": 15,
+    "zona": null,
+    "es_vultur": false,
+    "mov": 2
+   },
+   {
+    "pos": 17,
     "equipo": "CLUB ATLÉTICO PELULGA",
     "escudo": "https://i.ibb.co/5WGX3vvS/1000277359.png",
     "pj": 17,
@@ -994,23 +1010,7 @@
     "pts": 14,
     "zona": null,
     "es_vultur": false,
-    "mov": 0
-   },
-   {
-    "pos": 17,
-    "equipo": "Predators FC",
-    "escudo": "https://i.ibb.co/g22TRfX/1000536894.png",
-    "pj": 18,
-    "g": 4,
-    "e": 2,
-    "p": 12,
-    "gf": 11,
-    "gc": 32,
-    "dg": -21,
-    "pts": 14,
-    "zona": null,
-    "es_vultur": false,
-    "mov": 1
+    "mov": -1
    },
    {
     "pos": 18,
@@ -1061,6 +1061,6 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-25T16:53:39+00:00"
+  "actualizado": "2026-11-25T18:03:37+00:00"
  }
 ]
