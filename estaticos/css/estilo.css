@@ -329,18 +329,18 @@ section + section > .enc, .partidos + .enc { margin-top: 28px; }
 .ci-zona::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 4px; background: var(--plata); }
 .ci-zona.z-ascenso::before { background: #47c58f; } .ci-zona.z-descenso::before { background: var(--rojo); } .ci-zona.z-lider::before { background: #3ecf74; }
 .ci-zona.z-playoff::before, .ci-zona.z-clasifica::before { background: #2f86d6; }
-.ci-nums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 12px; margin: 0; }
+/* Tantas columnas como entren (3 en celular o en "todas juntas", 6 en una tabla sola en compu) */
+.ci-nums { display: grid; grid-template-columns: repeat(auto-fill, minmax(5.4rem, 1fr)); gap: 10px 12px; margin: 0; }
 .ci-nums div { display: flex; flex-direction: column-reverse; gap: 3px; min-width: 0; }
 .ci-nums dt { font-size: .74rem; color: var(--plata); }
 .ci-nums dt abbr { text-decoration: none; }
-.ci-nums dd { margin: 0; font: 800 1.5rem/1 var(--display); font-variant-numeric: tabular-nums; }
+.ci-nums dd { margin: 0; font: 800 1.5rem/1 var(--display); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .ci-nums dd i { font-style: normal; color: var(--plata-osc); margin: 0 .06em; }
 .ci-nums .ci-pts dd { color: #fff; }
 .ci-primero { grid-column: 1 / -1; margin: 0; padding-top: 10px; border-top: 1px solid var(--linea); font-size: .88rem; color: var(--plata); }
 .ci-primero b { color: var(--hueso); }
 .comp.grande .cierre { margin: 12px 0 18px; }
-@media (min-width: 760px) { .comp.grande .ci-nums { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
-@media (max-width: 400px) { .cierre { grid-template-columns: 1fr; } .ci-nums { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 400px) { .cierre { grid-template-columns: 1fr; } }
 .ci-titulo { font: 800 1.1rem/1 var(--display); margin: 0 0 8px; color: var(--plata); text-transform: uppercase; letter-spacing: .04em; }
 
 /* Jugadores */

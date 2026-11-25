@@ -277,7 +277,10 @@ VS.alCargar(() => {
     poner(on);
     VS.guardar("tablas-juntas", on);
   });
-  if (VS.recordar("tablas-juntas") && matchMedia("(min-width: 1000px)").matches) poner(true);
+  // Solo en pantallas anchas: si la ventana se achica (o se gira la tablet) se vuelve a ver de a una
+  const ancha = matchMedia("(min-width: 1000px)");
+  if (VS.recordar("tablas-juntas") && ancha.matches) poner(true);
+  ancha.addEventListener("change", () => poner(ancha.matches && !!VS.recordar("tablas-juntas")));
 });
 
 // Calendario: vista de mes (computadora). Respeta el filtro de ligas.

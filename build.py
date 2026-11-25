@@ -425,6 +425,8 @@ def main():
         # siguiente) y se muestra nuestro cierre: puesto, números finales y quién terminó primero.
         t["final"] = bool(t.get("finalizada"))
         if t["final"]:
+            for f in t["filas"]:  # con el torneo terminado, las flechas de la última fecha no dicen nada
+                f["mov"] = None
             v = t["vultur"]
             pj = (v or {}).get("pj") or 0
             t["cierre"] = {

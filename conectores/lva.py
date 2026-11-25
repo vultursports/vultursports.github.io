@@ -15,8 +15,9 @@ from .base import RAW, guardar_raw
 
 SITIO = "https://ligavirtualargentina.com"
 ESTADOS = {"approved": "finalizado", "live": "en_vivo", "scheduled": "programado"}
-# Días desde nuestro último partido en que un torneo terminado se sigue leyendo (resultados atrasados)
-DIAS_RELEER_FIN = 14
+# Tope de seguridad: días desde nuestro último partido en que un torneo terminado se sigue leyendo
+# si alguno de sus partidos nunca llega a aprobarse (lo normal es que se deje antes, al estar completo)
+DIAS_RELEER_FIN = 30
 LEER_TABLAS = """() => [...document.querySelectorAll('table')].map(t =>
     [...t.querySelectorAll('tbody tr')].map(tr => ({
         celdas: [...tr.querySelectorAll('td')].map(td => td.innerText.trim()),
@@ -61,14 +62,16 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             if "/matches?" in url and t and isinstance(datos, list):
                 fixture[t] = datos
 
-        # Torneos terminados ("Ver Finalizados"): cada uno se revisa una vez y queda anotado. Los
-        # nuestros que terminaron hace poco se siguen leyendo (partidos y tabla) por si la LVA carga
-        # resultados atrasados: así la tabla final llega a los números definitivos.
+        # Torneos terminados ("Ver Finalizados"): cada uno se revisa y queda anotado. Los nuestros se
+        # siguen leyendo (partidos y tabla) hasta que todos los partidos del torneo, de todos los
+        # equipos, estén aprobados por la LVA: ahí la tabla final ya es la definitiva y se deja de
+        # consultar. Por si algún partido queda trabado sin aprobar, se deja de leer igual pasados
+        # DIAS_RELEER_FIN días de nuestro último partido.
         archivo_fin = RAW / "lva" / "finalizados.json"
         revisados = json.loads(archivo_fin.read_text(encoding="utf-8")) if archivo_fin.exists() else {}
         activos = {t for t, _ in torneos}
         limite_fin = (datetime.now(timezone.utc) - timedelta(days=DIAS_RELEER_FIN)).strftime("%Y-%m-%dT%H:%M:%SZ")
-        releer = {t for t, v in revisados.items() if v.get("con_vultur") and t not in activos
+        releer = {t for t, v in revisados.items() if v.get("con_vultur") and not v.get("completo") and t not in activos
                   and any(p.get("competencia_id") == f"lva-{t[:8]}" and p["fecha_utc"] >= limite_fin
                           for p in partidos_previos.values())}
         nuevos_fin = []
@@ -116,8 +119,10 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             if tabla:
                 tablas.append(_tabla(tid, nombre, tabla, nombre_club, refs))
         # Tablas de los torneos nuestros que terminaron hace poco (se marcan como terminadas: solo
-        # actualizan una tabla final que todavía se muestra, nunca vuelven a aparecer solas)
+        # actualizan una tabla final que todavía se muestra, nunca vuelven a aparecer solas). Si el
+        # torneo ya está completo y su tabla se leyó bien, queda anotado y no se consulta más.
         fin_tabla = [t for t in mios if t not in activos]
+        completos = set()
         if fin_tabla:
             try:
                 pg.click("text=Ver Finalizados")
@@ -131,6 +136,8 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                     tabla = next((t for t in filas if any(nombre_club in " ".join(r["celdas"]).lower() for r in t)), None)
                     if tabla:
                         tablas.append({**_tabla(tid, mios[tid][0], tabla, nombre_club, refs), "terminado": True})
+                        if _completo(fixture.get(tid)):
+                            completos.add(tid)
             except Exception as e:
                 print("  aviso LVA tablas finalizadas:", e)
 
@@ -224,7 +231,7 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                 "temporada": {"clave": comp_id, "nombre": _nombre_torneo(nombre)},
                 "stats": list(vistos.values()),
             })
-    _anotar_finalizados(archivo_fin, revisados, nuevos_fin, mios)
+    _anotar_finalizados(archivo_fin, revisados, nuevos_fin, mios, completos)
     ya = {p["id"] for p in partidos}
     claves_fin = {f"lva-{t[:8]}" for t, v in revisados.items() if v.get("con_vultur")}
     partidos += [p for p in partidos_previos.values() if p.get("competencia_id") in claves_fin and p["id"] not in ya]
@@ -302,10 +309,17 @@ def _num(x: str) -> int:
         return 0
 
 
-def _anotar_finalizados(archivo, revisados: dict, nuevos_fin: list, mios: dict) -> None:
-    # Un torneo nuestro que se vuelve a leer sigue siendo nuestro aunque esta vez su fixture no cargue
+def _completo(partidos_torneo: list | None) -> bool:
+    """Todos los partidos del torneo (de todos los equipos) aprobados oficialmente por la LVA."""
+    return bool(partidos_torneo) and all(m.get("status") == "approved" for m in partidos_torneo)
+
+
+def _anotar_finalizados(archivo, revisados: dict, nuevos_fin: list, mios: dict, completos: set = frozenset()) -> None:
+    # Un torneo nuestro que se vuelve a leer sigue siendo nuestro aunque esta vez su fixture no cargue.
+    # "completo": ya se leyó su tabla definitiva (todos los partidos aprobados); no se vuelve a consultar.
     for tid, nom in nuevos_fin:
-        revisados[tid] = {"nombre": nom, "con_vultur": tid in mios or bool((revisados.get(tid) or {}).get("con_vultur"))}
+        revisados[tid] = {"nombre": nom, "con_vultur": tid in mios or bool((revisados.get(tid) or {}).get("con_vultur")),
+                          "completo": tid in completos}
     archivo.parent.mkdir(parents=True, exist_ok=True)
     archivo.write_text(json.dumps(revisados, ensure_ascii=False, indent=1), encoding="utf-8")
 

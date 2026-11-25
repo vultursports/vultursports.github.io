@@ -389,6 +389,18 @@ class TemporadasNuevas(unittest.TestCase):
         self.assertEqual(vpn.competencias_actuales(config, {"seasons": []}), config)
         self.assertEqual(vpn.competencias_actuales(config, None), config)
 
+    def test_lva_torneo_terminado_se_deja_de_leer_al_estar_completo(self):
+        from conectores import lva
+        self.assertTrue(lva._completo([{"status": "approved"}, {"status": "approved"}]))
+        self.assertFalse(lva._completo([{"status": "approved"}, {"status": "pending_approval"}]))
+        self.assertFalse(lva._completo([]))
+        with tempfile.TemporaryDirectory() as d:
+            archivo = Path(d) / "finalizados.json"
+            rev = {}
+            lva._anotar_finalizados(archivo, rev, [("a", "Torneo A"), ("b", "Torneo B")], {"a": 1, "b": 1}, {"a"})
+            self.assertEqual((rev["a"]["completo"], rev["b"]["completo"]), (True, False))
+            self.assertEqual(json.loads(archivo.read_text(encoding="utf-8")), rev)
+
     def test_vpug_busca_temporada_y_division(self):
         from conectores import vpug
 
