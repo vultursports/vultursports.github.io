@@ -4582,7 +4582,8 @@
   "my_vpn.leave_locked_captains": "Solo los capitanes pueden sacarte",
   "my_vpn.leave_locked_virtual": "Plantilla del draft",
   "report.images_upload_failed": "No se pudieron subir las capturas, así que el reporte no se guardó. Quítalas o inténtalo de nuevo.",
-  "report.images_preparing": "Preparando capturas…"
+  "report.images_preparing": "Preparando capturas…",
+  "premium.user_has_active_subscription": "Ya tienes una suscripción a VPN Premium. Puedes verla, o cancelarla, en Ajustes."
  },
  "league": {
   "url": "liga-argentina-4ta-division",
@@ -6879,7 +6880,8 @@
      }
     }
    },
-   "pos": 1
+   "pos": 1,
+   "prevPos": 1
   },
   {
    "team": {
@@ -8952,7 +8954,8 @@
      }
     }
    },
-   "pos": 2
+   "pos": 2,
+   "prevPos": 2
   },
   {
    "team": {
@@ -11025,7 +11028,8 @@
      }
     }
    },
-   "pos": 3
+   "pos": 3,
+   "prevPos": 4
   },
   {
    "team": {
@@ -13098,7 +13102,8 @@
      }
     }
    },
-   "pos": 4
+   "pos": 4,
+   "prevPos": 5
   },
   {
    "team": {
@@ -15171,7 +15176,8 @@
      }
     }
    },
-   "pos": 5
+   "pos": 5,
+   "prevPos": 7
   },
   {
    "team": {
@@ -17244,7 +17250,8 @@
      }
     }
    },
-   "pos": 6
+   "pos": 6,
+   "prevPos": 8
   },
   {
    "team": {
@@ -19317,7 +19324,8 @@
      }
     }
    },
-   "pos": 7
+   "pos": 7,
+   "prevPos": 3
   },
   {
    "team": {
@@ -21390,7 +21398,8 @@
      }
     }
    },
-   "pos": 8
+   "pos": 8,
+   "prevPos": 9
   },
   {
    "team": {
@@ -23463,7 +23472,8 @@
      }
     }
    },
-   "pos": 9
+   "pos": 9,
+   "prevPos": 10
   },
   {
    "team": {
@@ -25536,7 +25546,8 @@
      }
     }
    },
-   "pos": 10
+   "pos": 10,
+   "prevPos": 11
   },
   {
    "team": {
@@ -27609,7 +27620,8 @@
      }
     }
    },
-   "pos": 11
+   "pos": 11,
+   "prevPos": 6
   },
   {
    "team": {
@@ -29682,7 +29694,8 @@
      }
     }
    },
-   "pos": 12
+   "pos": 12,
+   "prevPos": 13
   },
   {
    "team": {
@@ -31755,7 +31768,8 @@
      }
     }
    },
-   "pos": 13
+   "pos": 13,
+   "prevPos": 15
   },
   {
    "team": {
@@ -33828,7 +33842,8 @@
      }
     }
    },
-   "pos": 14
+   "pos": 14,
+   "prevPos": 14
   },
   {
    "team": {
@@ -35901,7 +35916,8 @@
      }
     }
    },
-   "pos": 15
+   "pos": 15,
+   "prevPos": 18
   },
   {
    "team": {
@@ -37974,7 +37990,8 @@
      }
     }
    },
-   "pos": 16
+   "pos": 16,
+   "prevPos": 12
   },
   {
    "team": {
@@ -40047,7 +40064,8 @@
      }
     }
    },
-   "pos": 17
+   "pos": 17,
+   "prevPos": 25
   },
   {
    "team": {
@@ -42120,7 +42138,8 @@
      }
     }
    },
-   "pos": 18
+   "pos": 18,
+   "prevPos": 16
   },
   {
    "team": {
@@ -44193,7 +44212,8 @@
      }
     }
    },
-   "pos": 19
+   "pos": 19,
+   "prevPos": 17
   },
   {
    "team": {
@@ -46266,7 +46286,8 @@
      }
     }
    },
-   "pos": 20
+   "pos": 20,
+   "prevPos": 24
   },
   {
    "team": {
@@ -48339,7 +48360,8 @@
      }
     }
    },
-   "pos": 21
+   "pos": 21,
+   "prevPos": 19
   },
   {
    "team": {
@@ -50412,7 +50434,8 @@
      }
     }
    },
-   "pos": 22
+   "pos": 22,
+   "prevPos": 20
   },
   {
    "team": {
@@ -52485,7 +52508,8 @@
      }
     }
    },
-   "pos": 23
+   "pos": 23,
+   "prevPos": 21
   },
   {
    "team": {
@@ -54558,7 +54582,8 @@
      }
     }
    },
-   "pos": 24
+   "pos": 24,
+   "prevPos": 22
   },
   {
    "team": {
@@ -56631,7 +56656,8 @@
      }
     }
    },
-   "pos": 25
+   "pos": 25,
+   "prevPos": 23
   },
   {
    "team": {
@@ -58704,7 +58730,8 @@
      }
     }
    },
-   "pos": 26
+   "pos": 26,
+   "prevPos": 26
   },
   {
    "team": {
@@ -60777,7 +60804,8 @@
      }
     }
    },
-   "pos": 27
+   "pos": 27,
+   "prevPos": 33
   },
   {
    "team": {
@@ -62850,7 +62878,8 @@
      }
     }
    },
-   "pos": 28
+   "pos": 28,
+   "prevPos": 27
   },
   {
    "team": {
@@ -64923,7 +64952,8 @@
      }
     }
    },
-   "pos": 29
+   "pos": 29,
+   "prevPos": 34
   },
   {
    "team": {
@@ -66996,7 +67026,8 @@
      }
     }
    },
-   "pos": 30
+   "pos": 30,
+   "prevPos": 28
   },
   {
    "team": {
@@ -69069,7 +69100,8 @@
      }
     }
    },
-   "pos": 31
+   "pos": 31,
+   "prevPos": 35
   },
   {
    "team": {
@@ -71142,7 +71174,8 @@
      }
     }
    },
-   "pos": 32
+   "pos": 32,
+   "prevPos": 29
   },
   {
    "team": {
@@ -73215,7 +73248,8 @@
      }
     }
    },
-   "pos": 33
+   "pos": 33,
+   "prevPos": 31
   },
   {
    "team": {
@@ -75288,7 +75322,8 @@
      }
     }
    },
-   "pos": 34
+   "pos": 34,
+   "prevPos": 37
   },
   {
    "team": {
@@ -77361,7 +77396,8 @@
      }
     }
    },
-   "pos": 35
+   "pos": 35,
+   "prevPos": 30
   },
   {
    "team": {
@@ -79434,7 +79470,8 @@
      }
     }
    },
-   "pos": 36
+   "pos": 36,
+   "prevPos": 32
   },
   {
    "team": {
@@ -81507,7 +81544,8 @@
      }
     }
    },
-   "pos": 37
+   "pos": 37,
+   "prevPos": 36
   },
   {
    "team": {
@@ -83580,7 +83618,8 @@
      }
     }
    },
-   "pos": 38
+   "pos": 38,
+   "prevPos": 38
   },
   {
    "team": {
@@ -85653,7 +85692,8 @@
      }
     }
    },
-   "pos": 39
+   "pos": 39,
+   "prevPos": 39
   },
   {
    "team": {
@@ -87726,7 +87766,8 @@
      }
     }
    },
-   "pos": 40
+   "pos": 40,
+   "prevPos": 40
   },
   {
    "team": {
@@ -89799,7 +89840,8 @@
      }
     }
    },
-   "pos": 41
+   "pos": 41,
+   "prevPos": 41
   },
   {
    "team": {
@@ -91872,12 +91914,13 @@
      }
     }
    },
-   "pos": 42
+   "pos": 42,
+   "prevPos": 42
   }
  ],
  "playoffs": null,
  "calendar": null,
- "now": 1795615273476,
+ "now": 1795618867151,
  "language": "es",
  "groups": [
   {

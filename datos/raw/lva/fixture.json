@@ -19,60 +19,6 @@
    }
   },
   {
-   "id": "2a86c948-27d0-4038-86cc-29aed9282fda",
-   "stage": "Fecha 1",
-   "match_date": "2026-10-28T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
-   },
-   "away_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
-   }
-  },
-  {
-   "id": "777e0d2f-a7f6-4a41-bec3-2096dcc8dd24",
-   "stage": "Fecha 1",
-   "match_date": "2026-10-28T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 3,
-   "home_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
-   },
-   "away_team": {
-    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
-    "name": "NHP 20",
-    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
-   }
-  },
-  {
-   "id": "02e59d20-c5e8-4c6e-b793-b5d3eae304c9",
-   "stage": "Fecha 1",
-   "match_date": "2026-10-28T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 0,
-   "home_team": {
-    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
-    "name": "Sequence FC",
-    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
-   },
-   "away_team": {
-    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
-    "name": "CA Colegiales",
-    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
-   }
-  },
-  {
    "id": "5d4f6c1c-0d4c-4cf9-9bd5-7f4606e96edf",
    "stage": "Fecha 1",
    "match_date": "2026-10-28T02:00:00+00:00",
@@ -91,57 +37,21 @@
    }
   },
   {
-   "id": "26218a62-ed32-4d93-ba86-5699fd424e01",
-   "stage": "Fecha 1",
-   "match_date": "2026-10-28T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 4,
-   "away_goals": 0,
-   "home_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
-   },
-   "away_team": {
-    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
-    "name": "MICROCORTE FC",
-    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
-   }
-  },
-  {
-   "id": "3ebb98eb-72fc-4246-b402-57e8423ac044",
-   "stage": "Fecha 1",
-   "match_date": "2026-10-28T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 1,
-   "home_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
-   },
-   "away_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
-   }
-  },
-  {
-   "id": "e35b6505-ad21-414b-8e9b-7aac4c45826a",
+   "id": "2a86c948-27d0-4038-86cc-29aed9282fda",
    "stage": "Fecha 1",
    "match_date": "2026-10-28T02:00:00+00:00",
    "status": "approved",
    "home_goals": 1,
    "away_goals": 0,
    "home_team": {
-    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
-    "name": "La Blanca FC",
-    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
    },
    "away_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
    }
   },
   {
@@ -163,21 +73,111 @@
    }
   },
   {
-   "id": "b6fe3647-e730-466d-91dd-ecbd54377595",
+   "id": "3ebb98eb-72fc-4246-b402-57e8423ac044",
+   "stage": "Fecha 1",
+   "match_date": "2026-10-28T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 1,
+   "home_team": {
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
+   },
+   "away_team": {
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+   }
+  },
+  {
+   "id": "777e0d2f-a7f6-4a41-bec3-2096dcc8dd24",
+   "stage": "Fecha 1",
+   "match_date": "2026-10-28T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 3,
+   "home_team": {
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+   },
+   "away_team": {
+    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
+    "name": "NHP 20",
+    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+   }
+  },
+  {
+   "id": "e35b6505-ad21-414b-8e9b-7aac4c45826a",
+   "stage": "Fecha 1",
+   "match_date": "2026-10-28T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
+    "name": "La Blanca FC",
+    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
+   },
+   "away_team": {
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+   }
+  },
+  {
+   "id": "26218a62-ed32-4d93-ba86-5699fd424e01",
+   "stage": "Fecha 1",
+   "match_date": "2026-10-28T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 4,
+   "away_goals": 0,
+   "home_team": {
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+   },
+   "away_team": {
+    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
+    "name": "MICROCORTE FC",
+    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+   }
+  },
+  {
+   "id": "02e59d20-c5e8-4c6e-b793-b5d3eae304c9",
+   "stage": "Fecha 1",
+   "match_date": "2026-10-28T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_team": {
+    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
+    "name": "Sequence FC",
+    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   },
+   "away_team": {
+    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
+    "name": "CA Colegiales",
+    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
+   }
+  },
+  {
+   "id": "b9f95747-55bb-4e86-8968-6f77d8ba14b7",
    "stage": "Fecha 2",
    "match_date": "2026-10-28T02:30:00+00:00",
    "status": "approved",
-   "home_goals": 1,
-   "away_goals": 1,
+   "home_goals": 4,
+   "away_goals": 0,
    "home_team": {
-    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
-    "name": "Virge Nes",
-    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
    },
    "away_team": {
-    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
-    "name": "Fc Echeverria ",
-    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
    }
   },
   {
@@ -217,6 +217,24 @@
    }
   },
   {
+   "id": "293618cc-9d54-4102-bc02-3da13f23a571",
+   "stage": "Fecha 2",
+   "match_date": "2026-10-28T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 2,
+   "home_team": {
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+   },
+   "away_team": {
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+   }
+  },
+  {
    "id": "a2ab8cdf-afcd-4149-ba6c-5a088d074b97",
    "stage": "Fecha 2",
    "match_date": "2026-10-28T02:30:00+00:00",
@@ -235,21 +253,39 @@
    }
   },
   {
-   "id": "b9f95747-55bb-4e86-8968-6f77d8ba14b7",
+   "id": "b6fe3647-e730-466d-91dd-ecbd54377595",
    "stage": "Fecha 2",
    "match_date": "2026-10-28T02:30:00+00:00",
    "status": "approved",
-   "home_goals": 4,
-   "away_goals": 0,
+   "home_goals": 1,
+   "away_goals": 1,
    "home_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
+    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
+    "name": "Virge Nes",
+    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
    },
    "away_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
+    "name": "Fc Echeverria ",
+    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+   }
+  },
+  {
+   "id": "1d1a4907-7add-498d-942e-51c320d88a54",
+   "stage": "Fecha 2",
+   "match_date": "2026-10-28T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 3,
+   "home_team": {
+    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
+    "name": "CA Colegiales",
+    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
+   },
+   "away_team": {
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
    }
   },
   {
@@ -286,42 +322,6 @@
     "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
     "name": "Sequence FC",
     "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
-   }
-  },
-  {
-   "id": "1d1a4907-7add-498d-942e-51c320d88a54",
-   "stage": "Fecha 2",
-   "match_date": "2026-10-28T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 3,
-   "home_team": {
-    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
-    "name": "CA Colegiales",
-    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
-   },
-   "away_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
-   }
-  },
-  {
-   "id": "293618cc-9d54-4102-bc02-3da13f23a571",
-   "stage": "Fecha 2",
-   "match_date": "2026-10-28T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 2,
-   "home_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
-   },
-   "away_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
    }
   },
   {
@@ -379,93 +379,21 @@
    }
   },
   {
-   "id": "82abd71f-fc60-4a4f-b369-25844830ffc6",
+   "id": "50f4de59-1d3f-41d3-ac8d-cf3481f1a905",
    "stage": "Fecha 3",
    "match_date": "2026-10-30T02:00:00+00:00",
    "status": "approved",
    "home_goals": 1,
-   "away_goals": 1,
-   "home_team": {
-    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
-    "name": "Caja Fuerte FC",
-    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
-   },
-   "away_team": {
-    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
-    "name": "NHP 20",
-    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
-   }
-  },
-  {
-   "id": "dbf45c63-dd1f-4177-9377-865ff5ce53ec",
-   "stage": "Fecha 3",
-   "match_date": "2026-10-30T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 1,
-   "home_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
-   },
-   "away_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
-   }
-  },
-  {
-   "id": "dc60e1ca-20d1-401f-bad4-65d9d931c343",
-   "stage": "Fecha 3",
-   "match_date": "2026-10-30T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 5,
    "away_goals": 0,
    "home_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
    },
    "away_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
-   }
-  },
-  {
-   "id": "786464cd-fbc5-4dfc-a202-70723931448e",
-   "stage": "Fecha 3",
-   "match_date": "2026-10-30T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
-    "name": "Balenciaga",
-    "logo_url": "https://i.imgur.com/n7KpcJV.png"
-   },
-   "away_team": {
-    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
-    "name": "COMPLICADOS SA",
-    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
-   }
-  },
-  {
-   "id": "67be4989-e22c-420f-b46a-4a0ca35d575c",
-   "stage": "Fecha 3",
-   "match_date": "2026-10-30T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
-    "name": "La Blanca FC",
-    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
-   },
-   "away_team": {
-    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
-    "name": "Virge Nes",
-    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
+    "name": "Zenthor FC",
+    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
    }
   },
   {
@@ -487,6 +415,24 @@
    }
   },
   {
+   "id": "67be4989-e22c-420f-b46a-4a0ca35d575c",
+   "stage": "Fecha 3",
+   "match_date": "2026-10-30T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
+    "name": "La Blanca FC",
+    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
+   },
+   "away_team": {
+    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
+    "name": "Virge Nes",
+    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+   }
+  },
+  {
    "id": "3ba3e7e0-bfcc-4a3c-8875-393fc5ebfd91",
    "stage": "Fecha 3",
    "match_date": "2026-10-30T02:00:00+00:00",
@@ -502,24 +448,6 @@
     "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
     "name": "Celestiales ",
     "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
-   }
-  },
-  {
-   "id": "50f4de59-1d3f-41d3-ac8d-cf3481f1a905",
-   "stage": "Fecha 3",
-   "match_date": "2026-10-30T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
-   },
-   "away_team": {
-    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
-    "name": "Zenthor FC",
-    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
    }
   },
   {
@@ -541,39 +469,129 @@
    }
   },
   {
-   "id": "d507f8d9-c1a9-40c7-ba1e-977ff7ef82cd",
-   "stage": "Fecha 4",
-   "match_date": "2026-10-30T02:30:00+00:00",
+   "id": "dbf45c63-dd1f-4177-9377-865ff5ce53ec",
+   "stage": "Fecha 3",
+   "match_date": "2026-10-30T02:00:00+00:00",
    "status": "approved",
-   "home_goals": 2,
-   "away_goals": 3,
+   "home_goals": 1,
+   "away_goals": 1,
    "home_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
    },
    "away_team": {
-    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
-    "name": "Caja Fuerte FC",
-    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
    }
   },
   {
-   "id": "0fad02a6-1f1e-4e32-a710-1b9e11ebf12d",
+   "id": "786464cd-fbc5-4dfc-a202-70723931448e",
+   "stage": "Fecha 3",
+   "match_date": "2026-10-30T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
+    "name": "Balenciaga",
+    "logo_url": "https://i.imgur.com/n7KpcJV.png"
+   },
+   "away_team": {
+    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
+    "name": "COMPLICADOS SA",
+    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
+   }
+  },
+  {
+   "id": "82abd71f-fc60-4a4f-b369-25844830ffc6",
+   "stage": "Fecha 3",
+   "match_date": "2026-10-30T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 1,
+   "home_team": {
+    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+   },
+   "away_team": {
+    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
+    "name": "NHP 20",
+    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+   }
+  },
+  {
+   "id": "dc60e1ca-20d1-401f-bad4-65d9d931c343",
+   "stage": "Fecha 3",
+   "match_date": "2026-10-30T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 5,
+   "away_goals": 0,
+   "home_team": {
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+   },
+   "away_team": {
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+   }
+  },
+  {
+   "id": "45c06e89-78f3-4074-b6d5-58f0f3de6411",
+   "stage": "Fecha 4",
+   "match_date": "2026-10-30T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 4,
+   "away_goals": 1,
+   "home_team": {
+    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
+    "name": "Virge Nes",
+    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+   },
+   "away_team": {
+    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
+    "name": "Balenciaga",
+    "logo_url": "https://i.imgur.com/n7KpcJV.png"
+   }
+  },
+  {
+   "id": "549de8a9-bc11-4af1-bc03-f9f50ded1f48",
+   "stage": "Fecha 4",
+   "match_date": "2026-10-30T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
+    "name": "Celestiales ",
+    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
+   },
+   "away_team": {
+    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
+    "name": "La Blanca FC",
+    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
+   }
+  },
+  {
+   "id": "dfa56f1b-bf24-4f9a-86a1-d83adedb1d91",
    "stage": "Fecha 4",
    "match_date": "2026-10-30T02:30:00+00:00",
    "status": "approved",
    "home_goals": 0,
    "away_goals": 1,
    "home_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
    },
    "away_team": {
-    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
-    "name": "CA Colegiales",
-    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
    }
   },
   {
@@ -595,6 +613,42 @@
    }
   },
   {
+   "id": "0fad02a6-1f1e-4e32-a710-1b9e11ebf12d",
+   "stage": "Fecha 4",
+   "match_date": "2026-10-30T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+   },
+   "away_team": {
+    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
+    "name": "CA Colegiales",
+    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
+   }
+  },
+  {
+   "id": "d507f8d9-c1a9-40c7-ba1e-977ff7ef82cd",
+   "stage": "Fecha 4",
+   "match_date": "2026-10-30T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 3,
+   "home_team": {
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
+   },
+   "away_team": {
+    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+   }
+  },
+  {
    "id": "c9df6201-565b-468a-9b0d-8e116628788b",
    "stage": "Fecha 4",
    "match_date": "2026-10-30T02:30:00+00:00",
@@ -610,6 +664,24 @@
     "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
     "name": "Fc Echeverria ",
     "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+   }
+  },
+  {
+   "id": "7fbddeb4-4dc9-4759-8fc8-6f1d407b260f",
+   "stage": "Fecha 4",
+   "match_date": "2026-10-30T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 1,
+   "home_team": {
+    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
+    "name": "MICROCORTE FC",
+    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+   },
+   "away_team": {
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
    }
   },
   {
@@ -649,132 +721,6 @@
    }
   },
   {
-   "id": "45c06e89-78f3-4074-b6d5-58f0f3de6411",
-   "stage": "Fecha 4",
-   "match_date": "2026-10-30T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 4,
-   "away_goals": 1,
-   "home_team": {
-    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
-    "name": "Virge Nes",
-    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
-   },
-   "away_team": {
-    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
-    "name": "Balenciaga",
-    "logo_url": "https://i.imgur.com/n7KpcJV.png"
-   }
-  },
-  {
-   "id": "7fbddeb4-4dc9-4759-8fc8-6f1d407b260f",
-   "stage": "Fecha 4",
-   "match_date": "2026-10-30T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 1,
-   "home_team": {
-    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
-    "name": "MICROCORTE FC",
-    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
-   },
-   "away_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
-   }
-  },
-  {
-   "id": "dfa56f1b-bf24-4f9a-86a1-d83adedb1d91",
-   "stage": "Fecha 4",
-   "match_date": "2026-10-30T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
-   },
-   "away_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
-   }
-  },
-  {
-   "id": "549de8a9-bc11-4af1-bc03-f9f50ded1f48",
-   "stage": "Fecha 4",
-   "match_date": "2026-10-30T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
-    "name": "Celestiales ",
-    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
-   },
-   "away_team": {
-    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
-    "name": "La Blanca FC",
-    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
-   }
-  },
-  {
-   "id": "29848344-d7c8-4653-a339-488634a4c052",
-   "stage": "Fecha 5",
-   "match_date": "2026-11-04T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 3,
-   "away_goals": 0,
-   "home_team": {
-    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
-    "name": "Caja Fuerte FC",
-    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
-   },
-   "away_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
-   }
-  },
-  {
-   "id": "54ffb488-b60d-43b6-932b-421bdea18d40",
-   "stage": "Fecha 5",
-   "match_date": "2026-11-04T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 1,
-   "home_team": {
-    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
-    "name": "Fc Echeverria ",
-    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
-   },
-   "away_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
-   }
-  },
-  {
-   "id": "da30426a-7aa4-42e6-9d7c-1c9339bc932f",
-   "stage": "Fecha 5",
-   "match_date": "2026-11-04T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
-   },
-   "away_team": {
-    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
-    "name": "Potrero eSport",
-    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
-   }
-  },
-  {
    "id": "3d69b035-34b2-43f4-8f16-d68ea9cf5fd4",
    "stage": "Fecha 5",
    "match_date": "2026-11-04T02:00:00+00:00",
@@ -790,42 +736,6 @@
     "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
     "name": "NHP 20",
     "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
-   }
-  },
-  {
-   "id": "5ee30f6b-a6b7-4f0e-89f9-9f84a48b3a8e",
-   "stage": "Fecha 5",
-   "match_date": "2026-11-04T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 0,
-   "home_team": {
-    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
-    "name": "Sequence FC",
-    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
-   },
-   "away_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
-   }
-  },
-  {
-   "id": "e331d454-c516-401a-a159-441aae0d6a35",
-   "stage": "Fecha 5",
-   "match_date": "2026-11-04T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 4,
-   "away_goals": 0,
-   "home_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
-   },
-   "away_team": {
-    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
-    "name": "COMPLICADOS SA",
-    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
    }
   },
   {
@@ -847,6 +757,24 @@
    }
   },
   {
+   "id": "da30426a-7aa4-42e6-9d7c-1c9339bc932f",
+   "stage": "Fecha 5",
+   "match_date": "2026-11-04T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+   },
+   "away_team": {
+    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+   }
+  },
+  {
    "id": "85e56b72-48e0-4017-b6e1-63fd889e3a87",
    "stage": "Fecha 5",
    "match_date": "2026-11-04T02:00:00+00:00",
@@ -862,6 +790,24 @@
     "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
     "name": "Virge Nes",
     "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+   }
+  },
+  {
+   "id": "e331d454-c516-401a-a159-441aae0d6a35",
+   "stage": "Fecha 5",
+   "match_date": "2026-11-04T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 4,
+   "away_goals": 0,
+   "home_team": {
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+   },
+   "away_team": {
+    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
+    "name": "COMPLICADOS SA",
+    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
    }
   },
   {
@@ -883,6 +829,42 @@
    }
   },
   {
+   "id": "5ee30f6b-a6b7-4f0e-89f9-9f84a48b3a8e",
+   "stage": "Fecha 5",
+   "match_date": "2026-11-04T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_team": {
+    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
+    "name": "Sequence FC",
+    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   },
+   "away_team": {
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+   }
+  },
+  {
+   "id": "54ffb488-b60d-43b6-932b-421bdea18d40",
+   "stage": "Fecha 5",
+   "match_date": "2026-11-04T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 1,
+   "home_team": {
+    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
+    "name": "Fc Echeverria ",
+    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+   },
+   "away_team": {
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
+   }
+  },
+  {
    "id": "16cb466e-c918-47a7-a0c6-4f10b30078b4",
    "stage": "Fecha 5",
    "match_date": "2026-11-04T02:00:00+00:00",
@@ -901,6 +883,42 @@
    }
   },
   {
+   "id": "29848344-d7c8-4653-a339-488634a4c052",
+   "stage": "Fecha 5",
+   "match_date": "2026-11-04T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 3,
+   "away_goals": 0,
+   "home_team": {
+    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+   },
+   "away_team": {
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+   }
+  },
+  {
+   "id": "924d5de6-2209-4ad5-9d3d-8bf6881350a0",
+   "stage": "Fecha 6",
+   "match_date": "2026-11-04T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 4,
+   "away_goals": 0,
+   "home_team": {
+    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
+    "name": "NHP 20",
+    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+   },
+   "away_team": {
+    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
+    "name": "Balenciaga",
+    "logo_url": "https://i.imgur.com/n7KpcJV.png"
+   }
+  },
+  {
    "id": "c4af8536-be86-45ea-9631-c86771b7957f",
    "stage": "Fecha 6",
    "match_date": "2026-11-04T02:30:00+00:00",
@@ -916,6 +934,60 @@
     "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
     "name": "Sequence FC",
     "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   }
+  },
+  {
+   "id": "7bd458e0-6348-455e-a5ac-a9b9b80ae130",
+   "stage": "Fecha 6",
+   "match_date": "2026-11-04T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 1,
+   "home_team": {
+    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
+    "name": "Virge Nes",
+    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+   },
+   "away_team": {
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+   }
+  },
+  {
+   "id": "5b6a02b0-8fd3-49d0-a0c6-ac263fab7fe3",
+   "stage": "Fecha 6",
+   "match_date": "2026-11-04T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 3,
+   "home_team": {
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+   },
+   "away_team": {
+    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
+    "name": "Fc Echeverria ",
+    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+   }
+  },
+  {
+   "id": "1cdbbd2b-de1a-41ce-9049-d8134f7d08e0",
+   "stage": "Fecha 6",
+   "match_date": "2026-11-04T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 3,
+   "away_goals": 2,
+   "home_team": {
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+   },
+   "away_team": {
+    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
+    "name": "CA Colegiales",
+    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
    }
   },
   {
@@ -955,39 +1027,21 @@
    }
   },
   {
-   "id": "1cdbbd2b-de1a-41ce-9049-d8134f7d08e0",
+   "id": "bea269cb-3c4f-4ea1-8625-8ff129aca168",
    "stage": "Fecha 6",
    "match_date": "2026-11-04T02:30:00+00:00",
    "status": "approved",
-   "home_goals": 3,
-   "away_goals": 2,
+   "home_goals": 1,
+   "away_goals": 1,
    "home_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
+    "name": "Celestiales ",
+    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
    },
    "away_team": {
-    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
-    "name": "CA Colegiales",
-    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
-   }
-  },
-  {
-   "id": "5b6a02b0-8fd3-49d0-a0c6-ac263fab7fe3",
-   "stage": "Fecha 6",
-   "match_date": "2026-11-04T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 3,
-   "home_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
-   },
-   "away_team": {
-    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
-    "name": "Fc Echeverria ",
-    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
    }
   },
   {
@@ -1009,24 +1063,6 @@
    }
   },
   {
-   "id": "924d5de6-2209-4ad5-9d3d-8bf6881350a0",
-   "stage": "Fecha 6",
-   "match_date": "2026-11-04T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 4,
-   "away_goals": 0,
-   "home_team": {
-    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
-    "name": "NHP 20",
-    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
-   },
-   "away_team": {
-    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
-    "name": "Balenciaga",
-    "logo_url": "https://i.imgur.com/n7KpcJV.png"
-   }
-  },
-  {
    "id": "949b1635-7262-4930-aa2d-be6966d11347",
    "stage": "Fecha 6",
    "match_date": "2026-11-04T02:30:00+00:00",
@@ -1045,93 +1081,21 @@
    }
   },
   {
-   "id": "bea269cb-3c4f-4ea1-8625-8ff129aca168",
-   "stage": "Fecha 6",
-   "match_date": "2026-11-04T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 1,
-   "home_team": {
-    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
-    "name": "Celestiales ",
-    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
-   },
-   "away_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
-   }
-  },
-  {
-   "id": "7bd458e0-6348-455e-a5ac-a9b9b80ae130",
-   "stage": "Fecha 6",
-   "match_date": "2026-11-04T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 1,
-   "home_team": {
-    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
-    "name": "Virge Nes",
-    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
-   },
-   "away_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
-   }
-  },
-  {
-   "id": "426badb6-8aca-48c4-a649-84f85f1afbe4",
-   "stage": "Fecha 7",
-   "match_date": "2026-11-06T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 3,
-   "away_goals": 0,
-   "home_team": {
-    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
-    "name": "Balenciaga",
-    "logo_url": "https://i.imgur.com/n7KpcJV.png"
-   },
-   "away_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
-   }
-  },
-  {
-   "id": "c9ea6fc2-29eb-4370-b1fe-ea01d92a8291",
+   "id": "d26e2aaf-f976-45b1-be48-0ccaba61ed86",
    "stage": "Fecha 7",
    "match_date": "2026-11-06T02:00:00+00:00",
    "status": "approved",
    "home_goals": 1,
-   "away_goals": 1,
+   "away_goals": 2,
    "home_team": {
-    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
-    "name": "Sequence FC",
-    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
+    "name": "MICROCORTE FC",
+    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
    },
    "away_team": {
-    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
-    "name": "Virge Nes",
-    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
-   }
-  },
-  {
-   "id": "7e78657b-0037-490e-ae08-f28ef48b2f9e",
-   "stage": "Fecha 7",
-   "match_date": "2026-11-06T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 0,
-   "home_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
-   },
-   "away_team": {
-    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
-    "name": "Zenthor FC",
-    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
    }
   },
   {
@@ -1171,6 +1135,60 @@
    }
   },
   {
+   "id": "c9ea6fc2-29eb-4370-b1fe-ea01d92a8291",
+   "stage": "Fecha 7",
+   "match_date": "2026-11-06T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 1,
+   "home_team": {
+    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
+    "name": "Sequence FC",
+    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   },
+   "away_team": {
+    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
+    "name": "Virge Nes",
+    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+   }
+  },
+  {
+   "id": "7e78657b-0037-490e-ae08-f28ef48b2f9e",
+   "stage": "Fecha 7",
+   "match_date": "2026-11-06T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_team": {
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+   },
+   "away_team": {
+    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
+    "name": "Zenthor FC",
+    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+   }
+  },
+  {
+   "id": "426badb6-8aca-48c4-a649-84f85f1afbe4",
+   "stage": "Fecha 7",
+   "match_date": "2026-11-06T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 3,
+   "away_goals": 0,
+   "home_team": {
+    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
+    "name": "Balenciaga",
+    "logo_url": "https://i.imgur.com/n7KpcJV.png"
+   },
+   "away_team": {
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
+   }
+  },
+  {
    "id": "6b1f87ab-bea5-4d14-90fb-8db06093b60b",
    "stage": "Fecha 7",
    "match_date": "2026-11-06T02:00:00+00:00",
@@ -1189,21 +1207,21 @@
    }
   },
   {
-   "id": "d26e2aaf-f976-45b1-be48-0ccaba61ed86",
+   "id": "a1434d74-e185-41b5-9acd-0fdce843eb53",
    "stage": "Fecha 7",
    "match_date": "2026-11-06T02:00:00+00:00",
    "status": "approved",
-   "home_goals": 1,
-   "away_goals": 2,
+   "home_goals": 0,
+   "away_goals": 1,
    "home_team": {
-    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
-    "name": "MICROCORTE FC",
-    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
+    "name": "CA Colegiales",
+    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
    },
    "away_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
+    "name": "COMPLICADOS SA",
+    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
    }
   },
   {
@@ -1243,75 +1261,21 @@
    }
   },
   {
-   "id": "a1434d74-e185-41b5-9acd-0fdce843eb53",
-   "stage": "Fecha 7",
-   "match_date": "2026-11-06T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
-    "name": "CA Colegiales",
-    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
-   },
-   "away_team": {
-    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
-    "name": "COMPLICADOS SA",
-    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
-   }
-  },
-  {
-   "id": "d7bcd28e-bc5a-473f-b433-594ae5d03dc3",
+   "id": "bd1f7f60-fbb7-4a68-8829-b2890f74cb2e",
    "stage": "Fecha 8",
    "match_date": "2026-11-06T02:30:00+00:00",
    "status": "approved",
-   "home_goals": 2,
-   "away_goals": 1,
-   "home_team": {
-    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
-    "name": "Potrero eSport",
-    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
-   },
-   "away_team": {
-    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
-    "name": "La Blanca FC",
-    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
-   }
-  },
-  {
-   "id": "caf98863-a88e-48e3-bbbc-b480bb5e020a",
-   "stage": "Fecha 8",
-   "match_date": "2026-11-06T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
-   },
-   "away_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
-   }
-  },
-  {
-   "id": "cf811142-737e-4913-b61b-bdad3deb2456",
-   "stage": "Fecha 8",
-   "match_date": "2026-11-06T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
+   "home_goals": 4,
    "away_goals": 0,
    "home_team": {
-    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
-    "name": "Virge Nes",
-    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
    },
    "away_team": {
-    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
-    "name": "CA Colegiales",
-    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
    }
   },
   {
@@ -1333,93 +1297,39 @@
    }
   },
   {
-   "id": "de72dcba-b6ec-4c1d-b8fe-140dacebe0f4",
-   "stage": "Fecha 8",
-   "match_date": "2026-11-06T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
-    "name": "Caja Fuerte FC",
-    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
-   },
-   "away_team": {
-    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
-    "name": "Fc Echeverria ",
-    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
-   }
-  },
-  {
-   "id": "f649c5ee-1acc-42b0-92e8-b2e0d208febf",
-   "stage": "Fecha 8",
-   "match_date": "2026-11-06T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 1,
-   "home_team": {
-    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
-    "name": "Zenthor FC",
-    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
-   },
-   "away_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
-   }
-  },
-  {
-   "id": "7d39db8b-31e7-4ab6-87b8-d7f4af438d0f",
-   "stage": "Fecha 8",
-   "match_date": "2026-11-06T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
-   },
-   "away_team": {
-    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
-    "name": "Balenciaga",
-    "logo_url": "https://i.imgur.com/n7KpcJV.png"
-   }
-  },
-  {
-   "id": "bd1f7f60-fbb7-4a68-8829-b2890f74cb2e",
-   "stage": "Fecha 8",
-   "match_date": "2026-11-06T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 4,
-   "away_goals": 0,
-   "home_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
-   },
-   "away_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
-   }
-  },
-  {
-   "id": "63f2b527-086a-47a3-b996-7a1f134ff6e0",
+   "id": "caf98863-a88e-48e3-bbbc-b480bb5e020a",
    "stage": "Fecha 8",
    "match_date": "2026-11-06T02:30:00+00:00",
    "status": "approved",
    "home_goals": 0,
-   "away_goals": 2,
+   "away_goals": 1,
    "home_team": {
-    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
-    "name": "NHP 20",
-    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
    },
    "away_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+   }
+  },
+  {
+   "id": "d7bcd28e-bc5a-473f-b433-594ae5d03dc3",
+   "stage": "Fecha 8",
+   "match_date": "2026-11-06T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 1,
+   "home_team": {
+    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+   },
+   "away_team": {
+    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
+    "name": "La Blanca FC",
+    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
    }
   },
   {
@@ -1441,16 +1351,16 @@
    }
   },
   {
-   "id": "1906e10a-d4a4-4f88-825f-606cbf3a1639",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
+   "id": "de72dcba-b6ec-4c1d-b8fe-140dacebe0f4",
+   "stage": "Fecha 8",
+   "match_date": "2026-11-06T02:30:00+00:00",
    "status": "approved",
-   "home_goals": 0,
-   "away_goals": 2,
+   "home_goals": 1,
+   "away_goals": 0,
    "home_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
    },
    "away_team": {
     "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
@@ -1459,129 +1369,75 @@
    }
   },
   {
-   "id": "5b2aa31b-7199-43da-88c0-234c7b5eac06",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 1,
-   "home_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
-   },
-   "away_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
-   }
-  },
-  {
-   "id": "7102d8d1-c57c-4df9-893e-77cd733de3eb",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 4,
-   "home_team": {
-    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
-    "name": "MICROCORTE FC",
-    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
-   },
-   "away_team": {
-    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
-    "name": "Virge Nes",
-    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
-   }
-  },
-  {
-   "id": "80ac14ab-2ab0-4e4a-94ab-1c5a5081b5cd",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
-   },
-   "away_team": {
-    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
-    "name": "COMPLICADOS SA",
-    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
-   }
-  },
-  {
-   "id": "1a65accb-1a3d-43cc-a16f-13ce20c3e161",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 3,
-   "home_team": {
-    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
-    "name": "Sequence FC",
-    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
-   },
-   "away_team": {
-    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
-    "name": "NHP 20",
-    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
-   }
-  },
-  {
-   "id": "3a0b80a5-2665-4d64-9cfc-5c956d7add85",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
+   "id": "7d39db8b-31e7-4ab6-87b8-d7f4af438d0f",
+   "stage": "Fecha 8",
+   "match_date": "2026-11-06T02:30:00+00:00",
    "status": "approved",
    "home_goals": 1,
    "away_goals": 0,
+   "home_team": {
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+   },
+   "away_team": {
+    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
+    "name": "Balenciaga",
+    "logo_url": "https://i.imgur.com/n7KpcJV.png"
+   }
+  },
+  {
+   "id": "f649c5ee-1acc-42b0-92e8-b2e0d208febf",
+   "stage": "Fecha 8",
+   "match_date": "2026-11-06T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 1,
    "home_team": {
     "id": "7c547535-04ac-45a6-9713-5077073d1d54",
     "name": "Zenthor FC",
     "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
    },
    "away_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
    }
   },
   {
-   "id": "4c93cf01-2326-4fab-b57b-5379302f3596",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
+   "id": "cf811142-737e-4913-b61b-bdad3deb2456",
+   "stage": "Fecha 8",
+   "match_date": "2026-11-06T02:30:00+00:00",
    "status": "approved",
    "home_goals": 2,
    "away_goals": 0,
    "home_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
+    "name": "Virge Nes",
+    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
    },
    "away_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
-   }
-  },
-  {
-   "id": "a2fcedd4-c810-44c7-84f3-21cabbf6df3e",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 1,
-   "home_team": {
     "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
     "name": "CA Colegiales",
     "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
+   }
+  },
+  {
+   "id": "63f2b527-086a-47a3-b996-7a1f134ff6e0",
+   "stage": "Fecha 8",
+   "match_date": "2026-11-06T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 2,
+   "home_team": {
+    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
+    "name": "NHP 20",
+    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
    },
    "away_team": {
-    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
-    "name": "Celestiales ",
-    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
    }
   },
   {
@@ -1621,129 +1477,147 @@
    }
   },
   {
-   "id": "8451c281-0a91-408f-af6b-91904c417c09",
-   "stage": "Fecha 10",
-   "match_date": "2026-11-11T02:30:00+00:00",
+   "id": "1a65accb-1a3d-43cc-a16f-13ce20c3e161",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
    "status": "approved",
    "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
-   },
-   "away_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
-   }
-  },
-  {
-   "id": "74c80b36-ecda-4248-9d30-7ac454a39230",
-   "stage": "Fecha 10",
-   "match_date": "2026-11-11T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
-   },
-   "away_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
-   }
-  },
-  {
-   "id": "f2d330b4-805a-498c-9049-f0af85982ae2",
-   "stage": "Fecha 10",
-   "match_date": "2026-11-11T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 4,
    "away_goals": 3,
    "home_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
-   },
-   "away_team": {
     "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
     "name": "Sequence FC",
     "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   },
+   "away_team": {
+    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
+    "name": "NHP 20",
+    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
    }
   },
   {
-   "id": "59530a8d-1c0c-43e4-b5fe-e870cb97dac6",
-   "stage": "Fecha 10",
-   "match_date": "2026-11-11T02:30:00+00:00",
+   "id": "7102d8d1-c57c-4df9-893e-77cd733de3eb",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
    "status": "approved",
    "home_goals": 0,
-   "away_goals": 0,
+   "away_goals": 4,
    "home_team": {
-    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
-    "name": "Potrero eSport",
-    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
+    "name": "MICROCORTE FC",
+    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
    },
    "away_team": {
+    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
+    "name": "Virge Nes",
+    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+   }
+  },
+  {
+   "id": "5b2aa31b-7199-43da-88c0-234c7b5eac06",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 1,
+   "home_team": {
     "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
     "name": "MQ SAVIO FC",
     "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
+   },
+   "away_team": {
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
    }
   },
   {
-   "id": "6b39d6f6-3f3e-48b7-8231-1cf4946e29bf",
-   "stage": "Fecha 10",
-   "match_date": "2026-11-11T02:30:00+00:00",
+   "id": "3a0b80a5-2665-4d64-9cfc-5c956d7add85",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
    "status": "approved",
    "home_goals": 1,
    "away_goals": 0,
    "home_team": {
-    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
-    "name": "Fc Echeverria ",
-    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
-   },
-   "away_team": {
-    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
-    "name": "La Blanca FC",
-    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
-   }
-  },
-  {
-   "id": "d4cc7456-cc9b-4bd8-897c-3a67572d518b",
-   "stage": "Fecha 10",
-   "match_date": "2026-11-11T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
-    "name": "COMPLICADOS SA",
-    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
-   },
-   "away_team": {
     "id": "7c547535-04ac-45a6-9713-5077073d1d54",
     "name": "Zenthor FC",
     "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+   },
+   "away_team": {
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
    }
   },
   {
-   "id": "8f2cb07f-9203-41da-ad54-89853e2cda8e",
-   "stage": "Fecha 10",
-   "match_date": "2026-11-11T02:30:00+00:00",
+   "id": "1906e10a-d4a4-4f88-825f-606cbf3a1639",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
    "status": "approved",
-   "home_goals": 3,
+   "home_goals": 0,
    "away_goals": 2,
    "home_team": {
-    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
-    "name": "NHP 20",
-    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
    },
    "away_team": {
+    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
+    "name": "Fc Echeverria ",
+    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+   }
+  },
+  {
+   "id": "4c93cf01-2326-4fab-b57b-5379302f3596",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_team": {
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+   },
+   "away_team": {
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
+   }
+  },
+  {
+   "id": "a2fcedd4-c810-44c7-84f3-21cabbf6df3e",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 1,
+   "home_team": {
     "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
     "name": "CA Colegiales",
     "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
+   },
+   "away_team": {
+    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
+    "name": "Celestiales ",
+    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
+   }
+  },
+  {
+   "id": "80ac14ab-2ab0-4e4a-94ab-1c5a5081b5cd",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+   },
+   "away_team": {
+    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
+    "name": "COMPLICADOS SA",
+    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
    }
   },
   {
@@ -1762,6 +1636,24 @@
     "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
     "name": "MICROCORTE FC",
     "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+   }
+  },
+  {
+   "id": "8f2cb07f-9203-41da-ad54-89853e2cda8e",
+   "stage": "Fecha 10",
+   "match_date": "2026-11-11T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 3,
+   "away_goals": 2,
+   "home_team": {
+    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
+    "name": "NHP 20",
+    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+   },
+   "away_team": {
+    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
+    "name": "CA Colegiales",
+    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
    }
   },
   {
@@ -1801,21 +1693,129 @@
    }
   },
   {
-   "id": "1c78b340-a9e6-474d-bc38-20428d53bd32",
+   "id": "8451c281-0a91-408f-af6b-91904c417c09",
+   "stage": "Fecha 10",
+   "match_date": "2026-11-11T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+   },
+   "away_team": {
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+   }
+  },
+  {
+   "id": "d4cc7456-cc9b-4bd8-897c-3a67572d518b",
+   "stage": "Fecha 10",
+   "match_date": "2026-11-11T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
+    "name": "COMPLICADOS SA",
+    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
+   },
+   "away_team": {
+    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
+    "name": "Zenthor FC",
+    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+   }
+  },
+  {
+   "id": "74c80b36-ecda-4248-9d30-7ac454a39230",
+   "stage": "Fecha 10",
+   "match_date": "2026-11-11T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+   },
+   "away_team": {
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+   }
+  },
+  {
+   "id": "59530a8d-1c0c-43e4-b5fe-e870cb97dac6",
+   "stage": "Fecha 10",
+   "match_date": "2026-11-11T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+   },
+   "away_team": {
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
+   }
+  },
+  {
+   "id": "f2d330b4-805a-498c-9049-f0af85982ae2",
+   "stage": "Fecha 10",
+   "match_date": "2026-11-11T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 4,
+   "away_goals": 3,
+   "home_team": {
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
+   },
+   "away_team": {
+    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
+    "name": "Sequence FC",
+    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   }
+  },
+  {
+   "id": "6b39d6f6-3f3e-48b7-8231-1cf4946e29bf",
+   "stage": "Fecha 10",
+   "match_date": "2026-11-11T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
+    "name": "Fc Echeverria ",
+    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+   },
+   "away_team": {
+    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
+    "name": "La Blanca FC",
+    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
+   }
+  },
+  {
+   "id": "1a3aeeb3-0813-4f7c-9828-9afab30ccbb0",
    "stage": "Fecha 11",
    "match_date": "2026-11-13T02:00:00+00:00",
    "status": "approved",
-   "home_goals": 0,
-   "away_goals": 2,
+   "home_goals": 2,
+   "away_goals": 0,
    "home_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
+    "name": "CA Colegiales",
+    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
    },
    "away_team": {
-    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
-    "name": "Celestiales ",
-    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
    }
   },
   {
@@ -1834,6 +1834,78 @@
     "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
     "name": "Virge Nes",
     "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+   }
+  },
+  {
+   "id": "1bee1fef-7740-4b93-9ec9-f6abbdcf537f",
+   "stage": "Fecha 11",
+   "match_date": "2026-11-13T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
+   },
+   "away_team": {
+    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+   }
+  },
+  {
+   "id": "e8119ee2-d7fe-491f-b53a-93219f685b2f",
+   "stage": "Fecha 11",
+   "match_date": "2026-11-13T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
+    "name": "MICROCORTE FC",
+    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+   },
+   "away_team": {
+    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
+    "name": "NHP 20",
+    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+   }
+  },
+  {
+   "id": "21437b85-5fbe-4b10-9273-55ea7c3ca0a6",
+   "stage": "Fecha 11",
+   "match_date": "2026-11-13T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 2,
+   "home_team": {
+    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
+    "name": "Balenciaga",
+    "logo_url": "https://i.imgur.com/n7KpcJV.png"
+   },
+   "away_team": {
+    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
+    "name": "Fc Echeverria ",
+    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+   }
+  },
+  {
+   "id": "e06f22af-ba7a-46fe-9b18-c417bcaa76d6",
+   "stage": "Fecha 11",
+   "match_date": "2026-11-13T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+   },
+   "away_team": {
+    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
    }
   },
   {
@@ -1873,24 +1945,6 @@
    }
   },
   {
-   "id": "e06f22af-ba7a-46fe-9b18-c417bcaa76d6",
-   "stage": "Fecha 11",
-   "match_date": "2026-11-13T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
-   },
-   "away_team": {
-    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
-    "name": "Potrero eSport",
-    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
-   }
-  },
-  {
    "id": "3d521f1a-1b03-42fc-ad0e-37f8c592d311",
    "stage": "Fecha 11",
    "match_date": "2026-11-13T02:00:00+00:00",
@@ -1909,93 +1963,21 @@
    }
   },
   {
-   "id": "e8119ee2-d7fe-491f-b53a-93219f685b2f",
-   "stage": "Fecha 11",
-   "match_date": "2026-11-13T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
-    "name": "MICROCORTE FC",
-    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
-   },
-   "away_team": {
-    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
-    "name": "NHP 20",
-    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
-   }
-  },
-  {
-   "id": "1bee1fef-7740-4b93-9ec9-f6abbdcf537f",
+   "id": "1c78b340-a9e6-474d-bc38-20428d53bd32",
    "stage": "Fecha 11",
    "match_date": "2026-11-13T02:00:00+00:00",
    "status": "approved",
    "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
-   },
-   "away_team": {
-    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
-    "name": "Caja Fuerte FC",
-    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
-   }
-  },
-  {
-   "id": "21437b85-5fbe-4b10-9273-55ea7c3ca0a6",
-   "stage": "Fecha 11",
-   "match_date": "2026-11-13T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
    "away_goals": 2,
    "home_team": {
-    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
-    "name": "Balenciaga",
-    "logo_url": "https://i.imgur.com/n7KpcJV.png"
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
    },
    "away_team": {
-    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
-    "name": "Fc Echeverria ",
-    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
-   }
-  },
-  {
-   "id": "1a3aeeb3-0813-4f7c-9828-9afab30ccbb0",
-   "stage": "Fecha 11",
-   "match_date": "2026-11-13T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 0,
-   "home_team": {
-    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
-    "name": "CA Colegiales",
-    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
-   },
-   "away_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
-   }
-  },
-  {
-   "id": "c8146e91-06b8-48cc-954e-647bb7fc1cee",
-   "stage": "Fecha 12",
-   "match_date": "2026-11-13T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 1,
-   "home_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
-   },
-   "away_team": {
-    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
-    "name": "MICROCORTE FC",
-    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
+    "name": "Celestiales ",
+    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
    }
   },
   {
@@ -2035,21 +2017,21 @@
    }
   },
   {
-   "id": "6b5947b0-46aa-41fe-a064-cfd6346a5fb2",
+   "id": "736850c5-2c30-4158-9515-5894bf6bf182",
    "stage": "Fecha 12",
    "match_date": "2026-11-13T02:30:00+00:00",
    "status": "approved",
    "home_goals": 0,
    "away_goals": 3,
    "home_team": {
-    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
-    "name": "Caja Fuerte FC",
-    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
    },
    "away_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
+    "name": "Sequence FC",
+    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
    }
   },
   {
@@ -2071,57 +2053,21 @@
    }
   },
   {
-   "id": "d7fc3381-7fac-4c23-9c63-ab60f55d28e0",
-   "stage": "Fecha 12",
-   "match_date": "2026-11-13T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
-    "name": "Fc Echeverria ",
-    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
-   },
-   "away_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
-   }
-  },
-  {
-   "id": "736850c5-2c30-4158-9515-5894bf6bf182",
+   "id": "6b5947b0-46aa-41fe-a064-cfd6346a5fb2",
    "stage": "Fecha 12",
    "match_date": "2026-11-13T02:30:00+00:00",
    "status": "approved",
    "home_goals": 0,
    "away_goals": 3,
    "home_team": {
-    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
-    "name": "Potrero eSport",
-    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
    },
    "away_team": {
-    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
-    "name": "Sequence FC",
-    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
-   }
-  },
-  {
-   "id": "94b64186-fa54-41d7-b38b-fa3c6b534529",
-   "stage": "Fecha 12",
-   "match_date": "2026-11-13T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
-    "name": "NHP 20",
-    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
-   },
-   "away_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
    }
   },
   {
@@ -2143,6 +2089,60 @@
    }
   },
   {
+   "id": "94b64186-fa54-41d7-b38b-fa3c6b534529",
+   "stage": "Fecha 12",
+   "match_date": "2026-11-13T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
+    "name": "NHP 20",
+    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+   },
+   "away_team": {
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+   }
+  },
+  {
+   "id": "c8146e91-06b8-48cc-954e-647bb7fc1cee",
+   "stage": "Fecha 12",
+   "match_date": "2026-11-13T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 1,
+   "home_team": {
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
+   },
+   "away_team": {
+    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
+    "name": "MICROCORTE FC",
+    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+   }
+  },
+  {
+   "id": "d7fc3381-7fac-4c23-9c63-ab60f55d28e0",
+   "stage": "Fecha 12",
+   "match_date": "2026-11-13T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
+    "name": "Fc Echeverria ",
+    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+   },
+   "away_team": {
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
+   }
+  },
+  {
    "id": "646aab35-de34-426f-8d0c-b9865cc1ddca",
    "stage": "Fecha 12",
    "match_date": "2026-11-13T02:30:00+00:00",
@@ -2158,6 +2158,24 @@
     "id": "7c547535-04ac-45a6-9713-5077073d1d54",
     "name": "Zenthor FC",
     "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+   }
+  },
+  {
+   "id": "336c2ffc-ce0d-41ce-b268-bac6c3c35d0a",
+   "stage": "Fecha 13",
+   "match_date": "2026-11-18T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
+   },
+   "away_team": {
+    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
+    "name": "La Blanca FC",
+    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
    }
   },
   {
@@ -2233,75 +2251,21 @@
    }
   },
   {
-   "id": "ddd3ec75-7739-4f6e-8735-c2781f83b609",
-   "stage": "Fecha 13",
-   "match_date": "2026-11-18T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
-    "name": "Zenthor FC",
-    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
-   },
-   "away_team": {
-    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
-    "name": "NHP 20",
-    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
-   }
-  },
-  {
-   "id": "336c2ffc-ce0d-41ce-b268-bac6c3c35d0a",
-   "stage": "Fecha 13",
-   "match_date": "2026-11-18T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
-   },
-   "away_team": {
-    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
-    "name": "La Blanca FC",
-    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
-   }
-  },
-  {
-   "id": "5fff36b4-7b8a-470d-9540-0ded16b9f9f9",
-   "stage": "Fecha 13",
-   "match_date": "2026-11-18T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
-    "name": "MICROCORTE FC",
-    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
-   },
-   "away_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
-   }
-  },
-  {
-   "id": "4d39b691-fc1d-4038-b68a-84490764945a",
+   "id": "c1f3e17a-200d-4dc2-aab1-006e6a313268",
    "stage": "Fecha 13",
    "match_date": "2026-11-18T02:00:00+00:00",
    "status": "approved",
    "home_goals": 0,
    "away_goals": 1,
    "home_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
+    "name": "CA Colegiales",
+    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
    },
    "away_team": {
-    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
-    "name": "Celestiales ",
-    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
+    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
    }
   },
   {
@@ -2323,39 +2287,75 @@
    }
   },
   {
-   "id": "c1f3e17a-200d-4dc2-aab1-006e6a313268",
+   "id": "4d39b691-fc1d-4038-b68a-84490764945a",
    "stage": "Fecha 13",
    "match_date": "2026-11-18T02:00:00+00:00",
    "status": "approved",
    "home_goals": 0,
    "away_goals": 1,
    "home_team": {
-    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
-    "name": "CA Colegiales",
-    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
    },
    "away_team": {
-    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
-    "name": "Potrero eSport",
-    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
+    "name": "Celestiales ",
+    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
    }
   },
   {
-   "id": "25217280-17d7-4e84-a8d8-72a1d7221675",
+   "id": "5fff36b4-7b8a-470d-9540-0ded16b9f9f9",
+   "stage": "Fecha 13",
+   "match_date": "2026-11-18T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
+    "name": "MICROCORTE FC",
+    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+   },
+   "away_team": {
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+   }
+  },
+  {
+   "id": "ddd3ec75-7739-4f6e-8735-c2781f83b609",
+   "stage": "Fecha 13",
+   "match_date": "2026-11-18T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
+    "name": "Zenthor FC",
+    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+   },
+   "away_team": {
+    "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
+    "name": "NHP 20",
+    "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+   }
+  },
+  {
+   "id": "9d446553-c785-4605-9874-7a8f0019e313",
    "stage": "Fecha 14",
    "match_date": "2026-11-18T02:30:00+00:00",
    "status": "approved",
    "home_goals": 2,
    "away_goals": 1,
    "home_team": {
-    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
-    "name": "Balenciaga",
-    "logo_url": "https://i.imgur.com/n7KpcJV.png"
+    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
+    "name": "Virge Nes",
+    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
    },
    "away_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
    }
   },
   {
@@ -2374,6 +2374,24 @@
     "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
     "name": "La 2911",
     "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+   }
+  },
+  {
+   "id": "25217280-17d7-4e84-a8d8-72a1d7221675",
+   "stage": "Fecha 14",
+   "match_date": "2026-11-18T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 1,
+   "home_team": {
+    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
+    "name": "Balenciaga",
+    "logo_url": "https://i.imgur.com/n7KpcJV.png"
+   },
+   "away_team": {
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
    }
   },
   {
@@ -2431,21 +2449,21 @@
    }
   },
   {
-   "id": "3a58ab77-c2fb-4a27-924f-baf69431d959",
+   "id": "3e36d3a4-6ed5-4df0-a651-a5349ab14122",
    "stage": "Fecha 14",
    "match_date": "2026-11-18T02:30:00+00:00",
    "status": "approved",
    "home_goals": 1,
-   "away_goals": 1,
+   "away_goals": 0,
    "home_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
+    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
    },
    "away_team": {
-    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
-    "name": "Zenthor FC",
-    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
+    "name": "CA Colegiales",
+    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
    }
   },
   {
@@ -2467,39 +2485,21 @@
    }
   },
   {
-   "id": "3e36d3a4-6ed5-4df0-a651-a5349ab14122",
+   "id": "3a58ab77-c2fb-4a27-924f-baf69431d959",
    "stage": "Fecha 14",
    "match_date": "2026-11-18T02:30:00+00:00",
    "status": "approved",
    "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
-    "name": "Caja Fuerte FC",
-    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
-   },
-   "away_team": {
-    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
-    "name": "CA Colegiales",
-    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
-   }
-  },
-  {
-   "id": "9d446553-c785-4605-9874-7a8f0019e313",
-   "stage": "Fecha 14",
-   "match_date": "2026-11-18T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
    "away_goals": 1,
    "home_team": {
-    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
-    "name": "Virge Nes",
-    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
    },
    "away_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
+    "name": "Zenthor FC",
+    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
    }
   },
   {
@@ -2521,6 +2521,24 @@
    }
   },
   {
+   "id": "d44ef01f-0cb8-418f-bfc7-3c0856ab4852",
+   "stage": "Fecha 15",
+   "match_date": "2026-11-20T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+   },
+   "away_team": {
+    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+   }
+  },
+  {
    "id": "5171e9b0-dbab-4285-8dbe-901293819d9d",
    "stage": "Fecha 15",
    "match_date": "2026-11-20T02:00:00+00:00",
@@ -2536,6 +2554,60 @@
     "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
     "name": "Caja Fuerte FC",
     "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+   }
+  },
+  {
+   "id": "872bcbe7-0549-40f9-afbe-36df68f14fe6",
+   "stage": "Fecha 15",
+   "match_date": "2026-11-20T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
+    "name": "Zenthor FC",
+    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+   },
+   "away_team": {
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+   }
+  },
+  {
+   "id": "bba69db3-988c-49e4-9987-e0a2f2031f35",
+   "stage": "Fecha 15",
+   "match_date": "2026-11-20T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_team": {
+    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
+    "name": "Sequence FC",
+    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   },
+   "away_team": {
+    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
+    "name": "La Blanca FC",
+    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
+   }
+  },
+  {
+   "id": "8d3f16a8-c793-4259-859f-34e7b98f330a",
+   "stage": "Fecha 15",
+   "match_date": "2026-11-20T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+   },
+   "away_team": {
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
    }
   },
   {
@@ -2593,42 +2665,6 @@
    }
   },
   {
-   "id": "8d3f16a8-c793-4259-859f-34e7b98f330a",
-   "stage": "Fecha 15",
-   "match_date": "2026-11-20T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
-   },
-   "away_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
-   }
-  },
-  {
-   "id": "872bcbe7-0549-40f9-afbe-36df68f14fe6",
-   "stage": "Fecha 15",
-   "match_date": "2026-11-20T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
-    "name": "Zenthor FC",
-    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
-   },
-   "away_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
-   }
-  },
-  {
    "id": "fb7ce87f-cb8b-4716-82a8-62c8b2f4a95c",
    "stage": "Fecha 15",
    "match_date": "2026-11-20T02:00:00+00:00",
@@ -2665,111 +2701,21 @@
    }
   },
   {
-   "id": "d44ef01f-0cb8-418f-bfc7-3c0856ab4852",
-   "stage": "Fecha 15",
-   "match_date": "2026-11-20T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
-   },
-   "away_team": {
-    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
-    "name": "Potrero eSport",
-    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
-   }
-  },
-  {
-   "id": "bba69db3-988c-49e4-9987-e0a2f2031f35",
-   "stage": "Fecha 15",
-   "match_date": "2026-11-20T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 0,
-   "home_team": {
-    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
-    "name": "Sequence FC",
-    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
-   },
-   "away_team": {
-    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
-    "name": "La Blanca FC",
-    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
-   }
-  },
-  {
-   "id": "2e24948d-5606-4c53-a1d0-82ad1183bc72",
-   "stage": "Fecha 16",
-   "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
-    "name": "Potrero eSport",
-    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
-   },
-   "away_team": {
-    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
-    "name": "Zenthor FC",
-    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
-   }
-  },
-  {
-   "id": "f7a60e44-b508-4e4f-bb45-ae45f19ab8f7",
+   "id": "507ec4eb-40d2-4be8-b577-30a6a30854bc",
    "stage": "Fecha 16",
    "match_date": "2026-11-20T02:30:00+00:00",
    "status": "approved",
    "home_goals": 1,
-   "away_goals": 0,
+   "away_goals": 2,
    "home_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
    },
    "away_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
-   }
-  },
-  {
-   "id": "c70fe496-00e9-40ea-b509-79568651b37c",
-   "stage": "Fecha 16",
-   "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
-    "name": "La Blanca FC",
-    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
-   },
-   "away_team": {
-    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
-    "name": "CA Colegiales",
-    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
-   }
-  },
-  {
-   "id": "8dba7da9-7985-4ce3-b0eb-01eddd5c1830",
-   "stage": "Fecha 16",
-   "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
-    "name": "Fc Echeverria ",
-    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
-   },
-   "away_team": {
-    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
-    "name": "MICROCORTE FC",
-    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
    }
   },
   {
@@ -2791,21 +2737,75 @@
    }
   },
   {
-   "id": "5e154c0e-6387-4029-a195-a3b140aaa51e",
+   "id": "8dba7da9-7985-4ce3-b0eb-01eddd5c1830",
+   "stage": "Fecha 16",
+   "match_date": "2026-11-20T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
+    "name": "Fc Echeverria ",
+    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+   },
+   "away_team": {
+    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
+    "name": "MICROCORTE FC",
+    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+   }
+  },
+  {
+   "id": "c70fe496-00e9-40ea-b509-79568651b37c",
    "stage": "Fecha 16",
    "match_date": "2026-11-20T02:30:00+00:00",
    "status": "approved",
    "home_goals": 1,
    "away_goals": 0,
    "home_team": {
-    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
-    "name": "Celestiales ",
-    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
+    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
+    "name": "La Blanca FC",
+    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
    },
    "away_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+    "id": "e4770be7-287c-45cb-b016-e597c6f75b77",
+    "name": "CA Colegiales",
+    "logo_url": "https://i.ibb.co/0V62By2C/logos-1794212040148.png"
+   }
+  },
+  {
+   "id": "f7a60e44-b508-4e4f-bb45-ae45f19ab8f7",
+   "stage": "Fecha 16",
+   "match_date": "2026-11-20T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
+   },
+   "away_team": {
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+   }
+  },
+  {
+   "id": "04548592-f117-411c-823c-7f5751da1449",
+   "stage": "Fecha 16",
+   "match_date": "2026-11-20T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 2,
+   "home_team": {
+    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+   },
+   "away_team": {
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
    }
   },
   {
@@ -2827,6 +2827,42 @@
    }
   },
   {
+   "id": "5e154c0e-6387-4029-a195-a3b140aaa51e",
+   "stage": "Fecha 16",
+   "match_date": "2026-11-20T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
+    "name": "Celestiales ",
+    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
+   },
+   "away_team": {
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+   }
+  },
+  {
+   "id": "2e24948d-5606-4c53-a1d0-82ad1183bc72",
+   "stage": "Fecha 16",
+   "match_date": "2026-11-20T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+   },
+   "away_team": {
+    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
+    "name": "Zenthor FC",
+    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+   }
+  },
+  {
    "id": "505323e4-e713-4374-b4da-6f7f09c8f59f",
    "stage": "Fecha 16",
    "match_date": "2026-11-20T02:30:00+00:00",
@@ -2845,39 +2881,39 @@
    }
   },
   {
-   "id": "507ec4eb-40d2-4be8-b577-30a6a30854bc",
-   "stage": "Fecha 16",
-   "match_date": "2026-11-20T02:30:00+00:00",
+   "id": "b44dd6f2-41ed-45d1-93ff-40e8f6cb98e6",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
    "status": "approved",
-   "home_goals": 1,
+   "home_goals": 3,
    "away_goals": 2,
    "home_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
+    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
+    "name": "Virge Nes",
+    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
    },
    "away_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
+    "name": "AFA eSports",
+    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
    }
   },
   {
-   "id": "04548592-f117-411c-823c-7f5751da1449",
-   "stage": "Fecha 16",
-   "match_date": "2026-11-20T02:30:00+00:00",
+   "id": "14bc208d-e25e-43df-9c5f-83abf149ed5e",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
    "status": "approved",
-   "home_goals": 2,
-   "away_goals": 2,
+   "home_goals": 1,
+   "away_goals": 0,
    "home_team": {
-    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
-    "name": "Caja Fuerte FC",
-    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
+    "name": "COMPLICADOS SA",
+    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
    },
    "away_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
    }
   },
   {
@@ -2935,78 +2971,6 @@
    }
   },
   {
-   "id": "3ba04966-5751-4fd0-9df8-a312b71bc679",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
-   },
-   "away_team": {
-    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
-    "name": "Fc Echeverria ",
-    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
-   }
-  },
-  {
-   "id": "62fa0440-ee42-49ff-82f5-e366e89ef3ab",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
-    "name": "MICROCORTE FC",
-    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
-   },
-   "away_team": {
-    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
-    "name": "La Blanca FC",
-    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
-   }
-  },
-  {
-   "id": "b44dd6f2-41ed-45d1-93ff-40e8f6cb98e6",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 3,
-   "away_goals": 2,
-   "home_team": {
-    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
-    "name": "Virge Nes",
-    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
-   },
-   "away_team": {
-    "id": "fb3da56f-4504-4f21-b329-78a05f5d1068",
-    "name": "AFA eSports",
-    "logo_url": "https://i.ibb.co/rK804Nsd/d3fcafe7b6abb3c905c9ac622da7f941.jpg"
-   }
-  },
-  {
-   "id": "fea609a8-6d3c-4850-9abc-55225baa76cc",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 3,
-   "away_goals": 1,
-   "home_team": {
-    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
-    "name": "Sequence FC",
-    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
-   },
-   "away_team": {
-    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
-    "name": "MQ SAVIO FC",
-    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
-   }
-  },
-  {
    "id": "62c7e97c-c369-4857-bb67-c8d934671cc2",
    "stage": "Fecha 17",
    "match_date": "2026-11-25T02:00:00+00:00",
@@ -3022,6 +2986,24 @@
     "id": "0bb7e39d-5ea7-4351-9cf1-248177f1821c",
     "name": "NHP 20",
     "logo_url": "https://i.ibb.co/N2fHVcXj/logos-1794105800606.png"
+   }
+  },
+  {
+   "id": "3ba04966-5751-4fd0-9df8-a312b71bc679",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
+   },
+   "away_team": {
+    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
+    "name": "Fc Echeverria ",
+    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
    }
   },
   {
@@ -3043,57 +3025,39 @@
    }
   },
   {
-   "id": "14bc208d-e25e-43df-9c5f-83abf149ed5e",
+   "id": "fea609a8-6d3c-4850-9abc-55225baa76cc",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 3,
+   "away_goals": 1,
+   "home_team": {
+    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
+    "name": "Sequence FC",
+    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   },
+   "away_team": {
+    "id": "3ad1f410-2585-485c-856d-cf5c62f6e8c7",
+    "name": "MQ SAVIO FC",
+    "logo_url": "https://i.ibb.co/MvZxVzx/1001517874.jpg"
+   }
+  },
+  {
+   "id": "62fa0440-ee42-49ff-82f5-e366e89ef3ab",
    "stage": "Fecha 17",
    "match_date": "2026-11-25T02:00:00+00:00",
    "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
+   "home_goals": 0,
+   "away_goals": 1,
    "home_team": {
-    "id": "4777b38e-c725-4fdf-868c-214d8cb33da4",
-    "name": "COMPLICADOS SA",
-    "logo_url": "https://i.ibb.co/ch08zD5N/Whats-App-Image-2026-10-07-at-4-40-26-PM.png"
-   },
-   "away_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
-   }
-  },
-  {
-   "id": "458a7326-0db0-477f-9439-8be43ba2afec",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
-    "name": "Balenciaga",
-    "logo_url": "https://i.imgur.com/n7KpcJV.png"
-   },
-   "away_team": {
     "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
     "name": "MICROCORTE FC",
     "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
-   }
-  },
-  {
-   "id": "bdf4ca79-4fd6-4737-b8af-46010545cc43",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 1,
-   "away_goals": 3,
-   "home_team": {
+   },
+   "away_team": {
     "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
     "name": "La Blanca FC",
     "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
-   },
-   "away_team": {
-    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
-    "name": "PANDA UFC",
-    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
    }
   },
   {
@@ -3115,6 +3079,78 @@
    }
   },
   {
+   "id": "78d871cf-3f44-4251-bab5-dc5fab780db9",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_team": {
+    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
+    "name": "Nacional de uy",
+    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
+   },
+   "away_team": {
+    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
+    "name": "Sequence FC",
+    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   }
+  },
+  {
+   "id": "458a7326-0db0-477f-9439-8be43ba2afec",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "d1114fd8-487c-4039-b0ee-cf66c830b564",
+    "name": "Balenciaga",
+    "logo_url": "https://i.imgur.com/n7KpcJV.png"
+   },
+   "away_team": {
+    "id": "d2be2ba4-d9f4-45b3-8d78-4dc90d8b2fc1",
+    "name": "MICROCORTE FC",
+    "logo_url": "https://i.ibb.co/fzgfYMwm/1001520397.jpg"
+   }
+  },
+  {
+   "id": "ef6f573d-9675-4b81-977c-4a7869ea6092",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 1,
+   "away_goals": 1,
+   "home_team": {
+    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
+    "name": "Fc Echeverria ",
+    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
+   },
+   "away_team": {
+    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
+    "name": "Zenthor FC",
+    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+   }
+  },
+  {
+   "id": "c3488ea7-00de-4015-9075-b24856b84f61",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
+    "name": "Caja Fuerte FC",
+    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
+   },
+   "away_team": {
+    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
+    "name": "La 2911",
+    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
+   }
+  },
+  {
    "id": "37b194b2-e1ee-4edc-994b-9a4444be0a0a",
    "stage": "Fecha 18",
    "match_date": "2026-11-25T02:30:00+00:00",
@@ -3130,6 +3166,24 @@
     "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
     "name": "Virge Nes",
     "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+   }
+  },
+  {
+   "id": "bdf4ca79-4fd6-4737-b8af-46010545cc43",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 1,
+   "away_goals": 3,
+   "home_team": {
+    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
+    "name": "La Blanca FC",
+    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
+   },
+   "away_team": {
+    "id": "86f0bc7e-d6c0-45c8-abb2-d57ff9a1b2ec",
+    "name": "PANDA UFC",
+    "logo_url": "https://i.ibb.co/FkwdZSM5/panda-fc.png"
    }
   },
   {
@@ -3169,24 +3223,6 @@
    }
   },
   {
-   "id": "ef6f573d-9675-4b81-977c-4a7869ea6092",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "6cbc3640-a3f9-448f-a2ff-d07c39699aed",
-    "name": "Fc Echeverria ",
-    "logo_url": "https://i.ibb.co/Mrhwfpm/1001273871.png"
-   },
-   "away_team": {
-    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
-    "name": "Zenthor FC",
-    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
-   }
-  },
-  {
    "id": "e4d1540d-38a7-490a-a3df-18b2022417c0",
    "stage": "Fecha 18",
    "match_date": "2026-11-25T02:30:00+00:00",
@@ -3202,96 +3238,6 @@
     "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
     "name": "LA BASE",
     "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
-   }
-  },
-  {
-   "id": "c3488ea7-00de-4015-9075-b24856b84f61",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "86a308a8-ea8f-40b6-bc64-3c9375f5d6a1",
-    "name": "Caja Fuerte FC",
-    "logo_url": "https://i.ibb.co/wNQ1nVR7/Gemini-Generated-Image-fsdn0tfsdn0tfsdn.png"
-   },
-   "away_team": {
-    "id": "653a2497-7e36-4c26-9b32-41c55cd9a5e3",
-    "name": "La 2911",
-    "logo_url": "https://i.ibb.co/5XJSQ7q1/IMG-4814.jpg"
-   }
-  },
-  {
-   "id": "78d871cf-3f44-4251-bab5-dc5fab780db9",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 2,
-   "away_goals": 0,
-   "home_team": {
-    "id": "31c3782e-f4c0-46b4-abe9-9dc5891a8676",
-    "name": "Nacional de uy",
-    "logo_url": "https://i.ibb.co/YBRkPk8Y/logos-1794106409795.png"
-   },
-   "away_team": {
-    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
-    "name": "Sequence FC",
-    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
-   }
-  },
-  {
-   "id": "421c716e-ef07-4793-a7ae-e25289595ba8",
-   "stage": "Fecha 19",
-   "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
-    "name": "Celestiales ",
-    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
-   },
-   "away_team": {
-    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
-    "name": "LNE eSports",
-    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
-   }
-  },
-  {
-   "id": "a46d930b-07c7-411e-8a20-b805e84e2658",
-   "stage": "Fecha 19",
-   "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 8,
-   "away_goals": 0,
-   "home_team": {
-    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
-    "name": "Virge Nes",
-    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
-   },
-   "away_team": {
-    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
-    "name": "Potrero eSport",
-    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
-   }
-  },
-  {
-   "id": "a559d0fe-b5cf-42c5-bdf9-56ff0496c1d7",
-   "stage": "Fecha 19",
-   "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
-    "name": "Zenthor FC",
-    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
-   },
-   "away_team": {
-    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
-    "name": "La Blanca FC",
-    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
    }
   },
   {
@@ -3331,6 +3277,60 @@
    }
   },
   {
+   "id": "a559d0fe-b5cf-42c5-bdf9-56ff0496c1d7",
+   "stage": "Fecha 19",
+   "match_date": "2026-11-25T02:59:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "7c547535-04ac-45a6-9713-5077073d1d54",
+    "name": "Zenthor FC",
+    "logo_url": "https://i.ibb.co/XGsFB41/391414.png"
+   },
+   "away_team": {
+    "id": "4958a386-5f8f-4bf0-9703-98b4db969816",
+    "name": "La Blanca FC",
+    "logo_url": "https://i.ibb.co/3mdzBxgP/Whats-App-Image-2026-10-21-at-10-17-19-PM.png"
+   }
+  },
+  {
+   "id": "a46d930b-07c7-411e-8a20-b805e84e2658",
+   "stage": "Fecha 19",
+   "match_date": "2026-11-25T02:59:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 8,
+   "away_goals": 0,
+   "home_team": {
+    "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
+    "name": "Virge Nes",
+    "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
+   },
+   "away_team": {
+    "id": "b9d3aef6-821e-48af-b680-997f472a97b5",
+    "name": "Potrero eSport",
+    "logo_url": "https://i.ibb.co/zWyTwc29/logos-1793796496665.png"
+   }
+  },
+  {
+   "id": "938efd6c-16f3-4d9f-a847-5af6cd831152",
+   "stage": "Fecha 19",
+   "match_date": "2026-11-25T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+   },
+   "away_team": {
+    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
+    "name": "Sequence FC",
+    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   }
+  },
+  {
    "id": "d1d0522f-f55e-4507-bff5-362701cf7be9",
    "stage": "Fecha 19",
    "match_date": "2026-11-25T02:59:00+00:00",
@@ -3367,21 +3367,21 @@
    }
   },
   {
-   "id": "938efd6c-16f3-4d9f-a847-5af6cd831152",
+   "id": "421c716e-ef07-4793-a7ae-e25289595ba8",
    "stage": "Fecha 19",
    "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
+   "status": "approved",
+   "home_goals": 1,
    "away_goals": 0,
    "home_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+    "id": "38ac57c5-4817-4c7e-9347-bf197dfcb276",
+    "name": "Celestiales ",
+    "logo_url": "https://i.ibb.co/SDV2KbHK/1001534294.png"
    },
    "away_team": {
-    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
-    "name": "Sequence FC",
-    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+    "id": "dd8a3377-ee02-425c-ac9f-b5fa9412b207",
+    "name": "LNE eSports",
+    "logo_url": "https://i.ibb.co/KcNCdk61/Whats-App-Image-2026-10-20-at-20-17-33-Photoroom.png"
    }
   },
   {
@@ -4863,60 +4863,6 @@
    }
   },
   {
-   "id": "a8817041-fd4e-4c2c-b2d8-715988ab3aab",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
-    "name": "Motor Psico",
-    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
-   },
-   "away_team": {
-    "id": "c7f32ef5-5a3c-4ae9-bb41-fd7bb20401e7",
-    "name": "RICURA FC",
-    "logo_url": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg"
-   }
-  },
-  {
-   "id": "981deb60-3931-434e-bab7-1c11b300dbbc",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 1,
-   "home_team": {
-    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
-    "name": "Inter Regional",
-    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
-   },
-   "away_team": {
-    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
-    "name": "BOCA JUNIORS",
-    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
-   }
-  },
-  {
-   "id": "9fbf3cc8-19e3-43e3-a01d-8ed96261ca91",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
-    "name": "Unión Cordillera",
-    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
-   },
-   "away_team": {
-    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
-    "name": "Suda eSports ",
-    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
-   }
-  },
-  {
    "id": "f149a67a-db42-4fa6-bf90-1a782e202957",
    "stage": "Fecha 9",
    "match_date": "2026-11-11T02:00:00+00:00",
@@ -4932,60 +4878,6 @@
     "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
     "name": "Acassuso eSports",
     "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
-   }
-  },
-  {
-   "id": "e9cb9e64-4637-4c1f-8ab0-a3a1692c424f",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 5,
-   "home_team": {
-    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
-    "name": "Los Andes FC",
-    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
-   },
-   "away_team": {
-    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
-    "name": "UNITED MITO FC",
-    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
-   }
-  },
-  {
-   "id": "ec16899e-0f35-4093-8aae-6bdb9270871e",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 0,
-   "home_team": {
-    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
-    "name": "Deportivo Centro",
-    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
-   },
-   "away_team": {
-    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
-    "name": "Attlas eSports",
-    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
-   }
-  },
-  {
-   "id": "01c904b6-a541-4aa3-9e7e-ba29f889ce31",
-   "stage": "Fecha 9",
-   "match_date": "2026-11-11T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
-    "name": "MARPLA FC",
-    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
-   },
-   "away_team": {
-    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
-    "name": "Villa San Carlos",
-    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
    }
   },
   {
@@ -5025,6 +4917,78 @@
    }
   },
   {
+   "id": "01c904b6-a541-4aa3-9e7e-ba29f889ce31",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
+    "name": "MARPLA FC",
+    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
+   },
+   "away_team": {
+    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
+    "name": "Villa San Carlos",
+    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
+   }
+  },
+  {
+   "id": "e9cb9e64-4637-4c1f-8ab0-a3a1692c424f",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 5,
+   "home_team": {
+    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
+    "name": "Los Andes FC",
+    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
+   },
+   "away_team": {
+    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
+    "name": "UNITED MITO FC",
+    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
+   }
+  },
+  {
+   "id": "981deb60-3931-434e-bab7-1c11b300dbbc",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 1,
+   "home_team": {
+    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
+    "name": "Inter Regional",
+    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+   },
+   "away_team": {
+    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
+    "name": "BOCA JUNIORS",
+    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+   }
+  },
+  {
+   "id": "9fbf3cc8-19e3-43e3-a01d-8ed96261ca91",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
+    "name": "Unión Cordillera",
+    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
+   },
+   "away_team": {
+    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
+    "name": "Suda eSports ",
+    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
+   }
+  },
+  {
    "id": "d98dacb0-b0f1-48be-abd2-9910f7c16dbd",
    "stage": "Fecha 9",
    "match_date": "2026-11-11T02:00:00+00:00",
@@ -5043,6 +5007,42 @@
    }
   },
   {
+   "id": "a8817041-fd4e-4c2c-b2d8-715988ab3aab",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
+    "name": "Motor Psico",
+    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
+   },
+   "away_team": {
+    "id": "c7f32ef5-5a3c-4ae9-bb41-fd7bb20401e7",
+    "name": "RICURA FC",
+    "logo_url": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg"
+   }
+  },
+  {
+   "id": "ec16899e-0f35-4093-8aae-6bdb9270871e",
+   "stage": "Fecha 9",
+   "match_date": "2026-11-11T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_team": {
+    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
+    "name": "Deportivo Centro",
+    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
+   },
+   "away_team": {
+    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
+    "name": "Attlas eSports",
+    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
+   }
+  },
+  {
    "id": "ed332dba-1979-4e54-8e6d-a87980d5f7e2",
    "stage": "Fecha 10",
    "match_date": "2026-11-11T02:30:00+00:00",
@@ -5058,78 +5058,6 @@
     "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
     "name": "Vultur Sports",
     "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
-   }
-  },
-  {
-   "id": "c54b8add-dea8-430c-8d97-eb1a153fb5be",
-   "stage": "Fecha 10",
-   "match_date": "2026-11-11T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 3,
-   "home_team": {
-    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
-    "name": "CELTA DEL VINO",
-    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
-   },
-   "away_team": {
-    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
-    "name": "Los Andes FC",
-    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
-   }
-  },
-  {
-   "id": "679d990a-b113-4299-bf8b-095c9bf64d02",
-   "stage": "Fecha 10",
-   "match_date": "2026-11-11T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 3,
-   "home_team": {
-    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
-    "name": "Real Envido",
-    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
-   },
-   "away_team": {
-    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
-    "name": "Deportivo Centro",
-    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
-   }
-  },
-  {
-   "id": "54c2c747-7001-4cd2-93f0-172fbad1ca8a",
-   "stage": "Fecha 10",
-   "match_date": "2026-11-11T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 0,
-   "home_team": {
-    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
-    "name": "UNITED MITO FC",
-    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
-   },
-   "away_team": {
-    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
-    "name": "Predators  FC",
-    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
-   }
-  },
-  {
-   "id": "9f4b905f-a59e-44db-9ddc-f0d47ee27a77",
-   "stage": "Fecha 10",
-   "match_date": "2026-11-11T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 1,
-   "home_team": {
-    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
-    "name": "Suda eSports ",
-    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
-   },
-   "away_team": {
-    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
-    "name": "CLUB ATLÉTICO PELULGA",
-    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
    }
   },
   {
@@ -5187,6 +5115,42 @@
    }
   },
   {
+   "id": "679d990a-b113-4299-bf8b-095c9bf64d02",
+   "stage": "Fecha 10",
+   "match_date": "2026-11-11T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 3,
+   "home_team": {
+    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
+    "name": "Real Envido",
+    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
+   },
+   "away_team": {
+    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
+    "name": "Deportivo Centro",
+    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
+   }
+  },
+  {
+   "id": "c54b8add-dea8-430c-8d97-eb1a153fb5be",
+   "stage": "Fecha 10",
+   "match_date": "2026-11-11T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 3,
+   "home_team": {
+    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
+    "name": "CELTA DEL VINO",
+    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
+   },
+   "away_team": {
+    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
+    "name": "Los Andes FC",
+    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
+   }
+  },
+  {
    "id": "9264d407-64f7-4362-b983-6d4b1626d099",
    "stage": "Fecha 10",
    "match_date": "2026-11-11T02:30:00+00:00",
@@ -5205,6 +5169,24 @@
    }
   },
   {
+   "id": "54c2c747-7001-4cd2-93f0-172fbad1ca8a",
+   "stage": "Fecha 10",
+   "match_date": "2026-11-11T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_team": {
+    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
+    "name": "UNITED MITO FC",
+    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
+   },
+   "away_team": {
+    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
+    "name": "Predators  FC",
+    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
+   }
+  },
+  {
    "id": "3b27cde4-88f5-4a96-ab5e-e501a5c56b16",
    "stage": "Fecha 10",
    "match_date": "2026-11-11T02:30:00+00:00",
@@ -5220,6 +5202,42 @@
     "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
     "name": "Claypole eSports",
     "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
+   }
+  },
+  {
+   "id": "9f4b905f-a59e-44db-9ddc-f0d47ee27a77",
+   "stage": "Fecha 10",
+   "match_date": "2026-11-11T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 1,
+   "home_team": {
+    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
+    "name": "Suda eSports ",
+    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
+   },
+   "away_team": {
+    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
+    "name": "CLUB ATLÉTICO PELULGA",
+    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
+   }
+  },
+  {
+   "id": "e7f98ab4-7b4b-4f6d-b759-18a9d7495660",
+   "stage": "Fecha 11",
+   "match_date": "2026-11-13T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 2,
+   "home_team": {
+    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
+    "name": "Vultur Sports",
+    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
+   },
+   "away_team": {
+    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
+    "name": "Suda eSports ",
+    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
    }
   },
   {
@@ -5385,57 +5403,21 @@
    }
   },
   {
-   "id": "e7f98ab4-7b4b-4f6d-b759-18a9d7495660",
-   "stage": "Fecha 11",
-   "match_date": "2026-11-13T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 2,
-   "home_team": {
-    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
-    "name": "Vultur Sports",
-    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
-   },
-   "away_team": {
-    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
-    "name": "Suda eSports ",
-    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
-   }
-  },
-  {
-   "id": "68acf918-675b-425a-be9d-4b61a8662f85",
-   "stage": "Fecha 12",
-   "match_date": "2026-11-13T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 1,
-   "home_team": {
-    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
-    "name": "Attlas eSports",
-    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
-   },
-   "away_team": {
-    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
-    "name": "Inter Regional",
-    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
-   }
-  },
-  {
-   "id": "972d334e-119b-4ba1-a92c-1cb72dc848f5",
+   "id": "00d5c8b3-b2e0-4b93-8522-f876a85c8302",
    "stage": "Fecha 12",
    "match_date": "2026-11-13T02:30:00+00:00",
    "status": "approved",
    "home_goals": 1,
-   "away_goals": 0,
+   "away_goals": 1,
    "home_team": {
-    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
-    "name": "BOCA JUNIORS",
-    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
+    "name": "MARPLA FC",
+    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
    },
    "away_team": {
-    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
-    "name": "Unión Cordillera",
-    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
+    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
+    "name": "Motor Psico",
+    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
    }
   },
   {
@@ -5457,6 +5439,24 @@
    }
   },
   {
+   "id": "972d334e-119b-4ba1-a92c-1cb72dc848f5",
+   "stage": "Fecha 12",
+   "match_date": "2026-11-13T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
+    "name": "BOCA JUNIORS",
+    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+   },
+   "away_team": {
+    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
+    "name": "Unión Cordillera",
+    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
+   }
+  },
+  {
    "id": "361149c0-b77e-4f6c-980b-a7a2e80c80ac",
    "stage": "Fecha 12",
    "match_date": "2026-11-13T02:30:00+00:00",
@@ -5472,24 +5472,6 @@
     "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
     "name": "Los Andes FC",
     "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
-   }
-  },
-  {
-   "id": "00d5c8b3-b2e0-4b93-8522-f876a85c8302",
-   "stage": "Fecha 12",
-   "match_date": "2026-11-13T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 1,
-   "home_team": {
-    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
-    "name": "MARPLA FC",
-    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
-   },
-   "away_team": {
-    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
-    "name": "Motor Psico",
-    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
    }
   },
   {
@@ -5565,6 +5547,24 @@
    }
   },
   {
+   "id": "68acf918-675b-425a-be9d-4b61a8662f85",
+   "stage": "Fecha 12",
+   "match_date": "2026-11-13T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 1,
+   "home_team": {
+    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
+    "name": "Attlas eSports",
+    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
+   },
+   "away_team": {
+    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
+    "name": "Inter Regional",
+    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+   }
+  },
+  {
    "id": "975a8348-31dd-405a-b0a4-f3996d56c244",
    "stage": "Fecha 12",
    "match_date": "2026-11-13T02:30:00+00:00",
@@ -5601,42 +5601,6 @@
    }
   },
   {
-   "id": "1469c9c8-6834-43a8-a343-4bcd612f211e",
-   "stage": "Fecha 13",
-   "match_date": "2026-11-18T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 3,
-   "home_team": {
-    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
-    "name": "Predators  FC",
-    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
-   },
-   "away_team": {
-    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
-    "name": "Suda eSports ",
-    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
-   }
-  },
-  {
-   "id": "c7677d83-3a0b-4ac2-8ca8-c0302df92e9c",
-   "stage": "Fecha 13",
-   "match_date": "2026-11-18T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 4,
-   "home_team": {
-    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
-    "name": "Claypole eSports",
-    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
-   },
-   "away_team": {
-    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
-    "name": "CELTA DEL VINO",
-    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
-   }
-  },
-  {
    "id": "4584f69d-42c1-4f57-9403-d72b76dc887f",
    "stage": "Fecha 13",
    "match_date": "2026-11-18T02:00:00+00:00",
@@ -5655,39 +5619,21 @@
    }
   },
   {
-   "id": "f40e38df-530c-4b7d-a642-48d3861c8d48",
+   "id": "1469c9c8-6834-43a8-a343-4bcd612f211e",
    "stage": "Fecha 13",
    "match_date": "2026-11-18T02:00:00+00:00",
    "status": "approved",
    "home_goals": 1,
-   "away_goals": 0,
+   "away_goals": 3,
    "home_team": {
-    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
-    "name": "Inter Regional",
-    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
+    "name": "Predators  FC",
+    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
    },
    "away_team": {
-    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
-    "name": "Motor Psico",
-    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
-   }
-  },
-  {
-   "id": "d00d1739-6706-40d1-a0f5-57cdf1b93390",
-   "stage": "Fecha 13",
-   "match_date": "2026-11-18T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
-    "name": "Unión Cordillera",
-    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
-   },
-   "away_team": {
-    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
-    "name": "MARPLA FC",
-    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
+    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
+    "name": "Suda eSports ",
+    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
    }
   },
   {
@@ -5727,6 +5673,24 @@
    }
   },
   {
+   "id": "c7677d83-3a0b-4ac2-8ca8-c0302df92e9c",
+   "stage": "Fecha 13",
+   "match_date": "2026-11-18T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 4,
+   "home_team": {
+    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
+    "name": "Claypole eSports",
+    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
+   },
+   "away_team": {
+    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
+    "name": "CELTA DEL VINO",
+    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
+   }
+  },
+  {
    "id": "7789b315-d87a-4878-86d3-134f15a2e257",
    "stage": "Fecha 13",
    "match_date": "2026-11-18T02:00:00+00:00",
@@ -5745,129 +5709,57 @@
    }
   },
   {
-   "id": "31f91061-fb55-4e75-8698-043fbd68a973",
-   "stage": "Fecha 14",
-   "match_date": "2026-11-18T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 4,
-   "away_goals": 0,
-   "home_team": {
-    "id": "c7f32ef5-5a3c-4ae9-bb41-fd7bb20401e7",
-    "name": "RICURA FC",
-    "logo_url": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg"
-   },
-   "away_team": {
-    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
-    "name": "Predators  FC",
-    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
-   }
-  },
-  {
-   "id": "9baf6792-6690-44f4-945b-83109685ff87",
-   "stage": "Fecha 14",
-   "match_date": "2026-11-18T02:30:00+00:00",
+   "id": "f40e38df-530c-4b7d-a642-48d3861c8d48",
+   "stage": "Fecha 13",
+   "match_date": "2026-11-18T02:00:00+00:00",
    "status": "approved",
    "home_goals": 1,
    "away_goals": 0,
    "home_team": {
-    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
-    "name": "Motor Psico",
-    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
-   },
-   "away_team": {
-    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
-    "name": "Unión Cordillera",
-    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
-   }
-  },
-  {
-   "id": "141c5f57-4dbe-42dd-b728-f5d79ece26bb",
-   "stage": "Fecha 14",
-   "match_date": "2026-11-18T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
-    "name": "Villa San Carlos",
-    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
-   },
-   "away_team": {
-    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
-    "name": "Los Andes FC",
-    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
-   }
-  },
-  {
-   "id": "ec32995e-e15a-4c24-a441-c41be4836d66",
-   "stage": "Fecha 14",
-   "match_date": "2026-11-18T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 3,
-   "away_goals": 2,
-   "home_team": {
-    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
-    "name": "CELTA DEL VINO",
-    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
-   },
-   "away_team": {
-    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
-    "name": "Acassuso eSports",
-    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
-   }
-  },
-  {
-   "id": "314ce288-2ed3-475b-82be-1a7a615a3892",
-   "stage": "Fecha 14",
-   "match_date": "2026-11-18T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 3,
-   "home_team": {
-    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
-    "name": "Real Envido",
-    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
-   },
-   "away_team": {
     "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
     "name": "Inter Regional",
     "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+   },
+   "away_team": {
+    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
+    "name": "Motor Psico",
+    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
    }
   },
   {
-   "id": "21f8447f-52db-4165-ac34-4c4c6a35c8f3",
+   "id": "d00d1739-6706-40d1-a0f5-57cdf1b93390",
+   "stage": "Fecha 13",
+   "match_date": "2026-11-18T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
+    "name": "Unión Cordillera",
+    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
+   },
+   "away_team": {
+    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
+    "name": "MARPLA FC",
+    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
+   }
+  },
+  {
+   "id": "51eb7dd6-c922-4f8f-9024-2a2b771d1150",
    "stage": "Fecha 14",
    "match_date": "2026-11-18T02:30:00+00:00",
    "status": "approved",
    "home_goals": 1,
-   "away_goals": 0,
+   "away_goals": 1,
    "home_team": {
-    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
-    "name": "BOCA JUNIORS",
-    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
+    "name": "UNITED MITO FC",
+    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
    },
    "away_team": {
-    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
-    "name": "Vultur Sports",
-    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
-   }
-  },
-  {
-   "id": "4e5a4d4e-e6e4-41d7-b87a-12bda2eac0ab",
-   "stage": "Fecha 14",
-   "match_date": "2026-11-18T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 0,
-   "home_team": {
-    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
-    "name": "MARPLA FC",
-    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
-   },
-   "away_team": {
-    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
-    "name": "CLUB ATLÉTICO PELULGA",
-    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
+    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
+    "name": "Attlas eSports",
+    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
    }
   },
   {
@@ -5907,21 +5799,129 @@
    }
   },
   {
-   "id": "51eb7dd6-c922-4f8f-9024-2a2b771d1150",
+   "id": "4e5a4d4e-e6e4-41d7-b87a-12bda2eac0ab",
+   "stage": "Fecha 14",
+   "match_date": "2026-11-18T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_team": {
+    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
+    "name": "MARPLA FC",
+    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
+   },
+   "away_team": {
+    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
+    "name": "CLUB ATLÉTICO PELULGA",
+    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
+   }
+  },
+  {
+   "id": "314ce288-2ed3-475b-82be-1a7a615a3892",
    "stage": "Fecha 14",
    "match_date": "2026-11-18T02:30:00+00:00",
    "status": "approved",
    "home_goals": 1,
-   "away_goals": 1,
+   "away_goals": 3,
    "home_team": {
-    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
-    "name": "UNITED MITO FC",
-    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
+    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
+    "name": "Real Envido",
+    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
    },
    "away_team": {
-    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
-    "name": "Attlas eSports",
-    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
+    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
+    "name": "Inter Regional",
+    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+   }
+  },
+  {
+   "id": "141c5f57-4dbe-42dd-b728-f5d79ece26bb",
+   "stage": "Fecha 14",
+   "match_date": "2026-11-18T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
+    "name": "Villa San Carlos",
+    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
+   },
+   "away_team": {
+    "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
+    "name": "Los Andes FC",
+    "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
+   }
+  },
+  {
+   "id": "ec32995e-e15a-4c24-a441-c41be4836d66",
+   "stage": "Fecha 14",
+   "match_date": "2026-11-18T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 3,
+   "away_goals": 2,
+   "home_team": {
+    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
+    "name": "CELTA DEL VINO",
+    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
+   },
+   "away_team": {
+    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+   }
+  },
+  {
+   "id": "21f8447f-52db-4165-ac34-4c4c6a35c8f3",
+   "stage": "Fecha 14",
+   "match_date": "2026-11-18T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
+    "name": "BOCA JUNIORS",
+    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+   },
+   "away_team": {
+    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
+    "name": "Vultur Sports",
+    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
+   }
+  },
+  {
+   "id": "31f91061-fb55-4e75-8698-043fbd68a973",
+   "stage": "Fecha 14",
+   "match_date": "2026-11-18T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 4,
+   "away_goals": 0,
+   "home_team": {
+    "id": "c7f32ef5-5a3c-4ae9-bb41-fd7bb20401e7",
+    "name": "RICURA FC",
+    "logo_url": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg"
+   },
+   "away_team": {
+    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
+    "name": "Predators  FC",
+    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
+   }
+  },
+  {
+   "id": "9baf6792-6690-44f4-945b-83109685ff87",
+   "stage": "Fecha 14",
+   "match_date": "2026-11-18T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
+    "name": "Motor Psico",
+    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
+   },
+   "away_team": {
+    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
+    "name": "Unión Cordillera",
+    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
    }
   },
   {
@@ -5943,24 +5943,6 @@
    }
   },
   {
-   "id": "e4182c65-8346-4145-824d-70c276556102",
-   "stage": "Fecha 15",
-   "match_date": "2026-11-20T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
-    "name": "Acassuso eSports",
-    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
-   },
-   "away_team": {
-    "id": "d4108b5c-6277-4a4f-89d6-c7a607ae786f",
-    "name": "Cerrito XXI",
-    "logo_url": "https://i.ibb.co/VdshDpD/1000250273.jpg"
-   }
-  },
-  {
    "id": "b2fab947-6092-4bfc-b279-55f0bacf008a",
    "stage": "Fecha 15",
    "match_date": "2026-11-20T02:00:00+00:00",
@@ -5976,6 +5958,42 @@
     "id": "c7f32ef5-5a3c-4ae9-bb41-fd7bb20401e7",
     "name": "RICURA FC",
     "logo_url": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg"
+   }
+  },
+  {
+   "id": "d68fada6-f9e6-4e11-9d7e-04f2034bee90",
+   "stage": "Fecha 15",
+   "match_date": "2026-11-20T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
+    "name": "Inter Regional",
+    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+   },
+   "away_team": {
+    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
+    "name": "Unión Cordillera",
+    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
+   }
+  },
+  {
+   "id": "30787c0d-b43d-403c-b58b-df58852efb87",
+   "stage": "Fecha 15",
+   "match_date": "2026-11-20T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_team": {
+    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
+    "name": "Attlas eSports",
+    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
+   },
+   "away_team": {
+    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
+    "name": "CELTA DEL VINO",
+    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
    }
   },
   {
@@ -6033,6 +6051,24 @@
    }
   },
   {
+   "id": "e4182c65-8346-4145-824d-70c276556102",
+   "stage": "Fecha 15",
+   "match_date": "2026-11-20T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+   },
+   "away_team": {
+    "id": "d4108b5c-6277-4a4f-89d6-c7a607ae786f",
+    "name": "Cerrito XXI",
+    "logo_url": "https://i.ibb.co/VdshDpD/1000250273.jpg"
+   }
+  },
+  {
    "id": "db7164d7-22cd-4d65-bab1-e1067f32a67e",
    "stage": "Fecha 15",
    "match_date": "2026-11-20T02:00:00+00:00",
@@ -6087,129 +6123,21 @@
    }
   },
   {
-   "id": "30787c0d-b43d-403c-b58b-df58852efb87",
-   "stage": "Fecha 15",
-   "match_date": "2026-11-20T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 0,
-   "home_team": {
-    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
-    "name": "Attlas eSports",
-    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
-   },
-   "away_team": {
-    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
-    "name": "CELTA DEL VINO",
-    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
-   }
-  },
-  {
-   "id": "d68fada6-f9e6-4e11-9d7e-04f2034bee90",
-   "stage": "Fecha 15",
-   "match_date": "2026-11-20T02:00:00+00:00",
+   "id": "b3f5534e-abb0-44e4-9773-4221c205e535",
+   "stage": "Fecha 16",
+   "match_date": "2026-11-20T02:30:00+00:00",
    "status": "approved",
    "home_goals": 1,
    "away_goals": 0,
    "home_team": {
-    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
-    "name": "Inter Regional",
-    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
+    "name": "Suda eSports ",
+    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
    },
    "away_team": {
-    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
-    "name": "Unión Cordillera",
-    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
-   }
-  },
-  {
-   "id": "c15f46d4-09f7-42a4-9fc8-236656e1d6cb",
-   "stage": "Fecha 16",
-   "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 0,
-   "home_team": {
-    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
-    "name": "UNITED MITO FC",
-    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
-   },
-   "away_team": {
-    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
-    "name": "Inter Regional",
-    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
-   }
-  },
-  {
-   "id": "0370f9ea-2700-4ba7-8427-05779191f0b6",
-   "stage": "Fecha 16",
-   "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 6,
-   "away_goals": 0,
-   "home_team": {
-    "id": "c7f32ef5-5a3c-4ae9-bb41-fd7bb20401e7",
-    "name": "RICURA FC",
-    "logo_url": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg"
-   },
-   "away_team": {
-    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
-    "name": "Claypole eSports",
-    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
-   }
-  },
-  {
-   "id": "31b95deb-3646-49fa-8a4b-98c69257f196",
-   "stage": "Fecha 16",
-   "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 3,
-   "home_team": {
-    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
-    "name": "Villa San Carlos",
-    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
-   },
-   "away_team": {
-    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
-    "name": "Deportivo Centro",
-    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
-   }
-  },
-  {
-   "id": "b6b0cf6e-86e1-48f2-8fbd-2a9202cb03d0",
-   "stage": "Fecha 16",
-   "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
-    "name": "CELTA DEL VINO",
-    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
-   },
-   "away_team": {
-    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
-    "name": "Real Envido",
-    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
-   }
-  },
-  {
-   "id": "f4623e92-31ba-40e6-876d-b29f87cc4a35",
-   "stage": "Fecha 16",
-   "match_date": "2026-11-20T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 1,
-   "home_team": {
-    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
-    "name": "Unión Cordillera",
-    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
-   },
-   "away_team": {
-    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
-    "name": "CLUB ATLÉTICO PELULGA",
-    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
+    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
    }
   },
   {
@@ -6231,21 +6159,39 @@
    }
   },
   {
-   "id": "710c14de-95ad-436c-9541-f1d13172a60f",
+   "id": "31b95deb-3646-49fa-8a4b-98c69257f196",
    "stage": "Fecha 16",
    "match_date": "2026-11-20T02:30:00+00:00",
    "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
+   "home_goals": 2,
+   "away_goals": 3,
    "home_team": {
-    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
-    "name": "BOCA JUNIORS",
-    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
+    "name": "Villa San Carlos",
+    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
    },
    "away_team": {
-    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
-    "name": "Predators  FC",
-    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
+    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
+    "name": "Deportivo Centro",
+    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
+   }
+  },
+  {
+   "id": "0370f9ea-2700-4ba7-8427-05779191f0b6",
+   "stage": "Fecha 16",
+   "match_date": "2026-11-20T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 6,
+   "away_goals": 0,
+   "home_team": {
+    "id": "c7f32ef5-5a3c-4ae9-bb41-fd7bb20401e7",
+    "name": "RICURA FC",
+    "logo_url": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg"
+   },
+   "away_team": {
+    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
+    "name": "Claypole eSports",
+    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
    }
   },
   {
@@ -6267,21 +6213,75 @@
    }
   },
   {
-   "id": "b3f5534e-abb0-44e4-9773-4221c205e535",
+   "id": "710c14de-95ad-436c-9541-f1d13172a60f",
    "stage": "Fecha 16",
    "match_date": "2026-11-20T02:30:00+00:00",
    "status": "approved",
    "home_goals": 1,
-   "away_goals": 0,
+   "away_goals": 1,
    "home_team": {
-    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
-    "name": "Suda eSports ",
-    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
+    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
+    "name": "BOCA JUNIORS",
+    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
    },
    "away_team": {
-    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
-    "name": "Acassuso eSports",
-    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
+    "name": "Predators  FC",
+    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
+   }
+  },
+  {
+   "id": "f4623e92-31ba-40e6-876d-b29f87cc4a35",
+   "stage": "Fecha 16",
+   "match_date": "2026-11-20T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
+    "name": "Unión Cordillera",
+    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
+   },
+   "away_team": {
+    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
+    "name": "CLUB ATLÉTICO PELULGA",
+    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
+   }
+  },
+  {
+   "id": "b6b0cf6e-86e1-48f2-8fbd-2a9202cb03d0",
+   "stage": "Fecha 16",
+   "match_date": "2026-11-20T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
+    "name": "CELTA DEL VINO",
+    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
+   },
+   "away_team": {
+    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
+    "name": "Real Envido",
+    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
+   }
+  },
+  {
+   "id": "c15f46d4-09f7-42a4-9fc8-236656e1d6cb",
+   "stage": "Fecha 16",
+   "match_date": "2026-11-20T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_team": {
+    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
+    "name": "UNITED MITO FC",
+    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
+   },
+   "away_team": {
+    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
+    "name": "Inter Regional",
+    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
    }
   },
   {
@@ -6300,42 +6300,6 @@
     "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
     "name": "Vultur Sports",
     "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
-   }
-  },
-  {
-   "id": "5fc97ad1-cc65-43da-8f2c-bc9c859a5614",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
-    "name": "Vultur Sports",
-    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
-   },
-   "away_team": {
-    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
-    "name": "Unión Cordillera",
-    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
-   }
-  },
-  {
-   "id": "745358a5-30bd-4cb1-a429-4c9c715a2777",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "approved",
-   "home_goals": 5,
-   "away_goals": 0,
-   "home_team": {
-    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
-    "name": "Deportivo Centro",
-    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
-   },
-   "away_team": {
-    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
-    "name": "BOCA JUNIORS",
-    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
    }
   },
   {
@@ -6393,6 +6357,24 @@
    }
   },
   {
+   "id": "206be77a-28ab-4e76-b4f0-f5d12bcae442",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 2,
+   "away_goals": 1,
+   "home_team": {
+    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
+    "name": "Inter Regional",
+    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+   },
+   "away_team": {
+    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
+    "name": "CLUB ATLÉTICO PELULGA",
+    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
+   }
+  },
+  {
    "id": "a2edd419-f5de-47f8-a7d6-e6b59706ec6e",
    "stage": "Fecha 17",
    "match_date": "2026-11-25T02:00:00+00:00",
@@ -6408,6 +6390,78 @@
     "id": "c7f32ef5-5a3c-4ae9-bb41-fd7bb20401e7",
     "name": "RICURA FC",
     "logo_url": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg"
+   }
+  },
+  {
+   "id": "41ba15f9-cd23-4f6a-9eb0-2cf54f7e642c",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 3,
+   "home_team": {
+    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
+    "name": "Real Envido",
+    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
+   },
+   "away_team": {
+    "id": "d4108b5c-6277-4a4f-89d6-c7a607ae786f",
+    "name": "Cerrito XXI",
+    "logo_url": "https://i.ibb.co/VdshDpD/1000250273.jpg"
+   }
+  },
+  {
+   "id": "0c3d5301-0409-47ac-84d3-a20bdf25af86",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
+    "name": "UNITED MITO FC",
+    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
+   },
+   "away_team": {
+    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
+    "name": "CELTA DEL VINO",
+    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
+   }
+  },
+  {
+   "id": "5fc97ad1-cc65-43da-8f2c-bc9c859a5614",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
+    "name": "Vultur Sports",
+    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
+   },
+   "away_team": {
+    "id": "6da35750-09d6-449f-8fd7-157abf7dbc35",
+    "name": "Unión Cordillera",
+    "logo_url": "https://i.ibb.co/MxxD6SXY/Whats-App-Image-2026-09-26-at-14-20-28-Photoroom.png"
+   }
+  },
+  {
+   "id": "745358a5-30bd-4cb1-a429-4c9c715a2777",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 5,
+   "away_goals": 0,
+   "home_team": {
+    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
+    "name": "Deportivo Centro",
+    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
+   },
+   "away_team": {
+    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
+    "name": "BOCA JUNIORS",
+    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
    }
   },
   {
@@ -6429,75 +6483,39 @@
    }
   },
   {
-   "id": "0c3d5301-0409-47ac-84d3-a20bdf25af86",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
-    "name": "UNITED MITO FC",
-    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
-   },
-   "away_team": {
-    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
-    "name": "CELTA DEL VINO",
-    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
-   }
-  },
-  {
-   "id": "206be77a-28ab-4e76-b4f0-f5d12bcae442",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 2,
-   "away_goals": 1,
-   "home_team": {
-    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
-    "name": "Inter Regional",
-    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
-   },
-   "away_team": {
-    "id": "6256c366-ac5a-4ebc-a249-16541e3a76a1",
-    "name": "CLUB ATLÉTICO PELULGA",
-    "logo_url": "https://i.ibb.co/5WGX3vvS/1000277359.png"
-   }
-  },
-  {
-   "id": "41ba15f9-cd23-4f6a-9eb0-2cf54f7e642c",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 1,
-   "away_goals": 3,
-   "home_team": {
-    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
-    "name": "Real Envido",
-    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
-   },
-   "away_team": {
-    "id": "d4108b5c-6277-4a4f-89d6-c7a607ae786f",
-    "name": "Cerrito XXI",
-    "logo_url": "https://i.ibb.co/VdshDpD/1000250273.jpg"
-   }
-  },
-  {
-   "id": "9e3c2b7d-581a-43c5-87ef-4c55b60de386",
+   "id": "7703089d-9834-46b4-8642-434840f8473a",
    "stage": "Fecha 18",
    "match_date": "2026-11-25T02:30:00+00:00",
    "status": "pending_approval",
    "home_goals": 1,
-   "away_goals": 2,
+   "away_goals": 3,
    "home_team": {
-    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
-    "name": "BOCA JUNIORS",
-    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
+    "name": "Suda eSports ",
+    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
    },
    "away_team": {
-    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
-    "name": "Claypole eSports",
-    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
+    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
+    "name": "Real Envido",
+    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
+   }
+  },
+  {
+   "id": "ad743413-b2d0-487a-8b8c-b8a7132b98ab",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "approved",
+   "home_goals": 2,
+   "away_goals": 2,
+   "home_team": {
+    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
+    "name": "MARPLA FC",
+    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
+   },
+   "away_team": {
+    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
+    "name": "Deportivo Centro",
+    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
    }
   },
   {
@@ -6555,24 +6573,6 @@
    }
   },
   {
-   "id": "ad743413-b2d0-487a-8b8c-b8a7132b98ab",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
-   "away_goals": 2,
-   "home_team": {
-    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
-    "name": "MARPLA FC",
-    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
-   },
-   "away_team": {
-    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
-    "name": "Deportivo Centro",
-    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
-   }
-  },
-  {
    "id": "63867226-2365-4d41-8fac-39f5f678d1a7",
    "stage": "Fecha 18",
    "match_date": "2026-11-25T02:30:00+00:00",
@@ -6588,6 +6588,24 @@
     "id": "a8f4b47b-cb46-4215-9778-525037cd0ffe",
     "name": "Los Andes FC",
     "logo_url": "https://i.ibb.co/KQ805Qf/Whats-App-Image-2026-05-15-at-00-12-08.jpg"
+   }
+  },
+  {
+   "id": "c5140fc4-f2be-4401-9b83-d3203a4a804a",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 0,
+   "away_goals": 2,
+   "home_team": {
+    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
+    "name": "CELTA DEL VINO",
+    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
+   },
+   "away_team": {
+    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
+    "name": "Inter Regional",
+    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
    }
   },
   {
@@ -6609,6 +6627,24 @@
    }
   },
   {
+   "id": "9e3c2b7d-581a-43c5-87ef-4c55b60de386",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 1,
+   "away_goals": 2,
+   "home_team": {
+    "id": "b8fac8be-876f-4324-b35d-640bb12d2f9e",
+    "name": "BOCA JUNIORS",
+    "logo_url": "https://i.ibb.co/20SsMf6P/logos-1794210110578.png"
+   },
+   "away_team": {
+    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
+    "name": "Claypole eSports",
+    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
+   }
+  },
+  {
    "id": "372e6343-520c-4142-9c7c-400419063da1",
    "stage": "Fecha 18",
    "match_date": "2026-11-25T02:30:00+00:00",
@@ -6627,46 +6663,46 @@
    }
   },
   {
-   "id": "7703089d-9834-46b4-8642-434840f8473a",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
-   "away_goals": 0,
+   "id": "52210eae-b2d0-4eee-b77d-f38a3aa2551c",
+   "stage": "Fecha 19",
+   "match_date": "2026-11-25T02:59:00+00:00",
+   "status": "approved",
+   "home_goals": 3,
+   "away_goals": 1,
    "home_team": {
-    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
-    "name": "Suda eSports ",
-    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
+    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
+    "name": "Attlas eSports",
+    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
    },
    "away_team": {
-    "id": "70f8ada1-87ff-492c-ab1b-00392115db17",
-    "name": "Real Envido",
-    "logo_url": "https://i.ibb.co/F4ZQjL5k/Dise-o-sin-t-tulo.png"
+    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
+    "name": "Villa San Carlos",
+    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
    }
   },
   {
-   "id": "c5140fc4-f2be-4401-9b83-d3203a4a804a",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "scheduled",
+   "id": "339f0607-177a-4552-adca-ca011bc8d02c",
+   "stage": "Fecha 19",
+   "match_date": "2026-11-25T02:59:00+00:00",
+   "status": "approved",
    "home_goals": 0,
-   "away_goals": 0,
+   "away_goals": 2,
    "home_team": {
-    "id": "3efe5a08-ccba-43e2-b155-2660e1d20c2d",
-    "name": "CELTA DEL VINO",
-    "logo_url": "https://i.ibb.co/Jh1GmLg/1001525369.png"
+    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
+    "name": "Claypole eSports",
+    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
    },
    "away_team": {
-    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
-    "name": "Inter Regional",
-    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
+    "name": "MARPLA FC",
+    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
    }
   },
   {
    "id": "48a2f25c-7205-4ce7-a312-0058f1cf0e8f",
    "stage": "Fecha 19",
    "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "pending_approval",
+   "status": "approved",
    "home_goals": 2,
    "away_goals": 2,
    "home_team": {
@@ -6678,6 +6714,24 @@
     "id": "c7f32ef5-5a3c-4ae9-bb41-fd7bb20401e7",
     "name": "RICURA FC",
     "logo_url": "https://i.ibb.co/WpW6wZRZ/Whats-App-Image-2026-10-18-at-11-36-28-PM.jpg"
+   }
+  },
+  {
+   "id": "e314a1ff-8034-40e0-ae6c-72dda09a6415",
+   "stage": "Fecha 19",
+   "match_date": "2026-11-25T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
+    "name": "Inter Regional",
+    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+   },
+   "away_team": {
+    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
+    "name": "Vultur Sports",
+    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
    }
   },
   {
@@ -6699,28 +6753,10 @@
    }
   },
   {
-   "id": "0e7a4349-1187-42b1-ab03-62b68fb68e02",
-   "stage": "Fecha 19",
-   "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
-    "name": "UNITED MITO FC",
-    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
-   },
-   "away_team": {
-    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
-    "name": "Suda eSports ",
-    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
-   }
-  },
-  {
    "id": "78bf90ce-04bf-4bfa-84e3-c9ba8d1198ea",
    "stage": "Fecha 19",
    "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "pending_approval",
+   "status": "approved",
    "home_goals": 0,
    "away_goals": 2,
    "home_team": {
@@ -6753,39 +6789,21 @@
    }
   },
   {
-   "id": "52210eae-b2d0-4eee-b77d-f38a3aa2551c",
-   "stage": "Fecha 19",
-   "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "approved",
-   "home_goals": 3,
-   "away_goals": 1,
-   "home_team": {
-    "id": "8e42cb5b-290f-4a69-8429-13738bbdfdb2",
-    "name": "Attlas eSports",
-    "logo_url": "https://i.ibb.co/4g2Yqb2C/Whats-App-Image-2026-10-05-at-12-20-08-PM.png"
-   },
-   "away_team": {
-    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
-    "name": "Villa San Carlos",
-    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
-   }
-  },
-  {
-   "id": "e314a1ff-8034-40e0-ae6c-72dda09a6415",
+   "id": "0e7a4349-1187-42b1-ab03-62b68fb68e02",
    "stage": "Fecha 19",
    "match_date": "2026-11-25T02:59:00+00:00",
    "status": "scheduled",
    "home_goals": 0,
    "away_goals": 0,
    "home_team": {
-    "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
-    "name": "Inter Regional",
-    "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
+    "id": "6485babe-5793-45e9-9cf5-4bf35682434b",
+    "name": "UNITED MITO FC",
+    "logo_url": "https://i.ibb.co/Xrxyj3cv/Logo-Mito.png"
    },
    "away_team": {
-    "id": "3d51b37d-5bba-42ca-a47e-599cb9f22f00",
-    "name": "Vultur Sports",
-    "logo_url": "https://i.ibb.co/ymxKzdx2/VULTUR.png"
+    "id": "bbc99d01-38c6-4f53-b3ea-baff9fea9828",
+    "name": "Suda eSports ",
+    "logo_url": "https://i.ibb.co/spKK3VHH/LOGO-SUDA-ESPORTS.png"
    }
   },
   {
@@ -6804,24 +6822,6 @@
     "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
     "name": "Motor Psico",
     "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
-   }
-  },
-  {
-   "id": "339f0607-177a-4552-adca-ca011bc8d02c",
-   "stage": "Fecha 19",
-   "match_date": "2026-11-25T02:59:00+00:00",
-   "status": "approved",
-   "home_goals": 0,
-   "away_goals": 2,
-   "home_team": {
-    "id": "ba277538-1d3d-4438-9d9a-bbfdb0a20d30",
-    "name": "Claypole eSports",
-    "logo_url": "https://i.ibb.co/ch8g3fY3/1000647394.png"
-   },
-   "away_team": {
-    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
-    "name": "MARPLA FC",
-    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
    }
   },
   {
