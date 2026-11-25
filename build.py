@@ -326,6 +326,11 @@ def completar_con_ea(partidos: list, ajustes: dict, ahora: datetime | None = Non
         if not p.get("stats") and p.get("resultado"):
             # La liga no publicó sus estadísticas: se muestran las de EA (solo en el partido)
             p["ea_jugadores"] = sorted((dict(j) for j in m["jugadores"]), key=lambda j: -(j["nota"] or 0))
+            # Goles y asistencias debajo del escudo, solo si los goles de EA suman el resultado oficial
+            # (si a alguien lo sacaron del lobby, EA pierde sus goles y la lista quedaría incompleta)
+            if sum(j["goles"] or 0 for j in m["jugadores"]) == p["gf"]:
+                p["goleadores"] = [(j["alias"], j["goles"]) for j in p["ea_jugadores"] if j["goles"]]
+                p["asistidores"] = [(j["alias"], j["asistencias"]) for j in p["ea_jugadores"] if j["asistencias"]]
         eq = p.get("equipo_stats") or {}
         if not (eq.get("nosotros") and eq.get("rival")) and m.get("equipo"):
             p["equipo_stats"], p["equipo_stats_ea"] = m["equipo"], True
