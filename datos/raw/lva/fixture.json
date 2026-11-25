@@ -6339,6 +6339,24 @@
    }
   },
   {
+   "id": "bf20af92-2297-441f-85ae-e6dfdb729c5e",
+   "stage": "Fecha 17",
+   "match_date": "2026-11-25T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 1,
+   "away_goals": 0,
+   "home_team": {
+    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
+    "name": "Predators  FC",
+    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
+   },
+   "away_team": {
+    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
+    "name": "MARPLA FC",
+    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
+   }
+  },
+  {
    "id": "21974989-7b44-4c2f-ae6e-e6aadd6a141d",
    "stage": "Fecha 17",
    "match_date": "2026-11-25T02:00:00+00:00",
@@ -6372,24 +6390,6 @@
     "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
     "name": "Villa San Carlos",
     "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
-   }
-  },
-  {
-   "id": "bf20af92-2297-441f-85ae-e6dfdb729c5e",
-   "stage": "Fecha 17",
-   "match_date": "2026-11-25T02:00:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 1,
-   "away_goals": 0,
-   "home_team": {
-    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
-    "name": "Predators  FC",
-    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
-   },
-   "away_team": {
-    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
-    "name": "MARPLA FC",
-    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
    }
   },
   {
@@ -6501,21 +6501,21 @@
    }
   },
   {
-   "id": "ad743413-b2d0-487a-8b8c-b8a7132b98ab",
+   "id": "2efa3b57-4262-4426-b02e-6570403b13bf",
    "stage": "Fecha 18",
    "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "approved",
-   "home_goals": 2,
+   "status": "pending_approval",
+   "home_goals": 3,
    "away_goals": 2,
    "home_team": {
-    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
-    "name": "MARPLA FC",
-    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
+    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
+    "name": "Motor Psico",
+    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
    },
    "away_team": {
-    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
-    "name": "Deportivo Centro",
-    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
+    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
+    "name": "Predators  FC",
+    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
    }
   },
   {
@@ -6555,21 +6555,21 @@
    }
   },
   {
-   "id": "372e6343-520c-4142-9c7c-400419063da1",
+   "id": "ad743413-b2d0-487a-8b8c-b8a7132b98ab",
    "stage": "Fecha 18",
    "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "pending_approval",
-   "home_goals": 4,
+   "status": "approved",
+   "home_goals": 2,
    "away_goals": 2,
    "home_team": {
-    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
-    "name": "Villa San Carlos",
-    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
+    "id": "a51212ad-2335-47fb-93e6-1e49647feb09",
+    "name": "MARPLA FC",
+    "logo_url": "https://i.ibb.co/LdRJTwTB/Whats-App-Image-2026-10-19-at-10-13-33-PM.png"
    },
    "away_team": {
-    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
-    "name": "Acassuso eSports",
-    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+    "id": "c446d68b-509c-4270-bdb9-93e00596c682",
+    "name": "Deportivo Centro",
+    "logo_url": "https://i.ibb.co/N209Mfk6/Whats-App-Image-2026-05-08-at-2-19-01-PM.png"
    }
   },
   {
@@ -6609,6 +6609,24 @@
    }
   },
   {
+   "id": "372e6343-520c-4142-9c7c-400419063da1",
+   "stage": "Fecha 18",
+   "match_date": "2026-11-25T02:30:00+00:00",
+   "status": "pending_approval",
+   "home_goals": 4,
+   "away_goals": 2,
+   "home_team": {
+    "id": "bc3ad404-55b4-4ecc-900e-3a2d03653d1d",
+    "name": "Villa San Carlos",
+    "logo_url": "https://i.ibb.co/Zpgy1B3G/logos-1794209655128.png"
+   },
+   "away_team": {
+    "id": "af7aa677-258c-4569-b1e3-70adfd550f96",
+    "name": "Acassuso eSports",
+    "logo_url": "https://i.ibb.co/0VfsC6zN/Gemini-Generated-Image-qp4i5uqp4i5uqp4i.jpg"
+   }
+  },
+  {
    "id": "7703089d-9834-46b4-8642-434840f8473a",
    "stage": "Fecha 18",
    "match_date": "2026-11-25T02:30:00+00:00",
@@ -6642,24 +6660,6 @@
     "id": "1f5956de-2847-48f7-8c59-32c8f68b299a",
     "name": "Inter Regional",
     "logo_url": "https://i.ibb.co/BKgQtmMx/logos-1794209843348.png"
-   }
-  },
-  {
-   "id": "2efa3b57-4262-4426-b02e-6570403b13bf",
-   "stage": "Fecha 18",
-   "match_date": "2026-11-25T02:30:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "74e65ae9-f1f0-4079-9130-0099909c3616",
-    "name": "Motor Psico",
-    "logo_url": "https://i.ibb.co/Lbw1jnM/logos-1794210590783.png"
-   },
-   "away_team": {
-    "id": "b6e1e2b9-7214-4f49-9c7b-f2735422acd5",
-    "name": "Predators  FC",
-    "logo_url": "https://i.ibb.co/g22TRfX/1000536894.png"
    }
   },
   {
