@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-26T16:01:02+00:00",
+  "actualizado": "2026-11-26T17:01:00+00:00",
   "desde": "2026-11-25T21:38:12+00:00"
  },
  {
@@ -422,6 +422,24 @@
    },
    {
     "pos": 5,
+    "equipo": "Dream Team UY",
+    "escudo": "https://media.virtualpronetwork.com/teamlogos/04e7ded69bee611c0ffffbbfc66110e4_thumb.png",
+    "pj": 11,
+    "g": 7,
+    "e": 1,
+    "p": 3,
+    "gf": 15,
+    "gc": 7,
+    "dg": 8,
+    "pts": 22,
+    "zona": "playoff",
+    "pos_fuente": 5,
+    "pos_ant_fuente": 7,
+    "es_vultur": false,
+    "mov": 2
+   },
+   {
+    "pos": 6,
     "equipo": "Flandria",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/d9db5c6220ee9b24ce71118a4ed934f9_thumb.png",
     "pj": 10,
@@ -433,13 +451,13 @@
     "dg": 11,
     "pts": 20,
     "zona": "playoff",
-    "pos_fuente": 5,
+    "pos_fuente": 6,
     "pos_ant_fuente": 5,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
-    "pos": 6,
+    "pos": 7,
     "equipo": "All Boys Cantera",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/bf958410e77e45f66efa4f67df4c5eba_thumb.png",
     "pj": 11,
@@ -451,28 +469,10 @@
     "dg": 8,
     "pts": 20,
     "zona": "playoff",
-    "pos_fuente": 6,
+    "pos_fuente": 7,
     "pos_ant_fuente": 6,
     "es_vultur": false,
-    "mov": 0
-   },
-   {
-    "pos": 7,
-    "equipo": "Dream Team UY",
-    "escudo": "https://media.virtualpronetwork.com/teamlogos/04e7ded69bee611c0ffffbbfc66110e4_thumb.png",
-    "pj": 10,
-    "g": 6,
-    "e": 1,
-    "p": 3,
-    "gf": 14,
-    "gc": 7,
-    "dg": 7,
-    "pts": 19,
-    "zona": "playoff",
-    "pos_fuente": 7,
-    "pos_ant_fuente": 7,
-    "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 8,
@@ -614,27 +614,27 @@
     "pts": 10,
     "zona": null,
     "pos_fuente": 15,
-    "pos_ant_fuente": 15,
+    "pos_ant_fuente": 16,
     "es_vultur": false,
-    "mov": 0
+    "mov": 1
    },
    {
     "pos": 16,
     "equipo": "Vidon Bar eSports CBA",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/27b0c7a61e70839d271282c4450f62fa_thumb.png",
-    "pj": 10,
+    "pj": 11,
     "g": 3,
-    "e": 0,
+    "e": 1,
     "p": 7,
-    "gf": 7,
-    "gc": 20,
+    "gf": 9,
+    "gc": 22,
     "dg": -13,
-    "pts": 9,
+    "pts": 10,
     "zona": null,
     "pos_fuente": 16,
-    "pos_ant_fuente": 16,
+    "pos_ant_fuente": 15,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 17,
@@ -676,13 +676,13 @@
     "pos": 19,
     "equipo": "Espanyol Barcelona fc",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/867e72f3228547042ea3d51586a51766_thumb.png",
-    "pj": 10,
+    "pj": 11,
     "g": 1,
     "e": 4,
-    "p": 5,
+    "p": 6,
     "gf": 4,
-    "gc": 8,
-    "dg": -4,
+    "gc": 9,
+    "dg": -5,
     "pts": 7,
     "zona": null,
     "pos_fuente": 19,
@@ -694,14 +694,14 @@
     "pos": 20,
     "equipo": "Huracan eSports",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/02c39e76634eb6762bcb84338823940e_thumb.png",
-    "pj": 8,
+    "pj": 9,
     "g": 2,
-    "e": 0,
+    "e": 1,
     "p": 6,
-    "gf": 6,
-    "gc": 13,
+    "gf": 8,
+    "gc": 15,
     "dg": -7,
-    "pts": 6,
+    "pts": 7,
     "zona": null,
     "pos_fuente": 20,
     "pos_ant_fuente": 20,
@@ -727,7 +727,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-26T16:01:41+00:00",
+  "actualizado": "2026-11-26T17:01:38+00:00",
   "desde": "2026-11-25T21:38:48+00:00"
  },
  {
