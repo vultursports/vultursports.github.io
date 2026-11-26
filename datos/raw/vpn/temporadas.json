@@ -43,7 +43,7 @@
     "position": 4,
     "teamsCount": 42,
     "ofLabel": "de 42",
-    "detail": "24 pts"
+    "detail": "26 pts"
    },
    "division": 4,
    "divisionLabel": "División 4",
@@ -58,19 +58,19 @@
    "stats": [
     {
      "label": "PJ",
-     "value": "9"
+     "value": "11"
     },
     {
      "label": "G-E-P",
-     "value": "8-0-1"
+     "value": "8-2-1"
     },
     {
      "label": "Goles",
-     "value": "17:3"
+     "value": "18:4"
     },
     {
      "label": "PTS",
-     "value": "24"
+     "value": "26"
     }
    ],
    "form": [
@@ -82,11 +82,13 @@
     "W",
     "W",
     "W",
-    "W"
+    "W",
+    "D",
+    "D"
    ],
-   "formLabel": "9 partidos: 8 ganados, 0 empatados, 1 perdidos",
+   "formLabel": "11 partidos: 8 ganados, 2 empatados, 1 perdidos",
    "lastMatch": null,
-   "squadLabel": "15 jugadores utilizados",
+   "squadLabel": "16 jugadores utilizados",
    "stars": [
     {
      "key": "goals",
@@ -125,7 +127,7 @@
     {
      "key": "motm",
      "label": "Más MVP",
-     "value": "2",
+     "value": "3",
      "unit": "MVP",
      "player": {
       "id": 289333,
@@ -142,7 +144,7 @@
     {
      "key": "appearances",
      "label": "Más partidos",
-     "value": "9",
+     "value": "10",
      "unit": "PJ",
      "player": {
       "id": 277620,

@@ -47,5 +47,19 @@
   "rival": "Pueblo Manya",
   "jugado": "2026-11-26T01:30:00Z",
   "detectado": "2026-11-26T03:00:57+00:00"
+ },
+ {
+  "liga": "vpn",
+  "partido": "vpn-785611",
+  "rival": "Arabia Team",
+  "jugado": "2026-11-26T02:00:00Z",
+  "detectado": "2026-11-26T04:01:42+00:00"
+ },
+ {
+  "liga": "vpn",
+  "partido": "vpn-785634",
+  "rival": "Torque City",
+  "jugado": "2026-11-26T02:30:00Z",
+  "detectado": "2026-11-26T04:01:42+00:00"
  }
 ]
