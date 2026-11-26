@@ -1,4 +1,1194 @@
 {
+ "27c51cd2-17d1-4a2c-b229-1554beb6b5a5": [
+  {
+   "id": "eaa263b6-8273-40c6-a117-de9ecea63f85",
+   "stage": "Fecha 1",
+   "match_date": "2026-12-02T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "54a7a0fd-9964-48df-bd6c-4689f710b380",
+    "name": "El Salchicha FC",
+    "logo_url": "https://i.ibb.co/PGcFj4C9/logos-1794859314614.png"
+   },
+   "away_team": {
+    "id": "5f5c1c8b-71f9-4b56-9da0-1b4b264908c2",
+    "name": "Real Pipinho FC",
+    "logo_url": "https://i.ibb.co/HLVMSBWw/logos-1795631083941.png"
+   }
+  },
+  {
+   "id": "4864bd19-f6fb-4533-bef2-13e2e4c3e574",
+   "stage": "Fecha 1",
+   "match_date": "2026-12-02T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "837e0cec-1d67-4c2a-aa10-52147fe69058",
+    "name": "Los CogeAbuelas",
+    "logo_url": "https://i.ibb.co/q34cqnTM/logos-1794860414306.png"
+   },
+   "away_team": {
+    "id": "a421bc5e-ae52-4daf-a0e0-51037d753330",
+    "name": "LOS CHUKY FC",
+    "logo_url": "https://i.ibb.co/bg2j9fBH/logos-1795628132695.png"
+   }
+  },
+  {
+   "id": "e7aa88f9-293e-4c74-b177-4842a19f8282",
+   "stage": "Fecha 1",
+   "match_date": "2026-12-02T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "56ce4c0f-8b50-495a-b90d-c10edcd985a9",
+    "name": "Club Atlético Libertad eSports",
+    "logo_url": "https://i.ibb.co/dsjn53sQ/logos-1794943697325.png"
+   },
+   "away_team": {
+    "id": "91e0fffa-cc95-47b2-b1bc-df7c7a8fb2fb",
+    "name": "Lomas Turbo FC",
+    "logo_url": "https://i.ibb.co/5hXnFhJ3/1786744387391.png"
+   }
+  },
+  {
+   "id": "bbae525f-0d22-48bd-8e95-2274a6d15dce",
+   "stage": "Fecha 1",
+   "match_date": "2026-12-02T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "da895036-1c87-4a74-b1e0-a52138d5c437",
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   },
+   "away_team": {
+    "id": "dc133340-dc50-402b-8bbd-6060a96aef79",
+    "name": "Academia Decana",
+    "logo_url": "https://i.ibb.co/RpdzdY8n/logos-1795229555795.png"
+   }
+  },
+  {
+   "id": "41ecb893-cab5-4924-8f60-96c377eb31a7",
+   "stage": "Fecha 1",
+   "match_date": "2026-12-02T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "97ccc669-4177-4d00-ab9b-0344c27af640",
+    "name": "800Dolares Fc",
+    "logo_url": "https://i.ibb.co/HDHFLfDs/logos-1795191826854.png"
+   },
+   "away_team": {
+    "id": "ec11a322-04f7-4e49-b325-3d06e6a3f716",
+    "name": "Hiroshimaa",
+    "logo_url": "https://i.ibb.co/cK8ZhSp1/logos-1794857365238.png"
+   }
+  },
+  {
+   "id": "61214de4-4912-4377-b8df-4e88f33772db",
+   "stage": "Fecha 1",
+   "match_date": "2026-12-02T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "bd4002bc-48aa-4ce2-8389-4b6a56474788",
+    "name": "CHOCOLATEROS",
+    "logo_url": "https://i.ibb.co/hx8vhX4f/logos-1794954911992.png"
+   },
+   "away_team": {
+    "id": "55c42666-1d72-42d5-b21f-2cdc425764db",
+    "name": "Centenario eSports",
+    "logo_url": "https://i.ibb.co/rKhDP4LG/logos-1795204521602.png"
+   }
+  },
+  {
+   "id": "e92332d8-ba7f-4ab9-9b65-30f9fe0a818f",
+   "stage": "Fecha 2",
+   "match_date": "2026-12-02T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "a421bc5e-ae52-4daf-a0e0-51037d753330",
+    "name": "LOS CHUKY FC",
+    "logo_url": "https://i.ibb.co/bg2j9fBH/logos-1795628132695.png"
+   },
+   "away_team": {
+    "id": "54a7a0fd-9964-48df-bd6c-4689f710b380",
+    "name": "El Salchicha FC",
+    "logo_url": "https://i.ibb.co/PGcFj4C9/logos-1794859314614.png"
+   }
+  },
+  {
+   "id": "8abfd301-6bd3-453f-92c4-45a2137289a1",
+   "stage": "Fecha 2",
+   "match_date": "2026-12-02T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "5f5c1c8b-71f9-4b56-9da0-1b4b264908c2",
+    "name": "Real Pipinho FC",
+    "logo_url": "https://i.ibb.co/HLVMSBWw/logos-1795631083941.png"
+   },
+   "away_team": {
+    "id": "56ce4c0f-8b50-495a-b90d-c10edcd985a9",
+    "name": "Club Atlético Libertad eSports",
+    "logo_url": "https://i.ibb.co/dsjn53sQ/logos-1794943697325.png"
+   }
+  },
+  {
+   "id": "a465d713-c795-4d24-9e56-f3d36f6ec12e",
+   "stage": "Fecha 2",
+   "match_date": "2026-12-02T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "dc133340-dc50-402b-8bbd-6060a96aef79",
+    "name": "Academia Decana",
+    "logo_url": "https://i.ibb.co/RpdzdY8n/logos-1795229555795.png"
+   },
+   "away_team": {
+    "id": "837e0cec-1d67-4c2a-aa10-52147fe69058",
+    "name": "Los CogeAbuelas",
+    "logo_url": "https://i.ibb.co/q34cqnTM/logos-1794860414306.png"
+   }
+  },
+  {
+   "id": "cc82cabb-fa64-4f0a-a97c-93b0511a23ba",
+   "stage": "Fecha 2",
+   "match_date": "2026-12-02T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "91e0fffa-cc95-47b2-b1bc-df7c7a8fb2fb",
+    "name": "Lomas Turbo FC",
+    "logo_url": "https://i.ibb.co/5hXnFhJ3/1786744387391.png"
+   },
+   "away_team": {
+    "id": "97ccc669-4177-4d00-ab9b-0344c27af640",
+    "name": "800Dolares Fc",
+    "logo_url": "https://i.ibb.co/HDHFLfDs/logos-1795191826854.png"
+   }
+  },
+  {
+   "id": "0e9a0222-0a7c-4d5d-ac1b-05e8aa644115",
+   "stage": "Fecha 2",
+   "match_date": "2026-12-02T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "55c42666-1d72-42d5-b21f-2cdc425764db",
+    "name": "Centenario eSports",
+    "logo_url": "https://i.ibb.co/rKhDP4LG/logos-1795204521602.png"
+   },
+   "away_team": {
+    "id": "da895036-1c87-4a74-b1e0-a52138d5c437",
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   }
+  },
+  {
+   "id": "697af750-639a-4e5d-8fb5-0a5f33c953ac",
+   "stage": "Fecha 2",
+   "match_date": "2026-12-02T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "ec11a322-04f7-4e49-b325-3d06e6a3f716",
+    "name": "Hiroshimaa",
+    "logo_url": "https://i.ibb.co/cK8ZhSp1/logos-1794857365238.png"
+   },
+   "away_team": {
+    "id": "bd4002bc-48aa-4ce2-8389-4b6a56474788",
+    "name": "CHOCOLATEROS",
+    "logo_url": "https://i.ibb.co/hx8vhX4f/logos-1794954911992.png"
+   }
+  },
+  {
+   "id": "7377659b-99a9-45c7-a5ff-b4d41cec759b",
+   "stage": "Fecha 3",
+   "match_date": "2026-12-02T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "54a7a0fd-9964-48df-bd6c-4689f710b380",
+    "name": "El Salchicha FC",
+    "logo_url": "https://i.ibb.co/PGcFj4C9/logos-1794859314614.png"
+   },
+   "away_team": {
+    "id": "56ce4c0f-8b50-495a-b90d-c10edcd985a9",
+    "name": "Club Atlético Libertad eSports",
+    "logo_url": "https://i.ibb.co/dsjn53sQ/logos-1794943697325.png"
+   }
+  },
+  {
+   "id": "4eb1994a-6032-4540-85ac-e3e4176c6ee5",
+   "stage": "Fecha 3",
+   "match_date": "2026-12-02T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "a421bc5e-ae52-4daf-a0e0-51037d753330",
+    "name": "LOS CHUKY FC",
+    "logo_url": "https://i.ibb.co/bg2j9fBH/logos-1795628132695.png"
+   },
+   "away_team": {
+    "id": "dc133340-dc50-402b-8bbd-6060a96aef79",
+    "name": "Academia Decana",
+    "logo_url": "https://i.ibb.co/RpdzdY8n/logos-1795229555795.png"
+   }
+  },
+  {
+   "id": "d288331b-4e5a-4228-8e5c-ef8381fc0724",
+   "stage": "Fecha 3",
+   "match_date": "2026-12-02T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "97ccc669-4177-4d00-ab9b-0344c27af640",
+    "name": "800Dolares Fc",
+    "logo_url": "https://i.ibb.co/HDHFLfDs/logos-1795191826854.png"
+   },
+   "away_team": {
+    "id": "5f5c1c8b-71f9-4b56-9da0-1b4b264908c2",
+    "name": "Real Pipinho FC",
+    "logo_url": "https://i.ibb.co/HLVMSBWw/logos-1795631083941.png"
+   }
+  },
+  {
+   "id": "7b8b0120-a071-4899-a3c4-314a0707c098",
+   "stage": "Fecha 3",
+   "match_date": "2026-12-02T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "837e0cec-1d67-4c2a-aa10-52147fe69058",
+    "name": "Los CogeAbuelas",
+    "logo_url": "https://i.ibb.co/q34cqnTM/logos-1794860414306.png"
+   },
+   "away_team": {
+    "id": "55c42666-1d72-42d5-b21f-2cdc425764db",
+    "name": "Centenario eSports",
+    "logo_url": "https://i.ibb.co/rKhDP4LG/logos-1795204521602.png"
+   }
+  },
+  {
+   "id": "064cb789-3d5d-4d1c-bcb9-a4269dd3d8fb",
+   "stage": "Fecha 3",
+   "match_date": "2026-12-02T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "bd4002bc-48aa-4ce2-8389-4b6a56474788",
+    "name": "CHOCOLATEROS",
+    "logo_url": "https://i.ibb.co/hx8vhX4f/logos-1794954911992.png"
+   },
+   "away_team": {
+    "id": "91e0fffa-cc95-47b2-b1bc-df7c7a8fb2fb",
+    "name": "Lomas Turbo FC",
+    "logo_url": "https://i.ibb.co/5hXnFhJ3/1786744387391.png"
+   }
+  },
+  {
+   "id": "927ebb89-dac9-4011-9910-64379663defc",
+   "stage": "Fecha 3",
+   "match_date": "2026-12-02T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "da895036-1c87-4a74-b1e0-a52138d5c437",
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   },
+   "away_team": {
+    "id": "ec11a322-04f7-4e49-b325-3d06e6a3f716",
+    "name": "Hiroshimaa",
+    "logo_url": "https://i.ibb.co/cK8ZhSp1/logos-1794857365238.png"
+   }
+  },
+  {
+   "id": "3bd41381-a1e1-498a-bdf0-3f6d27dc8190",
+   "stage": "Fecha 4",
+   "match_date": "2026-12-04T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "dc133340-dc50-402b-8bbd-6060a96aef79",
+    "name": "Academia Decana",
+    "logo_url": "https://i.ibb.co/RpdzdY8n/logos-1795229555795.png"
+   },
+   "away_team": {
+    "id": "54a7a0fd-9964-48df-bd6c-4689f710b380",
+    "name": "El Salchicha FC",
+    "logo_url": "https://i.ibb.co/PGcFj4C9/logos-1794859314614.png"
+   }
+  },
+  {
+   "id": "c0f2c1dd-16ec-49f7-9f54-e8e4bfc363ed",
+   "stage": "Fecha 4",
+   "match_date": "2026-12-04T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "56ce4c0f-8b50-495a-b90d-c10edcd985a9",
+    "name": "Club Atlético Libertad eSports",
+    "logo_url": "https://i.ibb.co/dsjn53sQ/logos-1794943697325.png"
+   },
+   "away_team": {
+    "id": "97ccc669-4177-4d00-ab9b-0344c27af640",
+    "name": "800Dolares Fc",
+    "logo_url": "https://i.ibb.co/HDHFLfDs/logos-1795191826854.png"
+   }
+  },
+  {
+   "id": "f30f27c0-a76e-4dc4-ba3c-e1606acc8924",
+   "stage": "Fecha 4",
+   "match_date": "2026-12-04T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "55c42666-1d72-42d5-b21f-2cdc425764db",
+    "name": "Centenario eSports",
+    "logo_url": "https://i.ibb.co/rKhDP4LG/logos-1795204521602.png"
+   },
+   "away_team": {
+    "id": "a421bc5e-ae52-4daf-a0e0-51037d753330",
+    "name": "LOS CHUKY FC",
+    "logo_url": "https://i.ibb.co/bg2j9fBH/logos-1795628132695.png"
+   }
+  },
+  {
+   "id": "56f74c97-7853-43c3-afc0-5f8627f2d78a",
+   "stage": "Fecha 4",
+   "match_date": "2026-12-04T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "5f5c1c8b-71f9-4b56-9da0-1b4b264908c2",
+    "name": "Real Pipinho FC",
+    "logo_url": "https://i.ibb.co/HLVMSBWw/logos-1795631083941.png"
+   },
+   "away_team": {
+    "id": "bd4002bc-48aa-4ce2-8389-4b6a56474788",
+    "name": "CHOCOLATEROS",
+    "logo_url": "https://i.ibb.co/hx8vhX4f/logos-1794954911992.png"
+   }
+  },
+  {
+   "id": "1027f88c-ab42-4958-99e4-911a37d3aeb2",
+   "stage": "Fecha 4",
+   "match_date": "2026-12-04T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "ec11a322-04f7-4e49-b325-3d06e6a3f716",
+    "name": "Hiroshimaa",
+    "logo_url": "https://i.ibb.co/cK8ZhSp1/logos-1794857365238.png"
+   },
+   "away_team": {
+    "id": "837e0cec-1d67-4c2a-aa10-52147fe69058",
+    "name": "Los CogeAbuelas",
+    "logo_url": "https://i.ibb.co/q34cqnTM/logos-1794860414306.png"
+   }
+  },
+  {
+   "id": "cf838772-db46-4b0c-be1b-00c5413bf34f",
+   "stage": "Fecha 4",
+   "match_date": "2026-12-04T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "91e0fffa-cc95-47b2-b1bc-df7c7a8fb2fb",
+    "name": "Lomas Turbo FC",
+    "logo_url": "https://i.ibb.co/5hXnFhJ3/1786744387391.png"
+   },
+   "away_team": {
+    "id": "da895036-1c87-4a74-b1e0-a52138d5c437",
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   }
+  },
+  {
+   "id": "82fc1eb9-17f1-4267-b3aa-27f0aecd68b4",
+   "stage": "Fecha 5",
+   "match_date": "2026-12-04T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "54a7a0fd-9964-48df-bd6c-4689f710b380",
+    "name": "El Salchicha FC",
+    "logo_url": "https://i.ibb.co/PGcFj4C9/logos-1794859314614.png"
+   },
+   "away_team": {
+    "id": "97ccc669-4177-4d00-ab9b-0344c27af640",
+    "name": "800Dolares Fc",
+    "logo_url": "https://i.ibb.co/HDHFLfDs/logos-1795191826854.png"
+   }
+  },
+  {
+   "id": "1cea9e9a-fb4f-4edf-916b-03b48b4160a1",
+   "stage": "Fecha 5",
+   "match_date": "2026-12-04T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "dc133340-dc50-402b-8bbd-6060a96aef79",
+    "name": "Academia Decana",
+    "logo_url": "https://i.ibb.co/RpdzdY8n/logos-1795229555795.png"
+   },
+   "away_team": {
+    "id": "55c42666-1d72-42d5-b21f-2cdc425764db",
+    "name": "Centenario eSports",
+    "logo_url": "https://i.ibb.co/rKhDP4LG/logos-1795204521602.png"
+   }
+  },
+  {
+   "id": "7c479259-98de-418e-a9bd-b8074bbeb985",
+   "stage": "Fecha 5",
+   "match_date": "2026-12-04T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "bd4002bc-48aa-4ce2-8389-4b6a56474788",
+    "name": "CHOCOLATEROS",
+    "logo_url": "https://i.ibb.co/hx8vhX4f/logos-1794954911992.png"
+   },
+   "away_team": {
+    "id": "56ce4c0f-8b50-495a-b90d-c10edcd985a9",
+    "name": "Club Atlético Libertad eSports",
+    "logo_url": "https://i.ibb.co/dsjn53sQ/logos-1794943697325.png"
+   }
+  },
+  {
+   "id": "279ae49b-a117-43a1-bea5-48375740737a",
+   "stage": "Fecha 5",
+   "match_date": "2026-12-04T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "a421bc5e-ae52-4daf-a0e0-51037d753330",
+    "name": "LOS CHUKY FC",
+    "logo_url": "https://i.ibb.co/bg2j9fBH/logos-1795628132695.png"
+   },
+   "away_team": {
+    "id": "ec11a322-04f7-4e49-b325-3d06e6a3f716",
+    "name": "Hiroshimaa",
+    "logo_url": "https://i.ibb.co/cK8ZhSp1/logos-1794857365238.png"
+   }
+  },
+  {
+   "id": "c6ccf8b3-cb8f-4490-bf45-ca5e2894f537",
+   "stage": "Fecha 5",
+   "match_date": "2026-12-04T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "da895036-1c87-4a74-b1e0-a52138d5c437",
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   },
+   "away_team": {
+    "id": "5f5c1c8b-71f9-4b56-9da0-1b4b264908c2",
+    "name": "Real Pipinho FC",
+    "logo_url": "https://i.ibb.co/HLVMSBWw/logos-1795631083941.png"
+   }
+  },
+  {
+   "id": "955ef858-d88d-43c7-b7ce-849651af3a06",
+   "stage": "Fecha 5",
+   "match_date": "2026-12-04T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "837e0cec-1d67-4c2a-aa10-52147fe69058",
+    "name": "Los CogeAbuelas",
+    "logo_url": "https://i.ibb.co/q34cqnTM/logos-1794860414306.png"
+   },
+   "away_team": {
+    "id": "91e0fffa-cc95-47b2-b1bc-df7c7a8fb2fb",
+    "name": "Lomas Turbo FC",
+    "logo_url": "https://i.ibb.co/5hXnFhJ3/1786744387391.png"
+   }
+  },
+  {
+   "id": "90161e48-30f4-4b95-a3ea-3a8799e2eb83",
+   "stage": "Fecha 6",
+   "match_date": "2026-12-04T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "55c42666-1d72-42d5-b21f-2cdc425764db",
+    "name": "Centenario eSports",
+    "logo_url": "https://i.ibb.co/rKhDP4LG/logos-1795204521602.png"
+   },
+   "away_team": {
+    "id": "54a7a0fd-9964-48df-bd6c-4689f710b380",
+    "name": "El Salchicha FC",
+    "logo_url": "https://i.ibb.co/PGcFj4C9/logos-1794859314614.png"
+   }
+  },
+  {
+   "id": "4ab4657f-67ad-4e9a-8bf0-f2389bdd4174",
+   "stage": "Fecha 6",
+   "match_date": "2026-12-04T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "97ccc669-4177-4d00-ab9b-0344c27af640",
+    "name": "800Dolares Fc",
+    "logo_url": "https://i.ibb.co/HDHFLfDs/logos-1795191826854.png"
+   },
+   "away_team": {
+    "id": "bd4002bc-48aa-4ce2-8389-4b6a56474788",
+    "name": "CHOCOLATEROS",
+    "logo_url": "https://i.ibb.co/hx8vhX4f/logos-1794954911992.png"
+   }
+  },
+  {
+   "id": "bb2d62a7-0549-4a68-8b4e-89dbd721c37a",
+   "stage": "Fecha 6",
+   "match_date": "2026-12-04T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "ec11a322-04f7-4e49-b325-3d06e6a3f716",
+    "name": "Hiroshimaa",
+    "logo_url": "https://i.ibb.co/cK8ZhSp1/logos-1794857365238.png"
+   },
+   "away_team": {
+    "id": "dc133340-dc50-402b-8bbd-6060a96aef79",
+    "name": "Academia Decana",
+    "logo_url": "https://i.ibb.co/RpdzdY8n/logos-1795229555795.png"
+   }
+  },
+  {
+   "id": "48feba19-fea6-4ab4-8fc3-cc3e632f1d9c",
+   "stage": "Fecha 6",
+   "match_date": "2026-12-04T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "56ce4c0f-8b50-495a-b90d-c10edcd985a9",
+    "name": "Club Atlético Libertad eSports",
+    "logo_url": "https://i.ibb.co/dsjn53sQ/logos-1794943697325.png"
+   },
+   "away_team": {
+    "id": "da895036-1c87-4a74-b1e0-a52138d5c437",
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   }
+  },
+  {
+   "id": "461b3760-bd22-44fe-9a4c-b230a76df7b2",
+   "stage": "Fecha 6",
+   "match_date": "2026-12-04T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "91e0fffa-cc95-47b2-b1bc-df7c7a8fb2fb",
+    "name": "Lomas Turbo FC",
+    "logo_url": "https://i.ibb.co/5hXnFhJ3/1786744387391.png"
+   },
+   "away_team": {
+    "id": "a421bc5e-ae52-4daf-a0e0-51037d753330",
+    "name": "LOS CHUKY FC",
+    "logo_url": "https://i.ibb.co/bg2j9fBH/logos-1795628132695.png"
+   }
+  },
+  {
+   "id": "bd37d40d-902a-4375-8f8d-0421afc1eefa",
+   "stage": "Fecha 6",
+   "match_date": "2026-12-04T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "5f5c1c8b-71f9-4b56-9da0-1b4b264908c2",
+    "name": "Real Pipinho FC",
+    "logo_url": "https://i.ibb.co/HLVMSBWw/logos-1795631083941.png"
+   },
+   "away_team": {
+    "id": "837e0cec-1d67-4c2a-aa10-52147fe69058",
+    "name": "Los CogeAbuelas",
+    "logo_url": "https://i.ibb.co/q34cqnTM/logos-1794860414306.png"
+   }
+  },
+  {
+   "id": "a49b14e6-f7ca-4558-9d79-7486bdb6f3b5",
+   "stage": "Fecha 7",
+   "match_date": "2026-12-09T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "54a7a0fd-9964-48df-bd6c-4689f710b380",
+    "name": "El Salchicha FC",
+    "logo_url": "https://i.ibb.co/PGcFj4C9/logos-1794859314614.png"
+   },
+   "away_team": {
+    "id": "bd4002bc-48aa-4ce2-8389-4b6a56474788",
+    "name": "CHOCOLATEROS",
+    "logo_url": "https://i.ibb.co/hx8vhX4f/logos-1794954911992.png"
+   }
+  },
+  {
+   "id": "0bdc55eb-1d6e-4982-82d3-5dc1a7fe2dc8",
+   "stage": "Fecha 7",
+   "match_date": "2026-12-09T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "55c42666-1d72-42d5-b21f-2cdc425764db",
+    "name": "Centenario eSports",
+    "logo_url": "https://i.ibb.co/rKhDP4LG/logos-1795204521602.png"
+   },
+   "away_team": {
+    "id": "ec11a322-04f7-4e49-b325-3d06e6a3f716",
+    "name": "Hiroshimaa",
+    "logo_url": "https://i.ibb.co/cK8ZhSp1/logos-1794857365238.png"
+   }
+  },
+  {
+   "id": "595f0239-98ef-4209-9ead-2585c91137da",
+   "stage": "Fecha 7",
+   "match_date": "2026-12-09T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "da895036-1c87-4a74-b1e0-a52138d5c437",
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   },
+   "away_team": {
+    "id": "97ccc669-4177-4d00-ab9b-0344c27af640",
+    "name": "800Dolares Fc",
+    "logo_url": "https://i.ibb.co/HDHFLfDs/logos-1795191826854.png"
+   }
+  },
+  {
+   "id": "be153f96-6d32-468d-8e04-1fa924d17952",
+   "stage": "Fecha 7",
+   "match_date": "2026-12-09T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "dc133340-dc50-402b-8bbd-6060a96aef79",
+    "name": "Academia Decana",
+    "logo_url": "https://i.ibb.co/RpdzdY8n/logos-1795229555795.png"
+   },
+   "away_team": {
+    "id": "91e0fffa-cc95-47b2-b1bc-df7c7a8fb2fb",
+    "name": "Lomas Turbo FC",
+    "logo_url": "https://i.ibb.co/5hXnFhJ3/1786744387391.png"
+   }
+  },
+  {
+   "id": "6311540a-de42-43c2-b593-e7ef0cdd9280",
+   "stage": "Fecha 7",
+   "match_date": "2026-12-09T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "837e0cec-1d67-4c2a-aa10-52147fe69058",
+    "name": "Los CogeAbuelas",
+    "logo_url": "https://i.ibb.co/q34cqnTM/logos-1794860414306.png"
+   },
+   "away_team": {
+    "id": "56ce4c0f-8b50-495a-b90d-c10edcd985a9",
+    "name": "Club Atlético Libertad eSports",
+    "logo_url": "https://i.ibb.co/dsjn53sQ/logos-1794943697325.png"
+   }
+  },
+  {
+   "id": "b90d4e9c-6422-4bb4-a342-64ebb04a62f2",
+   "stage": "Fecha 7",
+   "match_date": "2026-12-09T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "a421bc5e-ae52-4daf-a0e0-51037d753330",
+    "name": "LOS CHUKY FC",
+    "logo_url": "https://i.ibb.co/bg2j9fBH/logos-1795628132695.png"
+   },
+   "away_team": {
+    "id": "5f5c1c8b-71f9-4b56-9da0-1b4b264908c2",
+    "name": "Real Pipinho FC",
+    "logo_url": "https://i.ibb.co/HLVMSBWw/logos-1795631083941.png"
+   }
+  },
+  {
+   "id": "d7f5d39b-12ac-47cb-b596-e55a7adf5e9d",
+   "stage": "Fecha 8",
+   "match_date": "2026-12-09T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "ec11a322-04f7-4e49-b325-3d06e6a3f716",
+    "name": "Hiroshimaa",
+    "logo_url": "https://i.ibb.co/cK8ZhSp1/logos-1794857365238.png"
+   },
+   "away_team": {
+    "id": "54a7a0fd-9964-48df-bd6c-4689f710b380",
+    "name": "El Salchicha FC",
+    "logo_url": "https://i.ibb.co/PGcFj4C9/logos-1794859314614.png"
+   }
+  },
+  {
+   "id": "73086dc2-31a6-4659-ab39-f307611f33d9",
+   "stage": "Fecha 8",
+   "match_date": "2026-12-09T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "bd4002bc-48aa-4ce2-8389-4b6a56474788",
+    "name": "CHOCOLATEROS",
+    "logo_url": "https://i.ibb.co/hx8vhX4f/logos-1794954911992.png"
+   },
+   "away_team": {
+    "id": "da895036-1c87-4a74-b1e0-a52138d5c437",
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   }
+  },
+  {
+   "id": "f13d8dac-da2c-452e-957e-537dc78296ea",
+   "stage": "Fecha 8",
+   "match_date": "2026-12-09T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "91e0fffa-cc95-47b2-b1bc-df7c7a8fb2fb",
+    "name": "Lomas Turbo FC",
+    "logo_url": "https://i.ibb.co/5hXnFhJ3/1786744387391.png"
+   },
+   "away_team": {
+    "id": "55c42666-1d72-42d5-b21f-2cdc425764db",
+    "name": "Centenario eSports",
+    "logo_url": "https://i.ibb.co/rKhDP4LG/logos-1795204521602.png"
+   }
+  },
+  {
+   "id": "533d5aed-0e2f-4729-afd3-ec6342f873ff",
+   "stage": "Fecha 8",
+   "match_date": "2026-12-09T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "97ccc669-4177-4d00-ab9b-0344c27af640",
+    "name": "800Dolares Fc",
+    "logo_url": "https://i.ibb.co/HDHFLfDs/logos-1795191826854.png"
+   },
+   "away_team": {
+    "id": "837e0cec-1d67-4c2a-aa10-52147fe69058",
+    "name": "Los CogeAbuelas",
+    "logo_url": "https://i.ibb.co/q34cqnTM/logos-1794860414306.png"
+   }
+  },
+  {
+   "id": "6ee61a0b-4a88-44e1-8bd0-45b20a851ed9",
+   "stage": "Fecha 8",
+   "match_date": "2026-12-09T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "5f5c1c8b-71f9-4b56-9da0-1b4b264908c2",
+    "name": "Real Pipinho FC",
+    "logo_url": "https://i.ibb.co/HLVMSBWw/logos-1795631083941.png"
+   },
+   "away_team": {
+    "id": "dc133340-dc50-402b-8bbd-6060a96aef79",
+    "name": "Academia Decana",
+    "logo_url": "https://i.ibb.co/RpdzdY8n/logos-1795229555795.png"
+   }
+  },
+  {
+   "id": "c843ad06-0d00-4cc3-b87c-0d33e4f68805",
+   "stage": "Fecha 8",
+   "match_date": "2026-12-09T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "56ce4c0f-8b50-495a-b90d-c10edcd985a9",
+    "name": "Club Atlético Libertad eSports",
+    "logo_url": "https://i.ibb.co/dsjn53sQ/logos-1794943697325.png"
+   },
+   "away_team": {
+    "id": "a421bc5e-ae52-4daf-a0e0-51037d753330",
+    "name": "LOS CHUKY FC",
+    "logo_url": "https://i.ibb.co/bg2j9fBH/logos-1795628132695.png"
+   }
+  },
+  {
+   "id": "c54bfc54-2435-4905-8e77-9c7c4057f254",
+   "stage": "Fecha 9",
+   "match_date": "2026-12-09T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "54a7a0fd-9964-48df-bd6c-4689f710b380",
+    "name": "El Salchicha FC",
+    "logo_url": "https://i.ibb.co/PGcFj4C9/logos-1794859314614.png"
+   },
+   "away_team": {
+    "id": "da895036-1c87-4a74-b1e0-a52138d5c437",
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   }
+  },
+  {
+   "id": "6991d04a-d677-4466-9def-acf4c5e88088",
+   "stage": "Fecha 9",
+   "match_date": "2026-12-09T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "ec11a322-04f7-4e49-b325-3d06e6a3f716",
+    "name": "Hiroshimaa",
+    "logo_url": "https://i.ibb.co/cK8ZhSp1/logos-1794857365238.png"
+   },
+   "away_team": {
+    "id": "91e0fffa-cc95-47b2-b1bc-df7c7a8fb2fb",
+    "name": "Lomas Turbo FC",
+    "logo_url": "https://i.ibb.co/5hXnFhJ3/1786744387391.png"
+   }
+  },
+  {
+   "id": "d3099238-deb4-4e1e-be3f-2bab710dd693",
+   "stage": "Fecha 9",
+   "match_date": "2026-12-09T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "837e0cec-1d67-4c2a-aa10-52147fe69058",
+    "name": "Los CogeAbuelas",
+    "logo_url": "https://i.ibb.co/q34cqnTM/logos-1794860414306.png"
+   },
+   "away_team": {
+    "id": "bd4002bc-48aa-4ce2-8389-4b6a56474788",
+    "name": "CHOCOLATEROS",
+    "logo_url": "https://i.ibb.co/hx8vhX4f/logos-1794954911992.png"
+   }
+  },
+  {
+   "id": "b3842917-0eef-428a-815b-beb0e9456d44",
+   "stage": "Fecha 9",
+   "match_date": "2026-12-09T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "55c42666-1d72-42d5-b21f-2cdc425764db",
+    "name": "Centenario eSports",
+    "logo_url": "https://i.ibb.co/rKhDP4LG/logos-1795204521602.png"
+   },
+   "away_team": {
+    "id": "5f5c1c8b-71f9-4b56-9da0-1b4b264908c2",
+    "name": "Real Pipinho FC",
+    "logo_url": "https://i.ibb.co/HLVMSBWw/logos-1795631083941.png"
+   }
+  },
+  {
+   "id": "3a962139-6862-480c-972d-25ddd703bc69",
+   "stage": "Fecha 9",
+   "match_date": "2026-12-09T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "a421bc5e-ae52-4daf-a0e0-51037d753330",
+    "name": "LOS CHUKY FC",
+    "logo_url": "https://i.ibb.co/bg2j9fBH/logos-1795628132695.png"
+   },
+   "away_team": {
+    "id": "97ccc669-4177-4d00-ab9b-0344c27af640",
+    "name": "800Dolares Fc",
+    "logo_url": "https://i.ibb.co/HDHFLfDs/logos-1795191826854.png"
+   }
+  },
+  {
+   "id": "618ad43f-1ebe-4a5d-85ed-39660be8c7a0",
+   "stage": "Fecha 9",
+   "match_date": "2026-12-09T02:59:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "dc133340-dc50-402b-8bbd-6060a96aef79",
+    "name": "Academia Decana",
+    "logo_url": "https://i.ibb.co/RpdzdY8n/logos-1795229555795.png"
+   },
+   "away_team": {
+    "id": "56ce4c0f-8b50-495a-b90d-c10edcd985a9",
+    "name": "Club Atlético Libertad eSports",
+    "logo_url": "https://i.ibb.co/dsjn53sQ/logos-1794943697325.png"
+   }
+  },
+  {
+   "id": "ae92d636-0a5b-4bf1-b3ad-a92d4dc1eb63",
+   "stage": "Fecha 10",
+   "match_date": "2026-12-11T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "91e0fffa-cc95-47b2-b1bc-df7c7a8fb2fb",
+    "name": "Lomas Turbo FC",
+    "logo_url": "https://i.ibb.co/5hXnFhJ3/1786744387391.png"
+   },
+   "away_team": {
+    "id": "54a7a0fd-9964-48df-bd6c-4689f710b380",
+    "name": "El Salchicha FC",
+    "logo_url": "https://i.ibb.co/PGcFj4C9/logos-1794859314614.png"
+   }
+  },
+  {
+   "id": "c979e126-61a1-48a9-a3f8-f1af9f8b387d",
+   "stage": "Fecha 10",
+   "match_date": "2026-12-11T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "da895036-1c87-4a74-b1e0-a52138d5c437",
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   },
+   "away_team": {
+    "id": "837e0cec-1d67-4c2a-aa10-52147fe69058",
+    "name": "Los CogeAbuelas",
+    "logo_url": "https://i.ibb.co/q34cqnTM/logos-1794860414306.png"
+   }
+  },
+  {
+   "id": "12c5d280-2233-482e-909b-ec7b08c14679",
+   "stage": "Fecha 10",
+   "match_date": "2026-12-11T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "5f5c1c8b-71f9-4b56-9da0-1b4b264908c2",
+    "name": "Real Pipinho FC",
+    "logo_url": "https://i.ibb.co/HLVMSBWw/logos-1795631083941.png"
+   },
+   "away_team": {
+    "id": "ec11a322-04f7-4e49-b325-3d06e6a3f716",
+    "name": "Hiroshimaa",
+    "logo_url": "https://i.ibb.co/cK8ZhSp1/logos-1794857365238.png"
+   }
+  },
+  {
+   "id": "570cc1ac-5138-45a7-b0f9-57ed650c8bba",
+   "stage": "Fecha 10",
+   "match_date": "2026-12-11T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "bd4002bc-48aa-4ce2-8389-4b6a56474788",
+    "name": "CHOCOLATEROS",
+    "logo_url": "https://i.ibb.co/hx8vhX4f/logos-1794954911992.png"
+   },
+   "away_team": {
+    "id": "a421bc5e-ae52-4daf-a0e0-51037d753330",
+    "name": "LOS CHUKY FC",
+    "logo_url": "https://i.ibb.co/bg2j9fBH/logos-1795628132695.png"
+   }
+  },
+  {
+   "id": "b3deb7e5-900c-433d-9c86-43009e93ca5b",
+   "stage": "Fecha 10",
+   "match_date": "2026-12-11T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "56ce4c0f-8b50-495a-b90d-c10edcd985a9",
+    "name": "Club Atlético Libertad eSports",
+    "logo_url": "https://i.ibb.co/dsjn53sQ/logos-1794943697325.png"
+   },
+   "away_team": {
+    "id": "55c42666-1d72-42d5-b21f-2cdc425764db",
+    "name": "Centenario eSports",
+    "logo_url": "https://i.ibb.co/rKhDP4LG/logos-1795204521602.png"
+   }
+  },
+  {
+   "id": "bec7c2cc-6df2-4a21-bffd-879da2dd34f1",
+   "stage": "Fecha 10",
+   "match_date": "2026-12-11T02:00:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "97ccc669-4177-4d00-ab9b-0344c27af640",
+    "name": "800Dolares Fc",
+    "logo_url": "https://i.ibb.co/HDHFLfDs/logos-1795191826854.png"
+   },
+   "away_team": {
+    "id": "dc133340-dc50-402b-8bbd-6060a96aef79",
+    "name": "Academia Decana",
+    "logo_url": "https://i.ibb.co/RpdzdY8n/logos-1795229555795.png"
+   }
+  },
+  {
+   "id": "afed4114-677b-4bc1-9a5f-06d15ed3005d",
+   "stage": "Fecha 11",
+   "match_date": "2026-12-11T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "54a7a0fd-9964-48df-bd6c-4689f710b380",
+    "name": "El Salchicha FC",
+    "logo_url": "https://i.ibb.co/PGcFj4C9/logos-1794859314614.png"
+   },
+   "away_team": {
+    "id": "837e0cec-1d67-4c2a-aa10-52147fe69058",
+    "name": "Los CogeAbuelas",
+    "logo_url": "https://i.ibb.co/q34cqnTM/logos-1794860414306.png"
+   }
+  },
+  {
+   "id": "66e4a994-02bb-42b0-8c7e-62b061ea0c75",
+   "stage": "Fecha 11",
+   "match_date": "2026-12-11T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "91e0fffa-cc95-47b2-b1bc-df7c7a8fb2fb",
+    "name": "Lomas Turbo FC",
+    "logo_url": "https://i.ibb.co/5hXnFhJ3/1786744387391.png"
+   },
+   "away_team": {
+    "id": "5f5c1c8b-71f9-4b56-9da0-1b4b264908c2",
+    "name": "Real Pipinho FC",
+    "logo_url": "https://i.ibb.co/HLVMSBWw/logos-1795631083941.png"
+   }
+  },
+  {
+   "id": "f1201b69-fecc-4d3d-888a-b227feeceabf",
+   "stage": "Fecha 11",
+   "match_date": "2026-12-11T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "a421bc5e-ae52-4daf-a0e0-51037d753330",
+    "name": "LOS CHUKY FC",
+    "logo_url": "https://i.ibb.co/bg2j9fBH/logos-1795628132695.png"
+   },
+   "away_team": {
+    "id": "da895036-1c87-4a74-b1e0-a52138d5c437",
+    "name": "Platinum CA",
+    "logo_url": "https://i.ibb.co/V0PCKLHq/logos-1794889760389.png"
+   }
+  },
+  {
+   "id": "dba5a8b6-6429-4812-a17c-d8422dde879e",
+   "stage": "Fecha 11",
+   "match_date": "2026-12-11T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "ec11a322-04f7-4e49-b325-3d06e6a3f716",
+    "name": "Hiroshimaa",
+    "logo_url": "https://i.ibb.co/cK8ZhSp1/logos-1794857365238.png"
+   },
+   "away_team": {
+    "id": "56ce4c0f-8b50-495a-b90d-c10edcd985a9",
+    "name": "Club Atlético Libertad eSports",
+    "logo_url": "https://i.ibb.co/dsjn53sQ/logos-1794943697325.png"
+   }
+  },
+  {
+   "id": "0f053488-4788-48ea-9181-ddd030ca7b5b",
+   "stage": "Fecha 11",
+   "match_date": "2026-12-11T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "dc133340-dc50-402b-8bbd-6060a96aef79",
+    "name": "Academia Decana",
+    "logo_url": "https://i.ibb.co/RpdzdY8n/logos-1795229555795.png"
+   },
+   "away_team": {
+    "id": "bd4002bc-48aa-4ce2-8389-4b6a56474788",
+    "name": "CHOCOLATEROS",
+    "logo_url": "https://i.ibb.co/hx8vhX4f/logos-1794954911992.png"
+   }
+  },
+  {
+   "id": "845cf7e5-c544-4919-b2f9-52b8a53c735c",
+   "stage": "Fecha 11",
+   "match_date": "2026-12-11T02:30:00+00:00",
+   "status": "scheduled",
+   "home_goals": 0,
+   "away_goals": 0,
+   "home_team": {
+    "id": "55c42666-1d72-42d5-b21f-2cdc425764db",
+    "name": "Centenario eSports",
+    "logo_url": "https://i.ibb.co/rKhDP4LG/logos-1795204521602.png"
+   },
+   "away_team": {
+    "id": "97ccc669-4177-4d00-ab9b-0344c27af640",
+    "name": "800Dolares Fc",
+    "logo_url": "https://i.ibb.co/HDHFLfDs/logos-1795191826854.png"
+   }
+  }
+ ],
  "ae5fc8e3-dff2-4744-9c51-57a06fce5752": [
   {
    "id": "2a86c948-27d0-4038-86cc-29aed9282fda",
