@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-26T22:01:00+00:00",
+  "actualizado": "2026-11-26T23:00:57+00:00",
   "desde": "2026-11-25T21:38:12+00:00"
  },
  {
@@ -368,6 +368,24 @@
    },
    {
     "pos": 2,
+    "equipo": "Vultur Sports",
+    "escudo": "https://media.virtualpronetwork.com/teamlogos/56824d17ce77a6fbc739034acdff149d_thumb.png",
+    "pj": 12,
+    "g": 9,
+    "e": 2,
+    "p": 1,
+    "gf": 19,
+    "gc": 4,
+    "dg": 15,
+    "pts": 29,
+    "zona": "playoff",
+    "pos_fuente": 2,
+    "pos_ant_fuente": 2,
+    "es_vultur": true,
+    "mov": 0
+   },
+   {
+    "pos": 3,
     "equipo": "CSyD La Mochila",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/d3166b2edd2249cae271d840f042341e_thumb.png",
     "pj": 12,
@@ -379,28 +397,10 @@
     "dg": 21,
     "pts": 28,
     "zona": "playoff",
-    "pos_fuente": 2,
+    "pos_fuente": 3,
     "pos_ant_fuente": 3,
     "es_vultur": false,
-    "mov": 1
-   },
-   {
-    "pos": 3,
-    "equipo": "Vultur Sports",
-    "escudo": "https://media.virtualpronetwork.com/teamlogos/56824d17ce77a6fbc739034acdff149d_thumb.png",
-    "pj": 11,
-    "g": 8,
-    "e": 2,
-    "p": 1,
-    "gf": 18,
-    "gc": 4,
-    "dg": 14,
-    "pts": 26,
-    "zona": "playoff",
-    "pos_fuente": 3,
-    "pos_ant_fuente": 2,
-    "es_vultur": true,
-    "mov": -1
+    "mov": 0
    },
    {
     "pos": 4,
@@ -712,13 +712,13 @@
     "pos": 21,
     "equipo": "Estudiantes Rio Cuarto",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/ee851ec2b77124a45601f284e67cc89f_thumb.png",
-    "pj": 10,
+    "pj": 11,
     "g": 0,
     "e": 0,
-    "p": 10,
+    "p": 11,
     "gf": 0,
-    "gc": 16,
-    "dg": -16,
+    "gc": 17,
+    "dg": -17,
     "pts": 0,
     "zona": null,
     "pos_fuente": 21,
@@ -727,7 +727,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-26T22:01:37+00:00",
+  "actualizado": "2026-11-26T23:01:48+00:00",
   "desde": "2026-11-25T21:38:48+00:00"
  },
  {

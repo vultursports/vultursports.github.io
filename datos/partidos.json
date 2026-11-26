@@ -42659,9 +42659,150 @@
    "clave": "vpn-6449",
    "nombre": "Liga Argentina 4ta División T11"
   },
-  "stats": [],
+  "stats": [
+   {
+    "alias": "MARCHMELLOYT",
+    "alias_id": "279384",
+    "posicion": "PO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "277620",
+    "posicion": "LTD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "Zk__godd",
+    "alias_id": "289333",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "279383",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "Tiro_loko12",
+    "alias_id": "279373",
+    "posicion": "LTI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "canflecto12",
+    "alias_id": "279385",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.4,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "MateoAlvarezIACC",
+    "alias_id": "289479",
+    "posicion": "MD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": true,
+    "rating": 7.3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "soldierjah22",
+    "alias_id": "270808",
+    "posicion": "MI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "alias_id": "289726",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "VSP-Ch4cKaL",
+    "alias_id": "272943",
+    "posicion": "DD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "283161",
+    "posicion": "DI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ],
   "equipo_stats": {
-   "nosotros": null,
+   "nosotros": {
+    "tiros": 0,
+    "pases": 40,
+    "pases_int": 50,
+    "entradas": 2,
+    "entradas_int": 7,
+    "atajadas": 0,
+    "nota": 6.95
+   },
    "rival": {
     "tiros": 0,
     "pases": 16,
@@ -42672,7 +42813,7 @@
     "nota": 6.78
    }
   },
-  "formacion": null
+  "formacion": "4-1-2-1-2"
  },
  {
   "id": "vpn-785652",
@@ -42686,15 +42827,150 @@
    "nombre": "Estudiantes Rio Cuarto",
    "escudo": "https://media.virtualpronetwork.com/teamlogos/ee851ec2b77124a45601f284e67cc89f_thumb.png"
   },
-  "gf": null,
-  "gc": null,
-  "estado": "programado",
+  "gf": 1,
+  "gc": 0,
+  "estado": "finalizado",
   "url_origen": "https://virtualpronetwork.com/uy/matches/785652",
   "temporada": {
    "clave": "vpn-6449",
    "nombre": "Liga Argentina 4ta División T11"
   },
-  "stats": []
+  "stats": [
+   {
+    "alias": "MARCHMELLOYT",
+    "alias_id": "279384",
+    "posicion": "PO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": null,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "277620",
+    "posicion": "LTD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": null,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "279383",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": null,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "Zk__godd",
+    "alias_id": "289333",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": null,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "Tiro_loko12",
+    "alias_id": "279373",
+    "posicion": "LTI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": null,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "canflecto12",
+    "alias_id": "279385",
+    "posicion": "MCD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": null,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": true
+   },
+   {
+    "alias": "MateoAlvarezIACC",
+    "alias_id": "289479",
+    "posicion": "MD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": null,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "soldierjah22",
+    "alias_id": "270808",
+    "posicion": "MI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": null,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "-D1rty-Arg",
+    "alias_id": "289726",
+    "posicion": "MCO",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": null,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "VSP-Ch4cKaL",
+    "alias_id": "272943",
+    "posicion": "DD",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": true,
+    "rating": null,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "283161",
+    "posicion": "DI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": null,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ],
+  "equipo_stats": null,
+  "formacion": "4-1-2-1-2"
  },
  {
   "id": "vpug-702",

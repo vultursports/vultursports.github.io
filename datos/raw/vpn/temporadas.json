@@ -40,10 +40,10 @@
    "active": true,
    "champion": false,
    "finish": {
-    "position": 5,
+    "position": 3,
     "teamsCount": 42,
     "ofLabel": "de 42",
-    "detail": "26 pts"
+    "detail": "29 pts"
    },
    "division": 4,
    "divisionLabel": "División 4",
@@ -58,19 +58,19 @@
    "stats": [
     {
      "label": "PJ",
-     "value": "11"
+     "value": "12"
     },
     {
      "label": "G-E-P",
-     "value": "8-2-1"
+     "value": "9-2-1"
     },
     {
      "label": "Goles",
-     "value": "18:4"
+     "value": "19:4"
     },
     {
      "label": "PTS",
-     "value": "26"
+     "value": "29"
     }
    ],
    "form": [
@@ -84,9 +84,10 @@
     "W",
     "W",
     "D",
-    "D"
+    "D",
+    "W"
    ],
-   "formLabel": "11 partidos: 8 ganados, 2 empatados, 1 perdidos",
+   "formLabel": "12 partidos: 9 ganados, 2 empatados, 1 perdidos",
    "lastMatch": null,
    "squadLabel": "16 jugadores utilizados",
    "stars": [
@@ -144,7 +145,7 @@
     {
      "key": "appearances",
      "label": "Más partidos",
-     "value": "10",
+     "value": "12",
      "unit": "PJ",
      "player": {
       "id": 277620,
