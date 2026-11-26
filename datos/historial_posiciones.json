@@ -553,6 +553,32 @@
     "estudiantesriocuarto": 21
    },
    "pj_max": 9
+  },
+  "2026-11-26": {
+   "pos": {
+    "arabiateam": 1,
+    "csydlamochila": 2,
+    "vultursports": 3,
+    "dardoneta": 4,
+    "flandria": 5,
+    "allboyscantera": 6,
+    "dreamteamuy": 7,
+    "villadie": 8,
+    "caeu": 9,
+    "villasancarlos": 10,
+    "complicadossa": 11,
+    "realenvido": 12,
+    "torquecity": 13,
+    "almagroesports": 14,
+    "almirantebrownesport": 15,
+    "vidonbaresportscba": 16,
+    "interregional": 17,
+    "pocofutbolfc": 18,
+    "espanyolbarcelonafc": 19,
+    "huracanesports": 20,
+    "estudiantesriocuarto": 21
+   },
+   "pj_max": 12
   }
  }
 }
