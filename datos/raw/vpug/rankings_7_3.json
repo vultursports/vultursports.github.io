@@ -71,6 +71,17 @@
  ],
  "asistidores": [
   {
+   "id": 1199,
+   "jugador": "Lucho Gómez ",
+   "club": {
+    "id": 168,
+    "nombre": "Pueblo Manya",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
+   },
+   "valor": 9,
+   "partidos": 9
+  },
+  {
    "id": 904,
    "jugador": "Bora Bora ",
    "club": {
@@ -80,17 +91,6 @@
    },
    "valor": 8,
    "partidos": 7
-  },
-  {
-   "id": 1199,
-   "jugador": "Lucho Gómez ",
-   "club": {
-    "id": 168,
-    "nombre": "Pueblo Manya",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
-   },
-   "valor": 8,
-   "partidos": 8
   },
   {
    "id": 1841,

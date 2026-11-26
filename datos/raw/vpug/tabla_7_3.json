@@ -29,6 +29,24 @@
   {
    "posicion": 1,
    "club": {
+    "id": 168,
+    "nombre": "Pueblo Manya",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
+   },
+   "pj": 10,
+   "g": 8,
+   "e": 2,
+   "p": 0,
+   "gf": 17,
+   "gc": 3,
+   "dg": 14,
+   "descuento": 0,
+   "pts": 26,
+   "zona": "ASCENSO"
+  },
+  {
+   "posicion": 2,
+   "club": {
     "id": 148,
     "nombre": "InfinitX",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-904-1793284842685.webp"
@@ -45,43 +63,7 @@
    "zona": "ASCENSO"
   },
   {
-   "posicion": 2,
-   "club": {
-    "id": 168,
-    "nombre": "Pueblo Manya",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
-   },
-   "pj": 9,
-   "g": 7,
-   "e": 2,
-   "p": 0,
-   "gf": 16,
-   "gc": 3,
-   "dg": 13,
-   "descuento": 0,
-   "pts": 23,
-   "zona": "ASCENSO"
-  },
-  {
    "posicion": 3,
-   "club": {
-    "id": 129,
-    "nombre": "AllBoysCantera",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp"
-   },
-   "pj": 9,
-   "g": 7,
-   "e": 2,
-   "p": 0,
-   "gf": 12,
-   "gc": 0,
-   "dg": 12,
-   "descuento": 0,
-   "pts": 23,
-   "zona": "REDUCIDO"
-  },
-  {
-   "posicion": 4,
    "club": {
     "id": 124,
     "nombre": "ALMA CRIOLLA",
@@ -96,6 +78,24 @@
    "dg": 14,
    "descuento": 0,
    "pts": 21,
+   "zona": "REDUCIDO"
+  },
+  {
+   "posicion": 4,
+   "club": {
+    "id": 129,
+    "nombre": "AllBoysCantera",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp"
+   },
+   "pj": 9,
+   "g": 6,
+   "e": 2,
+   "p": 1,
+   "gf": 9,
+   "gc": 1,
+   "dg": 8,
+   "descuento": 0,
+   "pts": 20,
    "zona": "REDUCIDO"
   },
   {
@@ -191,6 +191,24 @@
   {
    "posicion": 10,
    "club": {
+    "id": 139,
+    "nombre": "Celestiales",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp"
+   },
+   "pj": 10,
+   "g": 4,
+   "e": 2,
+   "p": 4,
+   "gf": 6,
+   "gc": 9,
+   "dg": -3,
+   "descuento": 0,
+   "pts": 14,
+   "zona": "REDUCIDO"
+  },
+  {
+   "posicion": 11,
+   "club": {
     "id": 135,
     "nombre": "DeportivoFumeta",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-793-1793215711655.webp"
@@ -204,10 +222,10 @@
    "dg": 1,
    "descuento": 0,
    "pts": 13,
-   "zona": "REDUCIDO"
+   "zona": null
   },
   {
-   "posicion": 11,
+   "posicion": 12,
    "club": {
     "id": 162,
     "nombre": "Interior SAD",
@@ -225,37 +243,19 @@
    "zona": null
   },
   {
-   "posicion": 12,
+   "posicion": 13,
    "club": {
     "id": 141,
     "nombre": "Vultur Sports",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-141-1793989433023.webp"
    },
-   "pj": 8,
+   "pj": 9,
    "g": 3,
    "e": 2,
-   "p": 3,
+   "p": 4,
    "gf": 8,
-   "gc": 8,
-   "dg": 0,
-   "descuento": 0,
-   "pts": 11,
-   "zona": null
-  },
-  {
-   "posicion": 13,
-   "club": {
-    "id": 139,
-    "nombre": "Celestiales",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp"
-   },
-   "pj": 10,
-   "g": 3,
-   "e": 2,
-   "p": 5,
-   "gf": 5,
-   "gc": 12,
-   "dg": -7,
+   "gc": 9,
+   "dg": -1,
    "descuento": 0,
    "pts": 11,
    "zona": null

@@ -42288,15 +42288,16 @@
    "nombre": "Pueblo Manya",
    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
   },
-  "gf": null,
-  "gc": null,
-  "estado": "programado",
+  "gf": 0,
+  "gc": 1,
+  "estado": "finalizado",
   "url_origen": "https://vpugvirtualprouruguaygaming.com/partidos/693",
   "temporada": {
    "clave": "vpug-7-3",
    "nombre": "Tercera División 2026 T1"
   },
-  "stats": []
+  "stats": [],
+  "equipo_stats": null
  },
  {
   "id": "vpn-785611",
