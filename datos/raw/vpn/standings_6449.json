@@ -5311,8 +5311,8 @@
      "datetime": null,
      "type": 0,
      "forfeit": false,
-     "update_date": "2026-11-26T02:59:59.000Z",
-     "update_by": 276790,
+     "update_date": "2026-11-26T05:11:33.000Z",
+     "update_by": 288548,
      "game_id": 1,
      "awayTeam": {
       "url": "sarmiento-esp",
@@ -6333,8 +6333,8 @@
      "datetime": null,
      "type": 0,
      "forfeit": false,
-     "update_date": "2026-11-26T02:59:59.000Z",
-     "update_by": 276790,
+     "update_date": "2026-11-26T05:11:33.000Z",
+     "update_by": 288548,
      "game_id": 1,
      "awayTeam": {
       "url": "sarmiento-esp",
@@ -11533,8 +11533,8 @@
      "datetime": null,
      "type": 0,
      "forfeit": false,
-     "update_date": "2026-11-26T02:59:59.000Z",
-     "update_by": 276790,
+     "update_date": "2026-11-26T05:11:33.000Z",
+     "update_by": 288548,
      "game_id": 1,
      "awayTeam": {
       "url": "sarmiento-esp",
@@ -12555,8 +12555,8 @@
      "datetime": null,
      "type": 0,
      "forfeit": false,
-     "update_date": "2026-11-26T02:59:59.000Z",
-     "update_by": 276790,
+     "update_date": "2026-11-26T05:11:33.000Z",
+     "update_by": 288548,
      "game_id": 1,
      "awayTeam": {
       "url": "sarmiento-esp",
@@ -91920,7 +91920,7 @@
  ],
  "playoffs": null,
  "calendar": null,
- "now": 1795669256529,
+ "now": 1795672856489,
  "language": "es",
  "groups": [
   {
