@@ -1,1 +1,11 @@
-[]
+[
+ {
+  "liga": "vpug",
+  "competencia": "Tercera División",
+  "stat": "goles",
+  "pos": 3,
+  "alias": "ARIELORTEGA",
+  "valor": 5,
+  "url_origen": "https://vpugvirtualprouruguaygaming.com/liga/estadisticas"
+ }
+]

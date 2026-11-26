@@ -36,6 +36,17 @@
    "partidos": 5
   },
   {
+   "id": 837,
+   "jugador": "ARIELORTEGA",
+   "club": {
+    "id": 141,
+    "nombre": "Vultur Sports",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-141-1793989433023.webp"
+   },
+   "valor": 5,
+   "partidos": 6
+  },
+  {
    "id": 1788,
    "jugador": "Gerardo Diaz",
    "club": {
@@ -56,17 +67,6 @@
    },
    "valor": 5,
    "partidos": 7
-  },
-  {
-   "id": 991,
-   "jugador": "Cristian Rewerski",
-   "club": {
-    "id": 153,
-    "nombre": "NHP 20",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-153-1793999278932.webp"
-   },
-   "valor": 5,
-   "partidos": 8
   }
  ],
  "asistidores": [

@@ -2,7 +2,13 @@
  {
   "id": "vpug-7-3",
   "liga": "vpug",
-  "goleadores": [],
+  "goleadores": [
+   {
+    "alias": "ARIELORTEGA",
+    "valor": 5,
+    "partidos": 6
+   }
+  ],
   "asistidores": [],
   "url_origen": "https://vpugvirtualprouruguaygaming.com/liga/estadisticas"
  }
