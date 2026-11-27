@@ -21,8 +21,8 @@
     "nombre": "InfinitX",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-904-1793284842685.webp"
    },
-   "valor": 7,
-   "partidos": 6
+   "valor": 8,
+   "partidos": 8
   },
   {
    "id": 793,
@@ -44,17 +44,6 @@
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-141-1793989433023.webp"
    },
    "valor": 5,
-   "partidos": 6
-  },
-  {
-   "id": 1788,
-   "jugador": "Gerardo Diaz",
-   "club": {
-    "id": 124,
-    "nombre": "ALMA CRIOLLA",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp"
-   },
-   "valor": 5,
    "partidos": 7
   },
   {
@@ -67,6 +56,17 @@
    },
    "valor": 5,
    "partidos": 7
+  },
+  {
+   "id": 1788,
+   "jugador": "Gerardo Diaz",
+   "club": {
+    "id": 124,
+    "nombre": "ALMA CRIOLLA",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp"
+   },
+   "valor": 5,
+   "partidos": 9
   }
  ],
  "asistidores": [
@@ -78,8 +78,8 @@
     "nombre": "Pueblo Manya",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
    },
-   "valor": 9,
-   "partidos": 9
+   "valor": 11,
+   "partidos": 10
   },
   {
    "id": 904,
@@ -89,8 +89,8 @@
     "nombre": "InfinitX",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-904-1793284842685.webp"
    },
-   "valor": 8,
-   "partidos": 7
+   "valor": 9,
+   "partidos": 9
   },
   {
    "id": 1841,
@@ -101,7 +101,7 @@
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp"
    },
    "valor": 6,
-   "partidos": 8
+   "partidos": 10
   },
   {
    "id": 798,
@@ -123,7 +123,7 @@
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-660-1793146525424.webp"
    },
    "valor": 4,
-   "partidos": 6
+   "partidos": 7
   }
  ]
 }

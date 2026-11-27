@@ -12,7 +12,7 @@
   "nombre": "Tercera",
   "nivel": 3
  },
- "jornadasJugadas": 10,
+ "jornadasJugadas": 11,
  "jornadasTotales": 19,
  "formato": {
   "esPrimera": false,
@@ -29,37 +29,37 @@
   {
    "posicion": 1,
    "club": {
-    "id": 148,
-    "nombre": "InfinitX",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-904-1793284842685.webp"
+    "id": 168,
+    "nombre": "Pueblo Manya",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
    },
-   "pj": 9,
+   "pj": 11,
    "g": 9,
-   "e": 0,
+   "e": 2,
    "p": 0,
-   "gf": 17,
-   "gc": 1,
-   "dg": 16,
+   "gf": 20,
+   "gc": 3,
+   "dg": 17,
    "descuento": 0,
-   "pts": 27,
+   "pts": 29,
    "zona": "ASCENSO"
   },
   {
    "posicion": 2,
    "club": {
-    "id": 168,
-    "nombre": "Pueblo Manya",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-168-1793990713827.webp"
+    "id": 148,
+    "nombre": "InfinitX",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-904-1793284842685.webp"
    },
    "pj": 10,
-   "g": 8,
-   "e": 2,
+   "g": 9,
+   "e": 1,
    "p": 0,
-   "gf": 17,
-   "gc": 3,
-   "dg": 14,
+   "gf": 18,
+   "gc": 2,
+   "dg": 16,
    "descuento": 0,
-   "pts": 26,
+   "pts": 28,
    "zona": "ASCENSO"
   },
   {
@@ -69,13 +69,13 @@
     "nombre": "AllBoysCantera",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-129-1793990175527.webp"
    },
-   "pj": 10,
+   "pj": 11,
    "g": 8,
    "e": 2,
-   "p": 0,
+   "p": 1,
    "gf": 14,
-   "gc": 0,
-   "dg": 14,
+   "gc": 1,
+   "dg": 13,
    "descuento": 0,
    "pts": 26,
    "zona": "REDUCIDO"
@@ -105,37 +105,55 @@
     "nombre": "AtorrantesFC",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-660-1793146525424.webp"
    },
-   "pj": 10,
-   "g": 5,
+   "pj": 11,
+   "g": 6,
    "e": 3,
    "p": 2,
-   "gf": 10,
-   "gc": 8,
-   "dg": 2,
+   "gf": 12,
+   "gc": 9,
+   "dg": 3,
    "descuento": 0,
-   "pts": 18,
+   "pts": 21,
    "zona": "REDUCIDO"
   },
   {
    "posicion": 6,
    "club": {
-    "id": 155,
-    "nombre": "La Blanca Fc",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-155-1793989269922.webp"
+    "id": 153,
+    "nombre": "NHP 20",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-153-1793999278932.webp"
    },
-   "pj": 10,
+   "pj": 11,
    "g": 5,
-   "e": 2,
-   "p": 3,
-   "gf": 12,
-   "gc": 9,
-   "dg": 3,
+   "e": 4,
+   "p": 2,
+   "gf": 15,
+   "gc": 7,
+   "dg": 8,
    "descuento": 0,
-   "pts": 17,
+   "pts": 19,
    "zona": "REDUCIDO"
   },
   {
    "posicion": 7,
+   "club": {
+    "id": 116,
+    "nombre": "Attlas eSports",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-661-1793146787035.webp"
+   },
+   "pj": 10,
+   "g": 6,
+   "e": 1,
+   "p": 3,
+   "gf": 12,
+   "gc": 7,
+   "dg": 5,
+   "descuento": 0,
+   "pts": 19,
+   "zona": "REDUCIDO"
+  },
+  {
+   "posicion": 8,
    "club": {
     "id": 126,
     "nombre": "Vidon Bar CBA",
@@ -153,39 +171,21 @@
    "zona": "REDUCIDO"
   },
   {
-   "posicion": 8,
-   "club": {
-    "id": 116,
-    "nombre": "Attlas eSports",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-661-1793146787035.webp"
-   },
-   "pj": 9,
-   "g": 5,
-   "e": 1,
-   "p": 3,
-   "gf": 11,
-   "gc": 7,
-   "dg": 4,
-   "descuento": 0,
-   "pts": 16,
-   "zona": "REDUCIDO"
-  },
-  {
    "posicion": 9,
    "club": {
-    "id": 153,
-    "nombre": "NHP 20",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-153-1793999278932.webp"
+    "id": 155,
+    "nombre": "La Blanca Fc",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-155-1793989269922.webp"
    },
-   "pj": 9,
-   "g": 4,
-   "e": 3,
-   "p": 2,
+   "pj": 11,
+   "g": 5,
+   "e": 2,
+   "p": 4,
    "gf": 13,
-   "gc": 6,
-   "dg": 7,
+   "gc": 11,
+   "dg": 2,
    "descuento": 0,
-   "pts": 15,
+   "pts": 17,
    "zona": "REDUCIDO"
   },
   {
@@ -213,13 +213,13 @@
     "nombre": "DeportivoFumeta",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-793-1793215711655.webp"
    },
-   "pj": 10,
+   "pj": 11,
    "g": 4,
    "e": 1,
-   "p": 5,
+   "p": 6,
    "gf": 10,
-   "gc": 12,
-   "dg": -2,
+   "gc": 13,
+   "dg": -3,
    "descuento": 0,
    "pts": 13,
    "zona": null
@@ -245,6 +245,24 @@
   {
    "posicion": 13,
    "club": {
+    "id": 179,
+    "nombre": "Almirante Brown",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-1443-1793679154880.webp"
+   },
+   "pj": 11,
+   "g": 3,
+   "e": 3,
+   "p": 5,
+   "gf": 8,
+   "gc": 20,
+   "dg": -12,
+   "descuento": 0,
+   "pts": 12,
+   "zona": null
+  },
+  {
+   "posicion": 14,
+   "club": {
     "id": 173,
     "nombre": "Familia Torque",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-173-1793593039599.webp"
@@ -261,25 +279,25 @@
    "zona": null
   },
   {
-   "posicion": 14,
+   "posicion": 15,
    "club": {
     "id": 139,
     "nombre": "Celestiales",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-139-1793568971772.webp"
    },
-   "pj": 10,
+   "pj": 11,
    "g": 3,
    "e": 2,
-   "p": 5,
+   "p": 6,
    "gf": 5,
-   "gc": 12,
-   "dg": -7,
+   "gc": 15,
+   "dg": -10,
    "descuento": 0,
    "pts": 11,
    "zona": null
   },
   {
-   "posicion": 15,
+   "posicion": 16,
    "club": {
     "id": 137,
     "nombre": "JOVATOS JUNIORS",
@@ -292,24 +310,6 @@
    "gf": 5,
    "gc": 16,
    "dg": -11,
-   "descuento": 0,
-   "pts": 9,
-   "zona": null
-  },
-  {
-   "posicion": 16,
-   "club": {
-    "id": 179,
-    "nombre": "Almirante Brown",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-1443-1793679154880.webp"
-   },
-   "pj": 10,
-   "g": 2,
-   "e": 3,
-   "p": 5,
-   "gf": 7,
-   "gc": 20,
-   "dg": -13,
    "descuento": 0,
    "pts": 9,
    "zona": null
@@ -375,13 +375,13 @@
     "nombre": "Familia Defensor",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-184-1794324693636.webp"
    },
-   "pj": 10,
+   "pj": 11,
    "g": 0,
    "e": 1,
-   "p": 9,
+   "p": 10,
    "gf": 2,
-   "gc": 17,
-   "dg": -15,
+   "gc": 18,
+   "dg": -16,
    "descuento": 0,
    "pts": 1,
    "zona": "DESCENSO"

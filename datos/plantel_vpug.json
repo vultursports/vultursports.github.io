@@ -36,6 +36,15 @@
   "pais": "Argentina"
  },
  {
+  "idExterno": "PipaMaidana",
+  "nombreCompleto": "Alexis Maidana",
+  "dorsal": 3,
+  "posicion": "MC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
   "idExterno": "Szoke_1",
   "nombreCompleto": "Gabriel Wagner",
   "dorsal": 4,

@@ -42460,8 +42460,171 @@
    "clave": "vpug-7-3",
    "nombre": "Tercera División 2026 T1"
   },
-  "stats": [],
-  "equipo_stats": null
+  "stats": [
+   {
+    "alias": "SoldierJah22",
+    "alias_id": "1115",
+    "nombre": "Lucas Gallo",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MateoAlvarezIACC",
+    "alias_id": "853",
+    "nombre": "Mateo Alvarez Viel",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "canflecto12",
+    "alias_id": "847",
+    "nombre": "Matthew Etienne Chanquet Silveira",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.2,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Zk__godd",
+    "alias_id": "845",
+    "nombre": "Zk__godd",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7.1,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "ByCrisMor09",
+    "alias_id": "846",
+    "nombre": "Cris Moreira",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Corona_ruso",
+    "alias_id": "850",
+    "nombre": "Matías Fernández",
+    "posicion": "DFC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 7,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "Tiro_loko12",
+    "alias_id": "1429",
+    "nombre": "Nicolas santana",
+    "posicion": "LI",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.9,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "alias_id": "1407",
+    "nombre": "Ivan Aguirrez",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "VSP-Ch4cKaL",
+    "alias_id": "837",
+    "nombre": "ARIELORTEGA",
+    "posicion": "DC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 6.3,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MARCHMELLOYT",
+    "alias_id": "2102",
+    "nombre": "MANUEL CAÑETE",
+    "posicion": "MC",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 5.9,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   },
+   {
+    "alias": "MichaelGB1981",
+    "alias_id": "851",
+    "nombre": "Michael Gonzalez Bagilvo",
+    "posicion": "POR",
+    "goles": 0,
+    "asistencias": 0,
+    "mvp": false,
+    "rating": 5.5,
+    "amarillas": 0,
+    "rojas": 0,
+    "valla_invicta": false
+   }
+  ],
+  "equipo_stats": {
+   "nosotros": {
+    "tiros": 7,
+    "pases": 137,
+    "pases_int": 176,
+    "entradas": 12,
+    "entradas_int": 35,
+    "atajadas": 5,
+    "nota": null
+   },
+   "rival": {
+    "tiros": 7,
+    "pases": 96,
+    "pases_int": 121,
+    "entradas": 5,
+    "entradas_int": 15,
+    "atajadas": 4,
+    "nota": null
+   }
+  }
  },
  {
   "id": "vpn-785611",
