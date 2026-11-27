@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-27T09:01:07+00:00",
+  "actualizado": "2026-11-27T10:01:00+00:00",
   "desde": "2026-11-25T21:38:12+00:00"
  },
  {
@@ -440,6 +440,24 @@
    },
    {
     "pos": 6,
+    "equipo": "Villa Die",
+    "escudo": "https://media.virtualpronetwork.com/teamlogos/e9c9df9eb75c46c8deafe7a544d946a7_thumb.png",
+    "pj": 11,
+    "g": 6,
+    "e": 3,
+    "p": 2,
+    "gf": 17,
+    "gc": 8,
+    "dg": 9,
+    "pts": 21,
+    "zona": "playoff",
+    "pos_fuente": 6,
+    "pos_ant_fuente": 8,
+    "es_vultur": false,
+    "mov": 2
+   },
+   {
+    "pos": 7,
     "equipo": "Flandria",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/d9db5c6220ee9b24ce71118a4ed934f9_thumb.png",
     "pj": 10,
@@ -451,13 +469,13 @@
     "dg": 11,
     "pts": 20,
     "zona": "playoff",
-    "pos_fuente": 6,
+    "pos_fuente": 7,
     "pos_ant_fuente": 5,
     "es_vultur": false,
-    "mov": -1
+    "mov": -2
    },
    {
-    "pos": 7,
+    "pos": 8,
     "equipo": "All Boys Cantera",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/bf958410e77e45f66efa4f67df4c5eba_thumb.png",
     "pj": 11,
@@ -469,28 +487,10 @@
     "dg": 8,
     "pts": 20,
     "zona": "playoff",
-    "pos_fuente": 7,
+    "pos_fuente": 8,
     "pos_ant_fuente": 6,
     "es_vultur": false,
-    "mov": -1
-   },
-   {
-    "pos": 8,
-    "equipo": "Villa Die",
-    "escudo": "https://media.virtualpronetwork.com/teamlogos/e9c9df9eb75c46c8deafe7a544d946a7_thumb.png",
-    "pj": 10,
-    "g": 5,
-    "e": 3,
-    "p": 2,
-    "gf": 16,
-    "gc": 8,
-    "dg": 8,
-    "pts": 18,
-    "zona": "playoff",
-    "pos_fuente": 8,
-    "pos_ant_fuente": 9,
-    "es_vultur": false,
-    "mov": 1
+    "mov": -2
    },
    {
     "pos": 9,
@@ -506,9 +506,9 @@
     "pts": 18,
     "zona": "playoff",
     "pos_fuente": 9,
-    "pos_ant_fuente": 8,
+    "pos_ant_fuente": 9,
     "es_vultur": false,
-    "mov": -1
+    "mov": 0
    },
    {
     "pos": 10,
@@ -694,13 +694,13 @@
     "pos": 20,
     "equipo": "Huracan eSports",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/02c39e76634eb6762bcb84338823940e_thumb.png",
-    "pj": 9,
+    "pj": 10,
     "g": 2,
     "e": 1,
-    "p": 6,
+    "p": 7,
     "gf": 8,
-    "gc": 15,
-    "dg": -7,
+    "gc": 16,
+    "dg": -8,
     "pts": 7,
     "zona": null,
     "pos_fuente": 20,
@@ -727,7 +727,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-27T09:01:44+00:00",
+  "actualizado": "2026-11-27T10:01:35+00:00",
   "desde": "2026-11-25T21:38:48+00:00"
  },
  {
