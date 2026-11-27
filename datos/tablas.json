@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-27T13:01:07+00:00",
+  "actualizado": "2026-11-27T14:00:59+00:00",
   "desde": "2026-11-25T21:38:12+00:00"
  },
  {
@@ -362,7 +362,7 @@
     "pts": 30,
     "zona": "ascenso",
     "pos_fuente": 1,
-    "pos_ant_fuente": 1,
+    "pos_ant_fuente": null,
     "es_vultur": false,
     "mov": 0
    },
@@ -380,7 +380,7 @@
     "pts": 29,
     "zona": "playoff",
     "pos_fuente": 2,
-    "pos_ant_fuente": 2,
+    "pos_ant_fuente": null,
     "es_vultur": true,
     "mov": 0
    },
@@ -398,7 +398,7 @@
     "pts": 28,
     "zona": "playoff",
     "pos_fuente": 3,
-    "pos_ant_fuente": 3,
+    "pos_ant_fuente": null,
     "es_vultur": false,
     "mov": 0
    },
@@ -416,9 +416,9 @@
     "pts": 23,
     "zona": "playoff",
     "pos_fuente": 4,
-    "pos_ant_fuente": 5,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 1
+    "mov": 3
    },
    {
     "pos": 5,
@@ -434,9 +434,9 @@
     "pts": 23,
     "zona": "playoff",
     "pos_fuente": 5,
-    "pos_ant_fuente": 4,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -1
+    "mov": 0
    },
    {
     "pos": 6,
@@ -452,9 +452,9 @@
     "pts": 22,
     "zona": "playoff",
     "pos_fuente": 6,
-    "pos_ant_fuente": 7,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 1
+    "mov": -2
    },
    {
     "pos": 7,
@@ -470,7 +470,7 @@
     "pts": 21,
     "zona": "playoff",
     "pos_fuente": 7,
-    "pos_ant_fuente": 8,
+    "pos_ant_fuente": null,
     "es_vultur": false,
     "mov": 1
    },
@@ -488,7 +488,7 @@
     "pts": 20,
     "zona": "playoff",
     "pos_fuente": 8,
-    "pos_ant_fuente": 6,
+    "pos_ant_fuente": null,
     "es_vultur": false,
     "mov": -2
    },
@@ -506,9 +506,9 @@
     "pts": 18,
     "zona": "playoff",
     "pos_fuente": 9,
-    "pos_ant_fuente": 9,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": 1
    },
    {
     "pos": 10,
@@ -524,9 +524,9 @@
     "pts": 16,
     "zona": null,
     "pos_fuente": 10,
-    "pos_ant_fuente": 10,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": 3
    },
    {
     "pos": 11,
@@ -542,9 +542,9 @@
     "pts": 14,
     "zona": null,
     "pos_fuente": 11,
-    "pos_ant_fuente": 14,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 3
+    "mov": 1
    },
    {
     "pos": 12,
@@ -560,9 +560,9 @@
     "pts": 13,
     "zona": null,
     "pos_fuente": 12,
-    "pos_ant_fuente": 16,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 4
+    "mov": -1
    },
    {
     "pos": 13,
@@ -578,9 +578,9 @@
     "pts": 13,
     "zona": null,
     "pos_fuente": 13,
-    "pos_ant_fuente": 12,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -1
+    "mov": 1
    },
    {
     "pos": 14,
@@ -596,9 +596,9 @@
     "pts": 13,
     "zona": null,
     "pos_fuente": 14,
-    "pos_ant_fuente": 11,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -3
+    "mov": 5
    },
    {
     "pos": 15,
@@ -614,9 +614,9 @@
     "pts": 12,
     "zona": null,
     "pos_fuente": 15,
-    "pos_ant_fuente": 13,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -2
+    "mov": -6
    },
    {
     "pos": 16,
@@ -632,9 +632,9 @@
     "pts": 11,
     "zona": null,
     "pos_fuente": 16,
-    "pos_ant_fuente": 15,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -1
+    "mov": 1
    },
    {
     "pos": 17,
@@ -650,9 +650,9 @@
     "pts": 10,
     "zona": null,
     "pos_fuente": 17,
-    "pos_ant_fuente": 17,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -2
    },
    {
     "pos": 18,
@@ -668,9 +668,9 @@
     "pts": 8,
     "zona": null,
     "pos_fuente": 18,
-    "pos_ant_fuente": 18,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -2
    },
    {
     "pos": 19,
@@ -686,9 +686,9 @@
     "pts": 7,
     "zona": null,
     "pos_fuente": 19,
-    "pos_ant_fuente": 19,
+    "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
     "pos": 20,
@@ -704,7 +704,7 @@
     "pts": 7,
     "zona": null,
     "pos_fuente": 20,
-    "pos_ant_fuente": 20,
+    "pos_ant_fuente": null,
     "es_vultur": false,
     "mov": 0
    },
@@ -722,12 +722,12 @@
     "pts": 0,
     "zona": null,
     "pos_fuente": 21,
-    "pos_ant_fuente": 21,
+    "pos_ant_fuente": null,
     "es_vultur": false,
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-27T13:01:43+00:00",
+  "actualizado": "2026-11-27T14:01:45+00:00",
   "desde": "2026-11-25T21:38:48+00:00"
  },
  {
