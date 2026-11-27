@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-27T00:00:56+00:00",
+  "actualizado": "2026-11-27T01:01:02+00:00",
   "desde": "2026-11-25T21:38:12+00:00"
  },
  {
@@ -602,6 +602,24 @@
    },
    {
     "pos": 15,
+    "equipo": "Inter Regional",
+    "escudo": "https://media.virtualpronetwork.com/teamlogos/91a3faed7b6e3832dbdd812142af50d9_thumb.png",
+    "pj": 10,
+    "g": 3,
+    "e": 2,
+    "p": 5,
+    "gf": 11,
+    "gc": 17,
+    "dg": -6,
+    "pts": 11,
+    "zona": null,
+    "pos_fuente": 15,
+    "pos_ant_fuente": null,
+    "es_vultur": false,
+    "mov": 2
+   },
+   {
+    "pos": 16,
     "equipo": "Almirante Brown eSport",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/db38d5dc35f135378454e6bbbf47115d_thumb.png",
     "pj": 11,
@@ -613,13 +631,13 @@
     "dg": -4,
     "pts": 10,
     "zona": null,
-    "pos_fuente": 15,
+    "pos_fuente": 16,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": -1
+    "mov": -2
    },
    {
-    "pos": 16,
+    "pos": 17,
     "equipo": "Vidon Bar eSports CBA",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/27b0c7a61e70839d271282c4450f62fa_thumb.png",
     "pj": 11,
@@ -631,28 +649,10 @@
     "dg": -13,
     "pts": 10,
     "zona": null,
-    "pos_fuente": 16,
-    "pos_ant_fuente": null,
-    "es_vultur": false,
-    "mov": -1
-   },
-   {
-    "pos": 17,
-    "equipo": "Inter Regional",
-    "escudo": "https://media.virtualpronetwork.com/teamlogos/91a3faed7b6e3832dbdd812142af50d9_thumb.png",
-    "pj": 9,
-    "g": 2,
-    "e": 2,
-    "p": 5,
-    "gf": 10,
-    "gc": 17,
-    "dg": -7,
-    "pts": 8,
-    "zona": null,
     "pos_fuente": 17,
     "pos_ant_fuente": null,
     "es_vultur": false,
-    "mov": 0
+    "mov": -2
    },
    {
     "pos": 18,
@@ -712,13 +712,13 @@
     "pos": 21,
     "equipo": "Estudiantes Rio Cuarto",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/ee851ec2b77124a45601f284e67cc89f_thumb.png",
-    "pj": 11,
+    "pj": 12,
     "g": 0,
     "e": 0,
-    "p": 11,
+    "p": 12,
     "gf": 0,
-    "gc": 17,
-    "dg": -17,
+    "gc": 18,
+    "dg": -18,
     "pts": 0,
     "zona": null,
     "pos_fuente": 21,
@@ -727,7 +727,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-27T00:01:43+00:00",
+  "actualizado": "2026-11-27T01:01:38+00:00",
   "desde": "2026-11-25T21:38:48+00:00"
  },
  {
