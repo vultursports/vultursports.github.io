@@ -54,6 +54,15 @@
   "pais": "Argentina"
  },
  {
+  "idExterno": "Joaquinporta",
+  "nombreCompleto": "Joaquin porta",
+  "dorsal": 5,
+  "posicion": "MC",
+  "esDt": false,
+  "esSubDt": false,
+  "pais": "Argentina"
+ },
+ {
   "idExterno": "ByCrisMor09",
   "nombreCompleto": "Cris Moreira",
   "dorsal": 6,
