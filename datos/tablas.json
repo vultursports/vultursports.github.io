@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-27T03:01:33+00:00",
+  "actualizado": "2026-11-27T04:00:59+00:00",
   "desde": "2026-11-25T21:38:12+00:00"
  },
  {
@@ -542,12 +542,30 @@
     "pts": 13,
     "zona": null,
     "pos_fuente": 11,
-    "pos_ant_fuente": 15,
+    "pos_ant_fuente": 16,
     "es_vultur": false,
-    "mov": 4
+    "mov": 5
    },
    {
     "pos": 12,
+    "equipo": "Almirante Brown eSport",
+    "escudo": "https://media.virtualpronetwork.com/teamlogos/db38d5dc35f135378454e6bbbf47115d_thumb.png",
+    "pj": 12,
+    "g": 4,
+    "e": 1,
+    "p": 7,
+    "gf": 10,
+    "gc": 13,
+    "dg": -3,
+    "pts": 13,
+    "zona": null,
+    "pos_fuente": 12,
+    "pos_ant_fuente": 12,
+    "es_vultur": false,
+    "mov": 0
+   },
+   {
+    "pos": 13,
     "equipo": "COMPLICADOS SA",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/848bc88cd712f769faf350e0037a167b_thumb.png",
     "pj": 11,
@@ -559,13 +577,13 @@
     "dg": -10,
     "pts": 13,
     "zona": null,
-    "pos_fuente": 12,
+    "pos_fuente": 13,
     "pos_ant_fuente": 11,
     "es_vultur": false,
-    "mov": -1
+    "mov": -2
    },
    {
-    "pos": 13,
+    "pos": 14,
     "equipo": "Torque City",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/27ee269680415ce53624431b7538afc2_thumb.png",
     "pj": 12,
@@ -577,13 +595,13 @@
     "dg": -11,
     "pts": 12,
     "zona": null,
-    "pos_fuente": 13,
-    "pos_ant_fuente": 12,
+    "pos_fuente": 14,
+    "pos_ant_fuente": 13,
     "es_vultur": false,
     "mov": -1
    },
    {
-    "pos": 14,
+    "pos": 15,
     "equipo": "Almagro eSports",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/e28078b26c0858785807c7e80252636f_thumb.png",
     "pj": 10,
@@ -595,13 +613,13 @@
     "dg": -5,
     "pts": 11,
     "zona": null,
-    "pos_fuente": 14,
-    "pos_ant_fuente": 13,
+    "pos_fuente": 15,
+    "pos_ant_fuente": 14,
     "es_vultur": false,
     "mov": -1
    },
    {
-    "pos": 15,
+    "pos": 16,
     "equipo": "Inter Regional",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/91a3faed7b6e3832dbdd812142af50d9_thumb.png",
     "pj": 10,
@@ -613,28 +631,10 @@
     "dg": -6,
     "pts": 11,
     "zona": null,
-    "pos_fuente": 15,
-    "pos_ant_fuente": 14,
+    "pos_fuente": 16,
+    "pos_ant_fuente": 15,
     "es_vultur": false,
     "mov": -1
-   },
-   {
-    "pos": 16,
-    "equipo": "Almirante Brown eSport",
-    "escudo": "https://media.virtualpronetwork.com/teamlogos/db38d5dc35f135378454e6bbbf47115d_thumb.png",
-    "pj": 11,
-    "g": 3,
-    "e": 1,
-    "p": 7,
-    "gf": 9,
-    "gc": 13,
-    "dg": -4,
-    "pts": 10,
-    "zona": null,
-    "pos_fuente": 16,
-    "pos_ant_fuente": 17,
-    "es_vultur": false,
-    "mov": 1
    },
    {
     "pos": 17,
@@ -650,9 +650,9 @@
     "pts": 10,
     "zona": null,
     "pos_fuente": 17,
-    "pos_ant_fuente": 16,
+    "pos_ant_fuente": 17,
     "es_vultur": false,
-    "mov": -1
+    "mov": 0
    },
    {
     "pos": 18,
@@ -676,13 +676,13 @@
     "pos": 19,
     "equipo": "Espanyol Barcelona fc",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/867e72f3228547042ea3d51586a51766_thumb.png",
-    "pj": 11,
+    "pj": 12,
     "g": 1,
     "e": 4,
-    "p": 6,
+    "p": 7,
     "gf": 4,
-    "gc": 9,
-    "dg": -5,
+    "gc": 10,
+    "dg": -6,
     "pts": 7,
     "zona": null,
     "pos_fuente": 19,
@@ -727,7 +727,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-27T03:02:10+00:00",
+  "actualizado": "2026-11-27T04:01:35+00:00",
   "desde": "2026-11-25T21:38:48+00:00"
  },
  {
