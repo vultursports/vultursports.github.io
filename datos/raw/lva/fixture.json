@@ -4611,6 +4611,24 @@
    }
   },
   {
+   "id": "059ae8f5-1ee2-414f-835f-57e53af6f6c1",
+   "stage": "Cuartos de Final (Ida)",
+   "match_date": "2026-11-27T02:00:00+00:00",
+   "status": "approved",
+   "home_goals": 0,
+   "away_goals": 1,
+   "home_team": {
+    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
+    "name": "LA BASE",
+    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
+   },
+   "away_team": {
+    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
+    "name": "Sequence FC",
+    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
+   }
+  },
+  {
    "id": "aeb6082e-1dbb-4366-869c-1a9618b78479",
    "stage": "Cuartos de Final (Ida)",
    "match_date": "2026-11-27T02:00:00+00:00",
@@ -4662,24 +4680,6 @@
     "id": "40d13f8b-fb72-4642-947b-c8e3c84fe326",
     "name": "Virge Nes",
     "logo_url": "https://i.ibb.co/Fk0TVfYR/logos-1794211606552.png"
-   }
-  },
-  {
-   "id": "059ae8f5-1ee2-414f-835f-57e53af6f6c1",
-   "stage": "Cuartos de Final (Ida)",
-   "match_date": "2026-11-27T02:00:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
-   "away_goals": 0,
-   "home_team": {
-    "id": "06ad382d-b310-4173-a170-c7056e6cbbed",
-    "name": "LA BASE",
-    "logo_url": "https://i.ibb.co/k6gDMgKF/Whats-App-Image-2026-10-21-at-4-28-41-PM.jpg"
-   },
-   "away_team": {
-    "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
-    "name": "Sequence FC",
-    "logo_url": "https://i.ibb.co/mrcxqbMS/logos-1793401259966.png"
    }
   },
   {
@@ -4740,8 +4740,8 @@
    "id": "cce2a71a-6a82-4976-95a9-2224b08a663b",
    "stage": "Cuartos de Final (Vuelta)",
    "match_date": "2026-11-27T02:30:00+00:00",
-   "status": "scheduled",
-   "home_goals": 0,
+   "status": "approved",
+   "home_goals": 1,
    "away_goals": 0,
    "home_team": {
     "id": "06bfb7d8-4704-4f4f-b7e3-e4c37c2ae528",
