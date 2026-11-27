@@ -43147,15 +43147,16 @@
    "nombre": "Claypole eSp",
    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-808-1793220934143.webp"
   },
-  "gf": null,
-  "gc": null,
-  "estado": "programado",
+  "gf": 1,
+  "gc": 0,
+  "estado": "finalizado",
   "url_origen": "https://vpugvirtualprouruguaygaming.com/partidos/702",
   "temporada": {
    "clave": "vpug-7-3",
    "nombre": "Tercera División 2026 T1"
   },
-  "stats": []
+  "stats": [],
+  "equipo_stats": null
  },
  {
   "id": "vpug-711",
