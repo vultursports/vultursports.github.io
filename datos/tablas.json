@@ -334,7 +334,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-27T10:01:00+00:00",
+  "actualizado": "2026-11-27T11:01:04+00:00",
   "desde": "2026-11-25T21:38:12+00:00"
  },
  {
@@ -404,6 +404,24 @@
    },
    {
     "pos": 4,
+    "equipo": "Flandria",
+    "escudo": "https://media.virtualpronetwork.com/teamlogos/d9db5c6220ee9b24ce71118a4ed934f9_thumb.png",
+    "pj": 11,
+    "g": 7,
+    "e": 2,
+    "p": 2,
+    "gf": 19,
+    "gc": 7,
+    "dg": 12,
+    "pts": 23,
+    "zona": "playoff",
+    "pos_fuente": 4,
+    "pos_ant_fuente": 5,
+    "es_vultur": false,
+    "mov": 1
+   },
+   {
+    "pos": 5,
     "equipo": "Dardoneta",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/6e85bee4fc2ed2182a3f74371d9987d7_thumb.png",
     "pj": 12,
@@ -415,13 +433,13 @@
     "dg": 5,
     "pts": 23,
     "zona": "playoff",
-    "pos_fuente": 4,
+    "pos_fuente": 5,
     "pos_ant_fuente": 4,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
-    "pos": 5,
+    "pos": 6,
     "equipo": "Dream Team UY",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/04e7ded69bee611c0ffffbbfc66110e4_thumb.png",
     "pj": 11,
@@ -433,13 +451,13 @@
     "dg": 8,
     "pts": 22,
     "zona": "playoff",
-    "pos_fuente": 5,
+    "pos_fuente": 6,
     "pos_ant_fuente": 7,
     "es_vultur": false,
-    "mov": 2
+    "mov": 1
    },
    {
-    "pos": 6,
+    "pos": 7,
     "equipo": "Villa Die",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/e9c9df9eb75c46c8deafe7a544d946a7_thumb.png",
     "pj": 11,
@@ -451,28 +469,10 @@
     "dg": 9,
     "pts": 21,
     "zona": "playoff",
-    "pos_fuente": 6,
+    "pos_fuente": 7,
     "pos_ant_fuente": 8,
     "es_vultur": false,
-    "mov": 2
-   },
-   {
-    "pos": 7,
-    "equipo": "Flandria",
-    "escudo": "https://media.virtualpronetwork.com/teamlogos/d9db5c6220ee9b24ce71118a4ed934f9_thumb.png",
-    "pj": 10,
-    "g": 6,
-    "e": 2,
-    "p": 2,
-    "gf": 18,
-    "gc": 7,
-    "dg": 11,
-    "pts": 20,
-    "zona": "playoff",
-    "pos_fuente": 7,
-    "pos_ant_fuente": 5,
-    "es_vultur": false,
-    "mov": -2
+    "mov": 1
    },
    {
     "pos": 8,
@@ -530,6 +530,24 @@
    },
    {
     "pos": 11,
+    "equipo": "Almagro eSports",
+    "escudo": "https://media.virtualpronetwork.com/teamlogos/e28078b26c0858785807c7e80252636f_thumb.png",
+    "pj": 11,
+    "g": 4,
+    "e": 2,
+    "p": 5,
+    "gf": 12,
+    "gc": 16,
+    "dg": -4,
+    "pts": 14,
+    "zona": null,
+    "pos_fuente": 11,
+    "pos_ant_fuente": 14,
+    "es_vultur": false,
+    "mov": 3
+   },
+   {
+    "pos": 12,
     "equipo": "Villa San Carlos",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/258db208f7a8f1265bd6571dfe4ee2c3_thumb.png",
     "pj": 11,
@@ -541,13 +559,13 @@
     "dg": -2,
     "pts": 13,
     "zona": null,
-    "pos_fuente": 11,
+    "pos_fuente": 12,
     "pos_ant_fuente": 16,
     "es_vultur": false,
-    "mov": 5
+    "mov": 4
    },
    {
-    "pos": 12,
+    "pos": 13,
     "equipo": "Almirante Brown eSport",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/db38d5dc35f135378454e6bbbf47115d_thumb.png",
     "pj": 12,
@@ -559,13 +577,13 @@
     "dg": -3,
     "pts": 13,
     "zona": null,
-    "pos_fuente": 12,
+    "pos_fuente": 13,
     "pos_ant_fuente": 12,
     "es_vultur": false,
-    "mov": 0
+    "mov": -1
    },
    {
-    "pos": 13,
+    "pos": 14,
     "equipo": "COMPLICADOS SA",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/848bc88cd712f769faf350e0037a167b_thumb.png",
     "pj": 11,
@@ -577,13 +595,13 @@
     "dg": -10,
     "pts": 13,
     "zona": null,
-    "pos_fuente": 13,
+    "pos_fuente": 14,
     "pos_ant_fuente": 11,
     "es_vultur": false,
-    "mov": -2
+    "mov": -3
    },
    {
-    "pos": 14,
+    "pos": 15,
     "equipo": "Torque City",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/27ee269680415ce53624431b7538afc2_thumb.png",
     "pj": 12,
@@ -595,40 +613,22 @@
     "dg": -11,
     "pts": 12,
     "zona": null,
-    "pos_fuente": 14,
+    "pos_fuente": 15,
     "pos_ant_fuente": 13,
     "es_vultur": false,
-    "mov": -1
-   },
-   {
-    "pos": 15,
-    "equipo": "Almagro eSports",
-    "escudo": "https://media.virtualpronetwork.com/teamlogos/e28078b26c0858785807c7e80252636f_thumb.png",
-    "pj": 10,
-    "g": 3,
-    "e": 2,
-    "p": 5,
-    "gf": 11,
-    "gc": 16,
-    "dg": -5,
-    "pts": 11,
-    "zona": null,
-    "pos_fuente": 15,
-    "pos_ant_fuente": 14,
-    "es_vultur": false,
-    "mov": -1
+    "mov": -2
    },
    {
     "pos": 16,
     "equipo": "Inter Regional",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/91a3faed7b6e3832dbdd812142af50d9_thumb.png",
-    "pj": 10,
+    "pj": 11,
     "g": 3,
     "e": 2,
-    "p": 5,
+    "p": 6,
     "gf": 11,
-    "gc": 17,
-    "dg": -6,
+    "gc": 18,
+    "dg": -7,
     "pts": 11,
     "zona": null,
     "pos_fuente": 16,
@@ -694,13 +694,13 @@
     "pos": 20,
     "equipo": "Huracan eSports",
     "escudo": "https://media.virtualpronetwork.com/teamlogos/02c39e76634eb6762bcb84338823940e_thumb.png",
-    "pj": 10,
+    "pj": 11,
     "g": 2,
     "e": 1,
-    "p": 7,
+    "p": 8,
     "gf": 8,
-    "gc": 16,
-    "dg": -8,
+    "gc": 17,
+    "dg": -9,
     "pts": 7,
     "zona": null,
     "pos_fuente": 20,
@@ -727,7 +727,7 @@
     "mov": 0
    }
   ],
-  "actualizado": "2026-11-27T10:01:35+00:00",
+  "actualizado": "2026-11-27T11:01:41+00:00",
   "desde": "2026-11-25T21:38:48+00:00"
  },
  {
