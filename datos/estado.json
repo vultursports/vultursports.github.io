@@ -1,35 +1,35 @@
 {
  "ligas": {
   "vpug": {
-   "intento": "2026-11-28T08:00:40+00:00",
-   "ok": "2026-11-28T08:01:21+00:00",
+   "intento": "2026-11-28T09:00:46+00:00",
+   "ok": "2026-11-28T09:01:28+00:00",
    "error": null,
    "fallos_seguidos": 0,
    "partidos": 19,
    "tablas": 1
   },
   "vpn": {
-   "intento": "2026-11-28T08:01:21+00:00",
-   "ok": "2026-11-28T08:01:58+00:00",
+   "intento": "2026-11-28T09:01:28+00:00",
+   "ok": "2026-11-28T09:02:03+00:00",
    "error": null,
    "fallos_seguidos": 0,
    "partidos": 179,
    "tablas": 1
   },
   "lva": {
-   "intento": "2026-11-28T08:01:58+00:00",
-   "ok": "2026-11-28T07:02:17+00:00",
-   "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://ligavirtualargentina.com/fixture\", waiting until \"networkidle\"\n",
-   "fallos_seguidos": 1,
+   "intento": "2026-11-28T09:02:03+00:00",
+   "ok": "2026-11-28T09:02:13+00:00",
+   "error": null,
+   "fallos_seguidos": 0,
    "partidos": 170,
    "tablas": 0
   }
  },
- "sync": "2026-11-28T08:02:34+00:00",
+ "sync": "2026-11-28T09:02:16+00:00",
  "fuentes": {
   "ea": {
-   "intento": "2026-11-28T08:02:29+00:00",
-   "ok": "2026-11-28T08:02:34+00:00",
+   "intento": "2026-11-28T09:02:13+00:00",
+   "ok": "2026-11-28T09:02:16+00:00",
    "error": null,
    "fallos_seguidos": 0,
    "partidos": 15

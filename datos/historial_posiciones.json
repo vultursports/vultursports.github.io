@@ -218,6 +218,31 @@
     "familiadefensor": 20
    },
    "pj_max": 19
+  },
+  "2026-11-28": {
+   "pos": {
+    "pueblomanya": 1,
+    "infinitx": 2,
+    "allboyscantera": 3,
+    "almacriolla": 4,
+    "atorrantesfc": 5,
+    "attlasesports": 6,
+    "vultursports": 7,
+    "vidonbarcba": 8,
+    "lablancafc": 9,
+    "celestiales": 10,
+    "nhp20": 11,
+    "almirantebrown": 12,
+    "jovatosjuniors": 13,
+    "deportivofumeta": 14,
+    "interiorsad": 15,
+    "lmjesports": 16,
+    "familiatorque": 17,
+    "claypoleesp": 18,
+    "cacolegiales": 19,
+    "familiadefensor": 20
+   },
+   "pj_max": 19
   }
  },
  "lva-1d8d2b5c": {
@@ -454,6 +479,31 @@
    "pj_max": 19
   },
   "2026-11-27": {
+   "pos": {
+    "cerritoxxi": 1,
+    "ricurafc": 2,
+    "villasancarlos": 3,
+    "deportivocentro": 4,
+    "unitedmitofc": 5,
+    "attlasesports": 6,
+    "sudaesports": 7,
+    "motorpsico": 8,
+    "marplafc": 9,
+    "celtadelvino": 10,
+    "acassusoesports": 11,
+    "interregional": 12,
+    "vultursports": 13,
+    "losandesfc": 14,
+    "clubatlticopelulga": 15,
+    "bocajuniors": 16,
+    "realenvido": 17,
+    "predatorsfc": 18,
+    "claypoleesports": 19,
+    "unincordillera": 20
+   },
+   "pj_max": 19
+  },
+  "2026-11-28": {
    "pos": {
     "cerritoxxi": 1,
     "ricurafc": 2,
