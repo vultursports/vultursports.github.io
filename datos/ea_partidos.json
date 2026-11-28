@@ -6427,5 +6427,277 @@
     "nota": 6.66
    }
   }
+ },
+ "218750837580087": {
+  "id": "218750837580087",
+  "fecha_utc": "2026-11-28T04:08:09Z",
+  "gf": 1,
+  "gc": 0,
+  "goles_jugadores": [
+   1,
+   0
+  ],
+  "goles_recibidos": [
+   1,
+   0
+  ],
+  "minutos": 92,
+  "abandono": false,
+  "rival": {
+   "nombre": "COBRELOAeSPORTS",
+   "ea_id": "1481032"
+  },
+  "jugadores": [
+   {
+    "alias": "VSP-Ch4cKaL",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 15,
+    "pases_int": 20,
+    "entradas": 2,
+    "entradas_int": 6,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.9,
+    "segundos": 5533,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Txrooooo",
+    "pos": "forward",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 8,
+    "pases_int": 9,
+    "entradas": 1,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.3,
+    "segundos": 5533,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "PipaMaidana",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 15,
+    "pases_int": 16,
+    "entradas": 1,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 6.8,
+    "segundos": 5533,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "joaquinporta",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 22,
+    "pases_int": 26,
+    "entradas": 2,
+    "entradas_int": 2,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.3,
+    "segundos": 5533,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Zk__godd",
+    "pos": "midfielder",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 10,
+    "pases_int": 17,
+    "entradas": 1,
+    "entradas_int": 5,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.8,
+    "segundos": 5533,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Bsperanza93",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 25,
+    "pases_int": 27,
+    "entradas": 0,
+    "entradas_int": 0,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.1,
+    "segundos": 5533,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "xRagnar-_zZ",
+    "pos": "forward",
+    "goles": 1,
+    "asistencias": 0,
+    "tiros": 1,
+    "pases": 10,
+    "pases_int": 11,
+    "entradas": 0,
+    "entradas_int": 8,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.2,
+    "segundos": 5533,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "MARCHMELLOYT",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 5,
+    "pases_int": 6,
+    "entradas": 3,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.7,
+    "segundos": 5533,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "Corona_ruso",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 0,
+    "tiros": 0,
+    "pases": 11,
+    "pases_int": 16,
+    "entradas": 1,
+    "entradas_int": 6,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.8,
+    "segundos": 5533,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   {
+    "alias": "tiro_loko12",
+    "pos": "defender",
+    "goles": 0,
+    "asistencias": 1,
+    "tiros": 0,
+    "pases": 9,
+    "pases_int": 13,
+    "entradas": 2,
+    "entradas_int": 4,
+    "atajadas": 0,
+    "rojas": 0,
+    "mom": false,
+    "nota": 7.5,
+    "segundos": 5533,
+    "atajadas_tipo": {},
+    "eventos": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  ],
+  "equipo": {
+   "nosotros": {
+    "tiros": 1,
+    "pases": 130,
+    "pases_int": 161,
+    "entradas": 13,
+    "entradas_int": 39,
+    "atajadas": 0,
+    "nota": 7.24
+   },
+   "rival": {
+    "tiros": 4,
+    "pases": 139,
+    "pases_int": 174,
+    "entradas": 8,
+    "entradas_int": 21,
+    "atajadas": 0,
+    "nota": 6.55
+   }
+  }
  }
 }
