@@ -87,13 +87,13 @@
     "nombre": "ALMA CRIOLLA",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/pedido-723-1793189228356.webp"
    },
-   "pj": 12,
+   "pj": 13,
    "g": 8,
    "e": 3,
-   "p": 1,
+   "p": 2,
    "gf": 21,
-   "gc": 5,
-   "dg": 16,
+   "gc": 6,
+   "dg": 15,
    "descuento": 0,
    "pts": 27,
    "zona": "REDUCIDO"
@@ -245,6 +245,24 @@
   {
    "posicion": 13,
    "club": {
+    "id": 162,
+    "nombre": "Interior SAD",
+    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-162-1793991899619.webp"
+   },
+   "pj": 12,
+   "g": 6,
+   "e": 1,
+   "p": 5,
+   "gf": 8,
+   "gc": 11,
+   "dg": -3,
+   "descuento": 0,
+   "pts": 19,
+   "zona": null
+  },
+  {
+   "posicion": 14,
+   "club": {
     "id": 137,
     "nombre": "JOVATOS JUNIORS",
     "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-137-1793991216536.webp"
@@ -261,7 +279,7 @@
    "zona": null
   },
   {
-   "posicion": 14,
+   "posicion": 15,
    "club": {
     "id": 135,
     "nombre": "DeportivoFumeta",
@@ -274,24 +292,6 @@
    "gf": 11,
    "gc": 13,
    "dg": -2,
-   "descuento": 0,
-   "pts": 16,
-   "zona": null
-  },
-  {
-   "posicion": 15,
-   "club": {
-    "id": 162,
-    "nombre": "Interior SAD",
-    "escudo": "https://nkqjsmxxmrodientlnlh.supabase.co/storage/v1/object/public/escudos/club-162-1793991899619.webp"
-   },
-   "pj": 11,
-   "g": 5,
-   "e": 1,
-   "p": 5,
-   "gf": 7,
-   "gc": 11,
-   "dg": -4,
    "descuento": 0,
    "pts": 16,
    "zona": null
