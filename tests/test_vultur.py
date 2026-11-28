@@ -57,10 +57,86 @@ class LecturaVPUG(unittest.TestCase):
         self.assertEqual(vpug._stat(j, 8)["alias"], "Corona_ruso")
 
 
+class WOdeVPUG(unittest.TestCase):
+    """VPUG no marca los W.O.: los carga como partidos jugados 1-0 (casos reales de nov. 2026:
+    Claypole eSp, CA Colegiales y Familia Torque, dados de baja)."""
+
+    def sincronizar(self, previos=None):
+        from contextlib import contextmanager
+        from datetime import datetime, timedelta, timezone
+        from unittest import mock
+        ahora = datetime.now(timezone.utc)
+        f = lambda d: (ahora + timedelta(days=d)).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+        eq = lambda i: {"id": i, "nombre": f"Equipo {i}", "escudo": None}
+        par = lambda pid, loc, vis, dias, jugado, gl=None, gv=None: {
+            "id": pid, "jornada": pid, "fase": "LIGA", "fechaHora": f(dias), "local": eq(loc), "visitante": eq(vis),
+            "golesLocal": gl, "golesVisitante": gv, "jugado": jugado}
+        partidos = [
+            par(1, 141, 138, -1, True, 1, 0),   # rival de baja (ya no tiene pendientes), sin datos: W.O.
+            par(2, 141, 145, 10, True, 1, 0),   # cargado por adelantado: W.O.
+            par(3, 141, 150, -1, True, 2, 1),   # jugado de verdad, con datos
+            par(4, 141, 160, -1, True, 1, 0),   # sin datos todavía, rival con pendientes: no es W.O.
+            par(5, 141, 150, 5, False),         # nos queda un partido
+            par(6, 150, 160, 5, False),
+        ]
+        detalle = {1: {}, 4: {},
+                   3: {"figura": {"id": 7}, "local": {"jugadores": [{"id": 7, "idExterno": "X", "goles": 2}]}, "visitante": {}}}
+        tabla = {"division": {"nombre": "Tercera"}, "temporada": {"nombre": "2026 T1"}, "filas": [], "formato": {}}
+
+        def pedir(c, url):
+            if "/rankings" in url:
+                return {}
+            if "/clubes/" in url:
+                return {}
+            if "/partidos?" in url:
+                return {"temporada": {"nombre": "2026 · Temporada 1"}, "jornadas": [{"partidos": partidos}]}
+            pid = int(url.rsplit("/", 1)[1])
+            return {"figura": None, "ea": None, "local": {}, "visitante": {}, **detalle[pid]}
+
+        @contextmanager
+        def cliente():
+            yield mock.MagicMock(headers={})
+
+        with mock.patch.object(vpug, "cliente", cliente), mock.patch.object(vpug, "pedir", pedir), \
+                mock.patch.object(vpug, "_login", lambda c, api: "tok"), mock.patch.object(vpug, "guardar_raw"), \
+                mock.patch.object(vpug, "temporada_y_division", lambda *a: (7, 3, tabla)):
+            res = vpug.sincronizar({"api_base": "x", "club_id": 141, "temporada_id": 7, "division_id": 3}, {}, previos or {})
+        return {p["id"]: p for p in res["partidos"]}
+
+    def test_reconoce_los_wo(self):
+        ps = self.sincronizar()
+        self.assertEqual(ps["vpug-1"]["estado"], "wo")
+        self.assertEqual(ps["vpug-2"]["estado"], "wo")
+        self.assertEqual((ps["vpug-2"]["gf"], ps["vpug-2"]["gc"]), (1, 0))  # el resultado es el de la liga
+        self.assertEqual(ps["vpug-3"]["estado"], "finalizado")
+        self.assertEqual(ps["vpug-3"]["stats"][0]["goles"], 2)
+        self.assertEqual(ps["vpug-4"]["estado"], "finalizado")
+
+    def test_un_wo_queda_marcado(self):
+        ps = self.sincronizar()
+        # Un partido que ya quedó como W.O. se conserva aunque el fixture ya no muestre al rival de baja
+        ps2 = self.sincronizar(previos={**ps, "vpug-4": {**ps["vpug-4"], "estado": "wo"}})
+        self.assertEqual(ps2["vpug-4"]["estado"], "wo")
+
+
 class UnionDeNombres(unittest.TestCase):
     def test_clave_ignora_mayusculas_signos_y_acentos(self):
         self.assertEqual(jugadores.clave("VSP-Ch4cKaL"), jugadores.clave("VSP-ch4cKaL"))
         self.assertEqual(jugadores.clave("Fc Echeverría"), jugadores.clave("Fc Echeverria"))
+
+    def test_jugador_por_nombre_real(self):
+        # Los goleadores de VPUG publican el nombre ("ARIELORTEGA"), no el gamertag
+        plantel = [{"idExterno": "VSP-Ch4cKaL", "nombreCompleto": "ARIELORTEGA"}]
+        p = {"liga": "lva", "resultado": "g", "fecha_utc": "2026-11-01T00:00:00Z",
+             "stats": [{"alias": "Otro", "nombre": "Juan Perez"}, {"alias": "Tercero", "nombre": "Juan Perez"},
+                       {"alias": "Solo", "nombre": "Pedro Gomez"}]}
+        js = jugadores.armar([p], plantel, {})["jugadores"]
+        buscar = jugadores.buscador(js)
+        self.assertEqual(buscar("ARIELORTEGA")["alias"], "VSP-Ch4cKaL")
+        self.assertEqual(buscar("vsp-ch4ckal")["alias"], "VSP-Ch4cKaL")
+        self.assertEqual(buscar("Pedro Gómez")["alias"], "Solo")
+        self.assertIsNone(buscar("Juan Perez"))  # dos jugadores con el mismo nombre: no se adivina
+        self.assertIsNone(buscar("Nadie"))
 
     def test_rivales(self):
         self.assertTrue(rivales._puede_unir({"San Miguel eSports"}, {"San Miguel eSp"}, 111))   # mismo club, escudo rediseñado

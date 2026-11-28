@@ -139,6 +139,23 @@ class EscenariosWeb(unittest.TestCase):
             self.assertIn("Ganamos WO", e.html("/calendario/"))
             self.assertIn("Ganamos WO", e.html("/"))
 
+    def test_wo_adelantado_queda_en_su_fecha(self):
+        # VPUG y la LVA cargan por adelantado los partidos de un equipo dado de baja
+        ahora = datetime.now(AR)
+        with Escenario() as e:
+            ps = e.leer("partidos.json")
+            ps.append(partido("vpug-test-woad", ahora + timedelta(days=10), liga="vpug", gf=1, gc=0, estado="wo", rival="Dado De Baja"))
+            e.guardar("partidos.json", ps)
+            e.generar()
+            inicio = e.html("/")
+            recientes = inicio.split('id="t-recientes"', 1)[1].split("</ul>", 1)[0]
+            self.assertNotIn("Dado De Baja", recientes)
+            cal = e.html("/calendario/")
+            proximos = cal.split('id="lista-proximos"', 1)[1].split('id="lista-jugados"', 1)[0]
+            self.assertIn("Dado De Baja", proximos)
+            self.assertIn("Por W.O.", proximos)
+            self.assertIn("Victoria por W.O.", e.html("/partido/vpug-test-woad/"))
+
     def test_jugador_entra_y_sale_de_un_top(self):
         with Escenario() as e:
             dest = e.leer("destacados_vpn.json", [])

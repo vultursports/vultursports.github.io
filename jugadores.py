@@ -56,7 +56,7 @@ def armar(partidos: list, plantel_vpug: list, ajustes: dict) -> dict:
 
     def obtener(k):
         if k not in jug:
-            jug[k] = {"id": k, "variantes": Counter(), "por_liga": {l: _vacio() for l in LIGAS},
+            jug[k] = {"id": k, "variantes": Counter(), "nombres": set(), "por_liga": {l: _vacio() for l in LIGAS},
                       "total": _vacio(), "posiciones": Counter(), "partidos": []}
         return jug[k]
 
@@ -72,6 +72,8 @@ def armar(partidos: list, plantel_vpug: list, ajustes: dict) -> dict:
                 continue
             j = obtener(k)
             j["variantes"][s["alias"].strip()] += 1
+            if s.get("nombre"):
+                j["nombres"].add(clave(s["nombre"]))
             if s.get("posicion"):
                 j["posiciones"][s["posicion"]] += 1
             nota = s.get("rating")
@@ -101,6 +103,8 @@ def armar(partidos: list, plantel_vpug: list, ajustes: dict) -> dict:
             "id": k,
             "alias": nombres.get(k, alias),
             "nombre_real": (f.get("nombreCompleto") or "").strip(),
+            # Nombres reales con que lo publica alguna liga (para reconocerlo también por el nombre)
+            "nombres_clave": sorted((j["nombres"] | {clave(f.get("nombreCompleto"))}) - {""}),
             "dorsal": f.get("dorsal"),
             # Posición: la que más jugó en sus últimos 20 partidos; si no tiene, la del plantel de VPUG
             "posicion": _posicion_reciente(j["partidos"]) or f.get("posicion"),
@@ -113,6 +117,27 @@ def armar(partidos: list, plantel_vpug: list, ajustes: dict) -> dict:
             "pagina": f"/jugador/{k}/",
         })
     return {"jugadores": salida}
+
+
+def buscador(js: list, ajustes: dict | None = None):
+    """Encuentra a uno de nuestros jugadores por su alias o, si no aparece, por su nombre real: algunas
+    ligas publican el nombre en vez del gamertag (los goleadores de VPUG dicen "ARIELORTEGA", no
+    "VSP-Ch4cKaL"). Un nombre que comparten dos jugadores no se usa."""
+    unir = {clave(k): clave(v) for k, v in ((ajustes or {}).get("unir") or {}).items()}
+    por_id = {j["id"]: j for j in js}
+    por_nombre: dict[str, set] = {}
+    for j in js:
+        for n in j.get("nombres_clave") or []:
+            por_nombre.setdefault(n, set()).add(j["id"])
+
+    def buscar(texto: str):
+        k = clave(texto)
+        k = unir.get(k, k)
+        if k in por_id:
+            return por_id[k]
+        ids = por_nombre.get(k) or set()
+        return por_id[next(iter(ids))] if len(ids) == 1 else None
+    return buscar
 
 
 # Códigos unificados entre ligas (VPN usa PO/LTD/LTI) y su nombre para mostrar

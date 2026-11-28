@@ -466,7 +466,10 @@ def main():
         mismo_dia = sig is not None and sig["noche"] == p["noche"] and sig["dt"] > p["dt"]
         p["fin_tarjeta"] = sig["dt"] if mismo_dia else p["dt"] + EN_JUEGO
     proximos = [p for p in partidos if p["resultado"] is None and p["fin_tarjeta"] > ahora]
-    jugados = [p for p in partidos if p["resultado"]][::-1]
+    # W.O. que la liga ya cargó por adelantado (equipo dado de baja): no son resultados recientes
+    # hasta que llegue su fecha; mientras tanto se ven en el calendario, en su noche, como "Por W.O.".
+    wo_adelantados = [p for p in partidos if p["resultado"] and p["dt"] > ahora]
+    jugados = [p for p in partidos if p["resultado"] and p["dt"] <= ahora][::-1]
     # Ya se jugaron pero la liga todavía no cargó (o no aprobó) el resultado: siguen en el
     # calendario, en "Jugados", con un "?" hasta que aparezca el marcador.
     sin_resultado = [p for p in partidos if p["resultado"] is None and p["fin_tarjeta"] <= ahora]
@@ -583,14 +586,14 @@ def main():
     # (puesto y valor tal cual los muestra la liga; acá no se calcula nada)
     NOMBRE_TOP = {"goles": "Goleadores", "asistencias": "Asistencias", "nota": "Mejor valoración",
                   "vallas": "Vallas invictas", "vallas_def": "Vallas invictas (defensa)", "mvp": "MVP"}
-    unir_alias = {jug_mod.clave(k): jug_mod.clave(v) for k, v in (ajustes.get("unir") or {}).items()}
+    buscar_jugador = jug_mod.buscador(js, ajustes)
     por_jugador = {}
     for k in ["vpn", "lva", "vpug"]:
         if k not in ligas:
             continue
         for d in leer(f"destacados_{k}.json", []):
-            jid = unir_alias.get(jug_mod.clave(d["alias"]), jug_mod.clave(d["alias"]))
-            j = {x["id"]: x for x in js}.get(jid)
+            j = buscar_jugador(d["alias"])
+            jid = j["id"] if j else jug_mod.clave(d["alias"])
             if d["stat"] == "vallas" and k == "vpn":
                 d = {**d, "stat_txt": "Vallas invictas (arquero)"}
             fila = por_jugador.setdefault(jid, {"j": j or {"alias": d["alias"], "dorsal": None, "pagina": None}, "tops": []})
@@ -622,10 +625,9 @@ def main():
         grupo.append(p)
     cerrar_grupo()
     for j in js:
-        j["sanciones"] = [s for s in sanciones if jug_mod.clave(s["jugador"]) == j["id"]]
+        j["sanciones"] = [s for s in sanciones if (buscar_jugador(s["jugador"]) or {}).get("id") == j["id"]]
 
     # Cada sanción vigente se asigna al partido en que se cumple
-    pagina_jugador = {j["id"]: j["pagina"] for j in js}
     ficha_de = {j["id"]: j for j in js}
 
     # Formación: VPN la publica en cada partido. La LVA y VPUG no la publican: se calcula con las
@@ -649,11 +651,11 @@ def main():
         if not destino:
             destino = next((p for p in proximos if p["liga"] == s["liga"] and p["competencia"] == s["competencia"]), None)
         if destino:
-            destino["sancionados"].append({**s, "pagina": pagina_jugador.get(jug_mod.clave(s["jugador"]))})
+            destino["sancionados"].append({**s, "pagina": (buscar_jugador(s["jugador"]) or {}).get("pagina")})
 
     # Forma reciente: últimos 5 resultados de Vultur en cada competencia
     forma = {}
-    for p in sorted((x for x in partidos if x["resultado"]), key=lambda x: x["fecha_utc"]):
+    for p in sorted((x for x in partidos if x["resultado"] and x["dt"] <= ahora), key=lambda x: x["fecha_utc"]):
         forma.setdefault(p.get("competencia_id"), []).append(p)
     forma = {k: v[-5:] for k, v in forma.items()}
     for t in tablas:
@@ -858,7 +860,7 @@ def main():
                lista_rivales=lista_rivales,
                og_imagen=f"{url_sitio}og.png?v={og_version}", og_desc=og_desc, url_sitio=url_sitio, ligas=ligas, tablas=tablas, proximo=proximo,
                semana=agrupar(semana), recientes=jugados[:5],
-               cal_proximos=agrupar(proximos), cal_jugados=agrupar(cal_jugados),
+               cal_proximos=agrupar(sorted(proximos + wo_adelantados, key=lambda p: p["dt"])),cal_jugados=agrupar(cal_jugados),
                sync_txt=sync_txt, hoy_noche=hoy_noche,
                ambitos=ambitos, sin_partidos=sin_partidos,
                ligas_en_uso=[l for l in ligas.values() if any(p["liga"] == l["clave"] for p in partidos)])

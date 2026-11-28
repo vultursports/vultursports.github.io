@@ -66,6 +66,14 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
             fixture = pedir(c, f"{api}/partidos?temporadaId={t}&divisionId={d}")
             mios = [p for j in fixture["jornadas"] for p in j["partidos"]
                     if club in (p["local"]["id"], p["visitante"]["id"])]
+            # Partidos sin resultado de cada equipo. Un equipo dado de baja ya no tiene ninguno (VPUG le
+            # carga todos los que faltan 1-0 para el rival) mientras nosotros todavía tenemos.
+            pendientes: dict = {}
+            for j in fixture["jornadas"]:
+                for x in j["partidos"]:
+                    for eq in ((x.get("local") or {}).get("id"), (x.get("visitante") or {}).get("id")):
+                        pendientes[eq] = pendientes.get(eq, 0) + (0 if x.get("jugado") else 1)
+            ahora = datetime.now(timezone.utc)
             for m in mios:
                 local = m["local"]["id"] == club
                 rival = m["visitante"] if local else m["local"]
@@ -88,10 +96,19 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                     "temporada": {"clave": comp_id, "nombre": f"{nombre} {fixture['temporada']['nombre'].replace('·', '').replace('  ', ' ').replace('Temporada ', 'T')}"},
                     "stats": [],
                 }
-                previo = partidos_previos.get(pid)
+                previo = partidos_previos.get(pid) or {}
+                fecha = datetime.fromisoformat(p["fecha_utc"].replace("Z", "+00:00"))
+                # W.O.: VPUG no los marca; los carga como un partido jugado 1-0. Se reconocen porque el
+                # resultado aparece antes de la fecha (equipo dado de baja), o porque el partido no tiene
+                # ningún dato y el rival ya no tiene partidos pendientes mientras nosotros sí.
+                rival_de_baja = pendientes.get(rival["id"]) == 0 and pendientes.get(club, 0) > 0
+                if jugado and (fecha > ahora or (previo.get("estado") == "wo" and ahora - fecha > timedelta(days=14))):
+                    p["estado"], p["equipo_stats"] = "wo", None
+                    partidos.append(p)
+                    continue
                 # VPUG a veces carga primero solo a la figura y después al resto: si el partido es de la
                 # última semana y tiene menos de 11 jugadores (o sin datos de EA), se vuelve a pedir.
-                reciente = datetime.now(timezone.utc) - datetime.fromisoformat(p["fecha_utc"].replace("Z", "+00:00")) < timedelta(days=7)
+                reciente = ahora - fecha < timedelta(days=7)
                 incompleto = previo and (len(previo.get("stats") or []) < 11 or not previo.get("equipo_stats"))
                 if jugado and previo and previo.get("stats") and previo.get("gf") == p["gf"] and "equipo_stats" in previo \
                         and not (reciente and incompleto):
@@ -99,6 +116,12 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                 elif jugado:
                     try:
                         det = pedir(c, f"{api}/partidos/{m['id']}")
+                        sin_datos = not det.get("figura") and not det.get("ea") and not any(
+                            (det.get(k) or {}).get("jugadores") for k in ("local", "visitante"))
+                        if sin_datos and (rival_de_baja or previo.get("estado") == "wo"):
+                            p["estado"], p["equipo_stats"] = "wo", None
+                            partidos.append(p)
+                            continue
                         figura = (det.get("figura") or {}).get("id")
                         lado = det["local"] if local else det["visitante"]
                         p["stats"] = [_stat(j, figura) for j in lado.get("jugadores", [])]
@@ -110,6 +133,8 @@ def sincronizar(cfg: dict, cfg_club: dict, partidos_previos: dict) -> dict:
                         p["equipo_stats"] = {"nosotros": conv(nos), "rival": conv(riv)} if (nos or riv) else None
                     except ErrorConector as e:
                         print("  aviso VPUG detalle:", e)
+                        if previo.get("estado") == "wo":
+                            p["estado"], p["equipo_stats"] = "wo", None
                 partidos.append(p)
         else:
             print("  VPUG sin cuenta: solo tabla y rankings (definir VPUG_EMAIL y VPUG_PASSWORD)")
