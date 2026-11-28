@@ -467,13 +467,13 @@ def main():
         p["fin_tarjeta"] = sig["dt"] if mismo_dia else p["dt"] + EN_JUEGO
     proximos = [p for p in partidos if p["resultado"] is None and p["fin_tarjeta"] > ahora]
     # W.O. que la liga ya cargó por adelantado (equipo dado de baja): no son resultados recientes
-    # hasta que llegue su fecha; mientras tanto se ven en el calendario, en su noche, como "Por W.O.".
+    # hasta que llegue su fecha, pero ya están definidos: en el calendario van en "Jugados", como "Por W.O.".
     wo_adelantados = [p for p in partidos if p["resultado"] and p["dt"] > ahora]
     jugados = [p for p in partidos if p["resultado"] and p["dt"] <= ahora][::-1]
     # Ya se jugaron pero la liga todavía no cargó (o no aprobó) el resultado: siguen en el
     # calendario, en "Jugados", con un "?" hasta que aparezca el marcador.
     sin_resultado = [p for p in partidos if p["resultado"] is None and p["fin_tarjeta"] <= ahora]
-    cal_jugados = sorted(jugados + sin_resultado, key=lambda p: p["dt"], reverse=True)
+    cal_jugados = sorted(jugados + sin_resultado + wo_adelantados, key=lambda p: p["dt"], reverse=True)
     proximo = proximos[0] if proximos else None
 
     # Orden de las competencias: primero la que se juega antes; después las que no publican
@@ -860,7 +860,7 @@ def main():
                lista_rivales=lista_rivales,
                og_imagen=f"{url_sitio}og.png?v={og_version}", og_desc=og_desc, url_sitio=url_sitio, ligas=ligas, tablas=tablas, proximo=proximo,
                semana=agrupar(semana), recientes=jugados[:5],
-               cal_proximos=agrupar(sorted(proximos + wo_adelantados, key=lambda p: p["dt"])),cal_jugados=agrupar(cal_jugados),
+               cal_proximos=agrupar(proximos), cal_jugados=agrupar(cal_jugados),
                sync_txt=sync_txt, hoy_noche=hoy_noche,
                ambitos=ambitos, sin_partidos=sin_partidos,
                ligas_en_uso=[l for l in ligas.values() if any(p["liga"] == l["clave"] for p in partidos)])

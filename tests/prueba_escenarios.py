@@ -151,9 +151,10 @@ class EscenariosWeb(unittest.TestCase):
             recientes = inicio.split('id="t-recientes"', 1)[1].split("</ul>", 1)[0]
             self.assertNotIn("Dado De Baja", recientes)
             cal = e.html("/calendario/")
-            proximos = cal.split('id="lista-proximos"', 1)[1].split('id="lista-jugados"', 1)[0]
-            self.assertIn("Dado De Baja", proximos)
-            self.assertIn("Por W.O.", proximos)
+            proximos, jugados = cal.split('id="lista-proximos"', 1)[1].split('id="lista-jugados"', 1)
+            self.assertNotIn("Dado De Baja", proximos)
+            self.assertIn("Dado De Baja", jugados)
+            self.assertIn("Por W.O.", jugados)
             self.assertIn("Victoria por W.O.", e.html("/partido/vpug-test-woad/"))
 
     def test_jugador_entra_y_sale_de_un_top(self):
